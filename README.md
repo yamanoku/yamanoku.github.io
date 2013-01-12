@@ -1,2 +1,0 @@
-yamanoku.github.com
-===================
