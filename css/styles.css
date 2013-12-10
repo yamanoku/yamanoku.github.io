@@ -1,47 +1,67 @@
-/* content */
+@import url(http://fonts.googleapis.com/css?family=Lato:,300italic,300,400italic,400,700italic,700);
 
 body {
-  background: #ece4d8;
-  color: #544943;
-  font: normal 800 15px/1.5 'Open Sans', sans-serif;
+  background: #f2f3f5;
+  color: #333;
+  font: inherit;
+  font-family: 'Lato';
   -webkit-font-smoothing: antialiased;
 }
 
 div.shell {
   display: block;
-  width: 1090px;
+  width: 1040px;
   margin: 0 auto;
 }
 
-header h1 {
-  border-bottom: 5px double #d3ccc1;
-  color: #7c334f;
-  font-size: 48px;
+header {
+  margin-top:20px;
   text-align: center;
 }
 
-#main_content .title {
-  margin: 30px 0 10px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #d3ccc1;
-  color: #7c334f;
-  font-size: 28px;
-  font-style: italic;
-  line-height: 1.2;
+footer {
+  margin-top:30px;
+  font-size: 13px;
   text-align: center;
 }
 
-#demo-1,
-#demo-2,
-#demo-3 {
-  position: relative;
-  width: 350px;
-  float: left;
+#main .title {
+  margin: 10px 0;
+  padding-bottom: 20px;
+  border-bottom: dashed 1px;
+  color: #2d3e50;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
 }
 
-#demo-1,
-#demo-2 {
-  margin-right: 20px;
+#content{
+  text-align:center;
+  padding-bottom: 30px;
+  border-bottom: dashed 1px;
+}
+
+ul {
+	text-align:center;
+}
+
+li {
+	padding: 30px 10px 10px;
+}
+
+li a {
+	color: #fff;
+	padding: 10px;
+	background: #2d3e50;
+	font-size: 17px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px; 
+	text-decoration:none !important; 
+	}
+	
+li a:hover {
+	background:#394F66;
 }
 
 /* Content based headers */
@@ -53,42 +73,4 @@ header h1 {
 #main_content > .header-level-5:first-child,
 #main_content > .header-level-6:first-child {
   margin: 0 0 10px;
-}
-
-.header-level-1 {
-  margin: 30px 0 10px;
-  padding-bottom: 10px;
-  color: #cd596b;
-  font-size: 28px;
-  line-height: 1.2;
-}
-
-.header-level-2 {
-  margin: 30px 0 10px;
-  padding-bottom: 10px;
-  color: #8b786f;
-  font-size: 24px;
-  line-height: 1.2;
-}
-
-.header-level-3 {
-  margin: 20px 0 10px;
-  font-size: 22px;
-}
-
-.header-level-4 {
-  margin: 10px 0;
-  color: #cd596b;
-  font-size: 18px;
-}
-
-.header-level-5 {
-  margin: 10px 0;
-  color: #8b786f;
-  font-size: 15px;
-}
-
-.header-level-6 {
-  margin: 10px 0;
-  font-size: 13px;
 }
