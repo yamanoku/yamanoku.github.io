@@ -50,7 +50,7 @@ footer {
 	border-bottom: dashed 1px;
 }
 
-ul {
+.flex {
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -63,11 +63,11 @@ ul {
 	justify-content: space-around;
 }
 
-li {
+.flex-item {
 	padding: 10px;
 	background: #2d3e50;
 	padding: 10px;
-	margin-top: 30px;
+	margin: 30px auto;
 	font-size:18px;
 	text-align: center;
 	width:200px;
