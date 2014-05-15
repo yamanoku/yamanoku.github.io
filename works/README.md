@@ -1,0 +1,19 @@
+#WORK DETAILS
+
+1. birthday - [@yamanoku](http://yamanoku.github.io) 誕生日カウントダウン   
+1. ga - グラデーションアニメーション  
+1. marquee - あの素晴らしいmarqueeをもう一度
+1. rain - jQueryで作る降雨
+1. sushi - 回転＋寿司＝回転寿司
+1. svganime - SVGアニメーション
+1. video - Videoタグで色々
+
+***
+
+1. birthday - [@yamanoku](http://yamanoku.github.io) Birthday Count Down   
+1. ga - Animated Background Gradient  
+1. marquee - CSS3 Animation of Marquee
+1. rain - Rain drop Animation by jQuery
+1. sushi - Rolling "Sushi" Icon
+1. svganime - SVG Animation by Lazy Line Painter
+1. video - Using HTML5 Video Tag Tips
