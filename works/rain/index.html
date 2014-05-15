@@ -1,0 +1,93 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>RAINDROPS</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<style>
+html{
+	height:100%;
+}
+
+body{
+    background: #666;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.bg{
+    background: #000 url(background.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+	opacity:.85;
+	-webkit-filter: blur(4px);
+}
+
+.drop {
+	background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(rgba(255,255,255,0.6))  );
+	background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,.6) 100%);
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	-webkit-animation: fall .63s linear infinite;
+	-moz-animation: fall .63s linear infinite;  
+}
+
+@-webkit-keyframes fall {
+	to {margin-top:900px;}
+}
+@-moz-keyframes fall {
+	to {margin-top:900px;}
+}
+
+footer{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 100;
+    background: url(wedlogo.png) center center no-repeat;
+    opacity: .9;
+}
+</style>
+</head>
+
+<body>
+<div class="bg"></div>
+<section class="rain"/>
+<footer/>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script>
+var nbDrop = 900; 
+
+function randRange( minNum, maxNum) {
+  return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
+}
+
+function createRain() {
+
+	for( i=1;i<nbDrop;i++) {
+	var dropLeft = randRange(0,1600);
+	var dropTop = randRange(-1000,1400);
+
+	$('.rain').append('<div class="drop" id="drop'+i+'"></div>');
+	$('#drop'+i).css('left',dropLeft);
+	$('#drop'+i).css('top',dropTop);
+	}
+}
+
+createRain();
+</script>
+</body>
+</html>

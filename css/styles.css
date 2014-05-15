@@ -10,7 +10,7 @@ body {
 
 div.shell {
   display: block;
-  width: 1040px;
+  width: 768px;
   margin: 0 auto;
 }
 
@@ -38,8 +38,7 @@ footer {
 
 #content{
   text-align:center;
-  padding-bottom: 30px;
-  border-bottom: dashed 1px;
+  padding-bottom: 40px;
 }
 
 ul {
@@ -75,3 +74,10 @@ li a:hover {
 #main_content > .header-level-6:first-child {
   margin: 0 0 10px;
 }
+
+@media only screen and (max-width:768px){
+	div.shell {
+		width:100%;
+	}	
+}
+

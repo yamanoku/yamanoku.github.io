@@ -2,17 +2,11 @@
 <html>
   <head>
     <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="shortcut icon" href="img/favicon.ico" />
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('.content').headsmart()
-      })
-    </script>
-    <title>yamanoku github</title>
+    <title>YAMANOKU WORKS</title>
   </head>
 
   <body>
@@ -24,16 +18,32 @@
   
       <section id="main">
       <div id="content">
-      		<h1 class="title">OYAMA MICHINOKU</h1>
+      		<h1 class="title">YAMANOKU WORKS</h1>
             			<ul>
-                        <li><a href="http://oyamaokuto.org">PORTFOLIO</a></li>
-                        <li><a href="http://twitter.com/yamanoku">TWITTER</a></li>
-                        <li><a href="http://yamanoku.tumblr.com">TUMBLR</a></li>
-                        <li><a href="http://gameoverwork.tumblr.com">GAMEOVERWORK</a></li>
-                        <li><a href="http://majigire.tumblr.com">MAJIGIRE</a></li>
+                        <li><a href="works/birthday/index.html">BIRTHDAY COUNT</a></li>
+                        <li><a href="works/ga/index.html">GRADIENT ANIME</a></li>
+                        <li><a href="works/marquee/index.html">MARQUEE</a></li>
+                        <li><a href="works/rain/index.html">RAIN DROP</a></li>
+                        <li><a href="works/sushi/index.html">ROLLING SUSHI</a></li>
+                        <li><a href="works/svganime/01/index.html">SVG ANIME 01</a></li>
+                        <li><a href="works/svganime/02/index.html">SVG ANIME 02</a></li>
+                        <li><a href="works/video/train/index.html">TRAIN VIDEO 01</a></li>
+                        <li><a href="works/video/train2/index.html">TRAIN VIDEO 02</a></li>
                     </ul>
       </div>
       </section>
     </div>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/headsmart.min.js"></script>
+    <script type="text/javascript">
+	$(function(){
+	$("a[href^='http://']").attr("target","_blank").css('background','#F5D75E');
+	});
+	</script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.content').headsmart()
+      })
+    </script>
   </body>
 </html>

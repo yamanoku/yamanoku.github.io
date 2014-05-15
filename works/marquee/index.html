@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>無題ドキュメント</title>
+<style>
+body{
+	background:rgba(22,49,99,1.00);
+	color:rgba(96,228,101,1.00);
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+}
+#marquee{
+	margin: 220px auto 0;
+	font-size:100px;
+	overflow:hidden;
+}
+#marquee div{
+    width:100%;
+    text-align:center;
+    display:inline-block;
+    white-space:nowrap;
+
+    -moz-animation-duration: 1.5s;
+    -moz-animation-name: marquee;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-name: marquee;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    -ms-animation-duration: 1.5s;
+    -ms-animation-name: marquee;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    -o-animation-duration: 1.5s;
+    -o-animation-name: marquee;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+}
+@-webkit-keyframes marquee {
+    from {margin-left: 100%; width: 100%; }
+    to { margin-left: -100%; width: 100%; }
+}
+@-moz-keyframes marquee {
+    from {margin-left: 100%; width: 100%; }
+    to { margin-left: -100%; width: 100%; }
+}
+@-ms-keyframes marquee {
+    from {margin-left: 100%; width: 100%; }
+    to { margin-left: -100%; width: 100%; }
+}
+@-o-keyframes marquee {
+    from {margin-left: 100%; width: 100%; }
+    to { margin-left: -100%; width: 100%; }
+}
+</style>
+</head>
+
+<body>
+<div id="marquee">
+    <div>ちくわ大明神</div>
+</div>
+</body>
+</html>
