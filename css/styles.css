@@ -1,67 +1,92 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:,300italic,300,400italic,400,700italic,700);
 
 body {
-  background: #f2f3f5;
-  color: #333;
-  font: inherit;
-  font-family: 'Lato';
-  -webkit-font-smoothing: antialiased;
+	background: #f2f3f5;
+	color: #333;
+	font: inherit;
+	font-family: 'Lato';
+	-webkit-font-smoothing: antialiased;
 }
 
 div.shell {
-  display: block;
-  width: 768px;
-  margin: 0 auto;
+	display: block;
+	width: 768px;
+	margin: 0 auto;
 }
 
 header {
-  margin-top:20px;
-  text-align: center;
+	margin-top:20px;
+	text-align: center;
 }
 
 footer {
-  margin-top:30px;
-  font-size: 13px;
-  text-align: center;
+	margin:20px 0 30px;
+	font-size: 13px;
+	text-align: center;
 }
 
 #main .title {
-  margin: 10px 0;
-  padding-bottom: 20px;
-  border-bottom: dashed 1px;
-  color: #2d3e50;
-  font-weight: 700;
-  font-size: 36px;
-  text-align: center;
-  text-shadow: 1px 0 0 #B7B7B7;
-}
-
-#content{
-  text-align:center;
-  padding-bottom: 40px;
-}
-
-ul {
+	margin: 10px 0;
+	padding-bottom: 20px;
+	border-bottom: dashed 1px;
+	font-weight: 700;
+	font-size: 40px;
+	text-shadow: 1px 0 0 #B7B7B7;
 	text-align:center;
 }
 
-li {
-	padding: 30px 10px 10px;
+#main .title a {
+	color: #2d3e50;
+	text-decoration:none !important;
 }
 
-li a {
-	color: #fff;
+#main .title a:hover {
+	opacity:.8;
+}
+
+#content{
+	padding-bottom: 40px;
+	border-bottom: dashed 1px;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+li {
 	padding: 10px;
 	background: #2d3e50;
-	font-size: 17px;
+	padding: 10px;
+	margin-top: 30px;
+	font-size:18px;
+	text-align: center;
+	width:200px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px; 
-	text-decoration:none !important; 
-	}
-	
+}
+
+li img {
+	width:200px;
+	height:200px;
+}
+
+li a {
+	color:#FFF;
+	text-decoration:none !important;
+}
+
 li a:hover {
-	background:#394F66;
+	opacity:.75;
 }
 
 /* Content based headers */
@@ -72,10 +97,10 @@ li a:hover {
 #main_content > .header-level-4:first-child,
 #main_content > .header-level-5:first-child,
 #main_content > .header-level-6:first-child {
-  margin: 0 0 10px;
+	margin: 0 0 10px;
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:840px){
 	div.shell {
 		width:100%;
 	}	
