@@ -37,7 +37,8 @@ footer {
 
 #main .title a {
 	color: #2d3e50;
-	text-decoration:none !important;
+	background:none;
+	text-decoration:none;
 }
 
 #main .title a:hover {
