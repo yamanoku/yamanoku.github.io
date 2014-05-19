@@ -10,7 +10,7 @@ body {
 
 div.shell {
 	display: block;
-	width: 768px;
+	width: 84%;
 	margin: 0 auto;
 }
 
@@ -45,65 +45,60 @@ footer {
 	opacity:.8;
 }
 
-#content{
-	padding-bottom: 40px;
+.container {
+    margin: 0 auto;
+    overflow: hidden;
+	padding-bottom: 10px;
 	border-bottom: dashed 1px;
 }
 
-.flex {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	justify-content: space-around;
-}
-
-.flex-item {
-	padding: 10px;
-	background: #2d3e50;
-	padding: 10px;
-	margin: 30px auto;
-	font-size:18px;
+.item {
+	float:left;
+	width:21%;
+	margin:10px 2% 12px 2%;
+	line-height:1.5;
 	text-align: center;
-	width:200px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px; 
+	text-transform: uppercase;
+	color:#333;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	white-space:nowrap;
 }
 
-li img {
-	width:200px;
-	height:200px;
+.item img {
+	max-width:100%;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px; 
 }
 
-li a {
+.item a {
 	color:#FFF;
 	text-decoration:none !important;
 }
 
-li a:hover {
-	opacity:.75;
+.item a:hover {
+	opacity:.5;
 }
 
-/* Content based headers */
-
-#main_content > .header-level-1:first-child,
-#main_content > .header-level-2:first-child,
-#main_content > .header-level-3:first-child,
-#main_content > .header-level-4:first-child,
-#main_content > .header-level-5:first-child,
-#main_content > .header-level-6:first-child {
-	margin: 0 0 10px;
+@media only screen and (max-width : 940px),
+only screen and (max-device-width : 940px){
+	.item {width:21%;}		
 }
 
-@media only screen and (max-width:840px){
-	div.shell {
-		width:100%;
-	}	
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){
+    .item {width: 29.33333%;}
 }
 
+@media only screen and (max-width : 530px),
+only screen and (max-device-width : 530px){
+    .item {width: 46%;}
+}
+ 
+@media only screen and (max-width : 320px),
+only screen and (max-device-width : 320px){
+    .item {width: 100%;}
+    .item img {width: 100%;}
+}
