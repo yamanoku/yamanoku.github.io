@@ -47,6 +47,7 @@ footer {
 
 .container {
     margin: 0 auto;
+	display:inline-block;
     overflow: hidden;
 	padding-bottom: 10px;
 	border-bottom: dashed 1px;
@@ -65,7 +66,7 @@ footer {
 }
 
 .item img {
-	max-width:95%;
+	max-width:100%;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
 	border-radius:5px; 
@@ -97,6 +98,6 @@ only screen and (max-device-width : 530px){
  
 @media only screen and (max-width : 320px),
 only screen and (max-device-width : 320px){
-    .item {width: 100%;}
+    .item {width: 100%;margin:10px 0;}
     .item img {width: 100%;}
 }
