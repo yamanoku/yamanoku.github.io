@@ -1,10 +1,15 @@
-body {
-	background:#46a1de;
+html {
+	min-height:100%;
+	background:url(ring.jpg) no-repeat center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size: cover;
+	background-size:cover;
 }
 
 .animated {
-  -webkit-animation-duration: 6s;
-  animation-duration: 6s;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -12,11 +17,6 @@ body {
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-}
-
-.animated.hinge {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
 }
 
 @-webkit-keyframes bounceOutDown {
@@ -27,7 +27,7 @@ body {
   }
 
   100% {
-    opacity: 0.8;
+    opacity: 1;
     -webkit-transform: translate(0, 1500px);
     transform: translate(0, 1500px);
   }
@@ -42,7 +42,7 @@ body {
   }
   
   100% {
-    opacity: 0.8;
+    opacity: 1;
     -webkit-transform: translate(0, 1500px);
     -ms-transform: translate(0, 1500px);
     transform: translate(0, 1500px);
