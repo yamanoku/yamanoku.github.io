@@ -10,6 +10,7 @@
 1. sea - 重なる海の情景 
 1. sushi - 回転＋寿司＝回転寿司
 1. svganime - SVGアニメーション
+1. togglebutton - トグル式ボタン考察とか
 1. video - Videoタグで色々
 
 ***
@@ -24,4 +25,5 @@
 1. sea - CSS Absolute Center Magic 
 1. sushi - Rolling "Sushi" Icon
 1. svganime - SVG Animation by Lazy Line Painter
+1. togglebutton - Toggle Menu Button UI Animation 
 1. video - Using HTML5 Video Tag Tips

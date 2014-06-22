@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Menu toggle button</title>
+<style>
+body {
+background: #f9f4f0;
+}
+
+#wrapper {
+width:60px;
+height:60px;
+background: #f76f54;
+border-radius:50%;
+margin:0 auto;
+border:5px #FFF solid;
+}
+
+#toggle {
+width: 30px;
+height: 20px;
+margin: 2px auto ;
+padding-top: 10px;
+}
+
+#toggle div {
+width: 100%;
+height: 6px;
+background: #FFF;
+margin: 5px auto;
+transition: all 0.3s;
+backface-visibility: hidden;
+}
+
+#toggle.on .one {
+transform: rotate(45deg) translate(8px, 8px);
+}
+
+#toggle.on .two {
+opacity: 0;
+}
+
+#toggle.on .three {
+transform: rotate(-45deg) translate(9px, -7px);
+}
+
+#menu {
+margin: 0;
+padding: 0;
+text-align: center;
+display: none;
+list-style: none;
+}
+
+#menu li {
+width:60px;
+height:60px;
+border-radius:50%;
+margin:10px auto;
+background:#444;
+display:block;
+vertical-align:middle;
+color:#FFF;
+border:5px #FFF solid;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+<div id="toggle">
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div>
+</div>
+</div>
+
+<ul id="menu">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<script src="js/prefixfree.min.js"></script>
+<script src="js/jquery.js"></script>
+<script>$("#toggle").click(function() {
+$(this).toggleClass("on");
+$("#menu").slideToggle();});</script>
+
+</body>
+
+</html>
