@@ -4,6 +4,7 @@
 1. bodypress - CSS3アニメーション式フライングボディプレス
 1. coffee - CSS3コーヒータイポグラフィ＆アイコン
 1. ga - グラデーションアニメーション  
+1. hover - マウスホバー・アニメーションエフェクト考 
 1. marquee - あの素晴らしいmarqueeをもう一度
 1. megane - メガネドラッグ(薬局ではなく)してみよう
 1. rain - jQueryで作る降雨
@@ -19,6 +20,7 @@
 1. bodypress - BounceOutDown Animation
 1. coffee - CSS3 Coffe Typography & Icon 
 1. ga - Animated Background Gradient  
+1. hover - Mouse Hover Animation Effects 
 1. marquee - CSS3 Animation of Marquee
 1. megane - jQuery Draggable Effect 
 1. rain - Rain Drop Animation by jQuery
