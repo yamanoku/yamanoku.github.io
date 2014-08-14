@@ -1,0 +1,185 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url(http://www.desktopaper.com/wp-content/uploads/windows-xp-desktop-backgrounds.jpg) no-repeat center;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size: cover;
+  background-size:cover;
+  overflow: hidden;
+  min-height: 100%;
+  text-align: center;
+  font-family: vt323;
+}
+
+h1 {
+  color: yellow;
+  font-size:4.5em;
+}
+
+.wrap {
+  -webkit-perspective: 400px;
+  perspective: 400px;
+  -webkit-perspective-origin: top;
+  perspective-origin: top;
+  height: 100%;
+  -webkit-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
+}
+
+.red-wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 30px;
+  height: 282px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-animation: rotate 2s infinite linear;
+  animation: rotate 2s infinite linear;
+}
+
+.side {
+  position: absolute;
+  height: 282px;
+  width: 24px;
+  background: url(http://www.anjaristi.com/image/domain-neesann.jpg);
+}
+
+.side:nth-child(1) {
+  -webkit-transform: rotateY(18deg) translateZ(70px);
+  transform: rotateY(18deg) translateZ(70px);
+  background-position: 402.8px 0;
+}
+
+.side:nth-child(2) {
+  -webkit-transform: rotateY(36deg) translateZ(70px);
+  transform: rotateY(36deg) translateZ(70px);
+  background-position: 381.6px 0;
+}
+
+.side:nth-child(3) {
+  -webkit-transform: rotateY(54deg) translateZ(70px);
+  transform: rotateY(54deg) translateZ(70px);
+  background-position: 360.4px 0;
+}
+
+.side:nth-child(4) {
+  -webkit-transform: rotateY(72deg) translateZ(70px);
+  transform: rotateY(72deg) translateZ(70px);
+  background-position: 339.2px 0;
+}
+
+.side:nth-child(5) {
+  -webkit-transform: rotateY(90deg) translateZ(70px);
+  transform: rotateY(90deg) translateZ(70px);
+  background-position: 318px 0;
+}
+
+.side:nth-child(6) {
+  -webkit-transform: rotateY(108deg) translateZ(70px);
+  transform: rotateY(108deg) translateZ(70px);
+  background-position: 296.8px 0;
+}
+
+.side:nth-child(7) {
+  -webkit-transform: rotateY(126deg) translateZ(70px);
+  transform: rotateY(126deg) translateZ(70px);
+  background-position: 275.6px 0;
+}
+
+.side:nth-child(8) {
+  -webkit-transform: rotateY(144deg) translateZ(70px);
+  transform: rotateY(144deg) translateZ(70px);
+  background-position: 254.4px 0;
+}
+
+.side:nth-child(9) {
+  -webkit-transform: rotateY(162deg) translateZ(70px);
+  transform: rotateY(162deg) translateZ(70px);
+  background-position: 233.2px 0;
+}
+
+.side:nth-child(10) {
+  -webkit-transform: rotateY(180deg) translateZ(70px);
+  transform: rotateY(180deg) translateZ(70px);
+  background-position: 212px 0;
+}
+
+.side:nth-child(11) {
+  -webkit-transform: rotateY(198deg) translateZ(70px);
+  transform: rotateY(198deg) translateZ(70px);
+  background-position: 190.8px 0;
+}
+
+.side:nth-child(12) {
+  -webkit-transform: rotateY(216deg) translateZ(70px);
+  transform: rotateY(216deg) translateZ(70px);
+  background-position: 169.6px 0;
+}
+
+.side:nth-child(13) {
+  -webkit-transform: rotateY(234deg) translateZ(70px);
+  transform: rotateY(234deg) translateZ(70px);
+  background-position: 148.4px 0;
+}
+
+.side:nth-child(14) {
+  -webkit-transform: rotateY(252deg) translateZ(70px);
+  transform: rotateY(252deg) translateZ(70px);
+  background-position: 127.2px 0;
+}
+
+.side:nth-child(15) {
+  -webkit-transform: rotateY(270deg) translateZ(70px);
+  transform: rotateY(270deg) translateZ(70px);
+  background-position: 106px 0;
+}
+
+.side:nth-child(16) {
+  -webkit-transform: rotateY(288deg) translateZ(70px);
+  transform: rotateY(288deg) translateZ(70px);
+  background-position: 84.8px 0;
+}
+
+.side:nth-child(17) {
+  -webkit-transform: rotateY(306deg) translateZ(70px);
+  transform: rotateY(306deg) translateZ(70px);
+  background-position: 63.6px 0;
+}
+
+.side:nth-child(18) {
+  -webkit-transform: rotateY(324deg) translateZ(70px);
+  transform: rotateY(324deg) translateZ(70px);
+  background-position: 42.4px 0;
+}
+
+.side:nth-child(19) {
+  -webkit-transform: rotateY(342deg) translateZ(70px);
+  transform: rotateY(342deg) translateZ(70px);
+  background-position: 21.2px 0;
+}
+
+.side:nth-child(20) {
+  -webkit-transform: rotateY(360deg) translateZ(70px);
+  transform: rotateY(360deg) translateZ(70px);
+  background-position: 0px 0;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}

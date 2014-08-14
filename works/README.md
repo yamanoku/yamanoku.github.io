@@ -1,5 +1,6 @@
 #WORK DETAILS
-
+ 
+1. 404 - 404エラーページに関しての再考
 1. birthday - [@yamanoku](http://yamanoku.github.io) 誕生日カウントダウン   
 1. bodypress - CSS3アニメーション式フライングボディプレス
 1. coffee - CSS3コーヒータイポグラフィ＆アイコン
@@ -17,6 +18,7 @@
 
 ***
 
+1. 404 - Reconsidering 404 Error Page Design
 1. birthday - [@yamanoku](http://yamanoku.github.io) Birthday Count Down   
 1. bodypress - BounceOutDown Animation
 1. coffee - CSS3 Coffe Typography & Icon 
