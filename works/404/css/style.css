@@ -47,7 +47,7 @@ h1 {
   position: absolute;
   height: 282px;
   width: 24px;
-  background: url(http://www.anjaristi.com/image/domain-neesann.jpg);
+  background: url(../img/domain-neesann.jpg);
 }
 
 .side:nth-child(1) {
