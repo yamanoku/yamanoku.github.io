@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-  background: url(http://www.desktopaper.com/wp-content/uploads/windows-xp-desktop-backgrounds.jpg) no-repeat center;
+  background: url(../img/bg.jpg) no-repeat center;
   -webkit-background-size:cover;
   -moz-background-size:cover;
   -o-background-size: cover;
