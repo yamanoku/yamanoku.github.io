@@ -8,6 +8,11 @@
 body {
 background: #f9f4f0;
 }
+
+* {
+-webkit-tap-highlight-color:transparent;
+-webkit-touch-callout:none;
+}
 .container {
 width: 60px;
 margin: auto;
@@ -88,6 +93,7 @@ $(this).parent().toggleClass('toggle');
 if($('.toggle').length){
 $(document).on('click', function(){
 $('.container').removeClass('toggle');
+return false;
 });
 }
 return false;
