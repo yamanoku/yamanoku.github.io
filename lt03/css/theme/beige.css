@@ -222,7 +222,6 @@ body {
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #c0a86e;
   text-shadow: none;
   border: none; }
 
