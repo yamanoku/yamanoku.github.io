@@ -9,10 +9,14 @@
 				margin: 0;
 				height: 100%;
 			}
+			html {
+				background: #fd8ffd;
+				background: -moz-linear-gradient(-45deg, #fd8ffd 0%, #9a40d6 45%, #72fffe 100%);
+				background: -webkit-linear-gradient(-45deg, #fd8ffd 0%,#9a40d6 45%,#72fffe 100%);
+				background: linear-gradient(135deg, #fd8ffd 0%,#9a40d6 45%,#72fffe 100%);
+			}
 			body {
-				background: red;
-				background: -moz-linear-gradient( top, rgba(255, 0, 0, 1) 0%, rgba(255, 255, 0, 1) 15%, rgba(0, 255, 0, 1) 30%, rgba(0, 255, 255, 1) 50%, rgba(0, 0, 255, 1) 65%, rgba(255, 0, 255, 1) 80%, rgba(255, 0, 0, 1) 100%);
-				background: -webkit-gradient( linear, left top, left bottom, color-stop(0%, rgba(255, 0, 0, 1)), color-stop(15%, rgba(255, 255, 0, 1)), color-stop(30%, rgba(0, 255, 0, 1)), color-stop(50%, rgba(0, 255, 255, 1)), color-stop(65%, rgba(0, 0, 255, 1)), color-stop(80%, rgba(255, 0, 255, 1)), color-stop(100%, rgba(255, 0, 0, 1)));
+				background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQYV2NkQAL///9PY4TxwRxGxllgARgHxGZE5oAEAPm3D2hsLeiBAAAAAElFTkSuQmCC) repeat;
 				-webkit-box-align: center;
 				-ms-flex-align: center;
 				align-items: center;
@@ -25,11 +29,30 @@
 				justify-content: center;
 			}
 			.container {
-				width: 480px;
-				margin: 0 auto;
+				height: 100%;
 			}
-			img {
-				padding-bottom: 60px;
+			h1 {
+				margin: 0;
+				text-align: center;
+				color: #5EFD2F;
+				font-weight: 700;
+				font-size: 64px;
+				font-style: italic;
+				font-family: 'MS Gothic', 'Meiryo', sans-serif;
+				text-shadow: 4px 4px 1px #F72BE0;
+				letter-spacing: .125em;
+				-webkit-transform: skew(-10deg);
+				transform: skew(-10deg);
+			}
+			.imgWrap {
+				margin: 0 auto 30px;
+				width: 480px;
+				height: 480px;
+				overflow: hidden;
+			}
+			.range {
+				width: 480px;
+				margin: auto;
 			}
 			input[type="range"] {
 				width: 412px;
@@ -43,11 +66,14 @@
 	<body>
 		<div class="container">
 			<canvas id="canvas" width="480" height="480" style="display:none;"></canvas>
-			<img id="glitch">
-			<input id="range" type="range" min="0" max="0.9995" step="0.0005" onchange="rangevalue.value=value" />
-			<output id="rangevalue">0.5</output>
-			<input id="stop" type="button" value="STOP" onclick="stopTimer()">
-			<input id="start" type="button" value="RESTART" onclick="startTimer()" disabled="disabled">
+			<h1>グリッチレンジ</h1>
+			<div class="imgWrap"><img id="glitch"></div>
+			<div class="range">
+				<input id="range" type="range" min="0" max="0.9995" step="0.0005" onchange="rangevalue.value=value" />
+				<output id="rangevalue">0.5</output>
+				<input id="stop" type="button" value="STOP" onclick="stopTimer()">
+				<input id="start" type="button" value="RESTART" onclick="startTimer()" disabled="disabled">
+			</div>
 		</div>
 		<script src="js/glitch.js"></script>
 	</body>

@@ -41,9 +41,7 @@ const glitch = () => {
         }
     }
     const glitchSource = b64.encode(binary);
-    document.getElementById("glitch").src = `data:image/jpeg;base64,${
-        glitchSource
-    }`;
+    document.getElementById("glitch").src = `data:image/jpeg;base64,${glitchSource}`;
 };
 
 let testTimer;
@@ -51,7 +49,7 @@ let testTimer;
 function startTimer() {
     testTimer = setInterval(() => {
         glitch();
-    }, 30);
+    }, 50);
     document.getElementById("start").disabled = true;
     document.getElementById("stop").disabled = false;
 }
