@@ -9,7 +9,7 @@
         <li>1989/10/30 Born in Noshiro, Akita, Japan</li>
         <li>Sex - Man</li>
         <li>
-          2008 Get into <a href="http://www.iwate-u.ac.jp/" target="_blank">Iwate University</a> of Art and Culture Course.
+          2008 Get into <a href="http://www.iwate-u.ac.jp/" target="_blank" rel="noopener">Iwate University</a> of Art and Culture Course.
           <ul>
             <li>
               Bachelor of  Art and Culture Course.（BFA）
@@ -26,24 +26,24 @@
       </ul>
       <h3>SNS</h3>
       <ul>
-        <li><a href="https://twitter.com/yamanoku" target="_blank">Twitter</a></li>
-        <li><a href="https://facebook.com/yamanoku" target="_blank">facebook</a></li>
+        <li><a href="https://twitter.com/yamanoku" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a href="https://facebook.com/yamanoku" target="_blank" rel="noopener">facebook</a></li>
         <li>
           tumblr
           <ul>
-            <li><a href="https://yamanoku.tumblr.com" target="_blank">tumblog</a></li>
-            <li><a href="https://yamagraph.tumblr.com" target="_blank">artworks</a></li>
+            <li><a href="https://yamanoku.tumblr.com" target="_blank" rel="noopener">tumblog</a></li>
+            <li><a href="https://yamagraph.tumblr.com" target="_blank" rel="noopener">artworks</a></li>
           </ul>
         </li>
-        <li><a href="https://scrapbox.io/yamanoku" target="_blank">Scrapbox</a></li>
-        <li><a href="https://github.com/yamanoku" target="_blank">Github</a></li>
-        <li><a href="https://qiita.com/yamanoku" target="_blank">Qiita</a></li>
-        <li><a href="https://plus.google.com/u/0/101091736761249392318" target="_blank">Google +</a></li>
-        <li><a href="https://mstdn.jp/@yamanoku" target="_blank">mstdn.jp</a></li>
-        <li><a href="https://www.wantedly.com/users/347527" target="_blank">Wantedly</a></li>
-        <li><a href="https://www.instagram.com/yamanoku/" target="_blank">Instagram</a></li>
-        <li><a href="http://profile.hatena.ne.jp/cardboarder/" target="_blank">hatena</a></li>
-        <li><a href="http://steamcommunity.com/id/yamanoku/" target="_blank">Steam</a></li>
+        <li><a href="https://scrapbox.io/yamanoku" target="_blank" rel="noopener">Scrapbox</a></li>
+        <li><a href="https://github.com/yamanoku" target="_blank" rel="noopener">Github</a></li>
+        <li><a href="https://qiita.com/yamanoku" target="_blank" rel="noopener">Qiita</a></li>
+        <li><a href="https://plus.google.com/u/0/101091736761249392318" target="_blank" rel="noopener">Google +</a></li>
+        <li><a href="https://mstdn.jp/@yamanoku" target="_blank" rel="noopener">mstdn.jp</a></li>
+        <li><a href="https://www.wantedly.com/users/347527" target="_blank" rel="noopener">Wantedly</a></li>
+        <li><a href="https://www.instagram.com/yamanoku/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="http://profile.hatena.ne.jp/cardboarder/" target="_blank" rel="noopener">hatena</a></li>
+        <li><a href="http://steamcommunity.com/id/yamanoku/" target="_blank" rel="noopener">Steam</a></li>
       </ul>
       <h3>Contact</h3>
       <address>0910yama[at]gmail.com</address>
