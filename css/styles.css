@@ -4,9 +4,20 @@ html {
 	font-size : 100%;
 	line-height: 1.4;
 	-webkit-font-smoothing : antialiased;
-	padding: 10px;
 }
 main {
 	max-width: 980px;
 	margin: auto;
+	padding: 0 10px 20px;
+}
+header {
+	background-color: #f0f0f0;
+}
+h1 {
+	text-align: center;
+	margin: 0;
+	padding: 20px 0;
+}
+img {
+	vertical-align: bottom;
 }
