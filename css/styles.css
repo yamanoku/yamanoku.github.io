@@ -11,13 +11,16 @@ main {
 	padding: 0 10px 20px;
 }
 header {
-	background-color: #f0f0f0;
+	background-color: #36465d;
 }
 h1 {
 	text-align: center;
 	margin: 0;
 	padding: 20px 0;
 }
-img {
+svg {
+	width: 100%;
+	max-width: 150px;
+	height: 100%;
 	vertical-align: bottom;
 }
