@@ -24,7 +24,7 @@ svg {
   vertical-align: bottom;
 }
 .cls-1 {
-  fill: #fff;
+  fill: #090909;
   fill-rule: evenodd;
 }
 </style>
