@@ -15,7 +15,4 @@ html {
 *, *:before, *:after {
   box-sizing: border-box;
 }
-body {
-  filter: grayscale(.75);
-}
 </style>
