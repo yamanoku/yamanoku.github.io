@@ -24,7 +24,8 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    vendor: ['axios']
   },
   modules: [
     '@nuxtjs/pwa',
