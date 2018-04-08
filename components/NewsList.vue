@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <ul v-for="list in lists" :key="list.iid">
-      <li v-if="list.attachments[0].title">
-        <a :href="list.attachments[0].title_link" target="_blank" rel="noopener">{{ list.attachments[0].title }}</a>
-      </li>
-    </ul>
-  </div>
+  <ul>
+    <li v-for="list in lists" :key="list.iid" v-if="list.attachments[0].title">
+      <a :href="list.attachments[0].title_link" target="_blank" rel="noopener">{{ list.attachments[0].title }}</a>
+    </li>
+  </ul>
 </template>
 
 <script>
