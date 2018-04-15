@@ -25,8 +25,12 @@ module.exports = {
         })
       }
     },
-    vendor: ['axios']
+    vendor: [
+      'axios',
+      'vue-paginate'
+    ]
   },
+  plugins: ['~/plugins/vue-paginate'],
   modules: [
     '@nuxtjs/pwa',
   ],
