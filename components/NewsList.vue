@@ -55,12 +55,16 @@
     },
     methods: {
       textRender (text) {
-        const mystr = text.split("Reading... ").join("");
-        return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
+        if (text.indexOf('Reading... ') != -1) {
+          const mystr = text.split("Reading... ").join("");
+          return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
+        } else if (text.indexOf('Reading… ') != -1) {
+          const mystr = text.split("Reading… ").join("");
+          return mystr.replace(/^<[^>]h>|<[^>]*>$/g, "");
+        }
       },
       urlRender (text) {
-        const mystr = text.split("Reading... ").join("");
-        return mystr.match(/ <([^\s]+)/)[1].slice(0, -1);
+        return text.match(/ <([^\s]+)/)[1].slice(0, -1);
       }
     }
   }
