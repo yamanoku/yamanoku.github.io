@@ -1,6 +1,7 @@
 <template>
   <ul>
-    <li><a href="/reading">Reading...</a></li>
+    <li><a href="https://www.npmjs.com/package/yamanoku">yamanoku CLI</a></li>
+    <li><a href="https://reading.yamanoku.net">Reading...</a></li>
     <li><a href="https://vue-portfolio.yamanoku.net/" target="_blank" rel="noopener">Vue Portfolio Templete</a></li>
     <li><a href="/birthday-countdown-js" target="_blank" rel="noopener">Birthday Countdown</a></li>
     <li><a href="/glicthrange">glicthrange</a></li>

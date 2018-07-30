@@ -16,6 +16,7 @@
     </li>
     <li>2014 Get married.</li>
     <li>2016 Daughter is born</li>
+    <li>👨‍👩‍👧 &amp; 🐈🐈🐈</li>
     <li>Live in Kamagaya, Chiba, Japan</li>
   </ul>
 </template>

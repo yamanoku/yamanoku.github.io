@@ -6,6 +6,8 @@
       <h3>FrontEnd Designer, UI Design Proposer, Writter, Document Translater, Internet Watcher</h3>
       <h3>Basic Info</h3>
       <basic-info-component />
+      <h3>Other Info</h3>
+      <other-info-component />
       <h3>Product List</h3>
       <product-list-component />
       <h3>SNS</h3>
@@ -19,6 +21,7 @@
 <script>
 import HeaderComponent from '~/components/Header.vue'
 import BasicInfoComponent from '~/components/BasicInfo.vue'
+import OtherInfoComponent from '~/components/OtherInfo.vue'
 import ProductListComponent from '~/components/ProductList.vue'
 import SnsComponent from '~/components/Sns.vue'
 import AddressComponent from '~/components/Address.vue'
@@ -27,6 +30,7 @@ export default {
   components: {
     HeaderComponent,
     BasicInfoComponent,
+    OtherInfoComponent,
     ProductListComponent,
     SnsComponent,
     AddressComponent
