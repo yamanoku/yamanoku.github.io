@@ -12,17 +12,17 @@
     "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
-    "@nuxtjs/pwa": "^2.0.8",
-    "nuxt": "^1.0.0"
+    "@nuxtjs/pwa": "2.0.8",
+    "nuxt": "1.4.0"
   },
   "devDependencies": {
-    "axios": "^0.18.0",
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.15.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0",
-    "modern-normalize": "^0.4.0",
-    "push-dir": "^0.4.1"
+    "axios": "0.18.0",
+    "babel-eslint": "8.2.3",
+    "eslint": "4.19.1",
+    "eslint-friendly-formatter": "3.0.0",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-vue": "4.4.0",
+    "modern-normalize": "0.4.0",
+    "push-dir": "0.4.1"
   }
 }
