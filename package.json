@@ -22,7 +22,7 @@
     "eslint-friendly-formatter": "3.0.0",
     "eslint-loader": "2.1.0",
     "eslint-plugin-vue": "4.7.1",
-    "modern-normalize": "0.4.0",
+    "modern-normalize": "0.5.0",
     "push-dir": "0.4.1"
   }
 }
