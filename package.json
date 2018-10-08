@@ -12,7 +12,7 @@
     "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
-    "@nuxtjs/pwa": "2.3.2",
+    "@nuxtjs/pwa": "2.6.0",
     "nuxt": "1.4.2"
   },
   "devDependencies": {
