@@ -12,8 +12,8 @@
     "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
-    "@nuxtjs/pwa": "2.3.2",
-    "nuxt": "1.4.2"
+    "@nuxtjs/pwa": "2.6.0",
+    "nuxt": "2.3.4"
   },
   "devDependencies": {
     "axios": "0.18.0",

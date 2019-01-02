@@ -15,8 +15,8 @@ module.exports = {
     'modern-normalize'
   ],
   build: {
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
+    extend (config, { isDev }) {
+      if (isDev && process.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -25,9 +25,6 @@ module.exports = {
         })
       }
     },
-    vendor: [
-      'axios',
-    ]
   },
   modules: [
     '@nuxtjs/pwa',
