@@ -13,7 +13,13 @@ module.exports = {
         hid: "og:image",
         name: "og:image",
         content: "https://yamanoku.net/iam.jpg"
-      }
+      },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:site", content: "@yamanoku" },
+      { name: "twitter:title", content: "ʏᴀᴍᴀɴᴏᴋᴜ" },
+      { name: "twitter:description", content: "Okuto Oyama Portfolio Site" },
+      { name: "twitter:image", content: "https://yamanoku.net/iam.jpg" },
+      { name: "twitter:image:alt", content: "Portrait for Okuto Oyama" }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
@@ -35,6 +41,7 @@ module.exports = {
     [
       "nuxt-i18n",
       {
+        seo: false,
         baseUrl: "https://yamanoku.net",
         locales: [
           {
