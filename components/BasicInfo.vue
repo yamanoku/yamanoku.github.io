@@ -1,26 +1,31 @@
 <template>
   <ul>
-    <li>1989/10/30 Born in Noshiro, Akita, Japan</li>
-    <li>Sex - Man</li>
-    <li>2008 Get into
-      <a href="http://www.iwate-u.ac.jp/" target="_blank" rel="noopener">Iwate University</a> of Art and Culture Course.
+    <li>{{ $t("info.birth") }}</li>
+    <li>{{ $t("info.sex") }}</li>
+    <li>
+      {{ $t("info.2008") }}
       <ul>
-        <li>Bachelor of Art and Culture Course.（BFA）
+        <li>
+          {{ $t("info.bfa") }}
           <ul>
-            <li>Fine Arts</li>
-            <li>Engineering and Design</li>
+            <li>{{ $t("info.bfa01") }}</li>
+            <li>{{ $t("info.bfa02") }}</li>
           </ul>
         </li>
       </ul>
     </li>
-    <li>2014 Get married.</li>
-    <li>2016 Daughter is born</li>
+    <li>{{ $t("info.2014") }}</li>
     <li>
-      <span role="img" aria-label="Family With Girl">👨‍👩‍👧</span> &amp;
-      <span role="img" aria-label="cat">🐈</span>
-      <span role="img" aria-label="cat">🐈</span>
-      <span role="img" aria-label="cat">🐈</span>
+      {{ $t("info.2016") }}
+      <ul>
+        <li>
+          <span role="img" aria-label="Family With Girl">👨‍👩‍👧</span> &amp;
+          <span role="img" aria-label="cat">🐈</span>
+          <span role="img" aria-label="cat">🐈</span>
+          <span role="img" aria-label="cat">🐈</span>
+        </li>
+      </ul>
     </li>
-    <li>Live in Kamagaya, Chiba, Japan</li>
+    <li>{{ $t("info.live") }}</li>
   </ul>
 </template>

@@ -1,45 +1,63 @@
 <template>
   <div>
-    <header-component />
+    <header-component/>
     <main>
-      <h2>Okuto Oyama a.k.a. Oyama Michinoku, yamanoku.</h2>
-      <h3>FrontEnd Designer, UI Design Proposer, Writter, Document Translater, Internet Watcher</h3>
-      <h3>Basic Info</h3>
-      <basic-info-component />
-      <h3>Other Info</h3>
-      <other-info-component />
-      <h3>Product List</h3>
-      <product-list-component />
-      <h3>SNS</h3>
-      <sns-component />
-      <h3>Contact</h3>
-      <address-component />
+      <h2>{{ $t("name") }}</h2>
+      <h3>{{ $t("heading.job") }}</h3>
+      <job-info-component/>
+      <h3>{{ $t("heading.basic") }}</h3>
+      <basic-info-component/>
+      <h3>{{ $t("heading.career") }}</h3>
+      <career-info-component/>
+      <h3>{{ $t("heading.productList") }}</h3>
+      <product-list-component/>
+      <h3>{{ $t("heading.sns") }}</h3>
+      <sns-component/>
+      <h3>{{ $t("heading.contact") }}</h3>
+      <address-component/>
     </main>
+    <nav>
+      <h3>{{ $t("multilingual")}}</h3>
+      <template v-for="locale in $i18n.locales">
+        <nuxt-link
+          v-if="locale.code !== $i18n.locale"
+          :key="locale.code"
+          :to="switchLocalePath(locale.code)"
+        >{{ locale.name }}</nuxt-link>
+      </template>
+    </nav>
   </div>
 </template>
 
 <script>
-import HeaderComponent from '~/components/Header.vue'
-import BasicInfoComponent from '~/components/BasicInfo.vue'
-import OtherInfoComponent from '~/components/OtherInfo.vue'
-import ProductListComponent from '~/components/ProductList.vue'
-import SnsComponent from '~/components/Sns.vue'
-import AddressComponent from '~/components/Address.vue'
+import HeaderComponent from "~/components/Header.vue";
+import JobInfoComponent from "~/components/JobInfo.vue";
+import BasicInfoComponent from "~/components/BasicInfo.vue";
+import CareerInfoComponent from "~/components/CareerInfo.vue";
+import ProductListComponent from "~/components/ProductList.vue";
+import SnsComponent from "~/components/Sns.vue";
+import AddressComponent from "~/components/Address.vue";
 
 export default {
   components: {
     HeaderComponent,
+    JobInfoComponent,
     BasicInfoComponent,
-    OtherInfoComponent,
+    CareerInfoComponent,
     ProductListComponent,
     SnsComponent,
     AddressComponent
   }
-}
+};
 </script>
 
 <style>
 main {
+  max-width: 980px;
+  margin: auto;
+  padding: 0 10px 10px;
+}
+nav {
   max-width: 980px;
   margin: auto;
   padding: 0 10px 20px;
