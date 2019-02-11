@@ -14,7 +14,7 @@
   "dependencies": {
     "@nuxtjs/pwa": "2.6.0",
     "nuxt": "2.4.3",
-    "nuxt-i18n": "5.8.0"
+    "nuxt-i18n": "5.8.1"
   },
   "devDependencies": {
     "axios": "0.18.0",
