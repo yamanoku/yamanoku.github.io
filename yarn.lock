@@ -1407,6 +1407,11 @@ acorn@^6.0.5:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.0.5.tgz#81730c0815f3f3b34d8efa95cb7430965f4d887a"
   integrity sha512-i33Zgp3XWtmZBMNvCr4azvOFeWVw1Rk6p3hfi3LUDvIFraOMywb1kAtrbi+med14m4Xfpqm3zRZMT+c0FNE7kg==
 
+acorn@^6.0.7:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.0.tgz#b0a3be31752c97a0f7013c5f4903b71a05db6818"
+  integrity sha512-MW/FjM+IvU9CgBzjO3UIPCE2pyEwUsoFl+VGdczOPEdxfGFjuKny/gN54mOuX7Qxmb9Rg9MCn2oKiSUeW+pjrw==
+
 ajv-errors@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-1.0.1.tgz#f35986aceb91afadec4102fbd85014950cefa64d"
@@ -4912,17 +4917,17 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-i18n@5.8.0:
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.8.0.tgz#68389146dda00b389700bd743394d32631d20595"
-  integrity sha512-Dj/BEESnhxqpM71VyEM1QaWgM66fppb4YZ+CeQHFx3vu6N++mMOm9a1YpH3SXgxiD70XNxsjMY/adVrxX70kNg==
+nuxt-i18n@5.8.1:
+  version "5.8.1"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.8.1.tgz#fcb469d9fa1acd20461430f41ca521508a0f521e"
+  integrity sha512-hC+BwuFw2NqrpO5clMbSQDtFeJazKHO8glJ0C9MajR74Kvs00gLwbe5grMCZVyLnPYMsQ7QkoRVKieFBj8lhbg==
   dependencies:
     "@kazupon/vue-i18n-loader" "^0.3.0"
-    acorn "^6.0.5"
+    acorn "^6.0.7"
     acorn-walk "^6.1.1"
     cookie "^0.3.1"
     js-cookie "^2.2.0"
-    vue-i18n "^8.7.0"
+    vue-i18n "^8.8.0"
     vue-i18n-extensions "^0.2.0"
 
 nuxt@2.4.3:
@@ -7140,10 +7145,10 @@ vue-i18n-extensions@^0.2.0:
   dependencies:
     vm2 "^3.5.0"
 
-vue-i18n@^8.7.0:
-  version "8.8.0"
-  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.8.0.tgz#9454bd44cc5a75912478a641cb87c1feeed2e944"
-  integrity sha512-1sRCZuTQYfM3LyG3avRI97mIFYYeflgSRLliP29cPLZkZDif4XK8iMmIGxZM6jQwACaEhKKEmzz7fzA8aW7iCg==
+vue-i18n@^8.8.0:
+  version "8.8.1"
+  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.8.1.tgz#566e087b7131cd8439673f18ffd46da7e1afe95c"
+  integrity sha512-phAJs7iF06QxMY1Thd5c6WJnRSSp4fOG/352eiuRTWMlqBEOFApVa0q1TD//NEguKBO0qCz0gEckFpHWJzJA2Q==
 
 vue-loader@^15.6.2:
   version "15.6.2"
