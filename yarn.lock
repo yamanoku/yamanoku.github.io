@@ -4885,17 +4885,17 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-i18n@5.8.1:
-  version "5.8.1"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.8.1.tgz#fcb469d9fa1acd20461430f41ca521508a0f521e"
-  integrity sha512-hC+BwuFw2NqrpO5clMbSQDtFeJazKHO8glJ0C9MajR74Kvs00gLwbe5grMCZVyLnPYMsQ7QkoRVKieFBj8lhbg==
+nuxt-i18n@5.8.2:
+  version "5.8.2"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.8.2.tgz#c184c3caec47b68f179546a9534c8d634e71f822"
+  integrity sha512-liDak7J8n80VL1tAyooWIuDpLMzRw60g+bvocN+nEawgDsvrjuUSQsNXQq0qbk0Mo0mqSnDxoCiQnohCNxrMSQ==
   dependencies:
     "@kazupon/vue-i18n-loader" "^0.3.0"
     acorn "^6.0.7"
     acorn-walk "^6.1.1"
     cookie "^0.3.1"
     js-cookie "^2.2.0"
-    vue-i18n "^8.8.0"
+    vue-i18n "^8.8.1"
     vue-i18n-extensions "^0.2.0"
 
 nuxt@2.4.3:
@@ -7124,7 +7124,7 @@ vue-i18n-extensions@^0.2.0:
   dependencies:
     vm2 "^3.5.0"
 
-vue-i18n@^8.8.0:
+vue-i18n@^8.8.1:
   version "8.8.1"
   resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.8.1.tgz#566e087b7131cd8439673f18ffd46da7e1afe95c"
   integrity sha512-phAJs7iF06QxMY1Thd5c6WJnRSSp4fOG/352eiuRTWMlqBEOFApVa0q1TD//NEguKBO0qCz0gEckFpHWJzJA2Q==
