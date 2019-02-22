@@ -4885,10 +4885,10 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-i18n@5.8.3:
-  version "5.8.3"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.8.3.tgz#c768a0fec969ee7d444795560c9046b6539ec1ec"
-  integrity sha512-9/y4l0QI5mBNF2Aa5i/BltmWjYxrTuPGGcGGMsZTVWW+wQgJMyDQY7lvOJcKv4L/eITuj+yNyTYETwtySRp8Qg==
+nuxt-i18n@5.8.4:
+  version "5.8.4"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.8.4.tgz#db8c4cf680b6deac07e93ca6f14d3f3d35d8e077"
+  integrity sha512-WL/+1T11nK4Oo/yR+PUC+oARpn4R73oJywR11wKz9dsoy91u+f8OMBODIH29EV+gxrOa1rlSXDzpQko12BNGpA==
   dependencies:
     "@kazupon/vue-i18n-loader" "^0.3.0"
     acorn "^6.0.7"
