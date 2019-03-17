@@ -63,10 +63,11 @@ module.exports = {
               name: "Okuto Oyama a.k.a. Oyama Michinoku, yamanoku.",
               job: {
                 1: "FrontEnd Designer",
-                2: "UI Designer",
-                3: "Writter",
-                4: "Document Translater",
-                5: "Internet Watcher"
+                2: "Accessibility Advocator",
+                3: "UI Designer",
+                4: "Writter",
+                5: "Document Translater",
+                6: "Internet Watcher"
               },
               info: {
                 birth: "1989/10/30 Born in Noshiro, Akita, Japan",
@@ -127,10 +128,11 @@ module.exports = {
               name: "大山奥人 a.k.a. おおやまみちのく, yamanoku.",
               job: {
                 1: "フロントエンドデザイナー",
-                2: "UIデザイナー",
-                3: "ライター",
-                4: "ドキュメント翻訳",
-                5: "インターネットウォッチャー"
+                2: "アクセシビリティ啓蒙家",
+                3: "UIデザイナー",
+                4: "ライター",
+                5: "ドキュメント翻訳",
+                6: "インターネットウォッチャー"
               },
               info: {
                 birth: "1989年10月30日 秋田県能代市生まれ",
