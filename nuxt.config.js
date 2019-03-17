@@ -55,9 +55,9 @@ module.exports = {
             name: "日本語ページ"
           }
         ],
-        defaultLocale: "en",
+        defaultLocale: "ja",
         vueI18n: {
-          fallbackLocale: "en",
+          fallbackLocale: "ja",
           messages: {
             en: {
               name: "Okuto Oyama a.k.a. Oyama Michinoku, yamanoku.",
