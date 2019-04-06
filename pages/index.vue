@@ -18,13 +18,11 @@
     </main>
     <nav>
       <h3>{{ $t("multilingual")}}</h3>
-      <template v-for="locale in $i18n.locales">
-        <nuxt-link
-          v-if="locale.code !== $i18n.locale"
-          :key="locale.code"
-          :to="switchLocalePath(locale.code)"
-        >{{ locale.name }}</nuxt-link>
-      </template>
+      <ul>
+        <li v-for="locale in $i18n.locales" :key="locale.code">
+          <nuxt-link :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
+        </li>
+      </ul>
     </nav>
   </div>
 </template>
