@@ -43,7 +43,7 @@
       <a href="/birthday-countdown-js">{{ $t("product.birthdayCount") }}</a>
     </li>
     <li>
-      <a href="/glicthrange">{{ $t("product.glicth") }}</a>
+      <a href="/glitchrange">{{ $t("product.glitch") }}</a>
     </li>
     <li>
       <a
