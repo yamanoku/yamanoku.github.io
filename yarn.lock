@@ -5492,10 +5492,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-i18n@5.12.0:
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.12.0.tgz#1c612a48a0c0a4ce800c568af3bd33c9ec84b196"
-  integrity sha512-EV5ms2b3Hf+csiMPbn8HKdR7F5jAIMNY5sCE6q6NvxDYtwuFHqcBFCQKUbm0fz2ajLPf9YS1rbHGi1wOi1Lphw==
+nuxt-i18n@5.12.1:
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-5.12.1.tgz#29350fa6eaaeb914f43c7daee2d00f44c755f453"
+  integrity sha512-zURqHHWRmq4i4ya9/l25PvrPdtEI5qt885oFaY/LKzjpBydkPs90gv8cW3j+oTVxOYG36zswl0sDsQZU4OkyCw==
   dependencies:
     "@kazupon/vue-i18n-loader" "^0.3.0"
     acorn "^6.1.1"
