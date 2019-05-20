@@ -3430,10 +3430,10 @@ eslint-plugin-jsx-a11y@^6.2.1:
     has "^1.0.3"
     jsx-ast-utils "^2.0.1"
 
-eslint-plugin-vue-a11y@0.0.29:
-  version "0.0.29"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue-a11y/-/eslint-plugin-vue-a11y-0.0.29.tgz#2c85b6f7413d94b6ea2c71271723c1d49701fc4e"
-  integrity sha512-M/ik7y4Ut/bfjOGpBM9qwTrICe7Zo5BbuotetvMEsf7qHBGee0ChFB1jJaQdLRPzIYlytvvY2f9IvV59abYdQA==
+eslint-plugin-vue-a11y@0.0.30:
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue-a11y/-/eslint-plugin-vue-a11y-0.0.30.tgz#03c2a435990231485b26786b3ea5533bc986d7f1"
+  integrity sha512-1X0n0qzbrwpjxElcsVIMhxtYXB+9hpHOttxMvUJuViv/G4m0cmpHxXFegQh1rmXbOMLQ+MVam/qWykPaXCEbig==
   dependencies:
     aria-query "^0.7.1"
     chai "^4.1.0"
