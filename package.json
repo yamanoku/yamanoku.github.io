@@ -14,15 +14,15 @@
   "dependencies": {
     "@nuxtjs/pwa": "2.6.0",
     "nuxt": "2.8.1",
-    "nuxt-i18n": "5.12.4"
+    "nuxt-i18n": "5.12.7"
   },
   "devDependencies": {
     "axios": "0.19.0",
-    "babel-eslint": "10.0.1",
-    "eslint": "5.16.0",
+    "babel-eslint": "10.0.2",
+    "eslint": "6.0.1",
     "eslint-friendly-formatter": "4.0.1",
-    "eslint-loader": "2.1.2",
-    "eslint-plugin-vue": "5.2.2",
+    "eslint-loader": "2.2.1",
+    "eslint-plugin-vue": "5.2.3",
     "eslint-plugin-vue-a11y": "0.0.31",
     "modern-normalize": "0.5.0",
     "push-dir": "0.4.1"
