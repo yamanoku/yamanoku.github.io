@@ -24,6 +24,11 @@
 header {
   background-color: #36465d;
 }
+@media (prefers-color-scheme: dark) {
+  header {
+    background-color: #000;
+  }
+}
 h1 {
   text-align: center;
   margin: 0;
