@@ -1,5 +1,5 @@
 <template>
-  <nuxt/>
+  <nuxt />
 </template>
 
 <script>
@@ -12,6 +12,12 @@ export default {
 
 
 <style>
+:root {
+  --black: rgb(21, 32, 43);
+  --white: #fff;
+  --blue: rgb(90, 190, 255);
+  --purple: rgb(220, 100, 220);
+}
 html {
   font: inherit;
   font-family: sans-serif;
@@ -23,5 +29,17 @@ html {
 *:before,
 *:after {
   box-sizing: border-box;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  a {
+    color: var(--blue);
+  }
+  a:visited {
+    color: var(--purple);
+  }
 }
 </style>
