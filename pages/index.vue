@@ -57,12 +57,16 @@ main {
 }
 h2 {
   margin: var(--rhythm) 0;
-  font-size: 28px;
+  font-size: 2rem;
+  font-feature-settings: "palt";
   line-height: calc(var(--rhythm) * 2);
+  letter-spacing: 0.025em;
 }
 h3 {
   margin: var(--rhythm) 0;
-  font-size: 20px;
+  font-size: 1.2rem;
+  font-feature-settings: "palt";
+  letter-spacing: 0.0125em;
   line-height: var(--rhythm);
 }
 ul {
@@ -74,6 +78,7 @@ ul ul {
 }
 ul li {
   line-height: var(--rhythm);
+  font-size: 1rem;
 }
 nav {
   max-width: 980px;
