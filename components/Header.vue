@@ -32,11 +32,11 @@ header {
 h1 {
   text-align: center;
   margin: 0;
-  padding: 24px 0;
+  padding: var(--rhythm) 0;
 }
 svg {
-  width: 152px;
-  height: 152px;
+  width: 150px;
+  height: 150px;
   vertical-align: bottom;
 }
 .cls-1 {

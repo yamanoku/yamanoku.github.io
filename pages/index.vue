@@ -56,24 +56,24 @@ main {
   padding: 0 10px;
 }
 h2 {
-  margin: 25px 0;
+  margin: var(--rhythm) 0;
   font-size: 28px;
-  line-height: 50px;
+  line-height: calc(var(--rhythm) * 2);
 }
 h3 {
-  margin: 25px 0;
+  margin: var(--rhythm) 0;
   font-size: 20px;
-  line-height: 25px;
+  line-height: var(--rhythm);
 }
 ul {
-  margin: 25px 0;
+  margin: var(--rhythm) 0;
   line-height: 1;
 }
 ul ul {
   margin: 0;
 }
 ul li {
-  line-height: 25px;
+  line-height: var(--rhythm);
 }
 nav {
   max-width: 980px;
