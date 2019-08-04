@@ -14,7 +14,7 @@
           class="cls-1"
           d="M64,67v54l82,82-46,46v60h56L310,155V96H230l-21,20L160,67H64ZM176,203l-45,46h25L293,113H230l-39,39-31-31H94Z"
           transform="translate(-64 -67)"
-        ></path>
+        />
       </svg>
     </h1>
   </header>
@@ -22,11 +22,11 @@
 
 <style scoped>
 header {
-  background-color: #36465d;
+  background-color: rgb(54, 70, 93);
 }
 @media (prefers-color-scheme: dark) {
   header {
-    background-color: #000;
+    background-color: rgb(50, 54, 57);
   }
 }
 h1 {
@@ -42,5 +42,10 @@ svg {
 .cls-1 {
   fill: #fff;
   fill-rule: evenodd;
+}
+@media (prefers-color-scheme: dark) {
+  .cls-1 {
+    fill: var(--white);
+  }
 }
 </style>
