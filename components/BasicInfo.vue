@@ -19,13 +19,38 @@
       {{ $t("info.2016") }}
       <ul>
         <li>
-          <span role="img" aria-label="Family With Girl">👨‍👩‍👧</span> &amp;
-          <span role="img" aria-label="cat">🐈</span>
-          <span role="img" aria-label="cat">🐈</span>
-          <span role="img" aria-label="cat">🐈</span>
+          <span role="img" :aria-label="emoji01">👨‍👩‍👧</span>
+          <span role="img" :aria-label="emoji02">🐈</span>
+          <span role="img" :aria-label="emoji02">🐈</span>
+          <span role="img" :aria-label="emoji02">🐈</span>
         </li>
       </ul>
     </li>
     <li>{{ $t("info.live") }}</li>
   </ul>
 </template>
+
+<script>
+export default {
+  computed: {
+    emoji01() {
+      if (this.$i18n.locale === "en") {
+        return "Family: Man, Woman, Girl";
+      } else if (this.$i18n.locale === "fr") {
+        return "Famille: homme, femme, fille";
+      } else {
+        return "家族構成: 私と妻と娘";
+      }
+    },
+    emoji02() {
+      if (this.$i18n.locale === "en") {
+        return "Cat";
+      } else if (this.$i18n.locale === "fr") {
+        return "Chat";
+      } else {
+        return "猫";
+      }
+    }
+  }
+}
+</script>
