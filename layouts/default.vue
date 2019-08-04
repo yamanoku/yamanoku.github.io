@@ -1,5 +1,5 @@
 <template>
-  <nuxt/>
+  <nuxt />
 </template>
 
 <script>
@@ -16,7 +16,7 @@ html {
   font: inherit;
   font-family: sans-serif;
   font-size: 100%;
-  line-height: 1.4;
+  line-height: 25px;
   -webkit-font-smoothing: antialiased;
 }
 *,

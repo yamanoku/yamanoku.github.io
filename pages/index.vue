@@ -53,11 +53,31 @@ export default {
 main {
   max-width: 980px;
   margin: auto;
-  padding: 0 10px 10px;
+  padding: 0 10px;
+}
+h2 {
+  margin: 25px 0;
+  font-size: 28px;
+  line-height: 50px;
+}
+h3 {
+  margin: 25px 0;
+  font-size: 20px;
+  line-height: 25px;
+}
+ul {
+  margin: 25px 0;
+  line-height: 1;
+}
+ul ul {
+  margin: 0;
+}
+ul li {
+  line-height: 25px;
 }
 nav {
   max-width: 980px;
   margin: auto;
-  padding: 0 10px 20px;
+  padding: 0 10px;
 }
 </style>
