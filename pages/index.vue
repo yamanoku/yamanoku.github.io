@@ -16,6 +16,8 @@
       <career-info-component />
       <h3>{{ $t("heading.productList") }}</h3>
       <product-list-component />
+      <h3>{{ $t("heading.slides.title") }}</h3>
+      <slides-component />
       <h3>{{ $t("heading.sns") }}</h3>
       <sns-component />
       <h3>{{ $t("heading.contact") }}</h3>
@@ -38,6 +40,7 @@ import JobInfoComponent from "~/components/JobInfo.vue";
 import BasicInfoComponent from "~/components/BasicInfo.vue";
 import CareerInfoComponent from "~/components/CareerInfo.vue";
 import ProductListComponent from "~/components/ProductList.vue";
+import SlidesComponent from "~/components/Slides.vue";
 import SnsComponent from "~/components/Sns.vue";
 import AddressComponent from "~/components/Address.vue";
 
@@ -48,6 +51,7 @@ export default {
     BasicInfoComponent,
     CareerInfoComponent,
     ProductListComponent,
+    SlidesComponent,
     SnsComponent,
     AddressComponent
   }
@@ -71,14 +75,21 @@ h2 small {
   font-size: 1.4rem;
   display: inline-block;
   line-height: 1;
-  color: rgba(0, 0, 0, .6);
+  color: rgba(0, 0, 0, 0.6);
 }
 @media (prefers-color-scheme: dark) {
   h2 small {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(255, 255, 255, 0.6);
   }
 }
 h3 {
+  margin: var(--rhythm) 0;
+  font-size: 1.4rem;
+  font-feature-settings: "palt";
+  letter-spacing: 0.0125em;
+  line-height: var(--rhythm);
+}
+h4 {
   margin: var(--rhythm) 0;
   font-size: 1.2rem;
   font-feature-settings: "palt";

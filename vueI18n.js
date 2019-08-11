@@ -64,10 +64,18 @@ export default {
         job: "Job Info",
         career: "Career Info",
         productList: "Product List",
+        slides: {
+          title: "Slides",
+          stage: "Stage",
+          study: "Study Meeting",
+          write: "Writing",
+          lt: "Lightning Talk",
+        },
         sns: "Social Service",
         contact: "Contact"
       },
-      multilingual: "Multilingual Page"
+      multilingual: "Multilingual Page",
+      onlyJPText: "Sorry, Japanese text only"
     },
     ja: {
       name: " , おおやまみちのく, yamanoku",
@@ -132,6 +140,13 @@ export default {
         job: "職業",
         career: "職歴情報",
         productList: "制作物一覧",
+        slides: {
+          title: "スライド一覧",
+          stage: "登壇",
+          study: "勉強会",
+          write: "執筆",
+          lt: "ライトニングトーク",
+        },
         sns: "ソーシャルサービス",
         contact: "連絡先"
       },
@@ -200,10 +215,18 @@ export default {
         job: "Infos emploi",
         career: "Infos carrière",
         productList: "Liste de produits",
+        slides: {
+          title: "Glissades",
+          stage: "Scène",
+          study: "Réunion d'étude",
+          write: "Écriture",
+          lt: "Conversation éclair",
+        },
         sns: "Service social",
         contact: "Contact"
       },
-      multilingual: "Multilingue page"
+      multilingual: "Multilingue page",
+      onlyJPText: "Désolé, texte japonais seulement"
     },
   }
 };
