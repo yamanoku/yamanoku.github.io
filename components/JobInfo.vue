@@ -1,10 +1,10 @@
 <template>
-  <ul>
-    <li>{{ $t("job.1") }}</li>
-    <li>{{ $t("job.2") }}</li>
-    <li>{{ $t("job.3") }}</li>
-    <li>{{ $t("job.4") }}</li>
-    <li>{{ $t("job.5") }}</li>
-    <li>{{ $t("job.6") }}</li>
+  <ul role="list">
+    <li role="listitem">{{ $t("job.1") }}</li>
+    <li role="listitem">{{ $t("job.2") }}</li>
+    <li role="listitem">{{ $t("job.3") }}</li>
+    <li role="listitem">{{ $t("job.4") }}</li>
+    <li role="listitem">{{ $t("job.5") }}</li>
+    <li role="listitem">{{ $t("job.6") }}</li>
   </ul>
 </template>
