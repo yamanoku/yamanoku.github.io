@@ -12,11 +12,14 @@ export default {
         6: "Internet Watcher"
       },
       info: {
-        birth: "1989/10/30 Born in Noshiro, Akita, Japan",
+        birth: "Born in Noshiro, Akita, Japan",
         sex: "Sex - Man",
-        2008: "2008 - Get into Iwate University of Art and Culture Course.",
-        2014: "2014 - Get married.",
-        2016: "2016 - Daughter is born",
+        2008: {
+          before : " - Get into Iwate University of Art and Culture Course.",
+          now : "Now - Art and Culture Course in Faculty of Humanities and Sociology",
+        },
+        2014: " - Get married.",
+        2016: " - Daughter is born",
         bfa: "Bachelor of Art and Culture Course.（BFA）",
         bfa01: "Fine Arts",
         bfa02: "Engineering and Design",
@@ -25,7 +28,7 @@ export default {
       career: {
         scrapbox: "Scrapbox",
         wantedly: "Wantedly",
-        curriculumVitae: "Curriculum Vitae (GitHub)"
+        curriculumVitae: "Curriculum Vitae"
       },
       product: {
         wafb: {
@@ -67,7 +70,7 @@ export default {
       multilingual: "Multilingual Page"
     },
     ja: {
-      name: "大山奥人 a.k.a. おおやまみちのく, yamanoku.",
+      name: " , おおやまみちのく, yamanoku",
       job: {
         1: "フロントエンドデザイナー",
         2: "アクセシビリティ啓蒙家",
@@ -77,20 +80,23 @@ export default {
         6: "インターネットウォッチャー"
       },
       info: {
-        birth: "1989年10月30日 秋田県能代市生まれ",
-        sex: "性別 男",
-        2008: "2008年 岩手大学教育学部芸術文化課程入学",
-        2014: "2014年 結婚",
-        2016: "2016年 娘が産まれる",
+        birth: " 秋田県能代市生まれ",
+        sex: "性別 男性",
+        2008: {
+          before : "岩手大学教育学部芸術文化課程入学",
+          now : "現 人文社会学部芸術文化専修プログラム",
+        },
+        2014: " 結婚",
+        2016: " 娘が産まれる",
         bfa: "学士（美術）",
         bfa01: "芸術",
         bfa02: "デザインエンジニアリング",
-        live: "千葉県鎌ケ谷市在住"
+        live: "千葉県鎌ケ谷市在住",
       },
       career: {
         scrapbox: "Scrapbox",
         wantedly: "Wantedly",
-        curriculumVitae: "職務経歴書（GitHub）"
+        curriculumVitae: "職務経歴書"
       },
       product: {
         wafb: {
@@ -142,11 +148,14 @@ export default {
         6: "Veille Internet"
       },
       info: {
-        birth: "1989/10/30 Né à Noshiro, Akita, Japon",
+        birth: "Né à Noshiro, Akita, Japon",
         sex: "Sexe - Homme",
-        2008: "2008 - Mettez-vous dans Iwate University of Art et culture Cours.",
-        2014: "2014 - se marier.",
-        2016: "2016 - Fille est né",
+        2008: {
+          before : " - Mettez-vous dans Iwate University of Art et culture Cours.",
+          now : "À présent - Cours d'art et de culture à la Faculté des sciences humaines et de sociologie",
+        },
+        2014: " - se marier.",
+        2016: " - Fille est né",
         bfa: "Baccalauréat en Art et culture Cours. (BFA)",
         bfa01: "Beaux-Arts",
         bfa02: "Ingénierie et Design",
@@ -155,7 +164,7 @@ export default {
       career: {
         scrapbox: "Scrapbox",
         wantedly: "Wantedly",
-        curriculumVitae: "Reprendre (GitHub)"
+        curriculumVitae: "Reprendre"
       },
       product: {
         wafb: {
