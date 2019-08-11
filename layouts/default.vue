@@ -17,7 +17,7 @@ export default {
   --white: rgb(210, 210, 210);
   --blue: rgb(90, 190, 255);
   --purple: rgb(220, 100, 220);
-  --rhythm: 25px;
+  --rhythm: 24px;
 }
 html {
   color: var(--black);
