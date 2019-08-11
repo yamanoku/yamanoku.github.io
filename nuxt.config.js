@@ -2,7 +2,7 @@ import vueI18n from './vueI18n';
 
 module.exports = {
   head: {
-    title: "ʏᴀᴍᴀɴᴏᴋᴜ",
+    title: "ʏᴀᴍᴀɴᴏᴋᴜ.ɴᴇᴛ",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
