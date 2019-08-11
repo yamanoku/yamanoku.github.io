@@ -1,9 +1,17 @@
 <template>
   <ul>
-    <li>{{ $t("info.birth") }}</li>
+    <li>
+      <time datetime="1989-10-30">{{birthday}}</time>
+      <a
+        href="https://www.city.noshiro.akita.jp/"
+        target="_blank"
+        rel="noopener"
+      >{{ $t("info.birth") }}</a>
+    </li>
     <li>{{ $t("info.sex") }}</li>
     <li>
-      {{ $t("info.2008") }}
+      <time datetime="2008">{{translateYear(2008)}}</time>
+      {{ $t("info.2008.before") }}
       <ul>
         <li>
           {{ $t("info.bfa") }}
@@ -12,10 +20,21 @@
             <li>{{ $t("info.bfa02") }}</li>
           </ul>
         </li>
+        <li>
+          <a
+            href="https://jinsha.iwate-u.ac.jp/curriculum/hscs/arts-and-culture"
+            target="_blank"
+            rel="noopener"
+          >{{ $t("info.2008.now") }}</a>
+        </li>
       </ul>
     </li>
-    <li>{{ $t("info.2014") }}</li>
     <li>
+      <time datetime="2014">{{translateYear(2014)}}</time>
+      {{ $t("info.2014") }}
+    </li>
+    <li>
+      <time datetime="2016">{{translateYear(2016)}}</time>
       {{ $t("info.2016") }}
       <ul>
         <li>
@@ -26,13 +45,26 @@
         </li>
       </ul>
     </li>
-    <li>{{ $t("info.live") }}</li>
+    <li>
+      <a
+        href="https://www.city.kamagaya.chiba.jp/"
+        target="_blank"
+        rel="noopener"
+      >{{ $t("info.live") }}</a>
+    </li>
   </ul>
 </template>
 
 <script>
 export default {
   computed: {
+    birthday() {
+      if (this.$i18n.locale === "ja") {
+        return "1989年10月30日";
+      } else {
+        return "1989/10/30";
+      }
+    },
     emoji01() {
       if (this.$i18n.locale === "en") {
         return "Family: Man, Woman, Girl";
@@ -51,6 +83,15 @@ export default {
         return "猫";
       }
     }
+  },
+  methods: {
+    translateYear(year) {
+      if (this.$i18n.locale === "ja") {
+        return year + "年";
+      } else {
+        return year;
+      }
+    }
   }
-}
+};
 </script>
