@@ -270,6 +270,12 @@ ul:not([class]) li svg path {
     fill: var(--white);
   }
 }
+ul:not([class]) li svg .npm-1 {
+  fill: #c12127;
+}
+ul:not([class]) li svg .npm-2 {
+  fill: #fff;
+}
 nav {
   max-width: 80ch;
   margin: auto;
