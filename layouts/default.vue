@@ -32,6 +32,9 @@ html {
 *:after {
   box-sizing: border-box;
 }
+*:focus {
+  outline: 3px solid var(--blue);
+}
 @media (prefers-color-scheme: dark) {
   html {
     background-color: var(--black);
