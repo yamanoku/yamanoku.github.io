@@ -18,7 +18,7 @@ module.exports = {
       },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@yamanoku" },
-      { name: "twitter:title", content: "ʏᴀᴍᴀɴᴏᴋᴜ" },
+      { name: "twitter:title", content: "ʏᴀᴍᴀɴᴏᴋᴜ.ɴᴇᴛ" },
       { name: "twitter:description", content: "Okuto Oyama Portfolio Site" },
       { name: "twitter:image", content: "https://yamanoku.net/iam.jpg" },
       { name: "twitter:image:alt", content: "Portrait for Okuto Oyama" }
@@ -77,10 +77,10 @@ module.exports = {
     dev: true
   },
   manifest: {
-    name: "ʏᴀᴍᴀɴᴏᴋᴜ",
+    name: "ʏᴀᴍᴀɴᴏᴋᴜ.ɴᴇᴛ",
     short_name: "ʏᴀᴍᴀɴᴏᴋᴜ",
-    title: "ʏᴀᴍᴀɴᴏᴋᴜ",
-    "og:title": "ʏᴀᴍᴀɴᴏᴋᴜ",
+    title: "ʏᴀᴍᴀɴᴏᴋᴜ.ɴᴇᴛ",
+    "og:title": "ʏᴀᴍᴀɴᴏᴋᴜ.ɴᴇᴛ",
     description: "Okuto Oyama Portfolio Site.",
     "og:description": "Okuto Oyama Portfolio Site.",
     lang: "en",
