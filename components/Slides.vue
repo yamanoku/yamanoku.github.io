@@ -131,6 +131,19 @@
         >PlayBackTech2018</a>
       </li>
     </ul>
+    <h4 id="slides-qiita">
+      <a class="anchor" aria-hidden="true" href="#slides-qiita">
+        <anchor-icon />
+      </a>
+      Qiita
+    </h4>
+    <ul role="list">
+      <li v-for="item in lists" :key="item.id">
+        <a :href="item.url" target="_blank" rel="noopener">
+          {{item.title}}
+        </a>
+      </li>
+    </ul>
     <h4 id="slides-lt">
       <a class="anchor" aria-hidden="true" href="#slides-lt">
         <anchor-icon />
@@ -156,3 +169,16 @@
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    qiita: Array
+  },
+  data() {
+    return {
+      lists: this.qiita
+    };
+  },
+}
+</script>

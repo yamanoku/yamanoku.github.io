@@ -42,7 +42,7 @@
         </a>
         {{ $t("heading.slides.title") }}
       </h3>
-      <slides-component />
+      <slides-component :qiita="qiita" />
       <h3 id="sns">
         <a class="anchor" aria-hidden="true" href="#sns">
           <anchor-icon />
@@ -80,6 +80,23 @@ import SnsComponent from "~/components/Sns.vue";
 import AddressComponent from "~/components/Address.vue";
 
 export default {
+  async asyncData({ params, error }) {
+    try {
+      const URL =
+        "https://qiita.com/api/v2/users/yamanoku/items?page=1&per_page=10";
+      const qiita = await fetch(URL).then(res => {
+        return res.json();
+      });
+      qiita.forEach(e => {
+        return e.title;
+      })
+      return {
+        qiita
+      }
+    } catch (e) {
+      error({ statusCode: 404, message: "Connection Error" });
+    }
+  },
   components: {
     HeaderComponent,
     JobInfoComponent,
