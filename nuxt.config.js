@@ -1,4 +1,4 @@
-import vueI18n from './vueI18n';
+import vueI18n from "./vueI18n";
 
 module.exports = {
   head: {
@@ -66,6 +66,9 @@ module.exports = {
         vueI18n
       }
     ]
+  ],
+  plugins: [
+    '~plugins/icons.js'
   ],
   workbox: {
     dev: true
