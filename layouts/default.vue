@@ -46,7 +46,7 @@ a {
   text-decoration: none;
   background-image: linear-gradient(var(--linkVisited), var(--linkVisited));
   background-repeat: no-repeat;
-  background-position: center bottom calc((var(--rhythm) - 1.5em) / 2 - 1px);
+  background-position: left 0 bottom calc((24px - 1.5em)/ 2 - 1px);
   background-size: 100% 2px;
 }
 a:visited {
