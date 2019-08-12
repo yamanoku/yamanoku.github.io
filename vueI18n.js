@@ -40,8 +40,11 @@ export default {
         yamanokuCli: "yamanoku CLI",
         reading: "Reading...",
         vuePortfolio: "Vue Portfolio Template",
+        crowding: "Crowding - Coding works",
         birthdayCount: "Birthday Countdown",
         glitch: "glitchrange",
+        browserCrash: "canvas_browser-crash.js",
+        sushi: "rolling-sushi",
         qiitaCode: "Qiita Code Style Before"
       },
       sns: {
@@ -116,8 +119,11 @@ export default {
         yamanokuCli: "yamanoku CLI",
         reading: "Reading...",
         vuePortfolio: "Vue Portfolio Template",
+        crowding: "Crowding - コーディング小作品",
         birthdayCount: "Birthday Countdown",
         glitch: "glitchrange",
+        browserCrash: "canvas_browser-crash.js",
+        sushi: "rolling-sushi",
         qiitaCode: "Qiita Code Style Before"
       },
       sns: {
@@ -191,8 +197,11 @@ export default {
         yamanokuCli: "yamanoku Interface de ligne de commande",
         reading: "En train de lire...",
         vuePortfolio: "Vue Portefeuille Modèle",
+        crowding: "Foule - Travaux de codage",
         birthdayCount: "Anniversaire Compte à rebours",
         glitch: "pépinintervalle",
+        browserCrash: "canvas_crash-navigateur.js",
+        sushi: "sushi-roulant",
         qiitaCode: "Qiita code style avant"
       },
       sns: {
