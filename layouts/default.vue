@@ -17,15 +17,21 @@ export default {
   --white: rgb(210, 210, 210);
   --blue: rgb(90, 190, 255);
   --purple: rgb(220, 100, 220);
+  --linkBlue: rgb(53, 62, 184);
+  --linkVisited: rgba(70, 70, 70, 0.5);
   --rhythm: 24px;
 }
 html {
   color: var(--black);
   font: inherit;
-  font-family: sans-serif;
   font-size: 100%;
   line-height: var(--rhythm);
   -webkit-font-smoothing: antialiased;
+}
+body {
+  font-family: Arial, Helvetica, "Noto Sans JP", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
 }
 *,
 *:before,
@@ -33,7 +39,18 @@ html {
   box-sizing: border-box;
 }
 *:focus {
-  outline: 3px solid var(--blue);
+  outline: 2px solid var(--blue);
+}
+a {
+  color: var(--linkBlue);
+  text-decoration: none;
+  background-image: linear-gradient(var(--linkVisited), var(--linkVisited));
+  background-repeat: no-repeat;
+  background-position: center bottom calc((var(--rhythm) - 1.5em) / 2 - 1px);
+  background-size: 100% 2px;
+}
+a:visited {
+  color: var(--linkVisited);
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -42,6 +59,8 @@ html {
   }
   a {
     color: var(--blue);
+    background-image: linear-gradient(var(--blue), var(--blue));
+    text-shadow: 1px 1px 0 var(--black), 0 1px 0 var(--black);
   }
   a:visited {
     color: var(--purple);
