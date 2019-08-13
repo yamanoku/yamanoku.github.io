@@ -1,5 +1,11 @@
 <template>
-  <div>
+  <section>
+    <h3 id="product">
+      <a class="anchor" aria-hidden="true" href="#product">
+        <anchor-icon />
+      </a>
+      {{ $t("heading.slides.title") }}
+    </h3>
     <template v-if="this.$i18n.locale !== 'ja'">
       <em>{{ $t("onlyJPText") }}</em>
     </template>
@@ -139,9 +145,7 @@
     </h4>
     <ul role="list">
       <li v-for="item in lists" :key="item.id">
-        <a :href="item.url" target="_blank" rel="noopener">
-          {{item.title}}
-        </a>
+        <a :href="item.url" target="_blank" rel="noopener">{{item.title}}</a>
       </li>
     </ul>
     <h4 id="slides-lt">
@@ -167,7 +171,7 @@
         <a href="/LT/lt05/" target="_blank" rel="noopener">まもなく娘生誕２周年だよ全員集合</a>
       </li>
     </ul>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -179,6 +183,6 @@ export default {
     return {
       lists: this.qiita
     };
-  },
-}
+  }
+};
 </script>

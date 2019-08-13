@@ -8,64 +8,15 @@
         {{ $t("name") }}
       </h2>
       <h2 v-else>{{ $t("name") }}</h2>
-      <h3 id="job">
-        <a class="anchor" aria-hidden="true" href="#job">
-          <anchor-icon />
-        </a>
-        {{ $t("heading.job") }}
-      </h3>
-      <job-info-component />
-      <h3 id="basic">
-        <a class="anchor" aria-hidden="true" href="#basic">
-          <anchor-icon />
-        </a>
-        {{ $t("heading.basic") }}
-      </h3>
       <basic-info-component />
-      <h3 id="career">
-        <a class="anchor" aria-hidden="true" href="#career">
-          <anchor-icon />
-        </a>
-        {{ $t("heading.career") }}
-      </h3>
+      <job-info-component />
       <career-info-component />
-      <h3 id="product">
-        <a class="anchor" aria-hidden="true" href="#product">
-          <anchor-icon />
-        </a>
-        {{ $t("heading.productList") }}
-      </h3>
       <product-list-component />
-      <h3 id="slide">
-        <a class="anchor" aria-hidden="true" href="#slide">
-          <anchor-icon />
-        </a>
-        {{ $t("heading.slides.title") }}
-      </h3>
       <slides-component :qiita="qiita" />
-      <h3 id="sns">
-        <a class="anchor" aria-hidden="true" href="#sns">
-          <anchor-icon />
-        </a>
-        {{ $t("heading.sns") }}
-      </h3>
       <sns-component />
-      <h3 id="contact">
-        <a class="anchor" aria-hidden="true" href="#contact">
-          <anchor-icon />
-        </a>
-        {{ $t("heading.contact") }}
-      </h3>
       <address-component />
     </main>
-    <nav>
-      <h3>{{ $t("multilingual")}}</h3>
-      <ul>
-        <li v-for="locale in $i18n.locales" :key="locale.code">
-          <nuxt-link :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
-        </li>
-      </ul>
-    </nav>
+    <local-switch-component />
   </div>
 </template>
 
@@ -78,6 +29,7 @@ import ProductListComponent from "~/components/ProductList.vue";
 import SlidesComponent from "~/components/Slides.vue";
 import SnsComponent from "~/components/Sns.vue";
 import AddressComponent from "~/components/Address.vue";
+import LocalSwitchComponent from "~/components/LocalSwitch.vue";
 
 export default {
   async asyncData({ params, error }) {
@@ -105,7 +57,8 @@ export default {
     ProductListComponent,
     SlidesComponent,
     SnsComponent,
-    AddressComponent
+    AddressComponent,
+    LocalSwitchComponent
   }
 };
 </script>
