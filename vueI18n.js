@@ -144,7 +144,7 @@ export default {
       heading: {
         basic: "基本情報",
         job: "職業",
-        career: "職歴情報",
+        career: "職歴",
         productList: "制作物一覧",
         slides: {
           title: "スライド一覧",
