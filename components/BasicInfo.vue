@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <h3 id="basic">
+  <section id="basic">
+    <h3>
       <a class="anchor" aria-hidden="true" href="#basic">
         <anchor-icon />
       </a>

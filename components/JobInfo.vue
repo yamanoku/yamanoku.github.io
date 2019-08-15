@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <h3 id="job">
+  <section id="job">
+    <h3>
       <a class="anchor" aria-hidden="true" href="#job">
         <anchor-icon />
       </a>
