@@ -13,9 +13,7 @@
         </a>
         {{ $t("product.wafb.title") }}
       </h4>
-      <p
-        lang="ja"
-      >技術書典5にて発表。ウェブアクセシビリティはどういった対応があるのか、マシンリーダブルとヒューマンリーダブル、WAI-ARIAについて、求められるアクセシビリティを意識したウェブページなど、エンジニアだけでなくウェブに関わるすべての人に見てもらいたい一冊です。（アクセシビリティとは、近づきやすさやアクセスのしやすさのこと）</p>
+      <p>{{ $t("product.description.wafb") }}</p>
       <template v-if="this.$i18n.locale !== 'ja'">
         <p>
           <em>{{ $t("onlyJPText") }}</em>
@@ -59,9 +57,7 @@
         </a>
         {{ $t("product.reading") }}
       </h4>
-      <p
-        lang="ja"
-      >いつも自分が見ているニュースを集めてまとめてみたらどうなるだろうか、情報の蓄積(ためること)・見える化というものを考え作りました。オフラインアプリケーションとしても閲覧できるようPWA技術を取り入れています。</p>
+      <p>{{ $t("product.description.reading") }}</p>
       <ul role="list">
         <li role="listitem">
           <a href="https://reading.yamanoku.net" target="_blank" rel="noopener">
@@ -119,10 +115,7 @@
         </a>
         {{ $t("product.vuePortfolio") }}
       </h4>
-      <p lang="ja">
-        Vue.js製のポートフォリオテンプレートです。vue-cliから作成したSPA処女作です。
-        <br />はじめはVue1.0系で作ってましたが、Vue2.0系にバージョンアップ対応しています。
-      </p>
+      <p>{{ $t("product.description.vuePortfolio") }}</p>
       <ul role="list">
         <li role="listitem">
           <a href="https://vue-portfolio.yamanoku.net/" target="_blank" rel="noopener">
@@ -167,15 +160,7 @@
         </a>
         {{ $t("product.yamanokuCli") }}
       </h4>
-      <p lang="ja">
-        CLIで確認できる簡易自己紹介ツール。
-        fork元は
-        <a
-          href="https://github.com/sindresorhus/sindresorhus"
-          target="_blank"
-          rel="noopener"
-        >sindresorhus</a>氏より。
-      </p>
+      <p>{{ $t("product.description.yamanokuCli") }}</p>
       <ul role="list">
         <li role="listitem">
           <a href="https://www.npmjs.com/package/yamanoku">
@@ -198,20 +183,7 @@
         </a>
         {{ $t("product.slackprimoji") }}
       </h4>
-      <p lang="ja">
-        <a href="https://www.tv-tokyo.co.jp/anime/pripara/" target="_blank" rel="noopener">プリパラ</a>に出ているキャラのセリフをSlackのリアクション用絵文字に変換。
-        元ネタは
-        <a
-          href="https://github.com/oti"
-          target="_blank"
-          rel="noopener"
-        >oti</a>氏制作の
-        <a
-          href="https://github.com/decomoji/slack-reaction-decomoji"
-          target="_blank"
-          rel="noopener"
-        >slack-reaction-decomoji</a>より。
-      </p>
+      <p>{{ $t("product.description.slackprimoji") }}</p>
       <ul role="list">
         <li role="listitem">
           <a
@@ -232,10 +204,7 @@
         </a>
         {{ $t("product.qiitaCode") }}
       </h4>
-      <p lang="ja">
-        Qiitaの
-        <code>&lt;code&gt;</code>スタイルを以前のものに戻すChrome拡張機能。ストアに公開していないため、デベロッパーモードにて追加して使用。
-      </p>
+      <p>{{ $t("product.description.qiitaCode") }}</p>
       <ul role="list">
         <li role="listitem">
           <a
@@ -273,7 +242,7 @@
         </a>
         {{ $t("product.birthdayCount") }}
       </h5>
-      <p lang="ja">筆者の誕生日までをカウントダウン。当日になったらAmazonの欲しい物リストが公開され、翌日にはリセットされる。</p>
+      <p>{{ $t("product.description.birthdayCount") }}</p>
       <ul role="list">
         <li role="listitem">
           <a href="/birthday-countdown-js">
@@ -294,11 +263,7 @@
         </a>
         {{ $t("product.glitch") }}
       </h5>
-      <p lang="ja">
-        JavaScriptによるグリッチ表現。
-        <code>&lt;input type="range"&gt;</code>
-        にてグリッチ調整。画像をアップロードして変更。グリッチした画像を保存も可能。
-      </p>
+      <p>{{ $t("product.description.glitch") }}</p>
       <ul role="list">
         <li role="listitem">
           <a href="/glitchrange">
@@ -313,11 +278,7 @@
         </a>
         {{ $t("product.browserCrash") }}
       </h5>
-      <p lang="ja">
-        かつてのWindowsOSでブラウザが重くなったときに起こるありがちな状況を
-        <code>&lt;canvas&gt;</code>上で表現。カーソルを動かすことによりブラウザが無限に描画される。
-        <strong>このJavaScriptには違法性は一切ありません。</strong>
-      </p>
+      <p>{{ $t("product.description.browserCrash") }}</p>
       <ul role="list">
         <li role="listitem">
           <a href="/canvas_browser-crash.js">
@@ -332,10 +293,7 @@
         </a>
         {{ $t("product.sushi") }}
       </h5>
-      <p lang="ja">
-        CSS3 animationを使用して
-        <span role="img" :aria-label="emoji01">🍣</span>を回転させてみた。
-      </p>
+      <p>{{ $t("product.description.sushi") }}</p>
       <ul role="list">
         <li role="listitem">
           <a href="/rolling-sushi">
@@ -363,17 +321,6 @@ export default {
       i18n: this.$i18n.locale
     };
   },
-  computed: {
-    emoji01() {
-      if (this.$i18n.locale === "en") {
-        return "Sushi";
-      } else if (this.$i18n.locale === "fr") {
-        return "Sushi";
-      } else {
-        return "寿司";
-      }
-    }
-  }
 };
 </script>
 

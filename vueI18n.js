@@ -49,7 +49,19 @@ export default {
         qiitaCode: "Qiita Code Style Before",
         designFigma: "Product Design - Figma",
         updateInfo: "Update Information",
-        releaseInfo: "Release Information"
+        releaseInfo: "Release Information",
+        description: {
+          wafb: "Announced in Technical Book 5. This is a book that everyone on the web, not just engineers, wants to see about web accessibility, such as machine readable, human readable, and WAI-ARIA.",
+          reading: "I thought and created information storage and visualization to see what would happen if I always gathered and collected the news I was watching. Incorporates PWA technology so that it can be viewed as an offline application.",
+          vuePortfolio: "Portfolio template made by Vue.js. This is a SPA virgin work created from vue-cli. At first it was made with Vue1.0 series, but it is version up compatible with Vue2.0 series.",
+          yamanokuCli: "This is a simple self-introduction tool that can be checked with the CLI. Fork is from sindresorhus.",
+          slackprimoji: "Convert Pri-para character lines into Slack reaction emoji. The original story is from slack-reaction-decomoji produced by oti.",
+          qiitaCode: "A Chrome extension that restores Qiita's code style to the previous one. Not published to the store. Therefore, add it in developer mode.",
+          birthdayCount: "Counting down to yamanoku's birthday. Amazon's wish list will be released on that day. The next day, it will be reset and counted down again.",
+          glitch: "A glitch expression tool using JavaScript. To adjust. You can upload and change the image. Glitched images can also be saved.",
+          browserCrash: "Represents on canvas the situation that is likely to happen when the browser becomes heavy on Windows OS. The browser is drawn indefinitely by moving the cursor. There is no illegality in this JavaScript.",
+          sushi: "Rotating sushi using CSS3 animation."
+        }
       },
       sns: {
         tumblr: {
@@ -134,7 +146,19 @@ export default {
         qiitaCode: "Qiita Code Style Before",
         designFigma: "Product Design - Figma",
         updateInfo: "更新情報",
-        releaseInfo: "リリース情報"
+        releaseInfo: "リリース情報",
+        description: {
+          wafb: "技術書典5にて発表。ウェブアクセシビリティはどういった対応があるのか、マシンリーダブルとヒューマンリーダブル、WAI-ARIAについて、求められるアクセシビリティを意識したウェブページなど、エンジニアだけでなくウェブに関わるすべての人に見てもらいたい一冊です。（アクセシビリティとは、近づきやすさやアクセスのしやすさのこと）",
+          reading: "いつも自分が見ているニュースを集めてまとめてみたらどうなるだろうか、情報の蓄積(ためること)・見える化というものを考え作りました。オフラインアプリケーションとしても閲覧できるようPWA技術を取り入れています。",
+          vuePortfolio: "Vue.js製のポートフォリオテンプレートです。vue-cliから作成したSPA処女作です。はじめはVue1.0系で作ってましたが、Vue2.0系にバージョンアップ対応しています。",
+          yamanokuCli: "CLIで確認できる簡易自己紹介ツールです。 fork元は sindresorhus氏より。",
+          slackprimoji: "プリパラキャラのセリフをSlackのリアクション用絵文字に変換。元ネタはoti氏制作の slack-reaction-decomojiより。",
+          qiitaCode: "Qiitaのcodeスタイルを以前のものに戻すChrome拡張機能。ストアに公開していません。そのため、デベロッパーモードにて追加して使用してください。",
+          birthdayCount: "yamanokuの誕生日までをカウントダウンしています。当日になったらAmazonの欲しい物リストが公開されます。翌日にはリセットされてふたたびカウントダウンされます。",
+          glitch: "JavaScriptによるグリッチ表現ツールです。で調整できます。アップロードして画像を変更できます。グリッチした画像を保存も可能です。",
+          browserCrash: "WindowsOSでブラウザが重くなったときにおこりそうな状況をcanvas上で表現。カーソルを動かすことによりブラウザが無限に描画されます。 このJavaScriptには違法性はまったくありません。",
+          sushi: "CSS3 animationを使用して寿司を回転させてみました。"
+        }
       },
       sns: {
         tumblr: {
@@ -218,7 +242,19 @@ export default {
         qiitaCode: "Qiita code style avant",
         designFigma: "Conception de projet - Figma",
         updateInfo: "Mettre à jour les informations",
-        releaseInfo: "Divulguer des renseignements"
+        releaseInfo: "Divulguer des renseignements",
+        description: {
+          wafb: "Annoncé dans le livre technique 5. C’est un livre que tout le monde sur le Web, et pas seulement les ingénieurs, souhaite voir comment l’accessibilité au Web est prise en charge, telle que lisible par machine, lisible par l’homme et WAI-ARIA.",
+          reading: "J'ai pensé et créé un stockage d'informations et une visualisation pour voir ce qui se passerait si je rassemblais toujours et rassemblais les nouvelles que je regardais. Intègre la technologie PWA afin qu’elle puisse être visualisée en tant qu’application hors ligne.",
+          vuePortfolio: "Modèle de portfolio créé par Vue.js. Ceci est un travail vierge SPA créé à partir de vue-cli. Au début, il était fabriqué avec la série Vue1.0, mais sa version est compatible avec la série Vue2.0.",
+          yamanokuCli: "Il s’agit d’un outil simple d’introduction automatique qui peut être vérifié à l’aide de la CLI. Fork est de sindresorhus.",
+          slackprimoji: "Convertissez les lignes de caractères pri-para en emoji de réaction lâche. L'histoire originale est tirée de slack-reaction-decomoji produit par oti.",
+          qiitaCode: "Une extension Chrome qui restaure le style de code de Qiita au précédent. Non publié dans le magasin. Par conséquent, ajoutez-le en mode développeur.",
+          birthdayCount: "Compte à rebours pour l'anniversaire de Yamanoku. La liste de souhaits d'Amazon sera publiée ce jour-là. Le lendemain, il sera réinitialisé et décompté à nouveau.",
+          glitch: "Un outil d'expression de pépin utilisant JavaScript. Pour ajuster. Vous pouvez télécharger et modifier l'image. Les images glitched peuvent également être enregistrées.",
+          browserCrash: "Représente sur la toile la situation susceptible de se produire lorsque le navigateur devient lourd sous Windows. Le navigateur est dessiné indéfiniment en déplaçant le curseur. Ce JavaScript n'est pas illégal du tout.",
+          sushi: "Pivoter les sushis en utilisant une animation CSS3."
+        }
       },
       sns: {
         tumblr: {
