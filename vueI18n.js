@@ -45,7 +45,8 @@ export default {
         glitch: "glitchrange",
         browserCrash: "canvas_browser-crash.js",
         sushi: "rolling-sushi",
-        qiitaCode: "Qiita Code Style Before"
+        qiitaCode: "Qiita Code Style Before",
+        designFigma: "Product Design - Figma"
       },
       sns: {
         tumblr: {
@@ -68,6 +69,7 @@ export default {
         career: "Career Info",
         productList: "Product List",
         todoList: "TODO List",
+        techStack: "Technology Stack",
         slides: {
           title: "Slides",
           stage: "Stage",
@@ -125,7 +127,8 @@ export default {
         glitch: "glitchrange",
         browserCrash: "canvas_browser-crash.js",
         sushi: "rolling-sushi",
-        qiitaCode: "Qiita Code Style Before"
+        qiitaCode: "Qiita Code Style Before",
+        designFigma: "Product Design - Figma"
       },
       sns: {
         tumblr: {
@@ -148,6 +151,7 @@ export default {
         career: "職歴",
         productList: "制作物一覧",
         todoList: "やること一覧",
+        techStack: "利用技術",
         slides: {
           title: "スライド一覧",
           stage: "登壇",
@@ -204,7 +208,8 @@ export default {
         glitch: "pépinintervalle",
         browserCrash: "canvas_crash-navigateur.js",
         sushi: "sushi-roulant",
-        qiitaCode: "Qiita code style avant"
+        qiitaCode: "Qiita code style avant",
+        designFigma: "Conception de projet - Figma"
       },
       sns: {
         tumblr: {
@@ -227,6 +232,7 @@ export default {
         career: "Infos carrière",
         productList: "Liste de produits",
         todoList: "Liste de choses à faire",
+        techStack: "Pile technologique",
         slides: {
           title: "Glissades",
           stage: "Scène",
