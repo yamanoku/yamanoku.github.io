@@ -29,7 +29,7 @@
           href="https://scrapbox.io/yamanoku/Skill_Sets"
           target="_blank"
           rel="noopener"
-        >{{ $t("career.scrapbox") }}</a>
+        >{{ $t("career.skillSet") }}</a>
       </li>
     </ul>
   </section>

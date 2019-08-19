@@ -26,7 +26,7 @@ export default {
         live: "Live in Kamagaya, Chiba, Japan"
       },
       career: {
-        scrapbox: "Scrapbox",
+        skillSet: "Set of Skills",
         wantedly: "Wantedly",
         curriculumVitae: "Curriculum Vitae"
       },
@@ -67,6 +67,7 @@ export default {
         job: "Job Info",
         career: "Career Info",
         productList: "Product List",
+        todoList: "TODO List",
         slides: {
           title: "Slides",
           stage: "Stage",
@@ -105,7 +106,7 @@ export default {
         live: "千葉県鎌ケ谷市在住",
       },
       career: {
-        scrapbox: "Scrapbox",
+        skillSet: "スキルセット",
         wantedly: "Wantedly",
         curriculumVitae: "職務経歴書"
       },
@@ -146,6 +147,7 @@ export default {
         job: "職業",
         career: "職歴",
         productList: "制作物一覧",
+        todoList: "やること一覧",
         slides: {
           title: "スライド一覧",
           stage: "登壇",
@@ -183,7 +185,7 @@ export default {
         live: "Vivre à Kamagaya, Chiba, Japon"
       },
       career: {
-        scrapbox: "Scrapbox",
+        skillSet: "Ensemble de compétences",
         wantedly: "Wantedly",
         curriculumVitae: "Reprendre"
       },
@@ -224,6 +226,7 @@ export default {
         job: "Infos emploi",
         career: "Infos carrière",
         productList: "Liste de produits",
+        todoList: "Liste de choses à faire",
         slides: {
           title: "Glissades",
           stage: "Scène",
