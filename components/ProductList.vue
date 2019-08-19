@@ -6,18 +6,28 @@
       </a>
       {{ $t("heading.productList") }}
     </h3>
-    <article>
-      <h4>{{ $t("product.wafb.title") }}</h4>
+    <article id="web_accessibility_for_beginner">
+      <h4>
+        <a class="anchor" aria-hidden="true" href="#web_accessibility_for_beginner">
+          <anchor-icon />
+        </a>
+        {{ $t("product.wafb.title") }}
+      </h4>
       <p
         lang="ja"
       >技術書典5にて発表。ウェブアクセシビリティはどういった対応があるのか、マシンリーダブルとヒューマンリーダブル、WAI-ARIAについて、求められるアクセシビリティを意識したウェブページなど、エンジニアだけでなくウェブに関わるすべての人に見てもらいたい一冊です。（アクセシビリティとは、近づきやすさやアクセスのしやすさのこと）</p>
+      <template v-if="this.$i18n.locale !== 'ja'">
+        <p>
+          <em>{{ $t("onlyJPText") }}</em>
+        </p>
+      </template>
       <ul role="list">
         <li role="listitem">
           <a
             href="https://techbookfest.org/event/tbf05/circle/41130001"
             target="_blank"
             rel="noopener"
-          >サークル詳細 | こんのいぬ</a>
+          >{{ $t("product.wafb.circleDetail") }}</a>
         </li>
         <li role="listitem">
           <a href="https://booth.pm/ja/items/1044446" target="_blank" rel="noopener">
@@ -31,9 +41,6 @@
             <shopping-icon />
           </a>
         </li>
-        <li role="listitem" v-if="this.$i18n.locale !== 'ja'">
-          <em>{{ $t("onlyJPText") }}</em>
-        </li>
       </ul>
       <h5 aria-describedby="a11ybook_issue">{{ $t("heading.todoList") }}</h5>
       <ul role="list" id="a11ybook_issue">
@@ -45,11 +52,16 @@
         </li>
       </ul>
     </article>
-    <article>
-      <h4>{{ $t("product.reading") }}</h4>
+    <article id="reading">
+      <h4>
+        <a class="anchor" aria-hidden="true" href="#reading">
+          <anchor-icon />
+        </a>
+        {{ $t("product.reading") }}
+      </h4>
       <p
         lang="ja"
-      >いつも自分が見ているニュースを集めてまとめてみたらどうなるだろうか、情報の蓄積(ためること)・見える化というものを考え作りました。PWA技術も試してみたいと思ったので取り入れています。</p>
+      >いつも自分が見ているニュースを集めてまとめてみたらどうなるだろうか、情報の蓄積(ためること)・見える化というものを考え作りました。オフラインアプリケーションとしても閲覧できるようPWA技術を取り入れています。</p>
       <ul role="list">
         <li role="listitem">
           <a href="https://reading.yamanoku.net" target="_blank" rel="noopener">
@@ -63,7 +75,7 @@
             target="_blank"
             rel="noopener"
           >
-            Updates Info
+            {{ $t("product.updateInfo") }}
             <article-icon />
           </a>
         </li>
@@ -100,11 +112,16 @@
         </li>
       </ul>
     </article>
-    <article>
-      <h4>{{ $t("product.vuePortfolio") }}</h4>
+    <article id="vue_portfolio_template">
+      <h4>
+        <a class="anchor" aria-hidden="true" href="#vue_portfolio_template">
+          <anchor-icon />
+        </a>
+        {{ $t("product.vuePortfolio") }}
+      </h4>
       <p lang="ja">
-        Vue.js製のポートフォリオテンプレート。vue-cliから作成したVue.jsでのSPA処女作。
-        <br />当初はVue1.0系で制作したがVue2.0にバージョンアップ対応している。
+        Vue.js製のポートフォリオテンプレートです。vue-cliから作成したSPA処女作です。
+        <br />はじめはVue1.0系で作ってましたが、Vue2.0系にバージョンアップ対応しています。
       </p>
       <ul role="list">
         <li role="listitem">
@@ -143,10 +160,15 @@
         </li>
       </ul>
     </article>
-    <article>
-      <h4>{{ $t("product.yamanokuCli") }}</h4>
+    <article id="yamanoku_cli">
+      <h4>
+        <a class="anchor" aria-hidden="true" href="#yamanoku_cli">
+          <anchor-icon />
+        </a>
+        {{ $t("product.yamanokuCli") }}
+      </h4>
       <p lang="ja">
-        CLIでの筆者の簡易自己紹介ツール。
+        CLIで確認できる簡易自己紹介ツール。
         fork元は
         <a
           href="https://github.com/sindresorhus/sindresorhus"
@@ -169,8 +191,13 @@
         <li role="listitem">prettier</li>
       </ul>
     </article>
-    <article>
-      <h4>{{ $t("product.slackprimoji") }}</h4>
+    <article id="slack_reaction_primoji">
+      <h4>
+        <a class="anchor" aria-hidden="true" href="#slack_reaction_primoji">
+          <anchor-icon />
+        </a>
+        {{ $t("product.slackprimoji") }}
+      </h4>
       <p lang="ja">
         <a href="https://www.tv-tokyo.co.jp/anime/pripara/" target="_blank" rel="noopener">プリパラ</a>に出ているキャラのセリフをSlackのリアクション用絵文字に変換。
         元ネタは
@@ -198,8 +225,13 @@
         </li>
       </ul>
     </article>
-    <article>
-      <h4>{{ $t("product.qiitaCode") }}</h4>
+    <article id="qiita_code_style_before">
+      <h4>
+        <a class="anchor" aria-hidden="true" href="#qiita_code_style_before">
+          <anchor-icon />
+        </a>
+        {{ $t("product.qiitaCode") }}
+      </h4>
       <p lang="ja">
         Qiitaの
         <code>&lt;code&gt;</code>スタイルを以前のものに戻すChrome拡張機能。ストアに公開していないため、デベロッパーモードにて追加して使用。
@@ -228,9 +260,19 @@
         </li>
       </ul>
     </article>
-    <article>
-      <h4>{{ $t("product.crowding") }}</h4>
-      <h5>{{ $t("product.birthdayCount") }}</h5>
+    <article id="crowding">
+      <h4>
+        <a class="anchor" aria-hidden="true" href="#crowding">
+          <anchor-icon />
+        </a>
+        {{ $t("product.crowding") }}
+      </h4>
+      <h5 id="birthday_countdown_js">
+        <a class="anchor" aria-hidden="true" href="#birthday_countdown_js">
+          <anchor-icon />
+        </a>
+        {{ $t("product.birthdayCount") }}
+      </h5>
       <p lang="ja">筆者の誕生日までをカウントダウン。当日になったらAmazonの欲しい物リストが公開され、翌日にはリセットされる。</p>
       <ul role="list">
         <li role="listitem">
@@ -241,12 +283,17 @@
         </li>
         <li>
           <a href="https://github.com/yamanoku/birthday-countdown-js/releases">
-            Relase Info
+            {{ $t("product.releaseInfo") }}
             <github-icon />
           </a>
         </li>
       </ul>
-      <h5>{{ $t("product.glitch") }}</h5>
+      <h5 id="glitch_range">
+        <a class="anchor" aria-hidden="true" href="#glitch_range">
+          <anchor-icon />
+        </a>
+        {{ $t("product.glitch") }}
+      </h5>
       <p lang="ja">
         JavaScriptによるグリッチ表現。
         <code>&lt;input type="range"&gt;</code>
@@ -260,7 +307,12 @@
           </a>
         </li>
       </ul>
-      <h5>{{ $t("product.browserCrash") }}</h5>
+      <h5 id="canvas_browser_crash_js">
+        <a class="anchor" aria-hidden="true" href="#canvas_browser_crash_js">
+          <anchor-icon />
+        </a>
+        {{ $t("product.browserCrash") }}
+      </h5>
       <p lang="ja">
         かつてのWindowsOSでブラウザが重くなったときに起こるありがちな状況を
         <code>&lt;canvas&gt;</code>上で表現。カーソルを動かすことによりブラウザが無限に描画される。
@@ -274,8 +326,16 @@
           </a>
         </li>
       </ul>
-      <h5>{{ $t("product.sushi") }}</h5>
-      <p lang="ja">CSS3 animationを使用して寿司を回転させてみた。</p>
+      <h5 id="rolling_sushi">
+        <a class="anchor" aria-hidden="true" href="#rolling_sushi">
+          <anchor-icon />
+        </a>
+        {{ $t("product.sushi") }}
+      </h5>
+      <p lang="ja">
+        CSS3 animationを使用して
+        <span role="img" :aria-label="emoji01">🍣</span>を回転させてみた。
+      </p>
       <ul role="list">
         <li role="listitem">
           <a href="/rolling-sushi">
@@ -302,6 +362,17 @@ export default {
       vuePortfolioIssue: this.vuePortfolio,
       i18n: this.$i18n.locale
     };
+  },
+  computed: {
+    emoji01() {
+      if (this.$i18n.locale === "en") {
+        return "Sushi";
+      } else if (this.$i18n.locale === "fr") {
+        return "Sushi";
+      } else {
+        return "寿司";
+      }
+    }
   }
 };
 </script>

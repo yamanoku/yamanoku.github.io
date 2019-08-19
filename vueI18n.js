@@ -33,6 +33,7 @@ export default {
       product: {
         wafb: {
           title: "Web Accessibility for Beginners.",
+          circleDetail: "Circle details | Scarlet dog",
           boothLink: "Sales page on Booth",
           noteLink: "Sales page on note"
         },
@@ -46,7 +47,9 @@ export default {
         browserCrash: "canvas_browser-crash.js",
         sushi: "rolling-sushi",
         qiitaCode: "Qiita Code Style Before",
-        designFigma: "Product Design - Figma"
+        designFigma: "Product Design - Figma",
+        updateInfo: "Update Information",
+        releaseInfo: "Release Information"
       },
       sns: {
         tumblr: {
@@ -115,6 +118,7 @@ export default {
       product: {
         wafb: {
           title: "これからはじめるWebアクセシビリティ",
+          circleDetail: "サークル詳細 | こんのいぬ",
           boothLink: "Booth 販売ページ",
           noteLink: "note 販売ページ"
         },
@@ -128,7 +132,9 @@ export default {
         browserCrash: "canvas_browser-crash.js",
         sushi: "rolling-sushi",
         qiitaCode: "Qiita Code Style Before",
-        designFigma: "Product Design - Figma"
+        designFigma: "Product Design - Figma",
+        updateInfo: "更新情報",
+        releaseInfo: "リリース情報"
       },
       sns: {
         tumblr: {
@@ -196,6 +202,7 @@ export default {
       product: {
         wafb: {
           title: "L'accessibilité du Web pour les débutants.",
+          circleDetail: "Détails du cercle | Chien écarlate",
           boothLink: "page de vente sur Booth",
           noteLink: "page de vente sur note"
         },
@@ -209,7 +216,9 @@ export default {
         browserCrash: "canvas_crash-navigateur.js",
         sushi: "sushi-roulant",
         qiitaCode: "Qiita code style avant",
-        designFigma: "Conception de projet - Figma"
+        designFigma: "Conception de projet - Figma",
+        updateInfo: "Mettre à jour les informations",
+        releaseInfo: "Divulguer des renseignements"
       },
       sns: {
         tumblr: {
