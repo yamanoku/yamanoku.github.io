@@ -7,4 +7,5 @@ Okuto Oyama Portfolio Site.
   - nuxt-i18n
   - eslint-plugin-vue
   - eslint-plugin-vue-a11y
+- Vuex （Store）
 - modern-normalize
