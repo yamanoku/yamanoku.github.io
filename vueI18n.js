@@ -57,7 +57,7 @@ export default {
           yamanokuCli: "This is a simple self-introduction tool that can be checked with the CLI. Fork is from sindresorhus.",
           slackprimoji: "Convert Pri-para character lines into Slack reaction emoji. The original story is from slack-reaction-decomoji produced by oti.",
           qiitaCode: "A Chrome extension that restores Qiita's code style to the previous one. Not published to the store. Therefore, add it in developer mode.",
-          birthdayCount: "Counting down to yamanoku's birthday. Amazon's wish list will be released on that day. The next day, it will be reset and counted down again.",
+          birthdayCount: "Counting down to yamanoku's birthday. Amazon's wish list will be released on that day. The next day, it will be reset and counted down again. This product uses TypeScript.",
           glitch: "A glitch expression tool using JavaScript. To adjust. You can upload and change the image. Glitched images can also be saved.",
           browserCrash: "Represents on canvas the situation that is likely to happen when the browser becomes heavy on Windows OS. The browser is drawn indefinitely by moving the cursor. There is no illegality in this JavaScript.",
           sushi: "Rotating sushi using CSS3 animation."
@@ -154,7 +154,7 @@ export default {
           yamanokuCli: "CLIで確認できる簡易自己紹介ツールです。 fork元は sindresorhus氏より。",
           slackprimoji: "プリパラキャラのセリフをSlackのリアクション用絵文字に変換。元ネタはoti氏制作の slack-reaction-decomojiより。",
           qiitaCode: "Qiitaのcodeスタイルを以前のものに戻すChrome拡張機能。ストアに公開していません。そのため、デベロッパーモードにて追加して使用してください。",
-          birthdayCount: "yamanokuの誕生日までをカウントダウンしています。当日になったらAmazonの欲しい物リストが公開されます。翌日にはリセットされてふたたびカウントダウンされます。",
+          birthdayCount: "yamanokuの誕生日までをカウントダウンしています。当日になったらAmazonの欲しい物リストが公開されます。翌日にはリセットされてふたたびカウントダウンされます。TypeScriptを使用しています。",
           glitch: "JavaScriptによるグリッチ表現ツールです。で調整できます。アップロードして画像を変更できます。グリッチした画像を保存も可能です。",
           browserCrash: "WindowsOSでブラウザが重くなったときにおこりそうな状況をcanvas上で表現。カーソルを動かすことによりブラウザが無限に描画されます。 このJavaScriptには違法性はまったくありません。",
           sushi: "CSS3 animationを使用して寿司を回転させてみました。"
@@ -250,7 +250,7 @@ export default {
           yamanokuCli: "Il s’agit d’un outil simple d’introduction automatique qui peut être vérifié à l’aide de la CLI. Fork est de sindresorhus.",
           slackprimoji: "Convertissez les lignes de caractères pri-para en emoji de réaction lâche. L'histoire originale est tirée de slack-reaction-decomoji produit par oti.",
           qiitaCode: "Une extension Chrome qui restaure le style de code de Qiita au précédent. Non publié dans le magasin. Par conséquent, ajoutez-le en mode développeur.",
-          birthdayCount: "Compte à rebours pour l'anniversaire de Yamanoku. La liste de souhaits d'Amazon sera publiée ce jour-là. Le lendemain, il sera réinitialisé et décompté à nouveau.",
+          birthdayCount: "Compte à rebours pour l'anniversaire de Yamanoku. La liste de souhaits d'Amazon sera publiée ce jour-là. Le lendemain, il sera réinitialisé et décompté à nouveau. Ce produit utilise TypeScript.",
           glitch: "Un outil d'expression de pépin utilisant JavaScript. Pour ajuster. Vous pouvez télécharger et modifier l'image. Les images glitched peuvent également être enregistrées.",
           browserCrash: "Représente sur la toile la situation susceptible de se produire lorsque le navigateur devient lourd sous Windows. Le navigateur est dessiné indéfiniment en déplaçant le curseur. Ce JavaScript n'est pas illégal du tout.",
           sushi: "Pivoter les sushis en utilisant une animation CSS3."
