@@ -6,7 +6,7 @@
       <basic-info-component />
       <job-info-component />
       <career-info-component />
-      <product-list-component :a11ybook="a11ybook" :reading="reading" :vuePortfolio="vuePortfolio" />
+      <product-list-component />
       <slides-component :qiita="qiita" />
       <sns-component />
       <address-component />
@@ -37,28 +37,8 @@ export default {
       qiita.forEach(e => {
         return e.title;
       });
-      const A_ISSUE =
-        "https://api.github.com/repos/yamanoku/accessibility_book-issues/issues";
-      const A11YIssue = await fetch(A_ISSUE).then(res => {
-        return res.json();
-      });
-      const a11ybook = A11YIssue.filter(issue => !issue.pull_request);
-      const R_ISSUE = "https://api.github.com/repos/yamanoku/reading/issues";
-      const readingIssue = await fetch(R_ISSUE).then(res => {
-        return res.json();
-      });
-      const reading = readingIssue.filter(issue => !issue.pull_request);
-      const V_ISSUE =
-        "https://api.github.com/repos/yamanoku/vue_portfolio_template/issues";
-      const vueIssue = await fetch(V_ISSUE).then(res => {
-        return res.json();
-      });
-      const vuePortfolio = vueIssue.filter(issue => !issue.pull_request);
       return {
-        qiita,
-        a11ybook,
-        reading,
-        vuePortfolio
+        qiita
       };
     } catch (e) {
       error({ statusCode: 404, message: "Connection Error" });

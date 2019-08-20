@@ -78,7 +78,8 @@ module.exports = {
     ]
   ],
   plugins: [
-    '~plugins/icons.js'
+    '~plugins/icons.js',
+    '~plugins/storeInit.js',
   ],
   workbox: {
     dev: true
