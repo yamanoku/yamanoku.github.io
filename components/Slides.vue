@@ -54,12 +54,9 @@ export default {
   components: {
     SlideList
   },
-  props: {
-    qiita: Array
-  },
   data() {
     return {
-      listQiita: this.qiita,
+      listQiita: this.$store.state.qiita.articles,
       listStage: [
         {
           title: "stylelint-a11yについて調べてわかったこと",

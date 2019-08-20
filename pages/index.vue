@@ -6,8 +6,8 @@
       <basic-info-component />
       <job-info-component />
       <career-info-component />
-      <product-list-component :a11ybook="a11ybook" :reading="reading" :vuePortfolio="vuePortfolio" />
-      <slides-component :qiita="qiita" />
+      <product-list-component />
+      <slides-component />
       <sns-component />
       <address-component />
     </main>
@@ -27,43 +27,6 @@ import AddressComponent from "~/components/Address.vue";
 import LocalSwitchComponent from "~/components/LocalSwitch.vue";
 
 export default {
-  async asyncData({ params, error }) {
-    try {
-      const QIITAURL =
-        "https://qiita.com/api/v2/users/yamanoku/items?page=1&per_page=10";
-      const qiita = await fetch(QIITAURL).then(res => {
-        return res.json();
-      });
-      qiita.forEach(e => {
-        return e.title;
-      });
-      const A_ISSUE =
-        "https://api.github.com/repos/yamanoku/accessibility_book-issues/issues";
-      const A11YIssue = await fetch(A_ISSUE).then(res => {
-        return res.json();
-      });
-      const a11ybook = A11YIssue.filter(issue => !issue.pull_request);
-      const R_ISSUE = "https://api.github.com/repos/yamanoku/reading/issues";
-      const readingIssue = await fetch(R_ISSUE).then(res => {
-        return res.json();
-      });
-      const reading = readingIssue.filter(issue => !issue.pull_request);
-      const V_ISSUE =
-        "https://api.github.com/repos/yamanoku/vue_portfolio_template/issues";
-      const vueIssue = await fetch(V_ISSUE).then(res => {
-        return res.json();
-      });
-      const vuePortfolio = vueIssue.filter(issue => !issue.pull_request);
-      return {
-        qiita,
-        a11ybook,
-        reading,
-        vuePortfolio
-      };
-    } catch (e) {
-      error({ statusCode: 404, message: "Connection Error" });
-    }
-  },
   components: {
     HeaderComponent,
     JobInfoComponent,

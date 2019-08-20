@@ -308,19 +308,14 @@
 
 <script>
 export default {
-  props: {
-    a11ybook: Array,
-    reading: Array,
-    vuePortfolio: Array
-  },
   data() {
     return {
-      a11ybookIssue: this.a11ybook,
-      readingIssue: this.reading,
-      vuePortfolioIssue: this.vuePortfolio,
+      a11ybookIssue: this.$store.state.github.a11y_issues,
+      readingIssue: this.$store.state.github.read_issues,
+      vuePortfolioIssue: this.$store.state.github.vue_issues,
       i18n: this.$i18n.locale
     };
-  },
+  }
 };
 </script>
 

@@ -78,7 +78,9 @@ module.exports = {
     ]
   ],
   plugins: [
-    '~plugins/icons.js'
+    '~plugins/icons.js',
+    '~plugins/storeGithub.js',
+    '~plugins/storeQiita.js',
   ],
   workbox: {
     dev: true
