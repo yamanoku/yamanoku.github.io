@@ -7,7 +7,7 @@
       <job-info-component />
       <career-info-component />
       <product-list-component />
-      <slides-component :qiita="qiita" />
+      <slides-component />
       <sns-component />
       <address-component />
     </main>
@@ -27,23 +27,6 @@ import AddressComponent from "~/components/Address.vue";
 import LocalSwitchComponent from "~/components/LocalSwitch.vue";
 
 export default {
-  async asyncData({ params, error }) {
-    try {
-      const QIITAURL =
-        "https://qiita.com/api/v2/users/yamanoku/items?page=1&per_page=10";
-      const qiita = await fetch(QIITAURL).then(res => {
-        return res.json();
-      });
-      qiita.forEach(e => {
-        return e.title;
-      });
-      return {
-        qiita
-      };
-    } catch (e) {
-      error({ statusCode: 404, message: "Connection Error" });
-    }
-  },
   components: {
     HeaderComponent,
     JobInfoComponent,
