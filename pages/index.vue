@@ -11,7 +11,7 @@
       <basic-info-component />
       <job-info-component />
       <career-info-component />
-      <product-list-component />
+      <product-list-component :a11ybook="a11ybook" :reading="reading" :vuePortfolio="vuePortfolio" />
       <slides-component :qiita="qiita" />
       <sns-component />
       <address-component />
@@ -34,17 +34,37 @@ import LocalSwitchComponent from "~/components/LocalSwitch.vue";
 export default {
   async asyncData({ params, error }) {
     try {
-      const URL =
+      const QIITAURL =
         "https://qiita.com/api/v2/users/yamanoku/items?page=1&per_page=10";
-      const qiita = await fetch(URL).then(res => {
+      const qiita = await fetch(QIITAURL).then(res => {
         return res.json();
       });
       qiita.forEach(e => {
         return e.title;
-      })
+      });
+      const A_ISSUE =
+        "https://api.github.com/repos/yamanoku/accessibility_book-issues/issues";
+      const A11YIssue = await fetch(A_ISSUE).then(res => {
+        return res.json();
+      });
+      const a11ybook = A11YIssue.filter(issue => !issue.pull_request);
+      const R_ISSUE = "https://api.github.com/repos/yamanoku/reading/issues";
+      const readingIssue = await fetch(R_ISSUE).then(res => {
+        return res.json();
+      });
+      const reading = readingIssue.filter(issue => !issue.pull_request);
+      const V_ISSUE =
+        "https://api.github.com/repos/yamanoku/vue_portfolio_template/issues";
+      const vueIssue = await fetch(V_ISSUE).then(res => {
+        return res.json();
+      });
+      const vuePortfolio = vueIssue.filter(issue => !issue.pull_request);
       return {
-        qiita
-      }
+        qiita,
+        a11ybook,
+        reading,
+        vuePortfolio
+      };
     } catch (e) {
       error({ statusCode: 404, message: "Connection Error" });
     }
@@ -102,6 +122,32 @@ h4 {
   letter-spacing: 0.0125em;
   line-height: var(--rhythm);
   position: relative;
+}
+h5 {
+  margin: var(--rhythm) 0;
+  font-size: 1.2rem;
+  font-feature-settings: "palt";
+  font-weight: 400;
+  letter-spacing: 0.0125em;
+  line-height: var(--rhythm);
+  position: relative;
+}
+section {
+  display: block;
+  margin: calc(var(--rhythm) * 2) 0;
+}
+article {
+  position: relative;
+  padding: 0 0 var(--rhythm);
+}
+article::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .anchor {
   position: absolute;
@@ -168,6 +214,12 @@ ul:not([class]) li svg .npm-1 {
 }
 ul:not([class]) li svg .npm-2 {
   fill: #fff;
+}
+ul:not([class]) li svg .product-2,
+ul:not([class]) li svg .edit-2,
+ul:not([class]) li svg .image-1,
+ul:not([class]) li svg .shopping-2 {
+  fill: none;
 }
 nav {
   max-width: 80ch;
