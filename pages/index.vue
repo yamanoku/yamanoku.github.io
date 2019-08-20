@@ -2,12 +2,7 @@
   <div>
     <header-component />
     <main>
-      <h2 v-if="this.$i18n.locale === 'ja'">
-        大山奥人
-        <small>（おおやまおくと）</small>
-        {{ $t("name") }}
-      </h2>
-      <h2 v-else>{{ $t("name") }}</h2>
+      <h2>yamanoku.net</h2>
       <basic-info-component />
       <job-info-component />
       <career-info-component />

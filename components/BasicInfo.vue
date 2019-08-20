@@ -8,6 +8,16 @@
     </h3>
     <ul role="list">
       <li role="listitem">
+        <template v-if="this.$i18n.locale === 'ja'">
+          {{ $t("name") }}
+          <small>（おおやまおくと）</small>
+        </template>
+        <template v-else>{{ $t("name") }}</template>
+        <ul role="list">
+          <li role="listitem">{{ $t("nickname") }}</li>
+        </ul>
+      </li>
+      <li role="listitem">
         <time datetime="1989-10-30">{{birthday}}</time>
         <a
           href="https://www.city.noshiro.akita.jp/"

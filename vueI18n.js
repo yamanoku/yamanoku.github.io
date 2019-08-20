@@ -2,7 +2,8 @@ export default {
   fallbackLocale: "ja",
   messages: {
     en: {
-      name: "Okuto Oyama, Oyama Michinoku, yamanoku.",
+      name: "Name - Okuto Oyama",
+      nickname: "Nickname - Oyama Michinoku, yamanoku",
       job: {
         1: "FrontEnd Designer",
         2: "Accessibility Advocator",
@@ -99,7 +100,8 @@ export default {
       onlyJPText: "Sorry, Japanese text only"
     },
     ja: {
-      name: " , おおやまみちのく, yamanoku",
+      name: "名前 - 大山奥人",
+      nickname: "ニックネーム - おおやまみちのく, yamanoku",
       job: {
         1: "フロントエンドデザイナー",
         2: "アクセシビリティ啓蒙家",
@@ -110,7 +112,7 @@ export default {
       },
       info: {
         birth: " 秋田県能代市生まれ",
-        sex: "性別 男性",
+        sex: "性別 - 男性",
         2008: {
           before : "岩手大学教育学部芸術文化課程入学",
           now : "現 人文社会学部芸術文化専修プログラム",
@@ -195,7 +197,8 @@ export default {
       multilingual: "多言語ページ"
     },
     fr: {
-      name: "Okuto Oyama, Oyama Michinoku, yamanoku",
+      name: "Nom - Okuto Oyama",
+      nickname: "Surnom - Oyama Michinoku, yamanoku",
       job: {
         1: "Concepteur frontal",
         2: "accessibilité advocator",
