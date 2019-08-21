@@ -107,6 +107,13 @@ article::before {
   bottom: 0;
   left: 0;
 }
+article p {
+  margin: var(--rhythm) 0;
+  font-size: 1rem;
+  font-feature-settings: "palt";
+  letter-spacing: 0.0125em;
+  line-height: var(--rhythm);
+}
 .anchor {
   position: absolute;
   left: -24px;
