@@ -52,9 +52,9 @@ export default {
         updateInfo: "Update Information",
         releaseInfo: "Release Information",
         description: {
-          wafb: "Announced in Technical Book 5. This is a book that everyone on the web, not just engineers, wants to see about web accessibility, such as machine readable, human readable, and WAI-ARIA.",
-          reading: "I thought and created information storage and visualization to see what would happen if I always gathered and collected the news I was watching. Incorporates PWA technology so that it can be viewed as an offline application.",
-          vuePortfolio: "Portfolio template made by Vue.js. This is a SPA virgin work created from vue-cli. At first it was made with Vue1.0 series, but it is version up compatible with Vue2.0 series.",
+          wafb: "Presented in the 5th technical book fest. I would like to ask not only engineers but also all people involved with the web to see what kind of measures are available for web accessibility, such as machine-readable web pages, human-readable web pages, and WAI-ARIA web pages.",
+          reading: "I came up with the idea of accumulating and visualizing information about what would happen if I collected and summarized the news that I always watch. It incorporates PWA technology so that it can also be viewed as an offline application.",
+          vuePortfolio: "Portfolio template made by Vue.js. This is the first SPA created from vue cli. I used the Vue 1.0 versions at first, but now I can upgrade it to the Vue 2.0 versions.",
           yamanokuCli: "This is a simple self-introduction tool that can be checked with the CLI. Fork is from sindresorhus.",
           slackprimoji: "Convert Pri-para character lines into Slack reaction emoji. The original story is from slack-reaction-decomoji produced by oti.",
           qiitaCode: "A Chrome extension that restores Qiita's code style to the previous one. Not published to the store. Therefore, add it in developer mode.",
@@ -151,7 +151,7 @@ export default {
         releaseInfo: "リリース情報",
         description: {
           wafb: "技術書典5にて発表。ウェブアクセシビリティはどういった対応があるのか、マシンリーダブルとヒューマンリーダブル、WAI-ARIAについて、求められるアクセシビリティを意識したウェブページなど、エンジニアだけでなくウェブに関わるすべての人に見てもらいたい一冊です。（アクセシビリティとは、近づきやすさやアクセスのしやすさのこと）",
-          reading: "いつも自分が見ているニュースを集めてまとめてみたらどうなるだろうか、情報の蓄積(ためること)・見える化というものを考え作りました。オフラインアプリケーションとしても閲覧できるようPWA技術を取り入れています。",
+          reading: "いつも自分が見ているニュースを集めてまとめてみたらどうなるだろうか、情報の蓄積・見える化というものを考え作りました。オフラインアプリケーションとしても閲覧できるようPWA技術を取り入れています。",
           vuePortfolio: "Vue.js製のポートフォリオテンプレートです。vue-cliから作成したSPA処女作です。はじめはVue1.0系で作ってましたが、Vue2.0系にバージョンアップ対応しています。",
           yamanokuCli: "CLIで確認できる簡易自己紹介ツールです。 fork元は sindresorhus氏より。",
           slackprimoji: "プリパラキャラのセリフをSlackのリアクション用絵文字に変換。元ネタはoti氏制作の slack-reaction-decomojiより。",
