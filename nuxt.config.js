@@ -76,7 +76,8 @@ module.exports = {
         id: 'UA-146072150-1',
         debug: true
       }
-    ]
+    ],
+    "@nuxtjs/axios",
   ],
   plugins: [
     '~plugins/icons.js',

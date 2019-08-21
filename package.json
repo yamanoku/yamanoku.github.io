@@ -12,6 +12,7 @@
     "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
+    "@nuxtjs/axios": "5.6.0",
     "@nuxtjs/google-gtag": "1.0.4",
     "@nuxtjs/pwa": "2.6.0",
     "axios": "0.19.0",

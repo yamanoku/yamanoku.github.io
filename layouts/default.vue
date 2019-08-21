@@ -1,11 +1,21 @@
 <template>
-  <nuxt />
+  <div>
+    <header-component />
+    <nuxt />
+    <local-switch-component />
+  </div>
 </template>
 
 <script>
+import HeaderComponent from "~/components/Header.vue";
+import LocalSwitchComponent from "~/components/LocalSwitch.vue";
 export default {
   head() {
     return this.$nuxtI18nSeo();
+  },
+  components: {
+    HeaderComponent,
+    LocalSwitchComponent,
   }
 };
 </script>
