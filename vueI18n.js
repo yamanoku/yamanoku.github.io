@@ -101,7 +101,7 @@ export default {
         },
         markup: {
           desc01: "Semantic markup implementation to realize information design of human-readable (Human can understand) and machine-readable (Be understood by the machine).",
-          desc01: "We are also implementing WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) for elements that are not needed by people using assistive technology so that they do not block access.",
+          desc02: "We are also implementing WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) for elements that are not needed by people using assistive technology so that they do not block access.",
         },
         components: {
           desc01: "For example, the slide list uses the following components to render:",
@@ -262,7 +262,7 @@ export default {
         },
         markup: {
           desc01: "ヒューマンリーダブル（人が理解できる）とマシンリーダブル（機械が理解できる）となる情報設計を実現するためにセマンティクスなマークアップ実装しています。",
-          desc01: "支援技術を使用する人には不要となる要素について、WAI-ARIA（Web Accessibility Initiative - Accessible Rich Internet Applications）を使用して閲覧を阻害しないようにする実装も行っています。",
+          desc02: "支援技術を使用する人には不要となる要素について、WAI-ARIA（Web Accessibility Initiative - Accessible Rich Internet Applications）を使用して閲覧を阻害しないようにする実装も行っています。",
         },
         components: {
           desc01: "たとえばスライド一覧のリストでは以下コンポーネントを使ってレンダリングしています。",
@@ -422,7 +422,7 @@ export default {
         },
         markup: {
           desc01: "Mise en oeuvre du balisage sémantique pour réaliser la conception de l'information de lisibles par l'homme (On peut comprendre) et lisibles par la machine (Être compris par la machine).",
-          desc01: "Nous mettons également en oeuvre WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) pour les éléments qui ne sont pas nécessaires aux personnes qui utilisent des technologies d'assistance pour ne pas bloquer l'accès.",
+          desc02: "Nous mettons également en oeuvre WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) pour les éléments qui ne sont pas nécessaires aux personnes qui utilisent des technologies d'assistance pour ne pas bloquer l'accès.",
         },
         components: {
           desc01: "Par exemple, la liste des diapositives utilise les composants suivants pour effectuer le rendu:",
