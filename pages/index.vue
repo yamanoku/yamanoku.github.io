@@ -1,6 +1,7 @@
 <template>
   <main>
     <h2>yamanoku.net</h2>
+    <nuxt-link :to="localePath({ name: 'about'})">{{$t("aboutPage.title")}}</nuxt-link>
     <basic-info-component />
     <job-info-component />
     <career-info-component />

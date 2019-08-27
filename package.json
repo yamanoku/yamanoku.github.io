@@ -12,11 +12,13 @@
     "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
+    "@nuxtjs/axios": "5.6.0",
     "@nuxtjs/google-gtag": "1.0.4",
     "@nuxtjs/pwa": "2.6.0",
     "axios": "0.19.0",
     "nuxt": "2.9.1",
     "nuxt-i18n": "6.0.2",
+    "vue-highlight.js": "3.1.0",
     "vuex": "3.1.1"
   },
   "devDependencies": {
@@ -26,7 +28,9 @@
     "eslint-loader": "3.0.0",
     "eslint-plugin-vue": "5.2.3",
     "eslint-plugin-vue-a11y": "0.0.31",
+    "highlight.js": "9.15.10",
     "modern-normalize": "0.5.0",
-    "push-dir": "0.4.1"
+    "push-dir": "0.4.1",
+    "style-loader": "1.0.0"
   }
 }
