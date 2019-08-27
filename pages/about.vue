@@ -252,7 +252,6 @@
 </template>
 
 <script>
-import SlideList from "~/components/slides/SlideList.vue";
 export default {
   head() {
     return {
@@ -270,9 +269,6 @@ export default {
         }
       ]
     };
-  },
-  components: {
-    SlideList
   },
   data() {
     return {
