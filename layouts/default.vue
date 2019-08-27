@@ -50,6 +50,7 @@ body {
   font-family: Arial, Helvetica, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
+  font-display: swap;
 }
 html[lang="ja"] body {
   font-family: minmoji, Arial, Helvetica, sans-serif;
