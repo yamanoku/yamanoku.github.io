@@ -9,7 +9,7 @@
     <p>{{ $t("product.description.yamanokuCli") }}</p>
     <ul role="list">
       <li role="listitem">
-        <a href="https://www.npmjs.com/package/yamanoku">
+        <a href="https://www.npmjs.com/package/yamanoku" target="_blank" rel="noopener">
           {{ $t("product.yamanokuCli") }}
           <npm-icon />
         </a>
