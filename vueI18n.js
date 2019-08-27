@@ -79,6 +79,68 @@ export default {
         hatena: "Hatena",
         steam: "Steam"
       },
+      aboutPage: {
+        title: "About yamanoku.net",
+        description: "yamanoku.net is a portal site of Okuto Oyama called yamanoku.",
+        heading: {
+          toc: "Table of Contents",
+          implementation: "Explaining site implementation",
+          design: "Explaining site design",
+        },
+        subHeading: {
+          markup: "Markup",
+          components: "Component oriented design",
+          pwa: "PWA (Progressive Web Application)",
+          i18n: "Internationalization",
+          overdesign: "Don't overdesign.",
+          JPFont: "About Japanese fonts",
+          fontSize: "Font size",
+          contrast: "Color contrast",
+          maxWidth: "About the greatest amount of content",
+          verticalRhythm: "Vertical rhythm",
+        },
+        markup: {
+          desc01: "Semantic markup implementation to realize information design of human-readable (Human can understand) and machine-readable (Be understood by the machine).",
+          desc01: "We are also implementing WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) for elements that are not needed by people using assistive technology so that they do not block access.",
+        },
+        components: {
+          desc01: "For example, the slide list uses the following components to render:",
+          desc02: "You need to format the API you get for display, but managing it as a single component simplifies source code, allows multiple uses, and simplifies information design.",
+          desc03: "In addition, we set the Store to call each API to prevent the depth of Props in component-oriented development.",
+        },
+        pwa: {
+          desc01: "When browsing in Google Chrome, you can use desktop PWA from your PC or PWA from your mobile device.",
+          desc02: "You can launch it as a native app without going through a browser, use the cache to get a fast page experience, or download it once and view it offline.",
+        },
+        i18n: {
+          desc01: "Since we are developing on Nuxt.js, we have introduced a tool called nuxt-18n. In addition to internationalization, rendering can also be done for specific languages.",
+          desc02: "I support Japanese and English as standard, but we plan to support other languages.",
+        },
+        designDescription: "Inclusive design designed for easy viewing by all users.",
+        overdesign: {
+          desc01: "Too much decoration can prevent you from getting the information you want. It is designed with the default style of the browser, that is, the standard image in mind.",
+          desc02: "It's also designed with semantic markup, so you can get to the information without getting stylized or leaving the default style.",
+        },
+        JPFont: {
+          desc01: "The UD font Minna no Moji ® WEB font is used.",
+        },
+        fontSize: {
+          desc01: "The basic setting is 16 px, and the size ratio can be maintained even if the page is enlarged by rem."
+        },
+        contrast: {
+          desc01: "All colors are set to have a contrast ratio of at least 4.5: 1 with the background, but they are not pure black and white, but instead are balanced with fewer shades of gray.",
+          desc02: "It is specified using the following custom properties (CSS Variables) for common use:",
+          desc03: "It also supports dark mode (Gentle dark tones of the eyes), depending on the OS settings.",
+        },
+        maxWidth: {
+          desc01: "The maximum width of the main content is set to 80ch. ch is called a chain and is a variable unit depending on the size of the character.",
+          desc02: "The advantage of this setting is that it can support users with dyslexia who cannot read long sentences, and it is less likely that some text will become unreadable as the character size increases.",
+        },
+        verticalRhythm: {
+          desc01: "We use vertical rhythm that emphasizes consistency throughout the page. The margins and margins are set relative to the line spacing of 24px.",
+          desc02: "Cognitively impaired users can read text more easily if the words are evenly spaced.",
+        }
+      },
       heading: {
         basic: "Basic Info",
         job: "Job Info",
@@ -97,6 +159,7 @@ export default {
         contact: "Contact"
       },
       multilingual: "Multilingual Page",
+      backTop: "Return to the top page",
       onlyJPText: "Sorry, Japanese text only"
     },
     ja: {
@@ -177,6 +240,68 @@ export default {
         hatena: "Hatena",
         steam: "Steam"
       },
+      aboutPage: {
+        title: "yamanoku.netについて",
+        description: "yamanoku.netは、yamanokuこと大山奥人のポータルサイトです。",
+        heading: {
+          toc: "目次",
+          implementation: "ページ実装の解説",
+          design: "ページデザインの解説",
+        },
+        subHeading: {
+          markup: "マークアップ",
+          components: "コンポーネント指向設計",
+          pwa: "PWA (Progressive Web Application)",
+          i18n: "国際化対応",
+          overdesign: "オーバーデザインしすぎない",
+          JPFont: "日本語フォントについて",
+          fontSize: "文字サイズ",
+          contrast: "カラーコントラスト",
+          maxWidth: "最大幅について",
+          verticalRhythm: "バーティカルリズム",
+        },
+        markup: {
+          desc01: "ヒューマンリーダブル（人が理解できる）とマシンリーダブル（機械が理解できる）となる情報設計を実現するためにセマンティクスなマークアップ実装しています。",
+          desc01: "支援技術を使用する人には不要となる要素について、WAI-ARIA（Web Accessibility Initiative - Accessible Rich Internet Applications）を使用して閲覧を阻害しないようにする実装も行っています。",
+        },
+        components: {
+          desc01: "たとえばスライド一覧のリストでは以下コンポーネントを使ってレンダリングしています。",
+          desc02: "表示のために得るAPIを整形する必要がありますが、1つのコンポーネントで管理することで、ソースコードの簡略化・複数での使い回しや情報設計の効率化を図ることができます。",
+          desc03: "その他、コンポーネント指向開発でPropsが深くなってしまわないように、Storeから各APIを呼び出すように設定しています。",
+        },
+        pwa: {
+          desc01: "Google Chromeで閲覧している場合、PCからはデスクトップPWA、モバイル端末からはPWAとして利用することができます。",
+          desc02: "ブラウザを通さずにネイティブアプリとして起動できたり、キャッシュを活用した早いページ体験、1度ダウンロードするとオフラインで閲覧することもできます。",
+        },
+        i18n: {
+          desc01: "Nuxt.jsで開発しているのでnuxt-18nというツールを導入しています。国際化対応ほか、特定の言語のみに表示する場合などのレンダリング処理も可能となっています。",
+          desc02: "日本語と英語を標準で対応しておりますが、その他の言語対応も予定しています。",
+        },
+        designDescription: "あらゆる層の方が見やすいようにインクルーシブデザインを取り入れています。",
+        overdesign: {
+          desc01: "過剰な装飾をしすぎることは目的の情報にたどり着く阻害に成り得ます。ブラウザのデフォルトスタイル、つまり標準の姿を意識したデザインにしています。",
+          desc02: "また、セマンティクスなマークアップで設計していることで、スタイルを外してもデフォルトスタイルのままでも違和感なく情報にたどり着けるようにも繋がります。",
+        },
+        JPFont: {
+          desc01: "UDフォントであるみんなの文字®WEBフォントを使用しています。",
+        },
+        fontSize: {
+          desc01: "基本16pxになるように設定しており、ページを拡大してもサイズ比を維持したremで指定しています。"
+        },
+        contrast: {
+          desc01: "使用しているカラーはいずれも、背景とのコントラスト比が最低でも4.5:1となるように設定されていますが、純粋な白黒ではなく、濃淡を抑えてバランスをとったカラーとなっています。",
+          desc02: "共通で使用できるよう、以下カスタム・プロパティ（CSS変数）を使用して指定しています。",
+          desc03: "また、OSの設定によりますが、ダークモード（目に優しい暗い色調）にも対応しています。",
+        },
+        maxWidth: {
+          desc01: "メインコンテンツの最大幅は80chに設定しています。chはチェーンと呼ばれ、文字のサイズによって可変する単位です。",
+          desc02: "この設定にすることのメリットとして、長文が読めない読字障害の利用者のサポートができたり、文字サイズが大きくなるに従ってテキストの一部が欠けて読めなくなるような事態も発生しにくくなります。",
+        },
+        verticalRhythm: {
+          desc01: "ページ全体の一貫性を重視したバーティカルリズムを採用しています。24pxの行間を基準としてマージンや余白などを設定しています。",
+          desc02: "認知障害がある利用者は、単語と単語の間隔が均一になっていると、テキストをより容易に読めるようになります。",
+        }
+      },
       heading: {
         basic: "基本情報",
         job: "職業",
@@ -194,7 +319,8 @@ export default {
         sns: "ソーシャルサービス",
         contact: "連絡先"
       },
-      multilingual: "多言語ページ"
+      multilingual: "多言語ページ",
+      backTop: "トップページに戻る"
     },
     fr: {
       name: "Nom - Okuto Oyama",
@@ -274,6 +400,68 @@ export default {
         hatena: "Hatena",
         steam: "Steam"
       },
+      aboutPage: {
+        title: "A propos de yamanoku.net",
+        description: "yamanoku.net est un portail d'Okuto Oyama appelé yamanoku.",
+        heading: {
+          toc: "Table des matières",
+          implementation: "Description de l'implémentation du site",
+          design: "Description de la conception du site",
+        },
+        subHeading: {
+          markup: "Mise en oeuvre du balisage",
+          components: "Conception orientée composants",
+          pwa: "PWA (Progressive Web Application)",
+          i18n: "Internationalisation",
+          overdesign: "Ne surconcevez pas.",
+          JPFont: "A propos des polices japonaises",
+          fontSize: "Taille du texte",
+          contrast: "Contraste de couleur",
+          maxWidth: "A propos de la largeur de contenu maximale",
+          verticalRhythm: "Rythme vertical",
+        },
+        markup: {
+          desc01: "Mise en oeuvre du balisage sémantique pour réaliser la conception de l'information de lisibles par l'homme (On peut comprendre) et lisibles par la machine (Être compris par la machine).",
+          desc01: "Nous mettons également en oeuvre WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) pour les éléments qui ne sont pas nécessaires aux personnes qui utilisent des technologies d'assistance pour ne pas bloquer l'accès.",
+        },
+        components: {
+          desc01: "Par exemple, la liste des diapositives utilise les composants suivants pour effectuer le rendu:",
+          desc02: "Vous devez formater l'API que vous obtenez pour affichage, mais la gestion de celle-ci en tant que composant unique simplifie le code source, permet de multiples utilisations et simplifie la conception des informations.",
+          desc03: "De plus, nous avons configuré le Store pour appeler chaque API afin d'empêcher la profondeur de Props dans le développement orienté composants.",
+        },
+        pwa: {
+          desc01: "Lorsque vous naviguez dans Google Chrome, vous pouvez utiliser PWA de bureau à partir de votre PC ou PWA à partir de votre appareil mobile.",
+          desc02: "Vous pouvez le lancer en tant qu'application native sans passer par un navigateur, utiliser le cache pour obtenir une expérience rapide de la page, ou le télécharger une fois et l'afficher hors ligne.",
+        },
+        i18n: {
+          desc01: "Depuis que nous développons sur Nuxt.js, nous avons introduit un outil appelé nuxt-18 n. En plus de l'internationalisation, le rendu peut aussi être fait pour des langues spécifiques.",
+          desc02: "Nous supportons le japonais et l'anglais comme langue de base, mais nous prévoyons de soutenir d'autres langues.",
+        },
+        designDescription: "Le design inclusif est incorporé pour faciliter la visualisation de toutes les couches.",
+        overdesign: {
+          desc01: "Trop de décoration peut vous empêcher d'obtenir l'information que vous voulez. Il est conçu avec le style par défaut du navigateur, c'est-à-dire l'image standard en tête.",
+          desc02: "Il est également implémenté dans un balisage sémantique, de sorte que vous pouvez accéder à l'information sans être stylisé ou laisser le style par défaut.",
+        },
+        JPFont: {
+          desc01: "Nous utilisons la police Minna no Moji ® WEB qui est une police UD (conception universelle).",
+        },
+        fontSize: {
+          desc01: "Le paramètre de base est 16 px, et le rapport taille est maintenu lorsque la page est agrandie par rem."
+        },
+        contrast: {
+          desc01: "Toutes les couleurs ont un rapport de contraste d'au moins 4,5 : 1 avec le fond, mais ils ne sont pas de noir et blanc pur, mais sont plutôt équilibrés avec moins de nuances de gris.",
+          desc02: "Il est spécifié à l'aide des propriétés personnalisées suivantes (variables CSS) pour une utilisation commune:",
+          desc03: "Il supporte également le mode sombre (Doux teintes foncées des yeux), selon les paramètres du système d'exploitation.",
+        },
+        maxWidth: {
+          desc01: "La largeur maximale du contenu principal est de 80ch. ch est appelé chaîne et est une unité variable selon la taille du caractère.",
+          desc02: "L'avantage de ce paramètre est qu'il peut prendre en charge les utilisateurs atteints de dyslexie qui ne peuvent pas lire de longues phrases, et il est moins probable que certains textes deviennent illisibles à mesure que la taille des caractères augmente.",
+        },
+        verticalRhythm: {
+          desc01: "Nous utilisons un rythme vertical qui met l'accent sur la cohérence dans toute la page. Les marges et les marges sont définies par rapport à l'espacement des lignes de 24px.",
+          desc02: "Les utilisateurs souffrant d'une déficience cognitive peuvent lire le texte plus facilement si les mots sont espacés de façon uniforme.",
+        }
+      },
       heading: {
         basic: "Informations de base",
         job: "Infos emploi",
@@ -292,6 +480,7 @@ export default {
         contact: "Contact"
       },
       multilingual: "Multilingue page",
+      backTop: "Revenir à la page supérieure",
       onlyJPText: "Désolé, texte japonais seulement"
     },
   }

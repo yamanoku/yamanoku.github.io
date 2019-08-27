@@ -1,13 +1,59 @@
 <template>
   <main>
-    <h2>yamanoku.netについて</h2>
+    <h2>{{$t("aboutPage.title")}}</h2>
+    <p>{{$t("aboutPage.description")}}</p>
+    <h3>{{$t("aboutPage.heading.toc")}}</h3>
+    <ul role="list">
+      <li role="listitem">
+        <a href="#implementation">{{$t("aboutPage.heading.implementation")}}</a>
+        <ul role="list">
+          <li role="listitem">
+            <a href="#tech-stack">{{$t("heading.techStack")}}</a>
+          </li>
+          <li role="listitem">
+            <a href="#markup">{{$t("aboutPage.subHeading.markup")}}</a>
+          </li>
+          <li role="listitem">
+            <a href="#component-oriented">{{$t("aboutPage.subHeading.components")}}</a>
+          </li>
+          <li role="listitem">
+            <a href="#pwa">{{$t("aboutPage.subHeading.pwa")}}</a>
+          </li>
+          <li role="listitem">
+            <a href="#i18n">{{$t("aboutPage.subHeading.i18n")}}</a>
+          </li>
+        </ul>
+      </li>
+      <li role="listitem">
+        <a href="#design">{{$t("aboutPage.heading.design")}}</a>
+        <ul role="list">
+          <li role="listitem">
+            <a href="#do-not-over-design">{{$t("aboutPage.subHeading.overdesign")}}</a>
+          </li>
+          <li role="listitem">
+            <a href="#japanese-font-family">{{$t("aboutPage.subHeading.JPFont")}}</a>
+          </li>
+          <li role="listitem">
+            <a href="#font-size">{{$t("aboutPage.subHeading.fontSize")}}</a>
+          </li>
+          <li role="listitem">
+            <a href="#color-contrast">{{$t("aboutPage.subHeading.contrast")}}</a>
+          </li>
+          <li role="listitem">
+            <a href="#max-width">{{$t("aboutPage.subHeading.maxWidth")}}</a>
+          </li>
+          <li role="listitem">
+            <a href="#vertical-rhythm">{{$t("aboutPage.subHeading.verticalRhythm")}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
     <article>
-      <p>yamanoku.netは、yamanokuこと大山奥人のポータルサイトです。</p>
-      <h3 id="coding">
-        <a class="anchor" aria-hidden="true" href="#coding">
+      <h3 id="implementation">
+        <a class="anchor" aria-hidden="true" href="#implementation">
           <anchor-icon />
         </a>
-        ページ実装の解説
+        {{$t("aboutPage.heading.implementation")}}
       </h3>
       <h4 id="tech-stack">
         <a class="anchor" aria-hidden="true" href="#tech-stack">
@@ -35,38 +81,41 @@
         <a class="anchor" aria-hidden="true" href="#markup">
           <anchor-icon />
         </a>
-        マークアップ
+        {{$t("aboutPage.subHeading.markup")}}
       </h4>
-      <p>ヒューマンリーダブル（人が理解できる）とマシンリーダブル（機械が理解できる）となる情報設計を実現するためにセマンティクスなマークアップ実装しています。</p>
-      <p>支援技術を使用する人には不要となる要素について、WAI-ARIA（Web Accessibility Initiative - Accessible Rich Internet Applications）を使用して閲覧を阻害しないようにする実装も行っています。</p>
+      <p>{{$t("aboutPage.markup.desc01")}}</p>
+      <p>{{$t("aboutPage.markup.desc02")}}</p>
       <highlight-code id="wai-aria-in-html" lang="html">{{waiAria}}</highlight-code>
       <h4 id="component-oriented">
         <a class="anchor" aria-hidden="true" href="#component-oriented">
           <anchor-icon />
         </a>
-        コンポーネント指向設計
+        {{$t("aboutPage.subHeading.components")}}
       </h4>
-      <p>
-        たとえば
-        <nuxt-link
-          :to="localePath({ name: 'index', hash: '#slides'})"
-        >{{$t("heading.slides.title")}}</nuxt-link>のリストでは以下コンポーネントを使ってレンダリングしています。
-      </p>
+      <p>{{$t("aboutPage.components.desc01")}}</p>
       <highlight-code id="slide-components" lang="vue">{{slide}}</highlight-code>
       <ul role="list">
         <li role="listitem">
-          <a href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/slides/SlideList.vue" target="_blank" rel="noopener">
+          <a
+            href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/slides/SlideList.vue"
+            target="_blank"
+            rel="noopener"
+          >
             yamanoku.github.io/SlideList.vue
             <github-icon />
           </a>
         </li>
       </ul>
-      <p>得るためのAPIの整形は必要ですが、1つのコンポーネントで管理することで、ソースコードの簡略化・複数での使い回しや情報設計の効率化を図ることができます。</p>
-      <p>その他、コンポーネント指向開発でPropsが深くなってしまわないように、Storeから各APIを呼び出すように設定しています。</p>
+      <p>{{$t("aboutPage.components.desc02")}}</p>
+      <p>{{$t("aboutPage.components.desc03")}}</p>
       <highlight-code id="api-for-store" lang="javascript">{{api}}</highlight-code>
       <ul role="list">
         <li role="listitem">
-          <a href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/products/A11yBeginner.vue" target="_blank" rel="noopener">
+          <a
+            href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/products/A11yBeginner.vue"
+            target="_blank"
+            rel="noopener"
+          >
             yamanoku.github.io/A11yBeginner.vue
             <github-icon />
           </a>
@@ -76,25 +125,28 @@
         <a class="anchor" aria-hidden="true" href="#pwa">
           <anchor-icon />
         </a>
-        PWA (Progressive Web Application)
+        {{$t("aboutPage.subHeading.pwa")}}
       </h4>
-      <p>Google Chromeで閲覧している場合、PCからはデスクトップPWA、モバイル端末からはPWAとして利用することができます。</p>
-      <p>ブラウザを通さずにネイティブアプリとして起動できたり、キャッシュを活用した早いページ体験、1度ダウンロードするとオフラインで閲覧することもできます。</p>
+      <p>{{$t("aboutPage.pwa.desc01")}}</p>
+      <p>{{$t("aboutPage.pwa.desc02")}}</p>
       <ul>
         <li>
-          <a href="https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/" target="_blank" rel="noopener">
-            Your First Progressive Web App  |  Web Fundamentals  |  Google Developers
-          </a>
+          <a
+            href="https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/"
+            target="_blank"
+            rel="noopener"
+            lang="en-US"
+          >Your First Progressive Web App | Web Fundamentals | Google Developers</a>
         </li>
       </ul>
       <h4 id="i18n">
         <a class="anchor" aria-hidden="true" href="#i18n">
           <anchor-icon />
         </a>
-        国際化対応
+        {{$t("aboutPage.subHeading.i18n")}}
       </h4>
-      <p>Nuxt.jsで開発しているのでnuxt-18nというツールを入れています。国際化対応ほか、特定の言語のみに表示する場合などのレンダリング処理も可能となっています。</p>
-      <p>日本語と英語を標準で対応しておりますが、その他の言語対応もしていこうと思っています。</p>
+      <p>{{$t("aboutPage.i18n.desc01")}}</p>
+      <p>{{$t("aboutPage.i18n.desc02")}}</p>
       <ul role="list">
         <li role="listitem" v-for="locale in $i18n.locales" :key="locale.code">
           <nuxt-link :lang="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
@@ -104,65 +156,87 @@
         <a class="anchor" aria-hidden="true" href="#design">
           <anchor-icon />
         </a>
-        ページデザインの解説
+        {{$t("aboutPage.heading.design")}}
       </h3>
-      <p>あらゆる層の方が見やすいようにインクルーシブデザインを取り入れています。</p>
-      <h4>オーバーデザインしすぎない</h4>
-      <p>過剰な装飾をしすぎることは目的の情報にたどり着く阻害に成り得ます。ブラウザのデフォルトスタイル、つまり標準の姿を意識したデザインにしています。</p>
-      <p>また、セマンティクスなマークアップで設計していることで、スタイルを外してもデフォルトスタイルのままでも違和感なく情報にたどり着けるようにも繋がります。</p>
-      <ul role="list">
-        <li role="listitem">
-          <a href="//motherfuckingwebsite.com/" target="_blank" rel="noopener">
-            This is a motherfucking website.
-          </a>
-        </li>
-      </ul>
-      <h4 id="font-family">
-        <a class="anchor" aria-hidden="true" href="#font-size">
+      <p>{{$t("aboutPage.designDescription")}}</p>
+      <h4 id="do-not-over-design">
+        <a class="anchor" aria-hidden="true" href="#do-not-over-design">
           <anchor-icon />
         </a>
-        日本語フォントについて
+        {{$t("aboutPage.subHeading.overdesign")}}
       </h4>
-      <p>UDフォントである<a href="https://minmoji.ucda.jp/pages/webfont/" target="_blank" rel="noopener">みんなの文字&reg;WEBフォント</a>を使用しています。</p>
+      <p>{{$t("aboutPage.overdesign.desc01")}}</p>
+      <p>{{$t("aboutPage.overdesign.desc02")}}</p>
+      <ul role="list">
+        <li role="listitem">
+          <a
+            href="//motherfuckingwebsite.com/"
+            target="_blank"
+            rel="noopener"
+            lang="en-US"
+          >This is a motherfucking website.</a>
+        </li>
+      </ul>
+      <h4 id="japanese-font-family">
+        <a class="anchor" aria-hidden="true" href="#japanese-font-family">
+          <anchor-icon />
+        </a>
+        {{$t("aboutPage.subHeading.JPFont")}}
+      </h4>
+      <p>{{$t("aboutPage.JPFont.desc01")}}</p>
+      <ul role="list">
+        <li role="listitem">
+          <a
+            href="https://minmoji.ucda.jp/pages/webfont/"
+            target="_blank"
+            rel="noopener"
+            lang="ja"
+          >みんなの文字&reg;WEBフォント</a>
+        </li>
+      </ul>
       <h4 id="font-size">
         <a class="anchor" aria-hidden="true" href="#font-size">
           <anchor-icon />
         </a>
-        文字サイズ
+        {{$t("aboutPage.subHeading.fontSize")}}
       </h4>
-      <p>基本16pxになるように設定しており、ページを拡大してもサイズ比を維持したremで指定しています。</p>
+      <p>{{$t("aboutPage.fontSize.desc01")}}</p>
       <h4 id="color-contrast">
         <a class="anchor" aria-hidden="true" href="#color-contrast">
           <anchor-icon />
         </a>
-        カラーコントラスト
+        {{$t("aboutPage.subHeading.contrast")}}
       </h4>
-      <p>使用しているカラーはいずれも、背景とのコントラスト比が最低でも4.5:1となるように設定されていますが、純粋な白黒ではなく、濃淡を抑えてバランスをとったカラーとなっています。</p>
-      <p>共通で使用できるよう、以下カスタム・プロパティ（CSS変数）を使用して指定しています。</p>
+      <p>{{$t("aboutPage.contrast.desc01")}}</p>
+      <p>{{$t("aboutPage.contrast.desc02")}}</p>
       <dl>
         <div v-for="color in colors" :key="color.name" :style="'background-color:' + color.value">
-          <dt :style="(color.name === 'var(--black)' || color.name === 'var(--linkBlue)' ? 'color: #fff': '')">{{color.name}}</dt>
-          <dd :style="(color.name === 'var(--black)' || color.name === 'var(--linkBlue)' ? 'color: #fff': '')">{{color.value}}</dd>
+          <dt
+            :style="(color.name === 'var(--black)' || color.name === 'var(--linkBlue)' ? 'color: #fff': '')"
+          >{{color.name}}</dt>
+          <dd
+            :style="(color.name === 'var(--black)' || color.name === 'var(--linkBlue)' ? 'color: #fff': '')"
+          >{{color.value}}</dd>
         </div>
       </dl>
-      <p>また、OSの設定によりますが、ダークモード（目に優しい暗い色調）にも対応しています。</p>
+      <p>{{$t("aboutPage.contrast.desc03")}}</p>
       <h4 id="max-width">
         <a class="anchor" aria-hidden="true" href="#max-width">
           <anchor-icon />
         </a>
-        最大幅について
+        {{$t("aboutPage.subHeading.maxWidth")}}
       </h4>
-      <p>メインコンテンツの最大幅は80chに設定しています。chはチェーンと呼ばれ、文字のサイズによって可変する単位です。</p>
-      <p>この設定にすることのメリットとして、長文が読めない読字障害の利用者のサポートができたり、文字サイズが大きくなるに従ってテキストの一部が欠けて読めなくなるような事態も発生しにくくなります。</p>
+      <p>{{$t("aboutPage.maxWidth.desc01")}}</p>
+      <p>{{$t("aboutPage.maxWidth.desc02")}}</p>
       <h4 id="vertical-rhythm">
         <a class="anchor" aria-hidden="true" href="#vertical-rhythm">
           <anchor-icon />
         </a>
-        バーティカルリズム
+        {{$t("aboutPage.subHeading.verticalRhythm")}}
       </h4>
-      <p>ページ全体の一貫性を重視したバーティカルリズムを採用しています。24pxの行間を基準としてマージンや余白などを設定しています。</p>
-      <p>認知障害がある利用者は、単語と単語の間隔が均一になっていると、テキストをより容易に読めるようになります。</p>
-      <nuxt-link :to="localePath({ name: 'index'})">トップに戻る</nuxt-link>
+      <p>{{$t("aboutPage.verticalRhythm.desc01")}}</p>
+      <p>{{$t("aboutPage.verticalRhythm.desc02")}}</p>
+      <nuxt-link :to="localePath({ name: 'index'})">{{$t("backTop")}}</nuxt-link>
     </article>
   </main>
 </template>
@@ -269,12 +343,12 @@ dl > div {
 }
 dl dt {
   font-weight: 700;
-  font-size: .75rem;
+  font-size: 0.8rem;
 }
 dl dd {
   margin: 0;
   padding: 0;
   font-weight: 700;
-  font-size: .75rem;
+  font-size: 0.8rem;
 }
 </style>
