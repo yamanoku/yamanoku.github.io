@@ -25,8 +25,13 @@ module.exports = {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP|Roboto&display=swap" },
       // { rel: "stylesheet", href: "https://scrapbox.io/api/code/yamanoku/vartical-rhythmCSS/base-line.css" },
+    ],
+    script: [
+      {
+        src: "https://minmoji.ucda.jp/sealjs/https%3A__yamanoku.net",
+        charset: "UTF-8"
+      }
     ]
   },
   css: ["modern-normalize"],
