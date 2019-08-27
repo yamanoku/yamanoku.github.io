@@ -15,7 +15,7 @@ export default {
   },
   components: {
     HeaderComponent,
-    LocalSwitchComponent,
+    LocalSwitchComponent
   }
 };
 </script>
@@ -23,11 +23,14 @@ export default {
 
 <style>
 @font-face {
-    font-family: minmoji;
-    src: url('https://minmoji.ucda.jp/fontseot/https%3A__yamanoku.net');
-    src: local('minmoji'),
-        url('https://minmoji.ucda.jp/fontswoff/https%3A__yamanoku.net') format('woff'),
-        url('https://minmoji.ucda.jp/fonts/https%3A__yamanoku.net') format('opentype');
+  font-family: minmoji;
+  src: url("https://minmoji.ucda.jp/fontseot/https%3A__yamanoku.net");
+  src: local("minmoji"),
+    url("https://minmoji.ucda.jp/fontswoff/https%3A__yamanoku.net")
+      format("woff"),
+    url("https://minmoji.ucda.jp/fonts/https%3A__yamanoku.net")
+      format("opentype");
+  font-display: swap;
 }
 :root {
   --black: rgb(21, 32, 43);
@@ -50,7 +53,6 @@ body {
   font-family: Arial, Helvetica, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
-  font-display: swap;
 }
 html[lang="ja"] body {
   font-family: minmoji, Arial, Helvetica, sans-serif;
