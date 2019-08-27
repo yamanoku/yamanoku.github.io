@@ -71,18 +71,19 @@ module.exports = {
       }
     ],
     [
-      '@nuxtjs/google-gtag',
+      "@nuxtjs/google-gtag",
       {
-        id: 'UA-146072150-1',
+        id: "UA-146072150-1",
         debug: true
       }
     ],
     "@nuxtjs/axios",
   ],
   plugins: [
-    '~plugins/icons.js',
-    '~plugins/storeGithub.js',
-    '~plugins/storeSlide.js',
+    "~plugins/icons.js",
+    "~plugins/vue-highlight.js",
+    "~plugins/storeGithub.js",
+    "~plugins/storeSlide.js"
   ],
   workbox: {
     dev: true
