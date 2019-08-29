@@ -29,7 +29,12 @@ export default {
       career: {
         skillSet: "Set of Skills",
         wantedly: "Wantedly",
-        curriculumVitae: "Curriculum Vitae"
+        lapras: "LAPRAS",
+        curriculumVitae: "Curriculum Vitae",
+        desc01: "I started my career as a Web designer, not as an engineer.",
+        desc02: "I changed my job as an engineer to concentrate on programming because I thought that I could not understand the basics of what I could and could not do on the browser and could not make expressions and feature proposals that would be pleasing to users, rather than the influence of my previous career when I was in charge of all direction-design programming.",
+        desc03: "I began my career as a markup engineer, taking basic coding and gradually moving into the frontend engineer space, including jQuery, Ajax communication, task runners, CSS design, and the use of frameworks.",
+        desc04: "When I aim to become an engineer, there are some things that I want to achieve that I create “A product that has been used for a long time with a strong design”. We believe that we can achieve this not only through engineering, but also through UI design, user experience, and consideration for wider use. It's a difficult task, but I want to do it one by one so that everyone can enjoy better things.",
       },
       product: {
         wafb: {
@@ -190,7 +195,12 @@ export default {
       career: {
         skillSet: "スキルセット",
         wantedly: "Wantedly",
-        curriculumVitae: "職務経歴書"
+        lapras: "LAPRAS",
+        curriculumVitae: "職務経歴書",
+        desc01: "自分のキャリアのスタートはWebデザイナーとしてで、エンジニアから始まったわけではありません。",
+        desc02: "これまでのキャリアの中でディレクション・デザイン・プログラミングをすべて担当する業務に就いた影響より、ブラウザ上のできること・できないことの根幹の理解をせず、ユーザにとって喜ばれる表現や機能提案は出来ないのだと思い、プログラミングに専任するためエンジニアとして転職しました。",
+        desc03: "最初はマークアップエンジニアとして業務を通じ基礎的なコーディングを取得し、jQuery、Ajax通信、タスクランナー、CSS設計、フレームワークの使用など徐々にフロントエンドエンジニアという領域にも踏み入れていきました。",
+        desc04: "私がエンジニアを目指すにあたり実現していきたいことの中に「強固な設計で長く使われてるプロダクト」を作っていくことがあります。それはエンジニアリングだけでは達成できることではなくUIデザインやユーザーの体験、幅広い層に使ってもらうための考慮なども必要となると考えています。難易度が高いことではありますがより良きものを皆が享受できるよう１つずつ課題をこなしていきたいと思っています。",
       },
       product: {
         wafb: {
@@ -350,7 +360,12 @@ export default {
       career: {
         skillSet: "Ensemble de compétences",
         wantedly: "Wantedly",
-        curriculumVitae: "Reprendre"
+        lapras: "LAPRAS",
+        curriculumVitae: "Reprendre",
+        desc01: "J'ai commencé ma carrière de concepteur Web, pas d'ingénieur.",
+        desc02: "J'ai changé mon travail d'ingénieur pour me concentrer sur la programmation parce que je pensais que je ne pouvais pas comprendre les bases de ce que je pouvais et ne pouvais pas faire sur le navigateur et ne pouvais pas faire d'expressions et de propositions de fonctionnalités qui seraient plaisantes pour les utilisateurs, plutôt que l'influence de ma carrière précédente, lorsque j'étais responsable de tous les programmes de conception de direction.",
+        desc03: "J'ai commencé en tant qu'ingénieur de balisage, j'ai obtenu le codage de base à travers mon travail, et je me suis progressivement déplacé dans l'espace de l'ingénieur frontal, y compris jQuery, Ajax communication, les exécutants de tâches, la conception CSS, et l'utilisation de cadres.",
+        desc04: "Quand je veux devenir ingénieur, il y a des choses que je veux réaliser que je crée “Un produit qui a été utilisé depuis longtemps avec un design solide”. Nous croyons que nous pouvons y parvenir non seulement par l'ingénierie, mais aussi par la conception de l'assurance-chômage, l'expérience des utilisateurs et la prise en compte d'une utilisation plus large. C'est une tâche difficile, mais je veux le faire un par un pour que tout le monde puisse apprécier de meilleures choses.",
       },
       product: {
         wafb: {

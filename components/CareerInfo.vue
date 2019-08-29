@@ -6,6 +6,10 @@
       </a>
       {{ $t("heading.career") }}
     </h3>
+    <p>{{ $t("career.desc01") }}</p>
+    <p>{{ $t("career.desc02") }}</p>
+    <p>{{ $t("career.desc03") }}</p>
+    <p>{{ $t("career.desc04") }}</p>
     <ul role="list">
       <li role="listitem">
         <a
@@ -19,6 +23,13 @@
       </li>
       <li role="listitem">
         <a
+          href="https://scrapbox.io/yamanoku/Skill_Sets"
+          target="_blank"
+          rel="noopener"
+        >{{ $t("career.skillSet") }}</a>
+      </li>
+      <li role="listitem">
+        <a
           href="https://www.wantedly.com/users/347527"
           target="_blank"
           rel="noopener"
@@ -26,10 +37,10 @@
       </li>
       <li role="listitem">
         <a
-          href="https://scrapbox.io/yamanoku/Skill_Sets"
+          href="https://lapras.com/public/ZQJMZYO"
           target="_blank"
           rel="noopener"
-        >{{ $t("career.skillSet") }}</a>
+        >{{ $t("career.lapras") }}</a>
       </li>
     </ul>
   </section>
