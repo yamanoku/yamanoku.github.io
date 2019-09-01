@@ -92,8 +92,10 @@
             href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/pages/about.vue#L80-L85"
             target="_blank"
             rel="noopener"
-          >yamanoku.github.io/about.vue
-          <github-icon /></a>
+          >
+            yamanoku.github.io/about.vue
+            <github-icon />
+          </a>
         </li>
       </ul>
       <h4 id="component-oriented">
@@ -122,7 +124,7 @@
       <ul role="list">
         <li role="listitem">
           <a
-            href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/products/A11yBeginner.vue"
+            href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/products/A11yBeginner.vue#L49-L55"
             target="_blank"
             rel="noopener"
           >
@@ -158,8 +160,16 @@
       <p>{{$t("aboutPage.i18n.desc01")}}</p>
       <p>{{$t("aboutPage.i18n.desc02")}}</p>
       <ul role="list">
-        <li role="listitem" v-for="locale in $i18n.locales" :key="locale.code">
-          <nuxt-link :lang="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
+        <li role="listitem">
+          <a
+            href="https://github.com/yamanoku/yamanoku.github.io/projects/2"
+            target="_blank"
+            rel="noopener"
+            lang="en-US"
+          >
+            i18n Project
+            <github-icon />
+          </a>
         </li>
       </ul>
       <h3 id="design">
