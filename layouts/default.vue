@@ -57,6 +57,32 @@ body {
 html[lang="ja"] body {
   font-family: minmoji, Arial, Helvetica, sans-serif;
 }
+body.is-rhythm {
+  position: relative;
+}
+body.is-rhythm:active:after {
+  display: none;
+}
+body.is-rhythm:after {
+  background: linear-gradient(
+    to bottom,
+    rgba(200, 225, 255, 0.6) 1px,
+    transparent 1px
+  );
+  background-size: 17px 24px;
+  bottom: 0;
+  margin-top: 0px;
+  content: "";
+  display: block;
+  height: auto;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  z-index: 9999;
+}
 *,
 *:before,
 *:after {
@@ -92,9 +118,7 @@ main {
 h2 {
   margin: var(--rhythm) 0;
   font-size: 2rem;
-  font-feature-settings: "palt";
   line-height: calc(var(--rhythm) * 2);
-  letter-spacing: 0.025em;
 }
 h2 small {
   font-size: 1.4rem;
@@ -110,25 +134,19 @@ h2 small {
 h3 {
   margin: var(--rhythm) 0;
   font-size: 1.4rem;
-  font-feature-settings: "palt";
-  letter-spacing: 0.0125em;
   line-height: var(--rhythm);
   position: relative;
 }
 h4 {
   margin: var(--rhythm) 0;
   font-size: 1.2rem;
-  font-feature-settings: "palt";
-  letter-spacing: 0.0125em;
   line-height: var(--rhythm);
   position: relative;
 }
 h5 {
   margin: var(--rhythm) 0;
   font-size: 1.2rem;
-  font-feature-settings: "palt";
   font-weight: 400;
-  letter-spacing: 0.0125em;
   line-height: var(--rhythm);
   position: relative;
 }
@@ -149,11 +167,10 @@ article::before {
   bottom: 0;
   left: 0;
 }
+section p,
 article p {
   margin: var(--rhythm) 0;
   font-size: 1rem;
-  font-feature-settings: "palt";
-  letter-spacing: 0.0125em;
   line-height: var(--rhythm);
 }
 .anchor {

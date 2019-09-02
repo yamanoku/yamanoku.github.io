@@ -93,7 +93,7 @@
             target="_blank"
             rel="noopener"
           >
-            yamanoku.github.io/about.vue
+            about.vue
             <github-icon />
           </a>
         </li>
@@ -113,7 +113,7 @@
             target="_blank"
             rel="noopener"
           >
-            yamanoku.github.io/SlideList.vue
+            SlideList.vue
             <github-icon />
           </a>
         </li>
@@ -128,7 +128,7 @@
             target="_blank"
             rel="noopener"
           >
-            yamanoku.github.io/A11yBeginner.vue
+            A11yBeginner.vue
             <github-icon />
           </a>
         </li>
@@ -256,6 +256,16 @@
       </h4>
       <p>{{$t("aboutPage.verticalRhythm.desc01")}}</p>
       <p>{{$t("aboutPage.verticalRhythm.desc02")}}</p>
+      <button
+        class="switch-rhythm"
+        role="switch"
+        aria-checked="false"
+        @click="switchToggle"
+        ref="switch-rhythm"
+      >
+        Vertical Rhythm Line
+        <span aria-hidden="true" class="show-labels"></span>
+      </button>
       <nuxt-link :to="localePath({ name: 'index'})">{{$t("backTop")}}</nuxt-link>
     </article>
   </main>
@@ -277,8 +287,18 @@ export default {
           name: "twitter:description",
           content: this.$t("aboutPage.description")
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
+      }
     };
+  },
+  methods: {
+    switchToggle(e) {
+      e.preventDefault();
+      e.target.setAttribute('aria-checked', e.target.getAttribute('aria-checked') === 'true' ? 'false' : 'true');
+      this.$store.dispatch('rhythm/toggleRhythm')
+    }
   },
   data() {
     return {
@@ -356,6 +376,11 @@ export default {
 </script>
 
 <style scoped>
+h2 + p {
+  margin: var(--rhythm) 0;
+  font-size: 1rem;
+  line-height: var(--rhythm);
+}
 dl {
   padding: var(--rhythm);
   margin: 0 calc(-1 * var(--rhythm));
@@ -383,5 +408,85 @@ dl dd {
   padding: 0;
   font-weight: 700;
   font-size: 0.8rem;
+}
+button.btn-rhythm {
+  margin: var(--rhythm) 0;
+  display: block;
+}
+</style>
+
+<style scoped>
+.switch-rhythm {
+  background: none;
+  border: none;
+  display: block;
+  font-size: inherit;
+  line-height: var(--rhythm);
+  margin: var(--rhythm) 0;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  transition: box-shadow .2s ease-in-out;
+  width: 100%;
+}
+
+.switch-rhythm:active {
+  color: inherit;
+}
+
+.switch-rhythm span:before,
+.switch-rhythm span:after {
+  border: 1px solid var(--black);
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.switch-rhythm span:after {
+  background: #fff;
+  border-radius: 100%;
+  height: calc(var(--rhythm) / 1.45);
+  right: calc(var(--rhythm) / 1.45);
+  transition: right .1825s ease-in-out;
+  width: calc(var(--rhythm) / 1.45);
+}
+
+.switch-rhythm span:before {
+  background: var(--white);
+  border-radius: var(--rhythm);
+  height: var(--rhythm);
+  right: .25em;
+  transition: background .2s ease-in-out;
+  width: 2.75em;
+}
+
+.switch-rhythm span {
+  pointer-events: none;
+}
+
+.switch-rhythm[aria-checked="true"] span:after {
+  right: 8px;
+}
+
+.switch-rhythm[aria-checked="true"] span:before {
+  background: var(--linkBlue);
+}
+
+.switch-rhythm .show-labels:before {
+  color: var(--black);
+  line-height: 1.6;
+  text-indent: 1.625em;
+  width: 3.5em;
+}
+
+.switch-rhythm[aria-checked="false"] .show-labels:after {
+  right: 40px;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .switch-rhythm span:after {
+    background-color: windowText;
+  }
 }
 </style>
