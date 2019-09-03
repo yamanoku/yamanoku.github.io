@@ -87,6 +87,7 @@ body.is-rhythm:after {
 }
 *:focus {
   outline: 2px solid var(--blue);
+  outline-offset: 2px;
 }
 a {
   color: var(--linkBlue);
