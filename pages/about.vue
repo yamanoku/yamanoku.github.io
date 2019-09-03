@@ -259,7 +259,7 @@
       <button
         class="switch-rhythm"
         role="switch"
-        aria-checked="false"
+        :aria-checked="checkToggle"
         @click="switchToggle"
         ref="switch-rhythm"
       >
@@ -303,6 +303,12 @@ export default {
       e.preventDefault();
       e.target.setAttribute('aria-checked', e.target.getAttribute('aria-checked') === 'true' ? 'false' : 'true');
       this.$store.dispatch('rhythm/toggleRhythm')
+    }
+  },
+  computed: {
+    checkToggle() {
+      if (!this.$store.state.rhythm.toggleRhythm) return "false";
+      return this.$store.state.rhythm.toggleRhythm;
     }
   },
   data() {
