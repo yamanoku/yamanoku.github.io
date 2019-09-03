@@ -84,6 +84,9 @@ export default {
         hatena: "Hatena",
         steam: "Steam"
       },
+      home: {
+        title: "Home"
+      },
       aboutPage: {
         title: "About yamanoku.net",
         description: "yamanoku.net is a portal site of Okuto Oyama called yamanoku.",
@@ -162,6 +165,19 @@ export default {
         },
         sns: "Social Service",
         contact: "Contact"
+      },
+      error: {
+        404: {
+          text01: "Couldn't find the page you were looking for.",
+          text02: "We apologize for the inconvenience, but please access the relevant page from the site map.",
+        },
+        500: {
+          text01: "A server error has occurred. Please wait for a while and try again.",
+          text02: "If it is still not recovered, please contact us via the email address.",
+        },
+        sitemap: {
+          title: "Find on site map"
+        }
       },
       multilingual: "Multilingual Page",
       backTop: "Return to the top page",
@@ -250,6 +266,9 @@ export default {
         hatena: "Hatena",
         steam: "Steam"
       },
+      home: {
+        title: "ホーム"
+      },
       aboutPage: {
         title: "yamanoku.netについて",
         description: "yamanoku.netは、yamanokuこと大山奥人のポータルサイトです。",
@@ -328,6 +347,19 @@ export default {
         },
         sns: "ソーシャルサービス",
         contact: "連絡先"
+      },
+      error: {
+        404: {
+          text01: "お探しのページが見つかりませんでした。",
+          text02: "お手数をおかけしますが、以下サイトマップより対象のページへアクセスしてください。",
+        },
+        500: {
+          text01: "サーバエラーが発生しました。恐れ入りますがしばらくお待ちいただいた後再度アクセスしてください。",
+          text02: "それでも復旧していない場合は、お手数をおかけしますが以下メールよりご連絡ください。",
+        },
+        sitemap: {
+          title: "サイトマップから探す"
+        }
       },
       multilingual: "多言語ページ",
       backTop: "トップページに戻る"
@@ -415,6 +447,9 @@ export default {
         hatena: "Hatena",
         steam: "Steam"
       },
+      home: {
+        title: "Accueil"
+      },
       aboutPage: {
         title: "A propos de yamanoku.net",
         description: "yamanoku.net est un portail d'Okuto Oyama appelé yamanoku.",
@@ -493,6 +528,19 @@ export default {
         },
         sns: "Service social",
         contact: "Contact"
+      },
+      error: {
+        404: {
+          text01: "Je n'ai pas pu trouver la page que vous cherchiez.",
+          text02: "Nous vous prions de bien vouloir nous excuser pour les inconvénients, mais veuillez visiter la page cible à partir de la carte du site.",
+        },
+        500: {
+          text01: "Une erreur de serveur s'est produite. Veuillez patienter un moment et réessayer.",
+          text02: "S'il n'a toujours pas été récupéré, veuillez nous contacter par email ci-dessous.",
+        },
+        sitemap: {
+          title: "Trouver sur la carte du site"
+        }
       },
       multilingual: "Multilingue page",
       backTop: "Revenir à la page supérieure",
