@@ -1,51 +1,76 @@
 <template>
   <header>
     <h1>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="246"
-        height="242"
-        viewBox="0 0 246 242"
-        role="img"
-        aria-labelledby="title"
-      >
-        <title id="title">yamanoku icon</title>
-        <path
-          class="cls-1"
-          d="M64,67v54l82,82-46,46v60h56L310,155V96H230l-21,20L160,67H64ZM176,203l-45,46h25L293,113H230l-39,39-31-31H94Z"
-          transform="translate(-64 -67)"
-        />
-      </svg>
+      <nuxt-link :to="localePath({ name: 'index'})">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="246"
+          height="242"
+          viewBox="0 0 246 242"
+          role="img"
+          aria-describedby="title"
+        >
+          <title id="title">yamanoku logo</title>
+          <path
+            class="cls-1"
+            d="M64,67v54l82,82-46,46v60h56L310,155V96H230l-21,20L160,67H64ZM176,203l-45,46h25L293,113H230l-39,39-31-31H94Z"
+            transform="translate(-64 -67)"
+          />
+        </svg>
+      </nuxt-link>
     </h1>
+    <nav>
+      <ul class="global" role="list">
+        <li role="listitem">
+          <nuxt-link :to="localePath({ name: 'index'})">{{$t("home.title")}}</nuxt-link>
+        </li>
+        <li role="listitem">
+          <nuxt-link :to="localePath({ name: 'about'})">{{$t("aboutPage.title")}}</nuxt-link>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 
 <style scoped>
 header {
-  background-color: rgb(54, 70, 93);
-}
-@media (prefers-color-scheme: dark) {
-  header {
-    background-color: rgb(50, 54, 57);
-  }
+  max-width: 80ch;
+  margin: auto;
+  padding: 0 var(--rhythm);
 }
 h1 {
-  text-align: center;
-  margin: 0;
-  padding: var(--rhythm) 0;
+  margin: var(--rhythm) 0;
 }
 svg {
-  width: 145px;
-  height: 145px;
-  vertical-align: bottom;
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
 }
 .cls-1 {
-  fill: #fff;
+  fill: rgb(54, 70, 93);
   fill-rule: evenodd;
 }
 @media (prefers-color-scheme: dark) {
   .cls-1 {
     fill: var(--white);
+  }
+}
+nav ul.global {
+  display: flex;
+  list-style-type: none;
+  margin: var(--rhythm) 0;
+  padding: 0;
+}
+nav ul.global li {
+  margin-right: 12px;
+}
+nav ul.global li a.nuxt-link-exact-active {
+  text-decoration: none;
+  color: var(--linkBlue);
+}
+@media (prefers-color-scheme: dark) {
+  nav ul.global li a.nuxt-link-exact-active {
+    color: var(--blue);
   }
 }
 </style>
