@@ -14,13 +14,13 @@ module.exports = {
       {
         hid: "og:image",
         name: "og:image",
-        content: "https://yamanoku.net/iam.jpg"
+        content: "https://yamanoku.net/ogp@2x.png"
       },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@yamanoku" },
       { name: "twitter:title", content: "yamanoku.net" },
       { name: "twitter:description", content: "Okuto Oyama Portfolio Site" },
-      { name: "twitter:image", content: "https://yamanoku.net/iam.jpg" },
+      { name: "twitter:image", content: "https://yamanoku.net/ogp@2x.png" },
       { name: "twitter:image:alt", content: "Portrait for Okuto Oyama" }
     ],
     link: [
