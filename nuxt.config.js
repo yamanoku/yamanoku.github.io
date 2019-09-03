@@ -2,7 +2,7 @@ import vueI18n from "./vueI18n";
 
 module.exports = {
   head: {
-    title: "ʏᴀᴍᴀɴᴏᴋᴜ.ɴᴇᴛ",
+    title: "yamanoku.net",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -18,7 +18,7 @@ module.exports = {
       },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@yamanoku" },
-      { name: "twitter:title", content: "ʏᴀᴍᴀɴᴏᴋᴜ.ɴᴇᴛ" },
+      { name: "twitter:title", content: "yamanoku.net" },
       { name: "twitter:description", content: "Okuto Oyama Portfolio Site" },
       { name: "twitter:image", content: "https://yamanoku.net/iam.jpg" },
       { name: "twitter:image:alt", content: "Portrait for Okuto Oyama" }
@@ -88,16 +88,17 @@ module.exports = {
     "~plugins/icons.js",
     "~plugins/vue-highlight.js",
     "~plugins/storeGithub.js",
-    "~plugins/storeSlide.js"
+    "~plugins/storeSlide.js",
+    "~plugins/storeDay.js"
   ],
   workbox: {
     dev: true
   },
   manifest: {
-    name: "ʏᴀᴍᴀɴᴏᴋᴜ.ɴᴇᴛ",
-    short_name: "ʏᴀᴍᴀɴᴏᴋᴜ",
-    title: "ʏᴀᴍᴀɴᴏᴋᴜ.ɴᴇᴛ",
-    "og:title": "ʏᴀᴍᴀɴᴏᴋᴜ.ɴᴇᴛ",
+    name: "yamanoku.net",
+    short_name: "yamanoku",
+    title: "yamanoku.net",
+    "og:title": "yamanoku.net",
     description: "Okuto Oyama Portfolio Site.",
     "og:description": "Okuto Oyama Portfolio Site.",
     lang: "en",

@@ -2,17 +2,20 @@
   <div>
     <header-component />
     <nuxt />
+    <footer-component />
   </div>
 </template>
 
 <script>
 import HeaderComponent from "~/components/Header.vue";
+import FooterComponent from "~/components/Footer.vue";
 export default {
   head() {
     return this.$nuxtI18nSeo();
   },
   components: {
     HeaderComponent,
+    FooterComponent,
   }
 };
 </script>
@@ -57,10 +60,10 @@ html[lang="ja"] body {
 body.is-rhythm {
   position: relative;
 }
-body.is-rhythm:active:after {
+body.is-rhythm:active::after {
   display: none;
 }
-body.is-rhythm:after {
+body.is-rhythm::after {
   background: linear-gradient(
     to bottom,
     rgba(200, 225, 255, 0.6) 1px,
@@ -81,8 +84,8 @@ body.is-rhythm:after {
   z-index: 9999;
 }
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 *:focus {
@@ -164,6 +167,11 @@ article::before {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+@media screen and (max-width: 768px) {
+  article::before {
+    background-color: var(--white);
+  }
 }
 p {
   margin: var(--rhythm) 0;
