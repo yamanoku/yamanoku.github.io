@@ -434,7 +434,11 @@ button.btn-rhythm {
   transition: box-shadow .2s ease-in-out;
   width: 100%;
 }
-
+@media (prefers-color-scheme: dark) {
+  .switch-rhythm {
+    color: var(--white);
+  }
+}
 .switch-rhythm:active {
   color: inherit;
 }
