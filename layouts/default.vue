@@ -2,20 +2,17 @@
   <div>
     <header-component />
     <nuxt />
-    <local-switch-component />
   </div>
 </template>
 
 <script>
 import HeaderComponent from "~/components/Header.vue";
-import LocalSwitchComponent from "~/components/LocalSwitch.vue";
 export default {
   head() {
     return this.$nuxtI18nSeo();
   },
   components: {
     HeaderComponent,
-    LocalSwitchComponent
   }
 };
 </script>
@@ -167,8 +164,7 @@ article::before {
   bottom: 0;
   left: 0;
 }
-section p,
-article p {
+p {
   margin: var(--rhythm) 0;
   font-size: 1rem;
   line-height: var(--rhythm);
@@ -244,11 +240,6 @@ ul:not([class]) li svg .edit-2,
 ul:not([class]) li svg .image-1,
 ul:not([class]) li svg .shopping-2 {
   fill: none;
-}
-nav {
-  max-width: 80ch;
-  margin: auto;
-  padding: 0 var(--rhythm);
 }
 address {
   margin: var(--rhythm) 0;

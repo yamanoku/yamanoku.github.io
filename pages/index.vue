@@ -9,6 +9,7 @@
     <slides-component />
     <sns-component />
     <address-component />
+    <local-switch-component />
   </main>
 </template>
 
@@ -20,6 +21,7 @@ import ProductListComponent from "~/components/ProductList.vue";
 import SlidesComponent from "~/components/Slides.vue";
 import SnsComponent from "~/components/Sns.vue";
 import AddressComponent from "~/components/Address.vue";
+import LocalSwitchComponent from "~/components/LocalSwitch.vue";
 
 export default {
   components: {
@@ -30,6 +32,7 @@ export default {
     SlidesComponent,
     SnsComponent,
     AddressComponent,
+    LocalSwitchComponent,
   }
 };
 </script>

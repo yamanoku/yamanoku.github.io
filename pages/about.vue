@@ -268,10 +268,12 @@
       </button>
       <nuxt-link :to="localePath({ name: 'index'})">{{$t("backTop")}}</nuxt-link>
     </article>
+    <local-switch-component />
   </main>
 </template>
 
 <script>
+import LocalSwitchComponent from "~/components/LocalSwitch.vue";
 export default {
   head() {
     return {
@@ -292,6 +294,9 @@ export default {
         class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
       }
     };
+  },
+  components: {
+    LocalSwitchComponent
   },
   methods: {
     switchToggle(e) {
