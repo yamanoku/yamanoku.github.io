@@ -11,7 +11,7 @@
       <li role="listitem">
         <a href="https://vue-portfolio.yamanoku.net/" target="_blank" rel="noopener">
           {{ $t("product.vuePortfolio") }}
-          <product-icon />
+          <open-new-icon />
         </a>
       </li>
       <li role="listitem">
@@ -50,8 +50,8 @@
 export default {
   data() {
     return {
-      vuePortfolioIssue: this.$store.state.github.vue_issues,
+      vuePortfolioIssue: this.$store.state.github.vue_issues
     };
   }
-}
+};
 </script>

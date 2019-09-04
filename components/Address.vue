@@ -7,7 +7,10 @@
       {{ $t("heading.contact") }}
     </h3>
     <address>
-      <a href="mailto:0910yama@gmail.com">0910yama@gmail.com</a>
+      <a href="mailto:0910yama@gmail.com">
+        0910yama@gmail.com
+        <mail-icon />
+      </a>
     </address>
   </section>
 </template>

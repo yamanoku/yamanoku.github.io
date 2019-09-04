@@ -148,7 +148,10 @@
             target="_blank"
             rel="noopener"
             lang="en-US"
-          >Your First Progressive Web App | Web Fundamentals | Google Developers</a>
+          >
+            Your First Progressive Web App | Web Fundamentals | Google Developers
+            <open-new-icon />
+          </a>
         </li>
       </ul>
       <h4 id="i18n">
@@ -189,12 +192,10 @@
       <p>{{$t("aboutPage.overdesign.desc02")}}</p>
       <ul role="list">
         <li role="listitem">
-          <a
-            href="//motherfuckingwebsite.com/"
-            target="_blank"
-            rel="noopener"
-            lang="en-US"
-          >This is a motherfucking website.</a>
+          <a href="//motherfuckingwebsite.com/" target="_blank" rel="noopener" lang="en-US">
+            This is a motherfucking website.
+            <open-new-icon />
+          </a>
         </li>
       </ul>
       <h4 id="japanese-font-family">
@@ -206,12 +207,10 @@
       <p>{{$t("aboutPage.JPFont.desc01")}}</p>
       <ul role="list">
         <li role="listitem">
-          <a
-            href="https://minmoji.ucda.jp/pages/webfont/"
-            target="_blank"
-            rel="noopener"
-            lang="ja"
-          >みんなの文字&reg;WEBフォント</a>
+          <a href="https://minmoji.ucda.jp/pages/webfont/" target="_blank" rel="noopener" lang="ja">
+            みんなの文字&reg;WEBフォント
+            <open-new-icon />
+          </a>
         </li>
       </ul>
       <h4 id="font-size">
@@ -302,8 +301,11 @@ export default {
   methods: {
     switchToggle(e) {
       e.preventDefault();
-      e.target.setAttribute('aria-checked', e.target.getAttribute('aria-checked') === 'true' ? 'false' : 'true');
-      this.$store.dispatch('rhythm/toggleRhythm')
+      e.target.setAttribute(
+        "aria-checked",
+        e.target.getAttribute("aria-checked") === "true" ? "false" : "true"
+      );
+      this.$store.dispatch("rhythm/toggleRhythm");
     }
   },
   computed: {
@@ -438,7 +440,7 @@ button.btn-rhythm {
   padding: 0;
   position: relative;
   text-align: left;
-  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
   width: 100%;
 }
 @media (prefers-color-scheme: dark) {
@@ -464,7 +466,7 @@ button.btn-rhythm {
   border-radius: 100%;
   height: calc(var(--rhythm) / 1.45);
   right: calc(var(--rhythm) / 1.45);
-  transition: right .1825s ease-in-out;
+  transition: right 0.1825s ease-in-out;
   width: calc(var(--rhythm) / 1.45);
 }
 
@@ -472,8 +474,8 @@ button.btn-rhythm {
   background: var(--white);
   border-radius: var(--rhythm);
   height: var(--rhythm);
-  right: .25em;
-  transition: background .2s ease-in-out;
+  right: 0.25em;
+  transition: background 0.2s ease-in-out;
   width: 2.75em;
 }
 

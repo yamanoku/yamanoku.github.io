@@ -60,7 +60,7 @@ export default {
       listStage: this.$store.state.slide.stage,
       listStudy: this.$store.state.slide.study,
       listWrite: this.$store.state.slide.write,
-      listLT: this.$store.state.slide.lt,
+      listLT: this.$store.state.slide.lt
     };
   }
 };

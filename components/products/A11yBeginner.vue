@@ -18,7 +18,9 @@
             href="https://techbookfest.org/event/tbf05/circle/41130001"
             target="_blank"
             rel="noopener"
-          >{{ $t("product.wafb.circleDetail") }}</a>
+          >{{ $t("product.wafb.circleDetail") }}
+          <open-new-icon />
+          </a>
         </li>
         <li role="listitem">
           <a href="https://booth.pm/ja/items/1044446" target="_blank" rel="noopener">

@@ -22,25 +22,22 @@
         </a>
       </li>
       <li role="listitem">
-        <a
-          href="https://scrapbox.io/yamanoku/Skill_Sets"
-          target="_blank"
-          rel="noopener"
-        >{{ $t("career.skillSet") }}</a>
+        <a href="https://scrapbox.io/yamanoku/Skill_Sets" target="_blank" rel="noopener">
+          {{ $t("career.skillSet") }}
+          <article-icon />
+        </a>
       </li>
       <li role="listitem">
-        <a
-          href="https://www.wantedly.com/users/347527"
-          target="_blank"
-          rel="noopener"
-        >{{ $t("career.wantedly") }}</a>
+        <a href="https://www.wantedly.com/users/347527" target="_blank" rel="noopener">
+          {{ $t("career.wantedly") }}
+          <open-new-icon />
+        </a>
       </li>
       <li role="listitem">
-        <a
-          href="https://lapras.com/public/ZQJMZYO"
-          target="_blank"
-          rel="noopener"
-        >{{ $t("career.lapras") }}</a>
+        <a href="https://lapras.com/public/ZQJMZYO" target="_blank" rel="noopener">
+          {{ $t("career.lapras") }}
+          <open-new-icon />
+        </a>
       </li>
     </ul>
   </section>

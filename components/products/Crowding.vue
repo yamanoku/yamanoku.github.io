@@ -15,9 +15,9 @@
     <p>{{ $t("product.description.birthdayCount") }}</p>
     <ul role="list">
       <li role="listitem">
-        <a href="/birthday-countdown-js">
+        <a href="/birthday-countdown-js" target="_blank" rel="noopener">
           {{ $t("product.birthdayCount") }}
-          <product-icon />
+          <open-new-icon />
         </a>
       </li>
       <li>
@@ -36,9 +36,9 @@
     <p>{{ $t("product.description.glitch") }}</p>
     <ul role="list">
       <li role="listitem">
-        <a href="/glitchrange">
+        <a href="/glitchrange" target="_blank" rel="noopener">
           {{ $t("product.glitch") }}
-          <product-icon />
+          <open-new-icon />
         </a>
       </li>
     </ul>
@@ -51,9 +51,9 @@
     <p>{{ $t("product.description.browserCrash") }}</p>
     <ul role="list">
       <li role="listitem">
-        <a href="/canvas_browser-crash.js">
+        <a href="/canvas_browser-crash.js" target="_blank" rel="noopener">
           {{ $t("product.browserCrash") }}
-          <product-icon />
+          <open-new-icon />
         </a>
       </li>
     </ul>
@@ -66,9 +66,9 @@
     <p>{{ $t("product.description.sushi") }}</p>
     <ul role="list">
       <li role="listitem">
-        <a href="/rolling-sushi">
+        <a href="/rolling-sushi" target="_blank" rel="noopener">
           {{ $t("product.sushi") }}
-          <product-icon />
+          <open-new-icon />
         </a>
       </li>
     </ul>

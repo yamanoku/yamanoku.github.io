@@ -11,7 +11,7 @@
       <li role="listitem">
         <a href="https://reading.yamanoku.net" target="_blank" rel="noopener">
           {{ $t("product.reading") }}
-          <product-icon />
+          <open-new-icon />
         </a>
       </li>
       <li role="listitem">
