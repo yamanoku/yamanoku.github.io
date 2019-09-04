@@ -84,12 +84,14 @@
 </template>
 
 <script>
+// section-implementation
 import TechStack from "~/components/about-articles/TechStack.vue";
 import MarkupArticle from "~/components/about-articles/Markup.vue";
 import ComponentOriented from "~/components/about-articles/ComponentOriented.vue";
 import PwaArticle from "~/components/about-articles/PWA.vue";
 import I18nArticle from "~/components/about-articles/I18n.vue";
 
+// section-design
 import DoNotOverDesign from "~/components/about-articles/DoNotOverDesign.vue";
 import JapaneseFontFamily from "~/components/about-articles/JapaneseFontFamily.vue";
 import FontSizeArticle from "~/components/about-articles/FontSize.vue";
