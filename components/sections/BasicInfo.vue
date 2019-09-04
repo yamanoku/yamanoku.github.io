@@ -7,7 +7,7 @@
       {{ $t("heading.basic") }}
     </h3>
     <figure>
-      <img src="~/assets/portrait.jpg" width="216" height="216" :alt="$t('info.photo.alt')">
+      <img src="~/assets/img/portrait.jpg" width="216" height="216" :alt="$t('info.photo.alt')">
       <figcaption>{{ $t("info.photo.date") }}</figcaption>
     </figure>
     <ul role="list">

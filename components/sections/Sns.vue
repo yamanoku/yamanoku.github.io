@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <h3 id="sns">
+  <section id="sns">
+    <h3>
       <a class="anchor" aria-hidden="true" href="#sns">
         <anchor-icon />
       </a>

@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import SlideList from "~/components/slides/SlideList.vue";
+import SlideList from "~/components/lists/SlideList.vue";
 
 export default {
   components: {

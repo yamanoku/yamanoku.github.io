@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import SitemapList from "~/components/SitemapList.vue";
+import SitemapList from "~/components/lists/SitemapList.vue";
 export default {
   props: {
     error: {

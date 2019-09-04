@@ -4,7 +4,7 @@
     <basic-info-component />
     <job-info-component />
     <career-info-component />
-    <product-list-component />
+    <products-component />
     <slides-component />
     <sns-component />
     <address-component />
@@ -13,21 +13,21 @@
 </template>
 
 <script>
-import JobInfoComponent from "~/components/JobInfo.vue";
-import BasicInfoComponent from "~/components/BasicInfo.vue";
-import CareerInfoComponent from "~/components/CareerInfo.vue";
-import ProductListComponent from "~/components/ProductList.vue";
-import SlidesComponent from "~/components/Slides.vue";
-import SnsComponent from "~/components/Sns.vue";
-import AddressComponent from "~/components/Address.vue";
-import LocalSwitchComponent from "~/components/LocalSwitch.vue";
+import JobInfoComponent from "~/components/sections/JobInfo.vue";
+import BasicInfoComponent from "~/components/sections/BasicInfo.vue";
+import CareerInfoComponent from "~/components/sections/CareerInfo.vue";
+import ProductsComponent from "~/components/sections/Products.vue";
+import SlidesComponent from "~/components/sections/Slides.vue";
+import SnsComponent from "~/components/sections/Sns.vue";
+import AddressComponent from "~/components/sections/Address.vue";
+import LocalSwitchComponent from "~/components/common/LocalSwitch.vue";
 
 export default {
   components: {
     JobInfoComponent,
     BasicInfoComponent,
     CareerInfoComponent,
-    ProductListComponent,
+    ProductsComponent,
     SlidesComponent,
     SnsComponent,
     AddressComponent,
