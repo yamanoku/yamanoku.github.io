@@ -6,6 +6,10 @@
       </a>
       {{ $t("heading.basic") }}
     </h3>
+    <figure>
+      <img src="~/assets/portrait.jpg" width="216" height="216" :alt="$t('info.photo.alt')">
+      <figcaption>{{ $t("info.photo.date") }}</figcaption>
+    </figure>
     <ul role="list">
       <li role="listitem">
         <template v-if="this.$i18n.locale === 'ja'">
@@ -19,11 +23,10 @@
       </li>
       <li role="listitem">
         <time datetime="1989-10-30">{{birthday}}</time>
-        <a
-          href="https://www.city.noshiro.akita.jp/"
-          target="_blank"
-          rel="noopener"
-        >{{ $t("info.birth") }}</a>
+        <a href="https://www.city.noshiro.akita.jp/" target="_blank" rel="noopener">
+          {{ $t("info.birth") }}
+          <open-new-icon />
+        </a>
       </li>
       <li role="listitem">{{ $t("info.sex") }}</li>
       <li role="listitem">
@@ -42,7 +45,10 @@
               href="https://jinsha.iwate-u.ac.jp/curriculum/hscs/arts-and-culture"
               target="_blank"
               rel="noopener"
-            >{{ $t("info.2008.now") }}</a>
+            >
+              {{ $t("info.2008.now") }}
+              <open-new-icon />
+            </a>
           </li>
         </ul>
       </li>
@@ -63,11 +69,10 @@
         </ul>
       </li>
       <li role="listitem">
-        <a
-          href="https://www.city.kamagaya.chiba.jp/"
-          target="_blank"
-          rel="noopener"
-        >{{ $t("info.live") }}</a>
+        <a href="https://www.city.kamagaya.chiba.jp/" target="_blank" rel="noopener">
+          {{ $t("info.live") }}
+          <open-new-icon />
+        </a>
       </li>
     </ul>
   </section>

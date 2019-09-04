@@ -24,7 +24,11 @@ export default {
         bfa: "Bachelor of Art and Culture Course.（BFA）",
         bfa01: "Fine Arts",
         bfa02: "Engineering and Design",
-        live: "Live in Kamagaya, Chiba, Japan"
+        live: "Live in Kamagaya, Chiba, Japan",
+        photo: {
+          alt: "Close shadow Okuto Oyama",
+          date: "Shooting date 2019/03"
+        }
       },
       career: {
         skillSet: "Set of Skills",
@@ -207,6 +211,10 @@ export default {
         bfa01: "芸術",
         bfa02: "デザインエンジニアリング",
         live: "千葉県鎌ケ谷市在住",
+        photo: {
+          alt: "近影 大山奥人",
+          date: "撮影日 2019年3月"
+        }
       },
       career: {
         skillSet: "スキルセット",
@@ -387,7 +395,11 @@ export default {
         bfa: "Baccalauréat en Art et culture Cours. (BFA)",
         bfa01: "Beaux-Arts",
         bfa02: "Ingénierie et Design",
-        live: "Vivre à Kamagaya, Chiba, Japon"
+        live: "Vivre à Kamagaya, Chiba, Japon",
+        photo: {
+          alt: "Ombre rapprochée Okuto Oyama",
+          date: "Date de prise de vue 2019-03"
+        }
       },
       career: {
         skillSet: "Ensemble de compétences",

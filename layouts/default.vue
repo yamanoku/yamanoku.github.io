@@ -178,6 +178,16 @@ p {
   font-size: 1rem;
   line-height: var(--rhythm);
 }
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+figure {
+  margin: var(--rhythm) 0;
+}
+figcaption {
+  font-size: .8em;
+}
 .anchor {
   position: absolute;
   left: -24px;
