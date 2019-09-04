@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import HeaderComponent from "~/components/Header.vue";
-import FooterComponent from "~/components/Footer.vue";
+import HeaderComponent from "~/components/common/Header.vue";
+import FooterComponent from "~/components/common/Footer.vue";
 export default {
   head() {
     return this.$nuxtI18nSeo();
@@ -157,7 +157,7 @@ section {
 }
 article {
   position: relative;
-  padding: 0 0 var(--rhythm);
+  padding: var(--rhythm) 0;
 }
 article::before {
   content: "";
