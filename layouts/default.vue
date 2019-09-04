@@ -247,11 +247,28 @@ ul:not([class]) li svg .npm-2 {
 ul:not([class]) li svg .product-2,
 ul:not([class]) li svg .edit-2,
 ul:not([class]) li svg .image-1,
-ul:not([class]) li svg .shopping-2 {
+ul:not([class]) li svg .shopping-2,
+ul:not([class]) li svg .open_new-1 {
   fill: none;
 }
 address {
   margin: var(--rhythm) 0;
+}
+address svg {
+  width: 12px;
+  height: 12px;
+  margin: 0 0 -1px 4px;
+}
+address svg path {
+  fill: var(--black);
+}
+@media (prefers-color-scheme: dark) {
+  address svg path {
+    fill: var(--white);
+  }
+}
+address svg .mail-2 {
+  fill: none;
 }
 pre {
   margin: var(--rhythm) 0;
