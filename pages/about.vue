@@ -113,29 +113,6 @@ export default {
       },
     }
   },
-  // head() {
-  //   return {
-  //     title: `${this.$t("aboutPage.title")} - ${this.baseName}`,
-  //     meta: [
-  //       {
-  //         hid: "description",
-  //         name: "description",
-  //         content: this.$t("aboutPage.description")
-  //       },
-  //       {
-  //         name: "twitter:title",
-  //         content: `${this.$t("aboutPage.title")} - ${this.baseName}`
-  //       },
-  //       {
-  //         name: "twitter:description",
-  //         content: this.$t("aboutPage.description")
-  //       }
-  //     ],
-  //     bodyAttrs: {
-  //       class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
-  //     }
-  //   };
-  // },
   components: {
     LocalSwitchComponent,
     TechStack,
