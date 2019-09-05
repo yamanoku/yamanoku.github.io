@@ -101,27 +101,41 @@ import VerticalRhythm from "~/components/about-articles/VerticalRhythm.vue";
 
 import LocalSwitchComponent from "~/components/common/LocalSwitch.vue";
 
+import Meta from "~/assets/mixins/meta";
+
 export default {
-  head() {
+  mixins: [Meta],
+  data () {
     return {
-      title: this.$t("aboutPage.title"),
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: this.$t("aboutPage.description")
-        },
-        { name: "twitter:title", content: this.$t("aboutPage.title") },
-        {
-          name: "twitter:description",
-          content: this.$t("aboutPage.description")
-        }
-      ],
-      bodyAttrs: {
-        class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
-      }
-    };
+      meta: {
+        title: this.$t("aboutPage.title"),
+        description: this.$t("aboutPage.description")
+      },
+    }
   },
+  // head() {
+  //   return {
+  //     title: `${this.$t("aboutPage.title")} - ${this.baseName}`,
+  //     meta: [
+  //       {
+  //         hid: "description",
+  //         name: "description",
+  //         content: this.$t("aboutPage.description")
+  //       },
+  //       {
+  //         name: "twitter:title",
+  //         content: `${this.$t("aboutPage.title")} - ${this.baseName}`
+  //       },
+  //       {
+  //         name: "twitter:description",
+  //         content: this.$t("aboutPage.description")
+  //       }
+  //     ],
+  //     bodyAttrs: {
+  //       class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
+  //     }
+  //   };
+  // },
   components: {
     LocalSwitchComponent,
     TechStack,
@@ -134,8 +148,8 @@ export default {
     FontSizeArticle,
     ColorContrast,
     MaxWidthArticle,
-    VerticalRhythm,
-  },
+    VerticalRhythm
+  }
 };
 </script>
 
