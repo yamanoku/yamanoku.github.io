@@ -101,7 +101,7 @@ import VerticalRhythm from "~/components/about-articles/VerticalRhythm.vue";
 
 import LocalSwitchComponent from "~/components/common/LocalSwitch.vue";
 
-import Meta from "~/assets/mixins/meta";
+import Meta from "~/mixins/meta";
 
 export default {
   mixins: [Meta],
