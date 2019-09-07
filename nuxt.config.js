@@ -1,33 +1,47 @@
 import vueI18n from "./vueI18n";
 
+const baseName = process.env.BASE_NAME || "yamanoku.net";
+const baseDesc = process.env.BASE_DISC || "Okuto Oyama Portfolio Site";
+const baseUrl = process.env.BASE_URL || "https://yamanaoku.net";
+const baseOgp = process.env.BASE_OGP || "https://yamanaoku.net/ogp@2x.png";
+
 module.exports = {
+  mode: "universal",
+  env: {
+    baseName: baseName,
+    baseDesc: baseDesc,
+    baseUrl: baseUrl,
+    baseOgp: baseOgp
+  },
   head: {
-    title: "yamanoku.net",
+    htmlAttrs: {
+      prefix: "og: http://ogp.me/ns#"
+    },
+    title: baseName,
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "Okuto Oyama Portfolio Site."
+        content: baseDesc
       },
       {
         hid: "og:image",
         name: "og:image",
-        content: "https://yamanoku.net/ogp@2x.png"
+        content: baseOgp
       },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@yamanoku" },
-      { name: "twitter:title", content: "yamanoku.net" },
-      { name: "twitter:description", content: "Okuto Oyama Portfolio Site" },
-      { name: "twitter:image", content: "https://yamanoku.net/ogp@2x.png" },
-      { name: "twitter:image:alt", content: "yamanoku.net" }
+      { name: "og:title", content: baseName },
+      { name: "og:description", content: baseDesc },
+      { name: "og:image", content: baseOgp }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      // { rel: "stylesheet", href: "https://scrapbox.io/api/code/yamanoku/vartical-rhythmCSS/base-line.css" },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
     ],
     script: [
+      // TODO: Use Font Loading API
       {
         src: "https://minmoji.ucda.jp/sealjs/https%3A__yamanoku.net",
         charset: "UTF-8"
@@ -82,7 +96,7 @@ module.exports = {
         debug: true
       }
     ],
-    "@nuxtjs/axios",
+    "@nuxtjs/axios"
   ],
   plugins: [
     "~plugins/icons.js",
@@ -95,12 +109,12 @@ module.exports = {
     dev: true
   },
   manifest: {
-    name: "yamanoku.net",
+    name: baseName,
     short_name: "yamanoku",
-    title: "yamanoku.net",
-    "og:title": "yamanoku.net",
-    description: "Okuto Oyama Portfolio Site.",
-    "og:description": "Okuto Oyama Portfolio Site.",
+    title: baseName,
+    "og:title": baseName,
+    description: baseDesc,
+    "og:description": baseDesc,
     lang: "en",
     theme_color: "#36465d",
     background_color: "#36465d"
