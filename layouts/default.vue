@@ -22,16 +22,6 @@ export default {
 
 
 <style>
-@font-face {
-  font-family: minmoji;
-  src: url("https://minmoji.ucda.jp/fontseot/https%3A__yamanoku.net");
-  src: local("minmoji"),
-    url("https://minmoji.ucda.jp/fontswoff/https%3A__yamanoku.net")
-      format("woff"),
-    url("https://minmoji.ucda.jp/fonts/https%3A__yamanoku.net")
-      format("opentype");
-  font-display: swap;
-}
 :root {
   --black: rgb(21, 32, 43);
   --white: rgb(210, 210, 210);
@@ -47,6 +37,7 @@ html {
   font: inherit;
   font-size: 100%;
   line-height: var(--rhythm);
+  overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
 }
 body {
@@ -55,7 +46,7 @@ body {
   font-weight: 400;
 }
 html[lang="ja"] body {
-  font-family: minmoji, Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans", "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
 }
 body.is-rhythm {
   position: relative;
@@ -285,12 +276,5 @@ pre {
 }
 code.hljs {
   padding: var(--rhythm);
-}
-a[href="https://minmoji.ucda.jp/"] {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
 }
 </style>

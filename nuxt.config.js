@@ -38,15 +38,9 @@ module.exports = {
       { name: "og:image", content: baseOgp }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&amp;display=optional" }
     ],
-    script: [
-      // TODO: Use Font Loading API
-      {
-        src: "https://minmoji.ucda.jp/sealjs/https%3A__yamanoku.net",
-        charset: "UTF-8"
-      }
-    ]
   },
   css: ["modern-normalize"],
   build: {

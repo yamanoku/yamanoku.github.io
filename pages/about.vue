@@ -32,9 +32,6 @@
               <a href="#do-not-over-design">{{$t("aboutPage.subHeading.overdesign")}}</a>
             </li>
             <li role="listitem">
-              <a href="#japanese-font-family">{{$t("aboutPage.subHeading.JPFont")}}</a>
-            </li>
-            <li role="listitem">
               <a href="#font-size">{{$t("aboutPage.subHeading.fontSize")}}</a>
             </li>
             <li role="listitem">
@@ -72,7 +69,6 @@
       </h3>
       <p>{{$t("aboutPage.designDescription")}}</p>
       <do-not-over-design />
-      <japanese-font-family />
       <font-size-article />
       <color-contrast />
       <max-width-article />
@@ -93,7 +89,6 @@ import I18nArticle from "~/components/about-articles/I18n.vue";
 
 // section-design
 import DoNotOverDesign from "~/components/about-articles/DoNotOverDesign.vue";
-import JapaneseFontFamily from "~/components/about-articles/JapaneseFontFamily.vue";
 import FontSizeArticle from "~/components/about-articles/FontSize.vue";
 import ColorContrast from "~/components/about-articles/ColorContrast.vue";
 import MaxWidthArticle from "~/components/about-articles/MaxWidth.vue";
@@ -121,7 +116,6 @@ export default {
     PwaArticle,
     I18nArticle,
     DoNotOverDesign,
-    JapaneseFontFamily,
     FontSizeArticle,
     ColorContrast,
     MaxWidthArticle,
