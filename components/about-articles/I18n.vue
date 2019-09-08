@@ -1,7 +1,7 @@
 <template>
   <article id="i18n">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#i18n">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#i18n">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.i18n")}}

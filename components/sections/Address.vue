@@ -1,7 +1,7 @@
 <template>
   <section id="contact">
-    <h3>
-      <a class="anchor" aria-hidden="true" href="#contact">
+    <h3 class="anchor-heading">
+      <a class="anchor" href="#contact">
         <anchor-icon />
       </a>
       {{ $t("heading.contact") }}

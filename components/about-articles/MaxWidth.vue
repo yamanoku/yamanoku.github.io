@@ -1,7 +1,7 @@
 <template>
   <article id="max-width">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#max-width">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#max-width">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.maxWidth")}}

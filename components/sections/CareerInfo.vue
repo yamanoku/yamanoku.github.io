@@ -1,7 +1,7 @@
 <template>
   <section id="career">
-    <h3>
-      <a class="anchor" aria-hidden="true" href="#career">
+    <h3 class="anchor-heading">
+      <a class="anchor" href="#career">
         <anchor-icon />
       </a>
       {{ $t("heading.career") }}

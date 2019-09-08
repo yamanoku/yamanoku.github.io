@@ -1,7 +1,7 @@
 <template>
   <section id="basic">
-    <h3>
-      <a class="anchor" aria-hidden="true" href="#basic">
+    <h3 class="anchor-heading">
+      <a class="anchor" href="#basic">
         <anchor-icon />
       </a>
       {{ $t("heading.basic") }}

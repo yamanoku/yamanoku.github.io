@@ -1,7 +1,7 @@
 <template>
   <article id="vue_portfolio_template">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#vue_portfolio_template">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#vue_portfolio_template">
         <anchor-icon />
       </a>
       {{ $t("product.vuePortfolio") }}

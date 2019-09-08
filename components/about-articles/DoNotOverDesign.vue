@@ -1,7 +1,7 @@
 <template>
   <article id="do-not-over-design">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#do-not-over-design">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#do-not-over-design">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.overdesign")}}

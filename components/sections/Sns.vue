@@ -1,7 +1,7 @@
 <template>
   <section id="sns">
-    <h3>
-      <a class="anchor" aria-hidden="true" href="#sns">
+    <h3 class="anchor-heading">
+      <a class="anchor" href="#sns">
         <anchor-icon />
       </a>
       {{ $t("heading.sns") }}

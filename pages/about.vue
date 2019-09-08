@@ -48,8 +48,8 @@
       </ul>
     </section>
     <section id="implementation">
-      <h3>
-        <a class="anchor" aria-hidden="true" href="#implementation">
+      <h3 class="anchor-heading">
+        <a class="anchor" href="#implementation">
           <anchor-icon />
         </a>
         {{$t("aboutPage.heading.implementation")}}
@@ -61,8 +61,8 @@
       <i18n-article />
     </section>
     <section id="design">
-      <h3>
-        <a class="anchor" aria-hidden="true" href="#design">
+      <h3 class="anchor-heading">
+        <a class="anchor" href="#design">
           <anchor-icon />
         </a>
         {{$t("aboutPage.heading.design")}}

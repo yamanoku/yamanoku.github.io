@@ -1,7 +1,7 @@
 <template>
   <article id="slack_reaction_primoji">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#slack_reaction_primoji">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#slack_reaction_primoji">
         <anchor-icon />
       </a>
       {{ $t("product.slackprimoji") }}

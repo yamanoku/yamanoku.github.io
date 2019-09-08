@@ -1,7 +1,7 @@
 <template>
   <article id="markup">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#markup">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#markup">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.markup")}}

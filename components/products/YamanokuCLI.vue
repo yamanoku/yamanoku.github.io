@@ -1,7 +1,7 @@
 <template>
   <article id="yamanoku_cli">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#yamanoku_cli">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#yamanoku_cli">
         <anchor-icon />
       </a>
       {{ $t("product.yamanokuCli") }}

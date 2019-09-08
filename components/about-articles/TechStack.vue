@@ -1,7 +1,7 @@
 <template>
   <article id="tech-stack">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#tech-stack">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#tech-stack">
         <anchor-icon />
       </a>
       {{$t("heading.techStack")}}

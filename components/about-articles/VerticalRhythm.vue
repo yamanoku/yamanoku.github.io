@@ -1,7 +1,7 @@
 <template>
   <article id="vertical-rhythm">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#vertical-rhythm">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#vertical-rhythm">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.verticalRhythm")}}

@@ -1,13 +1,13 @@
 <template>
   <article id="crowding">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#crowding">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#crowding">
         <anchor-icon />
       </a>
       {{ $t("product.crowding") }}
     </h4>
     <h5 id="birthday_countdown_js">
-      <a class="anchor" aria-hidden="true" href="#birthday_countdown_js">
+      <a class="anchor" href="#birthday_countdown_js">
         <anchor-icon />
       </a>
       {{ $t("product.birthdayCount") }}
@@ -28,7 +28,7 @@
       </li>
     </ul>
     <h5 id="glitch_range">
-      <a class="anchor" aria-hidden="true" href="#glitch_range">
+      <a class="anchor" href="#glitch_range">
         <anchor-icon />
       </a>
       {{ $t("product.glitch") }}
@@ -43,7 +43,7 @@
       </li>
     </ul>
     <h5 id="canvas_browser_crash_js">
-      <a class="anchor" aria-hidden="true" href="#canvas_browser_crash_js">
+      <a class="anchor" href="#canvas_browser_crash_js">
         <anchor-icon />
       </a>
       {{ $t("product.browserCrash") }}
@@ -58,7 +58,7 @@
       </li>
     </ul>
     <h5 id="rolling_sushi">
-      <a class="anchor" aria-hidden="true" href="#rolling_sushi">
+      <a class="anchor" href="#rolling_sushi">
         <anchor-icon />
       </a>
       {{ $t("product.sushi") }}

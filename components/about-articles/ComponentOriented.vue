@@ -1,7 +1,7 @@
 <template>
   <article id="component-oriented">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#component-oriented">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#component-oriented">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.components")}}

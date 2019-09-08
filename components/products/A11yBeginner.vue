@@ -1,7 +1,7 @@
 <template>
   <article id="web_accessibility_for_beginner">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#web_accessibility_for_beginner">
+    <h4 class="anchor-heading">
+      <a class="anchor" href="#web_accessibility_for_beginner">
         <anchor-icon />
       </a>
       {{ $t("product.wafb.title") }}
