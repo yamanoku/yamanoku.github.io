@@ -105,7 +105,6 @@ export default {
           pwa: "PWA (Progressive Web Application)",
           i18n: "Internationalization",
           overdesign: "Don't overdesign.",
-          JPFont: "About Japanese fonts",
           fontSize: "Font size",
           contrast: "Color contrast",
           maxWidth: "About the greatest amount of content",
@@ -132,9 +131,6 @@ export default {
         overdesign: {
           desc01: "Too much decoration can prevent you from getting the information you want. It is designed with the default style of the browser, that is, the standard image in mind.",
           desc02: "It's also designed with semantic markup, so you can get to the information without getting stylized or leaving the default style.",
-        },
-        JPFont: {
-          desc01: "The UD font Minna no Moji ® WEB font is used.",
         },
         fontSize: {
           desc01: "The basic setting is 16 px, and the size ratio can be maintained even if the page is enlarged by rem."
@@ -291,7 +287,6 @@ export default {
           pwa: "PWA (Progressive Web Application)",
           i18n: "国際化対応",
           overdesign: "オーバーデザインしすぎない",
-          JPFont: "日本語フォントについて",
           fontSize: "文字サイズ",
           contrast: "カラーコントラスト",
           maxWidth: "最大幅について",
@@ -318,9 +313,6 @@ export default {
         overdesign: {
           desc01: "過剰な装飾をしすぎることは目的の情報にたどり着く阻害に成り得ます。ブラウザのデフォルトスタイル、つまり標準の姿を意識したデザインにしています。",
           desc02: "また、セマンティクスなマークアップで設計していることで、スタイルを外してもデフォルトスタイルのままでも違和感なく情報にたどり着けるようにも繋がります。",
-        },
-        JPFont: {
-          desc01: "UDフォントであるみんなの文字®WEBフォントを使用しています。",
         },
         fontSize: {
           desc01: "基本16pxになるように設定しており、ページを拡大してもサイズ比を維持したremで指定しています。"
@@ -476,7 +468,6 @@ export default {
           pwa: "PWA (Progressive Web Application)",
           i18n: "Internationalisation",
           overdesign: "Ne surconcevez pas.",
-          JPFont: "A propos des polices japonaises",
           fontSize: "Taille du texte",
           contrast: "Contraste de couleur",
           maxWidth: "A propos de la largeur de contenu maximale",
@@ -503,9 +494,6 @@ export default {
         overdesign: {
           desc01: "Trop de décoration peut vous empêcher d'obtenir l'information que vous voulez. Il est conçu avec le style par défaut du navigateur, c'est-à-dire l'image standard en tête.",
           desc02: "Il est également implémenté dans un balisage sémantique, de sorte que vous pouvez accéder à l'information sans être stylisé ou laisser le style par défaut.",
-        },
-        JPFont: {
-          desc01: "Nous utilisons la police Minna no Moji ® WEB qui est une police UD (conception universelle).",
         },
         fontSize: {
           desc01: "Le paramètre de base est 16 px, et le rapport taille est maintenu lorsque la page est agrandie par rem."
