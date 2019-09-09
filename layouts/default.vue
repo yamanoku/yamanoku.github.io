@@ -1,5 +1,9 @@
 <template>
   <div>
+    <no-ssr>
+      <vue-skip-to to="#main" text="Skip to Main content" />
+      <vue-skip-to to="#local-switching" text="Skip to Local Switching" />
+    </no-ssr>
     <header-component />
     <global-navigation />
     <nuxt />
@@ -268,5 +272,20 @@ pre {
 }
 code.hljs {
   padding: var(--rhythm);
+}
+a.vue-skip-to {
+  color: #fff;
+  text-decoration: none;
+}
+a.vue-skip-to:focus {
+  background-color: var(--black);
+}
+@media (prefers-color-scheme: dark) {
+  a.vue-skip-to {
+    text-shadow: none;
+  }
+  a.vue-skip-to:focus {
+    background-color: var(--linkBlue);
+  }
 }
 </style>

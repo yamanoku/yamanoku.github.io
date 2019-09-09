@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="main">
     <h1>{{$t("aboutPage.title")}}</h1>
     <p>{{$t("aboutPage.description")}}</p>
     <section id="toc">

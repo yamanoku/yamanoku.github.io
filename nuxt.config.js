@@ -39,8 +39,12 @@ module.exports = {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&amp;display=optional" }
-    ],
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&amp;display=optional"
+      }
+    ]
   },
   css: ["modern-normalize"],
   build: {
@@ -95,6 +99,7 @@ module.exports = {
   plugins: [
     "~plugins/icons.js",
     "~plugins/vue-highlight.js",
+    { src: "~plugins/vue-skip-to.js", mode: "client" },
     "~plugins/storeGithub.js",
     "~plugins/storeSlide.js",
     "~plugins/storeDay.js"
