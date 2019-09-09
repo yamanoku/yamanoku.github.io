@@ -177,11 +177,18 @@ figcaption {
 }
 .anchor {
   position: absolute;
-  left: -24px;
+  left: 0;
+  display: none;
 }
-@media screen and (max-width: 768px) {
-  .anchor {
-    display: none;
+@media screen and (min-width: 769px) {
+  .anchor-heading {
+    margin-left: calc(-1 * var(--rhythm));
+    margin-right: calc(-1 * var(--rhythm));
+    padding-left: var(--rhythm);
+    padding-right: var(--rhythm);
+  }
+  .anchor-heading:hover .anchor {
+    display: block;
   }
 }
 .anchor path {
