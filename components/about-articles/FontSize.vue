@@ -1,6 +1,6 @@
 <template>
-  <article id="font-size">
-    <h3 class="anchor-heading">
+  <article id="font-size" aria-labelledby="about:font-size_heading">
+    <h3 class="anchor-heading" id="about:font-size_heading">
       <a class="anchor" href="#font-size">
         <anchor-icon />
       </a>

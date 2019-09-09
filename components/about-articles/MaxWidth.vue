@@ -1,6 +1,6 @@
 <template>
-  <article id="max-width">
-    <h3 class="anchor-heading">
+  <article id="max-width" aria-labelledby="about:max-width_heading">
+    <h3 class="anchor-heading" id="about:max-width_heading">
       <a class="anchor" href="#max-width">
         <anchor-icon />
       </a>

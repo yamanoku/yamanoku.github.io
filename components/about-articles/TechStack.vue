@@ -1,6 +1,6 @@
 <template>
-  <article id="tech-stack">
-    <h3 class="anchor-heading">
+  <article id="tech-stack" aria-describedby="about:tech-stack_heading">
+    <h3 class="anchor-heading" id="about:tech-stack_heading">
       <a class="anchor" href="#tech-stack">
         <anchor-icon />
       </a>

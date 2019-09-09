@@ -1,6 +1,6 @@
 <template>
-  <article id="i18n">
-    <h3 class="anchor-heading">
+  <article id="i18n" aria-labelledby="about:i18n_heading">
+    <h3 class="anchor-heading" id="about:i18n_heading">
       <a class="anchor" href="#i18n">
         <anchor-icon />
       </a>

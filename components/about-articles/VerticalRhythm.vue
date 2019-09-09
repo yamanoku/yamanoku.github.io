@@ -1,6 +1,6 @@
 <template>
-  <article id="vertical-rhythm">
-    <h3 class="anchor-heading">
+  <article id="vertical-rhythm" aria-describedby="about:vertical-rhythm_heading">
+    <h3 class="anchor-heading" id="about:vertical-rhythm_heading">
       <a class="anchor" href="#vertical-rhythm">
         <anchor-icon />
       </a>

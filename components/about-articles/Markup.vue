@@ -1,6 +1,6 @@
 <template>
-  <article id="markup">
-    <h3 class="anchor-heading">
+  <article id="markup" aria-labelledby="about:markup_heading">
+    <h3 class="anchor-heading" id="about:markup_heading">
       <a class="anchor" href="#markup">
         <anchor-icon />
       </a>

@@ -1,6 +1,6 @@
 <template>
-  <article id="crowding">
-    <h3 class="anchor-heading">
+  <article id="crowding" aria-describedby="product:crowding_heading">
+    <h3 class="anchor-heading" id="product:crowding_heading">
       <a class="anchor" href="#crowding">
         <anchor-icon />
       </a>

@@ -1,6 +1,6 @@
 <template>
-  <article id="pwa">
-    <h3 class="anchor-heading">
+  <article id="pwa" aria-labelledby="about:pwa_heading">
+    <h3 class="anchor-heading" id="about:pwa_heading">
       <a class="anchor" href="#pwa">
         <anchor-icon />
       </a>

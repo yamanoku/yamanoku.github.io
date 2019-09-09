@@ -1,6 +1,6 @@
 <template>
-  <article id="reading">
-    <h3 class="anchor-heading">
+  <article id="reading" aria-describedby="product:reading_heading">
+    <h3 class="anchor-heading" id="product:reading_heading">
       <a class="anchor" href="#reading">
         <anchor-icon />
       </a>

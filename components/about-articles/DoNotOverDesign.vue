@@ -1,6 +1,6 @@
 <template>
-  <article id="do-not-over-design">
-    <h3 class="anchor-heading">
+  <article id="do-not-over-design" aria-labelledby="about:do-not-over-design_heading">
+    <h3 class="anchor-heading" id="about:do-not-over-design_heading">
       <a class="anchor" href="#do-not-over-design">
         <anchor-icon />
       </a>

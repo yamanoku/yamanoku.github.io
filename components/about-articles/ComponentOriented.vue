@@ -1,6 +1,6 @@
 <template>
-  <article id="component-oriented">
-    <h3 class="anchor-heading">
+  <article id="component-oriented" aria-labelledby="about:component-oriented_heading">
+    <h3 class="anchor-heading" id="about:component-oriented_heading">
       <a class="anchor" href="#component-oriented">
         <anchor-icon />
       </a>
