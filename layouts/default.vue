@@ -155,7 +155,7 @@ article::before {
   bottom: 0;
   left: 0;
 }
-@media screen and (max-width: 768px) {
+@media (prefers-color-scheme: dark) {
   article::before {
     background-color: var(--white);
   }
