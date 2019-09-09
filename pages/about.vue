@@ -1,9 +1,9 @@
 <template>
   <main>
-    <h2>{{$t("aboutPage.title")}}</h2>
+    <h1>{{$t("aboutPage.title")}}</h1>
     <p>{{$t("aboutPage.description")}}</p>
     <section id="toc">
-      <h3>{{$t("aboutPage.heading.toc")}}</h3>
+      <h2>{{$t("aboutPage.heading.toc")}}</h2>
       <ul role="list">
         <li role="listitem">
           <a href="#implementation">{{$t("aboutPage.heading.implementation")}}</a>
@@ -48,12 +48,12 @@
       </ul>
     </section>
     <section id="implementation">
-      <h3 class="anchor-heading">
+      <h2 class="anchor-heading">
         <a class="anchor" href="#implementation">
           <anchor-icon />
         </a>
         {{$t("aboutPage.heading.implementation")}}
-      </h3>
+      </h2>
       <tech-stack />
       <markup-article />
       <component-oriented />
@@ -61,12 +61,12 @@
       <i18n-article />
     </section>
     <section id="design">
-      <h3 class="anchor-heading">
+      <h2 class="anchor-heading">
         <a class="anchor" href="#design">
           <anchor-icon />
         </a>
         {{$t("aboutPage.heading.design")}}
-      </h3>
+      </h2>
       <p>{{$t("aboutPage.designDescription")}}</p>
       <do-not-over-design />
       <font-size-article />
@@ -123,11 +123,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-h2 + p {
-  margin: var(--rhythm) 0;
-  font-size: 1rem;
-  line-height: var(--rhythm);
-}
-</style>

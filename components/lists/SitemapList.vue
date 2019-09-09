@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h3>{{ $t("error.sitemap.title") }}</h3>
+    <h2>{{ $t("error.sitemap.title") }}</h2>
     <ul role="list">
       <li role="listitem">
         <nuxt-link :to="localePath({ name: 'index'})">{{$t("home.title")}}</nuxt-link>

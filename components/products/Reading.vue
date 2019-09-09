@@ -1,11 +1,11 @@
 <template>
   <article id="reading">
-    <h4 class="anchor-heading">
+    <h3 class="anchor-heading">
       <a class="anchor" href="#reading">
         <anchor-icon />
       </a>
       {{ $t("product.reading") }}
-    </h4>
+    </h3>
     <p>{{ $t("product.description.reading") }}</p>
     <ul role="list">
       <li role="listitem">
@@ -35,7 +35,7 @@
         </a>
       </li>
     </ul>
-    <h5>{{$t("heading.techStack")}}</h5>
+    <h4>{{$t("heading.techStack")}}</h4>
     <ul role="list">
       <li role="listitem">Nuxt.js</li>
       <li role="listitem">Nuxt PWA</li>
@@ -47,7 +47,7 @@
       <li role="listitem">Netlify</li>
       <li role="listitem">CircleCI</li>
     </ul>
-    <h5 aria-describedby="reading_issue">{{ $t("heading.todoList") }}</h5>
+    <h4 aria-describedby="reading_issue">{{ $t("heading.todoList") }}</h4>
     <ul role="list" id="reading_issue">
       <li role="listitem" v-for="issue in readingIssue" :key="issue.id">
         <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">

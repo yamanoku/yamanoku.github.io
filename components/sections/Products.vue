@@ -1,11 +1,11 @@
 <template>
   <section id="product">
-    <h3 class="anchor-heading">
+    <h2 class="anchor-heading">
       <a class="anchor" href="#product">
         <anchor-icon />
       </a>
       {{ $t("heading.productList") }}
-    </h3>
+    </h2>
     <a11y-beginner />
     <reading />
     <vue-portfolio />

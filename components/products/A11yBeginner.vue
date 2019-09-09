@@ -1,11 +1,11 @@
 <template>
   <article id="web_accessibility_for_beginner">
-    <h4 class="anchor-heading">
+    <h3 class="anchor-heading">
       <a class="anchor" href="#web_accessibility_for_beginner">
         <anchor-icon />
       </a>
       {{ $t("product.wafb.title") }}
-    </h4>
+    </h3>
     <p>{{ $t("product.description.wafb") }}</p>
     <template v-if="this.$i18n.locale !== 'ja'">
       <p>
@@ -36,7 +36,7 @@
         </a>
       </li>
     </ul>
-    <h5 aria-describedby="a11ybook_issue">{{ $t("heading.todoList") }}</h5>
+    <h4 aria-describedby="a11ybook_issue">{{ $t("heading.todoList") }}</h4>
     <ul role="list" id="a11ybook_issue">
       <li role="listitem" v-for="issue in a11ybookIssue" :key="issue.id">
         <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">

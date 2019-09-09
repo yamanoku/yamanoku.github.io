@@ -1,11 +1,11 @@
 <template>
   <article id="do-not-over-design">
-    <h4 class="anchor-heading">
+    <h3 class="anchor-heading">
       <a class="anchor" href="#do-not-over-design">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.overdesign")}}
-    </h4>
+    </h3>
     <p>{{$t("aboutPage.overdesign.desc01")}}</p>
     <p>{{$t("aboutPage.overdesign.desc02")}}</p>
     <ul role="list">

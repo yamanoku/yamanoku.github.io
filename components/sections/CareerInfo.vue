@@ -1,11 +1,11 @@
 <template>
   <section id="career">
-    <h3 class="anchor-heading">
+    <h2 class="anchor-heading">
       <a class="anchor" href="#career">
         <anchor-icon />
       </a>
       {{ $t("heading.career") }}
-    </h3>
+    </h2>
     <p>{{ $t("career.desc01") }}</p>
     <p>{{ $t("career.desc02") }}</p>
     <p>{{ $t("career.desc03") }}</p>

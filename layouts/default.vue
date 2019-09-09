@@ -110,35 +110,24 @@ main {
   margin: auto;
   padding: 0 var(--rhythm);
 }
-h2 {
+h1 {
   margin: var(--rhythm) 0;
   font-size: 2rem;
   line-height: calc(var(--rhythm) * 2);
 }
-h2 small {
-  font-size: 1.4rem;
-  display: inline-block;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.6);
-}
-@media (prefers-color-scheme: dark) {
-  h2 small {
-    color: rgba(255, 255, 255, 0.6);
-  }
-}
-h3 {
+h2 {
   margin: var(--rhythm) 0;
   font-size: 1.4rem;
   line-height: var(--rhythm);
   position: relative;
 }
-h4 {
+h3 {
   margin: var(--rhythm) 0;
   font-size: 1.2rem;
   line-height: var(--rhythm);
   position: relative;
 }
-h5 {
+h4 {
   margin: var(--rhythm) 0;
   font-size: 1.2rem;
   font-weight: 400;

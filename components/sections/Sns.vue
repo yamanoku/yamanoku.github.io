@@ -1,11 +1,11 @@
 <template>
   <section id="sns">
-    <h3 class="anchor-heading">
+    <h2 class="anchor-heading">
       <a class="anchor" href="#sns">
         <anchor-icon />
       </a>
       {{ $t("heading.sns") }}
-    </h3>
+    </h2>
     <ul role="list">
       <li role="listitem">
         <a

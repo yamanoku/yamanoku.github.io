@@ -1,11 +1,11 @@
 <template>
   <article id="color-contrast">
-    <h4 class="anchor-heading">
+    <h3 class="anchor-heading">
       <a class="anchor" href="#color-contrast">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.contrast")}}
-    </h4>
+    </h3>
     <p>{{$t("aboutPage.contrast.desc01")}}</p>
     <p>{{$t("aboutPage.contrast.desc02")}}</p>
     <dl>

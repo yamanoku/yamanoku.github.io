@@ -1,11 +1,11 @@
 <template>
   <article id="markup">
-    <h4 class="anchor-heading">
+    <h3 class="anchor-heading">
       <a class="anchor" href="#markup">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.markup")}}
-    </h4>
+    </h3>
     <p>{{$t("aboutPage.markup.desc01")}}</p>
     <p>{{$t("aboutPage.markup.desc02")}}</p>
     <highlight-code id="wai-aria-in-html" lang="html">{{waiAria}}</highlight-code>

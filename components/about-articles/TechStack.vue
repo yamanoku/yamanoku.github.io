@@ -1,11 +1,11 @@
 <template>
   <article id="tech-stack">
-    <h4 class="anchor-heading">
+    <h3 class="anchor-heading">
       <a class="anchor" href="#tech-stack">
         <anchor-icon />
       </a>
       {{$t("heading.techStack")}}
-    </h4>
+    </h3>
     <ul role="list">
       <li role="listitem">
         Nuxt.js

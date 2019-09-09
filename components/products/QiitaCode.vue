@@ -1,11 +1,11 @@
 <template>
   <article id="qiita_code_style_before">
-    <h4 class="anchor-heading">
+    <h3 class="anchor-heading">
       <a class="anchor" href="#qiita_code_style_before">
         <anchor-icon />
       </a>
       {{ $t("product.qiitaCode") }}
-    </h4>
+    </h3>
     <p>{{ $t("product.description.qiitaCode") }}</p>
     <ul role="list">
       <li role="listitem">

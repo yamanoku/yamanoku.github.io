@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h2>{{errorHeading}}</h2>
+    <h1>{{errorHeading}}</h1>
     <template v-if="error.statusCode === 404">
       <p>{{ $t("error.404.text01") }}</p>
       <p>{{ $t("error.404.text02") }}</p>

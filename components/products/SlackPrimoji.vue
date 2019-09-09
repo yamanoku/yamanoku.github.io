@@ -1,11 +1,11 @@
 <template>
   <article id="slack_reaction_primoji">
-    <h4 class="anchor-heading">
+    <h3 class="anchor-heading">
       <a class="anchor" href="#slack_reaction_primoji">
         <anchor-icon />
       </a>
       {{ $t("product.slackprimoji") }}
-    </h4>
+    </h3>
     <p>{{ $t("product.description.slackprimoji") }}</p>
     <ul role="list">
       <li role="listitem">

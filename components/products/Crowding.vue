@@ -1,17 +1,17 @@
 <template>
   <article id="crowding">
-    <h4 class="anchor-heading">
+    <h3 class="anchor-heading">
       <a class="anchor" href="#crowding">
         <anchor-icon />
       </a>
       {{ $t("product.crowding") }}
-    </h4>
-    <h5 id="birthday_countdown_js">
+    </h3>
+    <h4 id="birthday_countdown_js">
       <a class="anchor" href="#birthday_countdown_js">
         <anchor-icon />
       </a>
       {{ $t("product.birthdayCount") }}
-    </h5>
+    </h4>
     <p>{{ $t("product.description.birthdayCount") }}</p>
     <ul role="list">
       <li role="listitem">
@@ -27,12 +27,12 @@
         </a>
       </li>
     </ul>
-    <h5 id="glitch_range">
+    <h4 id="glitch_range">
       <a class="anchor" href="#glitch_range">
         <anchor-icon />
       </a>
       {{ $t("product.glitch") }}
-    </h5>
+    </h4>
     <p>{{ $t("product.description.glitch") }}</p>
     <ul role="list">
       <li role="listitem">
@@ -42,12 +42,12 @@
         </a>
       </li>
     </ul>
-    <h5 id="canvas_browser_crash_js">
+    <h4 id="canvas_browser_crash_js">
       <a class="anchor" href="#canvas_browser_crash_js">
         <anchor-icon />
       </a>
       {{ $t("product.browserCrash") }}
-    </h5>
+    </h4>
     <p>{{ $t("product.description.browserCrash") }}</p>
     <ul role="list">
       <li role="listitem">
@@ -57,12 +57,12 @@
         </a>
       </li>
     </ul>
-    <h5 id="rolling_sushi">
+    <h4 id="rolling_sushi">
       <a class="anchor" href="#rolling_sushi">
         <anchor-icon />
       </a>
       {{ $t("product.sushi") }}
-    </h5>
+    </h4>
     <p>{{ $t("product.description.sushi") }}</p>
     <ul role="list">
       <li role="listitem">

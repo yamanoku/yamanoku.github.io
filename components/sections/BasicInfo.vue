@@ -1,11 +1,11 @@
 <template>
   <section id="basic">
-    <h3 class="anchor-heading">
+    <h2 class="anchor-heading">
       <a class="anchor" href="#basic">
         <anchor-icon />
       </a>
       {{ $t("heading.basic") }}
-    </h3>
+    </h2>
     <figure>
       <img src="~/assets/img/portrait.jpg" width="216" height="216" :alt="$t('info.photo.alt')">
       <figcaption>{{ $t("info.photo.date") }}</figcaption>

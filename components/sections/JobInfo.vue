@@ -1,11 +1,11 @@
 <template>
   <section id="job">
-    <h3 class="anchor-heading">
+    <h2 class="anchor-heading">
       <a class="anchor" href="#job">
         <anchor-icon />
       </a>
       {{ $t("heading.job") }}
-    </h3>
+    </h2>
     <ul role="list">
       <li role="listitem">{{ $t("job.1") }}</li>
       <li role="listitem">{{ $t("job.2") }}</li>

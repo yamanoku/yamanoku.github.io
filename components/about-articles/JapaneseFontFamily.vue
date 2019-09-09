@@ -1,11 +1,11 @@
 <template>
   <article id="japanese-font-family">
-    <h4 class="anchor-heading">
+    <h3 class="anchor-heading">
       <a class="anchor" href="#japanese-font-family">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.JPFont")}}
-    </h4>
+    </h3>
     <p>{{$t("aboutPage.JPFont.desc01")}}</p>
     <ul role="list">
       <li role="listitem">
