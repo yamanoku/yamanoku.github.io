@@ -1,9 +1,11 @@
 <template>
   <section id="sns" aria-describedby="sns_heading">
     <h2 class="anchor-heading" id="sns_heading">
-      <a class="anchor" href="#sns">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#sns">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("heading.sns") }}
     </h2>
     <ul role="list">

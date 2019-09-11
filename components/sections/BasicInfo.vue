@@ -1,9 +1,11 @@
 <template>
   <section id="basic" aria-describedby="basic-heading">
     <h2 class="anchor-heading" id="basic-heading">
-      <a class="anchor" href="#basic">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#basic">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("heading.basic") }}
     </h2>
     <figure>

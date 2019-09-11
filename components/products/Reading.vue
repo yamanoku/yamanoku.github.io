@@ -1,9 +1,11 @@
 <template>
   <article id="product:reading" aria-describedby="product:reading_heading">
     <h3 class="anchor-heading" id="product:reading_heading">
-      <a class="anchor" href="#product:reading">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#product:reading">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("product.reading") }}
     </h3>
     <p>{{ $t("product.description.reading") }}</p>

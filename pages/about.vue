@@ -2,7 +2,7 @@
   <main role="main" id="main">
     <h1 id="about_heading">{{$t("aboutPage.title")}}</h1>
     <p>{{$t("aboutPage.description")}}</p>
-    <section id="about:toc" aria-describedby="about:toc_heading">
+    <section class="toc" id="about:toc" aria-describedby="about:toc_heading">
       <h2 id="about:toc_heading">{{$t("aboutPage.heading.toc")}}</h2>
       <ul role="list">
         <li role="listitem">
@@ -49,9 +49,11 @@
     </section>
     <section id="about:implementation" aria-describedby="about:implementation_heading">
       <h2 class="anchor-heading" id="about:implementation_heading">
-        <a class="anchor" href="#about:implementation">
-          <anchor-icon />
-        </a>
+        <div class="anchor">
+          <a href="#about:implementation">
+            <anchor-icon />
+          </a>
+        </div>
         {{$t("aboutPage.heading.implementation")}}
       </h2>
       <tech-stack />
@@ -62,9 +64,11 @@
     </section>
     <section id="about:design" aria-describedby="about:design_heading">
       <h2 class="anchor-heading" id="about:design_heading">
-        <a class="anchor" href="#about:design">
-          <anchor-icon />
-        </a>
+        <div class="anchor">
+          <a href="#about:design">
+            <anchor-icon />
+          </a>
+        </div>
         {{$t("aboutPage.heading.design")}}
       </h2>
       <p>{{$t("aboutPage.designDescription")}}</p>
@@ -125,12 +129,12 @@ export default {
 </script>
 
 <style scoped>
-#toc {
+.toc {
   border-left: 8px solid var(--gray);
   padding-left: var(--rhythm);
 }
 @media (prefers-color-scheme: dark) {
-  #toc {
+  .toc {
     border-left: 8px solid var(--white);
   }
 }

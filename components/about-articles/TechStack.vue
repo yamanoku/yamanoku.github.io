@@ -1,9 +1,11 @@
 <template>
   <article id="about:tech-stack" aria-describedby="about:tech-stack_heading">
     <h3 class="anchor-heading" id="about:tech-stack_heading">
-      <a class="anchor" href="#about:tech-stack">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#about:tech-stack">
+          <anchor-icon />
+        </a>
+      </div>
       {{$t("heading.techStack")}}
     </h3>
     <ul role="list">

@@ -1,9 +1,11 @@
 <template>
   <article id="product:vue-portfolio-template" aria-describedby="product:vue-portfolio-template_heading">
     <h3 class="anchor-heading" id="product:vue-portfolio-template_heading">
-      <a class="anchor" href="#vue-portfolio-template">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#product:vue-portfolio-template">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("product.vuePortfolio") }}
     </h3>
     <p>{{ $t("product.description.vuePortfolio") }}</p>

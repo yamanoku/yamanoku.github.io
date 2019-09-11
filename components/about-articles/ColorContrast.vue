@@ -1,9 +1,11 @@
 <template>
   <article id="about:color-contrast" aria-labelledby="about:color-contrast_heading">
     <h3 class="anchor-heading" id="about:color-contrast_heading">
-      <a class="anchor" href="#about:color-contrast">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#about:color-contrast">
+          <anchor-icon />
+        </a>
+      </div>
       {{$t("aboutPage.subHeading.contrast")}}
     </h3>
     <p>{{$t("aboutPage.contrast.desc01")}}</p>

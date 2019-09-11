@@ -1,9 +1,11 @@
 <template>
   <article id="product:web-accessibility-for-beginner" aria-describedby="product:web-accessibility-for-beginner_heading">
     <h3 class="anchor-heading" id="product:web-accessibility-for-beginner_heading">
-      <a class="anchor" href="#product:web-accessibility-for-beginner">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#product:web-accessibility-for-beginner">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("product.wafb.title") }}
     </h3>
     <p>{{ $t("product.description.wafb") }}</p>

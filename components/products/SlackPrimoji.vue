@@ -1,9 +1,11 @@
 <template>
   <article id="product:slack-reaction-primoji" aria-describedby="product:slack-reaction-primoji_heading">
     <h3 class="anchor-heading" id="product:slack-reaction-primoji_heading">
-      <a class="anchor" href="#product:slack-reaction-primoji">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#product:slack-reaction-primoji">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("product.slackprimoji") }}
     </h3>
     <p>{{ $t("product.description.slackprimoji") }}</p>

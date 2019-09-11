@@ -1,15 +1,19 @@
 <template>
-  <article id="crowding" aria-describedby="product:crowding_heading">
+  <article id="product:crowding" aria-describedby="product:crowding_heading">
     <h3 class="anchor-heading" id="product:crowding_heading">
-      <a class="anchor" href="#crowding">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#crowding">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("product.crowding") }}
     </h3>
-    <h4 id="crowding-birthday_countdown_js">
-      <a class="anchor" href="#crowding-birthday_countdown_js">
-        <anchor-icon />
-      </a>
+    <h4 class="anchor-heading" id="product:crowding-birthday_countdown_js">
+      <div class="anchor">
+        <a href="#crowding-birthday_countdown_js">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("product.birthdayCount") }}
     </h4>
     <p>{{ $t("product.description.birthdayCount") }}</p>
@@ -27,10 +31,12 @@
         </a>
       </li>
     </ul>
-    <h4 id="crowding-glitch_range">
-      <a class="anchor" href="#crowding-glitch_range">
-        <anchor-icon />
-      </a>
+    <h4 class="anchor-heading" id="product:crowding-glitch_range">
+      <div class="anchor">
+        <a href="#crowding-glitch_range">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("product.glitch") }}
     </h4>
     <p>{{ $t("product.description.glitch") }}</p>
@@ -42,10 +48,12 @@
         </a>
       </li>
     </ul>
-    <h4 id="crowding-canvas_browser_crash_js">
-      <a class="anchor" href="#crowding-canvas_browser_crash_js">
-        <anchor-icon />
-      </a>
+    <h4 class="anchor-heading" id="product:crowding-canvas_browser_crash_js">
+      <div class="anchor">
+        <a href="#crowding-canvas_browser_crash_js">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("product.browserCrash") }}
     </h4>
     <p>{{ $t("product.description.browserCrash") }}</p>
@@ -57,10 +65,12 @@
         </a>
       </li>
     </ul>
-    <h4 id="crowding-rolling_sushi">
-      <a class="anchor" href="#crowding-rolling_sushi">
-        <anchor-icon />
-      </a>
+    <h4 class="anchor-heading" id="product:crowding-rolling_sushi">
+      <div class="anchor">
+        <a href="#crowding-rolling_sushi">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("product.sushi") }}
     </h4>
     <p>{{ $t("product.description.sushi") }}</p>

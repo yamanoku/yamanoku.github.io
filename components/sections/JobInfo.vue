@@ -1,9 +1,11 @@
 <template>
   <section id="job" aria-describedby="job_heading">
     <h2 class="anchor-heading" id="job_heading">
-      <a class="anchor" href="#job">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#job">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("heading.job") }}
     </h2>
     <ul role="list">

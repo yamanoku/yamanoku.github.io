@@ -1,9 +1,11 @@
 <template>
   <section id="product" aria-describedby="product_heading">
     <h2 class="anchor-heading" id="product_heading">
-      <a class="anchor" href="#product">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#product">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("heading.productList") }}
     </h2>
     <a11y-beginner />

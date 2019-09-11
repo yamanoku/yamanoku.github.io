@@ -1,9 +1,11 @@
 <template>
-  <article id="about:markup" aria-labelledby="about:markup_heading">
+  <article id="about:markup" about:markupia-labelledby="about:markup_heading">
     <h3 class="anchor-heading" id="about:markup_heading">
-      <a class="anchor" href="#about:markup">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#about:markup">
+          <anchor-icon />
+        </a>
+      </div>
       {{$t("aboutPage.subHeading.markup")}}
     </h3>
     <p>{{$t("aboutPage.markup.desc01")}}</p>
@@ -29,10 +31,12 @@ export default {
   data() {
     return {
       waiAria: `
-<h4 id="markup">
-  <a class="anchor" aria-hidden="true" href="#markup"> <!-- Not ignored in the accessibility tree -->
-    <anchor-icon />
-  </a>
+<h4 id="about:markup">
+  <div class="anchor" aria-hidden="true"> <!-- Not ignored in the accessibility tree -->
+    <a href="#about:markup">
+      <anchor-icon />
+    </a>
+  </div>
   {{$t("aboutPage.subHeading.markup")}}
 </h4>
       `

@@ -1,9 +1,11 @@
 <template>
   <article id="product:qiita-code-style-before" aria-describedby="product:qiita-code-style-before_heading">
     <h3 class="anchor-heading" id="product:qiita-code-style-before_heading">
-      <a class="anchor" href="#product:qiita-code-style-before">
-        <anchor-icon />
-      </a>
+      <div class="anchor">
+        <a href="#product:qiita-code-style-before">
+          <anchor-icon />
+        </a>
+      </div>
       {{ $t("product.qiitaCode") }}
     </h3>
     <p>{{ $t("product.description.qiitaCode") }}</p>
