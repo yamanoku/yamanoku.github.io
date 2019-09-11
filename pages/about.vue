@@ -1,55 +1,55 @@
 <template>
   <main role="main" id="main">
-    <h1>{{$t("aboutPage.title")}}</h1>
+    <h1 id="about_heading">{{$t("aboutPage.title")}}</h1>
     <p>{{$t("aboutPage.description")}}</p>
-    <section id="toc">
-      <h2>{{$t("aboutPage.heading.toc")}}</h2>
+    <section id="about:toc" aria-describedby="about:toc_heading">
+      <h2 id="about:toc_heading">{{$t("aboutPage.heading.toc")}}</h2>
       <ul role="list">
         <li role="listitem">
-          <a href="#implementation">{{$t("aboutPage.heading.implementation")}}</a>
+          <a href="#about:implementation">{{$t("aboutPage.heading.implementation")}}</a>
           <ul role="list">
             <li role="listitem">
-              <a href="#tech-stack">{{$t("heading.techStack")}}</a>
+              <a href="#about:tech-stack">{{$t("heading.techStack")}}</a>
             </li>
             <li role="listitem">
-              <a href="#markup">{{$t("aboutPage.subHeading.markup")}}</a>
+              <a href="#about:markup">{{$t("aboutPage.subHeading.markup")}}</a>
             </li>
             <li role="listitem">
-              <a href="#component-oriented">{{$t("aboutPage.subHeading.components")}}</a>
+              <a href="#about:component-oriented">{{$t("aboutPage.subHeading.components")}}</a>
             </li>
             <li role="listitem">
-              <a href="#pwa">{{$t("aboutPage.subHeading.pwa")}}</a>
+              <a href="#about:pwa">{{$t("aboutPage.subHeading.pwa")}}</a>
             </li>
             <li role="listitem">
-              <a href="#i18n">{{$t("aboutPage.subHeading.i18n")}}</a>
+              <a href="#about:i18n">{{$t("aboutPage.subHeading.i18n")}}</a>
             </li>
           </ul>
         </li>
         <li role="listitem">
-          <a href="#design">{{$t("aboutPage.heading.design")}}</a>
+          <a href="#about:design">{{$t("aboutPage.heading.design")}}</a>
           <ul role="list">
             <li role="listitem">
-              <a href="#do-not-over-design">{{$t("aboutPage.subHeading.overdesign")}}</a>
+              <a href="#about:do-not-over-design">{{$t("aboutPage.subHeading.overdesign")}}</a>
             </li>
             <li role="listitem">
-              <a href="#font-size">{{$t("aboutPage.subHeading.fontSize")}}</a>
+              <a href="#about:font-size">{{$t("aboutPage.subHeading.fontSize")}}</a>
             </li>
             <li role="listitem">
-              <a href="#color-contrast">{{$t("aboutPage.subHeading.contrast")}}</a>
+              <a href="#about:color-contrast">{{$t("aboutPage.subHeading.contrast")}}</a>
             </li>
             <li role="listitem">
-              <a href="#max-width">{{$t("aboutPage.subHeading.maxWidth")}}</a>
+              <a href="#about:max-width">{{$t("aboutPage.subHeading.maxWidth")}}</a>
             </li>
             <li role="listitem">
-              <a href="#vertical-rhythm">{{$t("aboutPage.subHeading.verticalRhythm")}}</a>
+              <a href="#about:vertical-rhythm">{{$t("aboutPage.subHeading.verticalRhythm")}}</a>
             </li>
           </ul>
         </li>
       </ul>
     </section>
-    <section id="implementation">
-      <h2 class="anchor-heading">
-        <a class="anchor" href="#implementation">
+    <section id="about:implementation" aria-describedby="about:implementation_heading">
+      <h2 class="anchor-heading" id="about:implementation_heading">
+        <a class="anchor" href="#about:implementation">
           <anchor-icon />
         </a>
         {{$t("aboutPage.heading.implementation")}}
@@ -60,9 +60,9 @@
       <pwa-article />
       <i18n-article />
     </section>
-    <section id="design">
-      <h2 class="anchor-heading">
-        <a class="anchor" href="#design">
+    <section id="about:design" aria-describedby="about:design_heading">
+      <h2 class="anchor-heading" id="about:design_heading">
+        <a class="anchor" href="#about:design">
           <anchor-icon />
         </a>
         {{$t("aboutPage.heading.design")}}
