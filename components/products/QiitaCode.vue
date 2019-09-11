@@ -1,7 +1,7 @@
 <template>
-  <article id="qiita-code-style-before" aria-describedby="product:qiita-code-style-before_heading">
+  <article id="product:qiita-code-style-before" aria-describedby="product:qiita-code-style-before_heading">
     <h3 class="anchor-heading" id="product:qiita-code-style-before_heading">
-      <a class="anchor" href="#qiita-code-style-before">
+      <a class="anchor" href="#product:qiita-code-style-before">
         <anchor-icon />
       </a>
       {{ $t("product.qiitaCode") }}

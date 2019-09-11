@@ -1,6 +1,6 @@
 <template>
-  <section id="basic">
-    <h2 class="anchor-heading">
+  <section id="basic" aria-describedby="basic-heading">
+    <h2 class="anchor-heading" id="basic-heading">
       <a class="anchor" href="#basic">
         <anchor-icon />
       </a>

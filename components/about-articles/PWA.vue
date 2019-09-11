@@ -1,7 +1,7 @@
 <template>
-  <article id="pwa" aria-labelledby="about:pwa_heading">
+  <article id="about:pwa" aria-labelledby="about:pwa_heading">
     <h3 class="anchor-heading" id="about:pwa_heading">
-      <a class="anchor" href="#pwa">
+      <a class="anchor" href="#about:pwa">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.pwa")}}

@@ -1,7 +1,7 @@
 <template>
-  <article id="web-accessibility-for-beginner" aria-describedby="product:web-accessibility-for-beginner_heading">
+  <article id="product:web-accessibility-for-beginner" aria-describedby="product:web-accessibility-for-beginner_heading">
     <h3 class="anchor-heading" id="product:web-accessibility-for-beginner_heading">
-      <a class="anchor" href="#web-accessibility-for-beginner">
+      <a class="anchor" href="#product:web-accessibility-for-beginner">
         <anchor-icon />
       </a>
       {{ $t("product.wafb.title") }}
@@ -36,8 +36,8 @@
         </a>
       </li>
     </ul>
-    <h4 aria-describedby="a11ybook_issue">{{ $t("heading.todoList") }}</h4>
-    <ul role="list" id="a11ybook_issue">
+    <h4 id="issue:web-accessibility-for-beginner_heading" aria-describedby="web-accessibility-for-beginner_issue">{{ $t("heading.todoList") }}</h4>
+    <ul role="list" id="web-accessibility-for-beginner_issue">
       <li role="listitem" v-for="issue in a11ybookIssue" :key="issue.id">
         <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">
           {{issue.title}}

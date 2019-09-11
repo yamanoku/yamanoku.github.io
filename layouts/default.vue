@@ -132,7 +132,7 @@ h3 {
   position: relative;
 }
 h4 {
-  margin: var(--rhythm) 0;
+  margin: calc(var(--rhythm) * 2) 0;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: var(--rhythm);

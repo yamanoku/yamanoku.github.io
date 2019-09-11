@@ -1,5 +1,5 @@
 <template>
-  <main id="main">
+  <main role="main" id="main">
     <h1>yamanoku.net</h1>
     <basic-info-component />
     <job-info-component />

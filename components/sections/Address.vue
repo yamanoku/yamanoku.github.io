@@ -1,6 +1,6 @@
 <template>
-  <section id="contact">
-    <h2 class="anchor-heading">
+  <section id="contact" aria-describedby="contact-heading">
+    <h2 class="anchor-heading" id="contact-heading">
       <a class="anchor" href="#contact">
         <anchor-icon />
       </a>

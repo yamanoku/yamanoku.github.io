@@ -1,7 +1,7 @@
 <template>
-  <article id="reading" aria-describedby="product:reading_heading">
+  <article id="product:reading" aria-describedby="product:reading_heading">
     <h3 class="anchor-heading" id="product:reading_heading">
-      <a class="anchor" href="#reading">
+      <a class="anchor" href="#product:reading">
         <anchor-icon />
       </a>
       {{ $t("product.reading") }}

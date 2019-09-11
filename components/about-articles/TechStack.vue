@@ -1,7 +1,7 @@
 <template>
-  <article id="tech-stack" aria-describedby="about:tech-stack_heading">
+  <article id="about:tech-stack" aria-describedby="about:tech-stack_heading">
     <h3 class="anchor-heading" id="about:tech-stack_heading">
-      <a class="anchor" href="#tech-stack">
+      <a class="anchor" href="#about:tech-stack">
         <anchor-icon />
       </a>
       {{$t("heading.techStack")}}

@@ -6,8 +6,8 @@
       </a>
       {{ $t("product.crowding") }}
     </h3>
-    <h4 id="birthday_countdown_js">
-      <a class="anchor" href="#birthday_countdown_js">
+    <h4 id="crowding-birthday_countdown_js">
+      <a class="anchor" href="#crowding-birthday_countdown_js">
         <anchor-icon />
       </a>
       {{ $t("product.birthdayCount") }}
@@ -27,8 +27,8 @@
         </a>
       </li>
     </ul>
-    <h4 id="glitch_range">
-      <a class="anchor" href="#glitch_range">
+    <h4 id="crowding-glitch_range">
+      <a class="anchor" href="#crowding-glitch_range">
         <anchor-icon />
       </a>
       {{ $t("product.glitch") }}
@@ -42,8 +42,8 @@
         </a>
       </li>
     </ul>
-    <h4 id="canvas_browser_crash_js">
-      <a class="anchor" href="#canvas_browser_crash_js">
+    <h4 id="crowding-canvas_browser_crash_js">
+      <a class="anchor" href="#crowding-canvas_browser_crash_js">
         <anchor-icon />
       </a>
       {{ $t("product.browserCrash") }}
@@ -57,14 +57,14 @@
         </a>
       </li>
     </ul>
-    <h4 id="rolling_sushi">
-      <a class="anchor" href="#rolling_sushi">
+    <h4 id="crowding-rolling_sushi">
+      <a class="anchor" href="#crowding-rolling_sushi">
         <anchor-icon />
       </a>
       {{ $t("product.sushi") }}
     </h4>
     <p>{{ $t("product.description.sushi") }}</p>
-    <ul role="list">
+    <ul role="list" aria-describedby="crowding-rolling_sushi">
       <li role="listitem">
         <a href="/rolling-sushi" target="_blank" rel="noopener">
           {{ $t("product.sushi") }}

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main role="main" id="main">
     <h1>{{errorHeading}}</h1>
     <template v-if="error.statusCode === 404">
       <p>{{ $t("error.404.text01") }}</p>

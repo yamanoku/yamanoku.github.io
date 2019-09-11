@@ -1,7 +1,7 @@
 <template>
-  <article id="i18n" aria-labelledby="about:i18n_heading">
+  <article id="about:i18n" aria-labelledby="about:i18n_heading">
     <h3 class="anchor-heading" id="about:i18n_heading">
-      <a class="anchor" href="#i18n">
+      <a class="anchor" href="#about:i18n">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.i18n")}}

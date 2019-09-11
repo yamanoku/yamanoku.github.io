@@ -1,6 +1,6 @@
 <template>
-  <section id="slides">
-    <h2 class="anchor-heading">
+  <section id="slides" aria-describedby="slides_heading">
+    <h2 class="anchor-heading" id="slides_heading">
       <a class="anchor" href="#slides">
         <anchor-icon />
       </a>

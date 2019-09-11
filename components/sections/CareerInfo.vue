@@ -1,6 +1,6 @@
 <template>
-  <section id="career">
-    <h2 class="anchor-heading">
+  <section id="career" aria-describedby="career_heading">
+    <h2 class="anchor-heading" id="career_heading">
       <a class="anchor" href="#career">
         <anchor-icon />
       </a>

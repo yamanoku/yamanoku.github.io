@@ -1,7 +1,7 @@
 <template>
-  <article id="slack-reaction-primoji" aria-describedby="product:slack-reaction-primoji_heading">
+  <article id="product:slack-reaction-primoji" aria-describedby="product:slack-reaction-primoji_heading">
     <h3 class="anchor-heading" id="product:slack-reaction-primoji_heading">
-      <a class="anchor" href="#slack-reaction-primoji">
+      <a class="anchor" href="#product:slack-reaction-primoji">
         <anchor-icon />
       </a>
       {{ $t("product.slackprimoji") }}

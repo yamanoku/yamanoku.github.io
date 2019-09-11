@@ -1,5 +1,5 @@
 <template>
-  <main id="main">
+  <main role="main" id="main">
     <h1>{{$t("aboutPage.title")}}</h1>
     <p>{{$t("aboutPage.description")}}</p>
     <section id="toc">
@@ -123,3 +123,15 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+#toc {
+  border-left: 8px solid var(--gray);
+  padding-left: var(--rhythm);
+}
+@media (prefers-color-scheme: dark) {
+  #toc {
+    border-left: 8px solid var(--white);
+  }
+}
+</style>

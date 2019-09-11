@@ -1,7 +1,7 @@
 <template>
-  <article id="color-contrast" aria-labelledby="about:color-contrast_heading">
+  <article id="about:color-contrast" aria-labelledby="about:color-contrast_heading">
     <h3 class="anchor-heading" id="about:color-contrast_heading">
-      <a class="anchor" href="#color-contrast">
+      <a class="anchor" href="#about:color-contrast">
         <anchor-icon />
       </a>
       {{$t("aboutPage.subHeading.contrast")}}

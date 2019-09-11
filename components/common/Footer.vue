@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <small>&copy; Copyright {{currentYear}}, Okuto Oyama</small>
+    <p>&copy; Copyright {{currentYear}}, Okuto Oyama</p>
   </footer>
 </template>
 
@@ -21,7 +21,8 @@ footer {
   padding: var(--rhythm);
   text-align: center;
 }
-small {
+footer p {
+  font-size: 1rem;
   line-height: var(--rhythm);
 }
 </style>

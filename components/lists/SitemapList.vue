@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <h2>{{ $t("error.sitemap.title") }}</h2>
+  <section id="error:sitemap" aria-describedby="error:sitemap_heading">
+    <h2 id="error:sitemap_heading">{{ $t("error.sitemap.title") }}</h2>
     <ul role="list">
       <li role="listitem">
         <nuxt-link :to="localePath({ name: 'index'})">{{$t("home.title")}}</nuxt-link>

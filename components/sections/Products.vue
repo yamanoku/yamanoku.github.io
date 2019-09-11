@@ -1,6 +1,6 @@
 <template>
-  <section id="product">
-    <h2 class="anchor-heading">
+  <section id="product" aria-describedby="product_heading">
+    <h2 class="anchor-heading" id="product_heading">
       <a class="anchor" href="#product">
         <anchor-icon />
       </a>
