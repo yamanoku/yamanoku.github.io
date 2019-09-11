@@ -181,14 +181,12 @@ figcaption {
   display: none;
 }
 @media screen and (min-width: 769px) {
+  .anchor {
+    display: block;
+  }
   .anchor-heading {
     margin-left: calc(-1 * var(--rhythm));
-    margin-right: calc(-1 * var(--rhythm));
     padding-left: var(--rhythm);
-    padding-right: var(--rhythm);
-  }
-  .anchor-heading:hover .anchor {
-    display: block;
   }
 }
 .anchor path {
