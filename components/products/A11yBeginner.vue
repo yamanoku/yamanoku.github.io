@@ -34,15 +34,17 @@
         </a>
       </li>
     </ul>
-    <h4 id="todo:web-accessibility-for-beginner_heading">{{ $t("heading.todoList") }}</h4>
-    <ul role="list" id="todo:web-accessibility-for-beginner_list">
-      <li role="listitem" v-for="issue in a11ybookIssue" :key="issue.id">
-        <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">
-          {{issue.title}}
-          <github-icon />
-        </a>
-      </li>
-    </ul>
+    <template v-if="a11ybookIssue.length">
+      <h4 id="todo:web-accessibility-for-beginner_heading">{{ $t("heading.todoList") }}</h4>
+      <ul role="list" id="todo:web-accessibility-for-beginner_list">
+        <li role="listitem" v-for="issue in a11ybookIssue" :key="issue.id">
+          <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">
+            {{issue.title}}
+            <github-icon />
+          </a>
+        </li>
+      </ul>
+    </template>
   </article>
 </template>
 

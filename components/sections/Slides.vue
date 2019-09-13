@@ -22,10 +22,12 @@
       {{ $t("heading.slides.lt") }}
     </h3>
     <slide-list :listArray="listLT" />
-    <h3 id="slides-qiita">
-      Qiita
-    </h3>
-    <slide-list :listArray="listQiita" />
+    <template v-if="listQiita.length">
+      <h3 id="slides-qiita">
+        Qiita
+      </h3>
+      <slide-list :listArray="listQiita" />
+    </template>
   </section>
 </template>
 

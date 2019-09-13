@@ -32,15 +32,17 @@
       <li role="listitem">PostCSS</li>
       <li role="listitem">Netlify</li>
     </ul>
-    <h4 id="todo:vue-portfolio_heading">{{ $t("heading.todoList") }}</h4>
-    <ul role="list" aria-labelledby="todo:vue-portfolio_heading">
-      <li role="listitem" v-for="issue in vuePortfolioIssue" :key="issue.id">
-        <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">
-          {{issue.title}}
-          <github-icon />
-        </a>
-      </li>
-    </ul>
+    <template v-if="vuePortfolioIssue.length">
+      <h4 id="todo:vue-portfolio_heading">{{ $t("heading.todoList") }}</h4>
+      <ul role="list" aria-labelledby="todo:vue-portfolio_heading">
+        <li role="listitem" v-for="issue in vuePortfolioIssue" :key="issue.id">
+          <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">
+            {{issue.title}}
+            <github-icon />
+          </a>
+        </li>
+      </ul>
+    </template>
   </article>
 </template>
 
