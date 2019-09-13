@@ -1,11 +1,6 @@
 <template>
   <article id="about:pwa" aria-labelledby="about:pwa_heading">
-    <h3 class="anchor-heading" id="about:pwa_heading">
-      <div class="anchor">
-        <a href="#about:pwa">
-          <anchor-icon />
-        </a>
-      </div>
+    <h3 id="about:pwa_heading">
       {{$t("aboutPage.subHeading.pwa")}}
     </h3>
     <p>{{$t("aboutPage.pwa.desc01")}}</p>

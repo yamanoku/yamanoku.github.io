@@ -1,11 +1,6 @@
 <template>
-  <section id="contact" aria-describedby="contact-heading">
-    <h2 class="anchor-heading" id="contact-heading">
-      <div class="anchor">
-        <a href="#contact">
-          <anchor-icon />
-        </a>
-      </div>
+  <section id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">
       {{ $t("heading.contact") }}
     </h2>
     <address>

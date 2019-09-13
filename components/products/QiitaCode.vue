@@ -1,15 +1,11 @@
 <template>
-  <article id="product:qiita-code-style-before" aria-describedby="product:qiita-code-style-before_heading">
-    <h3 class="anchor-heading" id="product:qiita-code-style-before_heading">
-      <div class="anchor">
-        <a href="#product:qiita-code-style-before">
-          <anchor-icon />
-        </a>
-      </div>
+  <article id="product:qiita-code-style-before" aria-labelledby="product:qiita-code-style-before_heading">
+    <h3 id="product:qiita-code-style-before_heading">
       {{ $t("product.qiitaCode") }}
     </h3>
     <p>{{ $t("product.description.qiitaCode") }}</p>
-    <ul role="list">
+    <h4 id="related:qiita-code-style-before_heading">{{$t("heading.relatedList")}}</h4>
+    <ul role="list" aria-labelledby="related:qiita-code-style-before_heading">
       <li role="listitem">
         <a
           href="https://github.com/yamanoku/Qiita_Code-Style_Before"

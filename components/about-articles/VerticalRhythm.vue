@@ -1,11 +1,6 @@
 <template>
-  <article id="about:vertical-rhythm" aria-describedby="about:vertical-rhythm_heading">
-    <h3 class="anchor-heading" id="about:vertical-rhythm_heading">
-      <div class="anchor">
-        <a href="#about:vertical-rhythm">
-          <anchor-icon />
-        </a>
-      </div>
+  <article id="about:vertical-rhythm" aria-labelledby="about:vertical-rhythm_heading">
+    <h3 id="about:vertical-rhythm_heading">
       {{$t("aboutPage.subHeading.verticalRhythm")}}
     </h3>
     <p>{{$t("aboutPage.verticalRhythm.desc01")}}</p>

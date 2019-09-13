@@ -1,11 +1,6 @@
 <template>
-  <article id="product:yamanoku-cli" aria-describedby="product:yamanoku-cli_heading">
-    <h3 class="anchor-heading" id="product:yamanoku-cli_heading">
-      <div class="anchor">
-        <a href="#product:yamanoku-cli">
-          <anchor-icon />
-        </a>
-      </div>
+  <article id="product:yamanoku-cli" aria-labelledby="product:yamanoku-cli_heading">
+    <h3 id="product:yamanoku-cli_heading">
       {{ $t("product.yamanokuCli") }}
     </h3>
     <p>{{ $t("product.description.yamanokuCli") }}</p>

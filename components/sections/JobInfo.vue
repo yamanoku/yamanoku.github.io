@@ -1,11 +1,6 @@
 <template>
-  <section id="job" aria-describedby="job_heading">
-    <h2 class="anchor-heading" id="job_heading">
-      <div class="anchor">
-        <a href="#job">
-          <anchor-icon />
-        </a>
-      </div>
+  <section id="job" aria-labelledby="job_heading">
+    <h2 id="job_heading">
       {{ $t("heading.job") }}
     </h2>
     <ul role="list">

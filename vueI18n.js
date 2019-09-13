@@ -26,8 +26,8 @@ export default {
         bfa02: "Engineering and Design",
         live: "Live in Kamagaya, Chiba, Japan",
         photo: {
-          alt: "Close shadow Okuto Oyama",
-          date: "Shooting date 2019/03"
+          alt: "Photo Okuto Oyama",
+          caption: "Author's near shadow"
         }
       },
       career: {
@@ -112,7 +112,8 @@ export default {
         },
         markup: {
           desc01: "Semantic markup implementation to realize information design of human-readable (Human can understand) and machine-readable (Be understood by the machine).",
-          desc02: "We are also implementing WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) for elements that are not needed by people using assistive technology so that they do not block access.",
+          desc02: "It also implements content completion using WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications).",
+          caption: "Assist users as they move from article to article by tying aria-labelledby to article elements."
         },
         components: {
           desc01: "For example, the slide list uses the following components to render:",
@@ -156,6 +157,7 @@ export default {
         productList: "Product List",
         todoList: "TODO List",
         techStack: "Technology Stack",
+        relatedList: "Related Links List",
         slides: {
           title: "Slides",
           stage: "Stage",
@@ -208,8 +210,8 @@ export default {
         bfa02: "デザインエンジニアリング",
         live: "千葉県鎌ケ谷市在住",
         photo: {
-          alt: "近影 大山奥人",
-          date: "撮影日 2019年3月"
+          alt: "写真 大山奥人",
+          caption: "著者近影"
         }
       },
       career: {
@@ -293,8 +295,9 @@ export default {
           verticalRhythm: "バーティカルリズム",
         },
         markup: {
-          desc01: "ヒューマンリーダブル（人が理解できる）とマシンリーダブル（機械が理解できる）となる情報設計を実現するためにセマンティクスなマークアップ実装しています。",
-          desc02: "支援技術を使用する人には不要となる要素について、WAI-ARIA（Web Accessibility Initiative - Accessible Rich Internet Applications）を使用して閲覧を阻害しないようにする実装も行っています。",
+          desc01: "ヒューマンリーダブル（人が理解できる）とマシンリーダブル（機械が理解できる）となる情報設計を実現するためにセマンティクスなマークアップの実装しています。",
+          desc02: "また、WAI-ARIA（Web Accessibility Initiative - Accessible Rich Internet Applications）を使用して、コンテンツの補完をするための実装も行っています。",
+          caption: "aria-labelledbyとarticle要素を紐付けることで記事間を移動するときにユーザーを支援します。"
         },
         components: {
           desc01: "たとえばスライド一覧のリストでは以下コンポーネントを使ってレンダリングしています。",
@@ -338,6 +341,7 @@ export default {
         productList: "制作物一覧",
         todoList: "やること一覧",
         techStack: "利用技術",
+        relatedList: "関連リンク一覧",
         slides: {
           title: "スライド一覧",
           stage: "登壇",
@@ -389,8 +393,8 @@ export default {
         bfa02: "Ingénierie et Design",
         live: "Vivre à Kamagaya, Chiba, Japon",
         photo: {
-          alt: "Ombre rapprochée Okuto Oyama",
-          date: "Date de prise de vue 2019-03"
+          alt: "Photo Okuto Oyama",
+          caption: "Ombre proche de l'auteur"
         }
       },
       career: {
@@ -475,7 +479,8 @@ export default {
         },
         markup: {
           desc01: "Mise en oeuvre du balisage sémantique pour réaliser la conception de l'information de lisibles par l'homme (On peut comprendre) et lisibles par la machine (Être compris par la machine).",
-          desc02: "Nous mettons également en oeuvre WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) pour les éléments qui ne sont pas nécessaires aux personnes qui utilisent des technologies d'assistance pour ne pas bloquer l'accès.",
+          desc02: "Il met également en oeuvre la réalisation de contenu en utilisant WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications).",
+          caption: "Aider les utilisateurs à passer d'un article à l'autre en liant aria-labelledby à des éléments d'article."
         },
         components: {
           desc01: "Par exemple, la liste des diapositives utilise les composants suivants pour effectuer le rendu:",
@@ -519,6 +524,7 @@ export default {
         productList: "Liste de produits",
         todoList: "Liste de choses à faire",
         techStack: "Pile technologique",
+        relatedList: "Liste de liens connexes",
         slides: {
           title: "Glissades",
           stage: "Scène",

@@ -1,15 +1,11 @@
 <template>
-  <article id="product:vue-portfolio-template" aria-describedby="product:vue-portfolio-template_heading">
-    <h3 class="anchor-heading" id="product:vue-portfolio-template_heading">
-      <div class="anchor">
-        <a href="#product:vue-portfolio-template">
-          <anchor-icon />
-        </a>
-      </div>
+  <article id="product:vue-portfolio-template" aria-labelledby="product:vue-portfolio-template_heading">
+    <h3 id="product:vue-portfolio-template_heading">
       {{ $t("product.vuePortfolio") }}
     </h3>
     <p>{{ $t("product.description.vuePortfolio") }}</p>
-    <ul role="list">
+    <h4 id="related:vue-portfolio_heading">{{$t("heading.relatedList")}}</h4>
+    <ul role="list" aria-labelledby="related:vue-portfolio_heading">
       <li role="listitem">
         <a href="https://vue-portfolio.yamanoku.net/" target="_blank" rel="noopener">
           {{ $t("product.vuePortfolio") }}
@@ -27,8 +23,8 @@
         </a>
       </li>
     </ul>
-    <h4>{{$t("heading.techStack")}}</h4>
-    <ul role="list">
+    <h4 id="tech-stack:vue-portfolio_heading">{{$t("heading.techStack")}}</h4>
+    <ul role="list" aria-labelledby="tech-stack:vue-portfolio_heading">
       <li role="listitem">Vue.js</li>
       <li role="listitem">vue-cli</li>
       <li role="listitem">vue-router</li>
@@ -36,8 +32,8 @@
       <li role="listitem">PostCSS</li>
       <li role="listitem">Netlify</li>
     </ul>
-    <h4 aria-describedby="vue_portfolio_issue">{{ $t("heading.todoList") }}</h4>
-    <ul role="list" id="vue_portfolio_issue">
+    <h4 id="todo:vue-portfolio_heading">{{ $t("heading.todoList") }}</h4>
+    <ul role="list" aria-labelledby="todo:vue-portfolio_heading">
       <li role="listitem" v-for="issue in vuePortfolioIssue" :key="issue.id">
         <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">
           {{issue.title}}

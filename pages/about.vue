@@ -2,7 +2,7 @@
   <main role="main" id="main">
     <h1 id="about_heading">{{$t("aboutPage.title")}}</h1>
     <p>{{$t("aboutPage.description")}}</p>
-    <section class="toc" id="about:toc" aria-describedby="about:toc_heading">
+    <section class="toc" id="about:toc" aria-labelledby="about:toc_heading">
       <h2 id="about:toc_heading">{{$t("aboutPage.heading.toc")}}</h2>
       <ul role="list">
         <li role="listitem">
@@ -47,13 +47,8 @@
         </li>
       </ul>
     </section>
-    <section id="about:implementation" aria-describedby="about:implementation_heading">
-      <h2 class="anchor-heading" id="about:implementation_heading">
-        <div class="anchor">
-          <a href="#about:implementation">
-            <anchor-icon />
-          </a>
-        </div>
+    <section id="about:implementation" aria-labelledby="about:implementation_heading">
+      <h2 id="about:implementation_heading">
         {{$t("aboutPage.heading.implementation")}}
       </h2>
       <tech-stack />
@@ -62,13 +57,8 @@
       <pwa-article />
       <i18n-article />
     </section>
-    <section id="about:design" aria-describedby="about:design_heading">
-      <h2 class="anchor-heading" id="about:design_heading">
-        <div class="anchor">
-          <a href="#about:design">
-            <anchor-icon />
-          </a>
-        </div>
+    <section id="about:design" aria-labelledby="about:design_heading">
+      <h2 id="about:design_heading">
         {{$t("aboutPage.heading.design")}}
       </h2>
       <p>{{$t("aboutPage.designDescription")}}</p>

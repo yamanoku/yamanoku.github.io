@@ -1,15 +1,11 @@
 <template>
-  <article id="product:reading" aria-describedby="product:reading_heading">
-    <h3 class="anchor-heading" id="product:reading_heading">
-      <div class="anchor">
-        <a href="#product:reading">
-          <anchor-icon />
-        </a>
-      </div>
+  <article id="product:reading" aria-labelledby="product:reading_heading">
+    <h3 id="product:reading_heading">
       {{ $t("product.reading") }}
     </h3>
     <p>{{ $t("product.description.reading") }}</p>
-    <ul role="list">
+    <h4 id="related:reading_heading">{{$t("heading.relatedList")}}</h4>
+    <ul role="list" aria-labelledby="related:reading_heading">
       <li role="listitem">
         <a href="https://reading.yamanoku.net" target="_blank" rel="noopener">
           {{ $t("product.reading") }}
@@ -37,8 +33,8 @@
         </a>
       </li>
     </ul>
-    <h4>{{$t("heading.techStack")}}</h4>
-    <ul role="list">
+    <h4 id="teck-stack:reading_heading">{{$t("heading.techStack")}}</h4>
+    <ul role="list" aria-labelledby="teck-stack:reading_heading">
       <li role="listitem">Nuxt.js</li>
       <li role="listitem">Nuxt PWA</li>
       <li role="listitem">vue-paginate</li>
@@ -49,8 +45,8 @@
       <li role="listitem">Netlify</li>
       <li role="listitem">CircleCI</li>
     </ul>
-    <h4 aria-describedby="reading_issue">{{ $t("heading.todoList") }}</h4>
-    <ul role="list" id="reading_issue">
+    <h4 id="todo:reading_heading">{{ $t("heading.todoList") }}</h4>
+    <ul role="list" aria-labelledby="todo:reading_heading">
       <li role="listitem" v-for="issue in readingIssue" :key="issue.id">
         <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">
           {{issue.title}}

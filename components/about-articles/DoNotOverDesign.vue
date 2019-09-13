@@ -1,11 +1,6 @@
 <template>
   <article id="about:do-not-over-design" aria-labelledby="about:do-not-over-design_heading">
-    <h3 class="anchor-heading" id="about:do-not-over-design_heading">
-      <div class="anchor">
-        <a href="#about:do-not-over-design">
-          <anchor-icon />
-        </a>
-      </div>
+    <h3 id="about:do-not-over-design_heading">
       {{$t("aboutPage.subHeading.overdesign")}}
     </h3>
     <p>{{$t("aboutPage.overdesign.desc01")}}</p>

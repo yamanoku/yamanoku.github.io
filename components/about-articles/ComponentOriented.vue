@@ -1,11 +1,6 @@
 <template>
   <article id="about:component-oriented" aria-labelledby="about:component-oriented_heading">
-    <h3 class="anchor-heading" id="about:component-oriented_heading">
-      <div class="anchor">
-        <a href="#about:component-oriented">
-          <anchor-icon />
-        </a>
-      </div>
+    <h3 id="about:component-oriented_heading">
       {{$t("aboutPage.subHeading.components")}}
     </h3>
     <p>{{$t("aboutPage.components.desc01")}}</p>

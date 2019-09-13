@@ -1,16 +1,11 @@
 <template>
-  <section id="basic" aria-describedby="basic-heading">
-    <h2 class="anchor-heading" id="basic-heading">
-      <div class="anchor">
-        <a href="#basic">
-          <anchor-icon />
-        </a>
-      </div>
+  <section id="basic" aria-labelledby="basic-heading">
+    <h2 id="basic-heading">
       {{ $t("heading.basic") }}
     </h2>
     <figure>
       <img src="~/assets/img/portrait.jpg" width="216" height="216" :alt="$t('info.photo.alt')">
-      <figcaption>{{ $t("info.photo.date") }}</figcaption>
+      <figcaption>{{ $t("info.photo.caption") }}</figcaption>
     </figure>
     <ul role="list">
       <li role="listitem">
