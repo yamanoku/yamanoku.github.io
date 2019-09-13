@@ -1,19 +1,13 @@
 <template>
-  <article id="crowding">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#crowding">
-        <anchor-icon />
-      </a>
+  <article id="product:crowding" aria-labelledby="product:crowding_heading">
+    <h3 id="product:crowding_heading">
       {{ $t("product.crowding") }}
-    </h4>
-    <h5 id="birthday_countdown_js">
-      <a class="anchor" aria-hidden="true" href="#birthday_countdown_js">
-        <anchor-icon />
-      </a>
+    </h3>
+    <h4 id="product:crowding-birthday-countdown_heading">
       {{ $t("product.birthdayCount") }}
-    </h5>
+    </h4>
     <p>{{ $t("product.description.birthdayCount") }}</p>
-    <ul role="list">
+    <ul role="list" aria-labelledby="product:crowding-birthday-countdown_heading">
       <li role="listitem">
         <a href="/birthday-countdown-js" target="_blank" rel="noopener">
           {{ $t("product.birthdayCount") }}
@@ -27,14 +21,11 @@
         </a>
       </li>
     </ul>
-    <h5 id="glitch_range">
-      <a class="anchor" aria-hidden="true" href="#glitch_range">
-        <anchor-icon />
-      </a>
+    <h4 id="product:crowding-glitch-range_heading">
       {{ $t("product.glitch") }}
-    </h5>
+    </h4>
     <p>{{ $t("product.description.glitch") }}</p>
-    <ul role="list">
+    <ul role="list" aria-labelledby="product:crowding-glitch-range_heading">
       <li role="listitem">
         <a href="/glitchrange" target="_blank" rel="noopener">
           {{ $t("product.glitch") }}
@@ -42,14 +33,11 @@
         </a>
       </li>
     </ul>
-    <h5 id="canvas_browser_crash_js">
-      <a class="anchor" aria-hidden="true" href="#canvas_browser_crash_js">
-        <anchor-icon />
-      </a>
+    <h4 id="product:crowding-canvas-browser-crash_heading">
       {{ $t("product.browserCrash") }}
-    </h5>
+    </h4>
     <p>{{ $t("product.description.browserCrash") }}</p>
-    <ul role="list">
+    <ul role="list" aria-labelledby="product:crowding-canvas-browser-crash_heading">
       <li role="listitem">
         <a href="/canvas_browser-crash.js" target="_blank" rel="noopener">
           {{ $t("product.browserCrash") }}
@@ -57,14 +45,11 @@
         </a>
       </li>
     </ul>
-    <h5 id="rolling_sushi">
-      <a class="anchor" aria-hidden="true" href="#rolling_sushi">
-        <anchor-icon />
-      </a>
+    <h4 id="product:crowding-rolling-sushi_heading">
       {{ $t("product.sushi") }}
-    </h5>
+    </h4>
     <p>{{ $t("product.description.sushi") }}</p>
-    <ul role="list">
+    <ul role="list" aria-labelledby="product:crowding-rolling-sushi_heading">
       <li role="listitem">
         <a href="/rolling-sushi" target="_blank" rel="noopener">
           {{ $t("product.sushi") }}

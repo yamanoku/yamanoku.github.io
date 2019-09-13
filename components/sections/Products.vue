@@ -1,11 +1,8 @@
 <template>
-  <section id="product">
-    <h3>
-      <a class="anchor" aria-hidden="true" href="#product">
-        <anchor-icon />
-      </a>
+  <section id="product" aria-labelledby="product_heading">
+    <h2 id="product_heading">
       {{ $t("heading.productList") }}
-    </h3>
+    </h2>
     <a11y-beginner />
     <reading />
     <vue-portfolio />

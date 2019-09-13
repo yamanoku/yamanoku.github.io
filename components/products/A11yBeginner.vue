@@ -1,18 +1,16 @@
 <template>
-  <article id="web_accessibility_for_beginner">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#web_accessibility_for_beginner">
-        <anchor-icon />
-      </a>
+  <article id="product:web-accessibility-for-beginner" aria-labelledby="product:web-accessibility-for-beginner_heading">
+    <h3 id="product:web-accessibility-for-beginner_heading">
       {{ $t("product.wafb.title") }}
-    </h4>
+    </h3>
     <p>{{ $t("product.description.wafb") }}</p>
     <template v-if="this.$i18n.locale !== 'ja'">
       <p>
         <em>{{ $t("onlyJPText") }}</em>
       </p>
     </template>
-    <ul role="list">
+    <h4 id="related:web-accessibility-for-beginner_heading">{{$t("heading.relatedList")}}</h4>
+    <ul role="list" aria-labelledby="related:web-accessibility-for-beginner_heading">
       <li role="listitem">
         <a
           href="https://techbookfest.org/event/tbf05/circle/41130001"
@@ -36,8 +34,8 @@
         </a>
       </li>
     </ul>
-    <h5 aria-describedby="a11ybook_issue">{{ $t("heading.todoList") }}</h5>
-    <ul role="list" id="a11ybook_issue">
+    <h4 id="todo:web-accessibility-for-beginner_heading">{{ $t("heading.todoList") }}</h4>
+    <ul role="list" id="todo:web-accessibility-for-beginner_list">
       <li role="listitem" v-for="issue in a11ybookIssue" :key="issue.id">
         <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">
           {{issue.title}}

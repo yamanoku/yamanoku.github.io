@@ -1,11 +1,8 @@
 <template>
-  <article id="component-oriented">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#component-oriented">
-        <anchor-icon />
-      </a>
+  <article id="about:component-oriented" aria-labelledby="about:component-oriented_heading">
+    <h3 id="about:component-oriented_heading">
       {{$t("aboutPage.subHeading.components")}}
-    </h4>
+    </h3>
     <p>{{$t("aboutPage.components.desc01")}}</p>
     <highlight-code id="slide-components" lang="vue">{{slide}}</highlight-code>
     <ul role="list">

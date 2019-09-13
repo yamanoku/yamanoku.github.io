@@ -1,11 +1,8 @@
 <template>
-  <section id="contact">
-    <h3>
-      <a class="anchor" aria-hidden="true" href="#contact">
-        <anchor-icon />
-      </a>
+  <section id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">
       {{ $t("heading.contact") }}
-    </h3>
+    </h2>
     <address>
       <a href="mailto:0910yama@gmail.com">
         0910yama@gmail.com

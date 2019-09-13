@@ -1,6 +1,11 @@
 <template>
   <div>
+    <no-ssr>
+      <vue-skip-to to="#main" text="Skip to Main content" />
+      <vue-skip-to to="#local-switching" text="Skip to Local Switching" />
+    </no-ssr>
     <header-component />
+    <global-navigation />
     <nuxt />
     <footer-component />
   </div>
@@ -9,6 +14,7 @@
 <script>
 import HeaderComponent from "~/components/common/Header.vue";
 import FooterComponent from "~/components/common/Footer.vue";
+import GlobalNavigation from "~/components/common/GlobalNavigation.vue";
 export default {
   head() {
     return this.$nuxtI18nSeo();
@@ -16,6 +22,7 @@ export default {
   components: {
     HeaderComponent,
     FooterComponent,
+    GlobalNavigation,
   }
 };
 </script>
@@ -107,36 +114,25 @@ main {
   margin: auto;
   padding: 0 var(--rhythm);
 }
-h2 {
+h1 {
   margin: var(--rhythm) 0;
   font-size: 2rem;
   line-height: calc(var(--rhythm) * 2);
 }
-h2 small {
-  font-size: 1.4rem;
-  display: inline-block;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.6);
-}
-@media (prefers-color-scheme: dark) {
-  h2 small {
-    color: rgba(255, 255, 255, 0.6);
-  }
-}
-h3 {
+h2 {
   margin: var(--rhythm) 0;
   font-size: 1.4rem;
   line-height: var(--rhythm);
   position: relative;
 }
-h4 {
+h3 {
   margin: var(--rhythm) 0;
   font-size: 1.2rem;
   line-height: var(--rhythm);
   position: relative;
 }
-h5 {
-  margin: var(--rhythm) 0;
+h4 {
+  margin: calc(var(--rhythm) * 2) 0;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: var(--rhythm);
@@ -159,7 +155,7 @@ article::before {
   bottom: 0;
   left: 0;
 }
-@media screen and (max-width: 768px) {
+@media (prefers-color-scheme: dark) {
   article::before {
     background-color: var(--white);
   }
@@ -181,11 +177,16 @@ figcaption {
 }
 .anchor {
   position: absolute;
-  left: -24px;
+  left: 0;
+  display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   .anchor {
-    display: none;
+    display: block;
+  }
+  .anchor-heading {
+    margin-left: calc(-1 * var(--rhythm));
+    padding-left: var(--rhythm);
   }
 }
 .anchor path {
@@ -276,5 +277,20 @@ pre {
 }
 code.hljs {
   padding: var(--rhythm);
+}
+a.vue-skip-to {
+  color: #fff;
+  text-decoration: none;
+}
+a.vue-skip-to:focus {
+  background-color: var(--black);
+}
+@media (prefers-color-scheme: dark) {
+  a.vue-skip-to {
+    text-shadow: none;
+  }
+  a.vue-skip-to:focus {
+    background-color: var(--linkBlue);
+  }
 }
 </style>

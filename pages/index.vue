@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <h2>yamanoku.net</h2>
+  <main role="main" id="main">
+    <h1>yamanoku.net</h1>
     <basic-info-component />
     <job-info-component />
     <career-info-component />

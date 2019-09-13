@@ -1,48 +1,30 @@
 <template>
-  <section id="slides">
-    <h3>
-      <a class="anchor" aria-hidden="true" href="#slides">
-        <anchor-icon />
-      </a>
+  <section id="slides" aria-labelledby="slides_heading">
+    <h2 id="slides_heading">
       {{ $t("heading.slides.title") }}
-    </h3>
+    </h2>
     <template v-if="this.$i18n.locale !== 'ja'">
       <em>{{ $t("onlyJPText") }}</em>
     </template>
-    <h4 id="slides-stage">
-      <a class="anchor" aria-hidden="true" href="#slides-stage">
-        <anchor-icon />
-      </a>
+    <h3 id="slides-stage">
       {{ $t("heading.slides.stage") }}
-    </h4>
+    </h3>
     <slide-list :listArray="listStage" />
-    <h4 id="slides-study">
-      <a class="anchor" aria-hidden="true" href="#slides-study">
-        <anchor-icon />
-      </a>
+    <h3 id="slides-study">
       {{ $t("heading.slides.study") }}
-    </h4>
+    </h3>
     <slide-list :listArray="listStudy" />
-    <h4 id="slides-write">
-      <a class="anchor" aria-hidden="true" href="#slides-write">
-        <anchor-icon />
-      </a>
+    <h3 id="slides-write">
       {{ $t("heading.slides.write") }}
-    </h4>
+    </h3>
     <slide-list :listArray="listWrite" />
-    <h4 id="slides-lt">
-      <a class="anchor" aria-hidden="true" href="#slides-lt">
-        <anchor-icon />
-      </a>
+    <h3 id="slides-lt">
       {{ $t("heading.slides.lt") }}
-    </h4>
+    </h3>
     <slide-list :listArray="listLT" />
-    <h4 id="slides-qiita">
-      <a class="anchor" aria-hidden="true" href="#slides-qiita">
-        <anchor-icon />
-      </a>
+    <h3 id="slides-qiita">
       Qiita
-    </h4>
+    </h3>
     <slide-list :listArray="listQiita" />
   </section>
 </template>

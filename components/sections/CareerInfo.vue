@@ -1,11 +1,8 @@
 <template>
-  <section id="career">
-    <h3>
-      <a class="anchor" aria-hidden="true" href="#career">
-        <anchor-icon />
-      </a>
+  <section id="career" aria-labelledby="career_heading">
+    <h2 id="career_heading">
       {{ $t("heading.career") }}
-    </h3>
+    </h2>
     <p>{{ $t("career.desc01") }}</p>
     <p>{{ $t("career.desc02") }}</p>
     <p>{{ $t("career.desc03") }}</p>

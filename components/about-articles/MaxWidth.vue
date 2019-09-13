@@ -1,11 +1,8 @@
 <template>
-  <article id="max-width">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#max-width">
-        <anchor-icon />
-      </a>
+  <article id="about:max-width" aria-labelledby="about:max-width_heading">
+    <h3 id="about:max-width_heading">
       {{$t("aboutPage.subHeading.maxWidth")}}
-    </h4>
+    </h3>
     <p>{{$t("aboutPage.maxWidth.desc01")}}</p>
     <p>{{$t("aboutPage.maxWidth.desc02")}}</p>
   </article>

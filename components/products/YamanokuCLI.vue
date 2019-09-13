@@ -1,11 +1,8 @@
 <template>
-  <article id="yamanoku_cli">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#yamanoku_cli">
-        <anchor-icon />
-      </a>
+  <article id="product:yamanoku-cli" aria-labelledby="product:yamanoku-cli_heading">
+    <h3 id="product:yamanoku-cli_heading">
       {{ $t("product.yamanokuCli") }}
-    </h4>
+    </h3>
     <p>{{ $t("product.description.yamanokuCli") }}</p>
     <ul role="list">
       <li role="listitem">
@@ -15,7 +12,7 @@
         </a>
       </li>
     </ul>
-    <h5>{{$t("heading.techStack")}}</h5>
+    <h4>{{$t("heading.techStack")}}</h4>
     <ul role="list">
       <li role="listitem">React.js</li>
       <li role="listitem">ink</li>

@@ -1,14 +1,11 @@
 <template>
-  <article id="color-contrast">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#color-contrast">
-        <anchor-icon />
-      </a>
+  <article id="about:color-contrast" aria-labelledby="about:color-contrast_heading">
+    <h3 id="about:color-contrast_heading">
       {{$t("aboutPage.subHeading.contrast")}}
-    </h4>
+    </h3>
     <p>{{$t("aboutPage.contrast.desc01")}}</p>
     <p>{{$t("aboutPage.contrast.desc02")}}</p>
-    <dl>
+    <dl aria-labelledby="about:color-contrast_heading">
       <div v-for="color in colors" :key="color.name" :style="'background-color:' + color.value">
         <dt
           :style="(color.name === 'var(--black)' || color.name === 'var(--linkBlue)' ? 'color: #fff': '')"

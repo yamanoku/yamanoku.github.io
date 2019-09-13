@@ -1,11 +1,8 @@
 <template>
-  <article id="font-size">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#font-size">
-        <anchor-icon />
-      </a>
+  <article id="about:font-size" aria-labelledby="about:font-size_heading">
+    <h3 id="about:font-size_heading">
       {{$t("aboutPage.subHeading.fontSize")}}
-    </h4>
+    </h3>
     <p>{{$t("aboutPage.fontSize.desc01")}}</p>
   </article>
 </template>

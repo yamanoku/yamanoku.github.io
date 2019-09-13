@@ -1,11 +1,8 @@
 <template>
-  <article id="tech-stack">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#tech-stack">
-        <anchor-icon />
-      </a>
+  <article id="about:tech-stack" aria-labelledby="about:tech-stack_heading">
+    <h3 id="about:tech-stack_heading">
       {{$t("heading.techStack")}}
-    </h4>
+    </h3>
     <ul role="list">
       <li role="listitem">
         Nuxt.js

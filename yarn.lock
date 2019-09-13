@@ -8346,6 +8346,11 @@ vue-server-renderer@^2.6.10:
     serialize-javascript "^1.3.0"
     source-map "0.5.6"
 
+vue-skip-to@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/vue-skip-to/-/vue-skip-to-1.0.6.tgz#b5c70caf3fc6560a4778b226239d34cb1e42036d"
+  integrity sha512-0+9qHXwKocARpYRfpwGBKYcDhdrFDH1ZlLajjcLbl4BKP7zBQYpxpo22BGjpCy4buayvF8nHvTwMenoiPJ8Vfw==
+
 vue-style-loader@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"

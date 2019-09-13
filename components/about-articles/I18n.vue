@@ -1,11 +1,8 @@
 <template>
-  <article id="i18n">
-    <h4>
-      <a class="anchor" aria-hidden="true" href="#i18n">
-        <anchor-icon />
-      </a>
+  <article id="about:internationalization" aria-labelledby="about:internationalization_heading">
+    <h3 id="about:internationalization_heading">
       {{$t("aboutPage.subHeading.i18n")}}
-    </h4>
+    </h3>
     <p>{{$t("aboutPage.i18n.desc01")}}</p>
     <p>{{$t("aboutPage.i18n.desc02")}}</p>
     <ul role="list">
