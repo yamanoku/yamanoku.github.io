@@ -10,7 +10,7 @@
       </p>
     </template>
     <h4 id="related:web-accessibility-for-beginner_heading">{{$t("heading.relatedList")}}</h4>
-    <ul role="list" id="related:web-accessibility-for-beginner_heading">
+    <ul role="list" aria-labelledby="related:web-accessibility-for-beginner_heading">
       <li role="listitem">
         <a
           href="https://techbookfest.org/event/tbf05/circle/41130001"
