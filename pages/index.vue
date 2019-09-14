@@ -2,7 +2,6 @@
   <main role="main" id="main">
     <h1>yamanoku.net</h1>
     <basic-info-component />
-    <job-info-component />
     <career-info-component />
     <products-component />
     <slides-component />
@@ -13,7 +12,6 @@
 </template>
 
 <script>
-import JobInfoComponent from "~/components/sections/JobInfo.vue";
 import BasicInfoComponent from "~/components/sections/BasicInfo.vue";
 import CareerInfoComponent from "~/components/sections/CareerInfo.vue";
 import ProductsComponent from "~/components/sections/Products.vue";
@@ -31,7 +29,6 @@ export default {
     };
   },
   components: {
-    JobInfoComponent,
     BasicInfoComponent,
     CareerInfoComponent,
     ProductsComponent,

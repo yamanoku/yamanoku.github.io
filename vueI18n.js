@@ -13,14 +13,17 @@ export default {
         6: "Internet Watcher"
       },
       info: {
+        caption: "Je suis actif sur Internet comme Oyama-Michinoku, yamanoku. Mon anniversaire est le 30 octobre 1989. Je suis né à Noshiro City, dans la préfecture d'Akita . Mon sexe est masculin. Je vis actuellement à Kamagaya City, dans la préfecture de Chiba . Un père de fille et trois propriétaires de chats.",
+        caption: "I'm active on the Internet under the name of Oyama-Michinoku, yamanoku. My birthday is October 30, 1989. I was born in Noshiro City, Akita Prefecture. I'm male. Currently, I lives in Kamagaya City, Chiba Prefecture. One daughter's father and three cat owners.",
+        caption: "",
         birth: "Born in Noshiro, Akita, Japan",
         sex: "Sex - Man",
         2008: {
-          before : " - Get into Iwate University of Art and Culture Course.",
+          before : "Get into Iwate University of Art and Culture Course.",
           now : "Now - Art and Culture Course in Faculty of Humanities and Sociology",
         },
-        2014: " - Get married.",
-        2016: " - Daughter is born",
+        2014: "Get married.",
+        2016: "Daughter is born",
         bfa: "Bachelor of Art and Culture Course.（BFA）",
         bfa01: "Fine Arts",
         bfa02: "Engineering and Design",
@@ -197,6 +200,8 @@ export default {
         6: "インターネットウォッチャー"
       },
       info: {
+        caption: "Je suis actif sur Internet comme Oyama-Michinoku, yamanoku. Mon anniversaire est le 30 octobre 1989. Je suis né à Noshiro City, dans la préfecture d'Akita . Mon sexe est masculin. Je vis actuellement à Kamagaya City, dans la préfecture de Chiba . Un père de fille et trois propriétaires de chats.",
+        caption: "ネット上では、おおやまみちのく、yamanokuと名乗って活動しています。誕生日は1989年10月30日。秋田県能代市生まれ。性別は男性。現在千葉県鎌ケ谷市在住。一児（娘）の父と3匹の猫の飼い主。",
         birth: " 秋田県能代市生まれ",
         sex: "性別 - 男性",
         2008: {
@@ -380,14 +385,15 @@ export default {
         6: "Veille Internet"
       },
       info: {
+        caption: "Je suis actif sur Internet comme Oyama-Michinoku, yamanoku. Mon anniversaire est le 30 octobre 1989. Je suis né à Noshiro City, dans la préfecture d'Akita. Mon sexe est masculin. Je vis actuellement à Kamagaya City, dans la préfecture de Chiba. Un père de fille et trois propriétaires de chats.",
         birth: "Né à Noshiro, Akita, Japon",
         sex: "Sexe - Homme",
         2008: {
-          before : " - Mettez-vous dans Iwate University of Art et culture Cours.",
+          before : "Mettez-vous dans Iwate University of Art et culture Cours.",
           now : "À présent - Cours d'art et de culture à la Faculté des sciences humaines et de sociologie",
         },
-        2014: " - se marier.",
-        2016: " - Fille est né",
+        2014: "se marier.",
+        2016: "Fille est né",
         bfa: "Baccalauréat en Art et culture Cours. (BFA)",
         bfa01: "Beaux-Arts",
         bfa02: "Ingénierie et Design",
