@@ -1,37 +1,35 @@
 <template>
   <article id="about:component-oriented" aria-labelledby="about:component-oriented_heading">
-    <h3 id="about:component-oriented_heading">
-      {{$t("aboutPage.subHeading.components")}}
-    </h3>
+    <h3 id="about:component-oriented_heading">{{$t("aboutPage.subHeading.components")}}</h3>
     <p>{{$t("aboutPage.components.desc01")}}</p>
-    <highlight-code id="slide-components" lang="vue">{{slide}}</highlight-code>
-    <ul role="list">
-      <li role="listitem">
+    <figure>
+      <highlight-code id="slide-components" lang="vue">{{slide}}</highlight-code>
+      <figcaption>
         <a
-          href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/slides/SlideList.vue"
+          href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/lists/SlideList.vue#L1-L18"
           target="_blank"
           rel="noopener"
         >
           SlideList.vue
           <github-icon />
         </a>
-      </li>
-    </ul>
+      </figcaption>
+    </figure>
     <p>{{$t("aboutPage.components.desc02")}}</p>
     <p>{{$t("aboutPage.components.desc03")}}</p>
-    <highlight-code id="api-for-store" lang="javascript">{{api}}</highlight-code>
-    <ul role="list">
-      <li role="listitem">
+    <figure>
+      <highlight-code id="api-for-store" lang="javascript">{{api}}</highlight-code>
+      <figcaption>
         <a
-          href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/products/A11yBeginner.vue#L49-L55"
+          href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/products/A11yBeginner.vue#L52-L58"
           target="_blank"
           rel="noopener"
         >
           A11yBeginner.vue
           <github-icon />
         </a>
-      </li>
-    </ul>
+      </figcaption>
+    </figure>
   </article>
 </template>
 
