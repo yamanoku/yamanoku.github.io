@@ -1,8 +1,5 @@
 <template>
   <header>
-    <p class="date">
-      Updated at: <time :datetime="genarateDate">{{genarateTime}}</time>
-    </p>
     <nuxt-link :to="localePath({ name: 'index'})">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -22,17 +19,6 @@
     </nuxt-link>
   </header>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      genarateTime: this.$store.state.day.genarateTime,
-      genarateDate: this.$store.state.day.genarateDate,
-    }
-  }
-}
-</script>
 
 <style scoped>
 header {
