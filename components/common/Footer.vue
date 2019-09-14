@@ -1,5 +1,9 @@
 <template>
   <footer>
+    <p>
+      Updated at:
+      <time :datetime="genarateDate">{{genarateTime}}</time>
+    </p>
     <p>&copy; Copyright {{currentYear}}, Okuto Oyama</p>
   </footer>
 </template>
@@ -9,9 +13,11 @@ export default {
   data() {
     return {
       currentYear: this.$store.state.day.currentYear,
+      genarateTime: this.$store.state.day.genarateTime,
+      genarateDate: this.$store.state.day.genarateDate
     };
   }
-}
+};
 </script>
 
 <style scoped>
