@@ -13,9 +13,7 @@ export default {
         6: "Internet Watcher"
       },
       info: {
-        caption: "Je suis actif sur Internet comme Oyama-Michinoku, yamanoku. Mon anniversaire est le 30 octobre 1989. Je suis né à Noshiro City, dans la préfecture d'Akita . Mon sexe est masculin. Je vis actuellement à Kamagaya City, dans la préfecture de Chiba . Un père de fille et trois propriétaires de chats.",
         caption: "I'm active on the Internet under the name of Oyama-Michinoku, yamanoku. My birthday is October 30, 1989. I was born in Noshiro City, Akita Prefecture. I'm male. Currently, I lives in Kamagaya City, Chiba Prefecture. One daughter's father and three cat owners.",
-        caption: "",
         birth: "Born in Noshiro, Akita, Japan",
         sex: "Sex - Man",
         2008: {
