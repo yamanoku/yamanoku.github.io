@@ -1,8 +1,10 @@
 <template>
   <footer>
     <p>
+      Created at:
+      <time :datetime="createTime">{{createTime}}</time>,
       Updated at:
-      <time :datetime="genarateDate">{{genarateTime}}</time>
+      <time :datetime="pushTime">{{pushTime}}</time>
     </p>
     <p>&copy; Copyright {{currentYear}}, Okuto Oyama</p>
   </footer>
@@ -13,8 +15,8 @@ export default {
   data() {
     return {
       currentYear: this.$store.state.day.currentYear,
-      genarateTime: this.$store.state.day.genarateTime,
-      genarateDate: this.$store.state.day.genarateDate
+      pushTime: this.$store.state.day.pushTime,
+      createTime: this.$store.state.day.createTime,
     };
   }
 };

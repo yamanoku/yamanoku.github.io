@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "5.6.0",
+    "@nuxtjs/dotenv": "1.4.1",
     "@nuxtjs/google-gtag": "1.0.4",
     "@nuxtjs/pwa": "2.6.0",
     "nuxt": "2.9.2",

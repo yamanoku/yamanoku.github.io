@@ -1,5 +1,13 @@
 import vueI18n from "./vueI18n";
 
+require("dotenv").config();
+const {
+  PORTFOLIO_API_TOKEN,
+  A11YREPO_API_TOKEN,
+  READINGREPO_API_TOKEN,
+  VUEREPO_API_TOKEN
+} = process.env;
+
 const baseName = process.env.BASE_NAME || "yamanoku.net";
 const baseDesc = process.env.BASE_DISC || "Okuto Oyama Portfolio Site";
 const baseUrl = process.env.BASE_URL || "https://yamanaoku.net";
@@ -8,10 +16,14 @@ const baseOgp = process.env.BASE_OGP || "https://yamanaoku.net/ogp@2x.png";
 module.exports = {
   mode: "universal",
   env: {
-    baseName: baseName,
-    baseDesc: baseDesc,
-    baseUrl: baseUrl,
-    baseOgp: baseOgp
+    baseName,
+    baseDesc,
+    baseUrl,
+    baseOgp,
+    PORTFOLIO_API_TOKEN,
+    A11YREPO_API_TOKEN,
+    READINGREPO_API_TOKEN,
+    VUEREPO_API_TOKEN,
   },
   head: {
     htmlAttrs: {
