@@ -280,7 +280,7 @@ export default {
       },
       aboutPage: {
         title: "yamanoku.netについて",
-        description: "yamanoku.netは、yamanokuこと大山奥人のポータルサイトです。",
+        description: "yamanoku.netは、yamanokuこと大山奥人のポータルサイトです。",
         heading: {
           toc: "目次",
           implementation: "ページ実装の解説",
