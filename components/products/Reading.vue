@@ -3,7 +3,10 @@
     <h3 id="product:reading_heading">
       {{ $t("product.reading") }}
     </h3>
-    <p>{{ $t("product.description.reading") }}</p>
+    <figure aria-labelledby="product:reading_heading" aria-describedby="product:reading_caption">
+      <img src="~/assets/img/product-reading.png" height="480" alt="">
+      <figcaption id="product:reading_caption">{{ $t("product.description.reading") }}</figcaption>
+    </figure>
     <h4 id="related:reading_heading">{{$t("heading.relatedList")}}</h4>
     <ul role="list" aria-labelledby="related:reading_heading">
       <li role="listitem">

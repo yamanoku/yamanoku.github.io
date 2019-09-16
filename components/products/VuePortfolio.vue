@@ -1,9 +1,18 @@
 <template>
-  <article id="product:vue-portfolio-template" aria-labelledby="product:vue-portfolio-template_heading">
-    <h3 id="product:vue-portfolio-template_heading">
-      {{ $t("product.vuePortfolio") }}
-    </h3>
-    <p>{{ $t("product.description.vuePortfolio") }}</p>
+  <article
+    id="product:vue-portfolio-template"
+    aria-labelledby="product:vue-portfolio-template_heading"
+  >
+    <h3 id="product:vue-portfolio-template_heading">{{ $t("product.vuePortfolio") }}</h3>
+    <figure
+      aria-labelledby="product:vue-portfolio-template_heading"
+      aria-describedby="product:vue-portfolio-template_caption"
+    >
+      <img src="~/assets/img/product-vue-portfolio-template.png" height="480" alt />
+      <figcaption
+        id="product:vue-portfolio-template_caption"
+      >{{ $t("product.description.vuePortfolio") }}</figcaption>
+    </figure>
     <h4 id="related:vue-portfolio_heading">{{$t("heading.relatedList")}}</h4>
     <ul role="list" aria-labelledby="related:vue-portfolio_heading">
       <li role="listitem">

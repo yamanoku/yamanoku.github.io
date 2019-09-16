@@ -1,8 +1,9 @@
 <template>
-  <article id="product:qiita-code-style-before" aria-labelledby="product:qiita-code-style-before_heading">
-    <h3 id="product:qiita-code-style-before_heading">
-      {{ $t("product.qiitaCode") }}
-    </h3>
+  <article
+    id="product:qiita-code-style-before"
+    aria-labelledby="product:qiita-code-style-before_heading"
+  >
+    <h3 id="product:qiita-code-style-before_heading">{{ $t("product.qiitaCode") }}</h3>
     <p>{{ $t("product.description.qiitaCode") }}</p>
     <h4 id="related:qiita-code-style-before_heading">{{$t("heading.relatedList")}}</h4>
     <ul role="list" aria-labelledby="related:qiita-code-style-before_heading">
