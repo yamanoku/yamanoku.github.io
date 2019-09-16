@@ -99,6 +99,7 @@ export default {
       meta: {
         title: this.$t("aboutPage.title"),
         description: this.$t("aboutPage.description")
+        image: "https://yamanoku.net/ogp/ogp-about@2x.png"
       },
     }
   },
