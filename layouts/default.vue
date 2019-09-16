@@ -173,7 +173,11 @@ figure {
   margin: var(--rhythm) 0;
 }
 figcaption {
-  font-size: .8em;
+  margin-top: var(--rhythm);
+  font-size: 1rem;
+}
+small {
+  line-height: 1;
 }
 .anchor {
   position: absolute;
