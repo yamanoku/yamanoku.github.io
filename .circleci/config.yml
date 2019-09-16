@@ -15,8 +15,11 @@ jobs:
       # - image: circleci/mongo:3.4.4
 
     branches:
-        ignore:
-          - master
+        only:
+          - nuxt
+          - /renovate\/.*/
+          - /feature\/.*/
+          - /fix\/.*/
 
     working_directory: ~/repo
 
