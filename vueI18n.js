@@ -151,6 +151,23 @@ export default {
           desc02: "Cognitively impaired users can read text more easily if the words are evenly spaced.",
         }
       },
+      privacyPage: {
+        title: "Privacy Policy",
+        analytics: {
+          heading: "About Access Analysis Tools",
+          desc01: "yamanoku.net uses Google's access analysis tool “Google Analytics”.",
+          desc02: "This Google Analytics server uses cookies to collect access information. This access information is collected anonymously and is not personally identifiable.",
+          desc03: "Google Analytics cookies on this site will be retained for 26 months. This feature can be rejected by disabling cookies, so please check your browser settings.",
+          link01: {
+            title: "Google Analytics Terms of Service",
+            url: "https://www.google.com/analytics/terms/us.html",
+          },
+          link02: {
+            title: "How Google uses information from sites or apps that use our services",
+            url: "https://policies.google.com/technologies/partner-sites?hl=en",
+          }
+        }
+      },
       heading: {
         basic: "Basic Info",
         job: "Job Info",
@@ -337,6 +354,23 @@ export default {
           desc02: "認知障害がある利用者は、単語と単語の間隔が均一になっていると、テキストをより容易に読めるようになります。",
         }
       },
+      privacyPage: {
+        title: "プライバシーポリシー",
+        analytics: {
+          heading: "アクセス解析ツールについて",
+          desc01: "yamanoku.net（以下、当サイト）では、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。",
+          desc02: "このGoogleアナリティクスはアクセス情報の収集のためにCookieを使用しています。このアクセス情報は匿名で収集されており、個人を特定するものではありません。",
+          desc03: "当サイトでのGoogleアナリティクスのCookieは、26ヶ月間保持されます。この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。",
+          link01: {
+            title: "Googleアナリティクスの利用規約",
+            url: "https://www.google.com/analytics/terms/jp.html",
+          },
+          link02: {
+            title: "Googleのサービスを使用するサイトやアプリから収集した情報のGoogleによる使用",
+            url: "https://policies.google.com/technologies/partner-sites?hl=jp",
+          }
+        }
+      },
       heading: {
         basic: "基本情報",
         job: "職業",
@@ -519,6 +553,23 @@ export default {
         verticalRhythm: {
           desc01: "Nous utilisons un rythme vertical qui met l'accent sur la cohérence dans toute la page. Les marges et les marges sont définies par rapport à l'espacement des lignes de 24px.",
           desc02: "Les utilisateurs souffrant d'une déficience cognitive peuvent lire le texte plus facilement si les mots sont espacés de façon uniforme.",
+        }
+      },
+      privacyPage: {
+        title: "Politique de confidentialité",
+        analytics: {
+          heading: "A propos des outils d'analyse d'accès",
+          desc01: "yamanoku.net utilise l'outil d'analyse d'accès de Google “Google Analytics”.",
+          desc02: "Ce serveur Google Analytics utilise des cookies pour collecter des informations d'accès. Ces informations d'accès sont collectées anonymement et ne sont pas personnellement identifiables.",
+          desc03: "Les cookies de Google Analytics sur ce site seront conservés pendant 26 mois. Cette fonctionnalité peut être rejetée en désactivant les cookies, donc veuillez vérifier les paramètres de votre navigateur.",
+          link01: {
+            title: "Conditions d'utilisation de Google Analytics",
+            url: "https://www.google.com/analytics/terms/fr.html",
+          },
+          link02: {
+            title: "Comment utilisons-nous les informations collectées via les sites ou applications qui font appel à nos services ?",
+            url: "https://policies.google.com/technologies/partner-sites?hl=fr",
+          }
         }
       },
       heading: {
