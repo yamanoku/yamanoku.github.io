@@ -1,11 +1,17 @@
 <template>
-  <article id="product:web-accessibility-for-beginner" aria-labelledby="product:web-accessibility-for-beginner_heading">
-    <h3 id="product:web-accessibility-for-beginner_heading">
-      {{ $t("product.wafb.title") }}
-    </h3>
-    <figure aria-labelledby="product:web-accessibility-for-beginner_heading" aria-describedby="product:web-accessibility-for-beginner_caption">
-      <img src="~/assets/img/product-web-accessibility-for-beginner.jpg" height="480" alt="">
-      <figcaption id="product:web-accessibility-for-beginner_caption">{{ $t("product.description.wafb") }}</figcaption>
+  <article
+    id="product:web-accessibility-for-beginner"
+    aria-labelledby="product:web-accessibility-for-beginner_heading"
+  >
+    <h3 id="product:web-accessibility-for-beginner_heading">{{ $t("product.wafb.title") }}</h3>
+    <figure
+      aria-labelledby="product:web-accessibility-for-beginner_heading"
+      aria-describedby="product:web-accessibility-for-beginner_caption"
+    >
+      <img src="~/assets/img/product-web-accessibility-for-beginner.jpg" alt />
+      <figcaption
+        id="product:web-accessibility-for-beginner_caption"
+      >{{ $t("product.description.wafb") }}</figcaption>
     </figure>
     <template v-if="this.$i18n.locale !== 'ja'">
       <p>

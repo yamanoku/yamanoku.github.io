@@ -1,10 +1,11 @@
 <template>
   <article id="product:yamanoku-cli" aria-labelledby="product:yamanoku-cli_heading">
-    <h3 id="product:yamanoku-cli_heading">
-      {{ $t("product.yamanokuCli") }}
-    </h3>
-    <figure aria-labelledby="product:yamanoku-cli_heading" aria-describedby="product:yamanoku-cli_caption">
-      <img src="~/assets/img/product-yamanoku-cli.png" width="100%" alt="">
+    <h3 id="product:yamanoku-cli_heading">{{ $t("product.yamanokuCli") }}</h3>
+    <figure
+      aria-labelledby="product:yamanoku-cli_heading"
+      aria-describedby="product:yamanoku-cli_caption"
+    >
+      <img src="~/assets/img/product-yamanoku-cli.png" alt />
       <figcaption id="product:yamanoku-cli_caption">{{ $t("product.description.yamanokuCli") }}</figcaption>
     </figure>
     <ul role="list">

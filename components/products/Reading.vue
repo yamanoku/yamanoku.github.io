@@ -1,10 +1,8 @@
 <template>
   <article id="product:reading" aria-labelledby="product:reading_heading">
-    <h3 id="product:reading_heading">
-      {{ $t("product.reading") }}
-    </h3>
+    <h3 id="product:reading_heading">{{ $t("product.reading") }}</h3>
     <figure aria-labelledby="product:reading_heading" aria-describedby="product:reading_caption">
-      <img src="~/assets/img/product-reading.png" height="480" alt="">
+      <img src="~/assets/img/product-reading.png" alt />
       <figcaption id="product:reading_caption">{{ $t("product.description.reading") }}</figcaption>
     </figure>
     <h4 id="related:reading_heading">{{$t("heading.relatedList")}}</h4>
