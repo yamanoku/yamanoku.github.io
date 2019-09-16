@@ -6,6 +6,7 @@
       Updated at:
       <time :datetime="pushTime">{{pushTime}}</time>
     </p>
+    <nuxt-link :to="localePath({ name: 'privacy'})">{{$t("privacyPage.title")}}</nuxt-link>
     <p>&copy; Copyright {{currentYear}}, Okuto Oyama</p>
   </footer>
 </template>
