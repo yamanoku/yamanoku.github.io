@@ -23,10 +23,3 @@
     </figure>
   </section>
 </template>
-
-<style scoped>
-figcaption {
-  margin-top: var(--rhythm);
-  font-size: 1rem;
-}
-</style>
