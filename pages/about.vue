@@ -18,10 +18,10 @@
               <a href="#about:component-oriented">{{$t("aboutPage.subHeading.components")}}</a>
             </li>
             <li role="listitem">
-              <a href="#about:pwa">{{$t("aboutPage.subHeading.pwa")}}</a>
+              <a href="#about:progressive-web-application">{{$t("aboutPage.subHeading.pwa")}}</a>
             </li>
             <li role="listitem">
-              <a href="#about:i18n">{{$t("aboutPage.subHeading.i18n")}}</a>
+              <a href="#about:internationalization">{{$t("aboutPage.subHeading.i18n")}}</a>
             </li>
           </ul>
         </li>
