@@ -153,6 +153,7 @@ export default {
       },
       privacyPage: {
         title: "Privacy Policy",
+        description: "yamanoku.net privacy policy page. Provides information about access analysis tools.",
         analytics: {
           heading: "About Access Analysis Tools",
           desc01: "yamanoku.net uses Google's access analysis tool “Google Analytics”.",
@@ -356,6 +357,7 @@ export default {
       },
       privacyPage: {
         title: "プライバシーポリシー",
+        description: "yamanoku.netのプライバシーポリシーページです。アクセス解析ツールについての説明が載っています。",
         analytics: {
           heading: "アクセス解析ツールについて",
           desc01: "yamanoku.net（以下、当サイト）では、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。",
@@ -557,6 +559,7 @@ export default {
       },
       privacyPage: {
         title: "Politique de confidentialité",
+        description: "page de politique de confidentialité de yamanoku.net. Fournit des informations sur les outils d'analyse d'accès.",
         analytics: {
           heading: "A propos des outils d'analyse d'accès",
           desc01: "yamanoku.net utilise l'outil d'analyse d'accès de Google “Google Analytics”.",

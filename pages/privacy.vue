@@ -30,8 +30,9 @@ export default {
   data () {
     return {
       meta: {
-        title: "プライバシーポリシー",
-        description: "プライバシーポリシーにまつわるページ"
+        title: this.$t("privacyPage.title"),
+        description: this.$t("privacyPage.description"),
+        image: "https://yamanoku.net/ogp-privacy@2x.png"
       },
     }
   },
