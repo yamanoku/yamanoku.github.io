@@ -64,12 +64,12 @@
     </ul>
     <h4 id="product:crowding-rolling-sushi_heading">{{ $t("product.sushi") }}</h4>
     <figure
-      aria-labelledby="product:crowding-canvas-rolling-sushi_heading"
-      aria-describedby="product:crowding-canvas-rolling-sushi_caption"
+      aria-labelledby="product:crowding-rolling-sushi_heading"
+      aria-describedby="product:crowding-rolling-sushi_caption"
     >
       <img src="~/assets/img/product-crowding-rolling-sushi.png" alt />
       <figcaption
-        id="product:crowding-canvas-rolling-sushi_caption"
+        id="product:crowding-rolling-sushi_caption"
       >{{ $t("product.description.sushi") }}</figcaption>
     </figure>
     <h5 id="related:crowding-rolling-sushi_heading">{{$t("heading.relatedList")}}</h5>
