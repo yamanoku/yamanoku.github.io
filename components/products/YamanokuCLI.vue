@@ -5,7 +5,7 @@
       aria-labelledby="product:yamanoku-cli_heading"
       aria-describedby="product:yamanoku-cli_caption"
     >
-      <img src="~/assets/img/product-yamanoku-cli.png" alt />
+      <img src="~/assets/img/product-yamanoku-cli.png" :alt="$t('prefixAlt.screenshot') + $t('product.yamanokuCli')" />
       <figcaption id="product:yamanoku-cli_caption">{{ $t("product.description.yamanokuCli") }}</figcaption>
     </figure>
     <ul role="list">

@@ -8,7 +8,7 @@
       aria-labelledby="product:web-accessibility-for-beginner_heading"
       aria-describedby="product:web-accessibility-for-beginner_caption"
     >
-      <img src="~/assets/img/product-web-accessibility-for-beginner.jpg" alt />
+      <img src="~/assets/img/product-web-accessibility-for-beginner.jpg" :alt="$t('prefixAlt.photo') + $t('product.wafb.title')" />
       <figcaption
         id="product:web-accessibility-for-beginner_caption"
       >{{ $t("product.description.wafb") }}</figcaption>

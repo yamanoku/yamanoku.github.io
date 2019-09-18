@@ -8,7 +8,7 @@
       aria-labelledby="product:vue-portfolio-template_heading"
       aria-describedby="product:vue-portfolio-template_caption"
     >
-      <img src="~/assets/img/product-vue-portfolio-template.png" alt />
+      <img src="~/assets/img/product-vue-portfolio-template.png" :alt="$t('prefixAlt.screenshot') + $t('product.vuePortfolio')" />
       <figcaption
         id="product:vue-portfolio-template_caption"
       >{{ $t("product.description.vuePortfolio") }}</figcaption>

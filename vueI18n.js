@@ -200,6 +200,11 @@ export default {
           title: "Find on site map"
         }
       },
+      prefixAlt: {
+        photo: "Photo: ",
+        thumbnail: "Thumbnail: ",
+        screenshot: "ScreenShot: ",
+      },
       multilingual: "Multilingual Page",
       backTop: "Return to the top page",
       onlyJPText: "Sorry, Japanese text only"
@@ -404,6 +409,11 @@ export default {
           title: "サイトマップから探す"
         }
       },
+      prefixAlt: {
+        photo: "写真: ",
+        thumbnail: "サムネイル: ",
+        screenshot: "スクリーンショット: ",
+      },
       multilingual: "多言語ページ",
       backTop: "トップページに戻る"
     },
@@ -605,6 +615,11 @@ export default {
         sitemap: {
           title: "Trouver sur la carte du site"
         }
+      },
+      prefixAlt: {
+        photo: "Photo: ",
+        thumbnail: "Miniatures: ",
+        screenshot: "Capture d'écran: ",
       },
       multilingual: "Multilingue page",
       backTop: "Revenir à la page supérieure",

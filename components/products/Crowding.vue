@@ -6,7 +6,10 @@
       aria-labelledby="product:crowding-birthday-countdown_heading"
       aria-describedby="product:crowding-birthday-countdown_caption"
     >
-      <img src="~/assets/img/product-crowding-birthday-countdown.png" alt />
+      <img
+        src="~/assets/img/product-crowding-birthday-countdown.png"
+        :alt="$t('prefixAlt.screenshot') + $t('product.birthdayCount')"
+      />
       <figcaption
         id="product:crowding-birthday-countdown_caption"
       >{{ $t("product.description.birthdayCount") }}</figcaption>
@@ -31,7 +34,7 @@
       aria-labelledby="product:crowding-glitch-range_heading"
       aria-describedby="product:crowding-glitch-range_caption"
     >
-      <img src="~/assets/img/product-crowding-glitch-range.png" alt />
+      <img src="~/assets/img/product-crowding-glitch-range.png" :alt="$t('prefixAlt.screenshot') + $t('product.glitch')" />
       <figcaption id="product:crowding-glitch-range_caption">{{ $t("product.description.glitch") }}</figcaption>
     </figure>
     <h5 id="related:crowding-glitch-range_heading">{{$t("heading.relatedList")}}</h5>
@@ -48,7 +51,7 @@
       aria-labelledby="product:crowding-canvas-browser-crash_heading"
       aria-describedby="product:canvas-browser-crash_caption"
     >
-      <img src="~/assets/img/product-crowding-canvas-browser-crash.png" alt />
+      <img src="~/assets/img/product-crowding-canvas-browser-crash.png" :alt="$t('prefixAlt.screenshot') + $t('product.browserCrash')" />
       <figcaption
         id="product:canvas-browser-crash_caption"
       >{{ $t("product.description.browserCrash") }}</figcaption>
@@ -67,10 +70,8 @@
       aria-labelledby="product:crowding-rolling-sushi_heading"
       aria-describedby="product:crowding-rolling-sushi_caption"
     >
-      <img src="~/assets/img/product-crowding-rolling-sushi.png" alt />
-      <figcaption
-        id="product:crowding-rolling-sushi_caption"
-      >{{ $t("product.description.sushi") }}</figcaption>
+      <img src="~/assets/img/product-crowding-rolling-sushi.png" :alt="$t('prefixAlt.screenshot') + $t('product.sushi')" />
+      <figcaption id="product:crowding-rolling-sushi_caption">{{ $t("product.description.sushi") }}</figcaption>
     </figure>
     <h5 id="related:crowding-rolling-sushi_heading">{{$t("heading.relatedList")}}</h5>
     <ul role="list" aria-labelledby="product:crowding-rolling-sushi_heading">
