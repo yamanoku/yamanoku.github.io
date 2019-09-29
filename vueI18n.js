@@ -13,7 +13,7 @@ export default {
         6: "Internet Watcher"
       },
       info: {
-        caption: "I'm active on the Internet under the name of Oyama-Michinoku, yamanoku. My birthday is October 30, 1989. I was born in Noshiro City, Akita Prefecture. I'm male. Currently, I lives in Kamagaya City, Chiba Prefecture. One daughter's father and three cat owners.",
+        caption: "I'm active on the Internet under the name of Oyama-Michinoku, yamanoku. My birthday is October 30, 1989. I was born in Noshiro City, Akita Prefecture. I'm male. Currently, I lives in Nagareyama City, Chiba Prefecture. One daughter's father and three cat owners.",
         birth: "Born in Noshiro, Akita, Japan",
         sex: "Sex - Man",
         2008: {
@@ -25,7 +25,7 @@ export default {
         bfa: "Bachelor of Art and Culture Course.（BFA）",
         bfa01: "Fine Arts",
         bfa02: "Engineering and Design",
-        live: "Live in Kamagaya, Chiba, Japan",
+        live: "Live in Nagareyama, Chiba, Japan",
         photo: {
           alt: "Photo Okuto Oyama",
           caption: "Author's near shadow"
@@ -221,8 +221,7 @@ export default {
         6: "インターネットウォッチャー"
       },
       info: {
-        caption: "Je suis actif sur Internet comme Oyama-Michinoku, yamanoku. Mon anniversaire est le 30 octobre 1989. Je suis né à Noshiro City, dans la préfecture d'Akita . Mon sexe est masculin. Je vis actuellement à Kamagaya City, dans la préfecture de Chiba . Un père de fille et trois propriétaires de chats.",
-        caption: "ネット上では、おおやまみちのく、yamanokuと名乗って活動しています。誕生日は1989年10月30日。秋田県能代市生まれ。性別は男性。現在千葉県鎌ケ谷市在住。一児（娘）の父と3匹の猫の飼い主。",
+        caption: "ネット上では、おおやまみちのく、yamanokuと名乗って活動しています。誕生日は1989年10月30日。秋田県能代市生まれ。性別は男性。現在千葉県流山市在住。一児（娘）の父と3匹の猫の飼い主。",
         birth: " 秋田県能代市生まれ",
         sex: "性別 - 男性",
         2008: {
@@ -234,7 +233,7 @@ export default {
         bfa: "学士（美術）",
         bfa01: "芸術",
         bfa02: "デザインエンジニアリング",
-        live: "千葉県鎌ケ谷市在住",
+        live: "千葉県流山市在住",
         photo: {
           alt: "写真 大山奥人",
           caption: "著者近影"
@@ -429,7 +428,7 @@ export default {
         6: "Veille Internet"
       },
       info: {
-        caption: "Je suis actif sur Internet comme Oyama-Michinoku, yamanoku. Mon anniversaire est le 30 octobre 1989. Je suis né à Noshiro City, dans la préfecture d'Akita. Mon sexe est masculin. Je vis actuellement à Kamagaya City, dans la préfecture de Chiba. Un père de fille et trois propriétaires de chats.",
+        caption: "Je suis actif sur Internet comme Oyama-Michinoku, yamanoku. Mon anniversaire est le 30 octobre 1989. Je suis né à Noshiro City, dans la préfecture d'Akita. Mon sexe est masculin. Je vis actuellement à Nagareyama City, dans la préfecture de Chiba. Un père de fille et trois propriétaires de chats.",
         birth: "Né à Noshiro, Akita, Japon",
         sex: "Sexe - Homme",
         2008: {
@@ -441,7 +440,7 @@ export default {
         bfa: "Baccalauréat en Art et culture Cours. (BFA)",
         bfa01: "Beaux-Arts",
         bfa02: "Ingénierie et Design",
-        live: "Vivre à Kamagaya, Chiba, Japon",
+        live: "Vivre à Nagareyama, Chiba, Japon",
         photo: {
           alt: "Photo Okuto Oyama",
           caption: "Ombre proche de l'auteur"
