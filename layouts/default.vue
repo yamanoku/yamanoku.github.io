@@ -132,7 +132,7 @@ h3 {
   position: relative;
 }
 h4 {
-  margin: calc(var(--rhythm) * 2) 0;
+  margin: var(--rhythm) 0;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: var(--rhythm);
@@ -281,6 +281,11 @@ pre {
 }
 code.hljs {
   padding: var(--rhythm);
+}
+blockquote {
+  border-left: 6px solid var(--blue);
+  margin: var(--rhythm) 0 var(--rhythm) var(--rhythm);
+  padding: 0 var(--rhythm);
 }
 a.vue-skip-to {
   color: #fff;
