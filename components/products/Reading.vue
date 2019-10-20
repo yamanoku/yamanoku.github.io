@@ -28,7 +28,7 @@
       </li>
       <li role="listitem">
         <a
-          href="https://www.figma.com/file/IHsJKRaJXepsqcbX91iQ6YNV/Components?node-id=44%3A23"
+          href="https://www.figma.com/file/IHsJKRaJXepsqcbX91iQ6YNV/Reading...-Components?node-id=44%3A23"
           target="_blank"
           rel="noopener"
         >
