@@ -46,14 +46,12 @@ html {
   line-height: var(--rhythm);
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
-}
-body {
   font-family: Arial, Helvetica, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
 }
-html[lang="ja"] body {
-  font-family: "Noto Sans", "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+html[lang="ja"] {
+  font-family: "Noto Sans JP", sans-serif;
 }
 body.is-rhythm {
   position: relative;
