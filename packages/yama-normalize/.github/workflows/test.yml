@@ -1,4 +1,4 @@
-name: NPM Package
+name: Testing
 
 on:
   release:
@@ -12,5 +12,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn
+      - run: yarn install
       - run: yarn test
