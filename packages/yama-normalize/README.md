@@ -1,6 +1,10 @@
 # yama-normalize
 yamanoku.net default style
 
+## Case
+- https://yamanoku.net
+- https://nagareyama.yamanoku.net
+
 ## Support Browser
 - Chrome
 - Firefox
