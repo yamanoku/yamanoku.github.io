@@ -10,6 +10,9 @@ Okuto Oyama Portfolio Site.
   - eslint-plugin-vue
   - eslint-plugin-vue-a11y
 - Vuex （Store）
-- modern-normalize
-- highlight.js
-- dayjs
+- Style
+  - modern-normalize
+  - [yamanoku/yama-normalize](https://github.com/yamanoku/yama-normalize)
+- Utility
+  - highlight.js
+  - dayjs
