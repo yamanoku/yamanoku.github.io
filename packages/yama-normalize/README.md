@@ -1,4 +1,7 @@
 # yama-normalize
+
+![yama-normalize icon](./icon/Icon.svg)
+
 yamanoku.net default style
 
 ## Case
@@ -6,10 +9,10 @@ yamanoku.net default style
 - https://nagareyama.yamanoku.net
 
 ## Support Browser
-- Chrome
-- Firefox
-- Safari
-- Edge
+- Chrome Latest
+- Firefox Latest
+- Safari Latest
+- Edge Latest
 
 ## Install
 
@@ -28,6 +31,8 @@ $ npm install yama-normalize
 ```
 @import 'node_modules/yama-normalize/yama-normalize.css';
 ```
+
+or
 
 ```
 <link rel="stylesheet" href="node_modules/yama-normalize/yama-normalize.css">
