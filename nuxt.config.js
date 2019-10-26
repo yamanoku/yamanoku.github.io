@@ -46,7 +46,7 @@ module.exports = {
       }
     ]
   },
-  css: ["modern-normalize"],
+  css: ["modern-normalize", "yama-normalize"],
   build: {
     extend(config, { isDev }) {
       if (isDev && process.client) {
