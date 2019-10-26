@@ -2,7 +2,7 @@ name: NPM Package
 
 on:
   release:
-    types: [test]
+    types: [push, pull_request]
 
 jobs:
   test:
