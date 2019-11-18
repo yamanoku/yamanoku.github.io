@@ -5960,10 +5960,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-i18n@6.3.1:
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.3.1.tgz#7209f7f76e63f33c848df32feeef6966c76971ae"
-  integrity sha512-RDj2kWseEgab+2sC1fi+6h/Gh7+a5ynyZCNfbJMMzhql2ophyAMmNoVumREbFsu7IwVR9sDBb59sy1uC9V+YCw==
+nuxt-i18n@6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.4.0.tgz#91684e847d5333aa81fbb8e2836623a6aa3e94e3"
+  integrity sha512-1JQBL0Jn8G7ZialCa8S3HxgokM2Rqa68RtyPB4oT6Og58oN1d2OreZsQhNITLYdPn3hTOqTO+i55cdOs7AW5sw==
   dependencies:
     "@babel/parser" "^7.5.5"
     "@babel/traverse" "^7.5.5"
