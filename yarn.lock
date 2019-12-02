@@ -5169,10 +5169,10 @@ jpeg-js@^0.3.4:
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.3.5.tgz#6fbd6cd0e49627c5a0341796c9e50c70a2aa3673"
   integrity sha512-hvaExqwmQDS8O9qnZAVDXGWU43Tbu1V0wMZmjROjT11jloSgGICZpscG+P6Nyi1BVAvyu2ARRx8qmEW30sxgdQ==
 
-js-cookie@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.0.tgz#1b2c279a6eece380a12168b92485265b35b1effb"
-  integrity sha1-Gywnmm7s44ChIWi5JIUmWzWx7/s=
+js-cookie@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
+  integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
 
 js-levenshtein@^1.1.3:
   version "1.1.6"
@@ -5967,17 +5967,17 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-i18n@6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.4.0.tgz#91684e847d5333aa81fbb8e2836623a6aa3e94e3"
-  integrity sha512-1JQBL0Jn8G7ZialCa8S3HxgokM2Rqa68RtyPB4oT6Og58oN1d2OreZsQhNITLYdPn3hTOqTO+i55cdOs7AW5sw==
+nuxt-i18n@6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.4.1.tgz#8b8936e005602fcb3c26c53ee1c7b6f292a70aca"
+  integrity sha512-SHAK5eA9oci8AtqOCDvPgWKp+W7SIBbbxW5xraPO0YTdyJWuA1gmUuo24w7MSms4d/cUcWoJaNiEYZHqxidUTA==
   dependencies:
     "@babel/parser" "^7.5.5"
     "@babel/traverse" "^7.5.5"
     "@kazupon/vue-i18n-loader" "^0.4.0"
     cookie "^0.4.0"
     is-https "^1.0.0"
-    js-cookie "^2.2.0"
+    js-cookie "^2.2.1"
     vue-i18n "^8.12.0"
     vue-i18n-extensions "^0.2.1"
 
