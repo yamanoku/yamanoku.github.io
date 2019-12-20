@@ -1,13 +1,13 @@
 <template>
   <section id="section:vuejs-and-web-accessibility">
-    <h2>Vue.jsにおけるwebアクセシビリティ対応</h2>
-    <p>続いてこの節ではVue.js開発においてどのようなwebアクセシビリティ対応ができるかを紹介します。</p>
+    <h2>Vue.jsにおけるウェブアクセシビリティ対応</h2>
+    <p>続いてこの節ではVue.js開発においてどのようなウェブアクセシビリティ対応ができるかを紹介します。</p>
     <h3>
       何でも
       <code>div</code>で実装しない
     </h3>
     <p>
-      webアクセシビリティをつくるには、
+      ウェブアクセシビリティをつくるには、
       <strong>セマンティクスな実装を心がける</strong>、というのが基本です。これは
       <code>div</code>タグ（または
       <code>span</code>タグ）自体が悪いのではなく、情報設計に基づいた必要に応じたタグを使うべきということです。
@@ -58,7 +58,7 @@
     <h4>vue-axe</h4>
     <p>axe-coreというdeque systemsという会社が開発しているアクセシビリティチェックをするライブラリがあります。これはChromeのLighthouseのアクセシビリティ項目チェックでも使用されているものです。</p>
     <figure>
-      <img src="~/assets/img/vuefesjapan2019-vueaxe.png" height="96" alt />
+      <img src="~/assets/img/vue-a11y-vueaxe.png" height="96" alt />
     </figure>
     <p>こちらは組み込むことでコンソール上でアクセシビリティチェックを通してくれます。</p>
     <h4>Storybook</h4>
@@ -103,6 +103,82 @@
       target="_blank"
       rel="noopener"
     >Ameba Accessibility Guidelines</a>
+    <h3>Vue.jsのアクセシビリティ対応</h3>
+    <h4>アクセシビリティのドキュメントがない</h4>
+    <p>Vue.jsが日本で爆発的な人気を誇った要因の１つとして公式ドキュメントが日本語訳されていたことがあると思っています。私自身、ドキュメントの日本語訳があることで非常に取り組みやすかったです。</p>
+    <p>ところでそんなVue.jsの公式ドキュメントでアクセシビリティについてどれだけ言及されているか皆さんはご存知でしょうか。</p>
+    <p>実はアクセシビリティに言及されたドキュメントはなく、一部のドキュメント内で軽く触れているだけなのです。</p>
+    <blockquote>
+      <p>
+        As we develop our &lt;blog-post&gt; component, some features may require communicating back up to the parent. For example, we may decide to include an
+        <b>accessibility</b> feature to enlarge the text of blog posts, while leaving the rest of the page its default size:
+      </p>
+      <a
+        href="https://vuejs.org/v2/guide/components.html#Listening-to-Child-Components-Events"
+        target="_blank"
+        rel="noopener"
+      >Components Basics — Listening-to-Child-Components-Events — Vue.js</a>
+    </blockquote>
+    <blockquote>
+      <p>
+        You can use this base icon as is- the only thing you might need to update is the viewBox depending on the viewBox of your icons. In the base, we’re making the width, height, iconColor, and name of the icon props so that it can be dynamically updated with props. The name will be used for both the &lt;title&gt; content and its id for
+        <b>accessibility</b>.
+      </p>
+      <a
+        href="https://vuejs.org/v2/cookbook/editable-svg-icons.html#Base-Example"
+        target="_blank"
+        rel="noopener"
+      >Editable SVG Icon Systems — Base Example — Vue.js</a>
+    </blockquote>
+    <p>ReactとAngularは公式ドキュメントにアクセシビリティの項目があり、開発における留意点などをまとめています。</p>
+    <ul>
+      <li>
+        <a
+          href="https://ja.reactjs.org/docs/accessibility.html"
+          target="_blank"
+          rel="noopener"
+        >アクセシビリティ – React</a>
+      </li>
+      <li>
+        <a
+          href="https://angular.io/guide/accessibility"
+          target="_blank"
+          rel="noopener"
+        >Angular - Accessibility in Angular</a>
+      </li>
+    </ul>
+    <p>私はReactやAngularと同様にアクセシビリティの項目を設けても良いと感じています。Vue.jsのIssueを調べてみたところCallum Macra氏がドキュメントを作成を進めていたようなのですが、現在Pull Requestは止まっている状態です。</p>
+    <ul>
+      <li>
+        <a
+          href="https://github.com/vuejs/vuejs.org/issues/974"
+          target="_blank"
+          rel="noopener"
+        >Accessibility docs · Issue #974 · vuejs/vuejs.org</a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/callumacrae/vuejs.org/blob/a11y-docs/src/v2/guide/accessibility.md"
+          target="_blank"
+          rel="noopener"
+        >vuejs.org/accessibility.md at a11y-docs · callumacrae/vuejs.org</a>
+      </li>
+    </ul>
+    <p>私はこの内容についてを理解したいと思い、現在編集が進んでいるドキュメントを翻訳をしてみました。まだ途中ではありますがウェブアクセシビリティを理解するにとても良くまとまっている内容でしたので、皆さんにも見ていただきたいです。</p>
+    <a
+      href="https://gist.github.com/yamanoku/73176671e3d7d093b1635f37e0776fe8"
+      target="_blank"
+      rel="noopener"
+    >vuejs.org アクセシビリティに関するドキュメント（作業途中） の日本語訳</a>
+    <h4>Vue a11y</h4>
+    <p>公式ドキュメントでのアクセシビリティ項目の作成はまだですが、代わりにVue.jsのアクセシビリティコミュニティは作られています。</p>
+    <figure>
+      <img src="~/assets/img/vue-a11y-vuea11ycom.png" height="360" alt="Vue a11yサイトのスクリーンショット" />
+      <figcaption>
+        <a href="https://vue-a11y.com/" target="_blank" rel="noopener">Vue a11y</a>
+      </figcaption>
+    </figure>
+    <p>まだ作られて間もないコミュニティですが、さきほど紹介したvue-announcerのようなアクセシビリティライブラリもいくつか作成しており、私も何かしら寄与できたらいいなと思っております。</p>
   </section>
 </template>
 
