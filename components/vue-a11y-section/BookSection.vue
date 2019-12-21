@@ -2,16 +2,13 @@
   <section id="book">
     <h2>著書</h2>
     <h3>これからはじめるwebアクセシビリティ</h3>
-    <figure
-      aria-labelledby="product:web-accessibility-for-beginner_heading"
-      aria-describedby="product:web-accessibility-for-beginner_caption"
-    >
+    <figure>
       <img
         src="~/assets/img/product-web-accessibility-for-beginner.jpg"
         :alt="$t('prefixAlt.photo') + $t('product.wafb.title')"
       />
       <figcaption>
-        <p>技術書典で「これからはじめるwebアクセシビリティ」という技術同人誌を発表しました。ウェブアクセシビリティをはじめる方向けの導入として知ってもらいたいのがきっかけでした。</p>
+        <p>技術書典で「これからはじめるwebアクセシビリティ」という技術同人誌を発表しました。Webアクセシビリティをはじめる方向けの導入として知ってもらいたいのがきっかけでした。</p>
         <p>現在BOOTHやNoteでもPDFファイルにて販売しております。</p>
         <ul>
           <li>

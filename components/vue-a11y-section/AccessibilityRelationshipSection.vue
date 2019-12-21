@@ -1,7 +1,7 @@
 <template>
   <section id="section:accessibility-relationship">
     <h2>アクセシビリティ対応と必要性について</h2>
-    <p>ウェブアクセシビリティについて、Vue.js開発におけるアクセシビリティの関わり方についてを紹介しました。興味をもっていただいたところで、この節では様々なアクセシビリティ対応、そして何が必要となるかについてを紹介します。</p>
+    <p>Webアクセシビリティについて、Vue.js開発におけるアクセシビリティの関わり方についてを紹介しました。興味をもっていただいたところで、この節では様々なアクセシビリティ対応、そして何が必要となるかについてを紹介します。</p>
     <!--h3>カンファレンスとアクセシビリティ対応</h3>
     <p>次はカンファレンスの視点でのアクセシビリティの付き合い方についても考えてみましょう。</p>
     <h4>カンファレンスのアクセシビリティ方針</h4>
@@ -57,56 +57,8 @@
     </figure>
     <h4>東京オリンピックと東京パラリンピック</h4>
     <p>2020年には東京でオリンピックが56年ぶりに開催されます。大会の基本コンセプトの一つに「多様性と調和」を挙げています。</p>
-    <p>公式サイトでは ウェブアクセシビリティの遵守はもちろんのこと、すべての人々にとってアクセシブルでインクルーシブな大会とするためのアクセシビリティ・ガイドラインも制定しています。</p>
+    <p>公式サイトではWebアクセシビリティの遵守はもちろんのこと、すべての人々にとってアクセシブルでインクルーシブな大会とするためのアクセシビリティ・ガイドラインも制定しています。</p>
     <p>パラリンピックでの選手の活躍を見る以外にも、国際的な大会で日本がどういうアクセシビリティな取り組みをしているのかを見てみるのもよいかもしれません。</p>
-    <h3>アクセシビリティをより理解するには</h3>
-    <h4>参加する</h4>
-    <p>アクセシビリティをやっていくにあたり1人で1から初めていくことは非常に困難なことです。まずは日本のアクセシビリティグループのA11YJの Slack Team に入ってみることをオススメします。</p>
-    <p>アクセシビリティ初心者の方から、ウェブアクセシビリティを高めていくために必要な基盤構築の活動をするウェブアクセシビリティ基盤委員会のメンバー、web 以外でアクセシビリティにまつわる取り組みをされている方たちが居ます。アクセシビリティにまつわる情報共有、実装で困ったことやどういう解決策が良いのか質問することができます。</p>
-    <a href="https://a11yj.herokuapp.com/" target="_blank" rel="noopener">a11yj-slack-team</a>
-    <p>そのほか、渋谷を中心としたアクセシビリティ勉強会グループの CA11Y 、神戸市で2015年から毎年開催されているアクセシビリティの祭典、今年の7月に開催された Japan Accessibility Conference などアクセシビリティにまつわるイベントも開催されています。</p>
-    <ul>
-      <li>
-        <a href="https://ca11y.connpass.com/" target="_blank" rel="noopener">CA11Y</a>
-      </li>
-      <li>
-        <a href="https://accfes.com/" target="_blank" rel="noopener">アクセシビリティの祭典</a>
-      </li>
-      <li>
-        <a
-          href="https://japan-a11y-conf.com/"
-          target="_blank"
-          rel="noopener"
-        >Japan Accessibility Conference</a>
-      </li>
-    </ul>
-    <h4>知る</h4>
-    <p>ウェブアクセシビリティを知っていくにあたり、参考文献が必要になると思います。まずはデザイニングウェブ アクセシビリティを読んでみることをおすすめします。技術的なことよりかは、ウェブアクセシビリティの概念を理解するために最適な一冊です。</p>
-    <a
-      href="https://www.amazon.co.jp/dp/4862462650/"
-      target="_blank"
-      rel="noopener"
-    >デザイニングWebアクセシビリティ: アクセシブルな設計やコンテンツ制作のアプローチ</a>
-    <p>そのほか、 A11YJ の有志によって作り上げた ウェブアクセシビリティ参考資料まとめサイトの accrefs ウェブ アクセシビリティの「すべき/すべからず」を参照できるポスターの Access Needs Posters 、公的機関でのウェブ アクセシビリティ方針策定と試験結果表示の実態調査まとめも参考になります。</p>
-    <ul>
-      <li>
-        <a href="https://accrefs.jp/" target="_blank" rel="noopener">accrefs - Webアクセシビリティの参考資料まとめ</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/UKHomeOffice/posters/blob/master/accessibility/dos-donts/posters_ja/PDF/accessibility-posters-set_ja.pdf"
-          target="_blank"
-          rel="noopener"
-        >Access Needs Posters（日本語版）</a>
-      </li>
-      <li>
-        <a
-          href="https://waic.jp/resource/report/"
-          target="_blank"
-          rel="noopener"
-        >実態調査 | ウェブアクセシビリティ基盤委員会（WAIC）</a>
-      </li>
-    </ul>
   </section>
 </template>
 

@@ -3,10 +3,11 @@
     <title-section />
     <bio-section />
     <book-section />
-    <agenda-section />
+    <!-- <agenda-section /> -->
     <web-accessibility-section />
-    <accessibility-relationship-section />
+    <!-- <accessibility-relationship-section /> -->
     <vue-accessibility-section />
+    <accessibility-notes-section />
     <conclusion-section />
     <nuxt-link :to="localePath({ name: 'index'})">{{$t("backTop")}}</nuxt-link>
     <!-- <local-switch-component /> -->
@@ -21,6 +22,7 @@ import BookSection from "~/components/vue-a11y-section/BookSection.vue";
 import ConclusionSection from "~/components/vue-a11y-section/ConclusionSection.vue";
 import TitleSection from "~/components/vue-a11y-section/TitleSection.vue";
 import VueAccessibilitySection from "~/components/vue-a11y-section/VueAccessibilitySection.vue";
+import AccessibilityNotesSection from "~/components/vue-a11y-section/AccessibilityNotesSection.vue";
 import WebAccessibilitySection from "~/components/vue-a11y-section/WebAccessibilitySection.vue";
 import LocalSwitchComponent from "~/components/common/LocalSwitch.vue";
 
@@ -36,14 +38,15 @@ export default {
     ConclusionSection,
     TitleSection,
     VueAccessibilitySection,
-    WebAccessibilitySection,
+    AccessibilityNotesSection,
+    WebAccessibilitySection
   },
   data() {
     return {
       meta: {
         title: "Vue.jsから考えるアクセシビリティ",
-        description: this.$t("aboutPage.description"),
-        image: "https://yamanoku.net/ogp/ogp-about@2x.png"
+        description: "こちらは、Webアクセシビリティ Advent Calendar 2019の21日目の記事です。この記事ではVue.js開発におけるWebアクセシビリティ対応にまつわる内容となっております。",
+        image: "https://yamanoku.net/ogp/ogp-vue-a11y@2x.png"
       }
     };
   }
@@ -51,12 +54,6 @@ export default {
 </script>
 
 <style>
-figure {
-  text-align: center;
-}
-figcaption {
-  text-align: left;
-}
 img {
   max-width: 100%;
   height: auto;

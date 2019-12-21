@@ -9,5 +9,6 @@
         >Webアクセシビリティ Advent Calendar 2019</a
       >の21日目の記事です。
     </p>
+    <p>この記事はVue.js開発におけるWebアクセシビリティ対応にまつわる内容となっております。</p>
   </section>
 </template>
