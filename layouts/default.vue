@@ -29,31 +29,14 @@ export default {
 
 
 <style>
-:root {
-  --black: rgb(21, 32, 43);
-  --white: rgb(210, 210, 210);
-  --gray: rgba(70, 70, 70, 0.5);
-  --blue: rgb(90, 190, 255);
-  --purple: rgb(220, 100, 220);
-  --linkBlue: rgb(18, 122, 200);
-  --linkVisited: rgba(70, 70, 70, 0.5);
-  --rhythm: 24px;
-}
-html {
-  color: var(--black);
-  font: inherit;
-  font-size: 100%;
-  line-height: var(--rhythm);
-  overflow-wrap: break-word;
-  -webkit-font-smoothing: antialiased;
-}
-body {
-  font-family: Arial, Helvetica, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 400;
-}
 html[lang="ja"] body {
   font-family: "Noto Sans", "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+}
+html[lang="ja"] main,
+html[lang="ja"] header,
+html[lang="ja"] nav,
+html[lang="ja"] footer {
+  max-width: 45rem;
 }
 body.is-rhythm {
   position: relative;
@@ -81,156 +64,6 @@ body.is-rhythm::after {
   width: auto;
   z-index: 9999;
 }
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-*:focus {
-  outline: 2px solid var(--blue);
-  outline-offset: 2px;
-}
-a {
-  color: var(--linkBlue);
-}
-a:visited {
-  color: var(--linkVisited);
-}
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: var(--black);
-    color: var(--white);
-  }
-  a {
-    color: var(--blue);
-    text-shadow: 1px 1px 0 var(--black), 0 1px 0 var(--black);
-  }
-  a:visited {
-    color: var(--purple);
-  }
-}
-main {
-  max-width: 80ch;
-  margin: auto;
-  padding: 0 var(--rhythm);
-}
-h1 {
-  margin: var(--rhythm) 0;
-  font-size: 2rem;
-  line-height: calc(var(--rhythm) * 2);
-}
-h2 {
-  margin: var(--rhythm) 0;
-  font-size: 1.4rem;
-  line-height: var(--rhythm);
-  position: relative;
-}
-h3 {
-  margin: var(--rhythm) 0;
-  font-size: 1.2rem;
-  line-height: var(--rhythm);
-  position: relative;
-}
-h4 {
-  margin: var(--rhythm) 0;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: var(--rhythm);
-  position: relative;
-}
-section {
-  display: block;
-  margin: calc(var(--rhythm) * 2) 0;
-}
-article {
-  position: relative;
-  padding: var(--rhythm) 0;
-}
-article::before {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: var(--gray);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-@media (prefers-color-scheme: dark) {
-  article::before {
-    background-color: var(--white);
-  }
-}
-p {
-  margin: var(--rhythm) 0;
-  font-size: 1rem;
-  line-height: var(--rhythm);
-}
-img {
-  max-width: 100%;
-  vertical-align: bottom;
-}
-figure {
-  margin: var(--rhythm) 0;
-}
-figcaption {
-  margin-top: var(--rhythm);
-  font-size: 1rem;
-}
-small {
-  line-height: 1;
-}
-.anchor {
-  position: absolute;
-  left: 0;
-  display: none;
-}
-@media screen and (min-width: 769px) {
-  .anchor {
-    display: block;
-  }
-  .anchor-heading {
-    margin-left: calc(-1 * var(--rhythm));
-    padding-left: var(--rhythm);
-  }
-}
-.anchor path {
-  fill: rgba(0, 0, 0, 0.6);
-}
-@media (prefers-color-scheme: dark) {
-  .anchor path {
-    fill: var(--blue);
-  }
-}
-ul:not([class]) {
-  margin: var(--rhythm) 0;
-  line-height: 1;
-  padding-left: var(--rhythm);
-  list-style-type: none;
-  position: relative;
-}
-ul:not([class]) ul {
-  margin: 0;
-}
-ul:not([class]) li {
-  line-height: var(--rhythm);
-  font-size: 1rem;
-}
-ul:not([class]) li::before {
-  background-color: var(--black);
-  border-radius: 50%;
-  color: #fff;
-  content: "";
-  width: 6px;
-  height: 6px;
-  margin: 9px 0 0;
-  position: absolute;
-  left: 0;
-}
-@media (prefers-color-scheme: dark) {
-  ul:not([class]) li::before {
-    background-color: var(--white);
-  }
-}
 ul:not([class]) li svg {
   width: 12px;
   height: 12px;
@@ -257,9 +90,6 @@ ul:not([class]) li svg .shopping-2,
 ul:not([class]) li svg .open_new-1 {
   fill: none;
 }
-address {
-  margin: var(--rhythm) 0;
-}
 address svg {
   width: 12px;
   height: 12px;
@@ -275,9 +105,6 @@ address svg path {
 }
 address svg .mail-2 {
   fill: none;
-}
-pre {
-  margin: var(--rhythm) 0;
 }
 code.hljs {
   padding: var(--rhythm);

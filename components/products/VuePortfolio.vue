@@ -23,7 +23,7 @@
       </li>
       <li role="listitem">
         <a
-          href="https://www.figma.com/file/4yN9uOXGISbSTocH23EX8O/Style?node-id=0%3A1"
+          href="https://www.figma.com/file/4yN9uOXGISbSTocH23EX8O/vue_portfolio_template-Style?node-id=0%3A1"
           target="_blank"
           rel="noopener"
         >
