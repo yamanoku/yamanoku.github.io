@@ -3,9 +3,7 @@
     <title-section />
     <bio-section />
     <book-section />
-    <!-- <agenda-section /> -->
     <web-accessibility-section />
-    <!-- <accessibility-relationship-section /> -->
     <vue-accessibility-section />
     <accessibility-notes-section />
     <conclusion-section />
@@ -15,14 +13,12 @@
 </template>
 
 <script>
-import AccessibilityRelationshipSection from "~/components/vue-a11y-section/AccessibilityRelationshipSection.vue";
-import AgendaSection from "~/components/vue-a11y-section/AgendaSection.vue";
+import AccessibilityNotesSection from "~/components/vue-a11y-section/AccessibilityNotesSection.vue";
 import BioSection from "~/components/vue-a11y-section/BioSection.vue";
 import BookSection from "~/components/vue-a11y-section/BookSection.vue";
 import ConclusionSection from "~/components/vue-a11y-section/ConclusionSection.vue";
 import TitleSection from "~/components/vue-a11y-section/TitleSection.vue";
 import VueAccessibilitySection from "~/components/vue-a11y-section/VueAccessibilitySection.vue";
-import AccessibilityNotesSection from "~/components/vue-a11y-section/AccessibilityNotesSection.vue";
 import WebAccessibilitySection from "~/components/vue-a11y-section/WebAccessibilitySection.vue";
 import LocalSwitchComponent from "~/components/common/LocalSwitch.vue";
 
@@ -31,14 +27,12 @@ import Meta from "~/mixins/meta";
 export default {
   mixins: [Meta],
   components: {
-    AccessibilityRelationshipSection,
-    AgendaSection,
+    AccessibilityNotesSection,
     BioSection,
     BookSection,
     ConclusionSection,
     TitleSection,
     VueAccessibilitySection,
-    AccessibilityNotesSection,
     WebAccessibilitySection
   },
   data() {
