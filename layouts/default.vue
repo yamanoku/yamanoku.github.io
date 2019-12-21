@@ -109,6 +109,11 @@ address svg .mail-2 {
 code.hljs {
   padding: var(--rhythm);
 }
+blockquote {
+  border-left: 6px solid var(--blue);
+  margin: var(--rhythm) 0 var(--rhythm) var(--rhythm);
+  padding: 0 var(--rhythm);
+}
 a.vue-skip-to {
   color: #fff;
   text-decoration: none;
