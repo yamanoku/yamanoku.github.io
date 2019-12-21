@@ -101,7 +101,7 @@
       >のアクセシビリティ項目チェックでも使用されているものです。
     </p>
     <figure>
-      <img src="~/assets/img/vue-a11y-vueaxe.png" height="96" alt />
+      <img src="~/assets/img/vue-a11y-vueaxe.png" height="96" alt="vue-axeの動作イメージ。Chromeのコンソール上にアラート結果が出ている" />
     </figure>
     <p>
       こちらは組み込むことでコンソール上でアクセシビリティチェックを通してくれます。
@@ -208,5 +208,6 @@ export default {
 <style>
 code:not(.hljs) {
   line-height: 1;
+  padding: 0;
 }
 </style>
