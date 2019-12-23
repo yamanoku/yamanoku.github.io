@@ -65,6 +65,12 @@ export const state = () => {
     ],
     write: [
       {
+        title: "Vue.jsから考えるアクセシビリティについて",
+        url:
+          "/vue-a11y",
+        datetime: "2019-12-21"
+      },
+      {
         title: "みんなに知ってもらいたいデザインシステムのこと",
         url:
           "https://note.com/yamanoku/n/n8acc38df2902",

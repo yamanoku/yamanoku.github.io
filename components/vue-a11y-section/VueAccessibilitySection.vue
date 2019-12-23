@@ -1,7 +1,9 @@
 <template>
   <section id="vuejs-and-web-accessibility">
     <h2>Vue.jsとWebアクセシビリティ</h2>
-    <p>アクセシビリティについて何かを知っていただいたとことで、本題でもあるVue.jsとアクセシビリティにまつわる話をしていきたいと思います。</p>
+    <p>
+      アクセシビリティについて何かを知っていただいたとことで、本題でもあるVue.jsとアクセシビリティにまつわる話をしていきたいと思います。
+    </p>
     <h3>アクセシビリティのドキュメントがない</h3>
     <p>
       Vue.jsが日本で爆発的な人気を誇った要因の１つとして公式ドキュメントが日本語訳されていたことがあると思っています。私自身、ドキュメントの日本語訳があることで非常に取り組みやすかったです。
@@ -24,8 +26,9 @@
         href="https://vuejs.org/v2/guide/components.html#Listening-to-Child-Components-Events"
         target="_blank"
         rel="noopener"
-        >Components Basics — Listening-to-Child-Components-Events — Vue.js</a
-      >
+        >Components Basics — Listening-to-Child-Components-Events —
+        Vue.js<open-new-icon
+      /></a>
     </blockquote>
     <blockquote>
       <p>
@@ -40,8 +43,8 @@
         href="https://vuejs.org/v2/cookbook/editable-svg-icons.html#Base-Example"
         target="_blank"
         rel="noopener"
-        >Editable SVG Icon Systems — Base Example — Vue.js</a
-      >
+        >Editable SVG Icon Systems — Base Example — Vue.js<open-new-icon
+      /></a>
     </blockquote>
     <p>
       ReactとAngularは公式ドキュメントにアクセシビリティの項目があり、開発における留意点などをまとめています。
@@ -52,16 +55,16 @@
           href="https://ja.reactjs.org/docs/accessibility.html"
           target="_blank"
           rel="noopener"
-          >アクセシビリティ – React</a
-        >
+          >アクセシビリティ – React<open-new-icon
+        /></a>
       </li>
       <li>
         <a
           href="https://angular.io/guide/accessibility"
           target="_blank"
           rel="noopener"
-          >Angular - Accessibility in Angular</a
-        >
+          >Angular - Accessibility in Angular<open-new-icon
+        /></a>
       </li>
     </ul>
     <p>
@@ -75,16 +78,17 @@
           href="https://github.com/vuejs/vuejs.org/issues/974"
           target="_blank"
           rel="noopener"
-          >Accessibility docs · Issue #974 · vuejs/vuejs.org</a
-        >
+          >Accessibility docs · Issue #974 · vuejs/vuejs.org<open-new-icon
+        /></a>
       </li>
       <li>
         <a
           href="https://github.com/callumacrae/vuejs.org/blob/a11y-docs/src/v2/guide/accessibility.md"
           target="_blank"
           rel="noopener"
-          >vuejs.org/accessibility.md at a11y-docs · callumacrae/vuejs.org</a
-        >
+          >vuejs.org/accessibility.md at a11y-docs ·
+          callumacrae/vuejs.org<open-new-icon
+        /></a>
       </li>
     </ul>
     <p>
@@ -94,8 +98,9 @@
       href="https://gist.github.com/yamanoku/73176671e3d7d093b1635f37e0776fe8"
       target="_blank"
       rel="noopener"
-      >vuejs.org アクセシビリティに関するドキュメント（作業途中） の日本語訳</a
-    >
+      >vuejs.org アクセシビリティに関するドキュメント（作業途中）
+      の日本語訳<open-new-icon
+    /></a>
     <h3>Vue a11y</h3>
     <p>
       公式ドキュメントでのアクセシビリティ項目の作成はまだですが、代わりにVue.jsのアクセシビリティコミュニティは作られています。
@@ -108,8 +113,8 @@
       />
       <figcaption>
         <a href="https://vue-a11y.com/" target="_blank" rel="noopener"
-          >Vue a11y</a
-        >
+          >Vue a11y<open-new-icon
+        /></a>
       </figcaption>
     </figure>
     <p>

@@ -21,8 +21,8 @@
           href="https://www.w3.org/History/1989/proposal.html"
           target="_blank"
           rel="noopener"
-          >The original proposal of the WWW, HTMLized</a
-        >
+          >The original proposal of the WWW, HTMLized<open-new-icon
+        /></a>
       </figcaption>
     </figure>
     <blockquote>
@@ -34,8 +34,9 @@
         href="https://www.w3.org/People/Berners-Lee/"
         target="_blank"
         rel="noopener"
-        >Tim Berners-Lee, W3C Director and inventor of the World Wide Web</a
-      >
+        >Tim Berners-Lee, W3C Director and inventor of the World Wide
+        Web<open-new-icon
+      /></a>
     </blockquote>
     <p>
       ティム・バーナーズ＝リーは「Webのパワーは、その普遍性にある。障害の有無に関係なく、誰もが使えることが、その本質である」と説きました。
@@ -49,8 +50,8 @@
         href="https://www.wired.com/1999/10/interview-with-the-webs-creator/"
         target="_blank"
         rel="noopener"
-        >Interview with the Web’s Creator | WIRED</a
-      >
+        >Interview with the Web’s Creator | WIRED<open-new-icon
+      /></a>
     </blockquote>
     <p>
       そして「情報を取得するためにどんなデバイスを使用していたとしても、取得できる情報は同じであるべきだ。」ともインタビューで答えていました。これこそまさにWebがアクセシビリティを実現するソリューションであることを示しています。
@@ -63,10 +64,12 @@
         href="https://www.digima-japan.com/knowhow/world/15167.php"
         target="_blank"
         rel="noopener"
-        >世界人口におけるインターネット利用者の数は50%のハーフラインを超えました</a
+        >世界人口におけるインターネット利用者の数は50%のハーフラインを超えました<open-new-icon /></a
       >。
     </p>
-    <p>この数が大きくなることで、よりインターネットに触れられないことの格差というものも大きくなるように感じられます。Webというものを取り扱う人たちであればアクセシブルにしていくということは、より命題となってくることでしょう。</p>
+    <p>
+      この数が大きくなることで、よりインターネットに触れられないことの格差というものも大きくなるように感じられます。Webというものを取り扱う人たちであればアクセシブルにしていくということは、より命題となってくることでしょう。
+    </p>
     <blockquote>
       <p>
         ウェブのための戦いは、我々の時代におけるもっとも重要な大義の一つである。今日、世界の半分がネットにつながっている。その残り半分がネットにつながらないまま取り残されることなく、皆が平等、機会、創造性を推進するウェブに貢献できるようにすることは、かつてないほど差し迫った課題なのだ。
@@ -79,8 +82,8 @@
         href="https://www.yamdas.org/column/technique/web-birthday-30j.html"
         target="_blank"
         rel="noopener"
-        >30 years on, what’s next #ForTheWeb? 日本語訳</a
-      >
+        >30 years on, what’s next #ForTheWeb? 日本語訳<open-new-icon
+      /></a>
     </blockquote>
     <h3>Vue.js を通じて、Webを活かして、アクセシビリティに取り組もう</h3>
     <p>
@@ -99,8 +102,9 @@
         href="https://code.kzakza.com/2019/03/start-small-start-now/"
         target="_blank"
         rel="noopener"
-        >アクセシビリティは "Start Small, Start Now" でいこう | kzakza</a
-      >
+        >アクセシビリティは "Start Small, Start Now" でいこう |
+        kzakza<open-new-icon
+      /></a>
     </blockquote>
     <p>
       本記事を通じて、開発者やデザイナー、Vue.js

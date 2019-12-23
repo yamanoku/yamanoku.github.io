@@ -1,7 +1,9 @@
 <template>
   <section id="web-accessibility-notes">
     <h2>Vue.jsにおける実装の留意点</h2>
-    <p>次にウェブアクセシビリティを考慮する上でVue.jsの実装で留意しておくべきことについて紹介します。</p>
+    <p>
+      次にウェブアクセシビリティを考慮する上でVue.jsの実装で留意しておくべきことについて紹介します。
+    </p>
     <h3>
       何でも
       <code>div</code>で実装しない
@@ -21,8 +23,8 @@
         href="https://waic.jp/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html"
         target="_blank"
         rel="noopener"
-        >達成基準 4.1.2 を理解する | WCAG 2.0解説書</a
-      >
+        >達成基準 4.1.2 を理解する | WCAG 2.0解説書<open-new-icon
+      /></a>
     </blockquote>
     <p>
       たとえばボタンを実装するとき、
@@ -64,7 +66,7 @@
         href="https://github.com/vue-a11y/vue-announcer"
         target="_blank"
         rel="noopener"
-        >vue-announcer</a
+        >vue-announcer<open-new-icon /></a
       >というライブラリを利用してみても良いかも知れません。routerでのページ移動の読み上げや、コンポーネント内での状態変化の読み上げも簡単に設定できるようになります。
     </p>
     <h3>Nuxt.jsの設定</h3>
@@ -91,17 +93,21 @@
         href="https://github.com/dequelabs/axe-core"
         target="_blank"
         rel="noopener"
-        >axe-core</a
+        >axe-core<open-new-icon /></a
       >というdeque
       systemsという会社が開発しているアクセシビリティチェックをするライブラリがあります。これはChromeの<a
         href="https://developers.google.com/web/tools/lighthouse/"
         target="_blank"
         rel="noopener"
-        >Lighthouse</a
+        >Lighthouse<open-new-icon /></a
       >のアクセシビリティ項目チェックでも使用されているものです。
     </p>
     <figure>
-      <img src="~/assets/img/vue-a11y-vueaxe.png" height="96" alt="vue-axeの動作イメージ。Chromeのコンソール上にアラート結果が出ている" />
+      <img
+        src="~/assets/img/vue-a11y-vueaxe.png"
+        height="96"
+        alt="vue-axeの動作イメージ。Chromeのコンソール上にアラート結果が出ている"
+      />
     </figure>
     <p>
       こちらは組み込むことでコンソール上でアクセシビリティチェックを通してくれます。
@@ -112,7 +118,7 @@
         href="https://www.npmjs.com/package/@storybook/addon-a11y"
         target="_blank"
         rel="noopener"
-        >storybook-addon-a11y</a
+        >storybook-addon-a11y<open-new-icon /></a
       >があり、これを使うことでコンポーネントやストーリーに対してアクセシビリティチェックを通すことが出来ます。
     </p>
     <figure>
@@ -146,8 +152,8 @@
       target="_blank"
       rel="noopener"
       >What we found when we tested tools on the world’s least-accessible
-      webpage - Accessibility in government</a
-    >
+      webpage - Accessibility in government<open-new-icon
+    /></a>
     <p>
       そのため、ユーザテストを通したチェックも必要となります。ブラウザチェックやスクリーンリーダーテスト、キーボードテストといった実際に見てみる、触ってみるのを試した上で問題ないかをテストしていきます。
     </p>
@@ -157,8 +163,8 @@
       >を参考にしましょう。これはW3C勧告として公開されたwebコンテンツをアクセシブルにするためのガイドラインで、どうすることでアクセシブルになるか、技術に依存しない検証方法も提示されています。
     </p>
     <a href="https://waic.jp/docs/WCAG21/" target="_blank" rel="noopener"
-      >Web Content Accessibility Guidelines (WCAG) 2.1</a
-    >
+      >Web Content Accessibility Guidelines (WCAG) 2.1<open-new-icon
+    /></a>
     <p>
       しかし毎回WCAGの仕様を参照しにいくことも大変なので、必要な要素を参考にした上で独自のガイドラインを作成できると良さそうです。
     </p>
@@ -166,8 +172,8 @@
       href="https://openameba.github.io/a11y-guidelines/"
       target="_blank"
       rel="noopener"
-      >Ameba Accessibility Guidelines</a
-    >
+      >Ameba Accessibility Guidelines<open-new-icon
+    /></a>
   </section>
 </template>
 
