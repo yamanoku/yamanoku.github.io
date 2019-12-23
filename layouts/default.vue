@@ -22,11 +22,10 @@ export default {
   components: {
     HeaderComponent,
     FooterComponent,
-    GlobalNavigation,
+    GlobalNavigation
   }
 };
 </script>
-
 
 <style>
 html[lang="ja"] body {
@@ -63,6 +62,9 @@ body.is-rhythm::after {
   top: 0;
   width: auto;
   z-index: 9999;
+}
+ul:not([class]) li time {
+  font-variant-numeric: tabular-nums;
 }
 ul:not([class]) li svg {
   width: 12px;
