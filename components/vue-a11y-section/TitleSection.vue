@@ -1,12 +1,12 @@
 <template>
   <section id="title">
-    <h1>Vue.js から考えるアクセシビリティについて</h1>
+    <h1>Vue.jsから考えるアクセシビリティについて</h1>
     <p>
       こちらは、<a
         href="https://adventar.org/calendars/3994"
         target="_blank"
         rel="noopener"
-        >Webアクセシビリティ Advent Calendar 2019</a
+        >Webアクセシビリティ Advent Calendar 2019<open-new-icon /></a
       >の21日目の記事です。
     </p>
     <p>この記事はVue.js開発におけるWebアクセシビリティ対応にまつわる内容となっております。</p>
