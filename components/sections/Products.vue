@@ -7,7 +7,6 @@
     <reading />
     <vue-portfolio />
     <yamanoku-cli />
-    <slack-primoji />
     <qiita-code />
     <crowding />
   </section>
@@ -18,8 +17,6 @@ import A11yBeginner from "~/components/products/A11yBeginner.vue";
 import Reading from "~/components/products/Reading.vue";
 import VuePortfolio from "~/components/products/VuePortfolio.vue";
 import YamanokuCli from "~/components/products/YamanokuCLI.vue";
-import SlackPrimoji from "~/components/products/SlackPrimoji.vue";
-import QiitaCode from "~/components/products/QiitaCode.vue";
 import Crowding from "~/components/products/Crowding.vue";
 
 export default {
@@ -28,8 +25,6 @@ export default {
     Reading,
     VuePortfolio,
     YamanokuCli,
-    SlackPrimoji,
-    QiitaCode,
     Crowding
   }
 };

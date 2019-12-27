@@ -41,26 +41,6 @@
         <a href="https://github.com/yamanoku" target="_blank" rel="noopener">{{ $t("sns.github") }}</a>
       </li>
       <li role="listitem">
-        <a href="https://qiita.com/yamanoku" target="_blank" rel="noopener">{{ $t("sns.qiita") }}</a>
-      </li>
-      <li role="listitem">
-        <a href="https://mstdn.jp/@yamanoku" target="_blank" rel="noopener">{{ $t("sns.mstdn") }}</a>
-      </li>
-      <li role="listitem">
-        <a
-          href="https://www.instagram.com/yamanoku/"
-          target="_blank"
-          rel="noopener"
-        >{{ $t("sns.instagram") }}</a>
-      </li>
-      <li role="listitem">
-        <a
-          href="http://profile.hatena.ne.jp/cardboarder/"
-          target="_blank"
-          rel="noopener"
-        >{{ $t("sns.hatena") }}</a>
-      </li>
-      <li role="listitem">
         <a
           href="http://steamcommunity.com/id/yamanoku/"
           target="_blank"

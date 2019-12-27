@@ -139,19 +139,3 @@ export const mutations = {
     state.qiita = issues
   },
 }
-
-export const actions = {
-  async fetchArticles (ctx) {
-    const qiita_url = "https://qiita.com/api/v2/users/yamanoku/items"
-    const qiita_data = await this.$axios.get(qiita_url, {
-      params: {
-        page: 1,
-        per_page: 10
-      }
-    }).then(response => {
-      return response.data;
-    });
-    const qiita = qiita_data.filter(issue => !issue.pull_request);
-    ctx.commit("SET_ARTICLES", qiita);
-  }
-}
