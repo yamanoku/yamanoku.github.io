@@ -22,12 +22,6 @@
       {{ $t("heading.slides.lt") }}
     </h3>
     <slide-list :listArray="listLT" />
-    <template v-if="listQiita.length">
-      <h3 id="slides-qiita">
-        Qiita
-      </h3>
-      <slide-list :listArray="listQiita" />
-    </template>
   </section>
 </template>
 
@@ -40,7 +34,6 @@ export default {
   },
   data() {
     return {
-      listQiita: this.$store.state.slide.qiita,
       listStage: this.$store.state.slide.stage,
       listStudy: this.$store.state.slide.study,
       listWrite: this.$store.state.slide.write,
