@@ -101,7 +101,6 @@ module.exports = {
     "~plugins/vue-highlight.js",
     { src: "~plugins/vue-skip-to.js", mode: "client" },
     "~plugins/storeGithub.js",
-    "~plugins/storeSlide.js",
     "~plugins/storeDay.js"
   ],
   workbox: {

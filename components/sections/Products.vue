@@ -7,7 +7,6 @@
     <reading />
     <vue-portfolio />
     <yamanoku-cli />
-    <qiita-code />
     <crowding />
   </section>
 </template>
