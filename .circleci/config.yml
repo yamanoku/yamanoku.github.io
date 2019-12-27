@@ -32,5 +32,5 @@ jobs:
           key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-      # run tests!
+      - run: echo $APITokens | base64 --decode > ./static/config.js
       - run: yarn build
