@@ -40,13 +40,6 @@
       <li role="listitem">
         <a href="https://github.com/yamanoku" target="_blank" rel="noopener">{{ $t("sns.github") }}</a>
       </li>
-      <li role="listitem">
-        <a
-          href="http://steamcommunity.com/id/yamanoku/"
-          target="_blank"
-          rel="noopener"
-        >{{ $t("sns.steam") }}</a>
-      </li>
     </ul>
   </section>
 </template>

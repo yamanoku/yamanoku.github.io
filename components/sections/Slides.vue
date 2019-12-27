@@ -34,7 +34,6 @@ export default {
   },
   data() {
     return {
-      listQiita: this.$store.state.slide.qiita,
       listStage: this.$store.state.slide.stage,
       listStudy: this.$store.state.slide.study,
       listWrite: this.$store.state.slide.write,
