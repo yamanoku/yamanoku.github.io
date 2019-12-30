@@ -1,3 +1,4 @@
-export const a11y_token = `4af7ca157599fc687ae4bd5ff5a723b1db994198`
-export const read_token = `673e5ca243c33d8ebbbb3906ff2283634b49b34a`
-export const vue_token = `b22b3267e02dd2e84ffc05fd31c631a2f8b8f02b`
+export const a11y_token = `68f588badf61b6cd80925c0661edc6ca79d5a56a`
+export const read_token = `e5a0b95459ca4289231d2251024b275f1612c48e`
+export const vue_token = `5f8ce4db03063e0eb342056bcbb9dbff0cd17a41`
+export const portfolio_token = `657b7bdda158539992b91cafc2226b3aa5543746`
