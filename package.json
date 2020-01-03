@@ -34,6 +34,6 @@
     "highlight.js": "9.17.1",
     "modern-normalize": "0.6.0",
     "style-loader": "1.1.2",
-    "yama-normalize": "0.0.6"
+    "yama-normalize": "0.0.7"
   }
 }
