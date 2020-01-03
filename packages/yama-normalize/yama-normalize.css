@@ -1,12 +1,12 @@
 :root {
   --black: rgb(21, 32, 43);
   --white: rgb(210, 210, 210);
-  --gray: rgba(70, 70, 70, 0.5);
+  --gray: rgba(70, 70, 70, .5);
   --blue: rgb(90, 190, 255);
   --purple: rgb(220, 100, 220);
   --linkBlue: rgb(18, 122, 200);
-  --linkVisited: rgba(70, 70, 70, 0.5);
-  --rhythm: 0.5rem;
+  --linkVisited: rgba(70, 70, 70, .5);
+  --rhythm: .5rem;
 }
 html {
   color: var(--black);
@@ -80,12 +80,12 @@ h4 {
 }
 h5 {
   margin: calc(var(--rhythm) * 2) 0;
-  font-size: 0.8em;
+  font-size: .8em;
   line-height: calc(var(--rhythm) * 2);
 }
 h6 {
   margin: calc(var(--rhythm) * 1) 0;
-  font-size: 0.64em;
+  font-size: .64em;
   line-height: calc(var(--rhythm) * 1);
 }
 section {
@@ -111,9 +111,9 @@ article::before {
   }
 }
 p {
-  margin: calc(var(--rhythm)*3) 0;
+  margin: calc(var(--rhythm) * 3) 0;
   font-size: 1rem;
-  line-height: calc(var(--rhythm)*3);
+  line-height: calc(var(--rhythm) * 3);
 }
 img {
   max-width: 100%;
