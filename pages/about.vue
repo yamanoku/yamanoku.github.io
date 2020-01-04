@@ -122,7 +122,7 @@ export default {
 <style scoped>
 .toc {
   border-left: 8px solid var(--gray);
-  padding-left: var(--rhythm);
+  padding-left: calc(var(--rhythm) * 3);
 }
 @media (prefers-color-scheme: dark) {
   .toc {

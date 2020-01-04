@@ -15,12 +15,12 @@
 nav {
   max-width: 80ch;
   margin: auto;
-  padding: 0 var(--rhythm);
+  padding: 0 calc(var(--rhythm) * 2);
 }
 nav ul.global {
   display: flex;
   list-style-type: none;
-  margin: var(--rhythm) 0;
+  margin: calc(var(--rhythm) * 3) 0;
   padding: 0;
 }
 nav ul.global li {

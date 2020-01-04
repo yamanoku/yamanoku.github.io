@@ -25,13 +25,11 @@ export default {
 
 <style scoped>
 footer {
-  max-width: 80ch;
-  margin: auto;
-  padding: var(--rhythm);
+  padding: calc(var(--rhythm) * 3);
   text-align: center;
 }
 footer p {
   font-size: 1rem;
-  line-height: var(--rhythm);
+  line-height: calc(var(--rhythm) * 3);
 }
 </style>

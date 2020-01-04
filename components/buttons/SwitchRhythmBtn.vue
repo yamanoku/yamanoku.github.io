@@ -39,8 +39,8 @@ export default {
   border: none;
   display: block;
   font-size: inherit;
-  line-height: var(--rhythm);
-  margin: var(--rhythm) 0;
+  margin: calc(var(--rhythm) * 3) 0;
+  line-height: calc(var(--rhythm) * 3);
   padding: 0;
   position: relative;
   text-align: left;
@@ -68,16 +68,16 @@ export default {
 .switch-rhythm span:after {
   background: #fff;
   border-radius: 100%;
-  height: calc(var(--rhythm) / 1.45);
-  right: calc(var(--rhythm) / 1.45);
+  height: calc(var(--rhythm) * 1.75);
+  right: calc(var(--rhythm) * 1.25);
   transition: right 0.1825s ease-in-out;
-  width: calc(var(--rhythm) / 1.45);
+  width: calc(var(--rhythm) * 1.75);
 }
 
 .switch-rhythm span:before {
   background: var(--white);
-  border-radius: var(--rhythm);
-  height: var(--rhythm);
+  border-radius: calc(var(--rhythm) * 3);
+  height: calc(var(--rhythm) * 3);
   right: 0.25em;
   transition: background 0.2s ease-in-out;
   width: 2.75em;
@@ -88,7 +88,7 @@ export default {
 }
 
 .switch-rhythm[aria-checked="true"] span:after {
-  right: 8px;
+  right: calc(var(--rhythm) * 1.05);
 }
 
 .switch-rhythm[aria-checked="true"] span:before {
@@ -103,7 +103,7 @@ export default {
 }
 
 .switch-rhythm[aria-checked="false"] .show-labels:after {
-  right: 40px;
+  right: calc(var(--rhythm) * 5.25);
 }
 
 @media screen and (-ms-high-contrast: active) {
