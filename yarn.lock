@@ -9064,7 +9064,7 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-yama-normalize@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/yama-normalize/-/yama-normalize-0.0.7.tgz#0c4d37886a67c96fa0e1a55842bb715128340777"
-  integrity sha512-HDsDEOMpgAvgs8lJB4LQFvnoJ9MHc5fmFKVrvlLeHgN6O79yO0m3MG+mmNVv5BCZH+d3ylV7ObXPphmPrCb2Uw==
+yama-normalize@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/yama-normalize/-/yama-normalize-0.0.8.tgz#e797fce7aaef34bf61b648018aa42c06ac19ba12"
+  integrity sha512-vs2rGpFC5/yvaBzkkQxKJncJCBNwmUTcBPOzDQn74Fm823N5DnxmWWw+m0J9IMFnzeBK34PqtU8LgckkwNM/Uw==
