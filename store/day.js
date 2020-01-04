@@ -1,4 +1,3 @@
-import { portfolio_token } from "../static/config";
 import dayjs from 'dayjs'
 
 export const state = () => {
@@ -24,7 +23,7 @@ export const mutations = {
 export const actions = {
   async setDay (ctx) {
     ctx.commit("GET_CURRENT_YEAR", dayjs().year());
-    const portfolioURL = `https://api.github.com/repos/yamanoku/yamanoku.github.io?access_token=${portfolio_token}`
+    const portfolioURL = `https://api.github.com/repos/yamanoku/yamanoku.github.io`
     const portfolioData = await this.$axios.get(portfolioURL).then(response => {
       return response.data;
     });
