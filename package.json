@@ -12,7 +12,7 @@
     "deploy": "gh-pages -d dist -b master -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "@nuxtjs/axios": "5.9.0",
+    "@nuxtjs/axios": "5.9.2",
     "@nuxtjs/dotenv": "1.4.1",
     "@nuxtjs/google-gtag": "1.0.4",
     "@nuxtjs/pwa": "2.6.0",
@@ -28,12 +28,12 @@
     "eslint": "6.8.0",
     "eslint-friendly-formatter": "4.0.1",
     "eslint-loader": "3.0.3",
-    "eslint-plugin-vue": "6.1.1",
+    "eslint-plugin-vue": "6.1.2",
     "eslint-plugin-vue-a11y": "0.0.31",
     "gh-pages": "2.1.1",
     "highlight.js": "9.17.1",
     "modern-normalize": "0.6.0",
     "style-loader": "1.1.2",
-    "yama-normalize": "0.0.6"
+    "yama-normalize": "0.0.7"
   }
 }
