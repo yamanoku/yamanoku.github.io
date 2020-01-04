@@ -109,12 +109,12 @@ address svg .mail-2 {
   fill: none;
 }
 code.hljs {
-  padding: var(--rhythm);
+  padding: calc(var(--rhythm) * 3);
 }
 blockquote {
   border-left: 6px solid var(--blue);
   margin: var(--rhythm) 0 var(--rhythm) var(--rhythm);
-  padding: 0 var(--rhythm);
+  padding: 0 calc(var(--rhythm) * 2);
 }
 a.vue-skip-to {
   color: #fff;

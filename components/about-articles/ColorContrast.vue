@@ -60,9 +60,8 @@ export default {
 
 <style scoped>
 dl {
-  padding: var(--rhythm);
-  margin: 0 calc(-1 * var(--rhythm));
-  line-height: var(--rhythm);
+  padding: calc(var(--rhythm) * 3);
+  margin: 0 calc(-3 * var(--rhythm));
   color: var(--black);
   display: grid;
   background-color: #fff;
@@ -74,7 +73,7 @@ dl {
   }
 }
 dl > div {
-  padding: calc(var(--rhythm) / 2);
+  padding: calc(var(--rhythm) * 1.5);
   background-color: #fff;
 }
 dl dt {
