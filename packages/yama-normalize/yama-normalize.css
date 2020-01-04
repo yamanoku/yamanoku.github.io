@@ -94,7 +94,8 @@ section {
 }
 article {
   position: relative;
-  padding: var(--rhythm) 0;
+  margin: calc(var(--rhythm) * 3) 0;
+  padding-bottom: calc(var(--rhythm) * 3);
 }
 article::before {
   content: "";
@@ -120,10 +121,10 @@ img {
   vertical-align: bottom;
 }
 figure {
-  margin: var(--rhythm) 0;
+  margin: calc(var(--rhythm) * 3) 0;
 }
 figcaption {
-  margin-top: var(--rhythm);
+  margin-top: calc(var(--rhythm) * 3);
   font-size: 1rem;
 }
 small {
@@ -160,11 +161,11 @@ ul:not([class]) li::before {
   }
 }
 address {
-  margin: var(--rhythm) 0;
+  margin: calc(var(--rhythm) * 3) 0;
 }
 pre {
-  margin: var(--rhythm) 0;
+  margin: calc(var(--rhythm) * 3) 0;
 }
 code {
-  padding: var(--rhythm);
+  padding: calc(var(--rhythm) * 3);
 }
