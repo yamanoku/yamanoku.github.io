@@ -59,6 +59,9 @@ module.exports = {
       }
     }
   },
+  render: {
+    injectScripts: false
+  },
   modules: [
     "@nuxtjs/pwa",
     [
