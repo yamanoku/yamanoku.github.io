@@ -72,34 +72,21 @@
       Macra氏がドキュメントを作成を進めていたようなのですが、現在Pull
       Requestは止まっている状態です。
     </p>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vuejs.org/issues/974"
-          target="_blank"
-          rel="noopener"
-          >Accessibility docs · Issue #974 · vuejs/vuejs.org<open-new-icon
-        /></a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/callumacrae/vuejs.org/blob/a11y-docs/src/v2/guide/accessibility.md"
-          target="_blank"
-          rel="noopener"
-          >vuejs.org/accessibility.md at a11y-docs ·
-          callumacrae/vuejs.org<open-new-icon
-        /></a>
-      </li>
-    </ul>
-    <p>
-      私はこの内容についてを理解したいと思い、現在編集が進んでいるドキュメントを翻訳をしてみました。まだ途中ではありますがWebアクセシビリティを理解するにとても良くまとまっている内容でしたので、皆さんにも見ていただきたいです。
-    </p>
     <a
-      href="https://gist.github.com/yamanoku/73176671e3d7d093b1635f37e0776fe8"
+      href="https://github.com/vuejs/vuejs.org/issues/974"
       target="_blank"
       rel="noopener"
-      >vuejs.org アクセシビリティに関するドキュメント（作業途中）
-      の日本語訳<open-new-icon
+      >Accessibility docs · Issue #974 · vuejs/vuejs.org<open-new-icon
+    /></a>
+    <p>
+      まだ途中ではありますが、現在編集が進んでいるドキュメントではWebアクセシビリティを理解するにとても良くまとまっている内容でした。英語のドキュメントですが、皆さんにも見ていただきたいです。
+    </p>
+    <a
+      href="https://github.com/callumacrae/vuejs.org/blob/a11y-docs/src/v2/guide/accessibility.md"
+      target="_blank"
+      rel="noopener"
+      >vuejs.org/accessibility.md at a11y-docs ·
+      callumacrae/vuejs.org<open-new-icon
     /></a>
     <h3>Vue a11y</h3>
     <p>
