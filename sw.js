@@ -6,7 +6,7 @@ importScripts('https://cdn.jsdelivr.net/npm/workbox-cdn@4.3.1/workbox/workbox-sw
 
 // Set workbox config
 workbox.setConfig({
-  "debug": false
+  "debug": true
 })
 
 // Start controlling any existing clients as soon as it activates
