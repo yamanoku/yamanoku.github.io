@@ -21,13 +21,6 @@ import AddressComponent from "~/components/sections/Address.vue";
 import LocalSwitchComponent from "~/components/common/LocalSwitch.vue";
 
 export default {
-  head() {
-    return {
-      bodyAttrs: {
-        class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
-      }
-    };
-  },
   components: {
     BasicInfoComponent,
     CareerInfoComponent,

@@ -60,9 +60,6 @@ export default {
         content: this.meta.image
       });
     }
-    head.bodyAttrs["class"] = this.$store.state.rhythm.toggleRhythm
-      ? "is-rhythm"
-      : "";
     return head;
   }
 };
