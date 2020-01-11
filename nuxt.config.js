@@ -102,7 +102,6 @@ module.exports = {
   plugins: [
     "~plugins/icons.js",
     "~plugins/vue-highlight.js",
-    { src: "~plugins/vue-skip-to.js", mode: "client" },
     "~plugins/storeGithub.js",
     "~plugins/storeDay.js"
   ],
