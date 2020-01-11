@@ -64,13 +64,8 @@ dl {
   margin: 0 calc(-3 * var(--rhythm));
   color: var(--black);
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
   background-color: #fff;
-  grid-template-columns: repeat(3, 1fr);
-}
-@media screen and (max-width: 768px) {
-  dl {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 dl > div {
   padding: calc(var(--rhythm) * 1.5);
