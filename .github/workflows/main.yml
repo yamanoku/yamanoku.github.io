@@ -17,11 +17,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: yarn install, build, and lint
+    - name: yarn install, lint, and generate
       run: |
         echo ${{ secrets.APITokens }} | base64 --decode > ./static/config.js
         yarn install
-        yarn build
         yarn lint
+        yarn generate
       env:
         CI: true
