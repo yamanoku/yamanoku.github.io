@@ -17,7 +17,7 @@
     "@nuxtjs/google-gtag": "1.0.4",
     "@nuxtjs/pwa": "3.0.0-beta.19",
     "nuxt": "2.11.0",
-    "nuxt-i18n": "6.4.1",
+    "nuxt-i18n": "6.5.0",
     "vue-highlight.js": "3.1.0",
     "vue-skip-to": "1.0.6",
     "vuex": "3.1.2"
