@@ -103,6 +103,7 @@ module.exports = {
     "~plugins/icons.js",
     "~plugins/vue-highlight.js",
     "~plugins/storeGithub.js",
+    "~plugins/storeSlide.js",
     "~plugins/storeDay.js"
   ],
   workbox: {

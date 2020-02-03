@@ -18,10 +18,6 @@
       {{ $t("heading.slides.write") }}
     </h3>
     <slide-list :listArray="listWrite" />
-    <h3 id="slides-lt">
-      {{ $t("heading.slides.lt") }}
-    </h3>
-    <slide-list :listArray="listLT" />
   </section>
 </template>
 
@@ -37,7 +33,6 @@ export default {
       listStage: this.$store.state.slide.stage,
       listStudy: this.$store.state.slide.study,
       listWrite: this.$store.state.slide.write,
-      listLT: this.$store.state.slide.lt
     };
   }
 };
