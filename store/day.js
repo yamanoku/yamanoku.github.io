@@ -24,10 +24,14 @@ export const mutations = {
 export const actions = {
   async setDay(ctx) {
     ctx.commit("GET_CURRENT_YEAR", dayjs().year())
-    const portfolioURL = `https://api.github.com/repos/yamanoku/yamanoku.github.io?access_token=${portfolio_token}`
-    const portfolioData = await this.$axios.get(portfolioURL).then(response => {
-      return response.data
-    })
+    const portfolioURL = `https://api.github.com/repos/yamanoku/yamanoku.github.io`
+    const portfolioData = await this.$axios
+      .get(portfolioURL, {
+        headers: { Authorization: `yamanoku:${portfolio_token}` }
+      })
+      .then(response => {
+        return response.data
+      })
     ctx.commit("SET_PUSH_TIME", portfolioData.updated_at)
     ctx.commit("SET_CREATE_TIME", portfolioData.created_at)
   }
