@@ -1,6 +1,6 @@
 <template>
   <main role="main" id="main">
-    <h1>{{errorHeading}}</h1>
+    <h1>{{ errorHeading }}</h1>
     <template v-if="error.statusCode === 404">
       <p>{{ $t("error.404.text01") }}</p>
       <p>{{ $t("error.404.text02") }}</p>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import SitemapList from "~/components/lists/SitemapList.vue";
+import SitemapList from "~/components/lists/SitemapList.vue"
 export default {
   props: {
     error: {
@@ -30,34 +30,38 @@ export default {
   },
   head() {
     return {
-      title: this.error.statusCode + ' Error',
+      title: this.error.statusCode + " Error",
       meta: [
         {
           hid: "description",
           name: "description",
           content: this.error.statusCode
         },
-        { name: "twitter:title", content: this.error.statusCode + ' Error' },
+        { name: "twitter:title", content: this.error.statusCode + " Error" },
         {
           name: "twitter:description",
           content: this.error.statusCode
         }
-      ],
-    };
+      ]
+    }
   },
   computed: {
     statusCode() {
-      return (this.error && this.error.statusCode) || 500;
+      return (this.error && this.error.statusCode) || 500
     },
     errorHeading() {
       if (this.$i18n.locale === "ja") {
-        return "申し訳ありません。" + this.error.statusCode + "エラーです。";
+        return "申し訳ありません。" + this.error.statusCode + "エラーです。"
       } else if (this.$i18n.locale === "fr") {
-        return "Je suis désolé Une erreur " + this.error.statusCode + " s'est produite.";
+        return (
+          "Je suis désolé Une erreur " +
+          this.error.statusCode +
+          " s'est produite."
+        )
       } else {
-        return "I'm sorry for the " + this.error.statusCode + " error.";
+        return "I'm sorry for the " + this.error.statusCode + " error."
       }
-    },
+    }
   }
-};
+}
 </script>

@@ -9,11 +9,14 @@ module.exports = {
   },
   extends: [
     'plugin:vue/essential',
-    'plugin:vue-a11y/base'
+    'plugin:vue-a11y/base',
+    'plugin:prettier/recommended'
   ],
   plugins: [
     'vue',
     'vue-a11y'
   ],
-  rules: {}
+  rules: {
+    'prettier/prettier': ['error', { 'semi': false }]
+  }
 }

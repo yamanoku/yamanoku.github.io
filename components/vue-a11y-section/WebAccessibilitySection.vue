@@ -18,8 +18,8 @@
         target="_blank"
         rel="noopener"
         >W3Cのアクセシビリティと標準技術 | Web Accessibility Initiative (WAI) |
-        W3C<open-new-icon /></a
-      >
+        W3C<open-new-icon
+      /></a>
     </blockquote>
     <h3>アクセシビリティ対応とは障害者対応なのか</h3>
     <p>
@@ -44,8 +44,8 @@
           target="_blank"
           rel="noopener"
           >Google
-          I/Oはアクセシビリティ強化に全力、聴覚障害者にも電車でYouTubeを見るにも便利<open-new-icon /></a
-        >
+          I/Oはアクセシビリティ強化に全力、聴覚障害者にも電車でYouTubeを見るにも便利<open-new-icon
+        /></a>
       </figcaption>
     </figure>
     <p>

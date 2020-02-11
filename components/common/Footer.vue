@@ -2,12 +2,14 @@
   <footer>
     <p>
       Created at:
-      <time :datetime="createTime">{{createTime}}</time>,
-      Updated at:
-      <time :datetime="pushTime">{{pushTime}}</time>
+      <time :datetime="createTime">{{ createTime }}</time
+      >, Updated at:
+      <time :datetime="pushTime">{{ pushTime }}</time>
     </p>
-    <nuxt-link :to="localePath({ name: 'privacy'})">{{$t("privacyPage.title")}}</nuxt-link>
-    <p>&copy; Copyright {{currentYear}}, Okuto Oyama</p>
+    <nuxt-link :to="localePath({ name: 'privacy' })">{{
+      $t("privacyPage.title")
+    }}</nuxt-link>
+    <p>&copy; Copyright {{ currentYear }}, Okuto Oyama</p>
   </footer>
 </template>
 
@@ -17,10 +19,10 @@ export default {
     return {
       currentYear: this.$store.state.day.currentYear,
       pushTime: this.$store.state.day.pushTime,
-      createTime: this.$store.state.day.createTime,
-    };
+      createTime: this.$store.state.day.createTime
+    }
   }
-};
+}
 </script>
 
 <style scoped>

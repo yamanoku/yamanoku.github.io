@@ -1,3 +1,3 @@
-module.exports = (ctx) => {
-  return ctx.store.dispatch("slide/fetchArticle");
+module.exports = ctx => {
+  return ctx.store.dispatch("slide/fetchArticle")
 }

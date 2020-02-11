@@ -1,7 +1,7 @@
 <template>
   <article id="about:tech-stack" aria-labelledby="about:tech-stack_heading">
     <h3 id="about:tech-stack_heading">
-      {{$t("heading.techStack")}}
+      {{ $t("heading.techStack") }}
     </h3>
     <ul role="list">
       <li role="listitem">

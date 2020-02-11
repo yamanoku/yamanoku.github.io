@@ -7,7 +7,7 @@
     <p>{{ $t("career.desc02") }}</p>
     <p>{{ $t("career.desc03") }}</p>
     <p>{{ $t("career.desc04") }}</p>
-    <h3 id="related:career_heading">{{$t("heading.relatedList")}}</h3>
+    <h3 id="related:career_heading">{{ $t("heading.relatedList") }}</h3>
     <ul role="list" aria-labelledby="related:career_heading">
       <li role="listitem">
         <a
@@ -20,19 +20,31 @@
         </a>
       </li>
       <li role="listitem">
-        <a href="https://scrapbox.io/yamanoku/Skill_Sets" target="_blank" rel="noopener">
+        <a
+          href="https://scrapbox.io/yamanoku/Skill_Sets"
+          target="_blank"
+          rel="noopener"
+        >
           {{ $t("career.skillSet") }}
           <article-icon />
         </a>
       </li>
       <li role="listitem">
-        <a href="https://www.wantedly.com/users/347527" target="_blank" rel="noopener">
+        <a
+          href="https://www.wantedly.com/users/347527"
+          target="_blank"
+          rel="noopener"
+        >
           {{ $t("career.wantedly") }}
           <open-new-icon />
         </a>
       </li>
       <li role="listitem">
-        <a href="https://lapras.com/public/ZQJMZYO" target="_blank" rel="noopener">
+        <a
+          href="https://lapras.com/public/ZQJMZYO"
+          target="_blank"
+          rel="noopener"
+        >
           {{ $t("career.lapras") }}
           <open-new-icon />
         </a>

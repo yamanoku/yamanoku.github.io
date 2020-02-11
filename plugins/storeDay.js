@@ -1,3 +1,3 @@
-module.exports = (ctx) => {
-  return ctx.store.dispatch("day/setDay");
+module.exports = ctx => {
+  return ctx.store.dispatch("day/setDay")
 }

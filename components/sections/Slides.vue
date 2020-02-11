@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import SlideList from "~/components/lists/SlideList.vue";
+import SlideList from "~/components/lists/SlideList.vue"
 
 export default {
   components: {
@@ -32,8 +32,8 @@ export default {
     return {
       listStage: this.$store.state.slide.stage,
       listStudy: this.$store.state.slide.study,
-      listWrite: this.$store.state.slide.write,
-    };
+      listWrite: this.$store.state.slide.write
+    }
   }
-};
+}
 </script>
