@@ -1,14 +1,19 @@
 <template>
   <article id="product:reading" aria-labelledby="product:reading_heading">
     <h3 id="product:reading_heading">{{ $t("product.reading") }}</h3>
-    <figure aria-labelledby="product:reading_heading" aria-describedby="product:reading_caption">
+    <figure
+      aria-labelledby="product:reading_heading"
+      aria-describedby="product:reading_caption"
+    >
       <img
         src="~/assets/img/product-reading.png"
         :alt="$t('prefixAlt.screenshot') + $t('product.reading')"
       />
-      <figcaption id="product:reading_caption">{{ $t("product.description.reading") }}</figcaption>
+      <figcaption id="product:reading_caption">
+        {{ $t("product.description.reading") }}
+      </figcaption>
     </figure>
-    <h4 id="related:reading_heading">{{$t("heading.relatedList")}}</h4>
+    <h4 id="related:reading_heading">{{ $t("heading.relatedList") }}</h4>
     <ul role="list" aria-labelledby="related:reading_heading">
       <li role="listitem">
         <a href="https://reading.yamanoku.net" target="_blank" rel="noopener">
@@ -37,7 +42,7 @@
         </a>
       </li>
     </ul>
-    <h4 id="teck-stack:reading_heading">{{$t("heading.techStack")}}</h4>
+    <h4 id="teck-stack:reading_heading">{{ $t("heading.techStack") }}</h4>
     <ul role="list" aria-labelledby="teck-stack:reading_heading">
       <li role="listitem">Nuxt.js</li>
       <li role="listitem">Nuxt PWA</li>
@@ -54,7 +59,7 @@
       <ul role="list" aria-labelledby="todo:reading_heading">
         <li role="listitem" v-for="issue in readingIssue" :key="issue.id">
           <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">
-            {{issue.title}}
+            {{ issue.title }}
             <github-icon />
           </a>
         </li>
@@ -68,7 +73,7 @@ export default {
   data() {
     return {
       readingIssue: this.$store.state.github.read_issues
-    };
+    }
   }
-};
+}
 </script>

@@ -1,9 +1,16 @@
 <template>
-  <article id="about:component-oriented" aria-labelledby="about:component-oriented_heading">
-    <h3 id="about:component-oriented_heading">{{$t("aboutPage.subHeading.components")}}</h3>
-    <p>{{$t("aboutPage.components.desc01")}}</p>
+  <article
+    id="about:component-oriented"
+    aria-labelledby="about:component-oriented_heading"
+  >
+    <h3 id="about:component-oriented_heading">
+      {{ $t("aboutPage.subHeading.components") }}
+    </h3>
+    <p>{{ $t("aboutPage.components.desc01") }}</p>
     <figure>
-      <highlight-code id="slide-components" lang="vue">{{slide}}</highlight-code>
+      <highlight-code id="slide-components" lang="vue">{{
+        slide
+      }}</highlight-code>
       <figcaption>
         <a
           href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/lists/SlideList.vue#L1-L18"
@@ -15,10 +22,12 @@
         </a>
       </figcaption>
     </figure>
-    <p>{{$t("aboutPage.components.desc02")}}</p>
-    <p>{{$t("aboutPage.components.desc03")}}</p>
+    <p>{{ $t("aboutPage.components.desc02") }}</p>
+    <p>{{ $t("aboutPage.components.desc03") }}</p>
     <figure>
-      <highlight-code id="api-for-store" lang="javascript">{{api}}</highlight-code>
+      <highlight-code id="api-for-store" lang="javascript">{{
+        api
+      }}</highlight-code>
       <figcaption>
         <a
           href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/products/A11yBeginner.vue#L52-L58"
@@ -67,7 +76,7 @@ export default {
   }
 };
       `
-    };
+    }
   }
-};
+}
 </script>

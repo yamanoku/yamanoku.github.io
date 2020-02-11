@@ -1,9 +1,9 @@
-import vueI18n from "./vueI18n";
+import vueI18n from "./vueI18n"
 
-const baseName = process.env.BASE_NAME || "yamanoku.net";
-const baseDesc = process.env.BASE_DISC || "Okuto Oyama Portfolio Site";
-const baseUrl = process.env.BASE_URL || "https://yamanaoku.net";
-const baseOgp = process.env.BASE_OGP || "https://yamanoku.net/ogp/ogp@2x.png";
+const baseName = process.env.BASE_NAME || "yamanoku.net"
+const baseDesc = process.env.BASE_DISC || "Okuto Oyama Portfolio Site"
+const baseUrl = process.env.BASE_URL || "https://yamanaoku.net"
+const baseOgp = process.env.BASE_OGP || "https://yamanoku.net/ogp/ogp@2x.png"
 
 module.exports = {
   mode: "universal",
@@ -11,7 +11,7 @@ module.exports = {
     baseName,
     baseDesc,
     baseUrl,
-    baseOgp,
+    baseOgp
   },
   head: {
     htmlAttrs: {
@@ -55,7 +55,7 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
           exclude: /(node_modules)/
-        });
+        })
       }
     }
   },
@@ -120,4 +120,4 @@ module.exports = {
     theme_color: "#36465d",
     background_color: "#36465d"
   }
-};
+}

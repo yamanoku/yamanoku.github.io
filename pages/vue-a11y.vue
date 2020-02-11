@@ -20,16 +20,16 @@
 </template>
 
 <script>
-import AccessibilityNotesSection from "~/components/vue-a11y-section/AccessibilityNotesSection.vue";
-import BioSection from "~/components/vue-a11y-section/BioSection.vue";
-import BookSection from "~/components/vue-a11y-section/BookSection.vue";
-import ConclusionSection from "~/components/vue-a11y-section/ConclusionSection.vue";
-import TitleSection from "~/components/vue-a11y-section/TitleSection.vue";
-import VueAccessibilitySection from "~/components/vue-a11y-section/VueAccessibilitySection.vue";
-import WebAccessibilitySection from "~/components/vue-a11y-section/WebAccessibilitySection.vue";
-import LocalSwitchComponent from "~/components/common/LocalSwitch.vue";
+import AccessibilityNotesSection from "~/components/vue-a11y-section/AccessibilityNotesSection.vue"
+import BioSection from "~/components/vue-a11y-section/BioSection.vue"
+import BookSection from "~/components/vue-a11y-section/BookSection.vue"
+import ConclusionSection from "~/components/vue-a11y-section/ConclusionSection.vue"
+import TitleSection from "~/components/vue-a11y-section/TitleSection.vue"
+import VueAccessibilitySection from "~/components/vue-a11y-section/VueAccessibilitySection.vue"
+import WebAccessibilitySection from "~/components/vue-a11y-section/WebAccessibilitySection.vue"
+import LocalSwitchComponent from "~/components/common/LocalSwitch.vue"
 
-import Meta from "~/mixins/meta";
+import Meta from "~/mixins/meta"
 
 export default {
   mixins: [Meta],
@@ -50,9 +50,9 @@ export default {
           "こちらは、Webアクセシビリティ Advent Calendar 2019の21日目の記事です。この記事ではVue.js開発におけるWebアクセシビリティ対応にまつわる内容となっております。",
         image: "https://yamanoku.net/ogp/ogp-vue-a11y@2x.png"
       }
-    };
+    }
   }
-};
+}
 </script>
 
 <style>

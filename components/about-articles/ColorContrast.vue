@@ -1,21 +1,40 @@
 <template>
-  <article id="about:color-contrast" aria-labelledby="about:color-contrast_heading">
+  <article
+    id="about:color-contrast"
+    aria-labelledby="about:color-contrast_heading"
+  >
     <h3 id="about:color-contrast_heading">
-      {{$t("aboutPage.subHeading.contrast")}}
+      {{ $t("aboutPage.subHeading.contrast") }}
     </h3>
-    <p>{{$t("aboutPage.contrast.desc01")}}</p>
-    <p>{{$t("aboutPage.contrast.desc02")}}</p>
+    <p>{{ $t("aboutPage.contrast.desc01") }}</p>
+    <p>{{ $t("aboutPage.contrast.desc02") }}</p>
     <dl aria-labelledby="about:color-contrast_heading">
-      <div v-for="color in colors" :key="color.name" :style="'background-color:' + color.value">
+      <div
+        v-for="color in colors"
+        :key="color.name"
+        :style="'background-color:' + color.value"
+      >
         <dt
-          :style="(color.name === 'var(--black)' || color.name === 'var(--linkBlue)' ? 'color: #fff': '')"
-        >{{color.name}}</dt>
+          :style="
+            color.name === 'var(--black)' || color.name === 'var(--linkBlue)'
+              ? 'color: #fff'
+              : ''
+          "
+        >
+          {{ color.name }}
+        </dt>
         <dd
-          :style="(color.name === 'var(--black)' || color.name === 'var(--linkBlue)' ? 'color: #fff': '')"
-        >{{color.value}}</dd>
+          :style="
+            color.name === 'var(--black)' || color.name === 'var(--linkBlue)'
+              ? 'color: #fff'
+              : ''
+          "
+        >
+          {{ color.value }}
+        </dd>
       </div>
     </dl>
-    <p>{{$t("aboutPage.contrast.desc03")}}</p>
+    <p>{{ $t("aboutPage.contrast.desc03") }}</p>
   </article>
 </template>
 
@@ -53,9 +72,9 @@ export default {
           value: "rgba(70, 70, 70, 0.5)"
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>

@@ -12,13 +12,13 @@
 </template>
 
 <script>
-import BasicInfoComponent from "~/components/sections/BasicInfo.vue";
-import CareerInfoComponent from "~/components/sections/CareerInfo.vue";
-import ProductsComponent from "~/components/sections/Products.vue";
-import SlidesComponent from "~/components/sections/Slides.vue";
-import SnsComponent from "~/components/sections/Sns.vue";
-import AddressComponent from "~/components/sections/Address.vue";
-import LocalSwitchComponent from "~/components/common/LocalSwitch.vue";
+import BasicInfoComponent from "~/components/sections/BasicInfo.vue"
+import CareerInfoComponent from "~/components/sections/CareerInfo.vue"
+import ProductsComponent from "~/components/sections/Products.vue"
+import SlidesComponent from "~/components/sections/Slides.vue"
+import SnsComponent from "~/components/sections/Sns.vue"
+import AddressComponent from "~/components/sections/Address.vue"
+import LocalSwitchComponent from "~/components/common/LocalSwitch.vue"
 
 export default {
   components: {
@@ -28,8 +28,7 @@ export default {
     SlidesComponent,
     SnsComponent,
     AddressComponent,
-    LocalSwitchComponent,
+    LocalSwitchComponent
   }
-};
+}
 </script>
-

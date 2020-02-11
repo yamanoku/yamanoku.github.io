@@ -1,10 +1,10 @@
 <template>
   <article id="about:pwa" aria-labelledby="about:pwa_heading">
     <h3 id="about:pwa_heading">
-      {{$t("aboutPage.subHeading.pwa")}}
+      {{ $t("aboutPage.subHeading.pwa") }}
     </h3>
-    <p>{{$t("aboutPage.pwa.desc01")}}</p>
-    <p>{{$t("aboutPage.pwa.desc02")}}</p>
+    <p>{{ $t("aboutPage.pwa.desc01") }}</p>
+    <p>{{ $t("aboutPage.pwa.desc02") }}</p>
     <ul>
       <li>
         <a

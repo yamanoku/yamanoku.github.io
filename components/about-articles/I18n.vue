@@ -1,10 +1,13 @@
 <template>
-  <article id="about:internationalization" aria-labelledby="about:internationalization_heading">
+  <article
+    id="about:internationalization"
+    aria-labelledby="about:internationalization_heading"
+  >
     <h3 id="about:internationalization_heading">
-      {{$t("aboutPage.subHeading.i18n")}}
+      {{ $t("aboutPage.subHeading.i18n") }}
     </h3>
-    <p>{{$t("aboutPage.i18n.desc01")}}</p>
-    <p>{{$t("aboutPage.i18n.desc02")}}</p>
+    <p>{{ $t("aboutPage.i18n.desc01") }}</p>
+    <p>{{ $t("aboutPage.i18n.desc02") }}</p>
     <ul role="list">
       <li role="listitem">
         <a
