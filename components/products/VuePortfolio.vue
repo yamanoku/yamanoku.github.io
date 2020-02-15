@@ -10,10 +10,16 @@
       aria-labelledby="product:vue-portfolio-template_heading"
       aria-describedby="product:vue-portfolio-template_caption"
     >
-      <img
-        src="~/assets/img/product-vue-portfolio-template.png"
-        :alt="$t('prefixAlt.screenshot') + $t('product.vuePortfolio')"
-      />
+      <picture>
+        <source
+          srcset="~/assets/img/product-vue-portfolio-template.webp"
+          type="image/webp"
+        />
+        <img
+          src="~/assets/img/product-vue-portfolio-template.png"
+          :alt="$t('prefixAlt.screenshot') + $t('product.vuePortfolio')"
+        />
+      </picture>
       <figcaption id="product:vue-portfolio-template_caption">
         {{ $t("product.description.vuePortfolio") }}
       </figcaption>

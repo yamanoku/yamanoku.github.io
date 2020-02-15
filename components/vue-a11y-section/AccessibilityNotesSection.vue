@@ -103,11 +103,14 @@
       >のアクセシビリティ項目チェックでも使用されているものです。
     </p>
     <figure>
-      <img
-        src="~/assets/img/vue-a11y-vueaxe.png"
-        height="96"
-        alt="vue-axeの動作イメージ。Chromeのコンソール上にアラート結果が出ている"
-      />
+      <picture>
+        <source srcset="~/assets/img/vue-a11y-vueaxe.webp" type="image/webp" />
+        <img
+          src="~/assets/img/vue-a11y-vueaxe.png"
+          height="96"
+          alt="vue-axeの動作イメージ。Chromeのコンソール上にアラート結果が出ている"
+        />
+      </picture>
     </figure>
     <p>
       こちらは組み込むことでコンソール上でアクセシビリティチェックを通してくれます。

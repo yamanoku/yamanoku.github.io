@@ -8,10 +8,16 @@
       aria-labelledby="product:crowding-birthday-countdown_heading"
       aria-describedby="product:crowding-birthday-countdown_caption"
     >
-      <img
-        src="~/assets/img/product-crowding-birthday-countdown.png"
-        :alt="$t('prefixAlt.screenshot') + $t('product.birthdayCount')"
-      />
+      <picture>
+        <source
+          srcset="~/assets/img/product-crowding-birthday-countdown.webp"
+          type="image/webp"
+        />
+        <img
+          src="~/assets/img/product-crowding-birthday-countdown.png"
+          :alt="$t('prefixAlt.screenshot') + $t('product.birthdayCount')"
+        />
+      </picture>
       <figcaption id="product:crowding-birthday-countdown_caption">
         {{ $t("product.description.birthdayCount") }}
       </figcaption>
@@ -43,10 +49,16 @@
       aria-labelledby="product:crowding-glitch-range_heading"
       aria-describedby="product:crowding-glitch-range_caption"
     >
-      <img
-        src="~/assets/img/product-crowding-glitch-range.png"
-        :alt="$t('prefixAlt.screenshot') + $t('product.glitch')"
-      />
+      <picture>
+        <source
+          srcset="~/assets/img/product-crowding-glitch-range.webp"
+          type="image/webp"
+        />
+        <img
+          src="~/assets/img/product-crowding-glitch-range.png"
+          :alt="$t('prefixAlt.screenshot') + $t('product.glitch')"
+        />
+      </picture>
       <figcaption id="product:crowding-glitch-range_caption">
         {{ $t("product.description.glitch") }}
       </figcaption>
@@ -69,10 +81,16 @@
       aria-labelledby="product:crowding-canvas-browser-crash_heading"
       aria-describedby="product:canvas-browser-crash_caption"
     >
-      <img
-        src="~/assets/img/product-crowding-canvas-browser-crash.png"
-        :alt="$t('prefixAlt.screenshot') + $t('product.browserCrash')"
-      />
+      <picture>
+        <source
+          srcset="~/assets/img/product-crowding-canvas-browser-crash.webp"
+          type="image/webp"
+        />
+        <img
+          src="~/assets/img/product-crowding-canvas-browser-crash.png"
+          :alt="$t('prefixAlt.screenshot') + $t('product.browserCrash')"
+        />
+      </picture>
       <figcaption id="product:canvas-browser-crash_caption">
         {{ $t("product.description.browserCrash") }}
       </figcaption>
@@ -98,10 +116,16 @@
       aria-labelledby="product:crowding-rolling-sushi_heading"
       aria-describedby="product:crowding-rolling-sushi_caption"
     >
-      <img
-        src="~/assets/img/product-crowding-rolling-sushi.png"
-        :alt="$t('prefixAlt.screenshot') + $t('product.sushi')"
-      />
+      <picture>
+        <source
+          srcset="~/assets/img/product-crowding-rolling-sushi.webp"
+          type="image/webp"
+        />
+        <img
+          src="~/assets/img/product-crowding-rolling-sushi.png"
+          :alt="$t('prefixAlt.screenshot') + $t('product.sushi')"
+        />
+      </picture>
       <figcaption id="product:crowding-rolling-sushi_caption">
         {{ $t("product.description.sushi") }}
       </figcaption>

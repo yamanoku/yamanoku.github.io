@@ -37,6 +37,7 @@
         src="https://o.aolcdn.com/dims-global/dims3/GLOB/resize/1200x577/quality/80/https://techcrunch.com/wp-content/uploads/2019/05/live-caption.jpg"
         height="480"
         alt="Live Caption機能の紹介サムネイル"
+        loading="lazy"
       />
       <figcaption>
         <a

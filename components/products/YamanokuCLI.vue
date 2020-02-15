@@ -8,10 +8,16 @@
       aria-labelledby="product:yamanoku-cli_heading"
       aria-describedby="product:yamanoku-cli_caption"
     >
-      <img
-        src="~/assets/img/product-yamanoku-cli.png"
-        :alt="$t('prefixAlt.screenshot') + $t('product.yamanokuCli')"
-      />
+      <picture>
+        <source
+          srcset="~/assets/img/product-yamanoku-cli.webp"
+          type="image/webp"
+        />
+        <img
+          src="~/assets/img/product-yamanoku-cli.png"
+          :alt="$t('prefixAlt.screenshot') + $t('product.yamanokuCli')"
+        />
+      </picture>
       <figcaption id="product:yamanoku-cli_caption">
         {{ $t("product.description.yamanokuCli") }}
       </figcaption>
