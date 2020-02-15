@@ -90,13 +90,6 @@ module.exports = {
         vueI18n
       }
     ],
-    [
-      "@nuxtjs/google-gtag",
-      {
-        id: "UA-146072150-1",
-        debug: true
-      }
-    ],
     "@nuxtjs/axios"
   ],
   plugins: [
