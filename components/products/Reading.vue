@@ -5,10 +5,13 @@
       aria-labelledby="product:reading_heading"
       aria-describedby="product:reading_caption"
     >
-      <img
-        src="~/assets/img/product-reading.png"
-        :alt="$t('prefixAlt.screenshot') + $t('product.reading')"
-      />
+      <picture>
+        <source srcset="~/assets/img/product-reading.webp" type="image/webp" />
+        <img
+          src="~/assets/img/product-reading.png"
+          :alt="$t('prefixAlt.screenshot') + $t('product.reading')"
+        />
+      </picture>
       <figcaption id="product:reading_caption">
         {{ $t("product.description.reading") }}
       </figcaption>

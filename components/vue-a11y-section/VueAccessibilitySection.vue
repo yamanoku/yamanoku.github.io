@@ -93,11 +93,18 @@
       公式ドキュメントでのアクセシビリティ項目の作成はまだですが、代わりにVue.jsのアクセシビリティコミュニティは作られています。
     </p>
     <figure>
-      <img
-        src="~/assets/img/vue-a11y-vuea11ycom.png"
-        height="360"
-        alt="Vue a11yサイトのスクリーンショット"
-      />
+      <picture>
+        <source
+          srcset="~/assets/img/vue-a11y-vuea11ycom.webp"
+          type="image/webp"
+        />
+        <img
+          src="~/assets/img/vue-a11y-vuea11ycom.png"
+          height="360"
+          alt="Vue a11yサイトのスクリーンショット"
+          loading="lazy"
+        />
+      </picture>
       <figcaption>
         <a href="https://vue-a11y.com/" target="_blank" rel="noopener"
           >Vue a11y<open-new-icon

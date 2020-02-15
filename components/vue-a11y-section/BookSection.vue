@@ -3,10 +3,16 @@
     <h2>著書</h2>
     <h3>これからはじめるwebアクセシビリティ</h3>
     <figure>
-      <img
-        src="~/assets/img/product-web-accessibility-for-beginner.jpg"
-        :alt="$t('prefixAlt.photo') + $t('product.wafb.title')"
-      />
+      <picture>
+        <source
+          srcset="~/assets/img/product-web-accessibility-for-beginner.webp"
+          type="image/webp"
+        />
+        <img
+          src="~/assets/img/product-web-accessibility-for-beginner.jpg"
+          :alt="$t('prefixAlt.photo') + $t('product.wafb.title')"
+        />
+      </picture>
       <figcaption>
         <p>
           技術書典で「これからはじめるwebアクセシビリティ」という技術同人誌を発表しました。Webアクセシビリティをはじめる方向けの導入として知ってもらいたいのがきっかけでした。

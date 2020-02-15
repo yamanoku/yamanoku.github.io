@@ -10,10 +10,16 @@
       aria-labelledby="product:web-accessibility-for-beginner_heading"
       aria-describedby="product:web-accessibility-for-beginner_caption"
     >
-      <img
-        src="~/assets/img/product-web-accessibility-for-beginner.jpg"
-        :alt="$t('prefixAlt.photo') + $t('product.wafb.title')"
-      />
+      <picture>
+        <source
+          srcset="~/assets/img/product-web-accessibility-for-beginner.webp"
+          type="image/webp"
+        />
+        <img
+          src="~/assets/img/product-web-accessibility-for-beginner.jpg"
+          :alt="$t('prefixAlt.photo') + $t('product.wafb.title')"
+        />
+      </picture>
       <figcaption id="product:web-accessibility-for-beginner_caption">
         {{ $t("product.description.wafb") }}
       </figcaption>
