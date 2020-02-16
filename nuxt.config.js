@@ -37,14 +37,7 @@ module.exports = {
       { name: "og:description", content: baseDesc },
       { name: "og:image", content: baseOgp }
     ],
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&amp;display=optional"
-      }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   css: ["modern-normalize", "yama-normalize"],
   build: {
