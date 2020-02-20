@@ -24,11 +24,6 @@
               }}</a>
             </li>
             <li role="listitem">
-              <a href="#about:progressive-web-application">{{
-                $t("aboutPage.subHeading.pwa")
-              }}</a>
-            </li>
-            <li role="listitem">
               <a href="#about:internationalization">{{
                 $t("aboutPage.subHeading.i18n")
               }}</a>
@@ -77,7 +72,6 @@
       <tech-stack />
       <markup-article />
       <component-oriented />
-      <pwa-article />
       <i18n-article />
     </section>
     <section id="about:design" aria-labelledby="about:design_heading">
@@ -103,7 +97,6 @@
 import TechStack from "~/components/about-articles/TechStack.vue"
 import MarkupArticle from "~/components/about-articles/Markup.vue"
 import ComponentOriented from "~/components/about-articles/ComponentOriented.vue"
-import PwaArticle from "~/components/about-articles/PWA.vue"
 import I18nArticle from "~/components/about-articles/I18n.vue"
 
 // section-design
@@ -133,7 +126,6 @@ export default {
     TechStack,
     MarkupArticle,
     ComponentOriented,
-    PwaArticle,
     I18nArticle,
     DoNotOverDesign,
     FontSizeArticle,
