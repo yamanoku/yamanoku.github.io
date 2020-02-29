@@ -14,7 +14,7 @@
     <p>
       実はアクセシビリティに言及されたドキュメントはなく、一部のドキュメント内で軽く触れているだけなのです。
     </p>
-    <blockquote>
+    <blockquote lang="en">
       <p>
         As we develop our &lt;blog-post&gt; component, some features may require
         communicating back up to the parent. For example, we may decide to
@@ -30,7 +30,7 @@
         Vue.js<open-new-icon
       /></a>
     </blockquote>
-    <blockquote>
+    <blockquote lang="en">
       <p>
         You can use this base icon as is- the only thing you might need to
         update is the viewBox depending on the viewBox of your icons. In the
@@ -112,7 +112,7 @@
       </figcaption>
     </figure>
     <p>
-      まだ作られて間もないコミュニティですが、さきほど紹介したvue-announcerのようなアクセシビリティライブラリもいくつか作成しており、私も何かしら寄与できたらいいなと思っております。
+      まだ作られて間もないコミュニティですが、Vue.js製のアクセシビリティライブラリもいくつか作成しており、私も何かしら寄与できたらいいなと思っております。
     </p>
   </section>
 </template>
