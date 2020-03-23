@@ -17,6 +17,10 @@ module.exports = {
     'vue-a11y'
   ],
   rules: {
-    'prettier/prettier': ['error', { 'semi': false }]
+    'prettier/prettier': ['error', {
+      'semi': false,
+      'trailingComma': 'none',
+      'arrowParens': 'avoid'
+    }]
   }
 }
