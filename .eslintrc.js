@@ -19,7 +19,8 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', {
       'semi': false,
-      'trailingComma': 'none'
+      'trailingComma': 'none',
+      'arrowParens': 'avoid'
     }]
   }
 }
