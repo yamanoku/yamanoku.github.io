@@ -132,8 +132,21 @@
   </p> <h3>テスト・チェック</h3> <h4>vue-axe</h4> <p><a href="https://github.com/dequelabs/axe-core" target="_blank" rel="noopener">axe-core<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>Open in new tab</title> <path d="M0 0h24v24H0z" fill="none" class="open_new-1"></path> <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" class="open_new-2"></path></svg></a>というdeque
     systemsという会社が開発しているアクセシビリティチェックをするライブラリがあります。これはChromeの<a href="https://developers.google.com/web/tools/lighthouse/" target="_blank" rel="noopener">Lighthouse<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>Open in new tab</title> <path d="M0 0h24v24H0z" fill="none" class="open_new-1"></path> <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" class="open_new-2"></path></svg></a>のアクセシビリティ項目チェックでも使用されているものです。
   </p> <figure><picture><source srcset="/_nuxt/img/34963f1.webp" type="image/webp"> <img src="/_nuxt/img/deb8d6a.png" height="96" alt="vue-axeの動作イメージ。Chromeのコンソール上にアラート結果が出ている"></picture></figure> <p>
-    こちらは組み込むことでコンソール上でアクセシビリティチェックを通してくれます。
-  </p> <h4>Storybook</h4> <p>
+    こちらは組み込むことでコンソール上でアクセシビリティチェックを通してくれます。<br>
+    以下は設定になります。
+  </p> <pre><code class="hljs js"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">'vue'</span>
+
+<span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">'production'</span>) { <span class="hljs-comment">// development environment</span>
+  <span class="hljs-keyword">const</span> VueAxe = <span class="hljs-built_in">require</span>(<span class="hljs-string">'vue-axe'</span>)
+  <span class="hljs-keyword">const</span> AXE_LOCALE_JA = <span class="hljs-built_in">require</span>(<span class="hljs-string">'axe-core/locales/ja.json'</span>) <span class="hljs-comment">// locale setting</span>
+
+  Vue.use(VueAxe, {
+    <span class="hljs-attr">config</span>: {
+      <span class="hljs-attr">locale</span>: AXE_LOCALE_JA
+    },
+    <span class="hljs-attr">clearConsoleOnUpdate</span>: <span class="hljs-literal">false</span> <span class="hljs-comment">// Clears the console each time vue-axe runs</span>
+  })
+}</code></pre> <h4>Storybook</h4> <p>
     自社のコンポーネントライブラリ、デザインシステムで利用されている方もいるかもしれません。こちらは単体ではチェックできませんが、アドオンに<a href="https://www.npmjs.com/package/@storybook/addon-a11y" target="_blank" rel="noopener">storybook-addon-a11y<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>Open in new tab</title> <path d="M0 0h24v24H0z" fill="none" class="open_new-1"></path> <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" class="open_new-2"></path></svg></a>があり、これを使うことでコンポーネントやストーリーに対してアクセシビリティチェックを通すことが出来ます。
   </p> <figure><img src="https://raw.githubusercontent.com/storybookjs/storybook/HEAD/addons/a11y/docs/screenshot.png" height="360" alt="storybook-addon-a11y スクリーンショット"></figure> <h4>eslint-plugin-vue-a11y</h4> <p>
     JavaScriptの静的検証ツールとして使われるeslintにはプラグインでアクセシビリティチェックができるものもあります。CI/CDに組み込むことでビルド時にエラーを発見することも可能です。
@@ -198,7 +211,10 @@
     に関わる人たちが少しでもアクセシビリティに興味をもち、これからアクセシビリティ対応をしてゆくためのエンパワーとなれることを願っています。
   </p> <p>
     まだまだやることが多く、進めづらい分野ではありますが、少しずつでもこの輪が広がればいいなと思っています。アクセシビリティとはいかなる人も受け入れてくれるものなのだから。
-  </p></section> <a href="/en" class="nuxt-link-active">Return to the top page</a></main> <footer data-v-57895c54><p data-v-57895c54>
+  </p></section> <section><h3>このドキュメントに関する情報</h3> <ul><li><time datetime="2019-12-21">2019/12/21</time>
+        公開
+      </li> <li><time datetime="2020-02-28">2020/02/28</time> <a href="https://github.com/vue-a11y/awesome-a11y-vue/pull/3" target="_blank" rel="noopener">awesome-a11y-vue<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>Open in new tab</title> <path d="M0 0h24v24H0z" fill="none" class="open_new-1"></path> <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" class="open_new-2"></path></svg></a>に掲載
+      </li></ul></section> <a href="/en" class="nuxt-link-active">Return to the top page</a></main> <footer data-v-57895c54><p data-v-57895c54>
     Created at:
     <time datetime="2013-01-12T10:25:42Z" data-v-57895c54>2013-01-12T10:25:42Z</time>, Updated at:
     <time datetime="2020-04-04T14:34:44Z" data-v-57895c54>2020-04-04T14:34:44Z</time></p> <a href="/en/privacy" data-v-57895c54>Privacy Policy</a> <p data-v-57895c54>© Copyright 2020, Okuto Oyama</p></footer></div></div></div>
