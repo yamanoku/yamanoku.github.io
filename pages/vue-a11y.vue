@@ -12,6 +12,24 @@
     <vue-accessibility-section />
     <accessibility-notes-section />
     <conclusion-section />
+    <section>
+      <h3>このドキュメントに関する情報</h3>
+      <ul>
+        <li>
+          <time datetime="2019-12-21">2019/12/21</time>
+          公開
+        </li>
+        <li>
+          <time datetime="2020-02-28">2020/02/28</time>
+          <a
+            href="https://github.com/vue-a11y/awesome-a11y-vue/pull/3"
+            target="_blank"
+            rel="noopener"
+            >awesome-a11y-vue<open-new-icon /></a
+          >に掲載
+        </li>
+      </ul>
+    </section>
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
