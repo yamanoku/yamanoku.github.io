@@ -113,7 +113,7 @@
       </picture>
     </figure>
     <p>
-      こちらは組み込むことでコンソール上でアクセシビリティチェックを通してくれます。<br>
+      こちらは組み込むことでコンソール上でアクセシビリティチェックを通してくれます。<br />
       以下は設定になります。
     </p>
     <highlight-code lang="js">{{ vueAxeSetting }}</highlight-code>
