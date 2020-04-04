@@ -113,8 +113,10 @@
       </picture>
     </figure>
     <p>
-      こちらは組み込むことでコンソール上でアクセシビリティチェックを通してくれます。
+      こちらは組み込むことでコンソール上でアクセシビリティチェックを通してくれます。<br>
+      以下は設定になります。
     </p>
+    <highlight-code lang="js">{{ vueAxeSetting }}</highlight-code>
     <h4>Storybook</h4>
     <p>
       自社のコンポーネントライブラリ、デザインシステムで利用されている方もいるかもしれません。こちらは単体ではチェックできませんが、アドオンに<a
@@ -201,6 +203,21 @@ export default {
                 lang: 'ja'
               }
             }
+        }
+      `,
+      vueAxeSetting: `
+        import Vue from 'vue'
+
+        if (process.env.NODE_ENV !== 'production') { // development environment
+          const VueAxe = require('vue-axe')
+          const AXE_LOCALE_JA = require('axe-core/locales/ja.json') // locale setting
+
+          Vue.use(VueAxe, {
+            config: {
+              locale: AXE_LOCALE_JA
+            },
+            clearConsoleOnUpdate: false // Clears the console each time vue-axe runs
+          })
         }
       `,
       eslintEmoji: `
