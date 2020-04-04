@@ -48,14 +48,8 @@
       キーボード操作の考慮に併せて、フォーカスのためのアウトラインも意識する必要があります。アウトラインを除去することで現在位置を把握しづらくなってしまうためです。
     </p>
     <iframe
+      class="vue-accessible-modal"
       src="https://codesandbox.io/embed/vue-accessible-modal-9m474?fontsize=14&hidenavigation=1&theme=dark"
-      style="
-        width: 100%;
-        height: 500px;
-        border: 0;
-        border-radius: 4px;
-        overflow: hidden;
-      "
       title="vue-accessible-modal"
       allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
       sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
@@ -224,5 +218,12 @@ export default {
 code:not(.hljs) {
   line-height: 1;
   padding: 0;
+}
+iframe.vue-accessible-modal {
+  width: 100%;
+  height: 500px;
+  border: 0;
+  border-radius: 4px;
+  overflow: hidden;
 }
 </style>
