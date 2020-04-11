@@ -1,4 +1,4 @@
-import vueI18n from "./vueI18n"
+import i18n from "./nuxt-i18n"
 
 const baseName = process.env.BASE_NAME || "yamanoku.net"
 const baseDesc = process.env.BASE_DISC || "Okuto Oyama Portfolio Site"
@@ -55,36 +55,7 @@ module.exports = {
   render: {
     injectScripts: false
   },
-  modules: [
-    "@nuxtjs/pwa",
-    [
-      "nuxt-i18n",
-      {
-        seo: false,
-        baseUrl: "https://yamanoku.net",
-        locales: [
-          {
-            code: "ja",
-            iso: "ja",
-            name: "日本語ページ"
-          },
-          {
-            code: "en",
-            iso: "en-US",
-            name: "English Page"
-          },
-          {
-            code: "fr",
-            iso: "fre",
-            name: "Page française"
-          }
-        ],
-        defaultLocale: "ja",
-        vueI18n
-      }
-    ],
-    "@nuxtjs/axios"
-  ],
+  modules: ["@nuxtjs/pwa", ["nuxt-i18n", i18n], "@nuxtjs/axios"],
   plugins: [
     "~plugins/icons.js",
     "~plugins/vue-highlight.js",
