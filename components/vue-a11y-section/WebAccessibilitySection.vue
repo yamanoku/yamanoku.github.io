@@ -1,63 +1,45 @@
 <template>
   <section id="web-accessibility">
-    <h2>アクセシビリティとは何か</h2>
-    <h3>アクセシビリティの定義</h3>
-    <p>
-      まず <span lang="en">Accessibility</span>
-      は「アクセスできる・アクセスしやすさ」と翻訳されます。Webアクセシビリティはウェブにある情報やコンテンツに、あらゆる人がアクセスできようにすることを指します。
-    </p>
-    <p>
-      あらゆる人がアクセスできるようにするとはどういうことかというと、デバイス操作に慣れない人でも簡単に閲覧できるようにしたり、難しい言い回しを避けて理解しやすくしたり、コントラストを調整して閲覧しやすいデザインにしたり、音声読み上げをしてくれるスクリーンリーダーといった支援技術を使うために考慮するといったことです。
-    </p>
+    <h2>{{ $t("vueA11yPage.heading.webA11y") }}</h2>
+    <h3>{{ $t("vueA11yPage.subHeading.webA11y.1") }}</h3>
+    <i18n tag="p" path="vueA11yPage.webA11y.desc01">
+      <template v-slot:A11Y>
+        <span lang="en">Accessibility</span>
+      </template>
+    </i18n>
+    <p>{{ $t("vueA11yPage.webA11y.desc02") }}</p>
     <blockquote>
-      <p>
-        世界には10億人、言い換えると、人口の15から20％の割合で障害を持つ人がいます。国連は障害者の権利条約を定めており、人権としてウェブを含んだ情報へのアクセスはほとんどの国で国連条約として批准されています。また数カ国では政策として義務付けられています。法律や規制にも関わらずアクセシビリティ標準を実行するのは、障害を持つ人たちにも、全ての人達にも不可欠なことです。
-      </p>
+      <p>{{ $t("vueA11yPage.webA11y.quote01") }}</p>
       <a
-        href="https://www.w3.org/WAI/videos/standards-and-benefits/ja"
+        :href="$t('vueA11yPage.webA11y.link01.link')"
         target="_blank"
         rel="noopener"
-        >W3Cのアクセシビリティと標準技術 | Web Accessibility Initiative (WAI) |
-        W3C<open-new-icon
+        >{{ $t("vueA11yPage.webA11y.link01.text") }}<open-new-icon
       /></a>
     </blockquote>
-    <h3>アクセシビリティ対応とは障害者対応なのか</h3>
-    <p>
-      よくある誤解なのですが、アクセシビリティ対応をすることは障害者対応だと捉えられていることがあります。
-    </p>
-    <p>
-      たしかにアクセシビリティ対応は障害者が使えるようにする目的もあるのですが、それ自体が目的なのではなく「あらゆる人が使えるようにする」ことが目的なので、障害者対応だけが先鋭化されて誤解につながっているように思います。
-    </p>
-    <p>
-      Google
-      I/Oでは音声認識においてリアルタイムで字幕がつけられるライブキャプション機能がつけられました。聴覚障害の方はもちろん、ミュートにした状態でビデオを見たり、文章を書き起こして内容の理解につなげたりなど、あらゆる状況においてどんな人でも使えるようなものを生み出しています。
-    </p>
+    <h3>{{ $t("vueA11yPage.subHeading.webA11y.2") }}</h3>
+    <p>{{ $t("vueA11yPage.webA11y.desc03") }}</p>
+    <p>{{ $t("vueA11yPage.webA11y.desc04") }}</p>
+    <p>{{ $t("vueA11yPage.webA11y.desc05") }}</p>
     <figure>
       <img
         src="https://o.aolcdn.com/dims-global/dims3/GLOB/resize/1200x577/quality/80/https://techcrunch.com/wp-content/uploads/2019/05/live-caption.jpg"
         height="480"
-        alt="Live Caption機能の紹介サムネイル"
+        :alt="$t('vueA11yPage.webA11y.imgAlt01')"
         loading="lazy"
       />
       <figcaption>
         <a
-          href="https://jp.techcrunch.com/2019/05/08/2019-05-07-live-transcription-and-captioning-in-android-are-a-boon-to-the-hearing-impaired/"
+          :href="$t('vueA11yPage.webA11y.link02.link')"
           target="_blank"
           rel="noopener"
-          >Google
-          I/Oはアクセシビリティ強化に全力、聴覚障害者にも電車でYouTubeを見るにも便利<open-new-icon
+          >{{ $t("vueA11yPage.webA11y.link02.text") }}<open-new-icon
         /></a>
       </figcaption>
     </figure>
-    <p>
-      スクリーンリーダーも視覚障害者のためだけではなく、読字障害といった長文を読むのが困難な人を手助けしたり、文章の確認を目視だけで行うよりも読み上げてもらうことで間違いに気づきやすくなります。
-    </p>
-    <h3>皆が参加できるためのアクセシビリティ対応</h3>
-    <p>
-      アクセシビリティは使いやすさを重視する「ユーザビリティ」と混同されがちですが、使いやすいかどうか以前に使えるかどうかを考えることが目的です。そして、使えるということは、参加できるかどうかということにも繋がります。
-    </p>
-    <p>
-      海外では法律でアクセシビリティを確保する決まりを定めていますが、これはアクセシビリティを手段として考えているより、アクセシビリティ自体を人権として捉えている部分があるからです。
-    </p>
+    <p>{{ $t("vueA11yPage.webA11y.desc06") }}</p>
+    <h3>{{ $t("vueA11yPage.subHeading.webA11y.3") }}</h3>
+    <p>{{ $t("vueA11yPage.webA11y.desc07") }}</p>
+    <p>{{ $t("vueA11yPage.webA11y.desc08") }}</p>
   </section>
 </template>

@@ -1,19 +1,13 @@
 <template>
   <section id="vuejs-and-web-accessibility">
-    <h2>Vue.jsとWebアクセシビリティ</h2>
+    <h2>{{ $t("vueA11yPage.heading.vueA11y") }}</h2>
     <p>
-      アクセシビリティについて何かを知っていただいたとことで、本題でもあるVue.jsとアクセシビリティにまつわる話をしていきたいと思います。
+      {{ $t("vueA11yPage.vueA11y.desc01") }}
     </p>
-    <h3>アクセシビリティのドキュメントがない</h3>
-    <p>
-      Vue.jsが日本で爆発的な人気を誇った要因の１つとして公式ドキュメントが日本語訳されていたことがあると思っています。私自身、ドキュメントの日本語訳があることで非常に取り組みやすかったです。
-    </p>
-    <p>
-      ところでそんなVue.jsの公式ドキュメントでアクセシビリティについてどれだけ言及されているか皆さんはご存知でしょうか。
-    </p>
-    <p>
-      実はアクセシビリティに言及されたドキュメントはなく、一部のドキュメント内で軽く触れているだけなのです。
-    </p>
+    <h3>{{ $t("vueA11yPage.subHeading.vueA11y") }}</h3>
+    <p>{{ $t("vueA11yPage.vueA11y.desc02") }}</p>
+    <p>{{ $t("vueA11yPage.vueA11y.desc03") }}</p>
+    <p>{{ $t("vueA11yPage.vueA11y.desc04") }}</p>
     <blockquote lang="en">
       <p>
         As we develop our &lt;blog-post&gt; component, some features may require
@@ -46,16 +40,14 @@
         >Editable SVG Icon Systems — Base Example — Vue.js<open-new-icon
       /></a>
     </blockquote>
-    <p>
-      ReactとAngularは公式ドキュメントにアクセシビリティの項目があり、開発における留意点などをまとめています。
-    </p>
+    <p>{{ $t("vueA11yPage.vueA11y.desc05") }}</p>
     <ul>
       <li>
         <a
-          href="https://ja.reactjs.org/docs/accessibility.html"
+          :href="$t('vueA11yPage.vueA11y.listitem01.link')"
           target="_blank"
           rel="noopener"
-          >アクセシビリティ – React<open-new-icon
+          >{{ $t("vueA11yPage.vueA11y.listitem01.text") }}<open-new-icon
         /></a>
       </li>
       <li>
@@ -63,35 +55,30 @@
           href="https://angular.io/guide/accessibility"
           target="_blank"
           rel="noopener"
+          lang="en"
           >Angular - Accessibility in Angular<open-new-icon
         /></a>
       </li>
     </ul>
-    <p>
-      私はReactやAngularと同様にアクセシビリティの項目を設けても良いと感じています。Vue.jsのIssueを調べてみたところCallum
-      Macra氏がドキュメントを作成を進めていたようなのですが、現在Pull
-      Requestは止まっている状態です。
-    </p>
+    <p>{{ $t("vueA11yPage.vueA11y.desc06") }}</p>
     <a
       href="https://github.com/vuejs/vuejs.org/issues/974"
       target="_blank"
       rel="noopener"
+      lang="en"
       >Accessibility docs · Issue #974 · vuejs/vuejs.org<open-new-icon
     /></a>
-    <p>
-      まだ途中ではありますが、現在編集が進んでいるドキュメントではWebアクセシビリティを理解するにとても良くまとまっている内容でした。英語のドキュメントですが、皆さんにも見ていただきたいです。
-    </p>
+    <p>{{ $t("vueA11yPage.vueA11y.desc07") }}</p>
     <a
       href="https://github.com/callumacrae/vuejs.org/blob/a11y-docs/src/v2/guide/accessibility.md"
       target="_blank"
       rel="noopener"
+      lang="en"
       >vuejs.org/accessibility.md at a11y-docs ·
       callumacrae/vuejs.org<open-new-icon
     /></a>
-    <h3>Vue a11y</h3>
-    <p>
-      公式ドキュメントでのアクセシビリティ項目の作成はまだですが、代わりにVue.jsのアクセシビリティコミュニティは作られています。
-    </p>
+    <h3 lang="en">Vue a11y</h3>
+    <p>{{ $t("vueA11yPage.vueA11y.desc08") }}</p>
     <figure>
       <picture>
         <source
@@ -101,18 +88,16 @@
         <img
           src="~/assets/img/vue-a11y-vuea11ycom.png"
           height="360"
-          alt="Vue a11yサイトのスクリーンショット"
+          :alt="$t('vueA11yPage.vueA11y.imgAlt01')"
           loading="lazy"
         />
       </picture>
       <figcaption>
-        <a href="https://vue-a11y.com/" target="_blank" rel="noopener"
+        <a href="https://vue-a11y.com/" target="_blank" rel="noopener" lang="en"
           >Vue a11y<open-new-icon
         /></a>
       </figcaption>
     </figure>
-    <p>
-      まだ作られて間もないコミュニティですが、Vue.js製のアクセシビリティライブラリもいくつか作成しており、私も何かしら寄与できたらいいなと思っております。
-    </p>
+    <p>{{ $t("vueA11yPage.vueA11y.desc09") }}</p>
   </section>
 </template>

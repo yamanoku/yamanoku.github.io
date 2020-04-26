@@ -1,51 +1,57 @@
 <template>
   <section id="web-accessibility-notes">
-    <h2>Vue.jsにおける実装の留意点</h2>
+    <h2>{{ $t("vueA11yPage.heading.a11yNote") }}</h2>
     <p>
-      次にウェブアクセシビリティを考慮する上でVue.jsの実装で留意しておくべきことについて紹介します。
+      {{ $t("vueA11yPage.a11yNote.desc01") }}
     </p>
-    <h3>
-      何でも
-      <code>div</code>で実装しない
-    </h3>
-    <p>
-      ウェブアクセシビリティをつくるには、
-      <strong>セマンティクスな実装を心がける</strong
-      >、というのが基本です。これは <code>div</code>タグ（または
-      <code>span</code
-      >タグ）自体が悪いのではなく、そのコンポーネントの見た目以外で必要に応じたタグを使うべきということです。
-    </p>
+    <i18n tag="h3" path="vueA11yPage.subHeading.a11yNote.1">
+      <template v-slot:div>
+        <code>div</code>
+      </template>
+    </i18n>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc02">
+      <template v-slot:strong01>
+        <strong>{{ $t("vueA11yPage.a11yNote.strong01") }}</strong>
+      </template>
+      <template v-slot:div>
+        <code>div</code>
+      </template>
+      <template v-slot:span>
+        <code>span</code>
+      </template>
+    </i18n>
     <blockquote>
       <p>
-        すべてのユーザインタフェースコンポーネントに、役割、状態、及び値の情報を提供することで、例えば、スクリーンリーダー、画面拡大ソフトウェア、及び音声認識ソフトウェアなどの、障害のある利用者が使用する支援技術との互換性を保つことが可能になる。
+        {{ $t("vueA11yPage.a11yNote.quote01") }}
       </p>
       <a
-        href="https://waic.jp/docs/UNDERSTANDING-WCAG20/ensure-compat-rsv.html"
+        :href="$t('vueA11yPage.a11yNote.quote02.text')"
         target="_blank"
         rel="noopener"
-        >達成基準 4.1.2 を理解する | WCAG 2.0解説書<open-new-icon
+        >{{ $t("vueA11yPage.a11yNote.quote02.text") }}<open-new-icon
       /></a>
     </blockquote>
-    <p>
-      たとえばボタンを実装するとき、
-      <code>div</code>タグから実装するとしたら様々な考慮が必要となります。
-    </p>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc03">
+      <template v-slot:div>
+        <code>div</code>
+      </template>
+    </i18n>
     <highlight-code lang="html">{{ buttonMarkupBefore }}</highlight-code>
-    <p>
-      これがセマンティクスな実装をすれば
-      <code>button</code
-      >タグ１つで済みます。セマンティクスでないことは本来もつ機能を損なってしまいかねません。
-    </p>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc04">
+      <template v-slot:button>
+        <code>button</code>
+      </template>
+    </i18n>
     <highlight-code lang="html">{{ buttonMarkupAfter }}</highlight-code>
-    <h3>キーボードで操作できるようにする</h3>
+    <h3>{{ $t("vueA11yPage.subHeading.a11yNote.2") }}</h3>
     <p>
-      スクリーンリーダーを利用する人はキーボードを使って情報にアクセスします。なのでキーボードであらゆる情報へアクセスできるかを意識する必要はあります。
+      {{ $t("vueA11yPage.a11yNote.desc05") }}
     </p>
     <p>
-      また、スクリーンリーダーを使用しなくとも、パソコンの操作に慣れてきた人であれば、フォームの送信でエンターキーを押したり、ダイアログを閉じる際にESCキーを押したり、マウス操作ではなくキーボード操作で行うことがあると思います。
+      {{ $t("vueA11yPage.a11yNote.desc06") }}
     </p>
     <p>
-      キーボード操作の考慮に併せて、フォーカスのためのアウトラインも意識する必要があります。アウトラインを除去することで現在位置を把握しづらくなってしまうためです。
+      {{ $t("vueA11yPage.a11yNote.desc07") }}
     </p>
     <iframe
       class="vue-accessible-modal"
@@ -54,129 +60,142 @@
       allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
       sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
     ></iframe>
-    <h3>SPA開発</h3>
-    <p>
-      モダンなフロントエンド開発において、SPA
-      <abbr>（Single Page Application）</abbr
-      >での実装は増えてきています。SPAは1つのHTMLとJavaScriptを使用した動的なコンテンツとして扱うため、ページ内で何がどう変わったのかを判定できないことがあります。
-    </p>
-    <p>
-      ページの変更や状態の更新ではaria-live属性を使用した実装が必要となります。ただし属性値の扱いを理解する必要があるため、はじめは
-      <a
-        href="https://github.com/vue-a11y/vue-announcer"
-        target="_blank"
-        rel="noopener"
-        >vue-announcer<open-new-icon /></a
-      >というライブラリを利用してみても良いかも知れません。routerでのページ移動の読み上げや、コンポーネント内での状態変化の読み上げも簡単に設定できるようになります。
-    </p>
-    <h3>Nuxt.jsの設定</h3>
-    <p>
-      盲点な部分かもしれませんが、
-      <code>nuxt.config.js</code>での
-      <code>htmlAttrs</code>で言語設定は必要です。
-    </p>
+    <h3>{{ $t("vueA11yPage.subHeading.a11yNote.3") }}</h3>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc08">
+      <template v-slot:abbr01>
+        <abbr>{{ $t("vueA11yPage.a11yNote.abbr01") }}</abbr>
+      </template>
+    </i18n>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc09">
+      <template v-slot:ariaLive>
+        <code>aria-live</code>
+      </template>
+      <template v-slot:vueAnnouncer>
+        <a
+          href="https://github.com/vue-a11y/vue-announcer"
+          target="_blank"
+          rel="noopener"
+          lang="en"
+          >vue-announcer<open-new-icon
+        /></a>
+      </template>
+    </i18n>
+    <h3>{{ $t("vueA11yPage.subHeading.a11yNote.4") }}</h3>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc10">
+      <template v-slot:nuxtConfigJs>
+        <code>nuxt.config.js</code>
+      </template>
+      <template v-slot:htmlAttrs>
+        <code>htmlAttrs</code>
+      </template>
+    </i18n>
     <highlight-code lang="js">{{ nuxtJS }}</highlight-code>
-    <p>
-      何も設定されていない場合、言語指定は
-      <code>en</code
-      >、つまり英語になっています。このままだとアプリケーションやサイトの見た目が日本語だとしても、ブラウザの判定では「英語の」アプリケーションやサイトとなってしまいます。
-    </p>
-    <p>
-      未設定だとスクリーンリーダーによっては英語以外の部分を読み上げてくれない事態が起きます。
-      <small>（これはAndroidのTalkback機能にて確認できました）。</small
-      >国際化対応をしていなくとも言語設定は気をつけなければなりません。
-    </p>
-    <h3>テスト・チェック</h3>
-    <h4>vue-axe</h4>
-    <p>
-      <a
-        href="https://github.com/dequelabs/axe-core"
-        target="_blank"
-        rel="noopener"
-        >axe-core<open-new-icon /></a
-      >というdeque
-      systemsという会社が開発しているアクセシビリティチェックをするライブラリがあります。これはChromeの<a
-        href="https://developers.google.com/web/tools/lighthouse/"
-        target="_blank"
-        rel="noopener"
-        >Lighthouse<open-new-icon /></a
-      >のアクセシビリティ項目チェックでも使用されているものです。
-    </p>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc11">
+      <template v-slot:en>
+        <code>en</code>
+      </template>
+    </i18n>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc12">
+      <template v-slot:small01>
+        <small>（これはAndroidのTalkback機能にて確認できました）</small>
+      </template>
+    </i18n>
+    <h3>{{ $t("vueA11yPage.subHeading.a11yNote.5") }}</h3>
+    <h4 lang="en">vue-axe</h4>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc13">
+      <template v-slot:axeCore>
+        <a
+          href="https://github.com/dequelabs/axe-core"
+          target="_blank"
+          rel="noopener"
+          lang="en"
+          >axe-core<open-new-icon
+        /></a>
+      </template>
+      <template v-slot:LightHouse>
+        <a
+          href="https://developers.google.com/web/tools/lighthouse/"
+          target="_blank"
+          rel="noopener"
+          lang="en"
+          >Lighthouse<open-new-icon
+        /></a>
+      </template>
+    </i18n>
     <figure>
       <picture>
         <source srcset="~/assets/img/vue-a11y-vueaxe.webp" type="image/webp" />
         <img
           src="~/assets/img/vue-a11y-vueaxe.png"
           height="96"
-          alt="vue-axeの動作イメージ。Chromeのコンソール上にアラート結果が出ている"
+          :alt="$t('vueA11yPage.a11yNote.imgAlt01')"
         />
       </picture>
     </figure>
-    <p>
-      こちらは組み込むことでコンソール上でアクセシビリティチェックを通してくれます。<br />
-      以下は設定になります。
-    </p>
+    <p>{{ $t("vueA11yPage.a11yNote.desc14") }}</p>
     <highlight-code lang="js">{{ vueAxeSetting }}</highlight-code>
-    <h4>Storybook</h4>
-    <p>
-      自社のコンポーネントライブラリ、デザインシステムで利用されている方もいるかもしれません。こちらは単体ではチェックできませんが、アドオンに<a
-        href="https://www.npmjs.com/package/@storybook/addon-a11y"
-        target="_blank"
-        rel="noopener"
-        >storybook-addon-a11y<open-new-icon /></a
-      >があり、これを使うことでコンポーネントやストーリーに対してアクセシビリティチェックを通すことが出来ます。
-    </p>
+    <h4 lang="en">Storybook</h4>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc15">
+      <template v-slot:storybookAddonA11y>
+        <a
+          href="https://www.npmjs.com/package/@storybook/addon-a11y"
+          target="_blank"
+          rel="noopener"
+          >storybook-addon-a11y<open-new-icon
+        /></a>
+      </template>
+    </i18n>
     <figure>
       <img
         src="https://raw.githubusercontent.com/storybookjs/storybook/HEAD/addons/a11y/docs/screenshot.png"
         height="360"
-        alt="storybook-addon-a11y スクリーンショット"
+        :alt="$t('vueA11yPage.a11yNote.imgAlt02')"
       />
     </figure>
-    <h4>eslint-plugin-vue-a11y</h4>
-    <p>
-      JavaScriptの静的検証ツールとして使われるeslintにはプラグインでアクセシビリティチェックができるものもあります。CI/CDに組み込むことでビルド時にエラーを発見することも可能です。
-    </p>
-    <p>
-      チェック内容の例を上げると、
-      <code>img</code>の
-      <code>alt</code>属性に値が入っているか、フォーム要素にはラベル（
-      <code>label</code
-      >）が付与されているか、絵文字をアクセシブルに実装できているか、などがあります。
-    </p>
+    <h4 lang="en">eslint-plugin-vue-a11y</h4>
+    <p>{{ $t("vueA11yPage.a11yNote.desc16") }}</p>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc17">
+      <template v-slot:img>
+        <code>img</code>
+      </template>
+      <template v-slot:alt>
+        <code>alt</code>
+      </template>
+      <template v-slot:label>
+        <code>label</code>
+      </template>
+    </i18n>
     <highlight-code lang="html">{{ eslintEmoji }}</highlight-code>
-    <p>
-      ただしLintはあくまでコード規約をチェックするものなので、エラー判定のみに頼りきらないようにしましょう。
-    </p>
-    <h4>ユーザテスト</h4>
-    <p>
-      機械的なテストについて紹介しましたが、自動化によるチェックやテストではすべてのアクセシビリティの問題のうちたった30%しか確認できないという研究結果が出ています。
-    </p>
+    <p>{{ $t("vueA11yPage.a11yNote.desc18") }}</p>
+    <h4>{{ $t("vueA11yPage.subHeading.a11yNote.test.4") }}</h4>
+    <p>{{ $t("vueA11yPage.a11yNote.desc19") }}</p>
     <a
       href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/"
       target="_blank"
       rel="noopener"
+      lang="en"
       >What we found when we tested tools on the world’s least-accessible
       webpage - Accessibility in government<open-new-icon
     /></a>
-    <p>
-      そのため、ユーザテストを通したチェックも必要となります。ブラウザチェックやスクリーンリーダーテスト、キーボードテストといった実際に見てみる、触ってみるのを試した上で問題ないかをテストしていきます。
-    </p>
-    <p>
-      どういったテストをすべきかは、WCAG
-      <abbr>（Web Content Accessibility Guidelines）</abbr
-      >を参考にしましょう。これはW3C勧告として公開されたwebコンテンツをアクセシブルにするためのガイドラインで、どうすることでアクセシブルになるか、技術に依存しない検証方法も提示されています。
-    </p>
-    <a href="https://waic.jp/docs/WCAG21/" target="_blank" rel="noopener"
+    <p>{{ $t("vueA11yPage.a11yNote.desc20") }}</p>
+    <i18n tag="p" path="vueA11yPage.a11yNote.desc21">
+      <template v-slot:abbr02>
+        <abbr lang="en">Web Content Accessibility Guidelines</abbr>
+      </template>
+    </i18n>
+    <a
+      href="https://waic.jp/docs/WCAG21/"
+      target="_blank"
+      rel="noopener"
+      lang="en"
       >Web Content Accessibility Guidelines (WCAG) 2.1<open-new-icon
     /></a>
-    <p>
-      しかし毎回WCAGの仕様を参照しにいくことも大変なので、必要な要素を参考にした上で独自のガイドラインを作成できると良さそうです。
-    </p>
+    <p>{{ $t("vueA11yPage.a11yNote.desc22") }}</p>
     <a
       href="https://openameba.github.io/a11y-guidelines/"
       target="_blank"
       rel="noopener"
+      lang="en"
       >Ameba Accessibility Guidelines<open-new-icon
     /></a>
   </section>

@@ -1,14 +1,18 @@
 <template>
   <section id="bio">
-    <h2>自己紹介</h2>
+    <h2>{{ $t("vueA11yPage.heading.bio") }}</h2>
+    <i18n tag="p" path="vueA11yPage.bio.desc01">
+      <template v-slot:small01>
+        <small>
+          {{ $t("vueA11yPage.bio.small01") }}
+        </small>
+      </template>
+    </i18n>
     <p>
-      大山奥人
-      <small>（おおやまおくと）</small
-      >と申します。ネット上では、おおやまみちのく、yamanokuと名乗って活動しています。
+      {{ $t("vueA11yPage.bio.desc02") }}
     </p>
     <p>
-      制作会社のウェブデザイナーとして働き出し、株式会社GEEKでマークアップ・フロントエンドエンジニアとして従事した後、2019年10月から株式会社クラウドワークスに在籍しております。
+      {{ $t("vueA11yPage.bio.desc03") }}
     </p>
-    <p>役職はUXエンジニアです。個人ではアクセシビリティ啓蒙も行っています。</p>
   </section>
 </template>

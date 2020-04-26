@@ -1,10 +1,5 @@
 <template>
   <main role="main" id="main">
-    <template v-if="this.$i18n.locale !== 'ja'">
-      <p>
-        <em>{{ $t("onlyJPText") }}</em>
-      </p>
-    </template>
     <title-section />
     <bio-section />
     <book-section />
@@ -13,20 +8,25 @@
     <accessibility-notes-section />
     <conclusion-section />
     <section>
-      <h3>このドキュメントに関する情報</h3>
+      <h3>{{ $t("vueA11yPage.subHeading.info") }}</h3>
       <ul>
         <li>
           <time datetime="2019-12-21">2019/12/21</time>
-          公開
+          {{ $t("vueA11yPage.info.listitem01") }}
         </li>
         <li>
           <time datetime="2020-02-28">2020/02/28</time>
-          <a
-            href="https://github.com/vue-a11y/awesome-a11y-vue/pull/3"
-            target="_blank"
-            rel="noopener"
-            >awesome-a11y-vue<open-new-icon /></a
-          >に掲載
+          <i18n path="vueA11yPage.info.listitem02">
+            <template v-slot:awesomeA11yVue>
+              <a
+                href="https://github.com/vue-a11y/awesome-a11y-vue/pull/3"
+                target="_blank"
+                rel="noopener"
+                lang="en"
+                >awesome-a11y-vue<open-new-icon
+              /></a>
+            </template>
+          </i18n>
         </li>
       </ul>
     </section>
