@@ -33,7 +33,7 @@
     "eslint-plugin-vue": "6.2.2",
     "eslint-plugin-vue-a11y": "0.0.31",
     "gh-pages": "2.2.0",
-    "highlight.js": "10.0.1",
+    "highlight.js": "9.18.1",
     "modern-normalize": "0.6.0",
     "prettier": "2.0.5",
     "style-loader": "1.2.0",
