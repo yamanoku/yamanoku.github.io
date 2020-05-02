@@ -9,18 +9,19 @@ module.exports = {
   },
   extends: [
     'plugin:vue/essential',
-    'plugin:vue-a11y/base',
+    'plugin:vuejs-accessibility/recommended',
     'plugin:prettier/recommended'
   ],
   plugins: [
     'vue',
-    'vue-a11y'
+    'vuejs-accessibility'
   ],
   rules: {
     'prettier/prettier': ['error', {
       'semi': false,
       'trailingComma': 'none',
       'arrowParens': 'avoid'
-    }]
+    }],
+    'vuejs-accessibility/no-redundant-roles': 0
   }
 }
