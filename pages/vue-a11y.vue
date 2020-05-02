@@ -33,7 +33,7 @@
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
-    <!-- <local-switch-component /> -->
+    <local-switch-component />
   </main>
 </template>
 
@@ -58,7 +58,8 @@ export default {
     ConclusionSection,
     TitleSection,
     VueAccessibilitySection,
-    WebAccessibilitySection
+    WebAccessibilitySection,
+    LocalSwitchComponent
   },
   data() {
     return {

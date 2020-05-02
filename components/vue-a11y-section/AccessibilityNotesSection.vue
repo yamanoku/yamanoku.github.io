@@ -97,7 +97,7 @@
     </i18n>
     <i18n tag="p" path="vueA11yPage.a11yNote.desc12">
       <template v-slot:small01>
-        <small>（これはAndroidのTalkback機能にて確認できました）</small>
+        <small>{{ $t("vueA11yPage.a11yNote.small01") }}</small>
       </template>
     </i18n>
     <h3>{{ $t("vueA11yPage.subHeading.a11yNote.5") }}</h3>
