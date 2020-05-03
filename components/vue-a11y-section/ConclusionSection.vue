@@ -31,7 +31,8 @@
         target="_blank"
         rel="noopener"
         lang="en"
-        >Press Release: W3C Launches International Program Office for WAI<open-new-icon
+        >Press Release: W3C Launches International Program Office for
+        WAI<open-new-icon
       /></a>
     </blockquote>
     <p>
