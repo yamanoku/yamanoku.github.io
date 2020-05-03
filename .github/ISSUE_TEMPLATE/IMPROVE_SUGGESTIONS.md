@@ -4,6 +4,8 @@ about: '「こうするとサイトがもっとよくなる」といった提案
 labels: improvement
 ---
 
+<!-- 必要のない項目があれば削り、カスタマイズして使っても構いません -->
+
 ## 改善詳細 / Details of Improvement
 - xxxx(できるだけ簡潔に/as concise as possible)
 
