@@ -152,7 +152,7 @@
         :alt="$t('vueA11yPage.a11yNote.imgAlt02')"
       />
     </figure>
-    <h4 lang="en">eslint-plugin-vue-a11y</h4>
+    <h4 lang="en">eslint-plugin-vuejs-accessibility</h4>
     <p>{{ $t("vueA11yPage.a11yNote.desc16") }}</p>
     <i18n tag="p" path="vueA11yPage.a11yNote.desc17">
       <template v-slot:img>

@@ -27,12 +27,11 @@
         regardless of disability is an essential aspect.
       </p>
       <a
-        href="https://www.w3.org/People/Berners-Lee/"
+        href="https://www.w3.org/Press/IPO-announce/"
         target="_blank"
         rel="noopener"
         lang="en"
-        >Tim Berners-Lee, W3C Director and inventor of the World Wide
-        Web<open-new-icon
+        >Press Release: W3C Launches International Program Office for WAI<open-new-icon
       /></a>
     </blockquote>
     <p>
