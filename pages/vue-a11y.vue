@@ -64,9 +64,8 @@ export default {
   data() {
     return {
       meta: {
-        title: "Vue.jsから考えるアクセシビリティ",
-        description:
-          "こちらは、Webアクセシビリティ Advent Calendar 2019の21日目の記事です。この記事ではVue.js開発におけるWebアクセシビリティ対応にまつわる内容となっております。",
+        title: this.$t("vueA11yPage.title"),
+        description: this.$t("vueA11yPage.description"),
         image: "https://yamanoku.net/ogp/ogp-vue-a11y@2x.png"
       }
     }

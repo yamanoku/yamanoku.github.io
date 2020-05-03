@@ -176,7 +176,7 @@
         "test": {
           "1": "vue-axe",
           "2": "Storybook",
-          "3": "eslint-plugin-vue-a11y",
+          "3": "eslint-plugin-vuejs-accessibility",
           "4": "User test"
         }
       },
