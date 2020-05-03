@@ -1,7 +1,7 @@
 <template>
   <section id="book">
-    <h2>著書</h2>
-    <h3>これからはじめるwebアクセシビリティ</h3>
+    <h2>{{ $t("vueA11yPage.heading.book") }}</h2>
+    <h3>{{ $t("vueA11yPage.subHeading.book") }}</h3>
     <figure>
       <picture>
         <source
@@ -15,9 +15,11 @@
       </picture>
       <figcaption>
         <p>
-          技術書典で「これからはじめるwebアクセシビリティ」という技術同人誌を発表しました。Webアクセシビリティをはじめる方向けの導入として知ってもらいたいのがきっかけでした。
+          {{ $t("vueA11yPage.book.desc01") }}
         </p>
-        <p>現在BOOTHやNoteでもPDFファイルにて販売しております。</p>
+        <p>
+          {{ $t("vueA11yPage.book.desc02") }}
+        </p>
         <ul>
           <li>
             <a
@@ -39,7 +41,7 @@
           </li>
         </ul>
         <p>
-          またGitHubのフィードバック用のリポジトリのIssueにて修正や改善、提案を受け入れています。
+          {{ $t("vueA11yPage.book.desc03") }}
         </p>
         <a
           href="https://github.com/yamanoku/accessibility_book-issues"
