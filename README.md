@@ -9,7 +9,7 @@ Okuto Oyama Portfolio Site.
   - @nuxtjs/pwa
   - nuxt-i18n
   - eslint-plugin-vue
-  - eslint-plugin-vue-a11y
+  - eslint-plugin-vuejs-accessibility
 - Vuex （Store）
 - Style
   - modern-normalize
