@@ -3,6 +3,7 @@
     <h2 id="product_heading">
       {{ $t("heading.productList") }}
     </h2>
+    <a11y-vue-page />
     <a11y-beginner />
     <reading />
     <vue-portfolio />
@@ -13,12 +14,14 @@
 import A11yBeginner from "~/components/products/A11yBeginner.vue"
 import Reading from "~/components/products/Reading.vue"
 import VuePortfolio from "~/components/products/VuePortfolio.vue"
+import A11yVuePage from "~/components/products/A11yVuePage.vue"
 
 export default {
   components: {
     A11yBeginner,
     Reading,
-    VuePortfolio
+    VuePortfolio,
+    A11yVuePage
   }
 }
 </script>

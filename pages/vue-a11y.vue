@@ -7,29 +7,6 @@
     <vue-accessibility-section />
     <accessibility-notes-section />
     <conclusion-section />
-    <section>
-      <h3>{{ $t("vueA11yPage.subHeading.info") }}</h3>
-      <ul>
-        <li>
-          <time datetime="2019-12-21">2019/12/21</time>
-          {{ $t("vueA11yPage.info.listitem01") }}
-        </li>
-        <li>
-          <time datetime="2020-02-28">2020/02/28</time>
-          <i18n path="vueA11yPage.info.listitem02">
-            <template v-slot:awesomeA11yVue>
-              <a
-                href="https://github.com/vue-a11y/awesome-a11y-vue/pull/3"
-                target="_blank"
-                rel="noopener"
-                lang="en"
-                >awesome-a11y-vue<open-new-icon
-              /></a>
-            </template>
-          </i18n>
-        </li>
-      </ul>
-    </section>
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
