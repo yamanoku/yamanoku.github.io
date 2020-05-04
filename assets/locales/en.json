@@ -51,7 +51,12 @@
     "vuePortfolio": "Vue Portfolio Template",
     "vueA11yPage": {
       "title": "About accessibility with Vue.js",
-      "link": "Article about accessibility with Vue.js"
+      "link": "Article about accessibility with Vue.js",
+      "info": {
+        "listitem01": "Published.",
+        "listitem02" : "Posted on {awesomeA11yVue}",
+        "listitem03" : "Added english page"
+      }
     },
     "crowding": "Crowding - Coding works",
     "birthdayCount": "Birthday Countdown",
@@ -293,10 +298,6 @@
       "desc08": "Making things accessible is not a matter of “done for,” or “0 or 100,” but rather a matter of continuous review and trial-and-error while creating a product, so We hope to proceed slowly and steadily.",
       "desc09": "Through this article, we hope that developers, designers, and others involved with Vue.js will become more interested in accessibility and empowered to work on accessibility in the future.",
       "desc10": "We still have a lot of work to do, and it's a difficult field to advance, but I hope that this circle will expand little by little. Because “Accessibility” is acceptable to any person."
-    },
-    "info": {
-      "listitem01": "Published.",
-      "listitem02" : "Posted on {awesomeA11yVue}"
     }
   },
   "privacyPage": {

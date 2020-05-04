@@ -13,7 +13,7 @@
       </nuxt-link>
     </p>
     <section
-      id="product:about-accessibility-with-vuejs_infomation"
+      id="product:about-accessibility-with-vuejs_information"
       aria-labelledby="product:about-accessibility-with-vuejs_subheading"
     >
       <h4 id="product:about-accessibility-with-vuejs_subheading">
@@ -38,17 +38,11 @@
             </template>
           </i18n>
         </li>
+        <li>
+          <time datetime="2020-05-03">2020/05/03</time>
+          {{ $t("vueA11yPage.info.listitem03") }}
+        </li>
       </ul>
     </section>
   </article>
 </template>
-
-<script>
-export default {
-  mounted() {
-    this.$nextTick(function () {
-      console.log($i18n.locales.code)
-    })
-  }
-}
-</script>
