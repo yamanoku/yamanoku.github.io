@@ -1,5 +1,5 @@
 <template>
-  <section id="web-accessibility-notes">
+  <section id="web-accessibility-notes:about-accessibility-with-vuejs">
     <h2>{{ $t("vueA11yPage.heading.a11yNote") }}</h2>
     <p>
       {{ $t("vueA11yPage.a11yNote.desc01") }}
@@ -25,7 +25,7 @@
         {{ $t("vueA11yPage.a11yNote.quote01") }}
       </p>
       <a
-        :href="$t('vueA11yPage.a11yNote.quote02.text')"
+        :href="$t('vueA11yPage.a11yNote.quote02.link')"
         target="_blank"
         rel="noopener"
         >{{ $t("vueA11yPage.a11yNote.quote02.text") }}<open-new-icon

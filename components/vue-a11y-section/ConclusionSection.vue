@@ -1,5 +1,5 @@
 <template>
-  <section id="in-conclusion">
+  <section id="in-conclusion:about-accessibility-with-vuejs">
     <h2>{{ $t("vueA11yPage.heading.conclusion") }}</h2>
     <p>
       {{ $t("vueA11yPage.conclusion.desc01") }}
