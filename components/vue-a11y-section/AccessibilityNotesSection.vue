@@ -1,5 +1,5 @@
 <template>
-  <section id="web-accessibility-notes">
+  <section id="web-accessibility-notes:about-accessibility-with-vuejs">
     <h2>{{ $t("vueA11yPage.heading.a11yNote") }}</h2>
     <p>
       {{ $t("vueA11yPage.a11yNote.desc01") }}
@@ -25,7 +25,7 @@
         {{ $t("vueA11yPage.a11yNote.quote01") }}
       </p>
       <a
-        :href="$t('vueA11yPage.a11yNote.quote02.text')"
+        :href="$t('vueA11yPage.a11yNote.quote02.link')"
         target="_blank"
         rel="noopener"
         >{{ $t("vueA11yPage.a11yNote.quote02.text") }}<open-new-icon
@@ -53,13 +53,13 @@
     <p>
       {{ $t("vueA11yPage.a11yNote.desc07") }}
     </p>
-    <iframe
-      class="vue-accessible-modal"
-      src="https://codesandbox.io/embed/vue-accessible-modal-9m474?fontsize=14&hidenavigation=1&theme=dark"
-      title="vue-accessible-modal"
-      allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
-      sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-    ></iframe>
+    <a
+      href="https://codesandbox.io/s/vue-accessible-modal-9m474]"
+      target="_blank"
+      rel="noopener"
+      lang="en"
+      >vue-accessible-modal - CodeSandbox<open-new-icon />
+    </a>
     <h3>{{ $t("vueA11yPage.subHeading.a11yNote.3") }}</h3>
     <i18n tag="p" path="vueA11yPage.a11yNote.desc08">
       <template v-slot:abbr01>

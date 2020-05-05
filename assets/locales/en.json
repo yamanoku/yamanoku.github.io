@@ -49,6 +49,15 @@
     "yamanokuCli": "yamanoku CLI",
     "reading": "Reading...",
     "vuePortfolio": "Vue Portfolio Template",
+    "vueA11yPage": {
+      "title": "About accessibility with Vue.js",
+      "link": "Article about accessibility with Vue.js",
+      "info": {
+        "listitem01": "Published.",
+        "listitem02" : "Posted on {awesomeA11yVue}",
+        "listitem03" : "Added english page"
+      }
+    },
     "crowding": "Crowding - Coding works",
     "birthdayCount": "Birthday Countdown",
     "glitch": "glitchrange",
@@ -62,6 +71,7 @@
       "wafb": "Presented in the 5th technical book fest. I would like to ask not only engineers but also all people involved with the web to see what kind of measures are available for web accessibility, such as machine-readable web pages, human-readable web pages, and WAI-ARIA web pages.",
       "reading": "I came up with the idea of accumulating and visualizing information about what would happen if I collected and summarized the news that I always watch. It incorporates PWA technology so that it can also be viewed as an offline application.",
       "vuePortfolio": "Portfolio template made by Vue.js. This is the first SPA created from vue cli. I used the Vue 1.0 versions at first, but now I can upgrade it to the Vue 2.0 versions.",
+      "vueA11yPage": "Created with the motivation to make people aware of accessibility in Vue.js development. Initially, it was put together as a presentation for a conference and later as an advent calendar article, but we are updating it on time to make it a more practical reference and functional document.",
       "yamanokuCli": "This is a simple self-introduction tool that can be checked with the CLI. Fork is from sindresorhus.",
       "slackprimoji": "Convert Pri-para character lines into Slack reaction emoji. The original story is from slack-reaction-decomoji produced by oti.",
       "qiitaCode": "A Chrome extension that restores Qiita's code style to the previous one. Not published to the store. Therefore, add it in developer mode.",
@@ -191,7 +201,8 @@
     "bio": {
       "desc01": "My name is Okuto Oyama. On the Internet, I am active under the names of Oyama Michinoku and yamanoku.",
       "desc02": "I started out as a web designer for a web production company and worked as a markup/front-end engineer at GEEK Inc. before joining CrowdWorks Inc. in October 2019.",
-      "desc03": "My role is as a UX engineer. Individuals are also involved in accessibility advocate."
+      "desc03": "My role is as a UX engineer. Individuals are also involved in accessibility advocate.",
+      "photoAlt": "Okuto Oyama"
     },
     "book": {
       "desc01": "I published a technical coterie magazine called “Web Accessibility for Beginners” at a 技術書典 (technical book festival), which I wanted to introduce as an introduction to web accessibility for those who are new to it.",
@@ -288,10 +299,6 @@
       "desc08": "Making things accessible is not a matter of “done for,” or “0 or 100,” but rather a matter of continuous review and trial-and-error while creating a product, so We hope to proceed slowly and steadily.",
       "desc09": "Through this article, we hope that developers, designers, and others involved with Vue.js will become more interested in accessibility and empowered to work on accessibility in the future.",
       "desc10": "We still have a lot of work to do, and it's a difficult field to advance, but I hope that this circle will expand little by little. Because “Accessibility” is acceptable to any person."
-    },
-    "info": {
-      "listitem01": "Published.",
-      "listitem02" : "Posted on {awesomeA11yVue}"
     }
   },
   "privacyPage": {

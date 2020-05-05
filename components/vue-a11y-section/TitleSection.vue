@@ -1,6 +1,20 @@
 <template>
-  <section id="title">
-    <h1>{{ $t("vueA11yPage.title") }}</h1>
+  <section id="title:about-accessibility-with-vuejs">
+    <h1 id="heading:about-accessibility-with-vuejs">
+      {{ $t("vueA11yPage.title") }}
+    </h1>
+    <figure aria-labelledby="heading:about-accessibility-with-vuejs">
+      <picture>
+        <source
+          srcset="~/assets/img/product-about-accessibility-with-vuejs.webp"
+          type="image/webp"
+        />
+        <img
+          src="~/assets/img/product-about-accessibility-with-vuejs.png"
+          :alt="$t('prefixAlt.photo') + $t('product.vueA11yPage.title')"
+        />
+      </picture>
+    </figure>
     <i18n tag="p" path="vueA11yPage.titleSection.desc01">
       <template v-slot:link01>
         <a
