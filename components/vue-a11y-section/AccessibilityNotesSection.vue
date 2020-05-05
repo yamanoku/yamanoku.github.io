@@ -53,13 +53,13 @@
     <p>
       {{ $t("vueA11yPage.a11yNote.desc07") }}
     </p>
-    <iframe
-      class="vue-accessible-modal"
-      src="https://codesandbox.io/embed/vue-accessible-modal-9m474?fontsize=14&hidenavigation=1&theme=dark"
-      title="vue-accessible-modal"
-      allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
-      sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-    ></iframe>
+    <a
+      href="https://codesandbox.io/s/vue-accessible-modal-9m474]"
+      target="_blank"
+      rel="noopener"
+      lang="en"
+      >vue-accessible-modal - CodeSandbox<open-new-icon />
+    </a>
     <h3>{{ $t("vueA11yPage.subHeading.a11yNote.3") }}</h3>
     <i18n tag="p" path="vueA11yPage.a11yNote.desc08">
       <template v-slot:abbr01>
