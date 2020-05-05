@@ -22,11 +22,11 @@
       <ul>
         <li>
           <time datetime="2019-12-21">2019/12/21</time>
-          {{ $t("vueA11yPage.info.listitem01") }}
+          {{ $t("product.vueA11yPage.info.listitem01") }}
         </li>
         <li>
           <time datetime="2020-02-28">2020/02/28</time>
-          <i18n path="vueA11yPage.info.listitem02">
+          <i18n path="product.vueA11yPage.info.listitem02">
             <template v-slot:awesomeA11yVue>
               <a
                 href="https://github.com/vue-a11y/awesome-a11y-vue/pull/3"
@@ -40,7 +40,7 @@
         </li>
         <li>
           <time datetime="2020-05-03">2020/05/03</time>
-          {{ $t("vueA11yPage.info.listitem03") }}
+          {{ $t("product.vueA11yPage.info.listitem03") }}
         </li>
       </ul>
     </section>
