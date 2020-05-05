@@ -201,7 +201,8 @@
     "bio": {
       "desc01": "My name is Okuto Oyama. On the Internet, I am active under the names of Oyama Michinoku and yamanoku.",
       "desc02": "I started out as a web designer for a web production company and worked as a markup/front-end engineer at GEEK Inc. before joining CrowdWorks Inc. in October 2019.",
-      "desc03": "My role is as a UX engineer. Individuals are also involved in accessibility advocate."
+      "desc03": "My role is as a UX engineer. Individuals are also involved in accessibility advocate.",
+      "photoAlt": "Okuto Oyama"
     },
     "book": {
       "desc01": "I published a technical coterie magazine called “Web Accessibility for Beginners” at a 技術書典 (technical book festival), which I wanted to introduce as an introduction to web accessibility for those who are new to it.",
