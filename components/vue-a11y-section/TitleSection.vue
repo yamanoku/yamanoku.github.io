@@ -1,6 +1,8 @@
 <template>
   <section id="title:about-accessibility-with-vuejs">
-    <h1 id="heading:about-accessibility-with-vuejs">{{ $t("vueA11yPage.title") }}</h1>
+    <h1 id="heading:about-accessibility-with-vuejs">
+      {{ $t("vueA11yPage.title") }}
+    </h1>
     <figure aria-labelledby="heading:about-accessibility-with-vuejs">
       <picture>
         <source
