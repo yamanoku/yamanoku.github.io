@@ -5,23 +5,23 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: "babel-eslint"
   },
   extends: [
-    'plugin:vue/essential',
-    'plugin:vuejs-accessibility/recommended',
-    'plugin:prettier/recommended'
+    "plugin:vue/essential",
+    "plugin:vuejs-accessibility/recommended",
+    "plugin:prettier/recommended"
   ],
-  plugins: [
-    'vue',
-    'vuejs-accessibility'
-  ],
+  plugins: ["vue", "vuejs-accessibility"],
   rules: {
-    'prettier/prettier': ['error', {
-      'semi': false,
-      'trailingComma': 'none',
-      'arrowParens': 'avoid'
-    }],
-    'vuejs-accessibility/no-redundant-roles': 0
+    "prettier/prettier": [
+      "error",
+      {
+        semi: false,
+        trailingComma: "none",
+        arrowParens: "avoid"
+      }
+    ],
+    "vuejs-accessibility/no-redundant-roles": 0
   }
 }
