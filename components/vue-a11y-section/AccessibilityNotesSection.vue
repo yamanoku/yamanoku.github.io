@@ -133,6 +133,7 @@
       </picture>
     </figure>
     <p>{{ $t("vueA11yPage.a11yNote.desc14") }}</p>
+    <highlight-code>{{ vueAxeInstall }}</highlight-code>
     <highlight-code lang="js">{{ vueAxeSetting }}</highlight-code>
     <h4 lang="en">Storybook</h4>
     <i18n tag="p" path="vueA11yPage.a11yNote.desc15">
@@ -224,11 +225,18 @@ export default {
             }
         }
       `,
+      vueAxeInstall: `
+        # NPM
+        $ npm install -D axe-core vue-axe
+
+        # Yarn
+        $ yarn add -D axe-core vue-axe
+      `,
       vueAxeSetting: `
         import Vue from 'vue'
 
         if (process.env.NODE_ENV !== 'production') { // development environment
-          const VueAxe = require('vue-axe')
+          const VueAxe = require('vue-axe').default
           const AXE_LOCALE_JA = require('axe-core/locales/ja.json') // locale setting
 
           Vue.use(VueAxe, {
