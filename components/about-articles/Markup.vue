@@ -12,8 +12,8 @@
           <a
             href="https://www.w3.org/TR/wai-aria-practices-1.1/#naming_role_guidance"
             lang="en-US"
-            >5.3.4 Accessible Name Guidance by Role - WAI-ARIA Authoring Practices
-            1.1</a
+            >5.3.4 Accessible Name Guidance by Role - WAI-ARIA Authoring
+            Practices 1.1</a
           >
         </figcaption>
       </figure>
