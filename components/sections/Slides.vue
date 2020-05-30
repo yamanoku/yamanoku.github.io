@@ -9,25 +9,20 @@
     <h3 id="slides-stage">
       {{ $t("heading.slides.stage") }}
     </h3>
-    <slide-list :listArray="listStage" />
+    <common-slide-list :listArray="listStage" />
     <h3 id="slides-study">
       {{ $t("heading.slides.study") }}
     </h3>
-    <slide-list :listArray="listStudy" />
+    <common-slide-list :listArray="listStudy" />
     <h3 id="slides-write">
       {{ $t("heading.slides.write") }}
     </h3>
-    <slide-list :listArray="listWrite" />
+    <common-slide-list :listArray="listWrite" />
   </section>
 </template>
 
 <script>
-import SlideList from "~/components/lists/SlideList.vue"
-
 export default {
-  components: {
-    SlideList
-  },
   data() {
     return {
       listStage: this.$store.state.slide.stage,

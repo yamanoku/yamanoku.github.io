@@ -40,6 +40,34 @@ module.exports = {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   css: ["modern-normalize", "yama-normalize"],
+  buildModules: ["@nuxt/components"],
+  components: [
+    "~/components/",
+    {
+      path: "~/components/about-articles/",
+      prefix: "about-articles"
+    },
+    {
+      path: "~/components/common/",
+      prefix: "common"
+    },
+    {
+      path: "~/components/lists/",
+      prefix: "lists"
+    },
+    {
+      path: "~/components/products/",
+      prefix: "products"
+    },
+    {
+      path: "~/components/sections/",
+      prefix: "sections"
+    },
+    {
+      path: "~/components/vuejs-accessibility-sections/",
+      prefix: "vuejs-accessibility-sections"
+    }
+  ],
   build: {
     extend(config, { isDev }) {
       if (isDev && process.client) {

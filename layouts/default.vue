@@ -1,24 +1,16 @@
 <template>
   <div>
-    <header-component />
-    <global-navigation />
+    <common-header />
+    <common-global-navigation />
     <nuxt />
-    <footer-component />
+    <common-footer />
   </div>
 </template>
 
 <script>
-import HeaderComponent from "~/components/common/Header.vue"
-import FooterComponent from "~/components/common/Footer.vue"
-import GlobalNavigation from "~/components/common/GlobalNavigation.vue"
 export default {
   head() {
     return this.$nuxtI18nSeo()
-  },
-  components: {
-    HeaderComponent,
-    FooterComponent,
-    GlobalNavigation
   }
 }
 </script>

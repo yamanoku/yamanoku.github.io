@@ -1,43 +1,24 @@
 <template>
   <main role="main" id="main">
-    <title-section />
-    <bio-section />
-    <book-section />
-    <web-accessibility-section />
-    <vue-accessibility-section />
-    <accessibility-notes-section />
-    <conclusion-section />
+    <vuejs-accessibility-sections-title />
+    <vuejs-accessibility-sections-bio />
+    <vuejs-accessibility-sections-book />
+    <vuejs-accessibility-sections-web-accessibility />
+    <vuejs-accessibility-sections-vuejs-accessibility />
+    <vuejs-accessibility-sections-accessibility-notes />
+    <vuejs-accessibility-sections-conclusion />
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
-    <local-switch-component />
+    <common-local-switch />
   </main>
 </template>
 
 <script>
-import AccessibilityNotesSection from "~/components/vue-a11y-section/AccessibilityNotesSection.vue"
-import BioSection from "~/components/vue-a11y-section/BioSection.vue"
-import BookSection from "~/components/vue-a11y-section/BookSection.vue"
-import ConclusionSection from "~/components/vue-a11y-section/ConclusionSection.vue"
-import TitleSection from "~/components/vue-a11y-section/TitleSection.vue"
-import VueAccessibilitySection from "~/components/vue-a11y-section/VueAccessibilitySection.vue"
-import WebAccessibilitySection from "~/components/vue-a11y-section/WebAccessibilitySection.vue"
-import LocalSwitchComponent from "~/components/common/LocalSwitch.vue"
-
 import Meta from "~/mixins/meta"
 
 export default {
   mixins: [Meta],
-  components: {
-    AccessibilityNotesSection,
-    BioSection,
-    BookSection,
-    ConclusionSection,
-    TitleSection,
-    VueAccessibilitySection,
-    WebAccessibilitySection,
-    LocalSwitchComponent
-  },
   data() {
     return {
       meta: {
