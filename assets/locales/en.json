@@ -124,8 +124,8 @@
       "caption": "Assist users as they move from article to article by tying aria-labelledby to article elements."
     },
     "components": {
-      "desc01": "For example, the slide list uses the following components to render:",
-      "desc02": "You need to format the API you get for display, but managing it as a single component simplifies source code, allows multiple uses, and simplifies information design.",
+      "desc01": "You need to format the API you get for display, but managing it as a single component simplifies source code, allows multiple uses, and simplifies information design.",
+      "desc02": "For example, the slide list uses the following components to render:",
       "desc03": "In addition, we set the Store to call each API to prevent the depth of Props in component-oriented development."
     },
     "pwa": {
