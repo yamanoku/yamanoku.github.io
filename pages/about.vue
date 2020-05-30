@@ -72,7 +72,7 @@
       <about-articles-tech-stack />
       <about-articles-markup />
       <about-articles-component-oriented />
-      <about-articles-i18n />
+      <about-articles-internationalization />
     </section>
     <section id="about:design" aria-labelledby="about:design_heading">
       <h2 id="about:design_heading">
