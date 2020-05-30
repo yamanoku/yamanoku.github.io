@@ -7,19 +7,38 @@
       {{ $t("aboutPage.subHeading.i18n") }}
     </h3>
     <p>{{ $t("aboutPage.i18n.desc01") }}</p>
-    <p>{{ $t("aboutPage.i18n.desc02") }}</p>
-    <ul role="list">
-      <li role="listitem">
-        <a
-          href="https://github.com/yamanoku/yamanoku.github.io/projects/2"
-          target="_blank"
-          rel="noopener"
-          lang="en-US"
-        >
-          i18n Project
-          <github-icon />
-        </a>
-      </li>
-    </ul>
+    <details>
+      <summary>{{ $t("details.summary") }}</summary>
+      <p>{{ $t("aboutPage.i18n.desc02") }}</p>
+      <figure>
+        <highlight-code id="only-jp-rendering" lang="vue">{{
+          onlyJPText
+        }}</highlight-code>
+        <figcaption>
+          <a
+            href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/sections/Slides.vue"
+            target="_blank"
+            rel="noopener"
+          >
+            Slides.vue
+            <github-icon />
+          </a>
+        </figcaption>
+      </figure>
+    </details>
   </article>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      onlyJPText: `
+        <template v-if="this.$i18n.locale !== 'ja'">
+          <em>{{ $t("onlyJPText") }}</em>
+        </template>
+      `
+    }
+  }
+}
+</script>
