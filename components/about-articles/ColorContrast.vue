@@ -7,34 +7,39 @@
       {{ $t("aboutPage.subHeading.contrast") }}
     </h3>
     <p>{{ $t("aboutPage.contrast.desc01") }}</p>
-    <p>{{ $t("aboutPage.contrast.desc02") }}</p>
-    <dl aria-labelledby="about:color-contrast_heading">
-      <div
-        v-for="color in colors"
-        :key="color.name"
-        :style="'background-color:' + color.value"
-      >
-        <dt
-          :style="
-            color.name === 'var(--black)' || color.name === 'var(--linkBlue)'
-              ? 'color: #fff'
-              : ''
-          "
+    <details>
+      <summary>
+        {{ $t("details.summary") }}
+      </summary>
+      <p>{{ $t("aboutPage.contrast.desc02") }}</p>
+      <dl aria-labelledby="about:color-contrast_heading">
+        <div
+          v-for="color in colors"
+          :key="color.name"
+          :style="'background-color:' + color.value"
         >
-          {{ color.name }}
-        </dt>
-        <dd
-          :style="
-            color.name === 'var(--black)' || color.name === 'var(--linkBlue)'
-              ? 'color: #fff'
-              : ''
-          "
-        >
-          {{ color.value }}
-        </dd>
-      </div>
-    </dl>
-    <p>{{ $t("aboutPage.contrast.desc03") }}</p>
+          <dt
+            :style="
+              color.name === 'var(--black)' || color.name === 'var(--linkBlue)'
+                ? 'color: #fff'
+                : ''
+            "
+          >
+            {{ color.name }}
+          </dt>
+          <dd
+            :style="
+              color.name === 'var(--black)' || color.name === 'var(--linkBlue)'
+                ? 'color: #fff'
+                : ''
+            "
+          >
+            {{ color.value }}
+          </dd>
+        </div>
+      </dl>
+      <p>{{ $t("aboutPage.contrast.desc03") }}</p>
+    </details>
   </article>
 </template>
 
