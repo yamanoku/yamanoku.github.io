@@ -124,8 +124,8 @@
       "caption": "Assist users as they move from article to article by tying aria-labelledby to article elements."
     },
     "components": {
-      "desc01": "For example, the slide list uses the following components to render:",
-      "desc02": "You need to format the API you get for display, but managing it as a single component simplifies source code, allows multiple uses, and simplifies information design.",
+      "desc01": "You need to format the API you get for display, but managing it as a single component simplifies source code, allows multiple uses, and simplifies information design.",
+      "desc02": "For example, the slide list uses the following components to render:",
       "desc03": "In addition, we set the Store to call each API to prevent the depth of Props in component-oriented development."
     },
     "pwa": {
@@ -134,12 +134,12 @@
     },
     "i18n": {
       "desc01": "Since we are developing on Nuxt.js, we have introduced a tool called nuxt-18n. In addition to internationalization, rendering can also be done for specific languages.",
-      "desc02": "I support Japanese and English as standard, but we plan to support other languages."
+      "desc02": "The following is a conditional expression that is displayed when it is not in Japanese."
     },
     "designDescription": "Inclusive design designed for easy viewing by all users.",
     "overdesign": {
       "desc01": "Too much decoration can prevent you from getting the information you want. It is designed with the default style of the browser, that is, the standard image in mind.",
-      "desc02": "It's also designed with semantic markup, so you can get to the information without getting stylized or leaving the default style."
+      "desc02": "It's also the semantic markup of the design makes it possible to arrive at the information without feeling out of place, even with the default style in browser."
     },
     "fontSize": {
       "desc01": "The basic setting is 16 px, and the size ratio can be maintained even if the page is enlarged by rem."
@@ -356,6 +356,9 @@
     "screenshot": "ScreenShot: "
   },
   "multilingual": "Multilingual Page",
+  "details": {
+    "summary": "Details"
+  },
   "backTop": "Return to the top page",
   "onlyJPText": "Sorry, Japanese text only"
 }
