@@ -139,7 +139,7 @@
     "designDescription": "Inclusive design designed for easy viewing by all users.",
     "overdesign": {
       "desc01": "Too much decoration can prevent you from getting the information you want. It is designed with the default style of the browser, that is, the standard image in mind.",
-      "desc02": "It's also designed with semantic markup, so you can get to the information without getting stylized or leaving the default style."
+      "desc02": "It's also the semantic markup of the design makes it possible to arrive at the information without feeling out of place, even with the default style in browser."
     },
     "fontSize": {
       "desc01": "The basic setting is 16 px, and the size ratio can be maintained even if the page is enlarged by rem."
