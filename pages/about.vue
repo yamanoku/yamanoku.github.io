@@ -69,21 +69,21 @@
       <h2 id="about:implementation_heading">
         {{ $t("aboutPage.heading.implementation") }}
       </h2>
-      <tech-stack />
-      <markup-article />
-      <component-oriented />
-      <i18n-article />
+      <AboutArticlesTechStack />
+      <AboutArticlesMarkup />
+      <AboutArticlesComponentOriented />
+      <AboutArticlesI18n />
     </section>
     <section id="about:design" aria-labelledby="about:design_heading">
       <h2 id="about:design_heading">
         {{ $t("aboutPage.heading.design") }}
       </h2>
       <p>{{ $t("aboutPage.designDescription") }}</p>
-      <do-not-over-design />
-      <font-size-article />
-      <color-contrast />
-      <max-width-article />
-      <vertical-rhythm />
+      <AboutArticlesDoNotOverDesign />
+      <AboutArticlesFontSize />
+      <AboutArticlesColorContrast />
+      <AboutArticlesMaxWidth />
+      <AboutArticlesVerticalRhythm />
     </section>
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
@@ -93,21 +93,6 @@
 </template>
 
 <script>
-// section-implementation
-import TechStack from "~/components/about-articles/TechStack.vue"
-import MarkupArticle from "~/components/about-articles/Markup.vue"
-import ComponentOriented from "~/components/about-articles/ComponentOriented.vue"
-import I18nArticle from "~/components/about-articles/I18n.vue"
-
-// section-design
-import DoNotOverDesign from "~/components/about-articles/DoNotOverDesign.vue"
-import FontSizeArticle from "~/components/about-articles/FontSize.vue"
-import ColorContrast from "~/components/about-articles/ColorContrast.vue"
-import MaxWidthArticle from "~/components/about-articles/MaxWidth.vue"
-import VerticalRhythm from "~/components/about-articles/VerticalRhythm.vue"
-
-import LocalSwitchComponent from "~/components/common/LocalSwitch.vue"
-
 import Meta from "~/mixins/meta"
 
 export default {
@@ -120,18 +105,6 @@ export default {
         image: "https://yamanoku.net/ogp/ogp-about@2x.png"
       }
     }
-  },
-  components: {
-    LocalSwitchComponent,
-    TechStack,
-    MarkupArticle,
-    ComponentOriented,
-    I18nArticle,
-    DoNotOverDesign,
-    FontSizeArticle,
-    ColorContrast,
-    MaxWidthArticle,
-    VerticalRhythm
   }
 }
 </script>
