@@ -358,5 +358,8 @@
     "screenshot": "スクリーンショット："
   },
   "multilingual": "多言語ページ",
+  "details": {
+    "summary": "詳細を確認する"
+  },
   "backTop": "トップページに戻る"
 }

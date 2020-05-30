@@ -356,6 +356,9 @@
     "screenshot": "ScreenShot: "
   },
   "multilingual": "Multilingual Page",
+  "details": {
+    "summary": "Details"
+  },
   "backTop": "Return to the top page",
   "onlyJPText": "Sorry, Japanese text only"
 }
