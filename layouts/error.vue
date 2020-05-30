@@ -17,16 +17,12 @@
 </template>
 
 <script>
-import SitemapList from "~/components/lists/SitemapList.vue"
 export default {
   props: {
     error: {
       type: Object,
       default: null
     }
-  },
-  components: {
-    SitemapList
   },
   head() {
     return {

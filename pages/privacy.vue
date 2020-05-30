@@ -28,13 +28,11 @@
         </li>
       </ul>
     </section>
-    <local-switch-component />
+    <CommonLocalSwitch />
   </main>
 </template>
 
 <script>
-import LocalSwitchComponent from "~/components/common/LocalSwitch.vue"
-
 import Meta from "~/mixins/meta"
 
 export default {
@@ -47,9 +45,6 @@ export default {
         image: "https://yamanoku.net/ogp/ogp-privacy@2x.png"
       }
     }
-  },
-  components: {
-    LocalSwitchComponent
   }
 }
 </script>
