@@ -32,6 +32,9 @@ export const actions = {
       .then(response => {
         return response.data
       })
+      .catch(() => {
+        return {}
+      })
     ctx.commit("SET_PUSH_TIME", portfolioData.updated_at)
     ctx.commit("SET_CREATE_TIME", portfolioData.created_at)
   }

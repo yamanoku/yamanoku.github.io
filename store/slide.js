@@ -29,6 +29,9 @@ export const actions = {
       .then(response => {
         return response.data.contents
       })
+      .catch(() => {
+        return []
+      })
     ctx.commit("SET_STAGE_ARTICLE", stage_data)
     const study_data = await this.$axios
       .get("https://yamanoku.microcms.io/api/v1/study", {
@@ -37,6 +40,9 @@ export const actions = {
       .then(response => {
         return response.data.contents
       })
+      .catch(() => {
+        return []
+      })
     ctx.commit("SET_STUDY_ARTICLE", study_data)
     const write_data = await this.$axios
       .get("https://yamanoku.microcms.io/api/v1/write", {
@@ -44,6 +50,9 @@ export const actions = {
       })
       .then(response => {
         return response.data.contents
+      })
+      .catch(() => {
+        return []
       })
     ctx.commit("SET_WRITE_ARTICLE", write_data)
   }

@@ -28,6 +28,9 @@ export const actions = {
       .then(response => {
         return response.data
       })
+      .catch(() => {
+        return []
+      })
     const a11y = a11y_data.filter(issue => !issue.pull_request)
     ctx.commit("SET_A11Y_ISSUES", a11y)
     const read_url = `https://api.github.com/repos/yamanoku/reading/issues`
@@ -36,6 +39,9 @@ export const actions = {
       .then(response => {
         return response.data
       })
+      .catch(() => {
+        return []
+      })
     const reading = read_data.filter(issue => !issue.pull_request)
     ctx.commit("SET_READ_ISSUES", reading)
     const vue_url = `https://api.github.com/repos/yamanoku/vue_portfolio_template/issues`
@@ -43,6 +49,9 @@ export const actions = {
       .get(vue_url, { headers: { Authorization: `yamanoku:${vue_token}` } })
       .then(response => {
         return response.data
+      })
+      .catch(() => {
+        return []
       })
     const vuePortfolio = vue_data.filter(issue => !issue.pull_request)
     ctx.commit("SET_VUE_ISSUES", vuePortfolio)
