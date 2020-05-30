@@ -33,25 +33,19 @@ ul:not([class]) li svg {
   height: 12px;
   margin: 0 0 -1px 4px;
 }
-ul:not([class]) li svg path {
+svg path {
   fill: var(--black);
 }
 @media (prefers-color-scheme: dark) {
-  ul:not([class]) li svg path {
+  svg path {
     fill: var(--white);
   }
 }
-ul:not([class]) li svg .npm-1 {
-  fill: #c12127;
-}
-ul:not([class]) li svg .npm-2 {
-  fill: #fff;
-}
-ul:not([class]) li svg .product-2,
-ul:not([class]) li svg .edit-2,
-ul:not([class]) li svg .image-1,
-ul:not([class]) li svg .shopping-2,
-ul:not([class]) li svg .open_new-1 {
+svg .product-2,
+svg .edit-2,
+svg .image-1,
+svg .shopping-2,
+svg .open_new-1 {
   fill: none;
 }
 address svg {

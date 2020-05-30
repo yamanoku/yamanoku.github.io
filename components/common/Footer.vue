@@ -1,11 +1,13 @@
 <template>
   <footer>
-    <p>
-      Created at:
-      <time :datetime="createTime">{{ createTime }}</time
-      >, Updated at:
-      <time :datetime="pushTime">{{ pushTime }}</time>
-    </p>
+    <template v-if="createTime && pushTime">
+      <p>
+        Created at:
+        <time :datetime="createTime">{{ createTime }}</time
+        >, Updated at:
+        <time :datetime="pushTime">{{ pushTime }}</time>
+      </p>
+    </template>
     <nuxt-link :to="localePath({ name: 'privacy' })">{{
       $t("privacyPage.title")
     }}</nuxt-link>

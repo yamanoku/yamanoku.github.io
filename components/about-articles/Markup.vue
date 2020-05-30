@@ -8,13 +8,21 @@
       <figure>
         <highlight-code lang="html">{{ waiAria }}</highlight-code>
         <figcaption>
-          {{ $t("aboutPage.markup.caption") }}<br />
-          <a
-            href="https://www.w3.org/TR/wai-aria-practices-1.1/#naming_role_guidance"
-            lang="en-US"
-            >5.3.4 Accessible Name Guidance by Role - WAI-ARIA Authoring
-            Practices 1.1</a
-          >
+          <p>{{ $t("aboutPage.markup.caption") }}</p>
+          <ul role="list">
+            <li role="listitem">
+              <a
+                href="https://www.w3.org/TR/wai-aria-practices-1.1/#naming_role_guidance"
+                target="_blank"
+                rel="noopener"
+                lang="en-US"
+              >
+                5.3.4 Accessible Name Guidance by Role - WAI-ARIA Authoring
+                Practices 1.1
+                <open-new-icon />
+              </a>
+            </li>
+          </ul>
         </figcaption>
       </figure>
     </details>
