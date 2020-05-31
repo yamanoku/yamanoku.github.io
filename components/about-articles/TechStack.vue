@@ -7,6 +7,7 @@
       <li role="listitem">
         Nuxt.js
         <ul role="list">
+          <li role="listitem">@nuxt/components</li>
           <li role="listitem">@nuxtjs/axios</li>
           <li role="listitem">@nuxtjs/dotenv</li>
           <li role="listitem">@nuxtjs/pwa</li>
