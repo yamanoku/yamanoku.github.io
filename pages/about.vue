@@ -88,7 +88,7 @@
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
-    <local-switch-component />
+    <common-local-switch />
   </main>
 </template>
 
