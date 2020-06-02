@@ -7,6 +7,7 @@
     <vuejs-accessibility-sections-vuejs-accessibility />
     <vuejs-accessibility-sections-accessibility-notes />
     <vuejs-accessibility-sections-conclusion />
+    <common-feedback-list :listArray="feedbackList" />
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
@@ -25,7 +26,21 @@ export default {
         title: this.$t("vueA11yPage.title"),
         description: this.$t("vueA11yPage.description"),
         image: "https://yamanoku.net/ogp/ogp-vue-a11y@2x.png"
-      }
+      },
+      feedbackList: [
+        {
+          link: `https://github.com/yamanoku/yamanoku.github.io/issues/new?title=記事「${this.$t(
+            "vueA11yPage.title"
+          )}」の修正依頼&labels=document,feedback&body=URL：https://yamanoku.net${
+            this.$route.path
+          }%0A修正内容：`,
+          title: `GitHub Issueを作成する`
+        },
+        {
+          link: `https://twitter.com/share?url=https://yamanoku.net${this.$route.path}&text=@yamanoku`,
+          title: "Twitterで連絡する"
+        }
+      ]
     }
   }
 }
