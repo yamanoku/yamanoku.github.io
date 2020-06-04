@@ -1,6 +1,6 @@
 <template>
   <details>
-    <summary>この記事に関する修正依頼</summary>
+    <summary>{{ $t("details.summary_feedback") }}</summary>
     <ul role="list">
       <li role="listitem" v-for="list in listItem" :key="list.title">
         <a :href="list.link" target="_blank" rel="noopener">

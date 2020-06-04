@@ -29,16 +29,16 @@ export default {
       },
       feedbackList: [
         {
-          link: `https://github.com/yamanoku/yamanoku.github.io/issues/new?title=記事「${this.$t(
-            "vueA11yPage.title"
-          )}」の修正依頼&labels=document,feedback&body=URL：https://yamanoku.net${
+          link: `https://github.com/yamanoku/yamanoku.github.io/issues/new?title=${this.$t(
+            "vueA11yPage.feedback.github.linkTitle"
+          )}&labels=document,feedback&body=URL：https://yamanoku.net${
             this.$route.path
-          }%0A修正内容：`,
-          title: `GitHub Issueを作成する`
+          }%0A${this.$t("feedback.github.link")}`,
+          title: this.$t("feedback.github.title")
         },
         {
           link: `https://twitter.com/share?url=https://yamanoku.net${this.$route.path}&text=@yamanoku`,
-          title: "Twitterで連絡する"
+          title: this.$t("feedback.twitter.title")
         }
       ]
     }
