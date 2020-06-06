@@ -7,7 +7,7 @@
     <vuejs-accessibility-sections-vuejs-accessibility />
     <vuejs-accessibility-sections-accessibility-notes />
     <vuejs-accessibility-sections-conclusion />
-    <common-feedback-list :listArray="feedbackList" />
+    <common-feedback-list :feedback="feedback" />
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
@@ -27,20 +27,10 @@ export default {
         description: this.$t("vueA11yPage.description"),
         image: "https://yamanoku.net/ogp/ogp-vue-a11y@2x.png"
       },
-      feedbackList: [
-        {
-          link: `https://github.com/yamanoku/yamanoku.github.io/issues/new?title=${this.$t(
-            "vueA11yPage.feedback.github.linkTitle"
-          )}&labels=document,feedback&body=URL：https://yamanoku.net${
-            this.$route.path
-          }%0A${this.$t("feedback.github.link")}`,
-          title: this.$t("feedback.github.title")
-        },
-        {
-          link: `https://twitter.com/share?url=https://yamanoku.net${this.$route.path}&text=@yamanoku`,
-          title: this.$t("feedback.twitter.title")
-        }
-      ]
+      feedback: {
+        gitHubTitle: this.$t("vueA11yPage.feedback.github.linkTitle"),
+        routePath: this.$route.path
+      }
     }
   }
 }

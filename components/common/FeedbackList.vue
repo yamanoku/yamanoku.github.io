@@ -2,9 +2,15 @@
   <details>
     <summary>{{ $t("details.summary_feedback") }}</summary>
     <ul role="list">
-      <li role="listitem" v-for="list in listItem" :key="list.title">
-        <a :href="list.link" target="_blank" rel="noopener">
-          {{ list.title }}
+      <li role="listitem">
+        <a :href="gitHubLink" target="_blank" rel="noopener">
+          {{ this.$t("feedback.github.title") }}
+          <open-new-icon />
+        </a>
+      </li>
+      <li role="listitem">
+        <a :href="twitterLink" target="_blank" rel="noopener">
+          {{ this.$t("feedback.twitter.title") }}
           <open-new-icon />
         </a>
       </li>
@@ -15,11 +21,16 @@
 <script>
 export default {
   props: {
-    listArray: Array
+    feedback: Object
   },
   data() {
     return {
-      listItem: this.listArray
+      gitHubLink: `https://github.com/yamanoku/yamanoku.github.io/issues/new?title=${
+        this.feedback.gitHubTitle
+      }&labels=document,feedback&body=URL：https://yamanoku.net${
+        this.feedback.routePath
+      }%0A${this.$t("feedback.github.link")}`,
+      twitterLink: `https://twitter.com/share?url=https://yamanoku.net${this.feedback.routePath}&text=@yamanoku`
     }
   }
 }
