@@ -21,7 +21,10 @@
 <script>
 export default {
   props: {
-    feedback: Object
+    feedback: {
+      type: Object,
+      required: true
+    }
   },
   data() {
     return {
