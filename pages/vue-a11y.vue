@@ -7,6 +7,7 @@
     <vuejs-accessibility-sections-vuejs-accessibility />
     <vuejs-accessibility-sections-accessibility-notes />
     <vuejs-accessibility-sections-conclusion />
+    <common-feedback-list :feedback="feedback" />
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
@@ -25,6 +26,10 @@ export default {
         title: this.$t("vueA11yPage.title"),
         description: this.$t("vueA11yPage.description"),
         image: "https://yamanoku.net/ogp/ogp-vue-a11y@2x.png"
+      },
+      feedback: {
+        gitHubTitle: this.$t("vueA11yPage.feedback.github.linkTitle"),
+        routePath: this.$route.path
       }
     }
   }
