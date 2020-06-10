@@ -52,10 +52,6 @@ module.exports = {
       prefix: "common"
     },
     {
-      path: "~/components/lists/",
-      prefix: "lists"
-    },
-    {
       path: "~/components/products/",
       prefix: "products"
     },

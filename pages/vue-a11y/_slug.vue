@@ -1,12 +1,6 @@
 <template>
   <main role="main" id="main">
-    <vuejs-accessibility-sections-title />
-    <vuejs-accessibility-sections-bio />
-    <vuejs-accessibility-sections-book />
-    <vuejs-accessibility-sections-web-accessibility />
-    <vuejs-accessibility-sections-vuejs-accessibility />
-    <vuejs-accessibility-sections-accessibility-notes />
-    <vuejs-accessibility-sections-conclusion />
+    <nuxt-content :document="page" />
     <common-feedback-list :feedback="feedback" />
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
@@ -19,7 +13,25 @@
 import Meta from "~/mixins/meta"
 
 export default {
+  name: "VueA11yPageSlug",
   mixins: [Meta],
+  middleware({ params, redirect }) {
+    if (params.slug === "index") {
+      redirect("/")
+    }
+  },
+  async asyncData({ $content, store, app, params, error }) {
+    const slug = params.slug || "index"
+    let page
+    try {
+      page = await await $content("vue-a11y", app.i18n.locale, slug).fetch()
+    } catch (e) {
+      return error({ statusCode: 404, message: "Page not found" })
+    }
+    return {
+      page
+    }
+  },
   data() {
     return {
       meta: {
