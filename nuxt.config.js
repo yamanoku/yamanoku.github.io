@@ -83,7 +83,12 @@ module.exports = {
   render: {
     injectScripts: false
   },
-  modules: ["@nuxtjs/pwa", ["nuxt-i18n", i18n], "@nuxtjs/axios"],
+  modules: [
+    "@nuxtjs/pwa",
+    ["nuxt-i18n", i18n],
+    "@nuxtjs/axios",
+    "@nuxt/content"
+  ],
   plugins: [
     "~plugins/icons.js",
     "~plugins/vue-highlight.js",
