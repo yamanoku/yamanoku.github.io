@@ -49,24 +49,7 @@ export default {
 </script>
 
 <style>
-img {
-  max-width: 100%;
-  height: auto;
-}
-a[target="_blank"] svg {
-  width: 12px;
-  height: 12px;
-  margin: 0 0 -1px 4px;
-}
-a[target="_blank"] svg .open_new-1 {
-  fill: none;
-}
-a[target="_blank"] svg .open_new-2 {
-  fill: var(--black);
-}
-@media (prefers-color-scheme: dark) {
-  a[target="_blank"] svg .open_new-2 {
-    fill: var(--white);
-  }
+code {
+  padding: 0;
 }
 </style>

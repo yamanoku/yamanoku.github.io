@@ -64,6 +64,17 @@ module.exports = {
       prefix: "vuejs-accessibility-sections"
     }
   ],
+  content: {
+    markdown: {
+      remarkExternalLinks: {
+        target: "_blank",
+        rel: "noopener noreferrer"
+      },
+      prism: {
+        theme: "prism-themes/themes/prism-a11y-dark.css"
+      }
+    }
+  },
   build: {
     extend(config, { isDev }) {
       if (isDev && process.client) {
