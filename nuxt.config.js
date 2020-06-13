@@ -92,6 +92,16 @@ module.exports = {
     "@nuxtjs/axios",
     "@nuxt/content"
   ],
+  generate: {
+    async routes() {
+      const { $content } = require("@nuxt/content")
+      const files = await $content("archive").only(["path"]).fetch()
+      const archive = files.map(file =>
+        file.path === "/index" ? "/" : file.path
+      )
+      return archive
+    }
+  },
   plugins: [
     "~plugins/icons.js",
     "~plugins/vue-highlight.js",
