@@ -1,0 +1,84 @@
+<template>
+  <main role="main" id="main">
+    <article>
+      <h1>{{ page.title }}</h1>
+      <p lang="en">
+        created at:
+        <time :datetime="dateTime(page.date)">{{ dateTime(page.date) }}</time>
+      </p>
+      <template v-if="this.$i18n.locale !== 'ja'">
+        <em>{{ $t("onlyJPText") }}</em>
+      </template>
+      <nuxt-content :document="page" />
+      <nuxt-link to="/archive">
+        {{ $t("archivePage.backText") }}
+      </nuxt-link>
+    </article>
+    <nuxt-link :to="localePath({ name: 'index' })">{{
+      $t("backTop")
+    }}</nuxt-link>
+    <common-local-switch />
+  </main>
+</template>
+
+<script>
+import dayjs from "dayjs"
+
+export default {
+  name: "ArchiveDocumentSlug",
+  async asyncData({ $content, params, error }) {
+    let page
+    try {
+      page = await $content(`archive/${params.slug}`).fetch()
+    } catch (e) {
+      return error({ statusCode: 404, message: "Page not found" })
+    }
+    return {
+      page,
+    }
+  },
+  head() {
+    return {
+      title: `${this.page.title} - yamanoku.net`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.$t("archivePage.desc01")
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: `${this.page.title} - yamanoku.net`
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.$t("archivePage.desc01")
+        },
+        {
+          hid: "twitter:title",
+          name: "twitter:title",
+          content: this.page.title
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          content: this.$t("archivePage.desc01")
+        }
+      ]
+    }
+  },
+  methods: {
+    dateTime(time) {
+      return dayjs(time).format("YYYY-MM-DD")
+    }
+  }
+}
+</script>
+
+<style scoped>
+code {
+  padding: 0;
+}
+</style>
