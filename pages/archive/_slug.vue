@@ -34,7 +34,7 @@ export default {
       return error({ statusCode: 404, message: "Page not found" })
     }
     return {
-      page,
+      page
     }
   },
   head() {
