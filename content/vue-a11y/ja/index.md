@@ -30,6 +30,8 @@
 
 ### これからはじめるwebアクセシビリティ
 
+![写真：これからはじめるWebアクセシビリティ](/img/product-web-accessibility-for-beginner.jpg)
+
 技術書典で「これからはじめるwebアクセシビリティ」という技術同人誌を発表しました。Webアクセシビリティをはじめる方向けの導入として知ってもらいたいのがきっかけでした。
 
 現在BOOTHやNoteでもPDFファイルにて販売しております。
@@ -39,7 +41,7 @@
 
 またGitHubのフィードバック用のリポジトリのIssueにて修正や改善、提案を受け入れています。
 
-[yamanoku/accessibility_book-issues: 「これからはじめるwebアクセシビリティ」へのFB専用リポジトリ](https://github.com/yamanoku/accessibility_book-issues)
+[konnoinu/accessibility_book-issues: 「これからはじめるwebアクセシビリティ」へのFB専用リポジトリ](https://github.com/konnoinu/accessibility_book-issues)
 
 </section>
 
@@ -65,7 +67,7 @@
 
 Google I/Oでは音声認識においてリアルタイムで字幕がつけられるライブキャプション機能がつけられました。聴覚障害の方はもちろん、ミュートにした状態でビデオを見たり、文章を書き起こして内容の理解につなげたりなど、あらゆる状況においてどんな人でも使えるようなものを生み出しています。
 
-![Live Caption機能の紹介サムネイル](https://o.aolcdn.com/dims-global/dims3/GLOB/resize/1200x577/quality/80/https://techcrunch.com/wp-content/uploads/2019/05/live-caption.jpg)
+[![Live Caption機能の紹介サムネイル](https://o.aolcdn.com/dims-global/dims3/GLOB/resize/1200x577/quality/80/https://techcrunch.com/wp-content/uploads/2019/05/live-caption.jpg)](https://jp.techcrunch.com/2019/05/08/2019-05-07-live-transcription-and-captioning-in-android-are-a-boon-to-the-hearing-impaired/)
 
 スクリーンリーダーも視覚障害者のためだけではなく、読字障害といった長文を読むのが困難な人を手助けしたり、文章の確認を目視だけで行うよりも読み上げてもらうことで間違いに気づきやすくなります。
 
@@ -101,8 +103,8 @@ Vue.jsが日本で爆発的な人気を誇った要因の1つとして公式ド�
 
 ReactとAngularは公式ドキュメントにアクセシビリティの項目があり、開発における留意点などをまとめています。
 
-*   [アクセシビリティ – React](https://ja.reactjs.org/docs/accessibility.html)
-*   [Angular - Accessibility in Angular](https://angular.io/guide/accessibility)
+* [アクセシビリティ – React](https://ja.reactjs.org/docs/accessibility.html)
+* [Angular - Accessibility in Angular](https://angular.io/guide/accessibility)
 
 私はReactやAngularと同様にアクセシビリティの項目を設けても良いと感じています。Vue.jsのIssueを調べてみたところCallum Macra氏がドキュメントを作成を進めていたようなのですが、現在Pull Requestは止まっている状態です。
 
@@ -116,7 +118,7 @@ ReactとAngularは公式ドキュメントにアクセシビリティの項目�
 
 公式ドキュメントでのアクセシビリティ項目の作成はまだですが、代わりにVue.jsのアクセシビリティコミュニティは作られています。
 
-![Vue a11yサイトのスクリーンショット](/img/vue-a11y-vuea11ycom.png)
+[![Vue a11yサイトのスクリーンショット](/img/vue-a11y-vuea11ycom.png)](https://vue-a11y.com/)
 
 このコミュニティではVue.jsのアクセシビリティプラグイン・ライブラリをいくつか作成しており、私も何かしら寄与できたらいいなと思っております。
 
@@ -261,7 +263,7 @@ JavaScriptの静的検証ツールとして使われるeslintにはプラグイ�
 
 1989年3月12日、欧州原子核研究機構（CERN）のティム・バーナーズ＝リーは「Information Management: A Proposal」（情報管理：提案）を執筆し、さらに進んだ情報管理システムを描きました。これによってWWW（World Wide Web）が発明されました。
 
-![写真：ティム・バーナーズ＝リー](https://live.staticflickr.com/8221/8314288381_ebc4c1b074_c.jpg)
+<a href="https://www.w3.org/History/1989/proposal.html" target="_blank" rel="noopener"><img src="https://live.staticflickr.com/8221/8314288381_ebc4c1b074_c.jpg" width="220" height="240" alt="写真：ティム・バーナーズ＝リー" style="max-width:220px"></a>
 
 > The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
 >
