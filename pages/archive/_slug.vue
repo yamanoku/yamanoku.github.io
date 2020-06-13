@@ -17,7 +17,6 @@
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
-    <common-local-switch />
   </main>
 </template>
 
@@ -62,6 +61,11 @@ export default {
           content: "https://yamanoku.net/ogp/ogp-archive@2x.png"
         },
         {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary"
+        },
+        {
           hid: "twitter:title",
           name: "twitter:title",
           content: this.page.title
@@ -70,6 +74,12 @@ export default {
           hid: "twitter:description",
           name: "twitter:description",
           content: this.$t("archivePage.desc01")
+        },
+        {
+          hid: "twitter:image",
+          property: "twitter:image",
+          content:
+            "https://yamanoku.net/ogp/ogp-twitter_summary-archives@2x.png"
         }
       ]
     }
