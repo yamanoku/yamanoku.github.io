@@ -52,22 +52,25 @@ module.exports = {
       prefix: "common"
     },
     {
-      path: "~/components/lists/",
-      prefix: "lists"
-    },
-    {
       path: "~/components/products/",
       prefix: "products"
     },
     {
       path: "~/components/sections/",
       prefix: "sections"
-    },
-    {
-      path: "~/components/vuejs-accessibility-sections/",
-      prefix: "vuejs-accessibility-sections"
     }
   ],
+  content: {
+    markdown: {
+      remarkExternalLinks: {
+        target: "_blank",
+        rel: "noopener noreferrer"
+      },
+      prism: {
+        theme: "prism-themes/themes/prism-a11y-dark.css"
+      }
+    }
+  },
   build: {
     extend(config, { isDev }) {
       if (isDev && process.client) {
@@ -83,7 +86,22 @@ module.exports = {
   render: {
     injectScripts: false
   },
-  modules: ["@nuxtjs/pwa", ["nuxt-i18n", i18n], "@nuxtjs/axios"],
+  modules: [
+    "@nuxtjs/pwa",
+    ["nuxt-i18n", i18n],
+    "@nuxtjs/axios",
+    "@nuxt/content"
+  ],
+  generate: {
+    async routes() {
+      const { $content } = require("@nuxt/content")
+      const files = await $content("archive").only(["path"]).fetch()
+      const archive = files.map(file =>
+        file.path === "/index" ? "/" : file.path
+      )
+      return archive
+    }
+  },
   plugins: [
     "~plugins/icons.js",
     "~plugins/vue-highlight.js",
