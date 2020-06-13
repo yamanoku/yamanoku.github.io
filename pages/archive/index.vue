@@ -49,7 +49,8 @@ export default {
     return {
       meta: {
         title: this.$t("archivePage.title"),
-        description: this.$t("archivePage.desc01")
+        description: this.$t("archivePage.desc01"),
+        image: "https://yamanoku.net/ogp/ogp-archive@2x.png"
       },
       feedback: {
         gitHubTitle: this.$t("archivePage.feedback.github.linkTitle"),

@@ -57,6 +57,11 @@ export default {
           content: this.$t("archivePage.desc01")
         },
         {
+          hid: "og:image",
+          property: "og:image",
+          content: "https://yamanoku.net/ogp/ogp-archive@2x.png"
+        },
+        {
           hid: "twitter:title",
           name: "twitter:title",
           content: this.page.title
