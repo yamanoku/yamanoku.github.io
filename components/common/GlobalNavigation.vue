@@ -11,6 +11,11 @@
           $t("aboutPage.title")
         }}</nuxt-link>
       </li>
+      <li role="listitem">
+        <nuxt-link :to="localePath({ name: 'archive' })">{{
+          $t("archivePage.title")
+        }}</nuxt-link>
+      </li>
     </ul>
   </nav>
 </template>
@@ -23,12 +28,13 @@ nav {
 }
 nav ul.global {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: calc(var(--rhythm) / 2 * -1);
   padding: 0;
 }
 nav ul.global li {
-  margin-right: 12px;
+  margin: calc(var(--rhythm) / 2);
 }
 nav ul.global li a.nuxt-link-exact-active {
   text-decoration: none;
