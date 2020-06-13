@@ -16,7 +16,7 @@ vue.jsで作ったプロジェクトを[CodeClimate](https://codeclimate.com/)�
 ### 公式ドキュメント
 https://docs.codeclimate.com/v1.0/docs/eslint#section-extensions
 
-> # Extensions
+> Extensions
 > You can configure our ESLint Engine to analyze the file types you’d like by configuring the extensions in your `.codeclimate.yml` , as shown in the example below:
 
 ```yaml
@@ -36,7 +36,7 @@ ratings:
 ```
 eslintエンジンに対応するように、こういう感じで追加していけとのこと。
 
-### `.codeclimate.yml`
+### .codeclimate.yml
 以下をプロジェクトルートに追加、pushする。
 
 ```yaml

@@ -288,7 +288,7 @@ http://csscomb.com/online
 
 とはいえ本当にこれでいいのかとぶち当たる日がいつか来るかもしれないので、そうならないためにも日々よい記述順をこだわってゆきます。俺の記述順はこんな感じだぜ！！みたいなのあったら是非とも教えて下さいませ。こちらからは以上です。
 
-#### 参考にさせていただいた方々
+## 参考にさせていただいた方々
 
 - [gulp-csscombで任意のプロパティ記述順序を設定する](http://qiita.com/naoyashiga/items/bce4ad2fbc3cbeeff1d1)
 - [gulp-csscomb（CSSのプロパティを並び替えてくれるプラグイン）の整形フォーマットを自分好みに変更する。](http://blog.sakurachiro.com/2015/07/gulp-csscomb/)
