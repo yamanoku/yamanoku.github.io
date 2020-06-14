@@ -7,7 +7,7 @@ author: yamanoku
 
 社内で話した内容で気づけてよかったことなのでまとめてみる。自戒も込めてます。
 
-## まとめ
+## 話し合ったこと
 
 - 最近はJavaScript無効な環境とかに対して優しくする意識はないのではないか
   - SPAとかなんかJavaScriptあり気なんだしでかいFlashを1つ置いててiPhoneで見る場合のと同義っぽい（※SPAをdisってる訳ではない）
@@ -24,6 +24,8 @@ author: yamanoku
     - [クライアント側のフォームデータ検証 - ウェブ開発を学ぶ | MDN](https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Data_form_validation)
   - WAI-ARIAについても考えておく必要はある
   - JavaScriptバリバリ使っているサイトだったら最低限の礼儀としてnoscriptタグをちゃんと使おう
+
+## まとめ
 
 結局のところマークアップなりの時点で **HTMLの構造をしっかり作れ** という感じなのですが、デザインでもJavaScript使えて当然なリッチなものも多いのでその辺意識しないと結構大変だなと思うようになってます。
 

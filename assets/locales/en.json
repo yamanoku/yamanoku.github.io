@@ -172,7 +172,7 @@
   },
   "archivePage": {
     "title": "Archive",
-    "desc01": "This page is a collection of past articles and logs of Okuto Oyama called yamanoku.",
+    "desc01": "This page is a writing collection of past articles and logs of Okuto Oyama called yamanoku.",
     "desc02": "We fixed the broken links during the document migration, but the content itself has not been updated, so please be careful when you refer to it.",
     "desc03": "We don't accept any corrections regarding the contents, but please contact us if you find any text errors or omissions.",
     "backText": "Back to Archive List",
@@ -220,8 +220,7 @@
   },
   "error": {
     "404": {
-      "text01": "Couldn't find the page you were looking for.",
-      "text02": "We apologize for the inconvenience, but please access the relevant page from the site map."
+      "text01": "Couldn't find the page you were looking for."
     },
     "500": {
       "text01": "A server error has occurred. Please wait for a while and try again.",

@@ -13,7 +13,7 @@ author: yamanoku
 
 ECSS、とにかく長生きさせるためには誇大化してもしょうがないみたいなスタンスだけど、webpackとかでjs内に全部ひとまとめに出来たりするのがあれば、その辺についても深く考えなくてもいいかもしれないとか浅はかながらに思っています。
 
-今はVue-loader使ってるけどPostCSSとかで使ってみてもいいかもしれない。（こっちはやったことないので憶測で言ってます）
+今はVue-loader使ってるけどPostCSSとかで使ってみてもいいかもしれない（こっちはやったことないので憶測で言ってます）
 
 [https://www.npmjs.com/package/postcss-scoped](https://www.npmjs.com/package/postcss-scoped)
 

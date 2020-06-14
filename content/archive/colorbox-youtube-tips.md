@@ -7,7 +7,7 @@ author: yamanoku
 
 ## 経緯
 
-colorboxでyoutube動画をモーダルギャラリーで見せるみたいな流れになった。
+colorboxでYouTube動画をモーダルギャラリーで見せるみたいな流れになった。
 
 やり方は以下の感じ。
 
@@ -35,7 +35,7 @@ iframeで表示させるのでその辺で調べてみたら以下の記事に�
 [IEで埋込みYouTubeが最前面に表示される - knowledge base](http://shinimae.hatenablog.com/entry/2016/01/08/184617)
 
 
-どうやら読み込み先リンクに<b>「?wmode=transparent」</b>をつければ解決するとのこと。（パラメータがすでに付いている場合は?を&へ変更する）
+どうやら読み込み先リンクに<b>「?wmode=transparent」</b>をつければ解決するとのこと（パラメータがすでに付いている場合は?を&へ変更する）
 
 つまり上記のHTMLを以下のように変更
 

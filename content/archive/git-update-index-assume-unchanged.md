@@ -13,13 +13,13 @@ gulp-webserverの便利機能の１つにhostnameに自分のPCのIPアドレス
 
 ## 解決策
 
-terminalとかitermでgit管理下のディレクトリで入力。
+terminalとかitermでGit管理下のディレクトリで入力。
 
 ```bash
 git update-index --assume-unchanged config.json
 ```
 
-これでconfig.jsonの変更があってもgitで無視されるので安心ですね。
+これでconfig.jsonの変更があってもGitで無視されるので安心ですね。
 
 ちなみに解除は以下を入力です。
 

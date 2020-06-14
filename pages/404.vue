@@ -1,11 +1,16 @@
 <template>
   <main role="main" id="main">
-    <h1>{{ errorHeading }}</h1>
-    <p>{{ $t("error.404.text01") }}</p>
-    <p>{{ $t("error.404.text02") }}</p>
-    <nuxt-link :to="localePath({ name: 'index' })">{{
-      $t("backTop")
-    }}</nuxt-link>
+    <h1>404</h1>
+    <p lang="ja">
+      申し訳ありません。お探しのページが見つかりませんでした。<br />
+      お手数をおかけしますが、<nuxt-link to="/">TOPページ</nuxt-link>
+      にお戻りください。
+    </p>
+    <p lang="en">
+      Sorry. Couldn't find the page you were looking for.<br />
+      We apologize for the inconvenience, but please access
+      <nuxt-link to="/en/">TOP page</nuxt-link>.
+    </p>
   </main>
 </template>
 
@@ -13,24 +18,21 @@
 export default {
   head() {
     return {
-      title: "404 Page Error",
+      title: "404",
       meta: [
         {
           hid: "description",
           name: "description",
-          content: "404"
+          content: "404 status page - Page not found"
         }
       ]
-    }
-  },
-  computed: {
-    errorHeading() {
-      if (this.$i18n.locale === "ja") {
-        return "申し訳ありません。404エラーです。"
-      } else {
-        return "I'm sorry for the 404 error."
-      }
     }
   }
 }
 </script>
+
+<style scoped>
+main > h1 {
+  text-align: center;
+}
+</style>

@@ -104,7 +104,7 @@ reset()
 	reset-html5()
 ```
 
-自分はclearfix用も追加したりしてます。（内容が古いので後で更新する…）
+自分はclearfix用も追加したりしてます（内容が古いので後で更新する…）
 
 ```css
 clearfix()
