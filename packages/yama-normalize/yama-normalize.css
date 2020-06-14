@@ -176,6 +176,11 @@ details > summary {
   margin: calc(var(--rhythm) * 3) 0;
   cursor: pointer;
 }
+blockquote {
+  border-left: 6px solid var(--blue);
+  margin: var(--rhythm) 0 var(--rhythm) var(--rhythm);
+  padding: 0 calc(var(--rhythm) * 2);
+}
 address {
   margin: calc(var(--rhythm) * 3) 0;
 }
