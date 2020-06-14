@@ -172,6 +172,10 @@ ol:not([class]) li {
     background-color: var(--white);
   }
 }
+details > summary {
+  margin: calc(var(--rhythm) * 3) 0;
+  cursor: pointer;
+}
 address {
   margin: calc(var(--rhythm) * 3) 0;
 }
