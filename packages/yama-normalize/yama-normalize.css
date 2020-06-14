@@ -5,7 +5,7 @@
   --blue: rgb(90, 190, 255);
   --purple: rgb(220, 100, 220);
   --linkBlue: rgb(18, 122, 200);
-  --linkVisited: rgba(70, 70, 70, .5);
+  --linkVisited: var(--black);
   --rhythm: .5rem;
 }
 html {
