@@ -47,9 +47,3 @@ export default {
   }
 }
 </script>
-
-<style>
-code {
-  padding: 0;
-}
-</style>
