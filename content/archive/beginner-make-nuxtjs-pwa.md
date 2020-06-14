@@ -1,4 +1,4 @@
-できるまだまだ---
+---
 title: よく分かってなくてもNuxt.jsでPWAが作れた話
 description: PWA nuxt.js Slack AWSLambda Netlify
 date: 2018-12-06

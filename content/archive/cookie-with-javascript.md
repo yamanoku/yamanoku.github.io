@@ -7,7 +7,7 @@ author: yamanoku
 
 仕事とか実験で色々試してみたので雑まとめ。
 
-## js-Cookie便利
+## js-cookie便利
 
 [https://github.com/js-cookie/js-cookie](https://github.com/js-cookie/js-cookie)
 
@@ -95,7 +95,7 @@ switch (value) {
 
 ## json（配列）使うのやりたい
 
-js-Cookieさんは使えるようにしている。有能。
+js-cookieさんは使えるようにしている。有能。
 
 ```js
 var obj = {
