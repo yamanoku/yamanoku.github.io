@@ -220,8 +220,7 @@
   },
   "error": {
     "404": {
-      "text01": "Couldn't find the page you were looking for.",
-      "text02": "We apologize for the inconvenience, but please access the relevant page from the site map."
+      "text01": "Couldn't find the page you were looking for."
     },
     "500": {
       "text01": "A server error has occurred. Please wait for a while and try again.",
