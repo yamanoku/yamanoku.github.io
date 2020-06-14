@@ -91,9 +91,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-code {
-  padding: 0;
-}
-</style>

@@ -18,22 +18,10 @@
           :key="color.name"
           :style="'background-color:' + color.value"
         >
-          <dt
-            :style="
-              color.name === 'var(--black)' || color.name === 'var(--linkBlue)'
-                ? 'color: #fff'
-                : ''
-            "
-          >
+          <dt :style="color.colorWhiteFlag ? 'color: #fff' : ''">
             {{ color.name }}
           </dt>
-          <dd
-            :style="
-              color.name === 'var(--black)' || color.name === 'var(--linkBlue)'
-                ? 'color: #fff'
-                : ''
-            "
-          >
+          <dd :style="color.colorWhiteFlag ? 'color: #fff' : ''">
             {{ color.value }}
           </dd>
         </div>
@@ -50,31 +38,38 @@ export default {
       colors: [
         {
           name: "var(--black)",
-          value: "rgb(21, 32, 43)"
+          value: "rgb(21, 32, 43)",
+          colorWhiteFlag: true
         },
         {
           name: "var(--white)",
-          value: "rgb(210, 210, 210)"
+          value: "rgb(210, 210, 210)",
+          colorWhiteFlag: false
         },
         {
           name: "var(--gray)",
-          value: "rgba(70, 70, 70, 0.5)"
+          value: "rgba(70, 70, 70, 0.5)",
+          colorWhiteFlag: false
         },
         {
           name: "var(--blue)",
-          value: "rgb(90, 190, 255)"
+          value: "rgb(90, 190, 255)",
+          colorWhiteFlag: false
         },
         {
           name: "var(--purple)",
-          value: "rgb(220, 100, 220)"
+          value: "rgb(220, 100, 220)",
+          colorWhiteFlag: false
         },
         {
           name: "var(--linkBlue)",
-          value: "rgb(18, 122, 200)"
+          value: "rgb(18, 122, 200)",
+          colorWhiteFlag: true
         },
         {
           name: "var(--linkVisited)",
-          value: "rgba(70, 70, 70, 0.5)"
+          value: "rgb(21, 32, 43)",
+          colorWhiteFlag: true
         }
       ]
     }
