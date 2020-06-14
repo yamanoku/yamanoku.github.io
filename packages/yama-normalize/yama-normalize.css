@@ -182,6 +182,3 @@ address {
 pre {
   margin: calc(var(--rhythm) * 3) 0;
 }
-code {
-  padding: calc(var(--rhythm) * 3);
-}
