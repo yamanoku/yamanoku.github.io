@@ -1,6 +1,12 @@
 export default {
   baseUrl: "https://yamanoku.net",
   defaultLocale: "ja",
+  parsePages: false,
+  pages: {
+    404: {
+      en: false
+    }
+  },
   vueI18n: {
     fallbackLocale: "ja",
     formatFallbackMessages: true

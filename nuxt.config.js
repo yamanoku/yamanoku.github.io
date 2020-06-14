@@ -100,6 +100,9 @@ module.exports = {
         file.path === "/index" ? "/" : file.path
       )
       return archive
+    },
+    fetch({ redirect }) {
+      return redirect("404.html")
     }
   },
   plugins: [
