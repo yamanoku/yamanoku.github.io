@@ -75,8 +75,8 @@ https://blog.github.com/2018-05-01-github-pages-custom-domains-https/
   - [![Screenshot from Gyazo](https://gyazo.com/a62fcd9dca6394d764f93b6d6ef552c5/raw)](https://gyazo.com/a62fcd9dca6394d764f93b6d6ef552c5)
 
 ### 01. Origin Settings
-- 「Origin Domain Name」に自分のgithub pageを入力
-  - ここではgithub pageのURL＝インデックスページという想定です
+- 「Origin Domain Name」に自分のGitHub pageを入力
+  - ここではGitHub pageのURL＝インデックスページという想定です
   - [![Screenshot from Gyazo](https://gyazo.com/a6f565bcc0cd5749338eb8db11087d73/raw)](https://gyazo.com/a6f565bcc0cd5749338eb8db11087d73)
 
 ### 02. Default Cache Behavior Settings
@@ -88,7 +88,7 @@ https://blog.github.com/2018-05-01-github-pages-custom-domains-https/
 
 ### 03. Distribution Settings
 
-- 「Alternate Domain Names(CNAMEs)」 に適応させるドメインを入力
+- 「Alternate Domain Names(CNAMEs)」に適応させるドメインを入力
 - 「SSL Certificate」は**Custom SSL Certificate**を選択
   - このときAWS Certificate Managerで作成したSSL証明書が選択できると思うのでそれを選択
   - [![Screenshot from Gyazo](https://gyazo.com/45f194497695a27eff634d943475298b/raw)](https://gyazo.com/45f194497695a27eff634d943475298b)

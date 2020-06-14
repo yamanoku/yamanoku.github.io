@@ -22,7 +22,7 @@ https://github.com/nuxt-community/starter-template/commit/82513c7306563b2dd42c7d
 [Nuxt.js 2.0: Webpack 4, ESM Modules, create-nuxt-app and more! 💫
 ](https://medium.com/@nuxt_js/nuxt-js-2-0-webpack-4-esm-modules-create-nuxt-app-and-more-6936ce80d94c)
 
-ついに来ました Nuxt2.0。ということで初心者でもすぐ体験できるNuxt2の世界の話をします。
+ついに来ましたNuxt2.0。ということで初心者でもすぐ体験できるNuxt2の世界の話をします。
 
 たぶんこのあと`vue-cli`がちゃんとアップデートしてくれると思いますが、それまでの僅かな命だと思ってご覧ください。
 
@@ -145,7 +145,7 @@ $ nuxt
 
 `generate`も動く
 
-以上！！！！！！！！！！！！！！！！！！
+以上！　！！！！！！！！！！！！！！！！！
 
 ## etc
 他なにかわかったら追記します。

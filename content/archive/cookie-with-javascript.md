@@ -7,13 +7,13 @@ author: yamanoku
 
 仕事とか実験で色々試してみたので雑まとめ。
 
-## js-cookie便利
+## js-Cookie便利
 
 [https://github.com/js-cookie/js-cookie](https://github.com/js-cookie/js-cookie)
 
 jsでのCookie処理が楽なので是非導入してみよう。以下はそれを使った処理になります。
 
-## ページ固有のcookieを記録したい
+## ページ固有のCookieを記録したい
 
 `http://xxxxx.xxx/xxxxx/xxxx/001/`
 
@@ -27,9 +27,9 @@ var p = window.location.pathname.replace(new RegExp("(?:\\\/+[^\\\/]*){0,1}$"), 
 Cookies.set(Num,Num,{ path: p });
 ```
 
-ってやると「001」っていうcookieが残る。valueも同じ。
+ってやると「001」っていうCookieが残る。valueも同じ。
 
-path設定はそのページ特有のものになるので、２度目の訪問の時は変えるみたいな処理に使える。（別に全ページ共通でもいいなら"/"でもいいです）
+path設定はそのページ特有のものになるので、２度目の訪問の時は変えるみたいな処理に使える（別に全ページ共通でもいいなら"/"でもいいです）
 
 ## ページ遷移した時に高さを保持
 
@@ -91,11 +91,11 @@ switch (value) {
 	break;
 }
 ```
-判定箇所を絞ればわかりやすくcookieを保存してくれるはずです。
+判定箇所を絞ればわかりやすくCookieを保存してくれるはずです。
 
 ## json（配列）使うのやりたい
 
-js-cookieさんは使えるようにしている。有能。
+js-Cookieさんは使えるようにしている。有能。
 
 ```js
 var obj = {

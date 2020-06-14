@@ -137,7 +137,7 @@ observer.disconnect(); // すべての target に対し，監視をやめる
 
 ```
 
-### Polyfill （2017/07現在）
+### Polyfill（2017/07現在）
 現状Intersection ObserverはIE Edge最新、Firefox最新、Chrome最新、Androidブラウザ最新のみの対応につきPolyfillが必要となります。([Can I Use](http://caniuse.com/#feat=intersectionobserver))
 
 ```html

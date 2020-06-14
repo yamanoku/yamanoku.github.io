@@ -50,7 +50,7 @@ $ yo hubot
 - Owner（管理者）
 - Bot name（Hubotの名前）
 - Description（Hubotの内容）
-- Bot adapter（Hubotと連携させるWEBサービス）
+- Bot adapter（Hubotと連携させるWebサービス）
 
 Bot adapterの箇所にはslackと入力しましょう。
 
@@ -65,7 +65,7 @@ $ bin/hubot
 
 ここまでの状態でHerokuにアップしてみたいのでまずはログイン。
 そのあとHubot用のプロジェクトを作ります。
-作った後はgitでadd、commit、pushしちゃいます。
+作った後はGitでadd、commit、pushしちゃいます。
 
 ```bash
 $ heroku login

@@ -1,4 +1,4 @@
----
+できるまだまだ---
 title: よく分かってなくてもNuxt.jsでPWAが作れた話
 description: PWA nuxt.js Slack AWSLambda Netlify
 date: 2018-12-06
@@ -21,8 +21,8 @@ author: yamanoku
 
 <img src="https://gyazo.com/60ae2a3a628a1c6b7ed77bc356fbaeab/thumb/1000" alt="Reading… Logo" width="320">
 
-Link: [https://reading.yamanoku.net](https://reading.yamanoku.net/)
-GitHub:  [https://github.com/yamanoku/reading/](https://github.com/yamanoku/reading/)
+- Link: [https://reading.yamanoku.net](https://reading.yamanoku.net/)
+- GitHub: [https://github.com/yamanoku/reading/](https://github.com/yamanoku/reading/)
 
 日頃自分が見ているニュースを集約してまとめてみたらどうなるだろうか、情報の蓄積・可視化みたいなのを考えておりそういうのができないかなと思ってそれを題材にPWAにしてみようと思いました。以下は経緯みたいなやつです。
 
@@ -59,7 +59,7 @@ Nuxt.jsのプラグイン・モジュールは以下を使用
 
 図です。
 
-![フローチャート 以下説明](https://qiita-image-store.s3.amazonaws.com/0/49004/ea48ecc5-31b0-cce3-601c-7cdbbee215b8.png)
+![フローチャート 以下説明](https://i.gyazo.com/6c87beb1a40364b5520050b0963fa3e9.png)
 
 - 投稿自体はTwitter
     - シェアする内容の文頭に`Reading...`とつけてツイート
@@ -187,13 +187,13 @@ methods: {
 
 ### PWAを作ってみての感想
 
-- Nuxt.jsにおけるPWA導入が圧倒的にやりやすい・分かりやすいかなと思いました
+- Nuxt.jsにおけるPWA導入が圧倒的にやりやすい・分かりやすいかなと思いました
     - Vue.js依存ですが…
 - PWAだけに限らないですが、何かしら動くものを作ってみると、新しいものがきたらそこから派生してみる・検証することができる
 - まだまだ改善の余地は大きい部分はあるが試行錯誤していろんなことが検証できるのが楽しい
     - こうしたらいいよ的なアドバイスお待ちしております（コメントでもTwitterでも）
 - 今後の派生として、妻を個人Slackに招待して、家族間でのURL共有みたいなのがやれたらいいかなと思っている
-    - 妻が結構検索しまくって共有してくれる（育児・買い物・行きたいところ 等）
+    - 妻が結構検索しまくって共有してくれる（育児・買い物・行きたいところ等）
     - 夫婦間での共有を簡易・履歴として残すようにしたい
 - 自分でPWAを実装してみてAndroid実機で動かせるのがこれまでにない感覚で面白かった
     - ちなみに[ポートフォリオサイト](https://yamanoku.net)もPWA化しています
@@ -201,7 +201,7 @@ methods: {
         - [Birthday-Countdown.js](https://yamanoku.net/birthday-countdown-js/) など
         - Service Workerがルートディレクトリで設定されているから？
 - 実際にPWAとして使えるものを使ってみたり検証したりしてみる
-    - Service Workerがどういう感じで使われているか とか
+    - Service Workerがどのような感じで使われているかとか
     - 自分はTwitterはネイティブではなく[Twitter Lite](https://mobile.twitter.com)（PWA版）のを使うようにしています。
 - 企業の制作実体験記みたいなのが気になりだす（業務内でのノウハウや失敗など）
     - 最近だとHTML5カンファレンスや7月のHTML5 APP CONFERENCE 2018でその辺が聞けました
