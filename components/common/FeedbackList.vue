@@ -38,9 +38,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-details > summary {
-  margin: calc(var(--rhythm) * 3) 0;
-}
-</style>

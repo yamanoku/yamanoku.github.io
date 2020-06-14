@@ -67,9 +67,4 @@ address svg .mail-2 {
 code.hljs {
   padding: calc(var(--rhythm) * 3);
 }
-blockquote {
-  border-left: 6px solid var(--blue);
-  margin: var(--rhythm) 0 var(--rhythm) var(--rhythm);
-  padding: 0 calc(var(--rhythm) * 2);
-}
 </style>

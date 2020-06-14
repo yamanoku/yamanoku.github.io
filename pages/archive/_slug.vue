@@ -91,26 +91,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-code {
-  padding: 0;
-}
-hr {
-  margin: calc(var(--rhythm) * 3) 0;
-  display: block;
-  width: 100%;
-  height: 1px;
-  border: 0;
-  background-color: var(--gray);
-}
-ol:not([class]) {
-  margin: calc(var(--rhythm) * 3) 0;
-  line-height: 1;
-  padding-left: calc(var(--rhythm) * 2);
-}
-ol:not([class]) li {
-  line-height: calc(var(--rhythm) * 3);
-  font-size: 1rem;
-}
-</style>
