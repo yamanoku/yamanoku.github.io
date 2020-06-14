@@ -4,7 +4,6 @@
     <template v-if="error.statusCode === 404">
       <p>{{ $t("error.404.text01") }}</p>
       <p>{{ $t("error.404.text02") }}</p>
-      <sitemap-list />
     </template>
     <template v-else>
       <p>{{ $t("error.500.text01") }}</p>
@@ -13,6 +12,9 @@
         <a href="mailto:0910yama@gmail.com">0910yama@gmail.com</a>
       </address>
     </template>
+    <nuxt-link :to="localePath({ name: 'index' })">{{
+      $t("backTop")
+    }}</nuxt-link>
   </main>
 </template>
 
