@@ -155,6 +155,18 @@ ul:not([class]) li::before {
   position: absolute;
   left: 0;
 }
+ol:not([class]) {
+  margin: calc(var(--rhythm) * 3) 0;
+  line-height: 1;
+  padding-left: calc(var(--rhythm) * 2);
+}
+ol:not([class]) ol {
+  margin: 0;
+}
+ol:not([class]) li {
+  line-height: calc(var(--rhythm) * 3);
+  font-size: 1rem;
+}
 @media (prefers-color-scheme: dark) {
   ul:not([class]) li::before {
     background-color: var(--white);
