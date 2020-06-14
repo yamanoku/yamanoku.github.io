@@ -16,10 +16,6 @@
     </template>
     <ul>
       <li v-for="article in articles" :key="article.slug">
-        <time :datetime="dateTime(article.date)">{{
-          dateTime(article.date)
-        }}</time>
-        -
         <nuxt-link :to="article.path">
           {{ article.title }}
         </nuxt-link>
@@ -56,11 +52,6 @@ export default {
         gitHubTitle: this.$t("archivePage.feedback.github.linkTitle"),
         routePath: this.$route.path
       }
-    }
-  },
-  methods: {
-    dateTime(time) {
-      return dayjs(time).format("YYYY-MM-DD")
     }
   }
 }
