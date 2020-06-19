@@ -1099,10 +1099,10 @@
     std-env "^2.2.1"
     wrap-ansi "^6.2.0"
 
-"@nuxt/components@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@nuxt/components/-/components-1.0.2.tgz#f49b0e1da3e576db3fa939127d07a41b4459b6c9"
-  integrity sha512-gYlzb1SjIptcUPs8B5bCwQjr3Y2Hvb1V+Y/Z2X4PSbFhb3DGU8lDvjSA2w7MFHCBOi3PgY9FDNWeAf2Dlt2pbw==
+"@nuxt/components@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@nuxt/components/-/components-1.0.3.tgz#c47a1817fa635a2f0a52982c0277cf7dd46ac018"
+  integrity sha512-ZXnRHR4e+svOSaouWUoDCkXUHGC/8KGU5sU0SA/on0yHGuzsk/tD8vDiGYNGcdAxEAXE5J9xB7rzWcBYZMrOlg==
   dependencies:
     chalk "^4.1.0"
     chokidar "^3.4.0"
