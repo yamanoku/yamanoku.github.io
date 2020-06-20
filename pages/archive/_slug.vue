@@ -10,6 +10,7 @@
         <em>{{ $t("onlyJPText") }}</em>
       </template>
       <nuxt-content :document="page" />
+      <common-feedback-list :feedback="feedback" />
       <nuxt-link to="/archive">
         {{ $t("archivePage.backText") }}
       </nuxt-link>
@@ -84,6 +85,14 @@ export default {
       ],
       bodyAttrs: {
         class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
+      }
+    }
+  },
+  data() {
+    return {
+      feedback: {
+        gitHubTitle: this.$t("archivePage.feedback.github.linkTitle"),
+        routePath: this.$route.path
       }
     }
   },

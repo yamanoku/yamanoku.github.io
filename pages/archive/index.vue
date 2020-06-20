@@ -10,7 +10,6 @@
     <p>
       {{ $t("archivePage.desc03") }}
     </p>
-    <common-feedback-list :feedback="feedback" />
     <template v-if="this.$i18n.locale !== 'ja'">
       <em>{{ $t("onlyJPText") }}</em>
     </template>
@@ -47,10 +46,6 @@ export default {
         title: this.$t("archivePage.title"),
         description: this.$t("archivePage.desc01"),
         image: "https://yamanoku.net/ogp/ogp-archive@2x.png"
-      },
-      feedback: {
-        gitHubTitle: this.$t("archivePage.feedback.github.linkTitle"),
-        routePath: this.$route.path
       }
     }
   }
