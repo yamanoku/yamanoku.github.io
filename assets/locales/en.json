@@ -354,15 +354,9 @@
     "contact": "Contact"
   },
   "error": {
-    "404": {
-      "text01": "Couldn't find the page you were looking for."
-    },
     "500": {
       "text01": "A server error has occurred. Please wait for a while and try again.",
       "text02": "If it is still not recovered, please contact us via the email address."
-    },
-    "sitemap": {
-      "title": "Find on site map"
     }
   },
   "prefixAlt": {
