@@ -97,31 +97,9 @@ export default {
           datetime: "2019-12-15T00:00:00.000Z"
         },
         {
-          title: "PlayBackTech2018",
-          url: "https://scrapbox.io/yamanoku/PlayBackTech2018",
-          datetime: "2018-12-01T00:00:00.000Z"
-        },
-        {
           title: "Nota社主催でScrapbox勉強会をやってもらった話",
           url: "https://blog.geek.co.jp/posts/2411/",
           datetime: "2018-07-13T00:00:00.000Z"
-        },
-        {
-          title: "HTMLからウェブサイトのあり方を見直す",
-          url:
-            "https://scrapbox.io/yamanoku/HTML%E3%81%8B%E3%82%89%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%81%82%E3%82%8A%E6%96%B9%E3%82%92%E8%A6%8B%E7%9B%B4%E3%81%99",
-          datetime: "2017-12-15T00:00:00.000Z"
-        },
-        {
-          title: "PlayBackTech2017",
-          url: "https://scrapbox.io/yamanoku/PlayBackTech2017",
-          datetime: "2017-12-01T00:00:00.000Z"
-        },
-        {
-          title: "敵を知り己を知ればXSS危うからず",
-          url:
-            "https://scrapbox.io/yamanoku/%E6%95%B5%E3%82%92%E7%9F%A5%E3%82%8A%E5%B7%B1%E3%82%92%E7%9F%A5%E3%82%8C%E3%81%B0XSS%E5%8D%B1%E3%81%86%E3%81%8B%E3%82%89%E3%81%9A",
-          datetime: "2016-07-19T00:00:00.000Z"
         }
       ]
     }
