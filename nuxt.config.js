@@ -87,9 +87,6 @@ module.exports = {
       }
     }
   },
-  render: {
-    injectScripts: false
-  },
   modules: [
     "@nuxtjs/pwa",
     ["nuxt-i18n", i18n],
@@ -109,13 +106,7 @@ module.exports = {
       return redirect("404.html")
     }
   },
-  plugins: [
-    "~plugins/icons.js",
-    "~plugins/vue-highlight.js",
-    "~plugins/storeGithub.js",
-    "~plugins/storeSlide.js",
-    "~plugins/storeDay.js"
-  ],
+  plugins: ["~plugins/icons.js", "~plugins/vue-highlight.js"],
   workbox: {
     dev: true
   },

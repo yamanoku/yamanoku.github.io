@@ -25,22 +25,6 @@
           </a>
         </figcaption>
       </figure>
-      <p>{{ $t("aboutPage.components.desc03") }}</p>
-      <figure>
-        <highlight-code id="api-for-store" lang="javascript">{{
-          api
-        }}</highlight-code>
-        <figcaption>
-          <a
-            href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/products/A11yBeginner.vue#L52-L58"
-            target="_blank"
-            rel="noopener"
-          >
-            A11yBeginner.vue
-            <github-icon />
-          </a>
-        </figcaption>
-      </figure>
     </details>
   </article>
 </template>
@@ -69,15 +53,6 @@ export default {
     </a>
   </li>
 </ul>
-      `,
-      api: `
-export default {
-  data() {
-    return {
-      a11ybookIssue: this.$store.state.github.a11y_issues,
-    };
-  }
-};
       `
     }
   }

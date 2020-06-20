@@ -1,13 +1,5 @@
 <template>
   <footer>
-    <template v-if="createTime && pushTime">
-      <p>
-        Created at:
-        <time :datetime="createTime">{{ createTime }}</time
-        >, Updated at:
-        <time :datetime="pushTime">{{ pushTime }}</time>
-      </p>
-    </template>
     <nuxt-link :to="localePath({ name: 'privacy' })">{{
       $t("privacyPage.title")
     }}</nuxt-link>
@@ -16,12 +8,12 @@
 </template>
 
 <script>
+import dayjs from "dayjs"
+
 export default {
   data() {
     return {
-      currentYear: this.$store.state.day.currentYear,
-      pushTime: this.$store.state.day.pushTime,
-      createTime: this.$store.state.day.createTime
+      currentYear: dayjs().year()
     }
   }
 }
