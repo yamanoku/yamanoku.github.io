@@ -10,11 +10,14 @@
         <em>{{ $t("onlyJPText") }}</em>
       </template>
       <nuxt-content :document="page" />
-      <common-feedback-list :feedback="feedback" />
       <nuxt-link to="/archive">
         {{ $t("archivePage.backText") }}
       </nuxt-link>
     </article>
+    <p>
+      {{ $t("archivePage.slug.feedback") }}
+    </p>
+    <common-feedback-list :feedback="feedback" />
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>

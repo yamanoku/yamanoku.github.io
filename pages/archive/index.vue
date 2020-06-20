@@ -7,9 +7,6 @@
     <p>
       {{ $t("archivePage.desc02") }}
     </p>
-    <p>
-      {{ $t("archivePage.desc03") }}
-    </p>
     <template v-if="this.$i18n.locale !== 'ja'">
       <em>{{ $t("onlyJPText") }}</em>
     </template>
