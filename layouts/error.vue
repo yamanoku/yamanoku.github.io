@@ -1,20 +1,26 @@
 <template>
   <main role="main" id="main">
-    <h1>{{ errorHeading }}</h1>
     <template v-if="error.statusCode === 404">
-      <p>{{ $t("error.404.text01") }}</p>
-      <p>{{ $t("error.404.text02") }}</p>
+      <h1>404</h1>
+      <p lang="ja">
+        申し訳ありません。お探しのページが見つかりませんでした。<br />
+        お手数をおかけしますが、<nuxt-link to="/">TOPページ</nuxt-link>
+        にお戻りください。
+      </p>
+      <p lang="en">
+        Sorry. Couldn't find the page you were looking for.<br />
+        We apologize for the inconvenience, but please access
+        <nuxt-link to="/en/">TOP page</nuxt-link>.
+      </p>
     </template>
     <template v-else>
+      <h1>500</h1>
       <p>{{ $t("error.500.text01") }}</p>
       <p>{{ $t("error.500.text02") }}</p>
       <address>
         <a href="mailto:0910yama@gmail.com">0910yama@gmail.com</a>
       </address>
     </template>
-    <nuxt-link :to="localePath({ name: 'index' })">{{
-      $t("backTop")
-    }}</nuxt-link>
   </main>
 </template>
 
@@ -46,20 +52,13 @@ export default {
   computed: {
     statusCode() {
       return (this.error && this.error.statusCode) || 500
-    },
-    errorHeading() {
-      if (this.$i18n.locale === "ja") {
-        return "申し訳ありません。" + this.error.statusCode + "エラーです。"
-      } else if (this.$i18n.locale === "fr") {
-        return (
-          "Je suis désolé Une erreur " +
-          this.error.statusCode +
-          " s'est produite."
-        )
-      } else {
-        return "I'm sorry for the " + this.error.statusCode + " error."
-      }
     }
   }
 }
 </script>
+
+<style scoped>
+main > h1 {
+  text-align: center;
+}
+</style>
