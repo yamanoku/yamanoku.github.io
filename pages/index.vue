@@ -10,3 +10,15 @@
     <CommonLocalSwitch />
   </main>
 </template>
+
+<script>
+export default {
+  head() {
+    return {
+      bodyAttrs: {
+        class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
+      }
+    }
+  }
+}
+</script>
