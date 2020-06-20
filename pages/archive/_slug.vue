@@ -14,6 +14,10 @@
         {{ $t("archivePage.backText") }}
       </nuxt-link>
     </article>
+    <p>
+      {{ $t("archivePage.slug.feedback") }}
+    </p>
+    <common-feedback-list :feedback="feedback" />
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
@@ -81,7 +85,18 @@ export default {
           content:
             "https://yamanoku.net/ogp/ogp-twitter_summary-archives@2x.png"
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
+      }
+    }
+  },
+  data() {
+    return {
+      feedback: {
+        gitHubTitle: this.$t("archivePage.feedback.github.linkTitle"),
+        routePath: this.$route.path
+      }
     }
   },
   methods: {

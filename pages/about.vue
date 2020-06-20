@@ -24,6 +24,11 @@
               }}</a>
             </li>
             <li role="listitem">
+              <a href="#about:progressive-web-application">{{
+                $t("aboutPage.subHeading.pwa")
+              }}</a>
+            </li>
+            <li role="listitem">
               <a href="#about:internationalization">{{
                 $t("aboutPage.subHeading.i18n")
               }}</a>
@@ -72,6 +77,7 @@
       <about-articles-tech-stack />
       <about-articles-markup />
       <about-articles-component-oriented />
+      <about-articles-pwa />
       <about-articles-internationalization />
     </section>
     <section id="about:design" aria-labelledby="about:design_heading">
