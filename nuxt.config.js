@@ -87,9 +87,6 @@ module.exports = {
       }
     }
   },
-  render: {
-    injectScripts: false
-  },
   modules: [
     "@nuxtjs/pwa",
     ["nuxt-i18n", i18n],
