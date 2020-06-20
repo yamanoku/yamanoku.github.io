@@ -57,26 +57,5 @@
       <li role="listitem">Netlify</li>
       <li role="listitem">CircleCI</li>
     </ul>
-    <template v-if="readingIssue.length">
-      <h4 id="todo:reading_heading">{{ $t("heading.todoList") }}</h4>
-      <ul role="list" aria-labelledby="todo:reading_heading">
-        <li role="listitem" v-for="issue in readingIssue" :key="issue.id">
-          <a :href="issue.html_url" target="_blank" rel="noopener" lang="en">
-            {{ issue.title }}
-            <github-icon />
-          </a>
-        </li>
-      </ul>
-    </template>
   </article>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      readingIssue: this.$store.state.github.read_issues
-    }
-  }
-}
-</script>
