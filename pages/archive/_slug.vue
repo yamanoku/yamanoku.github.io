@@ -81,7 +81,10 @@ export default {
           content:
             "https://yamanoku.net/ogp/ogp-twitter_summary-archives@2x.png"
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
+      }
     }
   },
   methods: {
