@@ -15,5 +15,3 @@ dist
 # PWA
 sw.*
 
-# static
-static/config.js
