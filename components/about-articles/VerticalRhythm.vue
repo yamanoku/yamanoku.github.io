@@ -8,5 +8,6 @@
     </h3>
     <p>{{ $t("aboutPage.verticalRhythm.desc01") }}</p>
     <p>{{ $t("aboutPage.verticalRhythm.desc02") }}</p>
+    <buttons-switch-rhythm-btn />
   </article>
 </template>

@@ -50,6 +50,10 @@ module.exports = {
       prefix: "about-articles"
     },
     {
+      path: "~/components/buttons/",
+      prefix: "buttons"
+    },
+    {
       path: "~/components/common/",
       prefix: "common"
     },
