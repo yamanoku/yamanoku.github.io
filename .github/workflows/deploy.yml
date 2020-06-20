@@ -23,7 +23,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: yarn install and generate
       run: |
-        echo ${{ secrets.APITokens }} | base64 --decode > ./static/config.js
         yarn install
         yarn generate
       env:
