@@ -7,6 +7,8 @@ const baseOgp = process.env.BASE_OGP || "https://yamanoku.net/ogp/ogp@2x.png"
 
 module.exports = {
   mode: "universal",
+  target: "static",
+  telemetry: false,
   env: {
     baseName,
     baseDesc,
