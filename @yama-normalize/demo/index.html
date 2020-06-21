@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yama-normalize Demo page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/a11y-dark.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/yama-normalize@0.0.9/yama-normalize.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:1em;}code.hljs{padding:calc(var(--rhythm)*3);}</style>
+  </head>
+  <body>
+    <header>
+      <h1>yama-normalize Demo page</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Sample UI</h2>
+        <h3>Heading-3</h3>
+        <h4>Heading-4</h4>
+        <h5>Heading-5</h5>
+        <h6>Heading-6</h6>
+        <p>paragraph</p>
+        <a href="https://yamanoku.net">https://yamanoku.net</a>
+        <figure>
+          <img src="Icon.svg" width ="348" height ="348" alt="yama-normalize icon">
+          <figcaption>figure + figcaption</figcaption>
+        </figure>
+        <small>small</small>
+        <ul>
+          <li>
+            listitem
+            <ul>
+              <li>listitem</li>
+              <li>listitem</li>
+            </ul>
+          </li>
+          <li>
+            listitem
+            <ul>
+              <li>listitem</li>
+              <li>listitem</li>
+              <li>listitem</li>
+            </ul>
+          </li>
+          <li>listitem</li>
+        </ul>
+        <ol>
+          <li>
+            first
+            <ol>
+              <li>first</li>
+              <li>second</li>
+            </ol>
+          </li>
+          <li>
+            first
+            <ol>
+              <li>first</li>
+              <li>second</li>
+              <li>third</li>
+            </ol>
+          </li>
+          <li>first</li>
+        </ol>
+        <details>
+          <summary>details + summary</summary>
+          summary style add <code>cursor: pointer;</code>
+        </details>
+        <hr />
+        <blockquote>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+        </blockquote>
+        <p>
+          Visually hidden contents (Only screen reader)
+          <span class="visually-hidden">
+            This is visually hidden text.
+          </span>
+        </p>
+      </section>
+      <section>
+        <h2>Documents</h2>
+        <h3>Support Browser</h3>
+        <ul>
+          <li>Chrome Latest</li>
+          <li>Firefox Latest</li>
+          <li>Safari Latest</li>
+          <li>Edge Latest</li>
+        </ul>
+        <h3>Install</h3>
+        <figure>
+          <pre><code class="bash">$ yarn add yama-normalize</code></pre>
+        </figure>
+        <figure>
+          <pre><code class="bash">$ npm install yama-normalize</code></pre>
+        </figure>
+      </section>
+    </main>
+    <footer>
+      <p>© Copyright, Okuto Oyama</p>
+    </footer>
+  </body>
+</html>

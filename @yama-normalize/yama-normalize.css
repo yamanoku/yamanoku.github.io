@@ -1,0 +1,219 @@
+:root {
+  --black: rgb(21, 32, 43);
+  --white: rgb(210, 210, 210);
+  --gray: rgba(70, 70, 70, .5);
+  --blue: rgb(90, 190, 255);
+  --purple: rgb(220, 100, 220);
+  --linkBlue: rgb(18, 122, 200);
+  --linkVisited: var(--black);
+  --rhythm: .5rem;
+}
+html {
+  color: var(--black);
+  font: inherit;
+  font-size: 100%;
+  line-height: calc(var(--rhythm) * 3);
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  font-family: Arial, Helvetica, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+body {
+  margin: 0;
+}
+a {
+  color: var(--linkBlue);
+}
+a:visited {
+  color: var(--linkVisited);
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  a {
+    color: var(--blue);
+    text-shadow: 1px 1px 0 var(--black), 0 1px 0 var(--black);
+  }
+  a:visited {
+    color: var(--purple);
+  }
+}
+header,
+main,
+footer {
+  display: block;
+  max-width: 80ch;
+  margin: auto;
+  padding: 0 calc(var(--rhythm) * 2);
+}
+h1 {
+  margin: calc(var(--rhythm) * 5) 0;
+  font-size: 1.953em;
+  line-height: calc(var(--rhythm) * 5);
+}
+h2 {
+  margin: calc(var(--rhythm) * 5) 0;
+  font-size: 1.563em;
+  line-height: calc(var(--rhythm) * 5);
+}
+h3 {
+  margin: calc(var(--rhythm) * 3) 0;
+  font-size: 1.25em;
+  line-height: calc(var(--rhythm) * 3);
+}
+h4 {
+  margin: calc(var(--rhythm) * 3) 0;
+  font-size: 1rem;
+  line-height: calc(var(--rhythm) * 3);
+}
+h5 {
+  margin: calc(var(--rhythm) * 2) 0;
+  font-size: .8em;
+  line-height: calc(var(--rhythm) * 2);
+}
+h6 {
+  margin: calc(var(--rhythm) * 1) 0;
+  font-size: .64em;
+  line-height: calc(var(--rhythm) * 1);
+}
+section {
+  display: block;
+  margin: calc(var(--rhythm) * 3) 0;
+}
+article {
+  position: relative;
+  margin: calc(var(--rhythm) * 3) 0;
+  padding-bottom: calc(var(--rhythm) * 3);
+}
+article::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media (prefers-color-scheme: dark) {
+  article::before {
+    background-color: var(--white);
+  }
+}
+p {
+  margin: calc(var(--rhythm) * 3) 0;
+  font-size: 1rem;
+  line-height: calc(var(--rhythm) * 3);
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+figure {
+  margin: calc(var(--rhythm) * 3) 0;
+}
+figcaption {
+  margin-top: calc(var(--rhythm) * 3);
+  font-size: 1rem;
+}
+small {
+  line-height: 1;
+}
+ul:not([class]) {
+  margin: calc(var(--rhythm) * 3) 0;
+  line-height: 1;
+  padding-left: calc(var(--rhythm) * 2);
+  list-style-type: none;
+  position: relative;
+}
+ul:not([class]) ul {
+  margin: 0;
+}
+ul:not([class]) li {
+  line-height: calc(var(--rhythm) * 3);
+  font-size: 1rem;
+}
+ul:not([class]) li::before {
+  background-color: var(--black);
+  border-radius: 50%;
+  color: #fff;
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin: 9px 0 0;
+  position: absolute;
+  left: 0;
+}
+ol:not([class]) {
+  margin: calc(var(--rhythm) * 3) 0;
+  line-height: 1;
+  padding-left: calc(var(--rhythm) * 2);
+}
+ol:not([class]) ol {
+  margin: 0;
+}
+ol:not([class]) li {
+  line-height: calc(var(--rhythm) * 3);
+  font-size: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+  ul:not([class]) li::before {
+    background-color: var(--white);
+  }
+}
+details > summary {
+  margin: calc(var(--rhythm) * 3) 0;
+  cursor: pointer;
+}
+blockquote {
+  border-left: 6px solid var(--blue);
+  margin: var(--rhythm) 0 var(--rhythm) var(--rhythm);
+  padding: 0 calc(var(--rhythm) * 2);
+}
+address {
+  margin: calc(var(--rhythm) * 3) 0;
+}
+pre {
+  margin: calc(var(--rhythm) * 3) 0;
+}
+hr {
+  margin: calc(var(--rhythm) * 3) 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: var(--gray);
+}
+@media (prefers-color-scheme: dark) {
+  hr {
+    background-color: var(--white);
+  }
+}
+/* stylelint-disable */
+.visually-hidden {
+  /* https://github.com/ampproject/amphtml/blob/master/css/ampshared.css#L186-L216 */
+  position: fixed !important;
+  top: 0px !important;
+  left: 0px !important;
+  width: 4px !important;
+  height: 4px !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+}
+/* stylelint-enable */

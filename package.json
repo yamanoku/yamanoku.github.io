@@ -2,6 +2,7 @@
   "name": "yamanoku.github.io",
   "author": "yamanoku <0910yama@gmail.com>",
   "private": true,
+  "workspaces": ["@yama-normalize"],
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
