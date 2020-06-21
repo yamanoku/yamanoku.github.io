@@ -10,7 +10,6 @@
   },
   "main": "yama-normalize.css",
   "scripts": {
-    "publish": "np",
     "test": "stylelint yama-normalize.css"
   },
   "files": [
@@ -25,7 +24,6 @@
   "license": "MIT",
   "devDependencies": {
     "@yamanoku/stylelint-config": "0.0.7",
-    "np": "6.2.4",
     "stylelint": "13.6.1",
     "stylelint-config-recommended": "3.0.0"
   },
