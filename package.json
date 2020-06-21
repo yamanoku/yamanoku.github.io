@@ -40,7 +40,9 @@
     "prettier": "2.0.5",
     "prism-themes": "1.4.0",
     "style-loader": "1.2.1",
-    "yama-normalize": "0.0.9"
+    "yama-normalize": "0.0.11"
   },
-  "workspaces": ["packages/*"]
+  "workspaces": [
+    "packages/*"
+  ]
 }
