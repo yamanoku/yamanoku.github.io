@@ -1,0 +1,34 @@
+{
+  "name": "yama-normalize",
+  "version": "0.0.11",
+  "description": "yamanoku.net default style",
+  "repository": "yamanoku/yama-normalize",
+  "author": {
+    "name": "yamanoku",
+    "email": "0910yama@gmail.com",
+    "url": "https://yamanoku.net"
+  },
+  "main": "yama-normalize.css",
+  "scripts": {
+    "test": "stylelint yama-normalize.css"
+  },
+  "files": [
+    "yama-normalize.css"
+  ],
+  "keywords": [
+    "normalize",
+    "css",
+    "reset",
+    "style"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@yamanoku/stylelint-config": "0.0.7",
+    "stylelint": "13.6.1",
+    "stylelint-config-recommended": "3.0.0"
+  },
+  "stylelint": {
+    "extends": "@yamanoku/stylelint-config"
+  },
+  "gitHead": "460c76c71b0401ea0304f2b36537e3579391ae3c"
+}
