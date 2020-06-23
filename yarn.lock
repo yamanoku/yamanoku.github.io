@@ -1978,10 +1978,10 @@
     std-env "^2.2.1"
     wrap-ansi "^6.2.0"
 
-"@nuxt/components@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@nuxt/components/-/components-1.0.3.tgz#c47a1817fa635a2f0a52982c0277cf7dd46ac018"
-  integrity sha512-ZXnRHR4e+svOSaouWUoDCkXUHGC/8KGU5sU0SA/on0yHGuzsk/tD8vDiGYNGcdAxEAXE5J9xB7rzWcBYZMrOlg==
+"@nuxt/components@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@nuxt/components/-/components-1.0.4.tgz#8a22c080bdb0061a7aafc632ab8c055d70e479ce"
+  integrity sha512-21+wVCwKmH1lzmi2e5dC2NwhMc0LEgAkkqeYtYjWHFN6D1G09l5BeNQF1rfFBQ82R9/AqRiCS8aGIAaWwUp8vQ==
   dependencies:
     chalk "^4.1.0"
     chokidar "^3.4.0"
