@@ -23,7 +23,7 @@
 <style scoped>
 nav {
   max-width: 80ch;
-  margin: auto;
+  margin: calc(var(--rhythm) * 3) auto;
   padding: 0 calc(var(--rhythm) * 2);
 }
 nav ul.global {
