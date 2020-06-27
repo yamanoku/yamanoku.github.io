@@ -347,12 +347,10 @@
     "todoList": "やること一覧",
     "techStack": "利用技術",
     "relatedList": "関連リンク一覧",
-    "slides": {
-      "title": "スライド一覧",
+    "presentations": {
+      "title": "発表一覧",
       "stage": "登壇",
-      "study": "勉強会",
-      "write": "執筆",
-      "lt": "ライトニングトーク"
+      "write": "執筆"
     },
     "sns": "ソーシャルサービス",
     "contact": "連絡先"
