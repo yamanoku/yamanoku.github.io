@@ -13,7 +13,6 @@
     "deploy": "gh-pages -d dist -b master -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "@nuxt/components": "1.0.5",
     "@nuxt/content": "1.3.2",
     "@nuxtjs/axios": "5.11.0",
     "@nuxtjs/dotenv": "1.4.1",

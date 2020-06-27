@@ -345,12 +345,10 @@
     "todoList": "TODO List",
     "techStack": "Technology Stack",
     "relatedList": "Related Links List",
-    "slides": {
-      "title": "Slides",
+    "presentations": {
+      "title": "Presentations",
       "stage": "Stage",
-      "study": "Study Meeting",
-      "write": "Writing",
-      "lt": "Lightning Talk"
+      "write": "Writing"
     },
     "sns": "Social Service",
     "contact": "Contact"

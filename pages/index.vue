@@ -4,7 +4,7 @@
     <SectionsBasicInfo />
     <SectionsCareerInfo />
     <SectionsProducts />
-    <SectionsSlides />
+    <SectionsPresentations />
     <SectionsSns />
     <SectionsAddress />
     <CommonLocalSwitch />
