@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "babel-eslint": "10.1.0",
-    "dayjs": "1.8.28",
+    "dayjs": "1.8.29",
     "eslint": "7.3.1",
     "eslint-config-prettier": "6.11.0",
     "eslint-friendly-formatter": "4.0.1",
