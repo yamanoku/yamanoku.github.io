@@ -42,7 +42,8 @@ export default {
       meta: {
         title: this.$t("archivePage.title"),
         description: this.$t("archivePage.desc01"),
-        image: "https://yamanoku.net/ogp/ogp-archive@2x.png"
+        image: "https://yamanoku.net/ogp/ogp-archive@2x.png",
+        imageAlt: this.$t("archivePage.title")
       }
     }
   }

@@ -4,6 +4,7 @@ const baseName = process.env.BASE_NAME || "yamanoku net"
 const baseDesc = process.env.BASE_DISC || "Okuto Oyama Portfolio Site"
 const baseUrl = process.env.BASE_URL || "https://yamanaoku.net"
 const baseOgp = process.env.BASE_OGP || "https://yamanoku.net/ogp/ogp@2x.png"
+const baseOgpAlt = baseName
 
 module.exports = {
   mode: "universal",
@@ -13,7 +14,8 @@ module.exports = {
     baseName,
     baseDesc,
     baseUrl,
-    baseOgp
+    baseOgp,
+    baseOgpAlt
   },
   head: {
     htmlAttrs: {

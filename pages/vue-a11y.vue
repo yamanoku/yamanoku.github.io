@@ -25,7 +25,8 @@ export default {
       meta: {
         title: this.$t("vueA11yPage.title"),
         description: this.$t("vueA11yPage.description"),
-        image: "https://yamanoku.net/ogp/ogp-vue-a11y@2x.png"
+        image: "https://yamanoku.net/ogp/ogp-vue-a11y@2x.png",
+        imageAlt: this.$t("vueA11yPage.title")
       },
       feedback: {
         gitHubTitle: this.$t("vueA11yPage.feedback.github.linkTitle"),

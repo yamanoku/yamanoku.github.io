@@ -42,7 +42,7 @@ export default {
   },
   head() {
     return {
-      title: `${this.page.title} - yamanoku.net`,
+      title: `${this.page.title}`,
       meta: [
         {
           hid: "description",
@@ -52,7 +52,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: `${this.page.title} - yamanoku.net`
+          content: `${this.page.title}`
         },
         {
           hid: "og:description",
@@ -63,6 +63,11 @@ export default {
           hid: "og:image",
           property: "og:image",
           content: "https://yamanoku.net/ogp/ogp-archive@2x.png"
+        },
+        {
+          hid: "og:image:alt",
+          property: "og:image:alt",
+          content: this.$t("archivePage.title")
         },
         {
           hid: "twitter:card",
