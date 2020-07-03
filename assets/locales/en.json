@@ -100,8 +100,8 @@
     "title": "Home"
   },
   "aboutPage": {
-    "title": "About yamanoku.net",
-    "description": "yamanoku.net is a portal site of Okuto Oyama called yamanoku.",
+    "title": "About yamanoku net",
+    "description": "yamanoku net is a portal site of Okuto Oyama called yamanoku.",
     "heading": {
       "toc": "Table of Contents",
       "implementation": "Explaining site implementation",
@@ -321,10 +321,10 @@
   },
   "privacyPage": {
     "title": "Privacy Policy",
-    "description": "yamanoku.net privacy policy page. Provides information about access analysis tools.",
+    "description": "yamanoku net privacy policy page. Provides information about access analysis tools.",
     "analytics": {
       "heading": "About Access Analysis Tools",
-      "desc01": "yamanoku.net uses Google's access analysis tool “Google Analytics”.",
+      "desc01": "yamanoku net uses Google's access analysis tool “Google Analytics”.",
       "desc02": "This Google Analytics server uses cookies to collect access information. This access information is collected anonymously and is not personally identifiable.",
       "desc03": "Google Analytics cookies on this site will be retained for 26 months. This feature can be rejected by disabling cookies, so please check your browser settings.",
       "link01": {

@@ -100,8 +100,8 @@
     "title": "ホーム"
   },
   "aboutPage": {
-    "title": "yamanoku.netについて",
-    "description": "yamanoku.netは、yamanokuこと大山奥人のポータルサイトです。",
+    "title": "yamanoku netについて",
+    "description": "yamanoku netは、yamanokuこと大山奥人のポータルサイトです。",
     "heading": {
       "toc": "目次",
       "implementation": "ページ実装の解説",
@@ -323,10 +323,10 @@
   },
   "privacyPage": {
     "title": "プライバシーポリシー",
-    "description": "yamanoku.netのプライバシーポリシーページです。アクセス解析ツールについての説明が載っています。",
+    "description": "yamanoku netのプライバシーポリシーページです。アクセス解析ツールについての説明が載っています。",
     "analytics": {
       "heading": "アクセス解析ツールについて",
-      "desc01": "yamanoku.net（以下、当サイト）では、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。",
+      "desc01": "yamanoku net（以下、当サイト）では、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。",
       "desc02": "このGoogleアナリティクスはアクセス情報の収集のためにCookieを使用しています。このアクセス情報は匿名で収集されており、個人を特定するものではありません。",
       "desc03": "当サイトでのGoogleアナリティクスのCookieは、26か月間保持されます。この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。",
       "link01": {

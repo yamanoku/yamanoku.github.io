@@ -13,7 +13,7 @@ export default {
       bodyAttrs: {}
     }
     if (this.meta.title) {
-      const title = `${this.meta.title} - yamanoku.net`
+      const title = `${this.meta.title}`
       head.title = title
       head.meta.push({ hid: "og:title", property: "og:title", content: title })
     }
