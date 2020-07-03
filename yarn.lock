@@ -8891,10 +8891,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-i18n@6.12.2:
-  version "6.12.2"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.12.2.tgz#0d749ede913470a11adaf5ad8eb40783602990c6"
-  integrity sha512-XECHvyEGrHd4AnVFogE3XmaiOzn8j7VDssLjmMWUjZ4RbzB6pecNsxCwcUR7WGPvjXDONKAROS/zQDQL3g5Q7Q==
+nuxt-i18n@6.13.0:
+  version "6.13.0"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.13.0.tgz#ac839261363907c4b0df0174188e4d3e3d7fedce"
+  integrity sha512-TuCPKbzYxcSYZbJ5d5EccCVKfDjb7mpMkqtxiC0Ypgb0ycwwwCNSnwFQOigk/l1xlDSrSXToX6Q+eCYm+fhC0g==
   dependencies:
     "@babel/parser" "^7.5.5"
     "@babel/traverse" "^7.5.5"
