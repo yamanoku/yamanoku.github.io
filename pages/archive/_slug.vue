@@ -89,6 +89,11 @@ export default {
           property: "twitter:image",
           content:
             "https://yamanoku.net/ogp/ogp-twitter_summary-archives@2x.png"
+        },
+        {
+          hid: "twitter:image:alt",
+          property: "twitter:image:alt",
+          content: this.$t("archivePage.title")
         }
       ],
       bodyAttrs: {
