@@ -16,7 +16,6 @@ export default {
   methods: {
     switchToggle(e) {
       e.preventDefault()
-      console.log(e)
       e.target.setAttribute(
         "aria-checked",
         e.target.getAttribute("aria-checked") === "true" ? "false" : "true"
