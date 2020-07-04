@@ -35,11 +35,13 @@ module.exports = {
         name: "og:image",
         content: baseOgp
       },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@yamanoku" },
       { name: "og:title", content: baseName },
       { name: "og:description", content: baseDesc },
-      { name: "og:image", content: baseOgp }
+      { name: "og:image", content: baseOgp },
+      { name: "og:image:alt", content: baseOgpAlt },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@yamanoku" },
+      { name: "twitter:image:alt", content: baseOgpAlt }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },

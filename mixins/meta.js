@@ -65,6 +65,11 @@ export default {
         property: "og:image:alt",
         content: this.meta.imageAlt
       })
+      head.meta.push({
+        hid: "twitter:image:alt",
+        property: "twitter:image:alt",
+        content: this.meta.imageAlt
+      })
     }
     head.bodyAttrs["class"] = this.$store.state.rhythm.toggleRhythm
       ? "is-rhythm"
