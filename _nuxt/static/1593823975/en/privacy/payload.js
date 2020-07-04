@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/en/privacy", {data:[{baseName:"yamanoku.net",baseDesc:"Okuto Oyama Portfolio Site",baseUrl:"https:\u002F\u002Fyamanaoku.net",baseOgp:"https:\u002F\u002Fyamanoku.net\u002Fogp\u002Fogp@2x.png"}],fetch:[],mutations:[]});
