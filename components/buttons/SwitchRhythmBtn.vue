@@ -4,7 +4,6 @@
     role="switch"
     :aria-checked="checkToggle"
     @click="switchToggle"
-    @keypress="switchToggle"
     ref="switch-rhythm"
   >
     Vertical Rhythm Line
