@@ -1,9 +1,10 @@
 import i18n from "./nuxt-i18n"
 
-const baseName = process.env.BASE_NAME || "yamanoku.net"
+const baseName = process.env.BASE_NAME || "yamanoku net"
 const baseDesc = process.env.BASE_DISC || "Okuto Oyama Portfolio Site"
 const baseUrl = process.env.BASE_URL || "https://yamanaoku.net"
 const baseOgp = process.env.BASE_OGP || "https://yamanoku.net/ogp/ogp@2x.png"
+const baseOgpAlt = baseName
 
 module.exports = {
   mode: "universal",
@@ -13,7 +14,8 @@ module.exports = {
     baseName,
     baseDesc,
     baseUrl,
-    baseOgp
+    baseOgp,
+    baseOgpAlt
   },
   head: {
     htmlAttrs: {
@@ -33,11 +35,13 @@ module.exports = {
         name: "og:image",
         content: baseOgp
       },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@yamanoku" },
       { name: "og:title", content: baseName },
       { name: "og:description", content: baseDesc },
-      { name: "og:image", content: baseOgp }
+      { name: "og:image", content: baseOgp },
+      { name: "og:image:alt", content: baseOgpAlt },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@yamanoku" },
+      { name: "twitter:image:alt", content: baseOgpAlt }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
