@@ -25,13 +25,13 @@ export default {
         {
           title: "PWA is Progressive Web Accessibility",
           url:
-            "https://docs.google.com/presentations/d/1VIBjWSrWcZ0ekKNIQ9Vl0pMdfGym1lrXi3Krq_o1EEo/edit?usp=sharing",
+            "https://docs.google.com/presentation/d/1VIBjWSrWcZ0ekKNIQ9Vl0pMdfGym1lrXi3Krq_o1EEo/edit?usp=sharing",
           datetime: "2020-05-19T15:00:00.000Z"
         },
         {
           title: "PWA RTA in Japan",
           url:
-            "https://docs.google.com/presentations/d/1rLn_lNGD-_5Tk0-Bx-5fGPwGMjnUemtYeXjnKRaoB68/edit?usp=sharing",
+            "https://docs.google.com/presentation/d/1rLn_lNGD-_5Tk0-Bx-5fGPwGMjnUemtYeXjnKRaoB68/edit?usp=sharing",
           datetime: "2020-01-31T15:00:00.000Z"
         },
         {
