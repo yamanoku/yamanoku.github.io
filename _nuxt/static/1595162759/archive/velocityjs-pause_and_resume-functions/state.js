@@ -1,0 +1,1 @@
+window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1595162759",layout:"default",error:null,state:{rhythm:{toggleRhythm:false},i18n:{routeParams:{}}},serverRendered:true,routePath:"\u002Farchive\u002Fvelocityjs-pause_and_resume-functions",config:{}};
