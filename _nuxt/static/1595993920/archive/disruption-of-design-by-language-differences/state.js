@@ -1,1 +1,0 @@
-window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1595993920",layout:"default",error:null,state:{rhythm:{toggleRhythm:false},i18n:{routeParams:{}}},serverRendered:true,routePath:"\u002Farchive\u002Fdisruption-of-design-by-language-differences",config:{}};
