@@ -1,6 +1,6 @@
 # yama-normalize
 
-![yama-normalize icon](https://github.com/yamanoku/yama-normalize/blob/master/icon/Icon.svg)
+![yama-normalize icon](https://yama-normalize.netlify.app/Icon.svg)
 
 yamanoku.net default style
 
