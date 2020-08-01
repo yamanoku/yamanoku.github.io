@@ -104,6 +104,9 @@ module.exports = {
     "@nuxt/content"
   ],
   generate: {
+    cache: {
+      ignore: ["content"]
+    },
     async routes() {
       const { $content } = require("@nuxt/content")
       const files = await $content("archive").only(["path"]).fetch()
