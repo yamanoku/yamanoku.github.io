@@ -2233,14 +2233,13 @@
     rc9 "^1.0.0"
     std-env "^2.2.1"
 
-"@nuxt/content@1.5.2", "@nuxt/content@^1.5.2":
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/@nuxt/content/-/content-1.5.2.tgz#c82f569a258dd8c7a00ebcd65d75a0c6fbeb5b5d"
-  integrity sha512-a9P8qgzgzJh41WA7CZkIM7edDYXIkPfW2IBOmNriP2t4IyU6eZNpuS2DUhB8e+i4eE/6DuhUHRg415wqWz1lcA==
+"@nuxt/content@1.5.3":
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/@nuxt/content/-/content-1.5.3.tgz#34de4ae5a556c783ab5c51ac2f3d11744e62acac"
+  integrity sha512-Ev4HXkZgjdv12828hvspXGrq3IimwZGUGjQgt6i7qOtdWB2GvIGenfjFSy5d/x8z26CV9pTfIL8+oDgIc7UBcA==
   dependencies:
     "@lokidb/full-text-search" "^2.0.0-beta.9"
     "@lokidb/loki" "^2.0.0-beta.9"
-    "@nuxt/content" "^1.5.2"
     change-case "^4.1.1"
     chokidar "^3.4.1"
     consola "^2.14.0"
