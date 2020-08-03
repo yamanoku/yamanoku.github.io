@@ -24,7 +24,7 @@ jobs:
     - name: yarn install and generate
       run: |
         yarn install
-        yarn generate
+        yarn generate --fail-on-error
       env:
         CI: true
 
