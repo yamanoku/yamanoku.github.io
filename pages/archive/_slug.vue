@@ -2,10 +2,17 @@
   <main role="main" id="main">
     <article>
       <h1>{{ page.title }}</h1>
-      <p lang="en">
-        created at:
-        <time :datetime="dateTime(page.date)">{{ dateTime(page.date) }}</time>
-      </p>
+      <div class="article-header">
+        <div lang="en">
+          created at:
+          <time :datetime="dateTime(page.date)">{{ dateTime(page.date) }}</time>
+        </div>
+        <div lang="en">
+          <a :href="editLink" target="_blank" rel="noopenner">
+            GitHub Edit Page
+          </a>
+        </div>
+      </div>
       <template v-if="this.$i18n.locale !== 'ja'">
         <em>{{ $t("onlyJPText") }}</em>
       </template>
@@ -106,7 +113,8 @@ export default {
       feedback: {
         gitHubTitle: this.$t("archivePage.feedback.github.linkTitle"),
         routePath: this.$route.path
-      }
+      },
+      editLink: `https://github.com/yamanoku/yamanoku.github.io/edit/nuxt/content${this.$route.path}.md`
     }
   },
   methods: {
@@ -116,3 +124,16 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.article-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: calc(var(--rhythm) / 2 * -1);
+  padding: 0;
+}
+.article-header > * {
+  margin: calc(var(--rhythm) / 2);
+}
+</style>
