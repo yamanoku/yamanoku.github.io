@@ -25,18 +25,8 @@
           target="_blank"
           rel="noopener"
         >
-          {{ $t("career.skillSet") }}
+          {{ $t("career.experiencedSkills") }}
           <article-icon />
-        </a>
-      </li>
-      <li role="listitem">
-        <a
-          href="https://www.wantedly.com/users/347527"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("career.wantedly") }}
-          <open-new-icon />
         </a>
       </li>
       <li role="listitem">
@@ -46,6 +36,16 @@
           rel="noopener"
         >
           {{ $t("career.lapras") }}
+          <open-new-icon />
+        </a>
+      </li>
+      <li role="listitem">
+        <a
+          href="https://youtrust.jp/users/57ea573ffca186c3b339f1739915f40b"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ $t("career.youtrust") }}
           <open-new-icon />
         </a>
       </li>
