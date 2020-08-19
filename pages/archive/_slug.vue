@@ -10,6 +10,7 @@
         <div lang="en">
           <a :href="editLink" target="_blank" rel="noopenner">
             GitHub Edit Page
+            <github-icon />
           </a>
         </div>
       </div>
