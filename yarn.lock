@@ -9390,10 +9390,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-i18n@6.13.10:
-  version "6.13.10"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.13.10.tgz#df0a7fc156dc0f34b9cb39442b0350d2f64532d7"
-  integrity sha512-k+pqpFpafBtB26mkaF3laOSyfQK5mk+UyxwHygalwIXeqtq27RTuxzk50rKMfGPEquOCjHVKSdJMhgxGcqxniw==
+nuxt-i18n@6.13.11:
+  version "6.13.11"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.13.11.tgz#7ce8b4310adc1ea724d6078e52251fc6cbaf87cb"
+  integrity sha512-Zt5lyjG7ChHknx8RM0GsjK39JUx0kuJphOThi5cUcD8QsmPVxRrbC+MihISgxLJp/MmtS4mEVLypnT4ETnFvAA==
   dependencies:
     "@babel/parser" "^7.5.5"
     "@babel/traverse" "^7.5.5"
