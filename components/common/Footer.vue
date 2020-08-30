@@ -4,6 +4,15 @@
       $t("privacyPage.title")
     }}</nuxt-link>
     <p>&copy; Copyright {{ currentYear }}, Okuto Oyama</p>
+    <p>
+      Source :
+      <a
+        href="https://github.com/yamanoku/yamanoku.github.io/"
+        target="_blank"
+        rel="noopener"
+        >yamanoku/yamanoku.github.io<github-icon
+      /></a>
+    </p>
   </footer>
 </template>
 
