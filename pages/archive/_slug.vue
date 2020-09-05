@@ -8,7 +8,7 @@
           <time :datetime="dateTime(page.date)">{{ dateTime(page.date) }}</time>
         </div>
         <div lang="en">
-          <a :href="editLink" target="_blank" rel="noopenner">
+          <a :href="editLink" target="_blank" rel="noopener">
             GitHub Edit Page
             <github-icon />
           </a>

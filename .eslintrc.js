@@ -22,6 +22,13 @@ module.exports = {
         arrowParens: "avoid"
       }
     ],
-    "vuejs-accessibility/no-redundant-roles": 0
+    "vuejs-accessibility/no-redundant-roles": 0,
+    "vue/no-template-target-blank": [
+      "error",
+      {
+        allowReferrer: true,
+        enforceDynamicLinks: "always"
+      }
+    ]
   }
 }
