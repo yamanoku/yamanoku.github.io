@@ -25,17 +25,17 @@
 </template>
 
 <script>
-import dayjs from "dayjs"
-import Meta from "~/mixins/meta"
+import dayjs from "dayjs";
+import Meta from "~/mixins/meta";
 
 export default {
   mixins: [Meta],
   async asyncData({ $content, route }) {
-    const query = $content("archive", { deep: true }).sortBy("date", "desc")
-    const articles = await query.fetch()
+    const query = $content("archive", { deep: true }).sortBy("date", "desc");
+    const articles = await query.fetch();
     return {
       articles
-    }
+    };
   },
   data() {
     return {
@@ -45,7 +45,7 @@ export default {
         image: "https://yamanoku.net/ogp/ogp-archive@2x.png",
         imageAlt: this.$t("archivePage.title")
       }
-    }
+    };
   }
-}
+};
 </script>

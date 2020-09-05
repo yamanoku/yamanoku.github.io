@@ -34,7 +34,7 @@ export default {
         this.feedback.routePath
       }%0A${this.$t("feedback.github.link")}`,
       twitterLink: `https://twitter.com/share?url=https://yamanoku.net${this.feedback.routePath}&text=@yamanoku`
-    }
+    };
   }
-}
+};
 </script>

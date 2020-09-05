@@ -33,20 +33,20 @@
 </template>
 
 <script>
-import dayjs from "dayjs"
+import dayjs from "dayjs";
 
 export default {
   name: "ArchiveDocumentSlug",
   async asyncData({ $content, params, error }) {
-    let page
+    let page;
     try {
-      page = await $content(`archive/${params.slug}`).fetch()
+      page = await $content(`archive/${params.slug}`).fetch();
     } catch (e) {
-      return error({ statusCode: 404, message: "Page not found" })
+      return error({ statusCode: 404, message: "Page not found" });
     }
     return {
       page
-    }
+    };
   },
   head() {
     return {
@@ -107,7 +107,7 @@ export default {
       bodyAttrs: {
         class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
       }
-    }
+    };
   },
   data() {
     return {
@@ -116,14 +116,14 @@ export default {
         routePath: this.$route.path
       },
       editLink: `https://github.com/yamanoku/yamanoku.github.io/edit/nuxt/content${this.$route.path}.md`
-    }
+    };
   },
   methods: {
     dateTime(time) {
-      return dayjs(time).format("YYYY-MM-DD")
+      return dayjs(time).format("YYYY-MM-DD");
     }
   }
-}
+};
 </script>
 
 <style scoped>

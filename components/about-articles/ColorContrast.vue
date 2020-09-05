@@ -72,9 +72,9 @@ export default {
           colorWhiteFlag: true
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>

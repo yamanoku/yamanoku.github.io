@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Meta from "~/mixins/meta"
+import Meta from "~/mixins/meta";
 
 export default {
   mixins: [Meta],
@@ -32,9 +32,9 @@ export default {
         gitHubTitle: this.$t("vueA11yPage.feedback.github.linkTitle"),
         routePath: this.$route.path
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style>

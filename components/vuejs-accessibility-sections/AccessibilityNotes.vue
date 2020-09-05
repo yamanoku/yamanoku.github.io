@@ -253,9 +253,9 @@ export default {
         <!-- Good -->
         <span role="img" aria-label="Panda">🐼</span>
       `
-    }
+    };
   }
-}
+};
 </script>
 
 <style>

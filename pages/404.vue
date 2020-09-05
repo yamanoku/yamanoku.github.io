@@ -26,9 +26,9 @@ export default {
           content: "404 status page - Page not found"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>

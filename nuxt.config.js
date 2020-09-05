@@ -1,10 +1,10 @@
-import i18n from "./nuxt-i18n"
+import i18n from "./nuxt-i18n";
 
-const baseName = process.env.BASE_NAME || "yamanoku net"
-const baseDesc = process.env.BASE_DISC || "Okuto Oyama Portfolio Site"
-const baseUrl = process.env.BASE_URL || "https://yamanaoku.net"
-const baseOgp = process.env.BASE_OGP || "https://yamanoku.net/ogp/ogp@2x.png"
-const baseOgpAlt = baseName
+const baseName = process.env.BASE_NAME || "yamanoku net";
+const baseDesc = process.env.BASE_DISC || "Okuto Oyama Portfolio Site";
+const baseUrl = process.env.BASE_URL || "https://yamanaoku.net";
+const baseOgp = process.env.BASE_OGP || "https://yamanoku.net/ogp/ogp@2x.png";
+const baseOgpAlt = baseName;
 
 module.exports = {
   mode: "universal",
@@ -93,7 +93,7 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
           exclude: /(node_modules)/
-        })
+        });
       }
     }
   },
@@ -108,15 +108,15 @@ module.exports = {
       ignore: ["content"]
     },
     async routes() {
-      const { $content } = require("@nuxt/content")
-      const files = await $content("archive").only(["path"]).fetch()
+      const { $content } = require("@nuxt/content");
+      const files = await $content("archive").only(["path"]).fetch();
       const archive = files.map(file =>
         file.path === "/index" ? "/" : file.path
-      )
-      return archive
+      );
+      return archive;
     },
     fetch({ redirect }) {
-      return redirect("404.html")
+      return redirect("404.html");
     }
   },
   plugins: ["~plugins/icons.js", "~plugins/vue-highlight.js"],
@@ -134,4 +134,4 @@ module.exports = {
     theme_color: "#36465d",
     background_color: "#36465d"
   }
-}
+};
