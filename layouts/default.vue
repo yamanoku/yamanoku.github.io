@@ -10,9 +10,9 @@
 <script>
 export default {
   head() {
-    return this.$nuxtI18nSeo()
+    return this.$nuxtI18nSeo();
   }
-}
+};
 </script>
 
 <style>

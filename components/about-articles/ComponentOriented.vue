@@ -54,7 +54,7 @@ export default {
   </li>
 </ul>
       `
-    }
+    };
   }
-}
+};
 </script>

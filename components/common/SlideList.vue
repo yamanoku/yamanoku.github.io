@@ -29,15 +29,15 @@ export default {
   data() {
     return {
       listItem: this.listArray
-    }
+    };
   },
   methods: {
     dateReplace(date) {
-      return date.replace(/T.*$/, "").replace(/(-)/g, "/")
+      return date.replace(/T.*$/, "").replace(/(-)/g, "/");
     },
     dateCreated(date) {
-      return date.replace(/T.*$/, "").replace(/(-)/g, "/")
+      return date.replace(/T.*$/, "").replace(/(-)/g, "/");
     }
   }
-}
+};
 </script>

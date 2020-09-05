@@ -27,4 +27,4 @@ export default {
       name: "English Page"
     }
   ]
-}
+};

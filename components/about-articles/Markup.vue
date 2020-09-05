@@ -40,7 +40,7 @@ export default {
     </h3>
   </article>
       `
-    }
+    };
   }
-}
+};
 </script>

@@ -15,21 +15,21 @@
 export default {
   methods: {
     switchToggle(e) {
-      e.preventDefault()
+      e.preventDefault();
       e.target.setAttribute(
         "aria-checked",
         e.target.getAttribute("aria-checked") === "true" ? "false" : "true"
-      )
-      this.$store.dispatch("rhythm/toggleRhythm")
+      );
+      this.$store.dispatch("rhythm/toggleRhythm");
     }
   },
   computed: {
     checkToggle() {
-      if (!this.$store.state.rhythm.toggleRhythm) return "false"
-      return this.$store.state.rhythm.toggleRhythm
+      if (!this.$store.state.rhythm.toggleRhythm) return "false";
+      return this.$store.state.rhythm.toggleRhythm;
     }
   }
-}
+};
 </script>
 
 <style scoped>

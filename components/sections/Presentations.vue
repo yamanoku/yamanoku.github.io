@@ -107,7 +107,7 @@ export default {
           datetime: "2018-07-13T00:00:00.000Z"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>

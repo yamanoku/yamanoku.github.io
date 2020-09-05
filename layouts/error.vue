@@ -47,14 +47,14 @@ export default {
           content: this.error.statusCode
         }
       ]
-    }
+    };
   },
   computed: {
     statusCode() {
-      return (this.error && this.error.statusCode) || 500
+      return (this.error && this.error.statusCode) || 500;
     }
   }
-}
+};
 </script>
 
 <style scoped>

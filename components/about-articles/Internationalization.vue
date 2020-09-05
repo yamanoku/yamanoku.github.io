@@ -38,7 +38,7 @@ export default {
           <em>{{ $t("onlyJPText") }}</em>
         </template>
       `
-    }
+    };
   }
-}
+};
 </script>

@@ -18,7 +18,7 @@ export default {
       bodyAttrs: {
         class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
       }
-    }
+    };
   }
-}
+};
 </script>

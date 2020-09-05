@@ -8,15 +8,15 @@
 </template>
 
 <script>
-import dayjs from "dayjs"
+import dayjs from "dayjs";
 
 export default {
   data() {
     return {
       currentYear: dayjs().year()
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>

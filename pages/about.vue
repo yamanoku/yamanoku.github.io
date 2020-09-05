@@ -99,7 +99,7 @@
 </template>
 
 <script>
-import Meta from "~/mixins/meta"
+import Meta from "~/mixins/meta";
 
 export default {
   mixins: [Meta],
@@ -111,9 +111,9 @@ export default {
         image: "https://yamanoku.net/ogp/ogp-about@2x.png",
         imageAlt: this.$t("aboutPage.title")
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>

@@ -17,11 +17,11 @@ module.exports = {
     "prettier/prettier": [
       "error",
       {
-        semi: false,
+        semi: true,
         trailingComma: "none",
         arrowParens: "avoid"
       }
     ],
     "vuejs-accessibility/no-redundant-roles": 0
   }
-}
+};

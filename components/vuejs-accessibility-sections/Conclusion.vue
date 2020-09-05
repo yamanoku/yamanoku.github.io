@@ -9,7 +9,7 @@
         src="https://live.staticflickr.com/8221/8314288381_ebc4c1b074_c.jpg"
         width="220"
         height="240"
-        style="max-width: 220px;"
+        style="max-width: 220px"
         :alt="$t('vueA11yPage.conclusion.imgAlt01')"
       />
       <figcaption>
