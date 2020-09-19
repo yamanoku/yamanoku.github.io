@@ -1,15 +1,15 @@
 <template>
   <ul role="list">
-    <li role="listitem" v-for="list in listItem" :key="list.title">
+    <li role="listitem" v-for="list in listItem" :key="list.index">
       <template v-if="list.datetime">
-        <time :datetime="dateReplace(list.datetime)">{{
-          dateReplace(list.datetime)
+        <time :datetime="dateTimeReplace(list.datetime)">{{
+          dateStirngReplace(list.datetime)
         }}</time>
         -
       </template>
       <template v-else-if="list.created_at">
-        <time :datetime="dateCreated(list.created_at)">{{
-          dateCreated(list.created_at)
+        <time :datetime="dateTimeReplace(list.created_at)">{{
+          dateStirngReplace(list.created_at)
         }}</time>
         -
       </template>
@@ -32,10 +32,10 @@ export default {
     };
   },
   methods: {
-    dateReplace(date) {
-      return date.replace(/T.*$/, "").replace(/(-)/g, "/");
+    dateTimeReplace(date) {
+      return date.replace(/T.*$/, "");
     },
-    dateCreated(date) {
+    dateStirngReplace(date) {
       return date.replace(/T.*$/, "").replace(/(-)/g, "/");
     }
   }
