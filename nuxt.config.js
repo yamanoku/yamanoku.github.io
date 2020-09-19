@@ -82,7 +82,8 @@ module.exports = {
       },
       prism: {
         theme: "prism-themes/themes/prism-a11y-dark.css"
-      }
+      },
+      rehypePlugins: ["rehype-plugin-image-native-lazy-loading"]
     }
   },
   build: {
