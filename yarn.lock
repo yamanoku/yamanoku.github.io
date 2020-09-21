@@ -11350,10 +11350,10 @@ regjsparser@^0.6.4:
   dependencies:
     jsesc "~0.5.0"
 
-rehype-plugin-image-native-lazy-loading@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/rehype-plugin-image-native-lazy-loading/-/rehype-plugin-image-native-lazy-loading-1.0.3.tgz#076e552fc184b28927cd35c6521ce4be0c5dbad6"
-  integrity sha512-pFtfYRU055Vuv3pUcEGs41I+/0Cb9fUvNzoOR49JSFXcLulQRasLmsArFVGpNeZAIHKTIJVo+od+bcu21dgM+g==
+rehype-plugin-image-native-lazy-loading@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/rehype-plugin-image-native-lazy-loading/-/rehype-plugin-image-native-lazy-loading-1.1.0.tgz#ae34703ab414db3e9480b72f0b51f8880ffc36fb"
+  integrity sha512-LJ6NsqOOcNfEYp2/nU5zJQlPUOYAgrQESeqAcANDm09rIrxuoDJd33IGIyccT7v0EUYrp5Z/9NUE/OKtlfpgNA==
   dependencies:
     unified "^9.2.0"
     unist-util-visit "^2.0.3"
