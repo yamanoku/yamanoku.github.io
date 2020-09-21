@@ -55,6 +55,9 @@
     "facebook": "Facebook",
     "github": "Github"
   },
+  "donate": {
+    "desc01": "If you are interested in my work, presentations and activities, you can donate me by."
+  },
   "home": {
     "title": "Home"
   },
@@ -310,6 +313,7 @@
       "write": "Writing"
     },
     "sns": "Social Service",
+    "donate": "Donate",
     "contact": "Contact"
   },
   "error": {
