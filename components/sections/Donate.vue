@@ -6,19 +6,27 @@
     <p>
       {{ $t("donate.desc01") }}
     </p>
-    <ul role="list">
-      <li role="listitem">
-        <a
-          target="_blank"
-          rel="noopener"
-          href="http://buymeacoffee.com/yamanoku"
-          lang="en"
-        >
-          <span role="img" aria-label="beer">🍺</span>
-          Buy me a Beer
-          <open-new-icon />
-        </a>
-      </li>
-    </ul>
+    <a href="https://buymeacoffee.com/yamanoku" target="_blank" rel="noopener">
+      <img
+        alt="Buy Me A Coffee"
+        src="https://cdn.buymeacoffee.com/buttons/v2/arial-white.png"
+      />
+    </a>
   </section>
 </template>
+
+<style scoped>
+a {
+  display: inline-flex;
+  border-radius: 8px;
+  border: 2px solid transparent;
+}
+a:focus {
+  border: 2px solid var(--blue);
+  outline: 0;
+}
+a > img {
+  height: 60px;
+  width: 217px;
+}
+</style>
