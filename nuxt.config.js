@@ -7,7 +7,6 @@ const baseOgp = process.env.BASE_OGP || "https://yamanoku.net/ogp/ogp@2x.png";
 const baseOgpAlt = baseName;
 
 module.exports = {
-  mode: "universal",
   target: "static",
   telemetry: false,
   env: {
@@ -58,8 +57,8 @@ module.exports = {
       prefix: "buttons"
     },
     {
-      path: "~/components/common/",
-      prefix: "common"
+      path: "~/components/global/",
+      prefix: "global"
     },
     {
       path: "~/components/products/",

@@ -9,11 +9,11 @@
     <h3 id="presentations-stage">
       {{ $t("heading.presentations.stage") }}
     </h3>
-    <common-slide-list :listArray="listStage" />
+    <global-slide-list :listArray="listStage" />
     <h3 id="presentations-write">
       {{ $t("heading.presentations.write") }}
     </h3>
-    <common-slide-list :listArray="listWrite" />
+    <global-slide-list :listArray="listWrite" />
   </section>
 </template>
 

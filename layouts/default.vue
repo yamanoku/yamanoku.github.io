@@ -1,9 +1,9 @@
 <template>
   <div>
-    <common-header />
-    <common-global-navigation />
+    <global-header />
+    <global-navigation />
     <nuxt />
-    <common-footer />
+    <global-footer />
   </div>
 </template>
 
