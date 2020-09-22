@@ -25,7 +25,7 @@
     <p>
       {{ $t("archivePage.slug.feedback") }}
     </p>
-    <common-feedback-list :feedback="feedback" />
+    <global-feedback-list :feedback="feedback" />
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>

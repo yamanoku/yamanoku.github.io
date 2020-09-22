@@ -28,7 +28,7 @@
         </li>
       </ul>
     </section>
-    <CommonLocalSwitch />
+    <GlobalLocalSwitch />
   </main>
 </template>
 

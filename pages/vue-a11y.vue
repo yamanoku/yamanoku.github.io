@@ -7,11 +7,11 @@
     <vuejs-accessibility-sections-vuejs-accessibility />
     <vuejs-accessibility-sections-accessibility-notes />
     <vuejs-accessibility-sections-conclusion />
-    <common-feedback-list :feedback="feedback" />
+    <global-feedback-list :feedback="feedback" />
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
-    <common-local-switch />
+    <global-local-switch />
   </main>
 </template>
 

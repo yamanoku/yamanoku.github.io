@@ -7,7 +7,7 @@
     <SectionsPresentations />
     <SectionsSns />
     <SectionsAddress />
-    <CommonLocalSwitch />
+    <GlobalLocalSwitch />
   </main>
 </template>
 
