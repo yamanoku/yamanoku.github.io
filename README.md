@@ -1,4 +1,4 @@
-# [yamanoku net](https://yamanoku.net)
+# [yamanoku.net](https://yamanoku.net)
 Okuto Oyama Portfolio Site.
 
 ![Deploy](https://github.com/yamanoku/yamanoku.github.io/workflows/Deploy/badge.svg)
