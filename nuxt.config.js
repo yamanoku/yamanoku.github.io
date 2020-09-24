@@ -1,6 +1,6 @@
 import i18n from "./nuxt-i18n";
 
-const baseName = process.env.BASE_NAME || "yamanoku net";
+const baseName = process.env.BASE_NAME || "yamanoku.net";
 const baseDesc = process.env.BASE_DISC || "Okuto Oyama Portfolio Site";
 const baseUrl = process.env.BASE_URL || "https://yamanaoku.net";
 const baseOgp = process.env.BASE_OGP || "https://yamanoku.net/ogp/ogp@2x.png";
