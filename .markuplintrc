@@ -1,0 +1,6 @@
+{
+    "parser": {
+        ".vue$": "@markuplint/vue-parser"
+    },
+    "specs": ["@markuplint/vue-spec"]
+}

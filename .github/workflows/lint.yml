@@ -24,5 +24,6 @@ jobs:
       run: |
         yarn install
         yarn lint
+        yarn markuplint
       env:
         CI: true
