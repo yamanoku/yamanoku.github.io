@@ -23,6 +23,12 @@ export default {
     return {
       listStage: [
         {
+          title: "Web_UIの実装で考えていることと気をつけたいこと",
+          url:
+            "https://scrapbox.io/yamanoku/Web_UI%E3%81%AE%E5%AE%9F%E8%A3%85%E3%81%A7%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A8%E6%B0%97%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8",
+          datetime: "2020-09-29T15:00:00.000Z"
+        },
+        {
           title: "PWA is Progressive Web Accessibility",
           url:
             "https://docs.google.com/presentation/d/1VIBjWSrWcZ0ekKNIQ9Vl0pMdfGym1lrXi3Krq_o1EEo/edit?usp=sharing",
