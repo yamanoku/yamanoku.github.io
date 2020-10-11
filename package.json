@@ -43,7 +43,7 @@
     "prettier": "2.1.2",
     "prism-themes": "1.4.1",
     "rehype-plugin-image-native-lazy-loading": "1.1.0",
-    "style-loader": "1.3.0",
+    "style-loader": "2.0.0",
     "yama-normalize": "0.0.11"
   },
   "workspaces": [
