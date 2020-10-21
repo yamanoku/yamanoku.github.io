@@ -2231,6 +2231,14 @@
     "@markuplint/ml-ast" "^1.0.0"
     parse5 "^6.0.0"
 
+"@markuplint/html-parser@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-1.0.1.tgz#607d222d46a0d1f3821e88dfe487a47acfa61131"
+  integrity sha512-lvDFIJ0basF5y/O5x+Yq8Fm93IlMd7HQbUGdpr0wAjHzkhI5Ig8qUh4wEn/pE6lO+JlgrlUCaE2RnNKG+Ms83w==
+  dependencies:
+    "@markuplint/ml-ast" "^1.0.1"
+    parse5 "^6.0.0"
+
 "@markuplint/html-spec@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-1.0.0.tgz#e9710cc45ef40970329832f6a16369777c807efe"
@@ -2247,6 +2255,13 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@markuplint/ml-ast/-/ml-ast-1.0.0.tgz#fd5e73bb1a5b70dd78fca620b71e6d4574f25b93"
   integrity sha512-7QxT2IqEfAUJX2k6Xdws47EYai/Ne0U33vZx40R4z5/GzDZwmCa+DOtcIJyzDycdQU+9ZXRoAFah4qU5WeQF7A==
+  dependencies:
+    uuid "^8.2.0"
+
+"@markuplint/ml-ast@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@markuplint/ml-ast/-/ml-ast-1.0.1.tgz#7d79c466aa00c05e5613f148d9a19f62d68b7ff5"
+  integrity sha512-XK0hI2dmJDhcaLGatzA6jl0K2tF9PvhWRuf2ZZn1rC47bNab7HP8OnrjStNzMi6CralJU2KzUTinGuF8hvKoYw==
   dependencies:
     uuid "^8.2.0"
 
@@ -2278,13 +2293,13 @@
   dependencies:
     "@markuplint/ml-spec" "^1.0.0-alpha.11"
 
-"@markuplint/vue-parser@1.0.0-alpha.19":
-  version "1.0.0-alpha.19"
-  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-1.0.0-alpha.19.tgz#f0a3676e8c5ff83a668a25d79478f4ee46a15d01"
-  integrity sha512-YaBNuTj/q51/aKYARO5OkL494nb2ycecbJ3J9i+u++aB+VkB1pIgoZqDeXnqp+8PIBHFRQ3KvehYAGzACM8FPQ==
+"@markuplint/vue-parser@1.0.0-alpha.20":
+  version "1.0.0-alpha.20"
+  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-1.0.0-alpha.20.tgz#c00c63a90b357498cdf71ecc867076445f285384"
+  integrity sha512-BWBloHyAgfaLvby1tKml5CPiYu7nldxbmPUhMYdwAduWGgyXbPD9Hkub8SsRkIeW7ajfEAHxRPPIjjjWDrgciA==
   dependencies:
-    "@markuplint/html-parser" "^1.0.0"
-    "@markuplint/ml-ast" "^1.0.0"
+    "@markuplint/html-parser" "^1.0.1"
+    "@markuplint/ml-ast" "^1.0.1"
     vue-eslint-parser "^7.1.0"
 
 "@markuplint/vue-spec@1.0.0-alpha.4":
