@@ -16,7 +16,7 @@ jobs:
         node-version: [10.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.1
       with:
         persist-credentials: false
     - name: Use Node.js ${{ matrix.node-version }}
@@ -31,7 +31,7 @@ jobs:
         CI: true
 
     - name: deploy
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v3.7.1
       with:
         GITHUB_TOKEN: ${{ secrets.YAMANOKUIO_DEPLOY_TOKEN }}
         ACCESS_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
