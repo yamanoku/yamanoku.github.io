@@ -16,8 +16,15 @@ export default {
 </script>
 
 <style>
+html[lang="ja"] {
+  font-kerning: none;
+}
+html:not([lang="ja"]) body {
+  hyphens: auto;
+}
 html[lang="ja"] body {
   font-family: "Noto Sans", "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+  line-break: loose;
 }
 html[lang="ja"] main,
 html[lang="ja"] header,
