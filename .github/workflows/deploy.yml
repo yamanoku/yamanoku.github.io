@@ -31,9 +31,8 @@ jobs:
         CI: true
 
     - name: deploy
-      uses: peaceiris/actions-gh-pages@v3.7.1
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        GITHUB_TOKEN: ${{ secrets.YAMANOKUIO_DEPLOY_TOKEN }}
-        ACCESS_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        BRANCH: master
-        FOLDER: ./dist
+        github_token: ${{ secrets.YAMANOKUIO_DEPLOY_TOKEN }}
+        publish_branch: master
+        publish_dir: ./dist
