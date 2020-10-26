@@ -41,7 +41,7 @@
     "markuplint": "1.0.2",
     "modern-normalize": "1.0.0",
     "prettier": "2.1.2",
-    "prism-themes": "1.4.1",
+    "prism-themes": "1.5.0",
     "rehype-plugin-image-native-lazy-loading": "1.1.0",
     "style-loader": "2.0.0",
     "yama-normalize": "0.0.11"
