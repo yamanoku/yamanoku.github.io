@@ -8911,10 +8911,10 @@ markdown-table@^2.0.0:
   dependencies:
     repeat-string "^1.0.0"
 
-markuplint@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/markuplint/-/markuplint-1.0.2.tgz#a8023f63158d93329622201145ec894c5d9fee69"
-  integrity sha512-t7RI1ETHk0T5pLBL2Zhl+uohK9p1Z16yPEwqZi7mCMU4hXsHuc0brbHwlzVY4hiH7ZIsViBdR5cmikKnaFcmhg==
+markuplint@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/markuplint/-/markuplint-1.1.0.tgz#567e978f19f8a91f8737a9474d2e556398e7238c"
+  integrity sha512-4eoywIZQ4x0vjR48IuVdPwmRinTEHTDvuQ+/m62wp4FvuJlr0koTSvtL3wVu8lMJOMRazhHp1G8CvrGNLq5fIA==
   dependencies:
     "@markuplint/file-resolver" "^1.0.0"
     "@markuplint/html-parser" "^1.0.1"
