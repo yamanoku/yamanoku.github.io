@@ -93,7 +93,11 @@
         />
       </picture>
       <figcaption>
-        <a href="https://vue-a11y-2019.com/" target="_blank" rel="noopener" lang="en"
+        <a
+          href="https://vue-a11y-2019.com/"
+          target="_blank"
+          rel="noopener"
+          lang="en"
           >Vue a11y<open-new-icon
         /></a>
       </figcaption>

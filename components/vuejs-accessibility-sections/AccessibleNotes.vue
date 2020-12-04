@@ -124,7 +124,10 @@
     </i18n>
     <figure>
       <picture>
-        <source srcset="~/assets/img/vue-a11y-2019-vueaxe.webp" type="image/webp" />
+        <source
+          srcset="~/assets/img/vue-a11y-2019-vueaxe.webp"
+          type="image/webp"
+        />
         <img
           src="~/assets/img/vue-a11y-2019-vueaxe.png"
           height="96"
