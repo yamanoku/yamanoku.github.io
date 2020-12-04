@@ -11,7 +11,11 @@
       <summary>{{ $t("details.summary") }}</summary>
       <p>{{ $t("aboutPage.i18n.desc02") }}</p>
       <figure>
-        <highlightjs id="only-jp-rendering" lang="javascript" :code="onlyJPText" />
+        <highlightjs
+          id="only-jp-rendering"
+          lang="javascript"
+          :code="onlyJPText"
+        />
         <figcaption>
           <a
             href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/sections/Slides.vue#L6-L8"
