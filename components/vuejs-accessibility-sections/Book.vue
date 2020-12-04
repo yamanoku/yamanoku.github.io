@@ -1,7 +1,7 @@
 <template>
   <section id="book:about-accessibility-with-vuejs">
-    <h2>{{ $t("vueA11yPage.heading.book") }}</h2>
-    <h3>{{ $t("vueA11yPage.subHeading.book") }}</h3>
+    <h2>{{ $t("vueA11yPage2019.heading.book") }}</h2>
+    <h3>{{ $t("vueA11yPage2019.subHeading.book") }}</h3>
     <figure>
       <picture>
         <source
@@ -15,10 +15,10 @@
       </picture>
       <figcaption>
         <p>
-          {{ $t("vueA11yPage.book.desc01") }}
+          {{ $t("vueA11yPage2019.book.desc01") }}
         </p>
         <p>
-          {{ $t("vueA11yPage.book.desc02") }}
+          {{ $t("vueA11yPage2019.book.desc02") }}
         </p>
         <ul>
           <li>
@@ -41,7 +41,7 @@
           </li>
         </ul>
         <p>
-          {{ $t("vueA11yPage.book.desc03") }}
+          {{ $t("vueA11yPage2019.book.desc03") }}
         </p>
         <a
           href="https://github.com/yamanoku/accessibility_book-issues"

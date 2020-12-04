@@ -1,7 +1,7 @@
 <template>
   <section id="title:about-accessibility-with-vuejs">
     <h1 id="heading:about-accessibility-with-vuejs">
-      {{ $t("vueA11yPage.title") }}
+      {{ $t("vueA11yPage2019.title") }}
     </h1>
     <figure aria-labelledby="heading:about-accessibility-with-vuejs">
       <picture>
@@ -11,25 +11,25 @@
         />
         <img
           src="~/assets/img/product-about-accessibility-with-vuejs.png"
-          :alt="$t('prefixAlt.photo') + $t('product.vueA11yPage.title')"
+          :alt="$t('prefixAlt.photo') + $t('product.vueA11yPage2019.title')"
         />
       </picture>
     </figure>
     <global-deprecation-alert-one-year />
-    <i18n tag="p" path="vueA11yPage.titleSection.desc01">
+    <i18n tag="p" path="vueA11yPage2019.titleSection.desc01">
       <template v-slot:link01>
         <a
           href="https://adventar.org/calendars/3994"
           target="_blank"
           rel="noopener"
         >
-          {{ $t("vueA11yPage.titleSection.link01") }}
+          {{ $t("vueA11yPage2019.titleSection.link01") }}
           <open-new-icon />
         </a>
       </template>
     </i18n>
     <p>
-      {{ $t("vueA11yPage.titleSection.desc02") }}
+      {{ $t("vueA11yPage2019.titleSection.desc02") }}
     </p>
   </section>
 </template>

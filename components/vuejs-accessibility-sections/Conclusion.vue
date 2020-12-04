@@ -1,8 +1,8 @@
 <template>
   <section id="in-conclusion:about-accessibility-with-vuejs">
-    <h2>{{ $t("vueA11yPage.heading.conclusion") }}</h2>
+    <h2>{{ $t("vueA11yPage2019.heading.conclusion") }}</h2>
     <p>
-      {{ $t("vueA11yPage.conclusion.desc01") }}
+      {{ $t("vueA11yPage2019.conclusion.desc01") }}
     </p>
     <figure>
       <img
@@ -10,7 +10,7 @@
         width="220"
         height="240"
         style="max-width: 220px"
-        :alt="$t('vueA11yPage.conclusion.imgAlt01')"
+        :alt="$t('vueA11yPage2019.conclusion.imgAlt01')"
       />
       <figcaption>
         <a
@@ -36,7 +36,7 @@
       /></a>
     </blockquote>
     <p>
-      {{ $t("vueA11yPage.conclusion.desc02") }}
+      {{ $t("vueA11yPage2019.conclusion.desc02") }}
     </p>
     <blockquote>
       <p lang="en">
@@ -52,51 +52,51 @@
       /></a>
     </blockquote>
     <p>
-      {{ $t("vueA11yPage.conclusion.desc03") }}
+      {{ $t("vueA11yPage2019.conclusion.desc03") }}
     </p>
     <p>
-      {{ $t("vueA11yPage.conclusion.desc04") }}
+      {{ $t("vueA11yPage2019.conclusion.desc04") }}
     </p>
-    <i18n tag="p" path="vueA11yPage.conclusion.desc05">
+    <i18n tag="p" path="vueA11yPage2019.conclusion.desc05">
       <template v-slot:link01>
         <a
           href="https://www.digima-japan.com/knowhow/world/15167.php"
           target="_blank"
           rel="noopener"
         >
-          {{ $t("vueA11yPage.conclusion.link01") }}
+          {{ $t("vueA11yPage2019.conclusion.link01") }}
           <open-new-icon />
         </a>
       </template>
     </i18n>
     <p>
-      {{ $t("vueA11yPage.conclusion.desc06") }}
+      {{ $t("vueA11yPage2019.conclusion.desc06") }}
     </p>
     <blockquote>
       <p>
-        {{ $t("vueA11yPage.conclusion.quote01") }}
+        {{ $t("vueA11yPage2019.conclusion.quote01") }}
       </p>
       <p>
-        {{ $t("vueA11yPage.conclusion.quote02") }}
+        {{ $t("vueA11yPage2019.conclusion.quote02") }}
       </p>
       <p>
-        {{ $t("vueA11yPage.conclusion.quote03") }}
+        {{ $t("vueA11yPage2019.conclusion.quote03") }}
       </p>
       <a
-        :href="$t('vueA11yPage.conclusion.quote04.link')"
+        :href="$t('vueA11yPage2019.conclusion.quote04.link')"
         target="_blank"
         rel="noopener"
       >
-        {{ $t("vueA11yPage.conclusion.quote04.text") }}
+        {{ $t("vueA11yPage2019.conclusion.quote04.text") }}
         <open-new-icon
       /></a>
     </blockquote>
-    <h3>{{ $t("vueA11yPage.subHeading.conclusion") }}</h3>
+    <h3>{{ $t("vueA11yPage2019.subHeading.conclusion") }}</h3>
     <p>
-      {{ $t("vueA11yPage.conclusion.desc07") }}
+      {{ $t("vueA11yPage2019.conclusion.desc07") }}
     </p>
     <p>
-      {{ $t("vueA11yPage.conclusion.desc08") }}
+      {{ $t("vueA11yPage2019.conclusion.desc08") }}
     </p>
     <blockquote>
       <p lang="ja">
@@ -112,10 +112,10 @@
       /></a>
     </blockquote>
     <p>
-      {{ $t("vueA11yPage.conclusion.desc09") }}
+      {{ $t("vueA11yPage2019.conclusion.desc09") }}
     </p>
     <p>
-      {{ $t("vueA11yPage.conclusion.desc10") }}
+      {{ $t("vueA11yPage2019.conclusion.desc10") }}
     </p>
   </section>
 </template>

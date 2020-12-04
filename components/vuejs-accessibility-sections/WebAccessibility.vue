@@ -7,14 +7,14 @@
         <span lang="en">Accessibility</span>
       </template>
     </i18n>
-    <p>{{ $t("vueA11yPage.webA11y.desc02") }}</p>
+    <p>{{ $t("vueA11yPage2019.webA11y.desc02") }}</p>
     <blockquote>
-      <p>{{ $t("vueA11yPage.webA11y.quote01") }}</p>
+      <p>{{ $t("vueA11yPage2019.webA11y.quote01") }}</p>
       <a
-        :href="$t('vueA11yPage.webA11y.link01.link')"
+        :href="$t('vueA11yPage2019.webA11y.link01.link')"
         target="_blank"
         rel="noopener"
-        >{{ $t("vueA11yPage.webA11y.link01.text") }}<open-new-icon
+        >{{ $t("vueA11yPage2019.webA11y.link01.text") }}<open-new-icon
       /></a>
     </blockquote>
     <h3>{{ $t("vueA11yPage.subHeading.webA11y.title02") }}</h3>
@@ -25,15 +25,15 @@
       <img
         src="https://o.aolcdn.com/dims-global/dims3/GLOB/resize/1200x577/quality/80/https://techcrunch.com/wp-content/uploads/2019/05/live-caption.jpg"
         height="480"
-        :alt="$t('vueA11yPage.webA11y.imgAlt01')"
+        :alt="$t('vueA11yPage2019.webA11y.imgAlt01')"
         loading="lazy"
       />
       <figcaption>
         <a
-          :href="$t('vueA11yPage.webA11y.link02.link')"
+          :href="$t('vueA11yPage2019.webA11y.link02.link')"
           target="_blank"
           rel="noopener"
-          >{{ $t("vueA11yPage.webA11y.link02.text") }}<open-new-icon
+          >{{ $t("vueA11yPage2019.webA11y.link02.text") }}<open-new-icon
         /></a>
       </figcaption>
     </figure>

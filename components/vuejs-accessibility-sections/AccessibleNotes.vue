@@ -1,17 +1,17 @@
 <template>
   <section id="web-accessibility-notes:about-accessibility-with-vuejs">
-    <h2>{{ $t("vueA11yPage.heading.a11yNote") }}</h2>
+    <h2>{{ $t("vueA11yPage2019.heading.a11yNote") }}</h2>
     <p>
-      {{ $t("vueA11yPage.a11yNote.desc01") }}
+      {{ $t("vueA11yPage2019.a11yNote.desc01") }}
     </p>
     <i18n tag="h3" path="vueA11yPage.subHeading.a11yNote.note01">
       <template v-slot:div>
         <code>div</code>
       </template>
     </i18n>
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc02">
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc02">
       <template v-slot:strong01>
-        <strong>{{ $t("vueA11yPage.a11yNote.strong01") }}</strong>
+        <strong>{{ $t("vueA11yPage2019.a11yNote.strong01") }}</strong>
       </template>
       <template v-slot:div>
         <code>div</code>
@@ -22,22 +22,22 @@
     </i18n>
     <blockquote>
       <p>
-        {{ $t("vueA11yPage.a11yNote.quote01") }}
+        {{ $t("vueA11yPage2019.a11yNote.quote01") }}
       </p>
       <a
-        :href="$t('vueA11yPage.a11yNote.quote02.link')"
+        :href="$t('vueA11yPage2019.a11yNote.quote02.link')"
         target="_blank"
         rel="noopener"
-        >{{ $t("vueA11yPage.a11yNote.quote02.text") }}<open-new-icon
+        >{{ $t("vueA11yPage2019.a11yNote.quote02.text") }}<open-new-icon
       /></a>
     </blockquote>
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc03">
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc03">
       <template v-slot:div>
         <code>div</code>
       </template>
     </i18n>
     <highlightjs lang="html" :code="buttonMarkupBefore" />
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc04">
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc04">
       <template v-slot:button>
         <code>button</code>
       </template>
@@ -45,13 +45,13 @@
     <highlightjs lang="html" :code="buttonMarkupAfter" />
     <h3>{{ $t("vueA11yPage.subHeading.a11yNote.note02") }}</h3>
     <p>
-      {{ $t("vueA11yPage.a11yNote.desc05") }}
+      {{ $t("vueA11yPage2019.a11yNote.desc05") }}
     </p>
     <p>
-      {{ $t("vueA11yPage.a11yNote.desc06") }}
+      {{ $t("vueA11yPage2019.a11yNote.desc06") }}
     </p>
     <p>
-      {{ $t("vueA11yPage.a11yNote.desc07") }}
+      {{ $t("vueA11yPage2019.a11yNote.desc07") }}
     </p>
     <a
       href="https://codesandbox.io/s/vue-accessible-modal-9m474]"
@@ -63,10 +63,10 @@
     <h3>{{ $t("vueA11yPage.subHeading.a11yNote.note03") }}</h3>
     <i18n tag="p" path="vueA11yPage.a11yNote.desc08">
       <template v-slot:abbr01>
-        <abbr>{{ $t("vueA11yPage.a11yNote.abbr01") }}</abbr>
+        <abbr>{{ $t("vueA11yPage2019.a11yNote.abbr01") }}</abbr>
       </template>
     </i18n>
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc09">
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc09">
       <template v-slot:ariaLive>
         <code>aria-live</code>
       </template>
@@ -90,19 +90,19 @@
       </template>
     </i18n>
     <highlightjs lang="javascript" :code="nuxtJS" />
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc11">
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc11">
       <template v-slot:en>
         <code>en</code>
       </template>
     </i18n>
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc12">
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc12">
       <template v-slot:small01>
-        <small>{{ $t("vueA11yPage.a11yNote.small01") }}</small>
+        <small>{{ $t("vueA11yPage2019.a11yNote.small01") }}</small>
       </template>
     </i18n>
     <h3>{{ $t("vueA11yPage.subHeading.a11yNote.note05") }}</h3>
     <h4 lang="en">vue-axe</h4>
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc13">
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc13">
       <template v-slot:axeCore>
         <a
           href="https://github.com/dequelabs/axe-core"
@@ -124,19 +124,19 @@
     </i18n>
     <figure>
       <picture>
-        <source srcset="~/assets/img/vue-a11y-vueaxe.webp" type="image/webp" />
+        <source srcset="~/assets/img/vue-a11y-2019-vueaxe.webp" type="image/webp" />
         <img
-          src="~/assets/img/vue-a11y-vueaxe.png"
+          src="~/assets/img/vue-a11y-2019-vueaxe.png"
           height="96"
-          :alt="$t('vueA11yPage.a11yNote.imgAlt01')"
+          :alt="$t('vueA11yPage2019.a11yNote.imgAlt01')"
         />
       </picture>
     </figure>
-    <p>{{ $t("vueA11yPage.a11yNote.desc14") }}</p>
+    <p>{{ $t("vueA11yPage2019.a11yNote.desc14") }}</p>
     <highlightjs lang="shell" :code="vueAxeInstall" />
     <highlightjs lang="javascript" :code="vueAxeSetting" />
     <h4 lang="en">Storybook</h4>
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc15">
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc15">
       <template v-slot:storybookAddonA11y>
         <a
           href="https://www.npmjs.com/package/@storybook/addon-a11y"
@@ -150,12 +150,12 @@
       <img
         src="https://raw.githubusercontent.com/storybookjs/storybook/HEAD/addons/a11y/docs/screenshot.png"
         height="360"
-        :alt="$t('vueA11yPage.a11yNote.imgAlt02')"
+        :alt="$t('vueA11yPage2019.a11yNote.imgAlt02')"
       />
     </figure>
     <h4 lang="en">eslint-plugin-vuejs-accessibility</h4>
-    <p>{{ $t("vueA11yPage.a11yNote.desc16") }}</p>
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc17">
+    <p>{{ $t("vueA11yPage2019.a11yNote.desc16") }}</p>
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc17">
       <template v-slot:img>
         <code>img</code>
       </template>
@@ -178,8 +178,8 @@
       >What we found when we tested tools on the world’s least-accessible
       webpage - Accessibility in government<open-new-icon
     /></a>
-    <p>{{ $t("vueA11yPage.a11yNote.desc20") }}</p>
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc21">
+    <p>{{ $t("vueA11yPage2019.a11yNote.desc20") }}</p>
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc21">
       <template v-slot:abbr02>
         <abbr lang="en">Web Content Accessibility Guidelines</abbr>
       </template>
@@ -191,7 +191,7 @@
       lang="en"
       >Web Content Accessibility Guidelines (WCAG) 2.1<open-new-icon
     /></a>
-    <p>{{ $t("vueA11yPage.a11yNote.desc22") }}</p>
+    <p>{{ $t("vueA11yPage2019.a11yNote.desc22") }}</p>
     <a
       href="https://openameba.github.io/a11y-guidelines/"
       target="_blank"

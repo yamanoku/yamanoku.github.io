@@ -25,13 +25,13 @@ export default {
   data() {
     return {
       meta: {
-        title: this.$t("vueA11yPage.title"),
-        description: this.$t("vueA11yPage.description"),
-        image: "https://yamanoku.net/ogp/ogp-vue-a11y@2x.png",
-        imageAlt: this.$t("vueA11yPage.title")
+        title: this.$t("vueA11yPage2019.title"),
+        description: this.$t("vueA11yPage2019.description"),
+        image: "https://yamanoku.net/ogp/ogp-vue-a11y-2019@2x.png",
+        imageAlt: this.$t("vueA11yPage2019.title")
       },
       feedback: {
-        gitHubTitle: this.$t("vueA11yPage.feedback.github.linkTitle"),
+        gitHubTitle: this.$t("vueA11yPage2019.feedback.github.linkTitle"),
         routePath: this.$route.path
       }
     };

@@ -4,7 +4,7 @@
     aria-labelledby="product:about-accessibility-with-vuejs_heading"
   >
     <h3 id="product:about-accessibility-with-vuejs_heading">
-      {{ $t("product.vueA11yPage.title") }}
+      {{ $t("product.vueA11yPage2019.title") }}
     </h3>
     <figure
       aria-labelledby="product:about-accessibility-with-vuejs_heading"
@@ -19,16 +19,16 @@
           src="~/assets/img/product-about-accessibility-with-vuejs.png"
           width="688"
           height="498"
-          :alt="$t('prefixAlt.photo') + $t('product.vueA11yPage.title')"
+           :alt="$t('prefixAlt.photo') + $t('product.vueA11yPage2019.title')"
         />
       </picture>
       <figcaption id="product:about-accessibility-with-vuejs_caption">
-        {{ $t("product.description.vueA11yPage") }}
+        {{ $t("product.description.vueA11yPage2019") }}
       </figcaption>
     </figure>
     <p>
-      <nuxt-link :to="localePath('/vue-a11y')">
-        {{ $t("product.vueA11yPage.link") }}
+      <nuxt-link :to="localePath('/vue-a11y-2019')">
+        {{ $t("product.vueA11yPage2019.link") }}
       </nuxt-link>
     </p>
     <section
@@ -36,16 +36,16 @@
       aria-labelledby="product:about-accessibility-with-vuejs_subheading"
     >
       <h4 id="product:about-accessibility-with-vuejs_subheading">
-        {{ $t("vueA11yPage.subHeading.info") }}
+        {{ $t("vueA11yPage2019.subHeading.info") }}
       </h4>
       <ul>
         <li>
           <span class="time">2019/12/21</span>
-          {{ $t("product.vueA11yPage.info.listitem01") }}
+          {{ $t("product.vueA11yPage2019.info.listitem01") }}
         </li>
         <li>
           <span class="time">2020/02/28</span>
-          <i18n path="product.vueA11yPage.info.listitem02">
+          <i18n path="product.vueA11yPage2019.info.listitem02">
             <template v-slot:awesomeA11yVue>
               <a
                 href="https://github.com/vue-a11y/awesome-a11y-vue/pull/3"
@@ -59,7 +59,7 @@
         </li>
         <li>
           <span class="time">2020/05/03</span>
-          {{ $t("product.vueA11yPage.info.listitem03") }}
+          {{ $t("product.vueA11yPage2019.info.listitem03") }}
         </li>
       </ul>
     </section>
