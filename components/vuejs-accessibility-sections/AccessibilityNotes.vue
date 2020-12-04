@@ -36,13 +36,13 @@
         <code>div</code>
       </template>
     </i18n>
-    <highlight-code lang="html">{{ buttonMarkupBefore }}</highlight-code>
+    <highlightjs lang="html" :code="buttonMarkupBefore" />
     <i18n tag="p" path="vueA11yPage.a11yNote.desc04">
       <template v-slot:button>
         <code>button</code>
       </template>
     </i18n>
-    <highlight-code lang="html">{{ buttonMarkupAfter }}</highlight-code>
+    <highlightjs lang="html" :code="buttonMarkupAfter" />
     <h3>{{ $t("vueA11yPage.subHeading.a11yNote.2") }}</h3>
     <p>
       {{ $t("vueA11yPage.a11yNote.desc05") }}
@@ -89,7 +89,7 @@
         <code>htmlAttrs</code>
       </template>
     </i18n>
-    <highlight-code lang="js">{{ nuxtJS }}</highlight-code>
+    <highlightjs lang="javascript" :code="nuxtJS" />
     <i18n tag="p" path="vueA11yPage.a11yNote.desc11">
       <template v-slot:en>
         <code>en</code>
@@ -133,8 +133,8 @@
       </picture>
     </figure>
     <p>{{ $t("vueA11yPage.a11yNote.desc14") }}</p>
-    <highlight-code>{{ vueAxeInstall }}</highlight-code>
-    <highlight-code lang="js">{{ vueAxeSetting }}</highlight-code>
+    <highlightjs :code="vueAxeInstall" />
+    <highlight lang="javascript" :code="vueAxeSetting" />
     <h4 lang="en">Storybook</h4>
     <i18n tag="p" path="vueA11yPage.a11yNote.desc15">
       <template v-slot:storybookAddonA11y>
@@ -166,7 +166,7 @@
         <code>label</code>
       </template>
     </i18n>
-    <highlight-code lang="html">{{ eslintEmoji }}</highlight-code>
+    <highlightjs lang="html" :code="eslintEmoji" />
     <p>{{ $t("vueA11yPage.a11yNote.desc18") }}</p>
     <h4>{{ $t("vueA11yPage.subHeading.a11yNote.test.4") }}</h4>
     <p>{{ $t("vueA11yPage.a11yNote.desc19") }}</p>
