@@ -6,7 +6,7 @@
     <details>
       <summary>{{ $t("details.summary") }}</summary>
       <figure>
-        <highlight-code lang="html">{{ waiAria }}</highlight-code>
+        <highlightjs lang="html" :code="waiAria" />
         <figcaption>
           <p>{{ $t("aboutPage.markup.caption") }}</p>
           <ul role="list">

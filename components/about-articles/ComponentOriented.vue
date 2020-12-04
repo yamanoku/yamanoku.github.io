@@ -11,9 +11,7 @@
       <summary>{{ $t("details.summary") }}</summary>
       <p>{{ $t("aboutPage.components.desc02") }}</p>
       <figure>
-        <highlight-code id="slide-components" lang="vue">{{
-          slide
-        }}</highlight-code>
+        <highlightjs language="javascript" id="slide-components" :code="slide" />
         <figcaption>
           <a
             href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/lists/SlideList.vue#L1-L18"
