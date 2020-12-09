@@ -2165,6 +2165,14 @@
     "@markuplint/ml-ast" "^1.0.1"
     parse5 "^6.0.0"
 
+"@markuplint/html-parser@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-1.1.0.tgz#ca169d41ba91372f9408000bf49754e0b494be5a"
+  integrity sha512-nMn/vSDcCU333Mi5WDaMnzZhdPlhYoEOnDtjnRynJoMq7SOv2DcUNtuhZsd6WVsNRfOT+mlYqFqFhIm//+GHgg==
+  dependencies:
+    "@markuplint/ml-ast" "^1.1.0"
+    parse5 "^6.0.1"
+
 "@markuplint/html-spec@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-1.1.0.tgz#39ed7b22d57e589bb1a4ef6a3bc28662a28b4ce8"
@@ -2183,6 +2191,13 @@
   integrity sha512-XK0hI2dmJDhcaLGatzA6jl0K2tF9PvhWRuf2ZZn1rC47bNab7HP8OnrjStNzMi6CralJU2KzUTinGuF8hvKoYw==
   dependencies:
     uuid "^8.2.0"
+
+"@markuplint/ml-ast@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/ml-ast/-/ml-ast-1.1.0.tgz#2ebde9461776daefd8fc5a80504006dcf2548e1f"
+  integrity sha512-M5Sv34xVaM7VALoA45afIvrOsrXeQNwI6fzOgMAnNwzwX0VlObFWBoBLjhMIN6i64BMVhH9qSVDxV4JDEFVhYQ==
+  dependencies:
+    uuid "^8.3.1"
 
 "@markuplint/ml-config@^1.0.0":
   version "1.0.0"
@@ -2212,14 +2227,14 @@
   dependencies:
     "@markuplint/ml-spec" "^1.0.0"
 
-"@markuplint/vue-parser@1.0.0-alpha.20":
-  version "1.0.0-alpha.20"
-  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-1.0.0-alpha.20.tgz#c00c63a90b357498cdf71ecc867076445f285384"
-  integrity sha512-BWBloHyAgfaLvby1tKml5CPiYu7nldxbmPUhMYdwAduWGgyXbPD9Hkub8SsRkIeW7ajfEAHxRPPIjjjWDrgciA==
+"@markuplint/vue-parser@1.0.0-alpha.21":
+  version "1.0.0-alpha.21"
+  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-1.0.0-alpha.21.tgz#9a37ffd5a06397ce82ba00997198c199fc71361a"
+  integrity sha512-E7DkDKO4M7amTepVhbiNAUat18ICVMHrvb3YUEtOCZfeht1/E2G7N8sERvit4tlvGYPnaVAwsB9fV1AJ6xmDkg==
   dependencies:
-    "@markuplint/html-parser" "^1.0.1"
-    "@markuplint/ml-ast" "^1.0.1"
-    vue-eslint-parser "^7.1.0"
+    "@markuplint/html-parser" "^1.1.0"
+    "@markuplint/ml-ast" "^1.1.0"
+    vue-eslint-parser "^7.1.1"
 
 "@markuplint/vue-spec@1.0.0-alpha.5":
   version "1.0.0-alpha.5"
@@ -10395,7 +10410,7 @@ parse-url@^5.0.0:
     parse-path "^4.0.0"
     protocols "^1.4.0"
 
-parse5@^6.0.0:
+parse5@^6.0.0, parse5@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
   integrity sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==
@@ -13885,6 +13900,11 @@ uuid@^8.2.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
   integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
 
+uuid@^8.3.1:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
 v8-compile-cache@^2.0.3:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.1.0.tgz#e14de37b31a6d194f5690d67efc4e7f6fc6ab30e"
@@ -13970,19 +13990,7 @@ vue-eslint-parser@^7.0.0:
     esquery "^1.0.1"
     lodash "^4.17.15"
 
-vue-eslint-parser@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.1.0.tgz#9cdbcc823e656b087507a1911732b867ac101e83"
-  integrity sha512-Kr21uPfthDc63nDl27AGQEhtt9VrZ9nkYk/NTftJ2ws9XiJwzJJCnCr3AITQ2jpRMA0XPGDECxYH8E027qMK9Q==
-  dependencies:
-    debug "^4.1.1"
-    eslint-scope "^5.0.0"
-    eslint-visitor-keys "^1.1.0"
-    espree "^6.2.1"
-    esquery "^1.0.1"
-    lodash "^4.17.15"
-
-vue-eslint-parser@^7.2.0:
+vue-eslint-parser@^7.1.1, vue-eslint-parser@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.2.0.tgz#1e17ae94ca71e617025e05143c8ac5593aacb6ef"
   integrity sha512-uVcQqe8sUNzdHGcRHMd2Z/hl6qEaWrAmglTKP92Fnq9TYU9un8xsyFgEdFJaXh/1rd7h8Aic1GaiQow5nVneow==
