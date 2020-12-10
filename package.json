@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@markuplint/vue-parser": "1.0.0-alpha.21",
-    "@markuplint/vue-spec": "1.0.0-alpha.5",
+    "@markuplint/vue-spec": "1.0.0-alpha.6",
     "babel-eslint": "10.1.0",
     "dayjs": "1.9.7",
     "eslint": "7.15.0",
