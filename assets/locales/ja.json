@@ -29,7 +29,8 @@
     }
   },
   "career": {
-    "experiencedSkills": "経験した技術",
+    "experiencedSkills": "経験のある技術",
+    "wantedly": "Wantedly",
     "lapras": "LAPRAS",
     "youtrust": "YOUTRUST",
     "curriculumVitae": "職務経歴書",
