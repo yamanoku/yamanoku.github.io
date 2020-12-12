@@ -23,6 +23,12 @@ export default {
     return {
       listStage: [
         {
+          title: "Vue3 からはじめるWebアクセシビリティ",
+          url:
+            "https://docs.google.com/presentation/d/1GTJrGrcHZPvwknYBwtav9GnofAqVjLWpzQPJvtGZQQw/edit?usp=sharing",
+          datetime: "2020-12-08T20:30:00.000Z"
+        },
+        {
           title: "Web_UIの実装で考えていることと気をつけたいこと",
           url:
             "https://scrapbox.io/yamanoku/Web_UI%E3%81%AE%E5%AE%9F%E8%A3%85%E3%81%A7%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A8%E6%B0%97%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8",
@@ -81,20 +87,25 @@ export default {
           url:
             "https://scrapbox.io/yamanoku/%E3%82%A4%E3%83%B3%E3%83%97%E3%83%83%E3%83%88%E3%82%92%E9%99%90%E3%82%8A%E3%81%AA%E3%81%8F%E3%82%84%E3%81%A3%E3%81%9F%E3%82%89%E8%A6%8B%E3%81%88%E3%82%8B%E4%B8%96%E7%95%8C%E3%81%AF%E5%A4%89%E3%82%8F%E3%81%A3%E3%81%A6%E3%81%8F%E3%82%8B",
           datetime: "2019-05-28T15:00:00.000Z"
-        },
-        {
-          title: "scroll handlerを捨てよ、Intersection Observerへ出よう",
-          url:
-            "https://scrapbox.io/yamanoku/scroll_handler%E3%82%92%E6%8D%A8%E3%81%A6%E3%82%88%E3%80%81Intersection_Observer%E3%81%B8%E5%87%BA%E3%82%88%E3%81%86",
-          datetime: "2018-11-21T15:00:00.000Z"
-        },
-        {
-          title: "outline: none;",
-          url: "https://scrapbox.io/yamanoku/outline:_none%3B",
-          datetime: "2018-11-08T15:00:00.000Z"
         }
       ],
       listWrite: [
+        {
+          title: "UI の実装で考えていること, 気をつけたいこと",
+          url: "https://zenn.dev/yamanoku/articles/c69decedfb1699",
+          datetime: "2020-12-09T18:00:00.000Z"
+        },
+        {
+          title:
+            "クラウドワークス #accessibility チャンネル 気になる話題 Pickup 2020",
+          url: "https://zenn.dev/yamanoku/scraps/443087a170fcbe",
+          datetime: "2020-12-07T00:00:00.000Z"
+        },
+        {
+          title: "クラウドワークスのフロントエンド活動を振り返る 2020",
+          url: "https://engineer.crowdworks.jp/entry/crowdworks_frontend_2020",
+          datetime: "2020-12-01T09:00:00.000Z"
+        },
         {
           title: "クラウドワークスのWebアクセシビリティチェックを始めてみた",
           url:
@@ -112,11 +123,6 @@ export default {
           title: "みんなに知ってもらいたいデザインシステムのこと",
           url: "https://note.com/yamanoku/n/n8acc38df2902",
           datetime: "2019-12-15T00:00:00.000Z"
-        },
-        {
-          title: "Nota社主催でScrapbox勉強会をやってもらった話",
-          url: "https://blog.geek.co.jp/posts/2411/",
-          datetime: "2018-07-13T00:00:00.000Z"
         }
       ]
     };
