@@ -31,6 +31,16 @@
       </li>
       <li role="listitem">
         <a
+          href="https://www.wantedly.com/id/yamanoku"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ $t("career.wantedly") }}
+          <open-new-icon />
+        </a>
+      </li>
+      <li role="listitem">
+        <a
           href="https://lapras.com/public/ZQJMZYO"
           target="_blank"
           rel="noopener"
