@@ -18,7 +18,7 @@
         />
         <figcaption>
           <a
-            href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/lists/SlideList.vue#L1-L18"
+            href="https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/global/SlideList.vue#L2-L21"
             target="_blank"
             rel="noopener"
           >
