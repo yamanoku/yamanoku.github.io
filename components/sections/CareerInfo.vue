@@ -21,12 +21,12 @@
       </li>
       <li role="listitem">
         <a
-          href="https://scrapbox.io/yamanoku/Skill_Sets"
+          href="https://scrapbox.io/yamanoku/%E7%B5%8C%E9%A8%93%E3%81%AE%E3%81%82%E3%82%8B%E6%8A%80%E8%A1%93"
           target="_blank"
           rel="noopener"
         >
           {{ $t("career.experiencedSkills") }}
-          <article-icon />
+          <open-new-icon />
         </a>
       </li>
       <li role="listitem">

@@ -31,7 +31,7 @@
           rel="noopener"
         >
           {{ $t("product.updateInfo") }}
-          <article-icon />
+          <open-new-icon />
         </a>
       </li>
       <li role="listitem">

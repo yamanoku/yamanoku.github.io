@@ -5,43 +5,37 @@
     </h2>
     <ul role="list">
       <li role="listitem">
-        <a href="https://twitter.com/yamanoku" target="_blank" rel="noopener">{{
-          $t("sns.twitter")
-        }}</a>
+        <a href="https://twitter.com/yamanoku" target="_blank" rel="noopener"
+          >{{ $t("sns.twitter") }}<open-new-icon
+        /></a>
       </li>
       <li role="listitem">
-        <a
-          href="https://facebook.com/yamanoku"
-          target="_blank"
-          rel="noopener"
-          >{{ $t("sns.facebook") }}</a
-        >
+        <a href="https://facebook.com/yamanoku" target="_blank" rel="noopener"
+          >{{ $t("sns.facebook") }}<open-new-icon
+        /></a>
       </li>
       <li role="listitem">
         {{ $t("sns.tumblr.tumblr") }}
         <ul role="list">
           <li role="listitem">
-            <a
-              href="https://yamanoku.tumblr.com"
-              target="_blank"
-              rel="noopener"
-              >{{ $t("sns.tumblr.tumblog") }}</a
-            >
+            <a href="https://yamanoku.tumblr.com" target="_blank" rel="noopener"
+              >{{ $t("sns.tumblr.tumblog") }}<open-new-icon
+            /></a>
           </li>
           <li role="listitem">
             <a
               href="https://yamagraph.tumblr.com"
               target="_blank"
               rel="noopener"
-              >{{ $t("sns.tumblr.artworks") }}</a
-            >
+              >{{ $t("sns.tumblr.artworks") }}<open-new-icon
+            /></a>
           </li>
         </ul>
       </li>
       <li role="listitem">
-        <a href="https://github.com/yamanoku" target="_blank" rel="noopener">{{
-          $t("sns.github")
-        }}</a>
+        <a href="https://github.com/yamanoku" target="_blank" rel="noopener"
+          >{{ $t("sns.github") }}<open-new-icon
+        /></a>
       </li>
     </ul>
   </section>

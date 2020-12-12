@@ -15,16 +15,16 @@
             :href="$t('privacyPage.analytics.link01.url')"
             target="_blank"
             rel="noopener"
-            >{{ $t("privacyPage.analytics.link01.title") }}</a
-          >
+            >{{ $t("privacyPage.analytics.link01.title") }}<open-new-icon
+          /></a>
         </li>
         <li role="listitem">
           <a
             :href="$t('privacyPage.analytics.link02.url')"
             target="_blank"
             rel="noopener"
-            >{{ $t("privacyPage.analytics.link02.title") }}</a
-          >
+            >{{ $t("privacyPage.analytics.link02.title") }}<open-new-icon
+          /></a>
         </li>
       </ul>
     </section>
@@ -34,8 +34,10 @@
 
 <script>
 import Meta from "~/mixins/meta";
+import OpenNewIcon from "../assets/svg-icons/OpenNewIcon.vue";
 
 export default {
+  components: { OpenNewIcon },
   mixins: [Meta],
   data() {
     return {

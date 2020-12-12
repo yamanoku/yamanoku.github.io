@@ -50,7 +50,7 @@
                 target="_blank"
                 rel="noopener"
                 lang="en"
-                >awesome-a11y-vue<open-new-icon
+                >awesome-a11y-vue<github-icon
               /></a>
             </template>
           </i18n>
