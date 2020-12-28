@@ -33,7 +33,7 @@
     "eslint-friendly-formatter": "4.0.1",
     "eslint-loader": "4.0.2",
     "eslint-plugin-prettier": "3.3.0",
-    "eslint-plugin-vue": "7.3.0",
+    "eslint-plugin-vue": "7.4.0",
     "eslint-plugin-vuejs-accessibility": "0.6.0",
     "gh-pages": "3.1.0",
     "highlight.js": "10.4.1",
