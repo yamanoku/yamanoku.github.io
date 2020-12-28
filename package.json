@@ -27,7 +27,7 @@
     "@markuplint/vue-parser": "1.0.0-alpha.21",
     "@markuplint/vue-spec": "1.0.0-alpha.6",
     "babel-eslint": "10.1.0",
-    "dayjs": "1.9.7",
+    "dayjs": "1.9.8",
     "eslint": "7.16.0",
     "eslint-config-prettier": "7.1.0",
     "eslint-friendly-formatter": "4.0.1",
