@@ -17,6 +17,8 @@
         />
         <img
           src="~/assets/img/product-about-accessibility-with-vuejs.png"
+          width="688"
+          height="498"
           :alt="$t('prefixAlt.photo') + $t('product.vueA11yPage.title')"
         />
       </picture>

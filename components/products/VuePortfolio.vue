@@ -17,6 +17,8 @@
         />
         <img
           src="~/assets/img/product-vue-portfolio-template.png"
+          width="688"
+          height="498"
           :alt="$t('prefixAlt.screenshot') + $t('product.vuePortfolio')"
         />
       </picture>

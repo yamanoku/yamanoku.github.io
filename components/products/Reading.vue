@@ -9,6 +9,8 @@
         <source srcset="~/assets/img/product-reading.webp" type="image/webp" />
         <img
           src="~/assets/img/product-reading.png"
+          width="688"
+          height="498"
           :alt="$t('prefixAlt.screenshot') + $t('product.reading')"
         />
       </picture>
