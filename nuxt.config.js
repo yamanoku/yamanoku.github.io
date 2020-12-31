@@ -45,7 +45,20 @@ module.exports = {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   css: ["modern-normalize", "yama-normalize"],
-  buildModules: ["@nuxt/components"],
+  buildModules: [
+    "@nuxt/components",
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          "Noto+Sans+JP": [400, 700]
+        },
+        display: "optional",
+        download: true,
+        inject: true
+      }
+    ]
+  ],
   components: [
     "~/components/",
     {
