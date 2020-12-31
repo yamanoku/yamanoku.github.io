@@ -15,3 +15,6 @@ dist
 # PWA
 sw.*
 
+# @nuxtjs/google-fonts
+assets/css/fonts.css
+assets/fonts
