@@ -133,8 +133,8 @@
       </picture>
     </figure>
     <p>{{ $t("vueA11yPage.a11yNote.desc14") }}</p>
-    <highlightjs :code="vueAxeInstall" />
-    <highlight lang="javascript" :code="vueAxeSetting" />
+    <highlightjs lang="shell" :code="vueAxeInstall" />
+    <highlightjs lang="javascript" :code="vueAxeSetting" />
     <h4 lang="en">Storybook</h4>
     <i18n tag="p" path="vueA11yPage.a11yNote.desc15">
       <template v-slot:storybookAddonA11y>
@@ -207,51 +207,51 @@ export default {
   data() {
     return {
       buttonMarkupBefore: `
-        <template>
-          <div role="button" tabindex="0" @click="handleClick" @keyup="handleKeyUp">button</div>
-        </template>
+<template>
+  <div role="button" tabindex="0" @click="handleClick" @keyup="handleKeyUp">button</div>
+</template>
       `,
       buttonMarkupAfter: `
-        <template>
-          <button type="button">button</button>
-        </template>
+<template>
+  <button type="button">button</button>
+</template>
       `,
       nuxtJS: `
-        module.exports = {
-            head: {
-              htmlAttrs: {
-                lang: 'ja'
-              }
-            }
-        }
+module.exports = {
+    head: {
+      htmlAttrs: {
+        lang: 'ja'
+      }
+    }
+}
       `,
       vueAxeInstall: `
-        # NPM
-        $ npm install -D axe-core vue-axe
+# NPM
+$ npm install -D axe-core vue-axe
 
-        # Yarn
-        $ yarn add -D axe-core vue-axe
+# Yarn
+$ yarn add -D axe-core vue-axe
       `,
       vueAxeSetting: `
-        import Vue from 'vue'
+import Vue from 'vue'
 
-        if (process.env.NODE_ENV !== 'production') { // development environment
-          const VueAxe = require('vue-axe').default
-          const AXE_LOCALE_JA = require('axe-core/locales/ja.json') // locale setting
+if (process.env.NODE_ENV !== 'production') { // development environment
+  const VueAxe = require('vue-axe').default
+  const AXE_LOCALE_JA = require('axe-core/locales/ja.json') // locale setting
 
-          Vue.use(VueAxe, {
-            config: {
-              locale: AXE_LOCALE_JA
-            },
-            clearConsoleOnUpdate: false // Clears the console each time vue-axe runs
-          })
-        }
+  Vue.use(VueAxe, {
+    config: {
+      locale: AXE_LOCALE_JA
+    },
+    clearConsoleOnUpdate: false // Clears the console each time vue-axe runs
+  })
+}
       `,
       eslintEmoji: `
-        <!-- Fail -->
-        <span>🐼</span>
-        <!-- Good -->
-        <span role="img" aria-label="Panda">🐼</span>
+<!-- Fail -->
+<span>🐼</span>
+<!-- Good -->
+<span role="img" aria-label="Panda">🐼</span>
       `
     };
   }
