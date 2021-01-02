@@ -15,6 +15,7 @@
         />
       </picture>
     </figure>
+    <global-deprecation-alert-one-year />
     <i18n tag="p" path="vueA11yPage.titleSection.desc01">
       <template v-slot:link01>
         <a
