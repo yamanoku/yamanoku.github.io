@@ -1,6 +1,6 @@
 <template>
   <div>
-    <strong>{{$t("alertOneYearText")}}</strong>
+    <strong>{{ $t("alertOneYearText") }}</strong>
   </div>
 </template>
 
