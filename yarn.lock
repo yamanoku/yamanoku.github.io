@@ -2165,6 +2165,15 @@
     "@markuplint/ml-ast" "^1.1.0"
     parse5 "^6.0.1"
 
+"@markuplint/html-parser@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-1.2.0.tgz#796f856978a7b4bab1deb412b84f7564fa1dba66"
+  integrity sha512-F/TeXWEQNUXOa/igYi6bbZ0Q5cp0hWyitfjhKkZcKj+YkkTSAtYDLKKANTG8sOKlNB9x4/VHLwVibMzwBWtaSA==
+  dependencies:
+    "@markuplint/ml-ast" "^1.2.0"
+    "@markuplint/parser-utils" "^1.1.0"
+    parse5 "^6.0.1"
+
 "@markuplint/html-spec@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-1.2.1.tgz#60913d111a52888482ab50fa2a10da197884b0e4"
@@ -2183,6 +2192,13 @@
   integrity sha512-M5Sv34xVaM7VALoA45afIvrOsrXeQNwI6fzOgMAnNwzwX0VlObFWBoBLjhMIN6i64BMVhH9qSVDxV4JDEFVhYQ==
   dependencies:
     uuid "^8.3.1"
+
+"@markuplint/ml-ast@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/ml-ast/-/ml-ast-1.2.0.tgz#5c2b898b6dd41854a6aa7347747424b3421ec772"
+  integrity sha512-n/Ur1ufvveRBu+wxREA1Y3xM9V7qakTHgGz16+9WhpxAFC9s1a3q87LS9+hpeLCE5V+bzTZkcvq212wxI7adeQ==
+  dependencies:
+    uuid "^8.3.2"
 
 "@markuplint/ml-config@^1.0.0":
   version "1.0.0"
@@ -2205,6 +2221,11 @@
   resolved "https://registry.yarnpkg.com/@markuplint/ml-spec/-/ml-spec-1.1.0.tgz#6edd43388ca54be700d17a17f91c1f3b4ee1c889"
   integrity sha512-rJWIatXdWPUw0DQKWFw18QRG29oMU2gHLd7XFWFv6Jz3yc9IcimOnETIadv2txQhTydS94+deaZaivavZ5e/PQ==
 
+"@markuplint/parser-utils@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-1.1.0.tgz#9443fd9b87256f827e5316a3dfc2878728a76a90"
+  integrity sha512-WSdXE9Y2NJizSbfEk3Q7sn5DRQuT8yAWqOfKlUR1vTp6penEKARRfnM0yqWuN8ogQDW/R7DyicU/002oyCGm+A==
+
 "@markuplint/rules@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@markuplint/rules/-/rules-1.2.1.tgz#0cb98cf373c0111e3c420cfcc103046d58ddacc4"
@@ -2212,14 +2233,14 @@
   dependencies:
     "@markuplint/ml-spec" "^1.1.0"
 
-"@markuplint/vue-parser@1.0.0-alpha.21":
-  version "1.0.0-alpha.21"
-  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-1.0.0-alpha.21.tgz#9a37ffd5a06397ce82ba00997198c199fc71361a"
-  integrity sha512-E7DkDKO4M7amTepVhbiNAUat18ICVMHrvb3YUEtOCZfeht1/E2G7N8sERvit4tlvGYPnaVAwsB9fV1AJ6xmDkg==
+"@markuplint/vue-parser@1.0.0-alpha.22":
+  version "1.0.0-alpha.22"
+  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-1.0.0-alpha.22.tgz#c80e48e33107f180d0cf2d115364aa790e1094ec"
+  integrity sha512-rVo3q8fDYa3jCfeFdnrwFUs+T1fexVty4KdeN38+OpaKairbz1/Vyz64qXSfQpTfpBLMCfsFX/2yjJfSdjAREw==
   dependencies:
-    "@markuplint/html-parser" "^1.1.0"
-    "@markuplint/ml-ast" "^1.1.0"
-    vue-eslint-parser "^7.1.1"
+    "@markuplint/html-parser" "^1.2.0"
+    "@markuplint/ml-ast" "^1.2.0"
+    vue-eslint-parser "^7.3.0"
 
 "@markuplint/vue-spec@1.0.0-alpha.6":
   version "1.0.0-alpha.6"
@@ -14073,7 +14094,7 @@ uuid@^3.0.1, uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.3.1:
+uuid@^8.3.1, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
@@ -14160,18 +14181,6 @@ vue-eslint-parser@^7.0.0:
     eslint-scope "^5.0.0"
     eslint-visitor-keys "^1.1.0"
     espree "^6.1.2"
-    esquery "^1.0.1"
-    lodash "^4.17.15"
-
-vue-eslint-parser@^7.1.1:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.2.0.tgz#1e17ae94ca71e617025e05143c8ac5593aacb6ef"
-  integrity sha512-uVcQqe8sUNzdHGcRHMd2Z/hl6qEaWrAmglTKP92Fnq9TYU9un8xsyFgEdFJaXh/1rd7h8Aic1GaiQow5nVneow==
-  dependencies:
-    debug "^4.1.1"
-    eslint-scope "^5.0.0"
-    eslint-visitor-keys "^1.1.0"
-    espree "^6.2.1"
     esquery "^1.0.1"
     lodash "^4.17.15"
 
