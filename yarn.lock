@@ -2201,11 +2201,6 @@
     "@markuplint/ml-spec" "^1.2.0"
     css-selector-parser "^1.4.1"
 
-"@markuplint/ml-spec@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/ml-spec/-/ml-spec-1.1.0.tgz#6edd43388ca54be700d17a17f91c1f3b4ee1c889"
-  integrity sha512-rJWIatXdWPUw0DQKWFw18QRG29oMU2gHLd7XFWFv6Jz3yc9IcimOnETIadv2txQhTydS94+deaZaivavZ5e/PQ==
-
 "@markuplint/ml-spec@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@markuplint/ml-spec/-/ml-spec-1.2.0.tgz#cf1c2bb4906551b9f6b4ab4b4716d8f99633ff11"
@@ -10121,10 +10116,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-i18n@6.17.0:
-  version "6.17.0"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.17.0.tgz#4d774f93c1ba76b89d380dd5b46888c9dd69e0c7"
-  integrity sha512-hP+ZWv+bB+OpgypL0RmFRRxPCDG0GgheeFE4877VqNxPKnTzPgKu1xyLRpa0m9Mj6DOGfCVHyqO4ER4RNFPo4A==
+nuxt-i18n@6.18.0:
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.18.0.tgz#e15d2fece238d03445366208dec017c43b203ff5"
+  integrity sha512-38pkBKyXC0UbI7KeBqD5XnKABtBXai1KzhQ/TL0fnlFgrLfrVpDnnnAEyAtfWpGyYOoVBqPB1yNnmqmhA5eitg==
   dependencies:
     "@babel/parser" "^7.5.5"
     "@babel/traverse" "^7.5.5"
