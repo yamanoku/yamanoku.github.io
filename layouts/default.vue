@@ -23,7 +23,6 @@ html:not([lang="ja"]) body {
   hyphens: auto;
 }
 html[lang="ja"] body {
-  font-family: Noto Sans JP, sans-serif;
   line-break: loose;
 }
 html[lang="ja"] main,
