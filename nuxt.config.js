@@ -45,9 +45,7 @@ module.exports = {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   css: ["modern-normalize", "yama-normalize"],
-  buildModules: [
-    "@nuxt/components",
-  ],
+  buildModules: ["@nuxt/components"],
   components: [
     "~/components/",
     {
