@@ -5,3 +5,6 @@ Okuto Oyama Portfolio Site.
 
 ## Dev Info
 Read [package.json](https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/package.json)
+
+## License
+MIT © [Okuto Oyama](https://yamanoku.net)
