@@ -1,32 +1,11 @@
 {
-  "name": "Name - Okuto Oyama",
-  "nickname": "Nickname - Oyama Michinoku, yamanoku",
   "job": {
     "1": "FrontEnd Designer",
     "2": "Accessibility Advocator",
-    "3": "UI Designer",
-    "4": "Writer",
-    "5": "Document Translater",
-    "6": "Internet Watcher"
+    "3": "UI Designer"
   },
   "info": {
-    "caption": "I'm active on the Internet under the name of Oyama-Michinoku, yamanoku. My birthday is October 30, 1989. I was born in Noshiro City, Akita Prefecture. I'm male. Currently, I lives in Nagareyama City, Chiba Prefecture. One daughter's father and three cat owners.",
-    "birth": "Born in Noshiro, Akita, Japan",
-    "sex": "Sex - Man",
-    "2008": {
-      "before": "Get into Iwate University of Art and Culture Course.",
-      "now": "Now - Art and Culture Course in Faculty of Humanities and Sociology"
-    },
-    "2014": "Get married.",
-    "2016": "Daughter is born",
-    "bfa": "Bachelor of Art and Culture Course.（BFA）",
-    "bfa01": "Fine Arts",
-    "bfa02": "Engineering and Design",
-    "live": "Live in Nagareyama, Chiba, Japan",
-    "photo": {
-      "alt": "Photo Okuto Oyama",
-      "caption": "Author's near shadow"
-    }
+    "caption": "I'm active on the Internet under the name of Oyama-Michinoku, yamanoku. My birthday is October 30, 1989. I was born in Noshiro City, Akita Prefecture. I'm male. Currently, I lives in Nagareyama City, Chiba Prefecture. One daughter's father and three cat owners."
   },
   "career": {
     "experiencedSkills": "Experienced skills",
@@ -46,8 +25,6 @@
       "boothLink": "Sales page on Booth",
       "noteLink": "Sales page on note"
     },
-    "slackprimoji": "slack-reaction-primoji",
-    "yamanokuCli": "yamanoku CLI",
     "reading": "Reading...",
     "vuePortfolio": "Vue Portfolio Template",
     "vueA11yPage": {
@@ -59,27 +36,13 @@
         "listitem03" : "Added english page"
       }
     },
-    "crowding": "Crowding - Coding works",
-    "birthdayCount": "Birthday Countdown",
-    "glitch": "glitchrange",
-    "browserCrash": "canvas_browser-crash.js",
-    "sushi": "rolling-sushi",
-    "qiitaCode": "Qiita Code Style Before",
     "designFigma": "Product Design - Figma",
     "updateInfo": "Update Information",
-    "releaseInfo": "Release Information",
     "description": {
       "wafb": "Presented in the 5th technical book fest. I would like to ask not only engineers but also all people involved with the web to see what kind of measures are available for web accessibility, such as machine-readable web pages, human-readable web pages, and WAI-ARIA web pages.",
       "reading": "I came up with the idea of accumulating and visualizing information about what would happen if I collected and summarized the news that I always watch. It incorporates PWA technology so that it can also be viewed as an offline application.",
       "vuePortfolio": "Portfolio template made by Vue.js. This is the first SPA created from vue cli. I used the Vue 1.0 versions at first, but now I can upgrade it to the Vue 3.0 versions.",
-      "vueA11yPage": "Created with the motivation to make people aware of accessibility in Vue.js development. Initially, it was put together as a presentation for a conference and later as an advent calendar article, but we are updating it on time to make it a more practical reference and functional document.",
-      "yamanokuCli": "This is a simple self-introduction tool that can be checked with the CLI. Fork is from sindresorhus.",
-      "slackprimoji": "Convert Pri-para character lines into Slack reaction emoji. The original story is from slack-reaction-decomoji produced by oti.",
-      "qiitaCode": "A Chrome extension that restores Qiita's code style to the previous one. Not published to the store. Therefore, add it in developer mode.",
-      "birthdayCount": "Counting down to yamanoku's birthday. Amazon's wish list will be released on that day. The next day, it will be reset and counted down again. This product uses TypeScript.",
-      "glitch": "A glitch expression tool using JavaScript. To adjust <input type='range'>. You can upload and change the image. Glitched images can also be saved.",
-      "browserCrash": "Represents on canvas the situation that is likely to happen when the browser becomes heavy on Windows OS. The browser is drawn indefinitely by moving the cursor. There is no illegality in this JavaScript.",
-      "sushi": "Rotating sushi using CSS3 animation."
+      "vueA11yPage": "Created with the motivation to make people aware of accessibility in Vue.js development. Initially, it was put together as a presentation for a conference and later as an advent calendar article, but we are updating it on time to make it a more practical reference and functional document."
     }
   },
   "sns": {
@@ -90,12 +53,7 @@
     },
     "twitter": "Twitter",
     "facebook": "Facebook",
-    "github": "Github",
-    "qiita": "Qiita",
-    "mstdn": "mstdn.jp",
-    "instagram": "Instagram",
-    "hatena": "Hatena",
-    "steam": "Steam"
+    "github": "Github"
   },
   "home": {
     "title": "Home"
