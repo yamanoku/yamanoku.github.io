@@ -23,6 +23,12 @@ export default {
     return {
       listStage: [
         {
+          title: "これからもつづけるWebアクセシビリティ",
+          url:
+            "https://docs.google.com/presentation/d/1bWjpa1WwL-gQT7misOvC0TOKersl-m2pyE-LIP-kWbk/edit?usp=sharing",
+          datetime: "2021-01-12T19:30:00.000Z"
+        },
+        {
           title: "Vue3 からはじめるWebアクセシビリティ",
           url:
             "https://docs.google.com/presentation/d/1GTJrGrcHZPvwknYBwtav9GnofAqVjLWpzQPJvtGZQQw/edit?usp=sharing",
