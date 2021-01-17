@@ -47,17 +47,6 @@ module.exports = {
   css: ["modern-normalize", "yama-normalize"],
   buildModules: [
     "@nuxt/components",
-    [
-      "@nuxtjs/google-fonts",
-      {
-        families: {
-          "Noto+Sans+JP": [400, 700]
-        },
-        display: "optional",
-        download: true,
-        inject: true
-      }
-    ]
   ],
   components: [
     "~/components/",
