@@ -6,6 +6,7 @@
     <SectionsProducts />
     <SectionsPresentations />
     <SectionsSns />
+    <SectionsDonate />
     <SectionsAddress />
     <GlobalLocalSwitch />
   </main>

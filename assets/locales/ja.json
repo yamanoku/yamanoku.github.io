@@ -55,6 +55,9 @@
     "facebook": "Facebook",
     "github": "Github"
   },
+  "donate": {
+    "desc01": "もし私の制作物や発表、活動に興味をもっていただけた場合以下より支援することができます。"
+  },
   "home": {
     "title": "ホーム"
   },
@@ -312,6 +315,7 @@
       "write": "執筆"
     },
     "sns": "ソーシャルサービス",
+    "donate": "寄付・支援",
     "contact": "連絡先"
   },
   "error": {
