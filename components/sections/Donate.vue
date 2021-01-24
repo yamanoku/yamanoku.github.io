@@ -6,27 +6,39 @@
     <p>
       {{ $t("donate.desc01") }}
     </p>
-    <a href="https://buymeacoffee.com/yamanoku" target="_blank" rel="noopener">
-      <img
-        alt="Buy Me A Coffee"
-        src="https://cdn.buymeacoffee.com/buttons/v2/arial-white.png"
-      />
-    </a>
+    <ul role="list">
+      <template v-for="donateLink in donateLinkList">
+        <li role="listitem" :key="donateLink">
+          <a
+            :href="donateLink.url"
+            target="_blank"
+            rel="noopener"
+            :lang="donateLink.lang"
+            >{{ donateLink.title }}</a
+          >
+        </li>
+      </template>
+    </ul>
   </section>
 </template>
 
-<style scoped>
-a {
-  display: inline-flex;
-  border-radius: 8px;
-  border: 2px solid transparent;
-}
-a:focus {
-  border: 2px solid var(--blue);
-  outline: 0;
-}
-a > img {
-  height: 60px;
-  width: 217px;
-}
-</style>
+<script>
+export default {
+  data() {
+    return {
+      donateLinkList: [
+        {
+          title: "GitHub Sponsors",
+          lang: "en",
+          url: "https://github.com/sponsors/yamanoku"
+        },
+        {
+          title: "Buy me a coffee",
+          lang: "en",
+          url: "https://buymeacoffee.com/yamanoku"
+        }
+      ]
+    };
+  }
+};
+</script>
