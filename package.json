@@ -16,7 +16,7 @@
     "@nuxt/content": "1.11.1",
     "@nuxtjs/axios": "5.12.5",
     "@nuxtjs/dotenv": "1.4.1",
-    "@nuxtjs/pwa": "3.3.4",
+    "@nuxtjs/pwa": "3.3.5",
     "nuxt": "2.14.12",
     "nuxt-i18n": "6.18.0",
     "vue-highlight.js": "3.1.0",
