@@ -38,9 +38,6 @@ export default {
 </script>
 
 <style>
-img {
-  height: auto;
-}
 a[target="_blank"] svg {
   width: 12px;
   height: 12px;

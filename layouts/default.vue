@@ -99,4 +99,7 @@ address svg .mail-2 {
 code.hljs {
   padding: calc(var(--rhythm) * 3);
 }
+img {
+  height: auto;
+}
 </style>
