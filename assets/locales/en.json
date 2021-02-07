@@ -119,6 +119,11 @@
       "desc02": "Cognitively impaired users can read text more easily if the words are evenly spaced."
     }
   },
+  "vueA11yPage": {
+    "title": "About accessibility with Vue.js",
+    "description": "This post is from day 21 of the Web Accessibility Advent Calendar 2019. This article is about web accessibility support in Vue.js development.",
+    "moveUrlText": "This page has been moved to {moveUrl}."
+  },
   "vueA11yPage2019": {
     "title": "About accessibility with Vue.js 2019",
     "description": "This post is from day 21 of the Web Accessibility Advent Calendar 2019. This article is about web accessibility support in Vue.js development.",
