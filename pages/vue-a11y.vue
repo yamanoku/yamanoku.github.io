@@ -4,8 +4,8 @@
     <vuejs-accessibility-sections-bio />
     <vuejs-accessibility-sections-book />
     <vuejs-accessibility-sections-web-accessibility />
-    <vuejs-accessibility-sections-vuejs-accessibility />
-    <vuejs-accessibility-sections-accessibility-notes />
+    <vuejs-accessibility-sections-vue-accessibility />
+    <vuejs-accessibility-sections-accessible-notes />
     <vuejs-accessibility-sections-conclusion />
     <global-feedback-list :feedback="feedback" />
     <nuxt-link :to="localePath({ name: 'index' })">{{

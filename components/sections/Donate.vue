@@ -8,7 +8,7 @@
     </p>
     <ul role="list">
       <template v-for="donateLink in donateLinkList">
-        <li role="listitem" :key="donateLink">
+        <li role="listitem" :key="donateLink.title">
           <a
             :href="donateLink.url"
             target="_blank"
