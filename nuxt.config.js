@@ -6,6 +6,18 @@ const baseUrl = process.env.BASE_URL || "https://yamanaoku.net";
 const baseOgp = process.env.BASE_OGP || "https://yamanoku.net/ogp/ogp@2x.png";
 const baseOgpAlt = baseName;
 
+const rehypePlugins = [
+  "rehype-plugin-auto-resolve-layout-shift",
+  "rehype-plugin-image-native-lazy-loading"
+];
+
+if (process.env.NODE_ENV === "production") {
+  rehypePlugins.push([
+    "rehype-plugin-auto-resolve-layout-shift",
+    { type: "maxWidth", maxWidth: 720 }
+  ]);
+}
+
 module.exports = {
   target: "static",
   telemetry: false,
@@ -82,7 +94,7 @@ module.exports = {
       prism: {
         theme: "prism-themes/themes/prism-a11y-dark.css"
       },
-      rehypePlugins: ["rehype-plugin-image-native-lazy-loading"]
+      rehypePlugins
     }
   },
   build: {
