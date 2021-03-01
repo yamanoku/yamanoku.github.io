@@ -18,7 +18,7 @@
     "@nuxtjs/dotenv": "1.4.1",
     "@nuxtjs/pwa": "3.3.5",
     "nuxt": "2.15.2",
-    "nuxt-i18n": "6.20.3",
+    "nuxt-i18n": "6.20.4",
     "vue-highlight.js": "3.1.0",
     "vuex": "3.6.2"
   },
