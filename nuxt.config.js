@@ -117,11 +117,7 @@ module.exports = {
   ],
   generate: {
     cache: {
-      ignore: [
-        ".nuxt",
-        "content",
-        "node_modules",
-      ]
+      ignore: [".nuxt", "content", "node_modules"]
     },
     async routes() {
       const { $content } = require("@nuxt/content");
