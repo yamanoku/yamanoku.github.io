@@ -26,7 +26,6 @@ jobs:
     - name: yarn install and generate
       run: |
         yarn install
-        rm -rf node_modules/.cache/nuxt/
         yarn generate --fail-on-error
       env:
         CI: true
