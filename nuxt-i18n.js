@@ -17,13 +17,13 @@ export default {
     {
       code: "ja",
       iso: "ja",
-      file: "ja.json",
+      file: "ja.yaml",
       name: "日本語ページ"
     },
     {
       code: "en",
       iso: "en-US",
-      file: "en.json",
+      file: "en.yaml",
       name: "English Page"
     }
   ]
