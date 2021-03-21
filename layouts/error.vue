@@ -15,8 +15,8 @@
     </template>
     <template v-else>
       <h1>500</h1>
-      <p>{{ $t("error.500.text01") }}</p>
-      <p>{{ $t("error.500.text02") }}</p>
+      <p>{{ $t("error.response500.text01") }}</p>
+      <p>{{ $t("error.response500.text02") }}</p>
       <address>
         <a href="mailto:0910yama@gmail.com">0910yama@gmail.com</a>
       </address>

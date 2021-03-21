@@ -15,7 +15,7 @@
         /></a>
       </li>
       <li role="listitem">
-        {{ $t("sns.tumblr.tumblr") }}
+        {{ $t("sns.tumblr.text") }}
         <ul role="list">
           <li role="listitem">
             <a href="https://yamanoku.tumblr.com" target="_blank" rel="noopener"

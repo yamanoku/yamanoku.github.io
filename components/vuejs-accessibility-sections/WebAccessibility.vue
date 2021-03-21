@@ -1,7 +1,7 @@
 <template>
   <section id="web-accessibility:about-accessibility-with-vuejs">
     <h2>{{ $t("vueA11yPage.heading.webA11y") }}</h2>
-    <h3>{{ $t("vueA11yPage.subHeading.webA11y.1") }}</h3>
+    <h3>{{ $t("vueA11yPage.subHeading.webA11y.title01") }}</h3>
     <i18n tag="p" path="vueA11yPage.webA11y.desc01">
       <template v-slot:A11Y>
         <span lang="en">Accessibility</span>
@@ -17,7 +17,7 @@
         >{{ $t("vueA11yPage.webA11y.link01.text") }}<open-new-icon
       /></a>
     </blockquote>
-    <h3>{{ $t("vueA11yPage.subHeading.webA11y.2") }}</h3>
+    <h3>{{ $t("vueA11yPage.subHeading.webA11y.title02") }}</h3>
     <p>{{ $t("vueA11yPage.webA11y.desc03") }}</p>
     <p>{{ $t("vueA11yPage.webA11y.desc04") }}</p>
     <p>{{ $t("vueA11yPage.webA11y.desc05") }}</p>
@@ -38,7 +38,7 @@
       </figcaption>
     </figure>
     <p>{{ $t("vueA11yPage.webA11y.desc06") }}</p>
-    <h3>{{ $t("vueA11yPage.subHeading.webA11y.3") }}</h3>
+    <h3>{{ $t("vueA11yPage.subHeading.webA11y.title03") }}</h3>
     <p>{{ $t("vueA11yPage.webA11y.desc07") }}</p>
     <p>{{ $t("vueA11yPage.webA11y.desc08") }}</p>
   </section>
