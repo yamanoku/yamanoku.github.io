@@ -77,7 +77,7 @@
       <about-articles-tech-stack />
       <about-articles-markup />
       <about-articles-component-oriented />
-      <about-articles-pwa />
+      <about-articles-progressive-web-application />
       <about-articles-internationalization />
     </section>
     <section id="about:design" aria-labelledby="about:design_heading">
