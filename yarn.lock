@@ -9041,6 +9041,11 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
 
+lodash.merge@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+  integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
@@ -10329,10 +10334,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-i18n@6.22.0:
-  version "6.22.0"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.22.0.tgz#7f4cfd3536abc2bac3c0dec3dd0daf28c0dbb56c"
-  integrity sha512-snJxnPsRWE4Vc97tfE4w4l7LvAMyfrtfdTVPRglScq+vTLPBHVixVM9SUHsNUOyeTgrq7dIe7bEKyU7KW7miYg==
+nuxt-i18n@6.22.1:
+  version "6.22.1"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.22.1.tgz#84a61f5a0d9dd19d85005b7d759bce6832256947"
+  integrity sha512-nzINH22A1uggXpqkXH+ACPqEKpxHZ2rhpHiQdn7rjVhroeGmsUw8PuL1n0Mf1NqMw7EHnBlI8ooDGlE2irx/wQ==
   dependencies:
     "@babel/parser" "^7.5.5"
     "@babel/traverse" "^7.5.5"
@@ -10342,6 +10347,7 @@ nuxt-i18n@6.22.0:
     is-https "^3.0.0"
     js-cookie "^2.2.1"
     klona "^2.0.4"
+    lodash.merge "^4.6.2"
     ufo "^0.6.7"
     vue-i18n "^8.23.0"
 
