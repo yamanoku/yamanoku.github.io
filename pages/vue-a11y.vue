@@ -1,6 +1,6 @@
 <template>
   <main role="main" id="main">
-    <i18n tag="p" path="vueA11yPage.moveUrlText">
+    <i18n tag="p" path="vueA11yPage2019.moveUrlText">
       <template v-slot:moveUrl>
         <nuxt-link to="vue-a11y-2019"
           >https://yamanoku.net/vue-a11y-2019/</nuxt-link
@@ -33,10 +33,10 @@ export default {
   data() {
     return {
       meta: {
-        title: this.$t("vueA11yPage.title"),
-        description: this.$t("vueA11yPage.description"),
+        title: this.$t("vueA11yPage2019.title"),
+        description: this.$t("vueA11yPage2019.description"),
         image: "https://yamanoku.net/ogp/ogp-vue-a11y-2019@2x.png",
-        imageAlt: this.$t("vueA11yPage.title")
+        imageAlt: this.$t("vueA11yPage2019.title")
       }
     };
   }

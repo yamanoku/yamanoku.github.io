@@ -4,7 +4,7 @@
     <p>
       {{ $t("vueA11yPage2019.a11yNote.desc01") }}
     </p>
-    <i18n tag="h3" path="vueA11yPage.subHeading.a11yNote.note01">
+    <i18n tag="h3" path="vueA11yPage2019.subHeading.a11yNote.note01">
       <template v-slot:div>
         <code>div</code>
       </template>
@@ -43,7 +43,7 @@
       </template>
     </i18n>
     <highlightjs lang="html" :code="buttonMarkupAfter" />
-    <h3>{{ $t("vueA11yPage.subHeading.a11yNote.note02") }}</h3>
+    <h3>{{ $t("vueA11yPage2019.subHeading.a11yNote.note02") }}</h3>
     <p>
       {{ $t("vueA11yPage2019.a11yNote.desc05") }}
     </p>
@@ -60,8 +60,8 @@
       lang="en"
       >vue-accessible-modal - CodeSandbox<open-new-icon />
     </a>
-    <h3>{{ $t("vueA11yPage.subHeading.a11yNote.note03") }}</h3>
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc08">
+    <h3>{{ $t("vueA11yPage2019.subHeading.a11yNote.note03") }}</h3>
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc08">
       <template v-slot:abbr01>
         <abbr>{{ $t("vueA11yPage2019.a11yNote.abbr01") }}</abbr>
       </template>
@@ -80,8 +80,8 @@
         /></a>
       </template>
     </i18n>
-    <h3>{{ $t("vueA11yPage.subHeading.a11yNote.note04") }}</h3>
-    <i18n tag="p" path="vueA11yPage.a11yNote.desc10">
+    <h3>{{ $t("vueA11yPage2019.subHeading.a11yNote.note04") }}</h3>
+    <i18n tag="p" path="vueA11yPage2019.a11yNote.desc10">
       <template v-slot:nuxtConfigJs>
         <code>nuxt.config.js</code>
       </template>
@@ -100,7 +100,7 @@
         <small>{{ $t("vueA11yPage2019.a11yNote.small01") }}</small>
       </template>
     </i18n>
-    <h3>{{ $t("vueA11yPage.subHeading.a11yNote.note05") }}</h3>
+    <h3>{{ $t("vueA11yPage2019.subHeading.a11yNote.note05") }}</h3>
     <h4 lang="en">vue-axe</h4>
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc13">
       <template v-slot:axeCore>
@@ -170,9 +170,9 @@
       </template>
     </i18n>
     <highlightjs lang="html" :code="eslintEmoji" />
-    <p>{{ $t("vueA11yPage.a11yNote.desc18") }}</p>
-    <h4>{{ $t("vueA11yPage.subHeading.a11yNote.test.test04") }}</h4>
-    <p>{{ $t("vueA11yPage.a11yNote.desc19") }}</p>
+    <p>{{ $t("vueA11yPage2019.a11yNote.desc18") }}</p>
+    <h4>{{ $t("vueA11yPage2019.subHeading.a11yNote.test.test04") }}</h4>
+    <p>{{ $t("vueA11yPage2019.a11yNote.desc19") }}</p>
     <a
       href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/"
       target="_blank"
