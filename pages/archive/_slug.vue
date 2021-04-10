@@ -17,6 +17,7 @@
       <template v-if="this.$i18n.locale !== 'ja'">
         <em>{{ $t("onlyJPText") }}</em>
       </template>
+      <global-deprecation-alert-one-year />
       <nuxt-content :document="page" />
       <nuxt-link to="/archive">
         {{ $t("archivePage.backText") }}
