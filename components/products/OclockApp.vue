@@ -1,12 +1,17 @@
 <template>
   <article id="product:oclock-app" aria-labelledby="product:oclock-app_heading">
-    <h3 id="product:oclock-app_heading">{{ $t("product.oclock-app.title") }}</h3>
+    <h3 id="product:oclock-app_heading">
+      {{ $t("product.oclock-app.title") }}
+    </h3>
     <figure
       aria-labelledby="product:oclock-app_heading"
       aria-describedby="product:oclock-app_caption"
     >
       <picture>
-        <source srcset="~/assets/img/product-oclock-app.webp" type="image/webp" />
+        <source
+          srcset="~/assets/img/product-oclock-app.webp"
+          type="image/webp"
+        />
         <img
           src="~/assets/img/product-oclock-app.png"
           width="688"
@@ -27,7 +32,11 @@
         </a>
       </li>
       <li role="listitem">
-        <a href="https://zenn.dev/yamanoku/scraps/bb713d47a45a55/" target="_blank" rel="noopener">
+        <a
+          href="https://zenn.dev/yamanoku/scraps/bb713d47a45a55/"
+          target="_blank"
+          rel="noopener"
+        >
           {{ $t("product.oclock-app.zenn") }}
           <open-new-icon />
         </a>
