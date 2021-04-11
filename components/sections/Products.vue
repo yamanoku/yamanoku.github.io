@@ -5,6 +5,7 @@
     </h2>
     <products-vuejs-accessibility-page />
     <products-accessibility-beginner />
+    <products-oclock-app />
     <products-reading />
     <products-vue-portfolio />
   </section>

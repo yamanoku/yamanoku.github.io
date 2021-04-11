@@ -29,6 +29,9 @@ product:
       listitem01: "公開"
       listitem02: "{awesomeA11yVue}に掲載"
       listitem03: "英訳ページ追加"
+  oclock-app:
+    title: "O'clock App"
+    zenn: "解説記事"
   designFigma: "Product Design - Figma"
   updateInfo: "更新情報"
   description:
@@ -36,6 +39,7 @@ product:
     reading: "いつも自分が見ているニュースを集めてまとめてみたらどうなるだろうか、情報の蓄積・見える化というものを考え作りました。オフラインアプリケーションとしても閲覧できるようPWA技術を取り入れています。"
     vuePortfolio: "Vue.js製のポートフォリオテンプレートです。vue-cliから作成したSPA処女作です。はじめはVue1.0系で作ってましたが、Vue3.0系にバージョンアップ対応しています。"
     vueA11yPage: "Vue.js開発においてアクセシビリティを意識してもらうためのモチベーションで作成しました。当初はとあるカンファレンスのための発表記事としてまとめて、その後アドベントカレンダーの記事として発表しましたが、より実践的に参考・機能するドキュメントとなるよう適時更新しています。"
+    oclock-app: "Svelte を用いて秒まで見えるデジタル時計を PWA で実装しました。Web ブラウジングができる OS であれば、いつでも確認できるようにしています。半日ほどでセットアップを含めて実装できました。WAI−ARIA を用いたスクリーンリーダーのための考慮もされています。"
 sns:
   tumblr:
     text: "Tumblr"
