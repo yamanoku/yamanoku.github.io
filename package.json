@@ -18,7 +18,7 @@
     "@nuxtjs/dotenv": "1.4.1",
     "@nuxtjs/pwa": "3.3.5",
     "nuxt": "2.15.4",
-    "nuxt-i18n": "6.24.0",
+    "nuxt-i18n": "6.25.0",
     "vuex": "3.6.2"
   },
   "devDependencies": {
@@ -27,11 +27,11 @@
     "babel-eslint": "10.1.0",
     "dayjs": "1.10.4",
     "eslint": "7.24.0",
-    "eslint-config-prettier": "8.1.0",
+    "eslint-config-prettier": "8.2.0",
     "eslint-friendly-formatter": "4.0.1",
     "eslint-loader": "4.0.2",
-    "eslint-plugin-prettier": "3.3.1",
-    "eslint-plugin-vue": "7.8.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-plugin-vue": "7.9.0",
     "eslint-plugin-vuejs-accessibility": "0.6.1",
     "gh-pages": "3.1.0",
     "highlight.js": "10.7.2",
