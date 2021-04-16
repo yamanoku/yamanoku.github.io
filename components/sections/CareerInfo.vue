@@ -6,7 +6,6 @@
     <p>{{ $t("career.desc01") }}</p>
     <p>{{ $t("career.desc02") }}</p>
     <p>{{ $t("career.desc03") }}</p>
-    <p>{{ $t("career.desc04") }}</p>
     <h3 id="related:career_heading">{{ $t("heading.relatedList") }}</h3>
     <ul role="list" aria-labelledby="related:career_heading">
       <li role="listitem">
