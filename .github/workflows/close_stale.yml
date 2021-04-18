@@ -1,0 +1,17 @@
+name: Close stale issues and PRs
+
+on:
+  schedule:
+  - cron: "0 0 * * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/stale@v3
+      with:
+        repo-token: ${{ secrets.YAMANOKUIO_DEPLOY_TOKEN }}
+        stale-issue-message: 'このIssueは30日活動していません。このままだと5日後にIssueを閉じますが、もしIssueを残したい場合は `stale` ラベルを外してください。'
+        stale-pr-message: 'このPRは30日活動していません。このままだと10日後にPRを閉じますが、もしPRを残したい場合は `stale` ラベルを外してください。'
+        days-before-stale: 30
+        days-before-close: 5
