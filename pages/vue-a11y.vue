@@ -1,6 +1,7 @@
 <template>
   <main role="main" id="main">
     <vuejs-accessibility-sections-title />
+    <global-local-switch />
     <vuejs-accessibility-sections-bio />
     <vuejs-accessibility-sections-book />
     <vuejs-accessibility-sections-web-accessibility />
@@ -8,10 +9,11 @@
     <vuejs-accessibility-sections-accessible-notes />
     <vuejs-accessibility-sections-conclusion />
     <global-feedback-list :feedback="feedback" />
+    <hr />
+    <global-donate-component />
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
     }}</nuxt-link>
-    <global-local-switch />
   </main>
 </template>
 

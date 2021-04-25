@@ -1,5 +1,5 @@
 <template>
-  <section id="donate" aria-labelledby="donate_heading">
+  <article id="donate" aria-labelledby="donate_heading">
     <h2 id="donate_heading">
       {{ $t("heading.donate") }}
     </h2>
@@ -14,12 +14,12 @@
             target="_blank"
             rel="noopener"
             :lang="donateLink.lang"
-            >{{ donateLink.title }}</a
-          >
+            >{{ donateLink.title }}<open-new-icon
+          /></a>
         </li>
       </template>
     </ul>
-  </section>
+  </article>
 </template>
 
 <script>
