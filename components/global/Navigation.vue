@@ -11,11 +11,6 @@
           $t("aboutPage.title")
         }}</nuxt-link>
       </li>
-      <li role="listitem">
-        <nuxt-link :to="localePath({ name: 'archive' })">{{
-          $t("archivePage.title")
-        }}</nuxt-link>
-      </li>
     </ul>
   </nav>
 </template>
