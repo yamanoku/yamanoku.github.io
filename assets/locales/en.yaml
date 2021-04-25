@@ -275,6 +275,7 @@ vueA11yPage:
       linkTitle: "Request for correction of the article “About accessibility with Vue.js”"
 archivePage:
   title: "Archive"
+  externalLink: "If you are looking for content older than 1 year, please visit {title} page."
   desc01: "This page is a writing collection of past articles and logs of Okuto Oyama called yamanoku."
   desc02:
     "We fixed the broken links during the document migration, but the content itself has not been updated, so please be careful when you refer to it."
