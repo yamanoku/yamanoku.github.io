@@ -54,6 +54,11 @@ export default {
       title: `${this.page.title}`,
       meta: [
         {
+          "http-equiv": "refresh",
+          content: `0;url=https://archives.yamanoku.net/${this.page.slug}`
+        },
+        { rel: "canonical", href: `https://archives.yamanoku.net/${this.page.slug}` },
+        {
           hid: "description",
           name: "description",
           content: this.$t("archivePage.desc01")

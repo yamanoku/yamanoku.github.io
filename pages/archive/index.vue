@@ -37,6 +37,17 @@ export default {
       articles
     };
   },
+  head() {
+    return {
+      meta: [
+        {
+          "http-equiv": "refresh",
+          content: "0;url=https://archives.yamanoku.net"
+        },
+        { rel: "canonical", href: "https://archives.yamanoku.net" }
+      ]
+    };
+  },
   data() {
     return {
       meta: {
