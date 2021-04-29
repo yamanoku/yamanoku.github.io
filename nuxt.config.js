@@ -54,7 +54,8 @@ module.exports = {
       { name: "twitter:site", content: "@yamanoku" },
       { name: "twitter:image:alt", content: baseOgpAlt }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [{ src: "/switch-rhythm-component.js", type: "module" }]
   },
   css: ["modern-normalize", "yama-normalize"],
   buildModules: ["@nuxt/components"],
