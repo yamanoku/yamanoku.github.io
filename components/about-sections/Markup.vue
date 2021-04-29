@@ -1,5 +1,5 @@
 <template>
-  <article id="about:markup" aria-labelledby="about:markup_heading">
+  <section id="about:markup" aria-labelledby="about:markup_heading">
     <h3 id="about:markup_heading">{{ $t("aboutPage.subHeading.markup") }}</h3>
     <p>{{ $t("aboutPage.markup.desc01") }}</p>
     <p>{{ $t("aboutPage.markup.desc02") }}</p>
@@ -26,7 +26,7 @@
         </figcaption>
       </figure>
     </details>
-  </article>
+  </section>
 </template>
 
 <script>
@@ -34,11 +34,11 @@ export default {
   data() {
     return {
       waiAria: `
-  <article id="about:markup" aria-labelledby="about:markup_heading">
+  <section id="about:markup" aria-labelledby="about:markup_heading">
     <h3 id="about:markup_heading">
       {{$t("aboutPage.subHeading.markup")}}
     </h3>
-  </article>
+  </section>
       `
     };
   }

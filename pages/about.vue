@@ -74,22 +74,22 @@
       <h2 id="about:implementation_heading">
         {{ $t("aboutPage.heading.implementation") }}
       </h2>
-      <about-articles-tech-stack />
-      <about-articles-markup />
-      <about-articles-component-oriented />
-      <about-articles-progressive-web-application />
-      <about-articles-internationalization />
+      <about-sections-tech-stack />
+      <about-sections-markup />
+      <about-sections-component-oriented />
+      <about-sections-progressive-web-application />
+      <about-sections-internationalization />
     </section>
     <section id="about:design" aria-labelledby="about:design_heading">
       <h2 id="about:design_heading">
         {{ $t("aboutPage.heading.design") }}
       </h2>
       <p>{{ $t("aboutPage.designDescription") }}</p>
-      <about-articles-do-not-over-design />
-      <about-articles-font-size />
-      <about-articles-color-contrast />
-      <about-articles-max-width />
-      <about-articles-vertical-rhythm />
+      <about-sections-do-not-over-design />
+      <about-sections-font-size />
+      <about-sections-color-contrast />
+      <about-sections-max-width />
+      <about-sections-vertical-rhythm />
     </section>
     <nuxt-link :to="localePath({ name: 'index' })">{{
       $t("backTop")
