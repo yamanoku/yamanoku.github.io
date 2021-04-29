@@ -1,7 +1,7 @@
 import { createComponent, withStyles } from "https://cdn.skypack.dev/ficusjs@3";
 import {
   html,
-  renderer,
+  renderer
 } from "https://cdn.skypack.dev/@ficusjs/renderers@3/uhtml";
 
 createComponent(
@@ -97,6 +97,6 @@ createComponent(
           <span aria-hidden="true" class="show-labels"></span>
         </button>
       `;
-    },
+    }
   })
 );
