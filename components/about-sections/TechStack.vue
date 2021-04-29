@@ -1,5 +1,5 @@
 <template>
-  <article id="about:tech-stack" aria-labelledby="about:tech-stack_heading">
+  <section id="about:tech-stack" aria-labelledby="about:tech-stack_heading">
     <h3 id="about:tech-stack_heading">
       {{ $t("heading.techStack") }}
     </h3>
@@ -26,5 +26,5 @@
       <li role="listitem">modern-normalize</li>
       <li role="listitem">Google Fonts</li>
     </ul>
-  </article>
+  </section>
 </template>

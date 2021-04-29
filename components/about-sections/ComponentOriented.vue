@@ -1,5 +1,5 @@
 <template>
-  <article
+  <section
     id="about:component-oriented"
     aria-labelledby="about:component-oriented_heading"
   >
@@ -28,7 +28,7 @@
         </figcaption>
       </figure>
     </details>
-  </article>
+  </section>
 </template>
 
 <script>

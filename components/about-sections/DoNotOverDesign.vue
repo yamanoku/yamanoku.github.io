@@ -1,5 +1,5 @@
 <template>
-  <article
+  <section
     id="about:do-not-over-design"
     aria-labelledby="about:do-not-over-design_heading"
   >
@@ -21,5 +21,5 @@
         </a>
       </li>
     </ul>
-  </article>
+  </section>
 </template>

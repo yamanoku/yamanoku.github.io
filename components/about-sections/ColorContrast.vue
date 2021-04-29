@@ -1,5 +1,5 @@
 <template>
-  <article
+  <section
     id="about:color-contrast"
     aria-labelledby="about:color-contrast_heading"
   >
@@ -28,7 +28,7 @@
       </dl>
       <p>{{ $t("aboutPage.contrast.desc03") }}</p>
     </details>
-  </article>
+  </section>
 </template>
 
 <script>

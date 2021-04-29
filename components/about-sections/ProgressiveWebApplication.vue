@@ -1,5 +1,5 @@
 <template>
-  <article
+  <section
     id="about:progressive-web-application"
     aria-labelledby="about:progressive-web-application_heading"
   >
@@ -21,5 +21,5 @@
         </a>
       </li>
     </ul>
-  </article>
+  </section>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <article
+  <section
     id="about:internationalization"
     aria-labelledby="about:internationalization_heading"
   >
@@ -28,7 +28,7 @@
         </figcaption>
       </figure>
     </details>
-  </article>
+  </section>
 </template>
 
 <script>
