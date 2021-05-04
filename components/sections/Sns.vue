@@ -10,6 +10,16 @@
         /></a>
       </li>
       <li role="listitem">
+        <a href="https://github.com/yamanoku" target="_blank" rel="noopener"
+          >{{ $t("sns.github") }}<open-new-icon
+        /></a>
+      </li>
+      <li role="listitem">
+        <a href="https://scrapbox.io/yamanoku/" target="_blank" rel="noopener"
+          >{{ $t("sns.scrapbox") }}<open-new-icon
+        /></a>
+      </li>
+      <li role="listitem">
         <a href="https://facebook.com/yamanoku" target="_blank" rel="noopener"
           >{{ $t("sns.facebook") }}<open-new-icon
         /></a>
@@ -31,11 +41,6 @@
             /></a>
           </li>
         </ul>
-      </li>
-      <li role="listitem">
-        <a href="https://github.com/yamanoku" target="_blank" rel="noopener"
-          >{{ $t("sns.github") }}<open-new-icon
-        /></a>
       </li>
     </ul>
   </section>
