@@ -47,6 +47,7 @@ sns:
   twitter: "Twitter"
   facebook: "Facebook"
   github: "Github"
+  scrapbox: "Scrapbox"
 donate:
   desc01: "もし私の制作物や発表、活動に興味をもっていただけた場合以下より支援することができます。"
 home:

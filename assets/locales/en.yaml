@@ -47,6 +47,7 @@ sns:
   twitter: "Twitter"
   facebook: "Facebook"
   github: "Github"
+  scrapbox: "Scrapbox"
 donate:
   desc01: "If you are interested in my work, presentations and activities, you can donate me by."
 home:
