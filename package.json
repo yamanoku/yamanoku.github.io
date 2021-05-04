@@ -39,7 +39,7 @@
     "markuplint": "1.6.1",
     "modern-normalize": "1.1.0",
     "prettier": "2.2.1",
-    "prism-themes": "1.6.0",
+    "prism-themes": "1.7.0",
     "style-loader": "2.0.0",
     "yama-normalize": "0.0.11",
     "yaml-loader": "0.6.0"
