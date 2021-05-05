@@ -2275,6 +2275,15 @@
     "@markuplint/parser-utils" "^1.2.1"
     parse5 "^6.0.1"
 
+"@markuplint/html-parser@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-1.4.0.tgz#a65a6327a5e8f002d89a4141a22d1ce2e5e1c9dd"
+  integrity sha512-shPblE9Pe956E2ypBa7OSz95cPnd9/iFeMIY3bDOnYJzI2rrSOBLo+ttT8+x+ASRL8or6ebDo26L71THeJtu8g==
+  dependencies:
+    "@markuplint/ml-ast" "^1.4.0"
+    "@markuplint/parser-utils" "^1.3.0"
+    parse5 "^6.0.1"
+
 "@markuplint/html-spec@^1.4.2":
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-1.4.2.tgz#22124d11303083784be32f36917c5529f7505130"
@@ -2291,6 +2300,11 @@
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@markuplint/ml-ast/-/ml-ast-1.3.0.tgz#aef98a8f0e94c98ef94c8345563e132ed606cc52"
   integrity sha512-GpJYbJVuI3WLgZI5TzvIc6pGQ0RXWjR6xQ+8GlH5Z6EgsgTi2uZug/Y5eMDnaRk58fFVHzU/d4FPXEEEmHo4yw==
+
+"@markuplint/ml-ast@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/ml-ast/-/ml-ast-1.4.0.tgz#5cf3062ae6c67940fb12650bdbb313fe13dda408"
+  integrity sha512-7a9zraOHNxiJ233qjk+M8HBqrH8OjSCcsEmq5s9aorAWdzNrvGWQFVjMhJDQFYcaLOB+UWhp40YiVdcOZpKn9A==
 
 "@markuplint/ml-config@^1.1.0":
   version "1.1.0"
@@ -2321,6 +2335,14 @@
     "@markuplint/ml-ast" "^1.3.0"
     uuid "^8.3.2"
 
+"@markuplint/parser-utils@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-1.3.0.tgz#f44cabae801306372389f3fd0bba08f03b811d35"
+  integrity sha512-slIRFsW5nB2sz/MEmqBUGrWQZPHD+F572eb7Ib3EOXp/PiCQknVPWgnjCJT+p91m74L1K3hz/feC3i8gRxsvlA==
+  dependencies:
+    "@markuplint/ml-ast" "^1.4.0"
+    uuid "^8.3.2"
+
 "@markuplint/rules@^1.4.1":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@markuplint/rules/-/rules-1.4.1.tgz#d407daebafa1e5bee69849164df5aa132b528780"
@@ -2328,14 +2350,14 @@
   dependencies:
     "@markuplint/ml-spec" "^1.3.0"
 
-"@markuplint/vue-parser@1.0.0-beta.1":
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-1.0.0-beta.1.tgz#98c9e96213b81ca74541ee34f92811c522fe21e0"
-  integrity sha512-w0wAfKc1iXX0AMN/dT+Z3+FnIc287SWz7W1SBcwQPUo6DQ2qVVRjua/RxAQFZ1KURgbJ5Lgi+aOiI/6GEO9k8g==
+"@markuplint/vue-parser@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-1.0.0.tgz#98478f361e58a92e81c97e8553c5ff3a1b03eee2"
+  integrity sha512-gfe60HW+cqgSP3BHQXTMk1pC+odUJzV3CQjtSR8ZhWXvSjbLtWHufczJLJufHHeVR/aYr/5MkV8D64aPr2CrmQ==
   dependencies:
-    "@markuplint/html-parser" "^1.3.1"
-    "@markuplint/ml-ast" "^1.3.0"
-    "@markuplint/parser-utils" "^1.2.1"
+    "@markuplint/html-parser" "^1.4.0"
+    "@markuplint/ml-ast" "^1.4.0"
+    "@markuplint/parser-utils" "^1.3.0"
     vue-eslint-parser "^7.4.1"
 
 "@markuplint/vue-spec@1.0.0-beta.0":
