@@ -2327,6 +2327,11 @@
   resolved "https://registry.yarnpkg.com/@markuplint/ml-spec/-/ml-spec-1.3.0.tgz#d4e9123d3f1af2d5bbb2315cee7e1fe9b9238191"
   integrity sha512-GtIWHJVXmcVz+DZUaYwhXYqgQhoOrRE7UiXuxebjDoYc6qhcilJQMdgJVqBkpCimmTgwxJnTNGIf0yy0FhwViQ==
 
+"@markuplint/ml-spec@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/ml-spec/-/ml-spec-1.4.0.tgz#00f4c4b4da433d28e5456d216aae5776da35deb2"
+  integrity sha512-KJTvtrS9Kri1Y1yoO5KYq+e2jfo5k9eLJ9X4AG3vAdKe09/kDOXwaPZgAxvny/B16w6NO3UBFQzTGqxTyXh8ng==
+
 "@markuplint/parser-utils@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-1.2.1.tgz#31d2220783926b410d41e8ed36c61e29acd97e46"
@@ -2360,12 +2365,12 @@
     "@markuplint/parser-utils" "^1.3.0"
     vue-eslint-parser "^7.4.1"
 
-"@markuplint/vue-spec@1.0.0-beta.0":
-  version "1.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/vue-spec/-/vue-spec-1.0.0-beta.0.tgz#0af8f6eaf9df3074191bcbdd2b89eb0c1098bfd9"
-  integrity sha512-wEYb4YTLch+tVGqOgVCmldTEkksyvVsxHg0F6wkINK/cdqqxdEDeIburlIk5y/WEtMKiUSWTEzjQ53zMfbUfzw==
+"@markuplint/vue-spec@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/vue-spec/-/vue-spec-1.0.0.tgz#a8ee48e712480ee62b806d1549e6bd9fcd641a55"
+  integrity sha512-xX22jPt4N1l7Su2PTBI6FejLV1PHEk2R3MFKmGRXN5YxX8bkCeIquJQCAzNLMi3sLm9OYgt6RkC+YjEJ/rCzCQ==
   dependencies:
-    "@markuplint/ml-spec" "^1.3.0"
+    "@markuplint/ml-spec" "^1.4.0"
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
