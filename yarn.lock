@@ -9274,10 +9274,10 @@ markdown-table@^2.0.0:
   dependencies:
     repeat-string "^1.0.0"
 
-markuplint@1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/markuplint/-/markuplint-1.7.2.tgz#ece7c839265cae475c34b582cf01eef890542324"
-  integrity sha512-TKjzOgu4AgDXdAMgGgNalKyWdGC5Kg+a85wd07CzmQIkuqDcwBRj6yvl6GLU4k1ZXI8JyzJTiOaRqf+GPG/0NA==
+markuplint@1.7.3:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/markuplint/-/markuplint-1.7.3.tgz#8227b122991ec3a76a6df59a25640f8dead51f50"
+  integrity sha512-nwYKEzKIJgMmD/s0Vwi5/id1XaAF2Y31ipBzClvU+SSjCCBEOShTLBuRHKFpLt+4UiDf1Ru5c9YkSq+nzKU72A==
   dependencies:
     "@markuplint/file-resolver" "^1.2.3"
     "@markuplint/html-parser" "^1.4.2"
