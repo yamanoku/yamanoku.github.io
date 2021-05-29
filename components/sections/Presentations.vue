@@ -31,12 +31,12 @@ export default {
       listStage: [
         {
           title: "これからもつづけるWebアクセシビリティ",
-          url: "https://docs.google.com/presentation/d/1bWjpa1WwL-gQT7misOvC0TOKersl-m2pyE-LIP-kWbk/edit?usp=sharing",
+          url: "https://docs.google.com/presentation/d/e/2PACX-1vRIhRTjYc1yxxNRSE0-PbTHTyvSHh07pkuVapbek_-0wkYyF0scZ5XU0danIEky5YJToE0W3AwUCDXc/pub?start=false&loop=false&delayms=3000",
           datetime: "2021-01-12T19:30:00.000Z"
         },
         {
           title: "Vue3 からはじめるWebアクセシビリティ",
-          url: "https://docs.google.com/presentation/d/1GTJrGrcHZPvwknYBwtav9GnofAqVjLWpzQPJvtGZQQw/edit?usp=sharing",
+          url: "https://docs.google.com/presentation/d/e/2PACX-1vR-hRI-IEV5PUCLg1XTDlMGsDyZ4OhGBgXM8o3yaI1VKBOXSOEk6qwT8YFuzwsOpmyDIvjr2T_aYCWV/pub?start=false&loop=false&delayms=3000",
           datetime: "2020-12-08T20:30:00.000Z"
         },
         {
@@ -51,7 +51,7 @@ export default {
         },
         {
           title: "PWA RTA in Japan",
-          url: "https://docs.google.com/presentation/d/1rLn_lNGD-_5Tk0-Bx-5fGPwGMjnUemtYeXjnKRaoB68/edit?usp=sharing",
+          url: "https://docs.google.com/presentation/d/e/2PACX-1vROD7gIsTh1BF1q5LVec0pZSGXVtLBD_DjNonbuwdR8zfRNH_qgRazaIG0oU-Zte6EgqaKoIyfoRfpA/pub?start=false&loop=false&delayms=3000&slide=id.g85503d545f_0_0",
           datetime: "2020-01-31T15:00:00.000Z"
         }
       ],
