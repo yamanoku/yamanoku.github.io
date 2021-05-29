@@ -33,6 +33,11 @@ export default {
           url: "https://github.com/sponsors/yamanoku"
         },
         {
+          title: "Stripe Payment Links",
+          lang: "en",
+          url: "https://buy.stripe.com/00gaEY1Eh5bE7VC8ww"
+        },
+        {
           title: "Buy me a coffee",
           lang: "en",
           url: "https://buymeacoffee.com/yamanoku"
