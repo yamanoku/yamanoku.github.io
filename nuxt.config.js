@@ -50,8 +50,8 @@ module.exports = {
   components: [
     "~/components/",
     {
-      path: "~/components/about-articles/",
-      prefix: "about-articles"
+      path: "~/components/about-sections/",
+      prefix: "about-sections"
     },
     {
       path: "~/components/buttons/",
