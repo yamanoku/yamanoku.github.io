@@ -1,4 +1,5 @@
 :root {
+  /* Old Custom Properties */
   --black: rgb(21, 32, 43);
   --white: rgb(210, 210, 210);
   --gray: rgba(70, 70, 70, .5);
@@ -7,12 +8,53 @@
   --linkBlue: rgb(18, 122, 200);
   --linkVisited: var(--black);
   --rhythm: .5rem;
+
+  /* Base Tokens */
+  --y-black-base: rgba(21, 32, 43);
+  --y-white-base: rgba(255, 255, 255);
+  --y-white-low: rgba(210, 210, 210);
+  --y-white-medium: rgba(163, 163, 163);
+  --y-blue-low: rgba(90, 190, 255);
+  --y-blue-medium: rgba(18, 122, 200);
+  --y-purple-medium: rgba(220, 100, 220);
+  --y-rhythm-base: .5rem;
+
+  /* Semantics Tokens */
+  --y-body-background: var(--y-white-base);
+  --y-body-text-color: var(--y-black-base);
+  --y-link-color: var(--y-blue-low);
+  --y-link-visited-color: var(--y-blue-medium);
+  --y-outline-color: var(--y-blue-low);
+  --y-arcticle-border-color: var(--y-white-medium);
+  --y-hr-border-color: var(--y-white-medium);
+  --y-list-mark-color: var(--y-black-base);
+  --y-blockquote-border-color: var(--y-blue-low);
+  --y-rhythm-1: calc(var(--y-rhythm-base) * 1);
+  --y-rhythm-2: calc(var(--y-rhythm-base) * 2);
+  --y-rhythm-3: calc(var(--y-rhythm-base) * 3);
+  --y-rhythm-4: calc(var(--y-rhythm-base) * 4);
+  --y-rhythm-5: calc(var(--y-rhythm-base) * 5);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Semantics Tokens */
+    --y-body-background: var(--y-black-base);
+    --y-body-text-color: var(--y-white-base);
+    --y-link-visited-color: var(--y-purple-medium);
+    --y-arcticle-border-color: var(--y-white-base);
+    --y-hr-border-color: var(--y-white-base);
+    --y-list-mark-color: var(--y-white-base);
+    --y-text-shadow-color: var(--y-black-base);
+  }
+}
+
 html {
-  color: var(--black);
+  background-color: var(--y-body-background);
+  color: var(--y-body-text-color);
   font: inherit;
   font-size: 100%;
-  line-height: calc(var(--rhythm) * 3);
+  line-height: var(--y-rhythm-3);
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   font-family: Arial, Helvetica, sans-serif, "Apple Color Emoji",
@@ -25,29 +67,21 @@ html {
   box-sizing: border-box;
 }
 *:focus {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--y-outline-color);
   outline-offset: 2px;
 }
 body {
   margin: 0;
 }
 a {
-  color: var(--linkBlue);
+  color: var(--y-link-color);
 }
 a:visited {
-  color: var(--linkVisited);
+  color: var(--y-link-visited-color);
 }
 @media (prefers-color-scheme: dark) {
-  html {
-    background-color: var(--black);
-    color: var(--white);
-  }
   a {
-    color: var(--blue);
-    text-shadow: 1px 1px 0 var(--black), 0 1px 0 var(--black);
-  }
-  a:visited {
-    color: var(--purple);
+    text-shadow: 1px 1px 0 var(--y-text-shadow-color), 0 1px 0 var(--y-text-shadow-color);
   }
 }
 header,
@@ -56,84 +90,79 @@ footer {
   display: block;
   max-width: 80ch;
   margin: auto;
-  padding: 0 calc(var(--rhythm) * 2);
+  padding: 0 var(--y-rhythm-2);
 }
 h1 {
-  margin: calc(var(--rhythm) * 5) 0;
+  margin: var(--y-rhythm-5) 0;
   font-size: 1.953em;
-  line-height: calc(var(--rhythm) * 5);
+  line-height: var(--y-rhythm-5);
 }
 h2 {
-  margin: calc(var(--rhythm) * 5) 0;
+  margin: var(--y-rhythm-5) 0;
   font-size: 1.563em;
-  line-height: calc(var(--rhythm) * 5);
+  line-height: var(--y-rhythm-5);
 }
 h3 {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
   font-size: 1.25em;
-  line-height: calc(var(--rhythm) * 3);
+  line-height: var(--y-rhythm-3);
 }
 h4 {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
   font-size: 1rem;
-  line-height: calc(var(--rhythm) * 3);
+  line-height: var(--y-rhythm-3);
 }
 h5 {
-  margin: calc(var(--rhythm) * 2) 0;
+  margin: var(--y-rhythm-2) 0;
   font-size: .8em;
-  line-height: calc(var(--rhythm) * 2);
+  line-height: var(--y-rhythm-2);
 }
 h6 {
-  margin: calc(var(--rhythm) * 1) 0;
+  margin: var(--y-rhythm-1) 0;
   font-size: .64em;
-  line-height: calc(var(--rhythm) * 1);
+  line-height: var(--y-rhythm-1);
 }
 section {
   display: block;
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
 }
 article {
   position: relative;
-  margin: calc(var(--rhythm) * 3) 0;
-  padding-bottom: calc(var(--rhythm) * 3);
+  margin: var(--y-rhythm-3) 0;
+  padding-bottom: var(--y-rhythm-3);
 }
 article::before {
   content: "";
   width: 100%;
   height: 1px;
-  background-color: var(--gray);
+  background-color: var(--y-arcticle-border-color);
   position: absolute;
   bottom: 0;
   left: 0;
 }
-@media (prefers-color-scheme: dark) {
-  article::before {
-    background-color: var(--white);
-  }
-}
 p {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
   font-size: 1rem;
-  line-height: calc(var(--rhythm) * 3);
+  line-height: var(--y-rhythm-3);
 }
 img {
   max-width: 100%;
   vertical-align: bottom;
 }
 figure {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
 }
 figcaption {
-  margin-top: calc(var(--rhythm) * 3);
+  margin-top: var(--y-rhythm-3);
   font-size: 1rem;
 }
 small {
   line-height: 1;
 }
 ul:not([class]) {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
   line-height: 1;
-  padding-left: calc(var(--rhythm) * 2);
+  padding-left: var(--y-rhythm-2);
   list-style-type: none;
   position: relative;
 }
@@ -141,11 +170,11 @@ ul:not([class]) ul {
   margin: 0;
 }
 ul:not([class]) li {
-  line-height: calc(var(--rhythm) * 3);
+  line-height: var(--y-rhythm-3);
   font-size: 1rem;
 }
 ul:not([class]) li::before {
-  background-color: var(--black);
+  background-color: var(--y-list-mark-color);
   border-radius: 50%;
   color: #fff;
   content: "";
@@ -156,49 +185,39 @@ ul:not([class]) li::before {
   left: 0;
 }
 ol:not([class]) {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
   line-height: 1;
-  padding-left: calc(var(--rhythm) * 2);
+  padding-left: var(--y-rhythm-2);
 }
 ol:not([class]) ol {
   margin: 0;
 }
 ol:not([class]) li {
-  line-height: calc(var(--rhythm) * 3);
+  line-height: var(--y-rhythm-3);
   font-size: 1rem;
 }
-@media (prefers-color-scheme: dark) {
-  ul:not([class]) li::before {
-    background-color: var(--white);
-  }
-}
 details > summary {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
   cursor: pointer;
 }
 blockquote {
-  border-left: 6px solid var(--blue);
+  border-left: 6px solid var(--y-blockquote-border-color);
   margin: var(--rhythm) 0 var(--rhythm) var(--rhythm);
-  padding: 0 calc(var(--rhythm) * 2);
+  padding: 0 var(--y-rhythm-2);
 }
 address {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
 }
 pre {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
 }
 hr {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
   display: block;
   width: 100%;
   height: 1px;
   border: 0;
-  background-color: var(--gray);
-}
-@media (prefers-color-scheme: dark) {
-  hr {
-    background-color: var(--white);
-  }
+  background-color: var(--y-hr-border-color);
 }
 /* stylelint-disable */
 .visually-hidden {
