@@ -6449,10 +6449,10 @@ eslint-plugin-prettier@3.4.0:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-vue@7.9.0:
-  version "7.9.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.9.0.tgz#f8e83a2a908f4c43fc8304f5401d4ff671f3d560"
-  integrity sha512-2Q0qQp5+5h+pZvJKCbG1/jCRUYrdgAz5BYKGyTlp2NU8mx09u3Hp7PsH6d5qef6ojuPoCXMnrbbDxeoplihrSw==
+eslint-plugin-vue@7.10.0:
+  version "7.10.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.10.0.tgz#251749aa99e089e085275f011042c6e74189f89a"
+  integrity sha512-xdr6e4t/L2moRAeEQ9HKgge/hFq+w9v5Dj+BA54nTAzSFdUyKLiSOdZaRQjCHMY0Pk2WaQBFH9QiWG60xiC+6A==
   dependencies:
     eslint-utils "^2.1.0"
     natural-compare "^1.4.0"
@@ -14874,6 +14874,11 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
+
+yama-normalize@0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/yama-normalize/-/yama-normalize-0.0.11.tgz#33f59f900c45425d65ad3635468c341feb4b94cf"
+  integrity sha512-SVIMBX52+s0xzsmL6P3eLHUECC4cJ3+HNiCeIs6+Ap4caiF5L833oHpduJhR1cqkbO+YO7CyyHmwbn/pv/rsJQ==
 
 yaml-loader@0.6.0:
   version "0.6.0"
