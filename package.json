@@ -18,7 +18,7 @@
     "@nuxtjs/dotenv": "1.4.1",
     "@nuxtjs/pwa": "3.3.5",
     "nuxt": "2.15.7",
-    "nuxt-i18n": "6.27.0",
+    "nuxt-i18n": "6.27.1",
     "vuex": "3.6.2"
   },
   "devDependencies": {
