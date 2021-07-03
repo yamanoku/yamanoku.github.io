@@ -57,7 +57,7 @@ body.is-rhythm::after {
   width: auto;
   z-index: 9999;
 }
-ul:not([class]) li time {
+ul:not([class]) li .time {
   font-variant-numeric: tabular-nums;
 }
 ul:not([class]) li svg {
