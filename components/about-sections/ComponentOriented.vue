@@ -37,21 +37,22 @@ export default {
     return {
       slide: `
 <ul role="list">
-  <li role="listitem" v-for="list in listItem" :key="list.title">
+  <li role="listitem" v-for="list in listItem" :key="list.index">
     <template v-if="list.datetime">
-      <time :datetime="list.datetime">
-        {{dateReplace(list.datetime)}}
-      </time>
+      <span class="time">{{
+        dateStirngReplace(list.datetime)
+      }}</span>
       -
     </template>
-    <template v-if="list.created_at">
-      <time :datetime="list.created_at">
-        {{dateCreated(list.created_at)}}
-      </time>
+    <template v-else-if="list.created_at">
+      <span class="time">{{
+        dateStirngReplace(list.created_at)
+      }}</span>
       -
     </template>
     <a :href="list.url" target="_blank" rel="noopener" lang="ja">
-      {{list.title}}
+      {{ list.title }}
+      <open-new-icon />
     </a>
   </li>
 </ul>

@@ -40,11 +40,11 @@
       </h4>
       <ul>
         <li>
-          <time datetime="2019-12-21">2019/12/21</time>
+          <span class="time">2019/12/21</span>
           {{ $t("product.vueA11yPage.info.listitem01") }}
         </li>
         <li>
-          <time datetime="2020-02-28">2020/02/28</time>
+          <span class="time">2020/02/28</span>
           <i18n path="product.vueA11yPage.info.listitem02">
             <template v-slot:awesomeA11yVue>
               <a
@@ -58,7 +58,7 @@
           </i18n>
         </li>
         <li>
-          <time datetime="2020-05-03">2020/05/03</time>
+          <span class="time">2020/05/03</span>
           {{ $t("product.vueA11yPage.info.listitem03") }}
         </li>
       </ul>
