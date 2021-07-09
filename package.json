@@ -34,7 +34,7 @@
     "eslint-plugin-vue": "7.13.0",
     "eslint-plugin-vuejs-accessibility": "0.6.2",
     "gh-pages": "3.2.3",
-    "highlight.js": "10.7.3",
+    "highlight.js": "11.1.0",
     "lerna": "4.0.0",
     "markuplint": "1.10.1",
     "modern-normalize": "1.1.0",
