@@ -1,5 +1,5 @@
 <template>
-  <main role="main" id="main">
+  <main id="main">
     <article>
       <h1>{{ page.title }}</h1>
       <div class="article-header">

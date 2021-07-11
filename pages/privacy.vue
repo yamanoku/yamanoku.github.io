@@ -1,5 +1,5 @@
 <template>
-  <main role="main" id="main">
+  <main id="main">
     <h1 id="privacy-policy_heading">{{ $t("privacyPage.title") }}</h1>
     <section id="privacy:analytics" aria-labelledby="privacy:analytics_heading">
       <h2 id="privacy:analytics_heading">
@@ -9,8 +9,8 @@
       <p>{{ $t("privacyPage.analytics.desc02") }}</p>
       <p>{{ $t("privacyPage.analytics.desc03") }}</p>
       <h3 id="related:analytics_heading">{{ $t("heading.relatedList") }}</h3>
-      <ul role="list" aria-labelledby="related:analytics_heading">
-        <li role="listitem">
+      <ul aria-labelledby="related:analytics_heading">
+        <li>
           <a
             :href="$t('privacyPage.analytics.link01.url')"
             target="_blank"
@@ -18,7 +18,7 @@
             >{{ $t("privacyPage.analytics.link01.title") }}<open-new-icon
           /></a>
         </li>
-        <li role="listitem">
+        <li>
           <a
             :href="$t('privacyPage.analytics.link02.url')"
             target="_blank"

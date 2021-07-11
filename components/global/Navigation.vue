@@ -1,12 +1,12 @@
 <template>
   <nav aria-label="global-navigation">
-    <ul class="global" role="list">
-      <li role="listitem">
+    <ul class="global">
+      <li>
         <nuxt-link :to="localePath({ name: 'index' })">{{
           $t("home.title")
         }}</nuxt-link>
       </li>
-      <li role="listitem">
+      <li>
         <nuxt-link :to="localePath({ name: 'about' })">{{
           $t("aboutPage.title")
         }}</nuxt-link>

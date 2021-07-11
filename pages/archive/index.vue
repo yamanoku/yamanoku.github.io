@@ -1,5 +1,5 @@
 <template>
-  <main role="main" id="main">
+  <main id="main">
     <h1>{{ $t("archivePage.title") }}</h1>
     <p>
       {{ $t("archivePage.desc01") }}

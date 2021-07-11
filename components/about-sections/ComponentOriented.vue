@@ -36,8 +36,8 @@ export default {
   data() {
     return {
       slide: `
-<ul role="list">
-  <li role="listitem" v-for="list in listItem" :key="list.index">
+<ul>
+  <li v-for="list in listItem" :key="list.index">
     <template v-if="list.datetime">
       <span class="time">{{
         dateStirngReplace(list.datetime)

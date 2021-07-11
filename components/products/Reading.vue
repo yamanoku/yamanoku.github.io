@@ -19,14 +19,14 @@
       </figcaption>
     </figure>
     <h4 id="related:reading_heading">{{ $t("heading.relatedList") }}</h4>
-    <ul role="list" aria-labelledby="related:reading_heading">
-      <li role="listitem">
+    <ul aria-labelledby="related:reading_heading">
+      <li>
         <a href="https://reading.yamanoku.net" target="_blank" rel="noopener">
           {{ $t("product.reading") }}
           <open-new-icon />
         </a>
       </li>
-      <li role="listitem">
+      <li>
         <a
           href="https://scrapbox.io/yamanoku/Reading%E2%80%A6#5b1f8344c2cd3f000095e9c0"
           target="_blank"
@@ -36,7 +36,7 @@
           <open-new-icon />
         </a>
       </li>
-      <li role="listitem">
+      <li>
         <a
           href="https://www.figma.com/file/IHsJKRaJXepsqcbX91iQ6YNV/Reading...-Components?node-id=44%3A23"
           target="_blank"
@@ -48,16 +48,16 @@
       </li>
     </ul>
     <h4 id="teck-stack:reading_heading">{{ $t("heading.techStack") }}</h4>
-    <ul role="list" aria-labelledby="teck-stack:reading_heading">
-      <li role="listitem">Nuxt.js</li>
-      <li role="listitem">Nuxt PWA</li>
-      <li role="listitem">vue-paginate</li>
-      <li role="listitem">axios</li>
-      <li role="listitem">modern-normalize</li>
-      <li role="listitem">AWS API Gateway</li>
-      <li role="listitem">AWS Lambda Function</li>
-      <li role="listitem">Netlify</li>
-      <li role="listitem">CircleCI</li>
+    <ul aria-labelledby="teck-stack:reading_heading">
+      <li>Nuxt.js</li>
+      <li>Nuxt PWA</li>
+      <li>vue-paginate</li>
+      <li>axios</li>
+      <li>modern-normalize</li>
+      <li>AWS API Gateway</li>
+      <li>AWS Lambda Function</li>
+      <li>Netlify</li>
+      <li>CircleCI</li>
     </ul>
   </article>
 </template>

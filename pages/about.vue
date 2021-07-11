@@ -1,64 +1,64 @@
 <template>
-  <main role="main" id="main">
+  <main id="main">
     <h1 id="about_heading">{{ $t("aboutPage.title") }}</h1>
     <p>{{ $t("aboutPage.description") }}</p>
     <section class="toc" id="about:toc" aria-labelledby="about:toc_heading">
       <h2 id="about:toc_heading">{{ $t("aboutPage.heading.toc") }}</h2>
-      <ul role="list">
-        <li role="listitem">
+      <ul>
+        <li>
           <a href="#about:implementation">{{
             $t("aboutPage.heading.implementation")
           }}</a>
-          <ul role="list">
-            <li role="listitem">
+          <ul>
+            <li>
               <a href="#about:tech-stack">{{ $t("heading.techStack") }}</a>
             </li>
-            <li role="listitem">
+            <li>
               <a href="#about:markup">{{
                 $t("aboutPage.subHeading.markup")
               }}</a>
             </li>
-            <li role="listitem">
+            <li>
               <a href="#about:component-oriented">{{
                 $t("aboutPage.subHeading.components")
               }}</a>
             </li>
-            <li role="listitem">
+            <li>
               <a href="#about:progressive-web-application">{{
                 $t("aboutPage.subHeading.pwa")
               }}</a>
             </li>
-            <li role="listitem">
+            <li>
               <a href="#about:internationalization">{{
                 $t("aboutPage.subHeading.i18n")
               }}</a>
             </li>
           </ul>
         </li>
-        <li role="listitem">
+        <li>
           <a href="#about:design">{{ $t("aboutPage.heading.design") }}</a>
-          <ul role="list">
-            <li role="listitem">
+          <ul>
+            <li>
               <a href="#about:do-not-over-design">{{
                 $t("aboutPage.subHeading.overdesign")
               }}</a>
             </li>
-            <li role="listitem">
+            <li>
               <a href="#about:font-size">{{
                 $t("aboutPage.subHeading.fontSize")
               }}</a>
             </li>
-            <li role="listitem">
+            <li>
               <a href="#about:color-contrast">{{
                 $t("aboutPage.subHeading.contrast")
               }}</a>
             </li>
-            <li role="listitem">
+            <li>
               <a href="#about:max-width">{{
                 $t("aboutPage.subHeading.maxWidth")
               }}</a>
             </li>
-            <li role="listitem">
+            <li>
               <a href="#about:vertical-rhythm">{{
                 $t("aboutPage.subHeading.verticalRhythm")
               }}</a>

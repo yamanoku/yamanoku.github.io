@@ -1,5 +1,5 @@
 <template>
-  <main role="main" id="main">
+  <main id="main">
     <h1>404</h1>
     <p lang="ja">
       申し訳ありません。お探しのページが見つかりませんでした。<br />

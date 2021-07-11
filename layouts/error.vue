@@ -1,5 +1,5 @@
 <template>
-  <main role="main" id="main">
+  <main id="main">
     <template v-if="error.statusCode === 404">
       <h1>404</h1>
       <p lang="ja">

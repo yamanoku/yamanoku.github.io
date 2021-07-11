@@ -1,14 +1,14 @@
 <template>
   <details>
     <summary>{{ $t("details.summary_feedback") }}</summary>
-    <ul role="list">
-      <li role="listitem">
+    <ul>
+      <li>
         <a :href="gitHubLink" target="_blank" rel="noopener">
           {{ this.$t("feedback.github.title") }}
           <open-new-icon />
         </a>
       </li>
-      <li role="listitem">
+      <li>
         <a :href="twitterLink" target="_blank" rel="noopener">
           {{ this.$t("feedback.twitter.title") }}
           <open-new-icon />

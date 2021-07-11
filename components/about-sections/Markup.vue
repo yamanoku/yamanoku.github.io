@@ -9,8 +9,8 @@
         <highlightjs lang="html" :code="waiAria" />
         <figcaption>
           <p>{{ $t("aboutPage.markup.caption") }}</p>
-          <ul role="list">
-            <li role="listitem">
+          <ul>
+            <li>
               <a
                 href="https://www.w3.org/TR/wai-aria-practices-1.1/#naming_role_guidance"
                 target="_blank"
