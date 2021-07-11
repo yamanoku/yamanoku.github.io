@@ -1,5 +1,5 @@
 <template>
-  <main role="main" id="main">
+  <main id="main">
     <h1 id="privacy-policy_heading">{{ $t("privacyPage.title") }}</h1>
     <section id="privacy:analytics" aria-labelledby="privacy:analytics_heading">
       <h2 id="privacy:analytics_heading">

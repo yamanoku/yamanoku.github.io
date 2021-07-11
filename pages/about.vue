@@ -1,5 +1,5 @@
 <template>
-  <main role="main" id="main">
+  <main id="main">
     <h1 id="about_heading">{{ $t("aboutPage.title") }}</h1>
     <p>{{ $t("aboutPage.description") }}</p>
     <section class="toc" id="about:toc" aria-labelledby="about:toc_heading">

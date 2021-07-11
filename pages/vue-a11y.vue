@@ -1,5 +1,5 @@
 <template>
-  <main role="main" id="main">
+  <main id="main">
     <vuejs-accessibility-sections-title />
     <global-local-switch />
     <vuejs-accessibility-sections-bio />
