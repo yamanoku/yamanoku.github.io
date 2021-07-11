@@ -8,8 +8,8 @@
     </h3>
     <p>{{ $t("aboutPage.overdesign.desc01") }}</p>
     <p>{{ $t("aboutPage.overdesign.desc02") }}</p>
-    <ul role="list">
-      <li role="listitem">
+    <ul>
+      <li>
         <a
           href="//motherfuckingwebsite.com/"
           target="_blank"

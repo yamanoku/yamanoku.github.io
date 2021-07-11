@@ -24,14 +24,14 @@
       </figcaption>
     </figure>
     <h4 id="related:oclock-app_heading">{{ $t("heading.relatedList") }}</h4>
-    <ul role="list" aria-labelledby="related:oclock-app_heading">
-      <li role="listitem">
+    <ul aria-labelledby="related:oclock-app_heading">
+      <li>
         <a href="https://yamanoku.net/oclock/" target="_blank" rel="noopener">
           {{ $t("product.oclock-app.title") }}
           <open-new-icon />
         </a>
       </li>
-      <li role="listitem">
+      <li>
         <a
           href="https://zenn.dev/yamanoku/scraps/bb713d47a45a55/"
           target="_blank"
@@ -43,10 +43,10 @@
       </li>
     </ul>
     <h4 id="teck-stack:oclock-app_heading">{{ $t("heading.techStack") }}</h4>
-    <ul role="list" aria-labelledby="teck-stack:oclock-app_heading">
-      <li role="listitem">Svelte</li>
-      <li role="listitem">Custom Elements</li>
-      <li role="listitem">WAI-ARIA</li>
+    <ul aria-labelledby="teck-stack:oclock-app_heading">
+      <li>Svelte</li>
+      <li>Custom Elements</li>
+      <li>WAI-ARIA</li>
     </ul>
   </article>
 </template>

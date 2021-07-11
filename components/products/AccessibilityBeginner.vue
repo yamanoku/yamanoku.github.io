@@ -34,11 +34,8 @@
     <h4 id="related:web-accessibility-for-beginner_heading">
       {{ $t("heading.relatedList") }}
     </h4>
-    <ul
-      role="list"
-      aria-labelledby="related:web-accessibility-for-beginner_heading"
-    >
-      <li role="listitem">
+    <ul aria-labelledby="related:web-accessibility-for-beginner_heading">
+      <li>
         <a
           href="https://techbookfest.org/event/tbf05/circle/41130001"
           target="_blank"
@@ -48,7 +45,7 @@
           <open-new-icon />
         </a>
       </li>
-      <li role="listitem">
+      <li>
         <a
           href="https://booth.pm/ja/items/1044446"
           target="_blank"
@@ -58,7 +55,7 @@
           <shopping-icon />
         </a>
       </li>
-      <li role="listitem">
+      <li>
         <a
           href="https://note.mu/yamanoku/n/n3487a344ff84"
           target="_blank"

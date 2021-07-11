@@ -3,28 +3,28 @@
     <h3 id="about:tech-stack_heading">
       {{ $t("heading.techStack") }}
     </h3>
-    <ul role="list" lang="en">
-      <li role="listitem">
+    <ul lang="en">
+      <li>
         Nuxt.js
-        <ul role="list">
-          <li role="listitem">@nuxt/content</li>
-          <li role="listitem">@nuxtjs/axios</li>
-          <li role="listitem">@nuxtjs/dotenv</li>
-          <li role="listitem">@nuxtjs/pwa</li>
-          <li role="listitem">nuxt-i18n</li>
+        <ul>
+          <li>@nuxt/content</li>
+          <li>@nuxtjs/axios</li>
+          <li>@nuxtjs/dotenv</li>
+          <li>@nuxtjs/pwa</li>
+          <li>nuxt-i18n</li>
         </ul>
       </li>
-      <li role="listitem">Vuex （Store）</li>
-      <li role="listitem">
+      <li>Vuex （Store）</li>
+      <li>
         eslint
-        <ul role="list">
-          <li role="listitem">eslint-plugin-prettier</li>
-          <li role="listitem">eslint-plugin-vue</li>
-          <li role="listitem">eslint-plugin-vuejs-accessibility</li>
+        <ul>
+          <li>eslint-plugin-prettier</li>
+          <li>eslint-plugin-vue</li>
+          <li>eslint-plugin-vuejs-accessibility</li>
         </ul>
       </li>
-      <li role="listitem">modern-normalize</li>
-      <li role="listitem">Google Fonts</li>
+      <li>modern-normalize</li>
+      <li>Google Fonts</li>
     </ul>
   </section>
 </template>
