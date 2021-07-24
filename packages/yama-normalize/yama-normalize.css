@@ -22,8 +22,8 @@
   /* Semantics Tokens */
   --y-body-background: var(--y-white-base);
   --y-body-text-color: var(--y-black-base);
-  --y-link-color: var(--y-blue-low);
-  --y-link-visited-color: var(--y-blue-medium);
+  --y-link-color: var(--y-blue-medium);
+  --y-link-visited-color: var(--y-black-base);
   --y-outline-color: var(--y-blue-low);
   --y-arcticle-border-color: var(--y-white-medium);
   --y-hr-border-color: var(--y-white-medium);
