@@ -84,9 +84,7 @@ a:visited {
     text-shadow: 1px 1px 0 var(--y-text-shadow-color), 0 1px 0 var(--y-text-shadow-color);
   }
 }
-header,
-main,
-footer {
+:where(header, main, footer) {
   display: block;
   max-width: 80ch;
   margin: auto;
@@ -159,19 +157,23 @@ figcaption {
 small {
   line-height: 1;
 }
-ul:not([class]) {
+ul, ol {
   margin: var(--y-rhythm-3) 0;
   line-height: 1;
   padding-left: var(--y-rhythm-2);
-  list-style-type: none;
-  position: relative;
 }
-ul:not([class]) ul {
+ul ul, ul ol,
+ol ol, ol ul {
   margin: 0;
 }
-ul:not([class]) li {
+ul li,
+ol li {
   line-height: var(--y-rhythm-3);
   font-size: 1rem;
+}
+ul:not([class]) {
+  list-style-type: none;
+  position: relative;
 }
 ul:not([class]) li::before {
   background-color: var(--y-list-mark-color);
@@ -183,18 +185,6 @@ ul:not([class]) li::before {
   margin: 9px 0 0;
   position: absolute;
   left: 0;
-}
-ol:not([class]) {
-  margin: var(--y-rhythm-3) 0;
-  line-height: 1;
-  padding-left: var(--y-rhythm-2);
-}
-ol:not([class]) ol {
-  margin: 0;
-}
-ol:not([class]) li {
-  line-height: var(--y-rhythm-3);
-  font-size: 1rem;
 }
 details > summary {
   margin: var(--y-rhythm-3) 0;
