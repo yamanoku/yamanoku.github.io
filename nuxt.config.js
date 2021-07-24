@@ -50,7 +50,7 @@ module.exports = {
       }
     ]
   },
-  css: ["modern-normalize", "yama-normalize"],
+  css: ["modern-normalize", "~/packages/yama-normalize"],
   buildModules: ["@nuxt/components"],
   components: [
     "~/components/",
