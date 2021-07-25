@@ -24,11 +24,11 @@
 header {
   max-width: 80ch;
   margin: auto;
-  padding: 0 calc(var(--rhythm) * 2);
+  padding: 0 var(--y-rhythm-2);
 }
 a {
   display: block;
-  margin: calc(var(--rhythm) * 2) 0;
+  margin: var(--y-rhythm-2) 0;
   width: 48px;
   height: 48px;
 }
@@ -43,7 +43,7 @@ svg {
 }
 @media (prefers-color-scheme: dark) {
   .cls-1 {
-    fill: var(--white);
+    fill: var(--y-white-base);
   }
 }
 </style>

@@ -30,11 +30,11 @@ export default {
 
 <style scoped>
 footer {
-  padding: calc(var(--rhythm) * 3);
+  padding: var(--y-rhythm-3);
   text-align: center;
 }
 footer p {
   font-size: 1rem;
-  line-height: calc(var(--rhythm) * 3);
+  line-height: var(--y-rhythm-3);
 }
 </style>

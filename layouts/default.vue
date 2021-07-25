@@ -66,11 +66,11 @@ ul:not([class]) li svg {
   margin: 0 0 -1px 4px;
 }
 svg path {
-  fill: var(--black);
+  fill: var(--y-black-base);
 }
 @media (prefers-color-scheme: dark) {
   svg path {
-    fill: var(--white);
+    fill: var(--y-white-base);
   }
 }
 svg .product-2,
@@ -86,18 +86,18 @@ address svg {
   margin: 0 0 -1px 4px;
 }
 address svg path {
-  fill: var(--black);
+  fill: var(--y-black-base);
 }
 @media (prefers-color-scheme: dark) {
   address svg path {
-    fill: var(--white);
+    fill: var(--y-white-base);
   }
 }
 address svg .mail-2 {
   fill: none;
 }
 code.hljs {
-  padding: calc(var(--rhythm) * 3);
+  padding: var(--y-rhythm-3);
 }
 img {
   height: auto;

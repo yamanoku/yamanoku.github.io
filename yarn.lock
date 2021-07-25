@@ -14930,11 +14930,6 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-yama-normalize@0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/yama-normalize/-/yama-normalize-0.0.11.tgz#33f59f900c45425d65ad3635468c341feb4b94cf"
-  integrity sha512-SVIMBX52+s0xzsmL6P3eLHUECC4cJ3+HNiCeIs6+Ap4caiF5L833oHpduJhR1cqkbO+YO7CyyHmwbn/pv/rsJQ==
-
 yaml-loader@0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/yaml-loader/-/yaml-loader-0.6.0.tgz#fe1c48b9f4803dace55a59a1474e790ba6ab1b48"

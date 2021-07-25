@@ -18,26 +18,26 @@
 <style scoped>
 nav {
   max-width: 80ch;
-  margin: calc(var(--rhythm) * 3) auto;
-  padding: 0 calc(var(--rhythm) * 2);
+  margin: var(--y-rhythm-3) auto;
+  padding: 0 var(--y-rhythm-2);
 }
 nav ul.global {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  margin: calc(var(--rhythm) / 2 * -1);
+  margin: calc(var(--y-rhythm-base) / 2 * -1);
   padding: 0;
 }
 nav ul.global li {
-  margin: calc(var(--rhythm) / 2);
+  margin: calc(var(--y-rhythm-base) / 2);
 }
 nav ul.global li a.nuxt-link-exact-active {
   text-decoration: none;
-  color: var(--linkBlue);
+  color: var(--y-link-color);
 }
 @media (prefers-color-scheme: dark) {
   nav ul.global li a.nuxt-link-exact-active {
-    color: var(--blue);
+    color: var(--y-blue-low);
   }
 }
 </style>

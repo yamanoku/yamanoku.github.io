@@ -118,12 +118,12 @@ export default {
 
 <style scoped>
 .toc {
-  border-left: 8px solid var(--gray);
-  padding-left: calc(var(--rhythm) * 3);
+  border-left: 8px solid var(--y-white-medium);
+  padding-left: calc(var(--y-rhythm-base) * 3);
 }
 @media (prefers-color-scheme: dark) {
   .toc {
-    border-left: 8px solid var(--white);
+    border-left: 8px solid var(--y-white-low);
   }
 }
 </style>
