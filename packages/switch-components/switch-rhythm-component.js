@@ -32,7 +32,7 @@ createComponent(
         }
         @media (prefers-color-scheme: dark) {
           switch-rhythm button {
-            color: var(--y-white-base);
+            color: var(--y-white-low);
           }
         }
         switch-rhythm button:active {
@@ -58,7 +58,7 @@ createComponent(
         }
 
         switch-rhythm button span:before {
-          background: var(--y-white-base);
+          background: var(--y-white-low);
           border-radius: var(--y-rhythm-3);
           height: var(--y-rhythm-3);
           right: 0.25em;
