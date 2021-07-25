@@ -31,7 +31,6 @@ product:
   oclock-app:
     title: "O'clock App"
     zenn: "解説記事"
-  designFigma: "Product Design - Figma"
   updateInfo: "更新情報"
   description:
     wafb: "技術書典5にて発表。Webアクセシビリティはどういった対応があるのか、マシンリーダブルとヒューマンリーダブル、WAI-ARIAについて、求められるアクセシビリティを意識したWebページなど、エンジニアだけでなくWebに関わるすべての人に見てもらいたい一冊です。（アクセシビリティとは、近づきやすさやアクセスのしやすさのこと）"
