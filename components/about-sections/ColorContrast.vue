@@ -14,15 +14,15 @@
       <p>{{ $t("aboutPage.contrast.desc02") }}</p>
       <dl aria-labelledby="about:color-contrast_heading">
         <div
-          v-for="color in colors"
-          :key="color.name"
-          :style="'background-color:' + color.value"
+          v-for="token in baseTokens"
+          :key="token.name"
+          :style="'background-color:' + token.value"
         >
-          <dt :style="color.colorWhiteFlag ? 'color: #fff' : ''">
-            {{ color.name }}
+          <dt :style="token.colorWhiteFlag ? 'color: #fff' : ''">
+            {{ token.name }}
           </dt>
-          <dd :style="color.colorWhiteFlag ? 'color: #fff' : ''">
-            {{ color.value }}
+          <dd :style="token.colorWhiteFlag ? 'color: #fff' : ''">
+            {{ token.value }}
           </dd>
         </div>
       </dl>
@@ -35,42 +35,42 @@
 export default {
   data() {
     return {
-      colors: [
+      baseTokens: [
         {
-          name: "var(--black)",
+          name: "var(--y-black-base)",
           value: "rgb(21, 32, 43)",
           colorWhiteFlag: true
         },
         {
-          name: "var(--white)",
+          name: "var(--y-white-base)",
+          value: "rgb(255, 255, 255)",
+          colorWhiteFlag: false
+        },
+        {
+          name: "var(--y-white-low)",
           value: "rgb(210, 210, 210)",
           colorWhiteFlag: false
         },
         {
-          name: "var(--gray)",
-          value: "rgba(70, 70, 70, 0.5)",
+          name: "var(--y-white-medium)",
+          value: "rgba(163, 163, 163)",
           colorWhiteFlag: false
         },
         {
-          name: "var(--blue)",
+          name: "var(--y-blue-low)",
           value: "rgb(90, 190, 255)",
           colorWhiteFlag: false
         },
         {
-          name: "var(--purple)",
-          value: "rgb(220, 100, 220)",
-          colorWhiteFlag: false
-        },
-        {
-          name: "var(--linkBlue)",
+          name: "var(--y-blue-medium)",
           value: "rgb(18, 122, 200)",
           colorWhiteFlag: true
         },
         {
-          name: "var(--linkVisited)",
-          value: "rgb(21, 32, 43)",
-          colorWhiteFlag: true
-        }
+          name: "var(--y-purple-medium)",
+          value: "rgb(220, 100, 220)",
+          colorWhiteFlag: false
+        },
       ]
     };
   }
@@ -79,16 +79,16 @@ export default {
 
 <style scoped>
 dl {
-  padding: calc(var(--rhythm) * 3);
-  margin: 0 calc(-3 * var(--rhythm));
-  color: var(--black);
+  padding: var(--y-rhythm-3);
+  margin: 0 calc(-1 * var(--y-rhythm-3));
+  color: var(--y-black-base);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, auto));
-  background-color: #fff;
+  background-color: var(--y-white-base);
 }
 dl > div {
-  padding: calc(var(--rhythm) * 1.5);
-  background-color: #fff;
+  padding: calc(var(--y-rhythm-base) * 1.5);
+  background-color: var(--y-body-background);
 }
 dl dt {
   font-weight: 700;

@@ -49,11 +49,11 @@ a[target="_blank"] svg .open_new-1 {
   fill: none;
 }
 a[target="_blank"] svg .open_new-2 {
-  fill: var(--black);
+  fill: var(--y-black-base);
 }
 @media (prefers-color-scheme: dark) {
   a[target="_blank"] svg .open_new-2 {
-    fill: var(--white);
+    fill: var(--y-white-low);
   }
 }
 </style>

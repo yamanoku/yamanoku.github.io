@@ -6,6 +6,6 @@
 
 <style scoped>
 div {
-  margin: calc(var(--rhythm) * 3) 0;
+  margin: var(--y-rhythm-3) 0;
 }
 </style>
