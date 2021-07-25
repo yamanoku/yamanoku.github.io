@@ -40,11 +40,12 @@
   :root {
     /* Semantics Tokens */
     --y-body-background: var(--y-black-base);
-    --y-body-text-color: var(--y-white-base);
+    --y-body-text-color: var(--y-white-low);
+    --y-link-color: var(--y-blue-low);
     --y-link-visited-color: var(--y-purple-medium);
-    --y-arcticle-border-color: var(--y-white-base);
-    --y-hr-border-color: var(--y-white-base);
-    --y-list-mark-color: var(--y-white-base);
+    --y-arcticle-border-color: var(--y-white-low);
+    --y-hr-border-color: var(--y-white-low);
+    --y-list-mark-color: var(--y-white-low);
     --y-text-shadow-color: var(--y-black-base);
   }
 }

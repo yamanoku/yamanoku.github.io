@@ -70,7 +70,7 @@ export default {
           name: "var(--y-purple-medium)",
           value: "rgb(220, 100, 220)",
           colorWhiteFlag: false
-        },
+        }
       ]
     };
   }
