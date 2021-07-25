@@ -45,7 +45,7 @@ module.exports = {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     script: [
       {
-        src: "https://unpkg.com/@yamanoku/switch-components@0.0.2/switch-rhythm-component.js",
+        src: "https://unpkg.com/@yamanoku/switch-components@0.1.1/switch-rhythm-component.js",
         type: "module"
       }
     ]
