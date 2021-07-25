@@ -1,8 +1,10 @@
 <template>
   <article id="donate" aria-labelledby="donate_heading">
-    <h2 id="donate_heading">
-      {{ $t("heading.donate") }}
-    </h2>
+    <div>
+      <em id="donate_heading">
+        {{ $t("heading.donate") }}
+      </em>
+    </div>
     <p>
       {{ $t("donate.desc01") }}
     </p>
@@ -47,3 +49,18 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+article {
+  border: 1px solid var(--y-arcticle-border-color);
+  padding-top: var(--y-rhythm-3);
+  padding-left: var(--y-rhythm-3);
+  padding-right: var(--y-rhythm-3);
+}
+article::before {
+  display: none;
+}
+ul {
+  margin-bottom: 0;
+}
+</style>
