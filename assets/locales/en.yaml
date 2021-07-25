@@ -31,7 +31,6 @@ product:
   oclock-app:
     title: "O'clock App"
     zenn: "Explanatory article"
-  designFigma: "Product Design - Figma"
   updateInfo: "Update Information"
   description:
     wafb: "Presented in the 5th technical book fest. I would like to ask not only engineers but also all people involved with the web to see what kind of measures are available for web accessibility, such as machine-readable web pages, human-readable web pages, and WAI-ARIA web pages."

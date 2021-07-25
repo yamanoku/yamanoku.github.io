@@ -36,16 +36,6 @@
           <open-new-icon />
         </a>
       </li>
-      <li>
-        <a
-          href="https://www.figma.com/file/IHsJKRaJXepsqcbX91iQ6YNV/Reading...-Components?node-id=44%3A23"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("product.designFigma") }}
-          <image-icon />
-        </a>
-      </li>
     </ul>
     <h4 id="teck-stack:reading_heading">{{ $t("heading.techStack") }}</h4>
     <ul aria-labelledby="teck-stack:reading_heading">
