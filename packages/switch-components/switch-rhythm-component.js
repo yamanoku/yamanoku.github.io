@@ -10,13 +10,19 @@ createComponent(
     renderer,
     styles() {
       return `
+        switch-rhythm {
+          --y-rhythm-1_05: calc(var(--y-rhythm-base) * 1.05);
+          --y-rhythm-1_25: calc(var(--y-rhythm-base) * 1.25);
+          --y-rhythm-1_75: calc(var(--y-rhythm-base) * 1.75);
+          --y-rhythm-5_25: calc(var(--y-rhythm-base) * 5.25);
+        }
         switch-rhythm button {
           background: none;
           border: none;
           display: block;
           font-size: inherit;
-          margin: calc(var(--rhythm) * 3) 0;
-          line-height: calc(var(--rhythm) * 3);
+          margin: var(--y-rhythm-3) 0;
+          line-height: var(--y-rhythm-3);
           padding: 0;
           position: relative;
           text-align: left;
@@ -26,7 +32,7 @@ createComponent(
         }
         @media (prefers-color-scheme: dark) {
           switch-rhythm button {
-            color: var(--white);
+            color: var(--y-white-base);
           }
         }
         switch-rhythm button:active {
@@ -35,7 +41,7 @@ createComponent(
 
         switch-rhythm button span:before,
         switch-rhythm button span:after {
-          border: 1px solid var(--black);
+          border: 1px solid var(--y-black-base);
           content: "";
           position: absolute;
           top: 50%;
@@ -45,16 +51,16 @@ createComponent(
         switch-rhythm button span:after {
           background: #fff;
           border-radius: 100%;
-          height: calc(var(--rhythm) * 1.75);
-          right: calc(var(--rhythm) * 1.25);
+          height: var(--y-rhythm-1_75);
+          right: var(--y-rhythm-1_25);
           transition: right 0.1825s ease-in-out;
-          width: calc(var(--rhythm) * 1.75);
+          width: var(--y-rhythm-1_75);
         }
 
         switch-rhythm button span:before {
-          background: var(--white);
-          border-radius: calc(var(--rhythm) * 3);
-          height: calc(var(--rhythm) * 3);
+          background: var(--y-white-base);
+          border-radius: var(--y-rhythm-3);
+          height: var(--y-rhythm-3);
           right: 0.25em;
           transition: background 0.2s ease-in-out;
           width: 2.75em;
@@ -65,22 +71,22 @@ createComponent(
         }
 
         switch-rhythm button[aria-checked="true"] span:after {
-          right: calc(var(--rhythm) * 1.05);
+          right: var(--y-rhythm-1_05);
         }
 
         switch-rhythm button[aria-checked="true"] span:before {
-          background: var(--linkBlue);
+          background: var(--y-blue-medium);
         }
 
         switch-rhythm button .show-labels:before {
-          color: var(--black);
+          color: var(--y-black-base);
           line-height: 1.6;
           text-indent: 1.625em;
           width: 3.5em;
         }
 
         switch-rhythm button[aria-checked="false"] .show-labels:after {
-          right: calc(var(--rhythm) * 5.25);
+          right: var(--y-rhythm-5_25);
         }
 
         @media screen and (-ms-high-contrast: active) {
