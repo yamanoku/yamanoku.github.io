@@ -38,16 +38,6 @@
           <open-new-icon />
         </a>
       </li>
-      <li>
-        <a
-          href="https://www.figma.com/file/4yN9uOXGISbSTocH23EX8O/vue_portfolio_template-Style?node-id=0%3A1"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("product.designFigma") }}
-          <image-icon />
-        </a>
-      </li>
     </ul>
     <h4 id="tech-stack:vue-portfolio_heading">{{ $t("heading.techStack") }}</h4>
     <ul aria-labelledby="tech-stack:vue-portfolio_heading">
