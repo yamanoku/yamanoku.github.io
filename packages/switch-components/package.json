@@ -1,6 +1,6 @@
 {
   "name": "@yamanoku/switch-components",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "yamanoku.net use switch components",
   "main": "switch-rhythm-component.js",
   "scripts": {
