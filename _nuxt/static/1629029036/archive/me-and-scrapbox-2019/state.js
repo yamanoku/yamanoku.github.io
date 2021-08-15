@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1629029036",layout:"default",error:a,state:{rhythm:{toggleRhythm:false},i18n:{routeParams:{}}},serverRendered:true,routePath:"\u002Farchive\u002Fme-and-scrapbox-2019",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"544d03f7"}},__i18n:{langs:{}}}}(null));
