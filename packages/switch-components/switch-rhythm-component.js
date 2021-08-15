@@ -29,6 +29,8 @@ createComponent(
           transition: box-shadow 0.2s ease-in-out;
           width: 100%;
           cursor: pointer;
+          user-select: none;
+          -webkit-tap-highlight-color: transparent;
         }
         @media (prefers-color-scheme: dark) {
           switch-rhythm button {
