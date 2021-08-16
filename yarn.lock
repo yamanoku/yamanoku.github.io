@@ -2453,20 +2453,20 @@
     "@markuplint/parser-utils" "^1.3.0"
     parse5 "^6.0.1"
 
-"@markuplint/html-parser@^1.7.2":
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-1.7.2.tgz#be745004f3253084d3a84feb3ed468ab0979da59"
-  integrity sha512-eNxBfQwEzfW7GFX079+iKnr0xlDfmDC8VQu5OEsdA0q2kvyWtk3UOwBR2zP51fpbvOSA4XZfV7vj7jhZMYhDxw==
+"@markuplint/html-parser@^1.7.3":
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-1.7.3.tgz#d3e9497311ea18f89f23b62210ec3413dc668b4f"
+  integrity sha512-WrpePphZLA6G4R3kNlIiiBBxeDVvBa0p2GI+WGMxMQZQYr9/1KAQFNNhwcBhySVGIsd5hW9fm8SysjCgF+K7Cw==
   dependencies:
     "@markuplint/ml-ast" "^1.6.0"
-    "@markuplint/parser-utils" "^1.6.2"
+    "@markuplint/parser-utils" "^1.6.3"
     parse5 "^6.0.1"
     tslib "^2.3.0"
 
-"@markuplint/html-spec@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-1.8.0.tgz#63c871ae7f525c868301a322b0f29499f5ff9050"
-  integrity sha512-d4Omkt5Yx4sHVtHL6PFDBtp04dzD5XdYOUurpGkcIBLk9QExpQMaVlpM4x4RJSMypw+aKopYnkyidHFMSbksKg==
+"@markuplint/html-spec@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-1.8.1.tgz#c018b1d0f303bc0ef92353c00fe3d5823327179f"
+  integrity sha512-KOBOjJuyjTCcwpkAP1mWk2ZmQJqUKNYCs5bYHAH1RQbtA8y41KGY1ffZJT82cxv60Ue3ljzkucG1Q/ob8Lu4vg==
   dependencies:
     "@markuplint/ml-spec" "^1.7.0"
 
@@ -2524,21 +2524,21 @@
     "@markuplint/ml-ast" "^1.4.0"
     uuid "^8.3.2"
 
-"@markuplint/parser-utils@^1.6.2":
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-1.6.2.tgz#ad2e03ed402c2315a0c3c1445d6e70fb7e2d73d3"
-  integrity sha512-kz4Cb9PISeqfLicNWYXkqn4+Sw1o0PQtYUsBuwZP7z2k8twZhT5vWCP+mzTWoN9zsk9zCh2sZSWEELv4UDOMdQ==
+"@markuplint/parser-utils@^1.6.3":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-1.6.3.tgz#a801aa49c9bb4f370ae337ab1b02e0ffa7db8e62"
+  integrity sha512-thtarMmaMB1cKZqOJ9Ts6tO9C/h6qX5cpvSPaFTBngDtdOfMpNfll/Vcav7W9KouzkqB0q8hzq4ksEazT/cOKw==
   dependencies:
     "@markuplint/ml-ast" "^1.6.0"
     tslib "^2.3.0"
     uuid "^8.3.2"
 
-"@markuplint/rules@^1.10.2":
-  version "1.10.2"
-  resolved "https://registry.yarnpkg.com/@markuplint/rules/-/rules-1.10.2.tgz#aa773b67c8ba483922c548a250a12f83c5cb9cbe"
-  integrity sha512-oUcgUC98aB4QDKVqoWmV7T0ClDJW0vVOQWARtT6pjeviXIqOu9Eqh7JKWFyxxUo5GYtNreRwv+SBUlG90uoi3A==
+"@markuplint/rules@^1.10.3":
+  version "1.10.3"
+  resolved "https://registry.yarnpkg.com/@markuplint/rules/-/rules-1.10.3.tgz#8f6deac5c8a096d21cb77f232c729e6800ad4930"
+  integrity sha512-iK9PbZZhHJOZTO+PRVxUIyIqKiAwPv7YHGORc4eDjriIEUGaBHg1iZA4HAfTckCjY/EU4n9MlGIsmmgAShs8Tw==
   dependencies:
-    "@markuplint/html-spec" "^1.8.0"
+    "@markuplint/html-spec" "^1.8.1"
     "@markuplint/ml-core" "^1.9.0"
     "@markuplint/ml-spec" "^1.7.0"
     tslib "^2.3.0"
@@ -9308,20 +9308,20 @@ markdown-table@^2.0.0:
   dependencies:
     repeat-string "^1.0.0"
 
-markuplint@1.11.2:
-  version "1.11.2"
-  resolved "https://registry.yarnpkg.com/markuplint/-/markuplint-1.11.2.tgz#bf58e20f12cabe3866bcae41f2943f709cc5d532"
-  integrity sha512-NbIPqX3VAdNlVnjXABBJ3CJHUQF/dHBq5eAjNRJa5EkuHl90T2FY3jPL6YElwl4Ak2/Mv82yApe4wzh/MAUlJA==
+markuplint@1.11.3:
+  version "1.11.3"
+  resolved "https://registry.yarnpkg.com/markuplint/-/markuplint-1.11.3.tgz#5548c8968f2494d0951633b5766d2f44743613f8"
+  integrity sha512-rTSzATcdNQyNEnluahP4ODwpjBnQpAje+J4a5RlwT0emOpMu8p22KHszkcTprrTaKpPoNy8drc0G9A3onVUODA==
   dependencies:
     "@markuplint/file-resolver" "^1.5.0"
-    "@markuplint/html-parser" "^1.7.2"
-    "@markuplint/html-spec" "^1.8.0"
+    "@markuplint/html-parser" "^1.7.3"
+    "@markuplint/html-spec" "^1.8.1"
     "@markuplint/i18n" "^1.2.0"
     "@markuplint/ml-ast" "^1.6.0"
     "@markuplint/ml-config" "^1.3.0"
     "@markuplint/ml-core" "^1.9.0"
     "@markuplint/ml-spec" "^1.7.0"
-    "@markuplint/rules" "^1.10.2"
+    "@markuplint/rules" "^1.10.3"
     cli-color "^2.0.0"
     detect-installed "^2.0.4"
     eastasianwidth "^0.2.0"
