@@ -62,6 +62,11 @@ export default {
       ],
       listWrite: [
         {
+          title: "生まれ変わったログインページにまつわるフロントエンド開発の話",
+          url: "https://engineer.crowdworks.jp/entry/renewal-login",
+          datetime: "2021-08-18T18:00:00.000Z"
+        },
+        {
           title: "UI の実装で考えていること, 気をつけたいこと",
           url: "https://zenn.dev/yamanoku/articles/c69decedfb1699",
           datetime: "2020-12-09T18:00:00.000Z"
