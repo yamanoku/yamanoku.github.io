@@ -30,7 +30,8 @@ export default {
     return {
       listStage: [
         {
-          title: "HTML だけで UI を作る限界、あるいは無理なくユースケースと向き合っていくためには",
+          title:
+            "HTML だけで UI を作る限界、あるいは無理なくユースケースと向き合っていくためには",
           url: "https://docs.google.com/presentation/d/e/2PACX-1vRfZCfZpjvKndrrHZYH4QQsMM8JwcRYCbYlgeIaJxEQdvz5BbWFx2pKv2ctZ1KT8CTztpC-hR1n6vIO/pub?start=false&loop=false&delayms=3000",
           datetime: "2021-09-15T21:38:00.000Z"
         },
