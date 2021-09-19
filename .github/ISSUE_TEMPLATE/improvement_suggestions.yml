@@ -1,0 +1,46 @@
+name: 改善提案 / Improvement Suggestions
+description: '「こうするとサイトがもっとよくなる」といった提案がある場合 / If you have a suggestion, such as "This would make the site better"'
+title: "Improvement : "
+labels: [improvement]
+body:
+  - type: input
+    id: input-1
+    attributes:
+      label: 改善詳細 / Details of Improvement
+      description: できるだけ簡潔に / as concise as possible
+    validations:
+      required: true
+  - type: textarea
+    id: textarea-1
+    attributes:
+      label: スクリーンショット / Screenshot
+      description: |
+        参考となる画像や動画があれば添付ください / Images or videos for reference, please attach them.
+  - type: textarea
+    id: textarea-2
+    attributes:
+      label: 期待する見せ方・挙動 / Expected Behavior
+      description: 「何」が「どうなってほしいか」を記載 / Describe "what" and "how" you want it to happen.
+    validations:
+      required: true
+  - type: dropdown
+    id: dropdown-1
+    attributes:
+      label: OS
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - iOS
+        - Android
+      multiple: true
+  - type: dropdown
+    id: dropdown-2
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Safari
+        - Firefox
+        - Microsoft Edge
+      multiple: true

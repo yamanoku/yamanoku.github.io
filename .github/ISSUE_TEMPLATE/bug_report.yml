@@ -1,0 +1,55 @@
+name: バグ報告 / Bug Report
+description: "既存のWebサイトに不具合がある場合・更新しなければならない問題を報告 / Report any problems with the existing site or issues that need to be updated"
+title: "Bug : "
+labels: [bug]
+body:
+  - type: input
+    id: input-1
+    attributes:
+      label: 起こっている問題 / The Problem
+      description: できるだけ簡潔に / as concise as possible
+    validations:
+      required: true
+  - type: textarea
+    id: textarea-1
+    attributes:
+      label: スクリーンショット / Screenshot
+      description: |
+        バグであればdeveloper toolからコンソールも合わせて添付 / If it's a bug, attach a screenshot of the developer tool console
+  - type: textarea
+    id: textarea-2
+    attributes:
+      label: 期待する見せ方・挙動 / Expected Behavior
+      description: 「何」が「どうなってほしいか」を記載 / Describe "what" and "how" you want it to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: textarea-3
+    attributes:
+      label: 起こっている問題の再現手段 / Steps to Reproduce
+      description: |
+        できるだけ詳細に / as detailed as possible
+        1. xxx
+        2. xxx
+        3. xxx
+  - type: dropdown
+    id: dropdown-1
+    attributes:
+      label: OS
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - iOS
+        - Android
+      multiple: true
+  - type: dropdown
+    id: dropdown-2
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Safari
+        - Firefox
+        - Microsoft Edge
+      multiple: true
