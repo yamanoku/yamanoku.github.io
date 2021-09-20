@@ -6,7 +6,6 @@ yamanoku.net default style
 
 ## Case
 - https://yamanoku.net
-- https://nagareyama.yamanoku.net
 - https://archives.yamanoku.net/
 - https://yamanoku.deno.dev/
 
