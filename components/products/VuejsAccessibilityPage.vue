@@ -1,51 +1,51 @@
 <template>
   <article
-    id="product:about-accessibility-with-vuejs"
-    aria-labelledby="product:about-accessibility-with-vuejs_heading"
+    id="product:about-accessibility-with-vuejs-2019"
+    aria-labelledby="product:about-accessibility-with-vuejs-2019_heading"
   >
-    <h3 id="product:about-accessibility-with-vuejs_heading">
-      {{ $t("product.vueA11yPage.title") }}
+    <h3 id="product:about-accessibility-with-vuejs-2019_heading">
+      {{ $t("product.vueA11yPage2019.title") }}
     </h3>
     <figure
-      aria-labelledby="product:about-accessibility-with-vuejs_heading"
-      aria-describedby="product:about-accessibility-with-vuejs_caption"
+      aria-labelledby="product:about-accessibility-with-vuejs-2019_heading"
+      aria-describedby="product:about-accessibility-with-vuejs-2019_caption"
     >
       <picture>
         <source
-          srcset="~/assets/img/product-about-accessibility-with-vuejs.webp"
+          srcset="~/assets/img/product-about-accessibility-with-vuejs-2019.webp"
           type="image/webp"
         />
         <img
-          src="~/assets/img/product-about-accessibility-with-vuejs.png"
+          src="~/assets/img/product-about-accessibility-with-vuejs-2019.png"
           width="688"
           height="498"
-          :alt="$t('prefixAlt.photo') + $t('product.vueA11yPage.title')"
+          :alt="$t('prefixAlt.photo') + $t('product.vueA11yPage2019.title')"
         />
       </picture>
-      <figcaption id="product:about-accessibility-with-vuejs_caption">
-        {{ $t("product.description.vueA11yPage") }}
+      <figcaption id="product:about-accessibility-with-vuejs-2019_caption">
+        {{ $t("product.description.vueA11yPage2019") }}
       </figcaption>
     </figure>
     <p>
-      <nuxt-link :to="localePath('/vue-a11y')">
-        {{ $t("product.vueA11yPage.link") }}
+      <nuxt-link :to="localePath('/vue-a11y-2019')">
+        {{ $t("product.vueA11yPage2019.link") }}
       </nuxt-link>
     </p>
     <section
-      id="product:about-accessibility-with-vuejs_information"
-      aria-labelledby="product:about-accessibility-with-vuejs_subheading"
+      id="product:about-accessibility-with-vuejs-2019_information"
+      aria-labelledby="product:about-accessibility-with-vuejs-2019_subheading"
     >
-      <h4 id="product:about-accessibility-with-vuejs_subheading">
-        {{ $t("vueA11yPage.subHeading.info") }}
+      <h4 id="product:about-accessibility-with-vuejs-2019_subheading">
+        {{ $t("vueA11yPage2019.subHeading.info") }}
       </h4>
       <ul>
         <li>
           <span class="time">2019/12/21</span>
-          {{ $t("product.vueA11yPage.info.listitem01") }}
+          {{ $t("product.vueA11yPage2019.info.listitem01") }}
         </li>
         <li>
           <span class="time">2020/02/28</span>
-          <i18n path="product.vueA11yPage.info.listitem02">
+          <i18n path="product.vueA11yPage2019.info.listitem02">
             <template v-slot:awesomeA11yVue>
               <a
                 href="https://github.com/vue-a11y/awesome-a11y-vue/pull/3"
@@ -59,7 +59,11 @@
         </li>
         <li>
           <span class="time">2020/05/03</span>
-          {{ $t("product.vueA11yPage.info.listitem03") }}
+          {{ $t("product.vueA11yPage2019.info.listitem03") }}
+        </li>
+        <li>
+          <span class="time">2021/09/20</span>
+          {{ $t("product.vueA11yPage2019.info.listitem04") }}
         </li>
       </ul>
     </section>

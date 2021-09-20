@@ -21,13 +21,14 @@ product:
     noteLink: "Sales page on note"
   reading: "Reading..."
   vuePortfolio: "Vue Portfolio Template"
-  vueA11yPage:
-    title: "About accessibility with Vue.js"
-    link: "Article about accessibility with Vue.js"
+  vueA11yPage2019:
+    title: "About accessibility with Vue.js - 2019"
+    link: "Article about accessibility with Vue.js - 2019"
     info:
       listitem01: "Published."
       listitem02: "Posted on {awesomeA11yVue}"
       listitem03: "Added english page"
+      listitem04: "Changed URL (vue-a11y -> vue-a11y-2019)"
   oclock-app:
     title: "O'clock App"
     zenn: "Explanatory article"
@@ -36,7 +37,7 @@ product:
     wafb: "Presented in the 5th technical book fest. I would like to ask not only engineers but also all people involved with the web to see what kind of measures are available for web accessibility, such as machine-readable web pages, human-readable web pages, and WAI-ARIA web pages."
     reading: "I came up with the idea of accumulating and visualizing information about what would happen if I collected and summarized the news that I always watch. It incorporates PWA technology so that it can also be viewed as an offline application."
     vuePortfolio: "Portfolio template made by Vue.js. This is the first SPA created from vue cli. I used the Vue 1.0 versions at first, but now I can upgrade it to the Vue 3.0 versions."
-    vueA11yPage: "Created with the motivation to make people aware of accessibility in Vue.js development. Initially, it was put together as a presentation for a conference and later as an advent calendar article, but we are updating it on time to make it a more practical reference and functional document."
+    vueA11yPage2019: "Created with the motivation to make people aware of accessibility in Vue.js development. Initially, it was put together as a presentation for a conference and later as an advent calendar article, but we are updating it on time to make it a more practical reference and functional document."
     oclock-app: "Using Svelte, a digital clock that can see up to the second in PWA. I make it possible to check any OS that can do Web browsing. It took about half a day to implement, including setup. Consideration is also given to screen readers using WAI-ARIA."
 sns:
   tumblr:
@@ -106,8 +107,8 @@ aboutPage:
   verticalRhythm:
     desc01: "We use vertical rhythm that emphasizes consistency throughout the page. The margins and margins are set relative to the line spacing of 24px."
     desc02: "Cognitively impaired users can read text more easily if the words are evenly spaced."
-vueA11yPage:
-  title: "About accessibility with Vue.js"
+vueA11yPage2019:
+  title: "About accessibility with Vue.js - 2019"
   description: "This post is from day 21 of the Web Accessibility Advent Calendar 2019. This article is about web accessibility support in Vue.js development."
   heading:
     bio: "Profile"
@@ -275,7 +276,8 @@ vueA11yPage:
       "We still have a lot of work to do, and it's a difficult field to advance, but I hope that this circle will expand little by little. Because “Accessibility” is acceptable to any person."
   feedback:
     github:
-      linkTitle: "Request for correction of the article “About accessibility with Vue.js”"
+      linkTitle: "Request for correction of the article “About accessibility with Vue.js - 2019”"
+  moveUrlText: "This page has been moved to {moveUrl}."
 archivePage:
   title: "Archive"
   externalLink: "If you are looking for content older than 1 year, please visit {title} page."
