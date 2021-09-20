@@ -1,5 +1,5 @@
 <template>
-  <section id="bio:about-accessibility-with-vuejs">
+  <section id="bio:about-accessibility-with-vuejs-2019">
     <h2>{{ $t("vueA11yPage2019.heading.bio") }}</h2>
     <p>
       <picture>

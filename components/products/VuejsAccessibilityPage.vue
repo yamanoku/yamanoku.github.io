@@ -1,14 +1,14 @@
 <template>
   <article
-    id="product:about-accessibility-with-vuejs"
-    aria-labelledby="product:about-accessibility-with-vuejs_heading"
+    id="product:about-accessibility-with-vuejs-2019"
+    aria-labelledby="product:about-accessibility-with-vuejs-2019_heading"
   >
-    <h3 id="product:about-accessibility-with-vuejs_heading">
+    <h3 id="product:about-accessibility-with-vuejs-2019_heading">
       {{ $t("product.vueA11yPage2019.title") }}
     </h3>
     <figure
-      aria-labelledby="product:about-accessibility-with-vuejs_heading"
-      aria-describedby="product:about-accessibility-with-vuejs_caption"
+      aria-labelledby="product:about-accessibility-with-vuejs-2019_heading"
+      aria-describedby="product:about-accessibility-with-vuejs-2019_caption"
     >
       <picture>
         <source
@@ -22,7 +22,7 @@
           :alt="$t('prefixAlt.photo') + $t('product.vueA11yPage2019.title')"
         />
       </picture>
-      <figcaption id="product:about-accessibility-with-vuejs_caption">
+      <figcaption id="product:about-accessibility-with-vuejs-2019_caption">
         {{ $t("product.description.vueA11yPage2019") }}
       </figcaption>
     </figure>
@@ -32,10 +32,10 @@
       </nuxt-link>
     </p>
     <section
-      id="product:about-accessibility-with-vuejs_information"
-      aria-labelledby="product:about-accessibility-with-vuejs_subheading"
+      id="product:about-accessibility-with-vuejs-2019_information"
+      aria-labelledby="product:about-accessibility-with-vuejs-2019_subheading"
     >
-      <h4 id="product:about-accessibility-with-vuejs_subheading">
+      <h4 id="product:about-accessibility-with-vuejs-2019_subheading">
         {{ $t("vueA11yPage2019.subHeading.info") }}
       </h4>
       <ul>

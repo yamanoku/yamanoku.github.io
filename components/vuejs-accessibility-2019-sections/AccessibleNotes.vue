@@ -1,5 +1,5 @@
 <template>
-  <section id="web-accessibility-notes:about-accessibility-with-vuejs">
+  <section id="web-accessibility-notes:about-accessibility-with-vuejs-2019">
     <h2>{{ $t("vueA11yPage2019.heading.a11yNote") }}</h2>
     <p>
       {{ $t("vueA11yPage2019.a11yNote.desc01") }}

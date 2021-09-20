@@ -1,5 +1,5 @@
 <template>
-  <section id="web-accessibility:about-accessibility-with-vuejs">
+  <section id="web-accessibility:about-accessibility-with-vuejs-2019">
     <h2>{{ $t("vueA11yPage2019.heading.webA11y") }}</h2>
     <h3>{{ $t("vueA11yPage2019.subHeading.webA11y.title01") }}</h3>
     <i18n tag="p" path="vueA11yPage2019.webA11y.desc01">
