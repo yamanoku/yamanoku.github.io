@@ -276,6 +276,7 @@ vueA11yPage2019:
   feedback:
     github:
       linkTitle: "Request for correction of the article “About accessibility with Vue.js”"
+  moveUrlText: "This page has been moved to {moveUrl}."
 archivePage:
   title: "Archive"
   externalLink: "If you are looking for content older than 1 year, please visit {title} page."

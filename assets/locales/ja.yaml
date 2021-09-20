@@ -230,6 +230,7 @@ vueA11yPage2019:
   feedback:
     github:
       linkTitle: "記事「Vue.jsから考えるアクセシビリティについて」の修正依頼"
+  moveUrlText: "こちらのページは{moveUrl}に移動しました。"
 archivePage:
   title: "アーカイブ"
   externalLink: "1年以上前のコンテンツをお探しの場合、{title}を参照してください。"
