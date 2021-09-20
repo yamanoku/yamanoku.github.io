@@ -28,6 +28,7 @@ product:
       listitem01: "Published."
       listitem02: "Posted on {awesomeA11yVue}"
       listitem03: "Added english page"
+      listitem04: "Changed URL (vue-a11y -> vue-a11y-2019)"
   oclock-app:
     title: "O'clock App"
     zenn: "Explanatory article"

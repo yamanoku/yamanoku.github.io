@@ -61,6 +61,10 @@
           <span class="time">2020/05/03</span>
           {{ $t("product.vueA11yPage2019.info.listitem03") }}
         </li>
+        <li>
+          <span class="time">2021/09/20</span>
+          {{ $t("product.vueA11yPage2019.info.listitem04") }}
+        </li>
       </ul>
     </section>
   </article>
