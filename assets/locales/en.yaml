@@ -22,8 +22,8 @@ product:
   reading: "Reading..."
   vuePortfolio: "Vue Portfolio Template"
   vueA11yPage2019:
-    title: "About accessibility with Vue.js"
-    link: "Article about accessibility with Vue.js"
+    title: "About accessibility with Vue.js - 2019"
+    link: "Article about accessibility with Vue.js - 2019"
     info:
       listitem01: "Published."
       listitem02: "Posted on {awesomeA11yVue}"
@@ -107,7 +107,7 @@ aboutPage:
     desc01: "We use vertical rhythm that emphasizes consistency throughout the page. The margins and margins are set relative to the line spacing of 24px."
     desc02: "Cognitively impaired users can read text more easily if the words are evenly spaced."
 vueA11yPage2019:
-  title: "About accessibility with Vue.js"
+  title: "About accessibility with Vue.js - 2019"
   description: "This post is from day 21 of the Web Accessibility Advent Calendar 2019. This article is about web accessibility support in Vue.js development."
   heading:
     bio: "Profile"
@@ -275,7 +275,7 @@ vueA11yPage2019:
       "We still have a lot of work to do, and it's a difficult field to advance, but I hope that this circle will expand little by little. Because “Accessibility” is acceptable to any person."
   feedback:
     github:
-      linkTitle: "Request for correction of the article “About accessibility with Vue.js”"
+      linkTitle: "Request for correction of the article “About accessibility with Vue.js - 2019”"
   moveUrlText: "This page has been moved to {moveUrl}."
 archivePage:
   title: "Archive"

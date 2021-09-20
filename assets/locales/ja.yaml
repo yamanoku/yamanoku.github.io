@@ -22,8 +22,8 @@ product:
   reading: "Reading..."
   vuePortfolio: "Vue Portfolio Template"
   vueA11yPage2019:
-    title: "Vue.jsから考えるアクセシビリティについて"
-    link: "「Vue.jsから考えるアクセシビリティについて」記事ページ"
+    title: "Vue.jsから考えるアクセシビリティについて - 2019"
+    link: "「Vue.jsから考えるアクセシビリティについて - 2019」記事ページ"
     info:
       listitem01: "公開"
       listitem02: "{awesomeA11yVue}に掲載"
@@ -101,7 +101,7 @@ aboutPage:
     desc01: "ページ全体の一貫性を重視したバーティカルリズムを採用しています。24pxの行間を基準としてマージンや余白などを設定しています。"
     desc02: "認知障害がある利用者は、単語と単語の間隔が均一になっていると、テキストをより容易に読めるようになります。"
 vueA11yPage2019:
-  title: "Vue.jsから考えるアクセシビリティについて"
+  title: "Vue.jsから考えるアクセシビリティについて - 2019"
   description: "こちらは、Webアクセシビリティ Advent Calendar 2019の21日目の記事です。この記事ではVue.js開発におけるWebアクセシビリティ対応にまつわる内容となっております。"
   heading:
     bio: "自己紹介"
@@ -229,7 +229,7 @@ vueA11yPage2019:
     desc10: "まだまだやることが多く、進めづらい分野ではありますが、少しずつでもこの輪が広がればいいなと思っています。アクセシビリティとはいかなる人も受け入れてくれるものなのだから。"
   feedback:
     github:
-      linkTitle: "記事「Vue.jsから考えるアクセシビリティについて」の修正依頼"
+      linkTitle: "記事「Vue.jsから考えるアクセシビリティについて - 2019」の修正依頼"
   moveUrlText: "こちらのページは{moveUrl}に移動しました。"
 archivePage:
   title: "アーカイブ"
