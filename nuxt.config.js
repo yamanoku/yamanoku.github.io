@@ -75,8 +75,8 @@ module.exports = {
       prefix: "sections"
     },
     {
-      path: "~/components/vuejs-accessibility-sections/",
-      prefix: "vuejs-accessibility-sections"
+      path: "~/components/vuejs-accessibility-2019-sections/",
+      prefix: "vuejs-accessibility-2019-sections"
     }
   ],
   build: {

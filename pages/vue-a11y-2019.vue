@@ -1,13 +1,13 @@
 <template>
   <main id="main">
-    <vuejs-accessibility-sections-title />
+    <vuejs-accessibility-2019-sections-title />
     <global-local-switch />
-    <vuejs-accessibility-sections-bio />
-    <vuejs-accessibility-sections-book />
-    <vuejs-accessibility-sections-web-accessibility />
-    <vuejs-accessibility-sections-vue-accessibility />
-    <vuejs-accessibility-sections-accessible-notes />
-    <vuejs-accessibility-sections-conclusion />
+    <vuejs-accessibility-2019-sections-bio />
+    <vuejs-accessibility-2019-sections-book />
+    <vuejs-accessibility-2019-sections-web-accessibility />
+    <vuejs-accessibility-2019-sections-vue-accessibility />
+    <vuejs-accessibility-2019-sections-accessible-notes />
+    <vuejs-accessibility-2019-sections-conclusion />
     <global-feedback-list :feedback="feedback" />
     <hr />
     <global-donate-component />
