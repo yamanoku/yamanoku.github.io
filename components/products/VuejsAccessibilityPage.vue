@@ -12,11 +12,11 @@
     >
       <picture>
         <source
-          srcset="~/assets/img/product-about-accessibility-with-vuejs.webp"
+          srcset="~/assets/img/product-about-accessibility-with-vuejs-2019.webp"
           type="image/webp"
         />
         <img
-          src="~/assets/img/product-about-accessibility-with-vuejs.png"
+          src="~/assets/img/product-about-accessibility-with-vuejs-2019.png"
           width="688"
           height="498"
           :alt="$t('prefixAlt.photo') + $t('product.vueA11yPage2019.title')"
