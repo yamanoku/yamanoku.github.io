@@ -79,17 +79,6 @@ module.exports = {
       prefix: "vuejs-accessibility-sections"
     }
   ],
-  content: {
-    markdown: {
-      remarkExternalLinks: {
-        target: "_blank",
-        rel: "noopener noreferrer"
-      },
-      prism: {
-        theme: "prism-themes/themes/prism-a11y-dark.css"
-      }
-    }
-  },
   build: {
     extend(config, { isDev }) {
       config.module.rules.push({
@@ -107,23 +96,10 @@ module.exports = {
       }
     }
   },
-  modules: [
-    "@nuxtjs/pwa",
-    ["nuxt-i18n", i18n],
-    "@nuxtjs/axios",
-    "@nuxt/content"
-  ],
+  modules: ["@nuxtjs/pwa", ["nuxt-i18n", i18n], "@nuxtjs/axios"],
   generate: {
     cache: {
-      ignore: [".nuxt", "content", "node_modules"]
-    },
-    async routes() {
-      const { $content } = require("@nuxt/content");
-      const files = await $content("archive").only(["path"]).fetch();
-      const archive = files.map(file =>
-        file.path === "/index" ? "/" : file.path
-      );
-      return archive;
+      ignore: [".nuxt", "node_modules"]
     },
     fetch({ redirect }) {
       return redirect("404.html");

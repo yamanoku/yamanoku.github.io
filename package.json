@@ -13,7 +13,6 @@
     "deploy": "gh-pages -d dist -b master -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "@nuxt/content": "1.14.0",
     "@nuxtjs/axios": "5.13.6",
     "@nuxtjs/dotenv": "1.4.1",
     "@nuxtjs/pwa": "3.3.5",
@@ -39,7 +38,6 @@
     "markuplint": "1.11.4",
     "modern-normalize": "1.1.0",
     "prettier": "2.4.1",
-    "prism-themes": "1.9.0",
     "style-loader": "3.2.1",
     "yaml-loader": "0.6.0"
   },
