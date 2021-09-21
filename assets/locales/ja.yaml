@@ -185,18 +185,6 @@ vueA11yPage2019:
   feedback:
     github:
       linkTitle: "記事「Vue.jsから考えるアクセシビリティについて - 2019」の修正依頼"
-  moveUrlText: "こちらのページは{moveUrl}に移動しました。"
-archivePage:
-  title: "アーカイブ"
-  externalLink: "1年以上前のコンテンツをお探しの場合、{title}を参照してください。"
-  desc01: "このページはyamanokuこと大山奥人が書いてきた過去の記事やログを収集したページです。"
-  desc02: "移行時にリンク切れなど修正しましたが、内容自体は特にアップデートしておりませんので参照する際はその点ご注意ください。"
-  slug:
-    feedback: "アーカイブ記事のため、内容に関する更新依頼は受け付けておりませんが、誤字や脱字などありましたらご連絡ください。"
-  backText: "アーカイブ一覧へ戻る"
-  feedback:
-    github:
-      linkTitle: "アーカイブのドキュメントにまつわる修正依頼"
 privacyPage:
   title: "プライバシーポリシー"
   description: "yamanoku.netのプライバシーポリシーページです。アクセス解析ツールについての説明が載っています。"
