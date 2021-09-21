@@ -266,6 +266,9 @@ prefixAlt:
   thumbnail: "Thumbnail"
   screenshot: "ScreenShot"
 multilingual: "Multilingual Page"
+archivePage:
+  title: "Archives"
+  externalLink: "If you are looking for content older than 1 year, please visit {title} page."
 details:
   summary: "Details"
   summary_feedback: "Correction requests for articles"

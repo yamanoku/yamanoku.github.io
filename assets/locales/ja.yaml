@@ -224,6 +224,9 @@ prefixAlt:
   thumbnail: "サムネイル："
   screenshot: "スクリーンショット："
 multilingual: "多言語ページ"
+archivePage:
+  title: "アーカイブ"
+  externalLink: "1年以上前のコンテンツをお探しの場合、{title}を参照してください。"
 details:
   summary: "詳細を確認する"
   summary_feedback: "この記事に関する修正依頼"
