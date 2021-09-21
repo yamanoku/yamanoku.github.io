@@ -225,20 +225,6 @@ vueA11yPage2019:
   feedback:
     github:
       linkTitle: "Request for correction of the article “About accessibility with Vue.js - 2019”"
-  moveUrlText: "This page has been moved to {moveUrl}."
-archivePage:
-  title: "Archive"
-  externalLink: "If you are looking for content older than 1 year, please visit {title} page."
-  desc01: "This page is a writing collection of past articles and logs of Okuto Oyama called yamanoku."
-  desc02:
-    "We fixed the broken links during the document migration, but the content itself has not been updated, so please be careful when you refer to it."
-  slug:
-    feedback:
-      "As this is an archived article, we do not accept requests for content updates, but please contact us if you find any typographical errors or omissions."
-  backText: "Back to Archive List"
-  feedback:
-    github:
-      linkTitle: "Request for correction of archive document"
 privacyPage:
   title: "Privacy Policy"
   description: "yamanoku.net privacy policy page. Provides information about access analysis tools."
@@ -280,6 +266,9 @@ prefixAlt:
   thumbnail: "Thumbnail"
   screenshot: "ScreenShot"
 multilingual: "Multilingual Page"
+archivePage:
+  title: "Archives"
+  externalLink: "If you are looking for content older than 1 year, please visit {title} page."
 details:
   summary: "Details"
   summary_feedback: "Correction requests for articles"

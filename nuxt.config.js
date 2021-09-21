@@ -42,22 +42,12 @@ module.exports = {
       { name: "twitter:site", content: "@yamanoku" },
       { name: "twitter:image:alt", content: baseOgpAlt }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-    script: [
-      {
-        src: "https://cdn.skypack.dev/@yamanoku/switch-components",
-        type: "module"
-      }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   css: ["modern-normalize", "~/packages/yama-normalize"],
   buildModules: ["@nuxt/components"],
   components: [
     "~/components/",
-    {
-      path: "~/components/buttons/",
-      prefix: "buttons"
-    },
     {
       path: "~/components/global/",
       prefix: "global"
@@ -92,7 +82,7 @@ module.exports = {
       }
     }
   },
-  modules: ["@nuxtjs/pwa", ["nuxt-i18n", i18n], "@nuxtjs/axios"],
+  modules: ["@nuxtjs/pwa", ["nuxt-i18n", i18n]],
   generate: {
     cache: {
       ignore: [".nuxt", "node_modules"]
