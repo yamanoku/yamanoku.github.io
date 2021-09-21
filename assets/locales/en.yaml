@@ -55,58 +55,6 @@ ossActivity:
   link01: "OSS Activity Log 2021"
 home:
   title: "Home"
-aboutPage:
-  title: "About Site"
-  description: "yamanoku.net is a portal site of Okuto Oyama called yamanoku."
-  heading:
-    toc: "Table of Contents"
-    implementation: "Explaining site implementation"
-    design: "Explaining site design"
-  subHeading:
-    markup: "Markup"
-    components: "Component oriented design"
-    pwa: "PWA (Progressive Web Application)"
-    i18n: "Internationalization"
-    overdesign: "Don't overdesign."
-    fontSize: "Font size"
-    contrast: "Color contrast"
-    maxWidth: "About the greatest amount of content"
-    verticalRhythm: "Vertical rhythm"
-  markup:
-    desc01: "Semantic markup implementation to realize information design of human-readable (Human can understand) and machine-readable (Be understood by the machine)."
-    desc02: "It also implements content completion using WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications)."
-    caption: "Assist users as they move from article to article by tying aria-labelledby to article elements."
-  components:
-    desc01: "You need to format the API you get for display, but managing it as a single component simplifies source code, allows multiple uses, and simplifies information design."
-    desc02: "For example, the slide list uses the following components to render:"
-  pwa:
-    desc01: "When browsing in Google Chrome, you can use desktop PWA from your PC or PWA from your mobile device."
-    desc02: "You can launch it as a native app without going through a browser, use the cache to get a fast page experience, or download it once and view it offline."
-  i18n:
-    desc01:
-      "Since we are developing on Nuxt.js, we have introduced a tool called nuxt-18n. In addition to internationalization, rendering can also be done for specific
-      languages."
-    desc02: "The following is a conditional expression that is displayed when it is not in Japanese."
-  designDescription: "Inclusive design designed for easy viewing by all users."
-  overdesign:
-    desc01:
-      "Too much decoration can prevent you from getting the information you want. It is designed with the default style of the browser, that is, the standard
-      image in mind."
-    desc02:
-      "It's also the semantic markup of the design makes it possible to arrive at the information without feeling out of place, even with the default style
-      in browser."
-  fontSize:
-    desc01: "The basic setting is 16 px, and the size ratio can be maintained even if the page is enlarged by rem."
-  contrast:
-    desc01: "All colors are set to have a contrast ratio of at least 4.5:1 with the background, but they are not pure black and white, but instead are balanced with fewer shades of gray."
-    desc02: "It is specified using the following custom properties (CSS Variables) for common use:"
-    desc03: "It also supports dark mode (Gentle dark tones of the eyes), depending on the OS settings."
-  maxWidth:
-    desc01: "The maximum width of the main content is set to 80ch. ch is called a chain and is a variable unit depending on the size of the character."
-    desc02: "The advantage of this setting is that it can support users with dyslexia who cannot read long sentences, and it is less likely that some text will become unreadable as the character size increases."
-  verticalRhythm:
-    desc01: "We use vertical rhythm that emphasizes consistency throughout the page. The margins and margins are set relative to the line spacing of 24px."
-    desc02: "Cognitively impaired users can read text more easily if the words are evenly spaced."
 vueA11yPage2019:
   title: "About accessibility with Vue.js - 2019"
   description: "This post is from day 21 of the Web Accessibility Advent Calendar 2019. This article is about web accessibility support in Vue.js development."

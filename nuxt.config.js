@@ -55,10 +55,6 @@ module.exports = {
   components: [
     "~/components/",
     {
-      path: "~/components/about-sections/",
-      prefix: "about-sections"
-    },
-    {
       path: "~/components/buttons/",
       prefix: "buttons"
     },
