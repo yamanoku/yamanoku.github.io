@@ -6,11 +6,6 @@
           $t("home.title")
         }}</nuxt-link>
       </li>
-      <li>
-        <nuxt-link :to="localePath({ name: 'about' })">{{
-          $t("aboutPage.title")
-        }}</nuxt-link>
-      </li>
     </ul>
   </nav>
 </template>
