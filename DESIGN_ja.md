@@ -21,15 +21,17 @@
 
 | design_token | value |
 | ------------ | ----- |
-| var(--y-black-base) | rgb(21, 32, 43) |
-| var(--y-white-base) | rgb(255, 255, 255) |
-| var(--y-white-low) | rgb(210, 210, 210) |
-| var(--y-white-medium) | rgba(163, 163, 163) |
-| var(--y-blue-low) | rgb(90, 190, 255) |
-| var(--y-blue-medium) | rgb(18, 122, 200) |
-| var(--y-purple-medium) | rgb(220, 100, 220) |
+| `var(--y-black-base)` | rgb(21, 32, 43) |
+| `var(--y-white-base)` | rgb(255, 255, 255) |
+| `var(--y-white-low)` | rgb(210, 210, 210) |
+| `var(--y-white-medium)` | rgba(163, 163, 163) |
+| `var(--y-blue-low)` | rgb(90, 190, 255) |
+| `var(--y-blue-medium)` | rgb(18, 122, 200) |
+| `var(--y-purple-medium)` | rgb(220, 100, 220) |
 
 また、OSの設定によりますが、ダークモード（目に優しい暗い色調）にも対応しています。
+
+- [yama-normalize - npm](https://www.npmjs.com/package/yama-normalize)
 </details>
 
 ## 最大幅について
