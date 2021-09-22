@@ -54,7 +54,7 @@
       {{ $t("vueA11yPage2019.a11yNote.desc07") }}
     </p>
     <a
-      href="https://codesandbox.io/s/vue-accessible-modal-9m474]"
+      href="https://codesandbox.io/s/vue-accessible-modal-9m474"
       target="_blank"
       rel="noopener"
       lang="en"
