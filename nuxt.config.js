@@ -93,9 +93,6 @@ module.exports = {
   },
   plugins: ["~plugins/icons.js", "~plugins/vue-highlight.js"],
   pwa: {
-    icon: {
-      purpose: "maskable"
-    },
     manifest: {
       name: baseName,
       short_name: "yamanoku",
