@@ -92,18 +92,21 @@ module.exports = {
     }
   },
   plugins: ["~plugins/icons.js", "~plugins/vue-highlight.js"],
-  workbox: {
-    dev: true
-  },
-  manifest: {
-    name: baseName,
-    short_name: "yamanoku",
-    title: baseName,
-    "og:title": baseName,
-    description: baseDesc,
-    "og:description": baseDesc,
-    lang: "en",
-    theme_color: "#36465d",
-    background_color: "#36465d"
+  pwa: {
+    icon: {
+      purpose: "maskable"
+    },
+    manifest: {
+      name: baseName,
+      short_name: "yamanoku",
+      author: "yamanoku",
+      description: baseDesc,
+      lang: "en",
+      theme_color: "#ffffff",
+      background_color: "#36465d"
+    },
+    workbox: {
+      enabled: true
+    }
   }
 };
