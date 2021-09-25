@@ -1,6 +1,28 @@
 {
-    "parser": {
-        ".vue$": "@markuplint/vue-parser"
-    },
-    "specs": ["@markuplint/vue-spec"]
+  "rules": {
+    "attr-duplication": true,
+    "character-reference": true,
+    "deprecated-attr": true,
+    "deprecated-element": true,
+    "doctype": true,
+    "id-duplication": true,
+    "permitted-contents": false,
+    "required-attr": true,
+    "landmark-roles": true,
+    "required-h1": true,
+    "class-naming": "/[a-z]+/",
+    "attr-equal-space-after": true,
+    "attr-equal-space-before": true,
+    "attr-spacing": true,
+    "attr-value-quotes": true,
+    "case-sensitive-attr-name": false,
+    "case-sensitive-tag-name": false,
+    "indentation": false,
+    "wai-aria": true
+  },
+  "parser": {
+    ".vue$": "@markuplint/vue-parser"
+  },
+  "specs": ["@markuplint/vue-spec"],
+  "excludeFiles": ["./node_modules/**/*"]
 }
