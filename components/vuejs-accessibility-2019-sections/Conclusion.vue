@@ -107,7 +107,7 @@
         href="https://code.kzakza.com/2019/03/start-small-start-now/"
         target="_blank"
         rel="noopener"
-        >アクセシビリティは "Start Small, Start Now" でいこう |
+        >アクセシビリティは &quot;Start Small, Start Now&quot; でいこう |
         kzakza<open-new-icon
       /></a>
     </blockquote>
