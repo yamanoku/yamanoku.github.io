@@ -15,7 +15,6 @@
         />
       </picture>
     </figure>
-    <global-deprecation-alert-one-year />
     <i18n tag="p" path="vueA11yPage2019.titleSection.desc01">
       <template v-slot:link01>
         <a
@@ -31,5 +30,14 @@
     <p>
       {{ $t("vueA11yPage2019.titleSection.desc02") }}
     </p>
+    <div class="alert-text-wrap">
+      <strong>{{ $t("alertOneYearText") }}</strong>
+    </div>
   </section>
 </template>
+
+<style scoped>
+.alert-text-wrap {
+  margin: var(--y-rhythm-3) 0;
+}
+</style>
