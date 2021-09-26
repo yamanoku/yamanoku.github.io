@@ -87,7 +87,7 @@ vueA11yPage2019:
     info: "このドキュメントに関する情報"
   titleSection:
     desc01: "こちらは、{link01}の21日目の記事です。"
-    desc02: "この記事はVue.js開発におけるWebアクセシビリティ対応にまつわる内容となっております。"
+    desc02: "Vue.js開発におけるWebアクセシビリティ対応にまつわる内容となっております。"
     link01: "Webアクセシビリティ Advent Calendar 2019"
   bio:
     desc01: "大山奥人{small01}と申します。ネット上では、おおやまみちのく、yamanokuと名乗って活動しています。"
