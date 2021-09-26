@@ -91,6 +91,9 @@ module.exports = {
       return redirect("404.html");
     }
   },
+  render: {
+    injectScripts: false
+  },
   plugins: ["~plugins/icons.js", "~plugins/vue-highlight.js"],
   pwa: {
     manifest: {
