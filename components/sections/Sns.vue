@@ -5,7 +5,7 @@
     </h2>
     <ul>
       <li>
-        <a href="https://twitter.com/yamanoku" target="_blank" rel="noopener"
+        <a href="https://twitter.com/okuto_oyama" target="_blank" rel="noopener"
           >{{ $t("sns.twitter") }}<open-new-icon
         /></a>
       </li>
@@ -20,7 +20,7 @@
         /></a>
       </li>
       <li>
-        <a href="https://facebook.com/yamanoku" target="_blank" rel="noopener"
+        <a href="https://facebook.com/okutooyama" target="_blank" rel="noopener"
           >{{ $t("sns.facebook") }}<open-new-icon
         /></a>
       </li>
