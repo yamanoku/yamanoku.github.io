@@ -30,7 +30,7 @@
       </li>
       <li>
         <a
-          href="https://www.wantedly.com/id/yamanoku"
+          href="https://www.wantedly.com/id/okutooyama"
           target="_blank"
           rel="noopener"
         >
