@@ -1,0 +1,26 @@
+name: Deploy to Preview Channel
+
+on:
+  pull_request:
+    branches:
+      - '**'
+      - '!master'
+
+jobs:
+  build_and_preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: yarn install and generate
+        run: |
+          rm yarn.lock
+          yarn install
+          yarn generate --fail-on-error
+        env:
+          CI: true
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.YAMANOKUIO_DEPLOY_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          expires: 30d
+          projectId: yamanoku-net-preview
