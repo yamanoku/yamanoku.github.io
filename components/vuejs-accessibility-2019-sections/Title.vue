@@ -30,14 +30,12 @@
     <p>
       {{ $t("vueA11yPage2019.titleSection.desc02") }}
     </p>
-    <div class="alert-text-wrap">
-      <strong>{{ $t("alertOneYearText") }}</strong>
-    </div>
+    <alert-one-year-text :lang="$i18n.locale" />
   </section>
 </template>
 
-<style scoped>
-.alert-text-wrap {
-  margin: var(--y-rhythm-3) 0;
-}
-</style>
+<script lang="js">
+import Vue from "vue";
+Vue.config.ignoredElements = ["alert-one-year-text"];
+export default {}
+</script>
