@@ -42,13 +42,7 @@ module.exports = {
       { name: "twitter:site", content: "@yamanoku" },
       { name: "twitter:image:alt", content: baseOgpAlt }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-    script: [
-      {
-        src: "/alert-one-year-text.js",
-        type: "module"
-      }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   css: ["modern-normalize", "~/packages/yama-normalize"],
   buildModules: ["@nuxt/components"],
