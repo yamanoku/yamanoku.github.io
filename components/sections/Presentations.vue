@@ -49,21 +49,6 @@ export default {
           title: "Vue3 からはじめるWebアクセシビリティ",
           url: "https://docs.google.com/presentation/d/e/2PACX-1vR-hRI-IEV5PUCLg1XTDlMGsDyZ4OhGBgXM8o3yaI1VKBOXSOEk6qwT8YFuzwsOpmyDIvjr2T_aYCWV/pub?start=false&loop=false&delayms=3000",
           datetime: "2020-12-08T20:30:00.000Z"
-        },
-        {
-          title: "Web_UIの実装で考えていることと気をつけたいこと",
-          url: "https://scrapbox.io/yamanoku/Web_UI%E3%81%AE%E5%AE%9F%E8%A3%85%E3%81%A7%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A8%E6%B0%97%E3%82%92%E3%81%A4%E3%81%91%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8",
-          datetime: "2020-09-29T15:00:00.000Z"
-        },
-        {
-          title: "PWA is Progressive Web Accessibility",
-          url: "https://docs.google.com/presentation/d/e/2PACX-1vROD7gIsTh1BF1q5LVec0pZSGXVtLBD_DjNonbuwdR8zfRNH_qgRazaIG0oU-Zte6EgqaKoIyfoRfpA/pub?start=false&loop=false&delayms=3000",
-          datetime: "2020-05-19T15:00:00.000Z"
-        },
-        {
-          title: "PWA RTA in Japan",
-          url: "https://docs.google.com/presentation/d/e/2PACX-1vQZjI7M2w1vNnEPpTfNhom2frtIlC7gMFLa1ptt6hRFvifRBv6dn5bYJY3b8Th6gYbCuj6iAxd3B45-/pub?start=false&loop=false&delayms=3000",
-          datetime: "2020-01-31T15:00:00.000Z"
         }
       ],
       listWrite: [
@@ -92,17 +77,6 @@ export default {
           title: "クラウドワークスのフロントエンド活動を振り返る 2020",
           url: "https://engineer.crowdworks.jp/entry/crowdworks_frontend_2020",
           datetime: "2020-12-01T09:00:00.000Z"
-        },
-        {
-          title: "クラウドワークスのWebアクセシビリティチェックを始めてみた",
-          url: "https://engineer.crowdworks.jp/entry/product_accessibility_check",
-          datetime: "2020-09-17T00:00:00.000Z"
-        },
-        {
-          title:
-            "東京都 新型コロナウイルス対策サイトにアクセシビリティ視点でコントリビュートしてみた",
-          url: "https://engineer.crowdworks.jp/entry/covid-19_site_a11y_contribute",
-          datetime: "2020-03-25T03:00:00.000Z"
         }
       ]
     };
