@@ -3,7 +3,7 @@
     <nuxt-link :to="localePath({ name: 'privacy' })">{{
       $t("privacyPage.title")
     }}</nuxt-link>
-    <p>&copy; Copyright {{ currentYear }}, Okuto Oyama</p>
+    <p>Copyright {{ currentYear }}, Okuto Oyama</p>
     <p>
       Source :
       <a
