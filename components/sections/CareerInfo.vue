@@ -10,7 +10,7 @@
     <ul aria-labelledby="related:career_heading">
       <li>
         <a
-          href="https://github.com/yamanoku/Curriculum-Vitae/blob/master/README.md"
+          href="https://github.com/yamanoku/Curriculum-Vitae/blob/main/README.md"
           target="_blank"
           rel="noopener"
         >

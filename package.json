@@ -10,7 +10,7 @@
     "eslint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "eslint:fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "markuplint": "markuplint './**/*.vue'",
-    "deploy": "gh-pages -d dist -b master -m 'chore: deploy [skip ci]' -t"
+    "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
     "@nuxtjs/pwa": "3.3.5",
