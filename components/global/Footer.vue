@@ -20,6 +20,7 @@
 import dayjs from "dayjs";
 
 export default {
+  name: "GlobalFooter",
   data() {
     return {
       currentYear: dayjs().year()

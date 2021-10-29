@@ -10,3 +10,9 @@
     <products-vue-portfolio />
   </section>
 </template>
+
+<script>
+export default {
+  name: "SectionsProducts"
+};
+</script>

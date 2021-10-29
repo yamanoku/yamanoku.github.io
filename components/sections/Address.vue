@@ -11,3 +11,9 @@
     </address>
   </section>
 </template>
+
+<script>
+export default {
+  name: "SectionsAddress"
+};
+</script>

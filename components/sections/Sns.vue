@@ -45,3 +45,9 @@
     </ul>
   </section>
 </template>
+
+<script>
+export default {
+  name: "SectionsSns"
+};
+</script>

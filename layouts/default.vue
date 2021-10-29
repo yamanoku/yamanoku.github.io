@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: "DefaultLayout",
   head() {
     return this.$nuxtI18nSeo();
   }
