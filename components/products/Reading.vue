@@ -51,3 +51,9 @@
     </ul>
   </article>
 </template>
+
+<script>
+export default {
+  name: "ProductsReading"
+};
+</script>

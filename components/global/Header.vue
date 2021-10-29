@@ -20,6 +20,12 @@
   </header>
 </template>
 
+<script>
+export default {
+  name: "GlobalHeader"
+};
+</script>
+
 <style scoped>
 header {
   max-width: 80ch;

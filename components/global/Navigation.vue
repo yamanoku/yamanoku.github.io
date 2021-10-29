@@ -10,6 +10,12 @@
   </nav>
 </template>
 
+<script>
+export default {
+  name: "GlobalNavigation"
+};
+</script>
+
 <style scoped>
 nav {
   max-width: 80ch;
