@@ -105,3 +105,9 @@
     <p>{{ $t("vueA11yPage2019.vueA11y.desc09") }}</p>
   </section>
 </template>
+
+<script>
+export default {
+  name: "VueA11y2019VueAccessibility"
+};
+</script>
