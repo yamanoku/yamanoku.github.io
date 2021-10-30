@@ -119,3 +119,9 @@
     </p>
   </section>
 </template>
+
+<script>
+export default {
+  name: "VueA11y2019Conclusion"
+};
+</script>

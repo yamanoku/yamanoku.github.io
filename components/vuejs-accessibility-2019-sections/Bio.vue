@@ -28,3 +28,9 @@
     </p>
   </section>
 </template>
+
+<script>
+export default {
+  name: "VueA11y2019Bio"
+};
+</script>

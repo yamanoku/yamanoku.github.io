@@ -54,3 +54,9 @@
     </figure>
   </section>
 </template>
+
+<script>
+export default {
+  name: "VueA11y2019Book"
+};
+</script>

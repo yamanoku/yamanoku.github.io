@@ -43,3 +43,9 @@
     <p>{{ $t("vueA11yPage2019.webA11y.desc08") }}</p>
   </section>
 </template>
+
+<script>
+export default {
+  name: "VueA11y2019WebAccessibility"
+};
+</script>

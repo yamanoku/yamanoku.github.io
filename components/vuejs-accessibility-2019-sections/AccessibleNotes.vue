@@ -207,6 +207,7 @@
 
 <script>
 export default {
+  name: "VueA11y2019AccessibleNotes",
   data() {
     return {
       buttonMarkupBefore: `

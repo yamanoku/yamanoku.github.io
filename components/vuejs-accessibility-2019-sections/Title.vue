@@ -36,6 +36,12 @@
   </section>
 </template>
 
+<script>
+export default {
+  name: "VueA11y2019Title"
+};
+</script>
+
 <style scoped>
 .alert-text-wrap {
   margin: var(--y-rhythm-3) 0;
