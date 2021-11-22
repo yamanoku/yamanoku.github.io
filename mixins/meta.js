@@ -71,9 +71,6 @@ export default {
         content: this.meta.imageAlt
       });
     }
-    head.bodyAttrs["class"] = this.$store.state.rhythm.toggleRhythm
-      ? "is-rhythm"
-      : "";
     return head;
   }
 };

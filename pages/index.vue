@@ -14,13 +14,6 @@
 
 <script>
 export default {
-  name: "IndexPage",
-  head() {
-    return {
-      bodyAttrs: {
-        class: this.$store.state.rhythm.toggleRhythm ? "is-rhythm" : ""
-      }
-    };
-  }
+  name: "IndexPage"
 };
 </script>
