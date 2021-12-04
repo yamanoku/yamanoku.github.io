@@ -21,7 +21,6 @@
   "devDependencies": {
     "@markuplint/vue-parser": "1.0.0",
     "@markuplint/vue-spec": "1.0.0",
-    "babel-eslint": "10.1.0",
     "dayjs": "1.10.7",
     "eslint": "8.4.0",
     "eslint-config-prettier": "8.3.0",
@@ -37,6 +36,7 @@
     "modern-normalize": "1.1.0",
     "prettier": "2.5.0",
     "style-loader": "3.3.1",
+    "vue-eslint-parser": "8.0.1",
     "yaml-loader": "0.6.0"
   },
   "workspaces": [
