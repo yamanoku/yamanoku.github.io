@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       listStage,
-      listWrite,
+      listWrite
     };
   }
 };
