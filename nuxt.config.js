@@ -82,7 +82,7 @@ module.exports = {
       }
     }
   },
-  modules: ["@nuxtjs/pwa", ["nuxt-i18n", i18n]],
+  modules: ["@nuxtjs/pwa", ["@nuxtjs/i18n", i18n]],
   generate: {
     cache: {
       ignore: [".nuxt", "node_modules"]
