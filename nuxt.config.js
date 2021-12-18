@@ -1,3 +1,4 @@
+import { defineNuxtConfig } from '@nuxt/bridge'
 import i18n from "./nuxt-i18n";
 
 const baseName = process.env.BASE_NAME || "yamanoku.net";
@@ -6,7 +7,7 @@ const baseUrl = process.env.BASE_URL || "https://yamanaoku.net";
 const baseOgp = process.env.BASE_OGP || "https://yamanoku.net/ogp/ogp@2x.png";
 const baseOgpAlt = baseName;
 
-module.exports = {
+export default defineNuxtConfig({
   target: "static",
   telemetry: false,
   env: {
@@ -99,4 +100,4 @@ module.exports = {
     injectScripts: false
   },
   plugins: ["~plugins/icons.js", "~plugins/vue-highlight.js"]
-};
+});
