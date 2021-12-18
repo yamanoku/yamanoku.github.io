@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from '@nuxt/bridge'
+import { defineNuxtConfig } from "@nuxt/bridge";
 import i18n from "./nuxt-i18n";
 
 const baseName = process.env.BASE_NAME || "yamanoku.net";
