@@ -13,7 +13,7 @@
     "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "^7.2.0",
+    "@nuxtjs/i18n": "7.2.0",
     "@nuxtjs/pwa": "3.3.5",
     "nuxt": "2.15.8",
     "vuex": "3.6.2"
