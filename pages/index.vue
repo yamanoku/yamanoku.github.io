@@ -3,7 +3,7 @@
     <h1>yamanoku.net</h1>
     <SectionsBasicInfo />
     <SectionsCareerInfo />
-    <SectionsOSSActivity />
+    <SectionsOpenSourceActivity />
     <SectionsProducts />
     <SectionsPresentations />
     <SectionsSns />

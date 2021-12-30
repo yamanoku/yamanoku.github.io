@@ -50,9 +50,9 @@ sns:
   scrapbox: "Scrapbox"
 donate:
   desc01: "If you are interested in my work, presentations and activities, you can donate me by."
-ossActivity:
-  desc01: "In addition to working for a company, I have been contributing to OSS since 2020 in my spare time. I translate documents, propose accessibility improvements, respond to fixes, and make other minor corrections."
-  link01: "OSS Activity Log 2021"
+openSourceActivity:
+  desc01: "In addition to working for a company, I have been contributing to open source since 2020 in my spare time. I translate documents, propose accessibility improvements, respond to fixes, and make other minor corrections."
+  link01: "Open Source Activity Log 2021"
 home:
   title: "Home"
 vueA11yPage2019:
@@ -256,7 +256,7 @@ heading:
   sns: "Social Service"
   donate: "Donate & Sponsor"
   contact: "Contact"
-  ossActivity: "OSS Activity"
+  openSourceActivity: "Open Source Activity"
 error:
   response500:
     text01: "A server error has occurred. Please wait for a while and try again."
