@@ -1,5 +1,8 @@
 <template>
-  <section id="open-source-activity" aria-labelledby="open-source-activity_heading">
+  <section
+    id="open-source-activity"
+    aria-labelledby="open-source-activity_heading"
+  >
     <h2 id="open-source-activity_heading">
       {{ $t("heading.openSourceActivity") }}
     </h2>
