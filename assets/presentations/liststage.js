@@ -19,10 +19,5 @@ export const listStage = [
     title: "これからもつづけるWebアクセシビリティ",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vRIhRTjYc1yxxNRSE0-PbTHTyvSHh07pkuVapbek_-0wkYyF0scZ5XU0danIEky5YJToE0W3AwUCDXc/pub?start=false&loop=false&delayms=3000",
     datetime: "2021-01-12T19:30:00.000Z"
-  },
-  {
-    title: "Vue3 からはじめるWebアクセシビリティ",
-    url: "https://docs.google.com/presentation/d/e/2PACX-1vR-hRI-IEV5PUCLg1XTDlMGsDyZ4OhGBgXM8o3yaI1VKBOXSOEk6qwT8YFuzwsOpmyDIvjr2T_aYCWV/pub?start=false&loop=false&delayms=3000",
-    datetime: "2020-12-08T20:30:00.000Z"
   }
 ];
