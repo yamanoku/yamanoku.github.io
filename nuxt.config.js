@@ -82,7 +82,7 @@ module.exports = {
       }
     }
   },
-  modules: ["@nuxtjs/pwa", ["@nuxtjs/i18n", i18n]],
+  modules: [["@nuxtjs/i18n", i18n]],
   generate: {
     cache: {
       ignore: [".nuxt", "node_modules"]
@@ -94,19 +94,5 @@ module.exports = {
   render: {
     injectScripts: false
   },
-  plugins: ["~plugins/icons.js", "~plugins/vue-highlight.js"],
-  pwa: {
-    manifest: {
-      name: baseName,
-      short_name: "yamanoku",
-      author: "yamanoku",
-      description: baseDesc,
-      lang: "en",
-      theme_color: "#ffffff",
-      background_color: "#36465d"
-    },
-    workbox: {
-      enabled: true
-    }
-  }
+  plugins: ["~plugins/icons.js", "~plugins/vue-highlight.js"]
 };
