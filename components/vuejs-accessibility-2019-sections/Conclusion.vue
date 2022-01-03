@@ -27,7 +27,7 @@
         regardless of disability is an essential aspect.
       </p>
       <a
-        href="https://www.w3.org/Press/IPO-announce/"
+        href="https://www.w3.org/Press/IPO-announce"
         target="_blank"
         rel="noopener"
         lang="en"
