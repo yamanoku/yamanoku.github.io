@@ -4,7 +4,6 @@
 
 ### Technology stack
 - Nuxt.js
-  - @nuxtjs/pwa
   - nuxt-i18n
   - Vuex（Store）
 - dayjs
