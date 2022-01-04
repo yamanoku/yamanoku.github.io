@@ -1,7 +1,6 @@
 <template>
   <div>
     <global-header />
-    <global-navigation />
     <nuxt />
     <global-footer />
   </div>
