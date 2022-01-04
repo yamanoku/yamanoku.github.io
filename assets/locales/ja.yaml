@@ -55,6 +55,7 @@ openSourceActivity:
   link01: "オープンソース活動記録 2021年"
 home:
   title: "ホーム"
+  backToLink: "ホームへ戻る"
 vueA11yPage2019:
   title: "Vue.jsから考えるアクセシビリティについて - 2019"
   description: "こちらは、Webアクセシビリティ Advent Calendar 2019の21日目の記事です。この記事ではVue.js開発におけるWebアクセシビリティ対応にまつわる内容となっております。"
