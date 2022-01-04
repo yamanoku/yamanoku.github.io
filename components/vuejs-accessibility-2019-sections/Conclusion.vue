@@ -96,7 +96,7 @@
     <p>
       {{ $t("vueA11yPage2019.conclusion.desc08") }}
     </p>
-    <blockquote>
+    <blockquote lang="ja">
       <p>
         “Start Small, Start
         Now（小さく初めていこう、でも、できることから今やりましょう）”と呼びかけていきたいし、自分自身も肝に銘じておきたい。
