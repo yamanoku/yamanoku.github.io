@@ -24,7 +24,7 @@
   --y-body-text-color: var(--y-black-base);
   --y-link-color: var(--y-blue-medium);
   --y-link-visited-color: var(--y-black-base);
-  --y-outline-color: var(--y-blue-low);
+  --y-outline-color: var(--y-blue-medium);
   --y-arcticle-border-color: var(--y-white-medium);
   --y-hr-border-color: var(--y-white-medium);
   --y-list-mark-color: var(--y-black-base);
@@ -43,6 +43,7 @@
     --y-body-text-color: var(--y-white-low);
     --y-link-color: var(--y-blue-low);
     --y-link-visited-color: var(--y-purple-medium);
+    --y-outline-color: var(--y-blue-low);
     --y-arcticle-border-color: var(--y-white-low);
     --y-hr-border-color: var(--y-white-low);
     --y-list-mark-color: var(--y-white-low);
@@ -88,8 +89,11 @@ a:visited {
 :where(header, main, footer) {
   display: block;
   max-width: 80ch;
-  margin: auto;
-  padding: 0 var(--y-rhythm-2);
+  box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--y-rhythm-2);
+  padding-right: var(--y-rhythm-2);
 }
 h1 {
   margin: var(--y-rhythm-5) 0;
