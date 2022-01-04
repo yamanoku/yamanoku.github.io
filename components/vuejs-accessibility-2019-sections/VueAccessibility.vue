@@ -90,10 +90,7 @@
         />
       </picture>
       <figcaption>
-        <a
-          href="https://vue-a11y-2019.com/"
-          target="_blank"
-          rel="noopener"
+        <a href="https://vue-a11y-2019.com/" target="_blank" rel="noopener"
           >Vue <abbr title="accessibility">a11y</abbr><open-new-icon
         /></a>
       </figcaption>

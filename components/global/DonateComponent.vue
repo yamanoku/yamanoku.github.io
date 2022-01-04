@@ -11,10 +11,7 @@
     <ul>
       <template v-for="donateLink in donateLinkList">
         <li :key="donateLink.title">
-          <a
-            :href="donateLink.url"
-            target="_blank"
-            rel="noopener"
+          <a :href="donateLink.url" target="_blank" rel="noopener"
             >{{ donateLink.title }}<open-new-icon
           /></a>
         </li>

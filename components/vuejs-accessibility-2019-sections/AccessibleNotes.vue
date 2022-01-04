@@ -185,10 +185,7 @@
         <abbr>Web Content Accessibility Guidelines</abbr>
       </template>
     </i18n>
-    <a
-      href="https://waic.jp/docs/WCAG21/"
-      target="_blank"
-      rel="noopener"
+    <a href="https://waic.jp/docs/WCAG21/" target="_blank" rel="noopener"
       >Web Content Accessibility Guidelines (WCAG) 2.1<open-new-icon
     /></a>
     <p>{{ $t("vueA11yPage2019.a11yNote.desc22") }}</p>
