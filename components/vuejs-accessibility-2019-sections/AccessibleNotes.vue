@@ -117,7 +117,6 @@
           href="https://developers.google.com/web/tools/lighthouse/"
           target="_blank"
           rel="noopener"
-          lang="en"
           >Lighthouse<open-new-icon
         /></a>
       </template>
@@ -138,7 +137,7 @@
     <p>{{ $t("vueA11yPage2019.a11yNote.desc14") }}</p>
     <highlightjs lang="shell" :code="vueAxeInstall" />
     <highlightjs lang="javascript" :code="vueAxeSetting" />
-    <h4 lang="en">Storybook</h4>
+    <h4>Storybook</h4>
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc15">
       <template v-slot:storybookAddonA11y>
         <a
@@ -177,21 +176,19 @@
       href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/"
       target="_blank"
       rel="noopener"
-      lang="en"
       >What we found when we tested tools on the world’s least-accessible
       webpage - Accessibility in government<open-new-icon
     /></a>
     <p>{{ $t("vueA11yPage2019.a11yNote.desc20") }}</p>
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc21">
       <template v-slot:abbr02>
-        <abbr lang="en">Web Content Accessibility Guidelines</abbr>
+        <abbr>Web Content Accessibility Guidelines</abbr>
       </template>
     </i18n>
     <a
       href="https://waic.jp/docs/WCAG21/"
       target="_blank"
       rel="noopener"
-      lang="en"
       >Web Content Accessibility Guidelines (WCAG) 2.1<open-new-icon
     /></a>
     <p>{{ $t("vueA11yPage2019.a11yNote.desc22") }}</p>
@@ -199,7 +196,6 @@
       href="https://openameba.github.io/a11y-guidelines/"
       target="_blank"
       rel="noopener"
-      lang="en"
       >Ameba Accessibility Guidelines<open-new-icon
     /></a>
   </section>

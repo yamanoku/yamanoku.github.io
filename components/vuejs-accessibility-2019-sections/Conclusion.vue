@@ -21,8 +21,8 @@
         /></a>
       </figcaption>
     </figure>
-    <blockquote>
-      <p lang="en">
+    <blockquote lang="en">
+      <p>
         The power of the Web is in its universality. Access by everyone
         regardless of disability is an essential aspect.
       </p>
@@ -30,7 +30,6 @@
         href="https://www.w3.org/Press/IPO-announce"
         target="_blank"
         rel="noopener"
-        lang="en"
         >Press Release: W3C Launches International Program Office for
         WAI<open-new-icon
       /></a>
@@ -38,8 +37,8 @@
     <p>
       {{ $t("vueA11yPage2019.conclusion.desc02") }}
     </p>
-    <blockquote>
-      <p lang="en">
+    <blockquote lang="en">
+      <p>
         Whatever the device you use for getting your information out, it should
         be the same information.
       </p>
@@ -47,7 +46,6 @@
         href="https://www.wired.com/1999/10/interview-with-the-webs-creator/"
         target="_blank"
         rel="noopener"
-        lang="en"
         >Interview with the Web’s Creator | WIRED<open-new-icon
       /></a>
     </blockquote>
@@ -99,7 +97,7 @@
       {{ $t("vueA11yPage2019.conclusion.desc08") }}
     </p>
     <blockquote>
-      <p lang="ja">
+      <p>
         “Start Small, Start
         Now（小さく初めていこう、でも、できることから今やりましょう）”と呼びかけていきたいし、自分自身も肝に銘じておきたい。
       </p>

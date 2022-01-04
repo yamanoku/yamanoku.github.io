@@ -9,7 +9,7 @@
         <span class="time">{{ dateStirngReplace(list.created_at) }}</span>
         -
       </template>
-      <a :href="list.url" target="_blank" rel="noopener" lang="ja">
+      <a :href="list.url" target="_blank" rel="noopener">
         {{ list.title }}
         <open-new-icon />
       </a>
