@@ -89,8 +89,11 @@ a:visited {
 :where(header, main, footer) {
   display: block;
   max-width: 80ch;
-  margin: auto;
-  padding: 0 var(--y-rhythm-2);
+  box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--y-rhythm-2);
+  padding-right: var(--y-rhythm-2);
 }
 h1 {
   margin: var(--y-rhythm-5) 0;
