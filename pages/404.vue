@@ -1,39 +1,28 @@
 <template>
   <main id="main">
-    <h1>404</h1>
-    <p lang="ja">
+    <h1>ページが見つかりませんでした</h1>
+    <p>
       申し訳ありません。お探しのページが見つかりませんでした。<br />
-      お手数をおかけしますが、<nuxt-link to="/">TOPページ</nuxt-link>
-      にお戻りください。
+      お手数をおかけしますが、<nuxt-link to="/">ホーム</nuxt-link
+      >にお戻りください。
     </p>
     <p lang="en">
       Sorry. Couldn't find the page you were looking for.<br />
       We apologize for the inconvenience, but please access
-      <nuxt-link to="/en/">TOP page</nuxt-link>.
+      <nuxt-link to="/en/">Home</nuxt-link>.
     </p>
   </main>
 </template>
 
 <script>
 export default {
-  name: "404Page",
+  name: "NotFoundPage",
   head() {
     return {
-      title: "404",
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: "404 status page - Page not found"
-        }
-      ]
+      title: "ページが見つかりませんでした"
     };
   }
 };
 </script>
 
-<style scoped>
-main > h1 {
-  text-align: center;
-}
-</style>
+<style></style>
