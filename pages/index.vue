@@ -13,7 +13,17 @@
 </template>
 
 <script>
+import Meta from "~/mixins/meta";
+
 export default {
-  name: "IndexPage"
+  name: "IndexPage",
+  mixins: [Meta],
+  data() {
+    return {
+      meta: {
+        title: this.$t("home.title")
+      }
+    };
+  }
 };
 </script>
