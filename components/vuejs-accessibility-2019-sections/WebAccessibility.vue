@@ -4,7 +4,7 @@
     <h3>{{ $t("vueA11yPage2019.subHeading.webA11y.title01") }}</h3>
     <i18n tag="p" path="vueA11yPage2019.webA11y.desc01">
       <template v-slot:A11Y>
-        <span lang="en">Accessibility</span>
+        <span>Accessibility</span>
       </template>
     </i18n>
     <p>{{ $t("vueA11yPage2019.webA11y.desc02") }}</p>

@@ -55,7 +55,6 @@
           href="https://angular.io/guide/accessibility"
           target="_blank"
           rel="noopener"
-          lang="en"
           >Angular - Accessibility in Angular<open-new-icon
         /></a>
       </li>
@@ -65,7 +64,6 @@
       href="https://github.com/vuejs/vuejs.org/issues/974"
       target="_blank"
       rel="noopener"
-      lang="en"
       >Accessibility docs · Issue #974 · vuejs/vuejs.org<open-new-icon
     /></a>
     <p>{{ $t("vueA11yPage2019.vueA11y.desc07") }}</p>
@@ -73,11 +71,10 @@
       href="https://github.com/callumacrae/vuejs.org/blob/a11y-docs/src/v2/guide/accessibility.md"
       target="_blank"
       rel="noopener"
-      lang="en"
       >vuejs.org/accessibility.md at a11y-docs ·
       callumacrae/vuejs.org<open-new-icon
     /></a>
-    <h3 lang="en">Vue a11y</h3>
+    <h3>Vue <abbr title="accessibility">a11y</abbr></h3>
     <p>{{ $t("vueA11yPage2019.vueA11y.desc08") }}</p>
     <figure>
       <picture>
@@ -93,12 +90,8 @@
         />
       </picture>
       <figcaption>
-        <a
-          href="https://vue-a11y-2019.com/"
-          target="_blank"
-          rel="noopener"
-          lang="en"
-          >Vue a11y<open-new-icon
+        <a href="https://vue-a11y-2019.com/" target="_blank" rel="noopener"
+          >Vue <abbr title="accessibility">a11y</abbr><open-new-icon
         /></a>
       </figcaption>
     </figure>
