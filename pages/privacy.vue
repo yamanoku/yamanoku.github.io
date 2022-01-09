@@ -34,11 +34,9 @@
 
 <script>
 import Meta from "~/mixins/meta";
-import OpenNewIcon from "../assets/svg-icons/OpenNewIcon.vue";
 
 export default {
   name: "PrivacyPage",
-  components: { OpenNewIcon },
   mixins: [Meta],
   data() {
     return {
