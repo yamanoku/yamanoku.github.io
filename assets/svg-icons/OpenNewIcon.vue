@@ -14,3 +14,22 @@
     />
   </svg>
 </template>
+
+<style scoped>
+svg {
+  width: 12px;
+  height: 12px;
+  margin: 0 0 -1px 4px;
+}
+svg path {
+  fill: var(--y-black-base);
+}
+@media (prefers-color-scheme: dark) {
+  svg path {
+    fill: var(--y-white-base);
+  }
+}
+svg .open_new-1 {
+  fill: none;
+}
+</style>

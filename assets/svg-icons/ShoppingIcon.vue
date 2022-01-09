@@ -13,3 +13,22 @@
     <path class="shopping-2" d="M0 0h24v24H0z" fill="none" />
   </svg>
 </template>
+
+<style scoped>
+svg {
+  width: 12px;
+  height: 12px;
+  margin: 0 0 -1px 4px;
+}
+svg path {
+  fill: var(--y-black-base);
+}
+@media (prefers-color-scheme: dark) {
+  svg path {
+    fill: var(--y-white-base);
+  }
+}
+svg .shopping-2 {
+  fill: none;
+}
+</style>
