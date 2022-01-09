@@ -12,7 +12,7 @@
     <hr />
     <global-donate-component />
     <nuxt-link :to="localePath({ name: 'index' })">{{
-      $t("backTop")
+      $t("backHome")
     }}</nuxt-link>
   </main>
 </template>
