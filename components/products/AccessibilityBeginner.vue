@@ -52,7 +52,7 @@
           rel="noopener"
         >
           {{ $t("product.wafb.boothLink") }}
-          <shopping-icon />
+          <open-new-icon />
         </a>
       </li>
       <li>
@@ -62,7 +62,7 @@
           rel="noopener"
         >
           {{ $t("product.wafb.noteLink") }}
-          <shopping-icon />
+          <open-new-icon />
         </a>
       </li>
     </ul>
