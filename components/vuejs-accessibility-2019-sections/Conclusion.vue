@@ -17,7 +17,7 @@
           href="https://www.w3.org/History/1989/proposal.html"
           target="_blank"
           rel="noopener"
-          >The original proposal of the WWW, HTMLized<open-new-icon
+          >The original proposal of the WWW, HTMLized<external-link-icon
         /></a>
       </figcaption>
     </figure>
@@ -31,7 +31,7 @@
         target="_blank"
         rel="noopener"
         >Press Release: W3C Launches International Program Office for
-        WAI<open-new-icon
+        WAI<external-link-icon
       /></a>
     </blockquote>
     <p>
@@ -46,7 +46,7 @@
         href="https://www.wired.com/1999/10/interview-with-the-webs-creator/"
         target="_blank"
         rel="noopener"
-        >Interview with the Web’s Creator | WIRED<open-new-icon
+        >Interview with the Web’s Creator | WIRED<external-link-icon
       /></a>
     </blockquote>
     <p>
@@ -63,7 +63,7 @@
           rel="noopener"
         >
           {{ $t("vueA11yPage2019.conclusion.link01") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </template>
     </i18n>
@@ -86,7 +86,7 @@
         rel="noopener"
       >
         {{ $t("vueA11yPage2019.conclusion.quote04.text") }}
-        <open-new-icon
+        <external-link-icon
       /></a>
     </blockquote>
     <h3>{{ $t("vueA11yPage2019.subHeading.conclusion") }}</h3>
@@ -106,7 +106,7 @@
         target="_blank"
         rel="noopener"
         >アクセシビリティは &quot;Start Small, Start Now&quot; でいこう |
-        kzakza<open-new-icon
+        kzakza<external-link-icon
       /></a>
     </blockquote>
     <p>

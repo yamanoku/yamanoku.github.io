@@ -15,7 +15,7 @@
             :href="$t('privacyPage.analytics.link01.url')"
             target="_blank"
             rel="noopener"
-            >{{ $t("privacyPage.analytics.link01.title") }}<open-new-icon
+            >{{ $t("privacyPage.analytics.link01.title") }}<external-link-icon
           /></a>
         </li>
         <li>
@@ -23,7 +23,7 @@
             :href="$t('privacyPage.analytics.link02.url')"
             target="_blank"
             rel="noopener"
-            >{{ $t("privacyPage.analytics.link02.title") }}<open-new-icon
+            >{{ $t("privacyPage.analytics.link02.title") }}<external-link-icon
           /></a>
         </li>
       </ul>

@@ -14,7 +14,7 @@
         :href="$t('vueA11yPage2019.webA11y.link01.link')"
         target="_blank"
         rel="noopener"
-        >{{ $t("vueA11yPage2019.webA11y.link01.text") }}<open-new-icon
+        >{{ $t("vueA11yPage2019.webA11y.link01.text") }}<external-link-icon
       /></a>
     </blockquote>
     <h3>{{ $t("vueA11yPage2019.subHeading.webA11y.title02") }}</h3>
@@ -33,7 +33,7 @@
           :href="$t('vueA11yPage2019.webA11y.link02.link')"
           target="_blank"
           rel="noopener"
-          >{{ $t("vueA11yPage2019.webA11y.link02.text") }}<open-new-icon
+          >{{ $t("vueA11yPage2019.webA11y.link02.text") }}<external-link-icon
         /></a>
       </figcaption>
     </figure>

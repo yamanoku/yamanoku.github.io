@@ -28,7 +28,7 @@
       <li>
         <a href="https://yamanoku.net/oclock/" target="_blank" rel="noopener">
           {{ $t("product.oclock-app.title") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
       <li>
@@ -38,7 +38,7 @@
           rel="noopener"
         >
           {{ $t("product.oclock-app.zenn") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
     </ul>
