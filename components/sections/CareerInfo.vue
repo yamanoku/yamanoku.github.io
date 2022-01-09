@@ -25,7 +25,7 @@
           rel="noopener"
         >
           {{ $t("career.experiencedSkills") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
       <li>
@@ -35,7 +35,7 @@
           rel="noopener"
         >
           {{ $t("career.wantedly") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
       <li>
@@ -45,7 +45,7 @@
           rel="noopener"
         >
           {{ $t("career.lapras") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
       <li>
@@ -55,7 +55,7 @@
           rel="noopener"
         >
           {{ $t("career.youtrust") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
     </ul>

@@ -6,22 +6,22 @@
     <ul>
       <li>
         <a href="https://twitter.com/okuto_oyama" target="_blank" rel="noopener"
-          >{{ $t("sns.twitter") }}<open-new-icon
+          >{{ $t("sns.twitter") }}<external-link-icon
         /></a>
       </li>
       <li>
         <a href="https://github.com/yamanoku" target="_blank" rel="noopener"
-          >{{ $t("sns.github") }}<open-new-icon
+          >{{ $t("sns.github") }}<external-link-icon
         /></a>
       </li>
       <li>
         <a href="https://scrapbox.io/yamanoku/" target="_blank" rel="noopener"
-          >{{ $t("sns.scrapbox") }}<open-new-icon
+          >{{ $t("sns.scrapbox") }}<external-link-icon
         /></a>
       </li>
       <li>
         <a href="https://facebook.com/okutooyama" target="_blank" rel="noopener"
-          >{{ $t("sns.facebook") }}<open-new-icon
+          >{{ $t("sns.facebook") }}<external-link-icon
         /></a>
       </li>
       <li>
@@ -29,7 +29,7 @@
         <ul>
           <li>
             <a href="https://yamanoku.tumblr.com" target="_blank" rel="noopener"
-              >{{ $t("sns.tumblr.tumblog") }}<open-new-icon
+              >{{ $t("sns.tumblr.tumblog") }}<external-link-icon
             /></a>
           </li>
           <li>
@@ -37,7 +37,7 @@
               href="https://yamagraph.tumblr.com"
               target="_blank"
               rel="noopener"
-              >{{ $t("sns.tumblr.artworks") }}<open-new-icon
+              >{{ $t("sns.tumblr.artworks") }}<external-link-icon
             /></a>
           </li>
         </ul>

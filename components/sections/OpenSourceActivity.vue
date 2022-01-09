@@ -15,7 +15,7 @@
           rel="noopener"
         >
           {{ $t("openSourceActivity.link01") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
     </ul>

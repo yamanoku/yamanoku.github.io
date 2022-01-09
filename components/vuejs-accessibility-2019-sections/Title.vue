@@ -23,7 +23,7 @@
           rel="noopener"
         >
           {{ $t("vueA11yPage2019.titleSection.link01") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </template>
     </i18n>

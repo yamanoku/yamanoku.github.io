@@ -6,7 +6,7 @@
     height="24"
     viewBox="0 0 24 24"
   >
-    <title>Open in new tab</title>
+    <title>{{ $t("iconTitle.externalLink") }}</title>
     <path class="open_new-1" d="M0 0h24v24H0z" fill="none" />
     <path
       class="open_new-2"
@@ -14,3 +14,22 @@
     />
   </svg>
 </template>
+
+<style scoped>
+svg {
+  width: 12px;
+  height: 12px;
+  margin: 0 0 -1px 4px;
+}
+svg path {
+  fill: var(--y-black-base);
+}
+@media (prefers-color-scheme: dark) {
+  svg path {
+    fill: var(--y-white-base);
+  }
+}
+svg .open_new-1 {
+  fill: none;
+}
+</style>

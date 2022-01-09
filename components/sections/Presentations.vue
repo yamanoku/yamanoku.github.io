@@ -17,7 +17,7 @@
     <i18n tag="p" path="archivePage.externalLink">
       <template v-slot:title>
         <a href="https://archives.yamanoku.net" target="_blank" rel="noopener"
-          >{{ $t("archivePage.title") }}<open-new-icon />
+          >{{ $t("archivePage.title") }}<external-link-icon />
         </a>
       </template>
     </i18n>

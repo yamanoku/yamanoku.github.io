@@ -11,7 +11,7 @@
       </template>
       <a :href="list.url" target="_blank" rel="noopener">
         {{ list.title }}
-        <open-new-icon />
+        <external-link-icon />
       </a>
     </li>
   </ul>

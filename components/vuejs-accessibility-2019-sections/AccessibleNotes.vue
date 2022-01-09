@@ -28,7 +28,7 @@
         :href="$t('vueA11yPage2019.a11yNote.quote02.link')"
         target="_blank"
         rel="noopener"
-        >{{ $t("vueA11yPage2019.a11yNote.quote02.text") }}<open-new-icon
+        >{{ $t("vueA11yPage2019.a11yNote.quote02.text") }}<external-link-icon
       /></a>
     </blockquote>
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc03">
@@ -58,7 +58,7 @@
       target="_blank"
       rel="noopener"
       lang="en"
-      >vue-accessible-modal - CodeSandbox<open-new-icon />
+      >vue-accessible-modal - CodeSandbox<external-link-icon />
     </a>
     <h3>{{ $t("vueA11yPage2019.subHeading.a11yNote.note03") }}</h3>
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc08">
@@ -76,7 +76,7 @@
           target="_blank"
           rel="noopener"
           lang="en"
-          >vue-announcer<open-new-icon
+          >vue-announcer<external-link-icon
         /></a>
       </template>
     </i18n>
@@ -109,7 +109,7 @@
           target="_blank"
           rel="noopener"
           lang="en"
-          >axe-core<open-new-icon
+          >axe-core<external-link-icon
         /></a>
       </template>
       <template v-slot:LightHouse>
@@ -117,7 +117,7 @@
           href="https://developers.google.com/web/tools/lighthouse/"
           target="_blank"
           rel="noopener"
-          >Lighthouse<open-new-icon
+          >Lighthouse<external-link-icon
         /></a>
       </template>
     </i18n>
@@ -144,7 +144,7 @@
           href="https://www.npmjs.com/package/@storybook/addon-a11y"
           target="_blank"
           rel="noopener"
-          >storybook-addon-a11y<open-new-icon
+          >storybook-addon-a11y<external-link-icon
         /></a>
       </template>
     </i18n>
@@ -177,7 +177,7 @@
       target="_blank"
       rel="noopener"
       >What we found when we tested tools on the world’s least-accessible
-      webpage - Accessibility in government<open-new-icon
+      webpage - Accessibility in government<external-link-icon
     /></a>
     <p>{{ $t("vueA11yPage2019.a11yNote.desc20") }}</p>
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc21">
@@ -186,14 +186,14 @@
       </template>
     </i18n>
     <a href="https://waic.jp/docs/WCAG21/" target="_blank" rel="noopener"
-      >Web Content Accessibility Guidelines (WCAG) 2.1<open-new-icon
+      >Web Content Accessibility Guidelines (WCAG) 2.1<external-link-icon
     /></a>
     <p>{{ $t("vueA11yPage2019.a11yNote.desc22") }}</p>
     <a
       href="https://openameba.github.io/a11y-guidelines/"
       target="_blank"
       rel="noopener"
-      >Ameba Accessibility Guidelines<open-new-icon
+      >Ameba Accessibility Guidelines<external-link-icon
     /></a>
   </section>
 </template>

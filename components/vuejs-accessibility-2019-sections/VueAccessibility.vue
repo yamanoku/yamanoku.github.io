@@ -21,7 +21,7 @@
         target="_blank"
         rel="noopener"
         >Components Basics — Listening-to-Child-Components-Events —
-        Vue.js<open-new-icon
+        Vue.js<external-link-icon
       /></a>
     </blockquote>
     <blockquote lang="en">
@@ -37,7 +37,7 @@
         href="https://vuejs.org/v2/cookbook/editable-svg-icons.html#Base-Example"
         target="_blank"
         rel="noopener"
-        >Editable SVG Icon Systems — Base Example — Vue.js<open-new-icon
+        >Editable SVG Icon Systems — Base Example — Vue.js<external-link-icon
       /></a>
     </blockquote>
     <p>{{ $t("vueA11yPage2019.vueA11y.desc05") }}</p>
@@ -47,7 +47,8 @@
           :href="$t('vueA11yPage2019.vueA11y.listitem01.link')"
           target="_blank"
           rel="noopener"
-          >{{ $t("vueA11yPage2019.vueA11y.listitem01.text") }}<open-new-icon
+          >{{ $t("vueA11yPage2019.vueA11y.listitem01.text")
+          }}<external-link-icon
         /></a>
       </li>
       <li>
@@ -55,7 +56,7 @@
           href="https://angular.io/guide/accessibility"
           target="_blank"
           rel="noopener"
-          >Angular - Accessibility in Angular<open-new-icon
+          >Angular - Accessibility in Angular<external-link-icon
         /></a>
       </li>
     </ul>
@@ -64,7 +65,7 @@
       href="https://github.com/vuejs/vuejs.org/issues/974"
       target="_blank"
       rel="noopener"
-      >Accessibility docs · Issue #974 · vuejs/vuejs.org<open-new-icon
+      >Accessibility docs · Issue #974 · vuejs/vuejs.org<external-link-icon
     /></a>
     <p>{{ $t("vueA11yPage2019.vueA11y.desc07") }}</p>
     <a
@@ -72,7 +73,7 @@
       target="_blank"
       rel="noopener"
       >vuejs.org/accessibility.md at a11y-docs ·
-      callumacrae/vuejs.org<open-new-icon
+      callumacrae/vuejs.org<external-link-icon
     /></a>
     <h3>Vue <abbr title="accessibility">a11y</abbr></h3>
     <p>{{ $t("vueA11yPage2019.vueA11y.desc08") }}</p>
@@ -91,7 +92,7 @@
       </picture>
       <figcaption>
         <a href="https://vue-a11y-2019.com/" target="_blank" rel="noopener"
-          >Vue <abbr title="accessibility">a11y</abbr><open-new-icon
+          >Vue <abbr title="accessibility">a11y</abbr><external-link-icon
         /></a>
       </figcaption>
     </figure>

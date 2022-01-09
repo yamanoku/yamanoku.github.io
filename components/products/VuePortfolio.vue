@@ -35,7 +35,7 @@
           rel="noopener"
         >
           {{ $t("product.vuePortfolio") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
     </ul>

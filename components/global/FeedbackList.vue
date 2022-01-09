@@ -5,13 +5,13 @@
       <li>
         <a :href="gitHubLink" target="_blank" rel="noopener">
           {{ this.$t("feedback.github.title") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
       <li>
         <a :href="twitterLink" target="_blank" rel="noopener">
           {{ this.$t("feedback.twitter.title") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
     </ul>

@@ -265,6 +265,10 @@ prefixAlt:
   photo: "Photo"
   thumbnail: "Thumbnail"
   screenshot: "ScreenShot"
+iconTitle:
+  github: "Go to GitHub"
+  mail: "Launch the Mail application"
+  externalLink: "Go to external site"
 multilingual: "Multilingual Page"
 archivePage:
   title: "Archives"

@@ -27,7 +27,7 @@
               target="_blank"
               rel="noopener"
               >これからはじめるwebアクセシビリティ - こんのいぬ -
-              BOOTH<open-new-icon
+              BOOTH<external-link-icon
             /></a>
           </li>
           <li>
@@ -36,7 +36,7 @@
               target="_blank"
               rel="noopener"
               >「これからはじめるwebアクセシビリティ」をnoteにて販売します｜Okuto
-              Oyama｜note<open-new-icon
+              Oyama｜note<external-link-icon
             /></a>
           </li>
         </ul>
@@ -48,7 +48,7 @@
           target="_blank"
           rel="noopener"
           >yamanoku/accessibility_book-issues:
-          「これからはじめるwebアクセシビリティ」へのFB専用リポジトリ<open-new-icon
+          「これからはじめるwebアクセシビリティ」へのFB専用リポジトリ<external-link-icon
         /></a>
       </figcaption>
     </figure>

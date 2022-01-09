@@ -23,7 +23,7 @@
       <li>
         <a href="https://reading.yamanoku.net" target="_blank" rel="noopener">
           {{ $t("product.reading") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
       <li>
@@ -33,7 +33,7 @@
           rel="noopener"
         >
           {{ $t("product.updateInfo") }}
-          <open-new-icon />
+          <external-link-icon />
         </a>
       </li>
     </ul>
