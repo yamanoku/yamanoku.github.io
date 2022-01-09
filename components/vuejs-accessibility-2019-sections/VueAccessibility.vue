@@ -47,7 +47,8 @@
           :href="$t('vueA11yPage2019.vueA11y.listitem01.link')"
           target="_blank"
           rel="noopener"
-          >{{ $t("vueA11yPage2019.vueA11y.listitem01.text") }}<external-link-icon
+          >{{ $t("vueA11yPage2019.vueA11y.listitem01.text")
+          }}<external-link-icon
         /></a>
       </li>
       <li>
