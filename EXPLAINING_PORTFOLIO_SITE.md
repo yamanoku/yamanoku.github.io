@@ -58,7 +58,7 @@ For example, the slide list uses the following components to render:
     </template>
     <a :href="list.url" target="_blank" rel="noopener" lang="ja">
       {{ list.title }}
-      <open-new-icon />
+      <external-link-icon />
     </a>
   </li>
 </ul>

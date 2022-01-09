@@ -58,7 +58,7 @@ aria-labelledbyとsection要素を紐付けることで記事間を移動する�
     </template>
     <a :href="list.url" target="_blank" rel="noopener" lang="ja">
       {{ list.title }}
-      <open-new-icon />
+      <external-link-icon />
     </a>
   </li>
 </ul>
