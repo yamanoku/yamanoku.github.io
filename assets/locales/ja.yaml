@@ -223,6 +223,10 @@ prefixAlt:
   photo: "写真："
   thumbnail: "サムネイル："
   screenshot: "スクリーンショット："
+iconTitle:
+  github: "GitHub に移動する"
+  mail: "メールアプリを立ち上げる"
+  externalLink: "外部サイトに移動する"
 multilingual: "多言語ページ"
 archivePage:
   title: "アーカイブ"

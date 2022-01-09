@@ -6,7 +6,7 @@
     height="24"
     viewBox="0 0 24 24"
   >
-    <title>Open in new tab</title>
+    <title>{{ $t("iconTitle.externalLink") }}</title>
     <path class="open_new-1" d="M0 0h24v24H0z" fill="none" />
     <path
       class="open_new-2"
