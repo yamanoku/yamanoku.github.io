@@ -156,10 +156,7 @@
     <p>{{ $t("vueA11yPage2019.a11yNote.desc14") }}</p>
     <highlightjs lang="shell" :code="vueAxeInstall" />
     <highlightjs lang="javascript" :code="vueAxeSetting" />
-    <global-heading-component
-      :heading-level="4"
-      heading-text="Storybook"
-    />
+    <global-heading-component :heading-level="4" heading-text="Storybook" />
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc15">
       <template v-slot:storybookAddonA11y>
         <a

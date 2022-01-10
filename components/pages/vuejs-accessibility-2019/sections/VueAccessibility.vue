@@ -81,10 +81,7 @@
       >vuejs.org/accessibility.md at a11y-docs ·
       callumacrae/vuejs.org<external-link-icon
     /></a>
-    <global-heading-component
-      :heading-level="3"
-      heading-text="Vue a11y"
-    />
+    <global-heading-component :heading-level="3" heading-text="Vue a11y" />
     <p>{{ $t("vueA11yPage2019.vueA11y.desc08") }}</p>
     <figure>
       <picture>
