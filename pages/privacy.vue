@@ -1,6 +1,6 @@
 <template>
   <main id="main">
-    <h1 id="privacy-policy_heading">{{ $t("privacyPage.title") }}</h1>
+    <h1>{{ $t("privacyPage.title") }}</h1>
     <privacy-analytics />
     <global-local-switch />
   </main>
