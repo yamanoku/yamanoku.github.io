@@ -1,5 +1,8 @@
 <template>
-  <section id="social-network-services" aria-labelledby="social-network-services_heading">
+  <section
+    id="social-network-services"
+    aria-labelledby="social-network-services_heading"
+  >
     <h2 id="social-network-services_heading">
       {{ $t("heading.sns") }}
     </h2>

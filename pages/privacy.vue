@@ -18,9 +18,9 @@ export default {
         title: this.$t("privacyPage.title"),
         description: this.$t("privacyPage.description"),
         image: "https://yamanoku.net/ogp/ogp-privacy@2x.png",
-        imageAlt: this.$t("privacyPage.title"),
-      },
+        imageAlt: this.$t("privacyPage.title")
+      }
     };
-  },
+  }
 };
 </script>
