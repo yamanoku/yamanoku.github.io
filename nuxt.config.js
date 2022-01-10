@@ -53,16 +53,24 @@ module.exports = {
       prefix: "global"
     },
     {
-      path: "~/components/products/",
-      prefix: "products"
+      path: "~/components/pages/index/sections/products/",
+      prefix: "index-sections-products"
     },
     {
-      path: "~/components/sections/",
-      prefix: "sections"
+      path: "~/components/pages/index/sections/",
+      prefix: "index-sections"
     },
     {
-      path: "~/components/vuejs-accessibility-2019-sections/",
+      path: "~/components/pages/vuejs-accessibility-2019-sections/",
       prefix: "vuejs-accessibility-2019-sections"
+    },
+    {
+      path: "~/components/pages/privacy/",
+      prefix: "privacy"
+    },
+    {
+      path: "~/components/pages/404/",
+      prefix: "404"
     }
   ],
   build: {
