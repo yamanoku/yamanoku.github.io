@@ -3,9 +3,11 @@
     id="social-network-services"
     aria-labelledby="social-network-services_heading"
   >
-    <h2 id="social-network-services_heading">
-      {{ $t("heading.sns") }}
-    </h2>
+    <global-heading-component
+      id="social-network-services_heading"
+      :heading-level="2"
+      :heading-text="$t('heading.sns')"
+    />
     <ul>
       <li>
         <a href="https://twitter.com/okuto_oyama" target="_blank" rel="noopener"

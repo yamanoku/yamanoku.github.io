@@ -1,6 +1,9 @@
 <template>
   <section id="bio:about-accessibility-with-vuejs-2019">
-    <h2>{{ $t("vueA11yPage2019.heading.bio") }}</h2>
+    <global-heading-component
+      :heading-level="2"
+      :heading-text="$t('vueA11yPage2019.heading.bio')"
+    />
     <p>
       <picture>
         <source

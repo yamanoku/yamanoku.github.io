@@ -3,9 +3,11 @@
     id="product:web-accessibility-for-beginner"
     aria-labelledby="product:web-accessibility-for-beginner_heading"
   >
-    <h3 id="product:web-accessibility-for-beginner_heading">
-      {{ $t("product.wafb.title") }}
-    </h3>
+    <global-heading-component
+      id="product:web-accessibility-for-beginner_heading"
+      :heading-level="3"
+      :heading-text="$t('product.wafb.title')"
+    />
     <figure
       aria-labelledby="product:web-accessibility-for-beginner_heading"
       aria-describedby="product:web-accessibility-for-beginner_caption"
@@ -31,9 +33,11 @@
         <em>{{ $t("onlyJPText") }}</em>
       </p>
     </template>
-    <h4 id="related:web-accessibility-for-beginner_heading">
-      {{ $t("heading.relatedList") }}
-    </h4>
+    <global-heading-component
+      id="related:web-accessibility-for-beginner_heading"
+      :heading-level="4"
+      :heading-text="$t('heading.relatedList')"
+    />
     <ul aria-labelledby="related:web-accessibility-for-beginner_heading">
       <li>
         <a

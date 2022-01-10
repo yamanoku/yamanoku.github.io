@@ -1,6 +1,9 @@
 <template>
   <section id="in-conclusion:about-accessibility-with-vuejs-2019">
-    <h2>{{ $t("vueA11yPage2019.heading.conclusion") }}</h2>
+    <global-heading-component
+      :heading-level="2"
+      :heading-text="$t('vueA11yPage2019.heading.conclusion')"
+    />
     <p>
       {{ $t("vueA11yPage2019.conclusion.desc01") }}
     </p>
@@ -89,7 +92,10 @@
         <external-link-icon
       /></a>
     </blockquote>
-    <h3>{{ $t("vueA11yPage2019.subHeading.conclusion") }}</h3>
+    <global-heading-component
+      :heading-level="3"
+      :heading-text="$t('vueA11yPage2019.subHeading.conclusion')"
+    />
     <p>
       {{ $t("vueA11yPage2019.conclusion.desc07") }}
     </p>

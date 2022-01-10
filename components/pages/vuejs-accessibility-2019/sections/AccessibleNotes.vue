@@ -1,6 +1,9 @@
 <template>
   <section id="web-accessibility-notes:about-accessibility-with-vuejs-2019">
-    <h2>{{ $t("vueA11yPage2019.heading.a11yNote") }}</h2>
+    <global-heading-component
+      :heading-level="2"
+      :heading-text="$t('vueA11yPage2019.heading.a11yNote')"
+    />
     <p>
       {{ $t("vueA11yPage2019.a11yNote.desc01") }}
     </p>
@@ -43,7 +46,10 @@
       </template>
     </i18n>
     <highlightjs lang="html" :code="buttonMarkupAfter" />
-    <h3>{{ $t("vueA11yPage2019.subHeading.a11yNote.note02") }}</h3>
+    <global-heading-component
+      :heading-level="3"
+      :heading-text="$t('vueA11yPage2019.subHeading.a11yNote.note02')"
+    />
     <p>
       {{ $t("vueA11yPage2019.a11yNote.desc05") }}
     </p>
@@ -60,7 +66,10 @@
       lang="en"
       >vue-accessible-modal - CodeSandbox<external-link-icon />
     </a>
-    <h3>{{ $t("vueA11yPage2019.subHeading.a11yNote.note03") }}</h3>
+    <global-heading-component
+      :heading-level="3"
+      :heading-text="$t('vueA11yPage2019.subHeading.a11yNote.note03')"
+    />
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc08">
       <template v-slot:abbr01>
         <abbr>{{ $t("vueA11yPage2019.a11yNote.abbr01") }}</abbr>
@@ -80,7 +89,10 @@
         /></a>
       </template>
     </i18n>
-    <h3>{{ $t("vueA11yPage2019.subHeading.a11yNote.note04") }}</h3>
+    <global-heading-component
+      :heading-level="3"
+      :heading-text="$t('vueA11yPage2019.subHeading.a11yNote.note04')"
+    />
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc10">
       <template v-slot:nuxtConfigJs>
         <code>nuxt.config.js</code>
@@ -100,8 +112,15 @@
         <small>{{ $t("vueA11yPage2019.a11yNote.small01") }}</small>
       </template>
     </i18n>
-    <h3>{{ $t("vueA11yPage2019.subHeading.a11yNote.note05") }}</h3>
-    <h4 lang="en">vue-axe</h4>
+    <global-heading-component
+      :heading-level="3"
+      :heading-text="$t('vueA11yPage2019.subHeading.a11yNote.note05')"
+    />
+    <global-heading-component
+      lang="en"
+      :heading-level="4"
+      heading-text="vue-axe"
+    />
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc13">
       <template v-slot:axeCore>
         <a
@@ -137,7 +156,7 @@
     <p>{{ $t("vueA11yPage2019.a11yNote.desc14") }}</p>
     <highlightjs lang="shell" :code="vueAxeInstall" />
     <highlightjs lang="javascript" :code="vueAxeSetting" />
-    <h4>Storybook</h4>
+    <global-heading-component :heading-level="4" heading-text="Storybook" />
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc15">
       <template v-slot:storybookAddonA11y>
         <a
@@ -155,7 +174,11 @@
         :alt="$t('vueA11yPage2019.a11yNote.imgAlt02')"
       />
     </figure>
-    <h4 lang="en">eslint-plugin-vuejs-accessibility</h4>
+    <global-heading-component
+      lang="en"
+      :heading-level="4"
+      heading-text="eslint-plugin-vuejs-accessibility"
+    />
     <p>{{ $t("vueA11yPage2019.a11yNote.desc16") }}</p>
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc17">
       <template v-slot:img>
@@ -170,7 +193,10 @@
     </i18n>
     <highlightjs lang="html" :code="eslintEmoji" />
     <p>{{ $t("vueA11yPage2019.a11yNote.desc18") }}</p>
-    <h4>{{ $t("vueA11yPage2019.subHeading.a11yNote.test.test04") }}</h4>
+    <global-heading-component
+      :heading-level="4"
+      :heading-text="$t('vueA11yPage2019.subHeading.a11yNote.test.test04')"
+    />
     <p>{{ $t("vueA11yPage2019.a11yNote.desc19") }}</p>
     <a
       href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/"

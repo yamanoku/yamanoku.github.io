@@ -1,6 +1,10 @@
 <template>
   <article id="product:reading" aria-labelledby="product:reading_heading">
-    <h3 id="product:reading_heading">{{ $t("product.reading") }}</h3>
+    <global-heading-component
+      id="product:reading_heading"
+      :heading-level="3"
+      :heading-text="$t('product.reading')"
+    />
     <figure
       aria-labelledby="product:reading_heading"
       aria-describedby="product:reading_caption"
@@ -18,7 +22,11 @@
         {{ $t("product.description.reading") }}
       </figcaption>
     </figure>
-    <h4 id="related:reading_heading">{{ $t("heading.relatedList") }}</h4>
+    <global-heading-component
+      id="related:reading_heading"
+      :heading-level="4"
+      :heading-text="$t('heading.relatedList')"
+    />
     <ul aria-labelledby="related:reading_heading">
       <li>
         <a href="https://reading.yamanoku.net" target="_blank" rel="noopener">
@@ -37,7 +45,11 @@
         </a>
       </li>
     </ul>
-    <h4 id="teck-stack:reading_heading">{{ $t("heading.techStack") }}</h4>
+    <global-heading-component
+      id="teck-stack:reading_heading"
+      :heading-level="4"
+      :heading-text="$t('heading.techStack')"
+    />
     <ul aria-labelledby="teck-stack:reading_heading">
       <li>Nuxt.js</li>
       <li>Nuxt PWA</li>

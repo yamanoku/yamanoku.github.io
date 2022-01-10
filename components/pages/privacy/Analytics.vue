@@ -1,8 +1,10 @@
 <template>
   <section id="privacy:analytics" aria-labelledby="privacy:analytics_heading">
-    <h2 id="privacy:analytics_heading">
-      {{ $t("privacyPage.analytics.heading") }}
-    </h2>
+    <global-heading-component
+      id="privacy:analytics_heading"
+      :heading-level="2"
+      :heading-text="$t('privacyPage.analytics.heading')"
+    />
     <p>{{ $t("privacyPage.analytics.desc01") }}</p>
     <p>{{ $t("privacyPage.analytics.desc02") }}</p>
     <p>{{ $t("privacyPage.analytics.desc03") }}</p>

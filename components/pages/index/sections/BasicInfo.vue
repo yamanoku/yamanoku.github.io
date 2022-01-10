@@ -1,6 +1,10 @@
 <template>
   <section id="basic" aria-labelledby="basic-heading">
-    <h2 id="basic-heading">{{ $t("heading.basic") }}</h2>
+    <global-heading-component
+      id="basic-heading"
+      :heading-level="2"
+      :heading-text="$t('heading.basic')"
+    />
     <template v-if="this.$i18n.locale === 'ja'">
       大山奥人
       <small>（おおやまおくと）</small>

@@ -1,6 +1,9 @@
 <template>
   <main id="main">
-    <h1>{{ $t("privacyPage.title") }}</h1>
+    <global-heading-component
+      :heading-level="1"
+      :heading-text="$t('privacyPage.title')"
+    />
     <privacy-analytics />
     <global-local-switch />
   </main>

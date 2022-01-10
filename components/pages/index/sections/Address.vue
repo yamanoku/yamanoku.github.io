@@ -1,8 +1,10 @@
 <template>
   <section id="contact" aria-labelledby="contact-heading">
-    <h2 id="contact-heading">
-      {{ $t("heading.contact") }}
-    </h2>
+    <global-heading-component
+      id="contact-heading"
+      :heading-level="2"
+      :heading-text="$t('heading.contact')"
+    />
     <address>
       <a href="mailto:0910yama@gmail.com">
         0910yama@gmail.com

@@ -1,6 +1,9 @@
 <template>
   <main id="main">
-    <h1>{{ $t("vueA11yPage2019.title") }}</h1>
+    <global-heading-component
+      :heading-level="1"
+      :heading-text="$t('vueA11yPage2019.title')"
+    />
     <vuejs-accessibility-2019-title />
     <global-local-switch />
     <vuejs-accessibility-2019-sections-bio />
