@@ -1,9 +1,6 @@
 <template>
-  <section id="title:about-accessibility-with-vuejs-2019">
-    <h1 id="heading:about-accessibility-with-vuejs-2019">
-      {{ $t("vueA11yPage2019.title") }}
-    </h1>
-    <figure aria-labelledby="heading:about-accessibility-with-vuejs-2019">
+  <div>
+    <figure>
       <picture>
         <source
           srcset="~/assets/img/product-about-accessibility-with-vuejs-2019.webp"
@@ -33,7 +30,7 @@
     <div class="alert-text-wrap">
       <strong>{{ $t("alertOneYearText") }}</strong>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

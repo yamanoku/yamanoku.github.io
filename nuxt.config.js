@@ -61,7 +61,11 @@ module.exports = {
       prefix: "index-sections"
     },
     {
-      path: "~/components/pages/vuejs-accessibility-2019-sections/",
+      path: "~/components/pages/vuejs-accessibility-2019/",
+      prefix: "vuejs-accessibility-2019"
+    },
+    {
+      path: "~/components/pages/vuejs-accessibility-2019/sections/",
       prefix: "vuejs-accessibility-2019-sections"
     },
     {
