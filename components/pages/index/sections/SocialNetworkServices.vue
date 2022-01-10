@@ -1,6 +1,6 @@
 <template>
-  <section id="sns" aria-labelledby="sns_heading">
-    <h2 id="sns_heading">
+  <section id="social-network-services" aria-labelledby="social-network-services_heading">
+    <h2 id="social-network-services_heading">
       {{ $t("heading.sns") }}
     </h2>
     <ul>
@@ -48,6 +48,6 @@
 
 <script>
 export default {
-  name: "SectionsSns"
+  name: "IndexSectionsSocialNetworkServices"
 };
 </script>

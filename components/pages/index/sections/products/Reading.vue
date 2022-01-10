@@ -54,6 +54,6 @@
 
 <script>
 export default {
-  name: "ProductsReading"
+  name: "IndexSectionsProductsReading"
 };
 </script>

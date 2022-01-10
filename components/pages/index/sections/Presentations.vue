@@ -29,7 +29,7 @@ import { listStage } from "~/assets/presentations/liststage";
 import { listWrite } from "~/assets/presentations/listwrite";
 
 export default {
-  name: "SectionsPresentations",
+  name: "IndexSectionsPresentations",
   data() {
     return {
       listStage,
@@ -38,11 +38,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-svg {
-  width: 12px;
-  height: 12px;
-  margin: 0 0 -1px 4px;
-}
-</style>

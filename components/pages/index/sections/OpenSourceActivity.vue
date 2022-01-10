@@ -22,3 +22,9 @@
     <global-donate-component />
   </section>
 </template>
+
+<script>
+export default {
+  name: "IndexSectionsOpenSourceActivity"
+};
+</script>

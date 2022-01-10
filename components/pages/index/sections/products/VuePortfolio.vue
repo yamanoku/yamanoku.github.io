@@ -50,3 +50,9 @@
     </ul>
   </article>
 </template>
+
+<script>
+export default {
+  name: "IndexSectionsProductsVuePortfolio"
+};
+</script>
