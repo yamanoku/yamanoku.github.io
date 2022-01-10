@@ -8,51 +8,44 @@
       :heading-level="2"
       :heading-text="$t('heading.sns')"
     />
-    <ul>
-      <li>
-        <a href="https://twitter.com/okuto_oyama" target="_blank" rel="noopener"
-          >{{ $t("sns.twitter") }}<external-link-icon
-        /></a>
-      </li>
-      <li>
-        <a href="https://github.com/yamanoku" target="_blank" rel="noopener"
-          >{{ $t("sns.github") }}<external-link-icon
-        /></a>
-      </li>
-      <li>
-        <a href="https://scrapbox.io/yamanoku/" target="_blank" rel="noopener"
-          >{{ $t("sns.scrapbox") }}<external-link-icon
-        /></a>
-      </li>
-      <li>
-        <a href="https://facebook.com/okutooyama" target="_blank" rel="noopener"
-          >{{ $t("sns.facebook") }}<external-link-icon
-        /></a>
-      </li>
-      <li>
-        {{ $t("sns.tumblr.text") }}
-        <ul>
-          <li>
-            <a href="https://yamanoku.tumblr.com" target="_blank" rel="noopener"
-              >{{ $t("sns.tumblr.tumblog") }}<external-link-icon
-            /></a>
-          </li>
-          <li>
-            <a
-              href="https://yamagraph.tumblr.com"
-              target="_blank"
-              rel="noopener"
-              >{{ $t("sns.tumblr.artworks") }}<external-link-icon
-            /></a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <global-list-component :list-array="socialNetworkServicesListItem" />
   </section>
 </template>
 
 <script>
 export default {
-  name: "IndexSectionsSocialNetworkServices"
+  name: "IndexSectionsSocialNetworkServices",
+  data() {
+    return {
+      socialNetworkServicesListItem: [
+        {
+          title: this.$t("sns.twitter"),
+          url: "https://twitter.com/okuto_oyama",
+          isExternal: true
+        },
+        {
+          title: this.$t("sns.github"),
+          url: "https://github.com/yamanoku",
+          isExternal: true,
+          isGitHubLink: true
+        },
+        {
+          title: this.$t("sns.scrapbox"),
+          url: "https://scrapbox.io/yamanoku/",
+          isExternal: true
+        },
+        {
+          title: this.$t("sns.facebook"),
+          url: "https://facebook.com/okutooyama",
+          isExternal: true
+        },
+        {
+          title: this.$t("sns.tumblr.text"),
+          url: "https://yamanoku.tumblr.com",
+          isExternal: true
+        }
+      ]
+    };
+  }
 };
 </script>

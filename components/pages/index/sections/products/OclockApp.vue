@@ -30,39 +30,51 @@
       :heading-level="4"
       :heading-text="$t('heading.relatedList')"
     />
-    <ul aria-labelledby="related:oclock-app_heading">
-      <li>
-        <a href="https://yamanoku.net/oclock/" target="_blank" rel="noopener">
-          {{ $t("product.oclock-app.title") }}
-          <external-link-icon />
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://zenn.dev/yamanoku/scraps/bb713d47a45a55/"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("product.oclock-app.zenn") }}
-          <external-link-icon />
-        </a>
-      </li>
-    </ul>
+    <global-list-component
+      aria-labelledby="related:oclock-app_heading"
+      :list-array="relatedListItem"
+    />
     <global-heading-component
       id="teck-stack:oclock-app_heading"
       :heading-level="4"
       :heading-text="$t('heading.techStack')"
     />
-    <ul aria-labelledby="teck-stack:oclock-app_heading">
-      <li>Svelte</li>
-      <li>Custom Elements</li>
-      <li>WAI-ARIA</li>
-    </ul>
+    <global-list-component
+      aria-labelledby="tech-stack:oclock-app_heading"
+      :list-array="techStackListItem"
+    />
   </article>
 </template>
 
 <script>
 export default {
-  name: "IndexSectionsProductsOclockApp"
+  name: "IndexSectionsProductsOclockApp",
+  data() {
+    return {
+      relatedListItem: [
+        {
+          title: this.$t("product.oclock-app.title"),
+          url: "https://yamanoku.net/oclock/",
+          isExternal: true
+        },
+        {
+          title: this.$t("product.oclock-app.zenn"),
+          url: "https://zenn.dev/yamanoku/scraps/bb713d47a45a55/",
+          isExternal: true
+        }
+      ],
+      techStackListItem: [
+        {
+          title: "Svelte"
+        },
+        {
+          title: "Custom Elements"
+        },
+        {
+          title: "WAI-ARIA"
+        }
+      ]
+    };
+  }
 };
 </script>

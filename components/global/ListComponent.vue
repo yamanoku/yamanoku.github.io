@@ -5,14 +5,15 @@
         <span class="time">{{ dateStirngReplace(list.datetime) }}</span>
         -
       </template>
-      <template v-else-if="list.created_at">
-        <span class="time">{{ dateStirngReplace(list.created_at) }}</span>
-        -
+      <i18n v-if="list.isI18n" :path="list.title">
+        <global-link-component :link-object="list" />
+      </i18n>
+      <template v-else-if="list.url">
+        <global-link-component :link-object="list" />
       </template>
-      <a :href="list.url" target="_blank" rel="noopener">
+      <template v-else>
         {{ list.title }}
-        <external-link-icon />
-      </a>
+      </template>
     </li>
   </ul>
 </template>
@@ -20,7 +21,10 @@
 <script>
 export default {
   props: {
-    listArray: Array
+    listArray: {
+      type: Array,
+      required: true
+    }
   },
   data() {
     return {
@@ -34,3 +38,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.time {
+  font-variant-numeric: tabular-nums;
+}
+</style>

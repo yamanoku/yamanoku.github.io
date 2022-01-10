@@ -26,7 +26,7 @@ product:
     link: "「Vue.jsから考えるアクセシビリティについて - 2019」記事ページ"
     info:
       listitem01: "公開"
-      listitem02: "{awesomeA11yVue}に掲載"
+      listitem02: "{0}に掲載"
       listitem03: "英訳ページ追加"
       listitem04: "URL変更 (vue-a11y から vue-a11y-2019)"
   oclock-app:

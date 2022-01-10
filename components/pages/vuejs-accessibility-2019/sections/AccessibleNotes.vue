@@ -27,12 +27,7 @@
       <p>
         {{ $t("vueA11yPage2019.a11yNote.quote01") }}
       </p>
-      <a
-        :href="$t('vueA11yPage2019.a11yNote.quote02.link')"
-        target="_blank"
-        rel="noopener"
-        >{{ $t("vueA11yPage2019.a11yNote.quote02.text") }}<external-link-icon
-      /></a>
+      <global-link-component :link-object="wcagNoteLink" />
     </blockquote>
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc03">
       <template v-slot:div>
@@ -59,13 +54,7 @@
     <p>
       {{ $t("vueA11yPage2019.a11yNote.desc07") }}
     </p>
-    <a
-      href="https://codesandbox.io/s/vue-accessible-modal-9m474"
-      target="_blank"
-      rel="noopener"
-      lang="en"
-      >vue-accessible-modal - CodeSandbox<external-link-icon />
-    </a>
+    <global-link-component lang="en" :link-object="vueAccessibleModalLink" />
     <global-heading-component
       :heading-level="3"
       :heading-text="$t('vueA11yPage2019.subHeading.a11yNote.note03')"
@@ -80,13 +69,7 @@
         <code>aria-live</code>
       </template>
       <template v-slot:vueAnnouncer>
-        <a
-          href="https://github.com/vue-a11y/vue-announcer"
-          target="_blank"
-          rel="noopener"
-          lang="en"
-          >vue-announcer<external-link-icon
-        /></a>
+        <global-link-component lang="en" :link-object="vueAnnouncerLink" />
       </template>
     </i18n>
     <global-heading-component
@@ -123,21 +106,10 @@
     />
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc13">
       <template v-slot:axeCore>
-        <a
-          href="https://github.com/dequelabs/axe-core"
-          target="_blank"
-          rel="noopener"
-          lang="en"
-          >axe-core<external-link-icon
-        /></a>
+        <global-link-component lang="en" :link-object="axeCoreLink" />
       </template>
       <template v-slot:LightHouse>
-        <a
-          href="https://developers.google.com/web/tools/lighthouse/"
-          target="_blank"
-          rel="noopener"
-          >Lighthouse<external-link-icon
-        /></a>
+        <global-link-component :link-object="lighthouseLink" />
       </template>
     </i18n>
     <figure>
@@ -159,12 +131,7 @@
     <global-heading-component :heading-level="4" heading-text="Storybook" />
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc15">
       <template v-slot:storybookAddonA11y>
-        <a
-          href="https://www.npmjs.com/package/@storybook/addon-a11y"
-          target="_blank"
-          rel="noopener"
-          >storybook-addon-a11y<external-link-icon
-        /></a>
+        <global-link-component :link-object="storybookAddonLink" />
       </template>
     </i18n>
     <figure>
@@ -198,29 +165,16 @@
       :heading-text="$t('vueA11yPage2019.subHeading.a11yNote.test.test04')"
     />
     <p>{{ $t("vueA11yPage2019.a11yNote.desc19") }}</p>
-    <a
-      href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/"
-      target="_blank"
-      rel="noopener"
-      >What we found when we tested tools on the world’s least-accessible
-      webpage - Accessibility in government<external-link-icon
-    /></a>
+    <global-link-component :link-object="govUkLink" />
     <p>{{ $t("vueA11yPage2019.a11yNote.desc20") }}</p>
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc21">
       <template v-slot:abbr02>
         <abbr>Web Content Accessibility Guidelines</abbr>
       </template>
     </i18n>
-    <a href="https://waic.jp/docs/WCAG21/" target="_blank" rel="noopener"
-      >Web Content Accessibility Guidelines (WCAG) 2.1<external-link-icon
-    /></a>
+    <global-link-component :link-object="guidelineLink01" />
     <p>{{ $t("vueA11yPage2019.a11yNote.desc22") }}</p>
-    <a
-      href="https://openameba.github.io/a11y-guidelines/"
-      target="_blank"
-      rel="noopener"
-      >Ameba Accessibility Guidelines<external-link-icon
-    /></a>
+    <global-link-component :link-object="guidelineLink02" />
   </section>
 </template>
 
@@ -229,6 +183,54 @@ export default {
   name: "VueA11y2019AccessibleNotes",
   data() {
     return {
+      wcagNoteLink: {
+        title: this.$t("vueA11yPage2019.a11yNote.quote02.text"),
+        url: this.$t("vueA11yPage2019.a11yNote.quote02.link"),
+        isExternal: true
+      },
+      vueAccessibleModalLink: {
+        title: "vue-accessible-modal - CodeSandbox",
+        url: "https://codesandbox.io/s/vue-accessible-modal-9m474",
+        isExternal: true
+      },
+      vueAnnouncerLink: {
+        title: "vue-announcer",
+        url: "https://github.com/vue-a11y/vue-announcer",
+        isExternal: true,
+        isGitHubLink: true
+      },
+      axeCoreLink: {
+        title: "axe-core",
+        url: "https://github.com/dequelabs/axe-core",
+        isExternal: true,
+        isGitHubLink: true
+      },
+      lighthouseLink: {
+        title: "Lighthouse",
+        url: "https://developers.google.com/web/tools/lighthouse/",
+        isExternal: true
+      },
+      storybookAddonLink: {
+        title: "storybook-addon-a11y",
+        url: "https://www.npmjs.com/package/@storybook/addon-a11y",
+        isExternal: true
+      },
+      govUkLink: {
+        title:
+          "What we found when we tested tools on the world’s least-accessible webpage - Accessibility in government",
+        url: "https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/",
+        isExternal: true
+      },
+      guidelineLink01: {
+        title: "Web Content Accessibility Guidelines (WCAG) 2.1",
+        url: "https://waic.jp/docs/WCAG21/",
+        isExternal: true
+      },
+      guidelineLink02: {
+        title: "Ameba Accessibility Guidelines",
+        url: "https://openameba.github.io/a11y-guidelines/",
+        isExternal: true
+      },
       buttonMarkupBefore: `
 <template>
   <div role="button" tabindex="0" @click="handleClick" @keyup="handleKeyUp">button</div>
@@ -285,12 +287,5 @@ if (process.env.NODE_ENV !== 'production') { // development environment
 code:not(.hljs) {
   line-height: 1;
   padding: 0;
-}
-iframe.vue-accessible-modal {
-  width: 100%;
-  height: 500px;
-  border: 0;
-  border-radius: 4px;
-  overflow: hidden;
 }
 </style>

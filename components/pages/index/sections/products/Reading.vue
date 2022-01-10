@@ -27,44 +27,66 @@
       :heading-level="4"
       :heading-text="$t('heading.relatedList')"
     />
-    <ul aria-labelledby="related:reading_heading">
-      <li>
-        <a href="https://reading.yamanoku.net" target="_blank" rel="noopener">
-          {{ $t("product.reading") }}
-          <external-link-icon />
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://scrapbox.io/yamanoku/Reading%E2%80%A6#5b1f8344c2cd3f000095e9c0"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("product.updateInfo") }}
-          <external-link-icon />
-        </a>
-      </li>
-    </ul>
+    <global-list-component
+      aria-labelledby="related:reading_heading"
+      :list-array="relatedListItem"
+    />
     <global-heading-component
       id="teck-stack:reading_heading"
       :heading-level="4"
       :heading-text="$t('heading.techStack')"
     />
-    <ul aria-labelledby="teck-stack:reading_heading">
-      <li>Nuxt.js</li>
-      <li>Nuxt PWA</li>
-      <li>axios</li>
-      <li>modern-normalize</li>
-      <li>MSW</li>
-      <li>@slack/web-api</li>
-      <li>Netlify</li>
-      <li>CircleCI</li>
-    </ul>
+    <global-list-component
+      aria-labelledby="tech-stack:reading_heading"
+      :list-array="techStackListItem"
+    />
   </article>
 </template>
 
 <script>
 export default {
-  name: "IndexSectionsProductsReading"
+  name: "IndexSectionsProductsReading",
+  data() {
+    return {
+      relatedListItem: [
+        {
+          title: this.$t("product.reading"),
+          url: "https://reading.yamanoku.net",
+          isExternal: true
+        },
+        {
+          title: this.$t("product.updateInfo"),
+          url: "https://scrapbox.io/yamanoku/Reading%E2%80%A6#5b1f8344c2cd3f000095e9c0",
+          isExternal: true
+        }
+      ],
+      techStackListItem: [
+        {
+          title: "Nuxt.js"
+        },
+        {
+          title: "Nuxt PWA"
+        },
+        {
+          title: "axios"
+        },
+        {
+          title: "modern-normalize"
+        },
+        {
+          title: "MSW"
+        },
+        {
+          title: "@slack/web-api"
+        },
+        {
+          title: "Netlify"
+        },
+        {
+          title: "CircleCI"
+        }
+      ]
+    };
+  }
 };
 </script>

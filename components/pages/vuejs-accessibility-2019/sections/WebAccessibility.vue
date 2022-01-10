@@ -16,12 +16,7 @@
     <p>{{ $t("vueA11yPage2019.webA11y.desc02") }}</p>
     <blockquote>
       <p>{{ $t("vueA11yPage2019.webA11y.quote01") }}</p>
-      <a
-        :href="$t('vueA11yPage2019.webA11y.link01.link')"
-        target="_blank"
-        rel="noopener"
-        >{{ $t("vueA11yPage2019.webA11y.link01.text") }}<external-link-icon
-      /></a>
+      <global-link-component :link-object="link01" />
     </blockquote>
     <global-heading-component
       :heading-level="3"
@@ -38,12 +33,7 @@
         loading="lazy"
       />
       <figcaption>
-        <a
-          :href="$t('vueA11yPage2019.webA11y.link02.link')"
-          target="_blank"
-          rel="noopener"
-          >{{ $t("vueA11yPage2019.webA11y.link02.text") }}<external-link-icon
-        /></a>
+        <global-link-component :link-object="link02" />
       </figcaption>
     </figure>
     <p>{{ $t("vueA11yPage2019.webA11y.desc06") }}</p>
@@ -58,6 +48,20 @@
 
 <script>
 export default {
-  name: "VueA11y2019WebAccessibility"
+  name: "VueA11y2019WebAccessibility",
+  data() {
+    return {
+      link01: {
+        title: this.$t("vueA11yPage2019.webA11y.link01.text"),
+        url: this.$t("vueA11yPage2019.webA11y.link01.link"),
+        isExternal: true
+      },
+      link02: {
+        title: this.$t("vueA11yPage2019.webA11y.link02.text"),
+        url: this.$t("vueA11yPage2019.webA11y.link02.link"),
+        isExternal: true
+      }
+    };
+  }
 };
 </script>

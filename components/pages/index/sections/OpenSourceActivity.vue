@@ -9,24 +9,24 @@
       :heading-text="$t('heading.openSourceActivity')"
     />
     <p>{{ $t("openSourceActivity.desc01") }}</p>
-    <ul>
-      <li>
-        <a
-          href="https://www.notion.so/yamanoku/2021-2c4fa51b832645f494698ebd11e069f9"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("openSourceActivity.link01") }}
-          <external-link-icon />
-        </a>
-      </li>
-    </ul>
+    <global-list-component :list-array="openSourceActivityListItem" />
     <global-donate-component />
   </section>
 </template>
 
 <script>
 export default {
-  name: "IndexSectionsOpenSourceActivity"
+  name: "IndexSectionsOpenSourceActivity",
+  data() {
+    return {
+      openSourceActivityListItem: [
+        {
+          title: this.$t("openSourceActivity.link01"),
+          url: "https://www.notion.so/yamanoku/2021-2c4fa51b832645f494698ebd11e069f9",
+          isExternal: true
+        }
+      ]
+    };
+  }
 };
 </script>
