@@ -31,9 +31,6 @@ html[lang="ja"] nav,
 html[lang="ja"] footer {
   max-width: 45rem;
 }
-ul:not([class]) li .time {
-  font-variant-numeric: tabular-nums;
-}
 code.hljs {
   padding: var(--y-rhythm-3);
 }
