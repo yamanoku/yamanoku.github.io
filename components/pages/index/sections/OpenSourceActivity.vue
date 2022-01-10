@@ -3,9 +3,11 @@
     id="open-source-activity"
     aria-labelledby="open-source-activity_heading"
   >
-    <h2 id="open-source-activity_heading">
-      {{ $t("heading.openSourceActivity") }}
-    </h2>
+    <global-heading-component
+      id="open-source-activity_heading"
+      :heading-level="2"
+      :heading-text="$t('heading.openSourceActivity')"
+    />
     <p>{{ $t("openSourceActivity.desc01") }}</p>
     <ul>
       <li>

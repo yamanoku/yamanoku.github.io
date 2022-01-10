@@ -1,6 +1,6 @@
 <template>
   <main id="main">
-    <h1>yamanoku.net</h1>
+    <global-heading-component :heading-level="1" heading-text="yamanoku.net" />
     <index-sections-basic-info />
     <index-sections-career-info />
     <index-sections-open-source-activity />

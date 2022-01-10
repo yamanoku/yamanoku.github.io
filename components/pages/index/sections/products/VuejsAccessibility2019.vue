@@ -3,9 +3,11 @@
     id="product:about-accessibility-with-vuejs-2019"
     aria-labelledby="product:about-accessibility-with-vuejs-2019_heading"
   >
-    <h3 id="product:about-accessibility-with-vuejs-2019_heading">
-      {{ $t("product.vueA11yPage2019.title") }}
-    </h3>
+    <global-heading-component
+      id="product:about-accessibility-with-vuejs-2019_heading"
+      :heading-level="3"
+      :heading-text="$t('product.vueA11yPage2019.title')"
+    />
     <figure
       aria-labelledby="product:about-accessibility-with-vuejs-2019_heading"
       aria-describedby="product:about-accessibility-with-vuejs-2019_caption"
@@ -35,9 +37,11 @@
       id="product:about-accessibility-with-vuejs-2019_information"
       aria-labelledby="product:about-accessibility-with-vuejs-2019_subheading"
     >
-      <h4 id="product:about-accessibility-with-vuejs-2019_subheading">
-        {{ $t("vueA11yPage2019.subHeading.info") }}
-      </h4>
+      <global-heading-component
+        id="product:about-accessibility-with-vuejs-2019_subheading"
+        :heading-level="4"
+        :heading-text="$t('vueA11yPage2019.subHeading.info')"
+      />
       <ul>
         <li>
           <span class="time">2019/12/21</span>

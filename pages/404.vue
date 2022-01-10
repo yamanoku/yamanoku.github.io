@@ -1,6 +1,9 @@
 <template>
   <main id="main">
-    <h1>ページが見つかりませんでした</h1>
+    <global-heading-component
+      :heading-level="1"
+      heading-text="ページが見つかりませんでした"
+    />
     <status-404-not-found />
   </main>
 </template>

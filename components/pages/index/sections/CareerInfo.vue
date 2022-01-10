@@ -1,13 +1,19 @@
 <template>
-  <section id="career" aria-labelledby="career_heading">
-    <h2 id="career_heading">
-      {{ $t("heading.career") }}
-    </h2>
+  <section id="career" aria-labelledby="career-heading">
+    <global-heading-component
+      id="career-heading"
+      :heading-level="2"
+      :heading-text="$t('heading.career')"
+    />
     <p>{{ $t("career.desc01") }}</p>
     <p>{{ $t("career.desc02") }}</p>
     <p>{{ $t("career.desc03") }}</p>
-    <h3 id="related:career_heading">{{ $t("heading.relatedList") }}</h3>
-    <ul aria-labelledby="related:career_heading">
+    <global-heading-component
+      id="related:career-heading"
+      :heading-level="3"
+      :heading-text="$t('heading.relatedList')"
+    />
+    <ul aria-labelledby="related:career-heading">
       <li>
         <a
           href="https://github.com/yamanoku/Curriculum-Vitae/blob/main/README.md"

@@ -1,8 +1,10 @@
 <template>
   <article id="product:oclock-app" aria-labelledby="product:oclock-app_heading">
-    <h3 id="product:oclock-app_heading">
-      {{ $t("product.oclock-app.title") }}
-    </h3>
+    <global-heading-component
+      id="product:oclock-app_heading"
+      :heading-level="3"
+      :heading-text="$t('product.oclock-app.title')"
+    />
     <figure
       aria-labelledby="product:oclock-app_heading"
       aria-describedby="product:oclock-app_caption"
@@ -23,7 +25,11 @@
         {{ $t("product.description.oclock-app") }}
       </figcaption>
     </figure>
-    <h4 id="related:oclock-app_heading">{{ $t("heading.relatedList") }}</h4>
+    <global-heading-component
+      id="related:oclock-app_heading"
+      :heading-level="4"
+      :heading-text="$t('heading.relatedList')"
+    />
     <ul aria-labelledby="related:oclock-app_heading">
       <li>
         <a href="https://yamanoku.net/oclock/" target="_blank" rel="noopener">
@@ -42,7 +48,11 @@
         </a>
       </li>
     </ul>
-    <h4 id="teck-stack:oclock-app_heading">{{ $t("heading.techStack") }}</h4>
+    <global-heading-component
+      id="teck-stack:oclock-app_heading"
+      :heading-level="4"
+      :heading-text="$t('heading.techStack')"
+    />
     <ul aria-labelledby="teck-stack:oclock-app_heading">
       <li>Svelte</li>
       <li>Custom Elements</li>

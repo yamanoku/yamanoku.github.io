@@ -1,8 +1,10 @@
 <template>
   <section id="presentations" aria-labelledby="presentations_heading">
-    <h2 id="presentations_heading">
-      {{ $t("heading.presentations.title") }}
-    </h2>
+    <global-heading-component
+      id="presentations_heading"
+      :heading-level="2"
+      :heading-text="$t('heading.presentations.title')"
+    />
     <template v-if="this.$i18n.locale !== 'ja'">
       <em>{{ $t("onlyJPText") }}</em>
     </template>
@@ -10,9 +12,11 @@
       {{ $t("heading.presentations.stage") }}
     </h3>
     <global-slide-list :listArray="listStage" />
-    <h3 id="presentations-write">
-      {{ $t("heading.presentations.write") }}
-    </h3>
+    <global-heading-component
+      id="presentations-write"
+      :heading-level="3"
+      :heading-text="$t('heading.presentations.write')"
+    />
     <global-slide-list :listArray="listWrite" />
     <i18n tag="p" path="archivePage.externalLink">
       <template v-slot:title>

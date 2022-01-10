@@ -1,6 +1,10 @@
 <template>
   <nav :aria-label="$t('multilingual')">
-    <h2 id="local-switching">{{ $t("multilingual") }}</h2>
+    <global-heading-component
+      id="local-switching"
+      :heading-level="2"
+      :heading-text="$t('multilingual')"
+    />
     <ul>
       <li v-for="locale in $i18n.locales" :key="locale.code">
         <nuxt-link :lang="locale.code" :to="switchLocalePath(locale.code)">{{

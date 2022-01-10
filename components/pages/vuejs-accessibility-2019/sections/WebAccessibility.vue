@@ -1,7 +1,13 @@
 <template>
   <section id="web-accessibility:about-accessibility-with-vuejs-2019">
-    <h2>{{ $t("vueA11yPage2019.heading.webA11y") }}</h2>
-    <h3>{{ $t("vueA11yPage2019.subHeading.webA11y.title01") }}</h3>
+    <global-heading-component
+      :heading-level="2"
+      :heading-text="$t('vueA11yPage2019.heading.webA11y')"
+    />
+    <global-heading-component
+      :heading-level="3"
+      :heading-text="$t('vueA11yPage2019.subHeading.webA11y.title01')"
+    />
     <i18n tag="p" path="vueA11yPage2019.webA11y.desc01">
       <template v-slot:A11Y>
         <span>Accessibility</span>
@@ -17,7 +23,10 @@
         >{{ $t("vueA11yPage2019.webA11y.link01.text") }}<external-link-icon
       /></a>
     </blockquote>
-    <h3>{{ $t("vueA11yPage2019.subHeading.webA11y.title02") }}</h3>
+    <global-heading-component
+      :heading-level="3"
+      :heading-text="$t('vueA11yPage2019.subHeading.webA11y.title02')"
+    />
     <p>{{ $t("vueA11yPage2019.webA11y.desc03") }}</p>
     <p>{{ $t("vueA11yPage2019.webA11y.desc04") }}</p>
     <p>{{ $t("vueA11yPage2019.webA11y.desc05") }}</p>
@@ -38,7 +47,10 @@
       </figcaption>
     </figure>
     <p>{{ $t("vueA11yPage2019.webA11y.desc06") }}</p>
-    <h3>{{ $t("vueA11yPage2019.subHeading.webA11y.title03") }}</h3>
+    <global-heading-component
+      :heading-level="3"
+      :heading-text="$t('vueA11yPage2019.subHeading.webA11y.title03')"
+    />
     <p>{{ $t("vueA11yPage2019.webA11y.desc07") }}</p>
     <p>{{ $t("vueA11yPage2019.webA11y.desc08") }}</p>
   </section>

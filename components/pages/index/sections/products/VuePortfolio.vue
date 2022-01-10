@@ -3,9 +3,11 @@
     id="product:vue-portfolio-template"
     aria-labelledby="product:vue-portfolio-template_heading"
   >
-    <h3 id="product:vue-portfolio-template_heading">
-      {{ $t("product.vuePortfolio") }}
-    </h3>
+    <global-heading-component
+      id="product:vue-portfolio-template_heading"
+      :heading-level="3"
+      :heading-text="$t('product.vuePortfolio')"
+    />
     <figure
       aria-labelledby="product:vue-portfolio-template_heading"
       aria-describedby="product:vue-portfolio-template_caption"
@@ -26,7 +28,11 @@
         {{ $t("product.description.vuePortfolio") }}
       </figcaption>
     </figure>
-    <h4 id="related:vue-portfolio_heading">{{ $t("heading.relatedList") }}</h4>
+    <global-heading-component
+      id="related:vue-portfolio_heading"
+      :heading-level="4"
+      :heading-text="$t('heading.relatedList')"
+    />
     <ul aria-labelledby="related:vue-portfolio_heading">
       <li>
         <a

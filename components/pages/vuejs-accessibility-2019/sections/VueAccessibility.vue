@@ -1,10 +1,16 @@
 <template>
   <section id="vuejs-and-web-accessibility:about-accessibility-with-vuejs-2019">
-    <h2>{{ $t("vueA11yPage2019.heading.vueA11y") }}</h2>
+    <global-heading-component
+      :heading-level="2"
+      :heading-text="$t('vueA11yPage2019.heading.vueA11y')"
+    />
     <p>
       {{ $t("vueA11yPage2019.vueA11y.desc01") }}
     </p>
-    <h3>{{ $t("vueA11yPage2019.subHeading.vueA11y") }}</h3>
+    <global-heading-component
+      :heading-level="3"
+      :heading-text="$t('vueA11yPage2019.subHeading.vueA11y')"
+    />
     <p>{{ $t("vueA11yPage2019.vueA11y.desc02") }}</p>
     <p>{{ $t("vueA11yPage2019.vueA11y.desc03") }}</p>
     <p>{{ $t("vueA11yPage2019.vueA11y.desc04") }}</p>
@@ -75,7 +81,10 @@
       >vuejs.org/accessibility.md at a11y-docs ·
       callumacrae/vuejs.org<external-link-icon
     /></a>
-    <h3>Vue <abbr title="accessibility">a11y</abbr></h3>
+    <global-heading-component
+      :heading-level="3"
+      heading-text="Vue a11y"
+    />
     <p>{{ $t("vueA11yPage2019.vueA11y.desc08") }}</p>
     <figure>
       <picture>
