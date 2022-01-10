@@ -28,7 +28,11 @@ It also implements content completion using WAI-ARIA (Web Accessibility Initiati
 
 ```html
 <section id="basic" aria-labelledby="basic-heading">
-  <h2 id="basic-heading">{{ $t("heading.basic") }}</h2>
+  <global-heading-component
+    id="basic-heading"
+    :heading-level="2"
+    :heading-text="$t('heading.basic')"
+  />
 </section>
 ```
 Assist users as they move from article to article by tying aria-labelledby to article elements.
