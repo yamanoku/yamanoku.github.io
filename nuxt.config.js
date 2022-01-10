@@ -69,8 +69,8 @@ module.exports = {
       prefix: "privacy"
     },
     {
-      path: "~/components/pages/404/",
-      prefix: "404"
+      path: "~/components/pages/status-404/",
+      prefix: "status-404"
     }
   ],
   build: {
