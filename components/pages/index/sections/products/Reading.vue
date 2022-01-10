@@ -32,7 +32,7 @@
       :list-array="relatedListItem"
     />
     <global-heading-component
-      id="teck-stack:reading_heading"
+      id="tech-stack:reading_heading"
       :heading-level="4"
       :heading-text="$t('heading.techStack')"
     />

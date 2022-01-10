@@ -35,7 +35,7 @@
       :list-array="relatedListItem"
     />
     <global-heading-component
-      id="teck-stack:oclock-app_heading"
+      id="tech-stack:oclock-app_heading"
       :heading-level="4"
       :heading-text="$t('heading.techStack')"
     />
