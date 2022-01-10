@@ -1,7 +1,7 @@
 <template>
   <section id="contact" aria-labelledby="contact-heading">
     <global-heading-component
-      id="contact_heading"
+      id="contact-heading"
       :heading-level="2"
       :heading-text="$t('heading.contact')"
     />
