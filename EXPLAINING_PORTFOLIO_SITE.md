@@ -52,19 +52,20 @@ For example, the slide list uses the following components to render:
       <span class="time">{{ dateStirngReplace(list.datetime) }}</span>
       -
     </template>
-    <template v-else-if="list.created_at">
-      <span class="time">{{ dateStirngReplace(list.created_at) }}</span>
-      -
+    <i18n v-if="list.isI18n" :path="list.title">
+      <global-link-component :link-object="list" />
+    </i18n>
+    <template v-else-if="list.url">
+      <global-link-component :link-object="list" />
     </template>
-    <a :href="list.url" target="_blank" rel="noopener" lang="ja">
+    <template v-else>
       {{ list.title }}
-      <external-link-icon />
-    </a>
+    </template>
   </li>
 </ul>
 ```
 
-[SlideList.vue](https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/global/SlideList.vue)
+[ListComponent.vue](https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/global/ListComponent.vue)
 </details>
 
 ### PWA (Progressive Web Application)

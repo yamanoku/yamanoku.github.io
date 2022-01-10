@@ -6,10 +6,10 @@
         -
       </template>
       <i18n v-if="list.isI18n" :path="list.title">
-        <global-link-component :linkObject="list" />
+        <global-link-component :link-object="list" />
       </i18n>
       <template v-else-if="list.url">
-        <global-link-component :linkObject="list" />
+        <global-link-component :link-object="list" />
       </template>
       <template v-else>
         {{ list.title }}
