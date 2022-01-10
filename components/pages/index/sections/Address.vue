@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: "SectionsAddress"
+  name: "IndexSectionsAddress"
 };
 </script>

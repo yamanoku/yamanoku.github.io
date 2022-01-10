@@ -41,11 +41,10 @@
     <ul aria-labelledby="teck-stack:reading_heading">
       <li>Nuxt.js</li>
       <li>Nuxt PWA</li>
-      <li>vue-paginate</li>
       <li>axios</li>
       <li>modern-normalize</li>
-      <li>AWS API Gateway</li>
-      <li>AWS Lambda Function</li>
+      <li>MSW</li>
+      <li>@slack/web-api</li>
       <li>Netlify</li>
       <li>CircleCI</li>
     </ul>
@@ -54,6 +53,6 @@
 
 <script>
 export default {
-  name: "ProductsReading"
+  name: "IndexSectionsProductsReading"
 };
 </script>

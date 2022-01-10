@@ -1,14 +1,14 @@
 <template>
   <main id="main">
     <h1>yamanoku.net</h1>
-    <SectionsBasicInfo />
-    <SectionsCareerInfo />
-    <SectionsOpenSourceActivity />
-    <SectionsProducts />
-    <SectionsPresentations />
-    <SectionsSns />
-    <SectionsAddress />
-    <GlobalLocalSwitch />
+    <index-sections-basic-info />
+    <index-sections-career-info />
+    <index-sections-open-source-activity />
+    <index-sections-products />
+    <index-sections-presentations />
+    <index-sections-social-network-services />
+    <index-sections-address />
+    <global-local-switch />
   </main>
 </template>
 

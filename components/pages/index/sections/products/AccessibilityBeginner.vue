@@ -68,3 +68,9 @@
     </ul>
   </article>
 </template>
+
+<script>
+export default {
+  name: "IndexSectionsProductsAccessibilityBeginner"
+};
+</script>

@@ -50,3 +50,9 @@
     </ul>
   </article>
 </template>
+
+<script>
+export default {
+  name: "IndexSectionsProductsOclockApp"
+};
+</script>

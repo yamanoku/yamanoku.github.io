@@ -61,3 +61,9 @@
     </ul>
   </section>
 </template>
+
+<script>
+export default {
+  name: "IndexSectionsCareerInfo"
+};
+</script>

@@ -1,6 +1,7 @@
 <template>
   <main id="main">
-    <vuejs-accessibility-2019-sections-title />
+    <h1>{{ $t("vueA11yPage2019.title") }}</h1>
+    <vuejs-accessibility-2019-title />
     <global-local-switch />
     <vuejs-accessibility-2019-sections-bio />
     <vuejs-accessibility-2019-sections-book />

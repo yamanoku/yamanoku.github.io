@@ -69,3 +69,9 @@
     </section>
   </article>
 </template>
+
+<script>
+export default {
+  name: "IndexSectionsProductsVuejsAccessibility2019"
+};
+</script>

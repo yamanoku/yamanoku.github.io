@@ -15,3 +15,9 @@
     </ul>
   </section>
 </template>
+
+<script>
+export default {
+  name: "IndexSectionsBasicInfo"
+};
+</script>
