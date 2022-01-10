@@ -11,13 +11,13 @@
     <h3 id="presentations-stage">
       {{ $t("heading.presentations.stage") }}
     </h3>
-    <global-slide-list :listArray="listStage" />
+    <global-list-component :listArray="listStage" />
     <global-heading-component
       id="presentations-write"
       :heading-level="3"
       :heading-text="$t('heading.presentations.write')"
     />
-    <global-slide-list :listArray="listWrite" />
+    <global-list-component :listArray="listWrite" />
     <i18n tag="p" path="archivePage.externalLink">
       <template v-slot:title>
         <a href="https://archives.yamanoku.net" target="_blank" rel="noopener"

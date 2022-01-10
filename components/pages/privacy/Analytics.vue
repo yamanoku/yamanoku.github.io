@@ -8,30 +8,36 @@
     <p>{{ $t("privacyPage.analytics.desc01") }}</p>
     <p>{{ $t("privacyPage.analytics.desc02") }}</p>
     <p>{{ $t("privacyPage.analytics.desc03") }}</p>
-    <h3 id="related:analytics_heading">{{ $t("heading.relatedList") }}</h3>
-    <ul aria-labelledby="related:analytics_heading">
-      <li>
-        <a
-          :href="$t('privacyPage.analytics.link01.url')"
-          target="_blank"
-          rel="noopener"
-          >{{ $t("privacyPage.analytics.link01.title") }}<external-link-icon
-        /></a>
-      </li>
-      <li>
-        <a
-          :href="$t('privacyPage.analytics.link02.url')"
-          target="_blank"
-          rel="noopener"
-          >{{ $t("privacyPage.analytics.link02.title") }}<external-link-icon
-        /></a>
-      </li>
-    </ul>
+    <global-heading-component
+      id="related:analytics_heading"
+      :heading-level="3"
+      :heading-text="$t('heading.relatedList')"
+    />
+    <global-list-component
+      aria-labelledby="related:analytics_heading"
+      :list-array="analyticsListItem"
+    />
   </section>
 </template>
 
 <script>
 export default {
-  name: "PrivacyAnalytics"
+  name: "PrivacyAnalytics",
+  data() {
+    return {
+      analyticsListItem: [
+        {
+          title: this.$t("privacyPage.analytics.link01.title"),
+          url: this.$t("privacyPage.analytics.link01.url"),
+          isExternal: true
+        },
+        {
+          title: this.$t("privacyPage.analytics.link02.title"),
+          url: this.$t("privacyPage.analytics.link02.url"),
+          isExternal: true
+        }
+      ]
+    };
+  }
 };
 </script>

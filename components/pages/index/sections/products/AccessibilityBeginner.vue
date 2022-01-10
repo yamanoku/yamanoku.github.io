@@ -38,43 +38,36 @@
       :heading-level="4"
       :heading-text="$t('heading.relatedList')"
     />
-    <ul aria-labelledby="related:web-accessibility-for-beginner_heading">
-      <li>
-        <a
-          href="https://techbookfest.org/event/tbf05/circle/41130001"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("product.wafb.circleDetail") }}
-          <external-link-icon />
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://booth.pm/ja/items/1044446"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("product.wafb.boothLink") }}
-          <external-link-icon />
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://note.mu/yamanoku/n/n3487a344ff84"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("product.wafb.noteLink") }}
-          <external-link-icon />
-        </a>
-      </li>
-    </ul>
+    <global-list-component
+      aria-labelledby="related:web-accessibility-for-beginner_heading"
+      :list-array="relatedListItem"
+    />
   </article>
 </template>
 
 <script>
 export default {
-  name: "IndexSectionsProductsAccessibilityBeginner"
+  name: "IndexSectionsProductsAccessibilityBeginner",
+  data() {
+    return {
+      relatedListItem: [
+        {
+          title: this.$t("product.wafb.circleDetail"),
+          url: "https://techbookfest.org/event/tbf05/circle/41130001",
+          isExternal: true
+        },
+        {
+          title: this.$t("product.wafb.boothLink"),
+          url: "https://booth.pm/ja/items/1044446",
+          isExternal: true
+        },
+        {
+          title: this.$t("product.wafb.noteLink"),
+          url: "https://note.mu/yamanoku/n/n3487a344ff84",
+          isExternal: true
+        }
+      ]
+    };
+  }
 };
 </script>

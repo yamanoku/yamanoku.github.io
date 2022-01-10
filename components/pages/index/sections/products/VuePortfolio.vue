@@ -33,32 +33,51 @@
       :heading-level="4"
       :heading-text="$t('heading.relatedList')"
     />
-    <ul aria-labelledby="related:vue-portfolio_heading">
-      <li>
-        <a
-          href="https://vue-portfolio.yamanoku.net/"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("product.vuePortfolio") }}
-          <external-link-icon />
-        </a>
-      </li>
-    </ul>
+    <global-list-component
+      aria-labelledby="related:vue-portfolio_heading"
+      :list-array="relatedListItem"
+    />
     <h4 id="tech-stack:vue-portfolio_heading">{{ $t("heading.techStack") }}</h4>
-    <ul aria-labelledby="tech-stack:vue-portfolio_heading">
-      <li>Vue.js</li>
-      <li>vue-cli</li>
-      <li>vue-router</li>
-      <li>webpack</li>
-      <li>PostCSS</li>
-      <li>Netlify</li>
-    </ul>
+    <global-list-component
+      aria-labelledby="tech-stack:vue-portfolio_heading"
+      :list-array="techStackListItem"
+    />
   </article>
 </template>
 
 <script>
 export default {
-  name: "IndexSectionsProductsVuePortfolio"
+  name: "IndexSectionsProductsVuePortfolio",
+  data() {
+    return {
+      relatedListItem: [
+        {
+          title: this.$t("product.vuePortfolio"),
+          url: "https://vue-portfolio.yamanoku.net/",
+          isExternal: true
+        }
+      ],
+      techStackListItem: [
+        {
+          title: "Vue.js"
+        },
+        {
+          title: "vue-cli"
+        },
+        {
+          title: "vue-router"
+        },
+        {
+          title: "webpack"
+        },
+        {
+          title: "PostCSS"
+        },
+        {
+          title: "Netlify"
+        }
+      ]
+    };
+  }
 };
 </script>

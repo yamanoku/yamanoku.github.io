@@ -26,7 +26,7 @@ product:
     link: "Article about accessibility with Vue.js - 2019"
     info:
       listitem01: "Published."
-      listitem02: "Posted on {awesomeA11yVue}"
+      listitem02: "Posted on {0}"
       listitem03: "Added english page"
       listitem04: "Changed URL (from vue-a11y to vue-a11y-2019)"
   oclock-app:

@@ -8,15 +8,7 @@
     <p>
       {{ $t("donate.desc01") }}
     </p>
-    <ul>
-      <template v-for="donateLink in donateLinkList">
-        <li :key="donateLink.title">
-          <a :href="donateLink.url" target="_blank" rel="noopener"
-            >{{ donateLink.title }}<external-link-icon
-          /></a>
-        </li>
-      </template>
-    </ul>
+    <global-list-component :list-array="donateLinkList" />
   </article>
 </template>
 
@@ -27,15 +19,19 @@ export default {
       donateLinkList: [
         {
           title: "GitHub Sponsors",
-          url: "https://github.com/sponsors/yamanoku"
+          url: "https://github.com/sponsors/yamanoku",
+          isExternal: true,
+          isGitHubLink: true
         },
         {
           title: "Stripe Payment Links",
-          url: "https://buy.stripe.com/00gaEY1Eh5bE7VC8ww"
+          url: "https://buy.stripe.com/00gaEY1Eh5bE7VC8ww",
+          isExternal: true
         },
         {
           title: "Buy me a coffee",
-          url: "https://buymeacoffee.com/yamanoku"
+          url: "https://buymeacoffee.com/yamanoku",
+          isExternal: true
         }
       ]
     };

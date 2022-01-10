@@ -26,26 +26,7 @@
         <p>
           {{ $t("vueA11yPage2019.book.desc02") }}
         </p>
-        <ul>
-          <li>
-            <a
-              href="https://booth.pm/ja/items/1044446"
-              target="_blank"
-              rel="noopener"
-              >これからはじめるwebアクセシビリティ - こんのいぬ -
-              BOOTH<external-link-icon
-            /></a>
-          </li>
-          <li>
-            <a
-              href="https://note.mu/yamanoku/n/n3487a344ff84"
-              target="_blank"
-              rel="noopener"
-              >「これからはじめるwebアクセシビリティ」をnoteにて販売します｜Okuto
-              Oyama｜note<external-link-icon
-            /></a>
-          </li>
-        </ul>
+        <global-list-component :list-array="BookListItem" />
         <p>
           {{ $t("vueA11yPage2019.book.desc03") }}
         </p>
@@ -63,6 +44,23 @@
 
 <script>
 export default {
-  name: "VueA11y2019Book"
+  name: "VueA11y2019Book",
+  data() {
+    return {
+      BookListItem: [
+        {
+          title: "これからはじめるwebアクセシビリティ - こんのいぬ - BOOTH",
+          url: "https://booth.pm/ja/items/1044446",
+          isExternal: true
+        },
+        {
+          title:
+            "「これからはじめるwebアクセシビリティ」をnoteにて販売します｜Okuto Oyama｜note",
+          url: "https://note.mu/yamanoku/n/n3487a344ff84",
+          isExternal: true
+        }
+      ]
+    };
+  }
 };
 </script>

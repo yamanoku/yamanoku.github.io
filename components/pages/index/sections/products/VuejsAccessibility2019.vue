@@ -42,40 +42,40 @@
         :heading-level="4"
         :heading-text="$t('vueA11yPage2019.subHeading.info')"
       />
-      <ul>
-        <li>
-          <span class="time">2019/12/21</span>
-          {{ $t("product.vueA11yPage2019.info.listitem01") }}
-        </li>
-        <li>
-          <span class="time">2020/02/28</span>
-          <i18n path="product.vueA11yPage2019.info.listitem02">
-            <template v-slot:awesomeA11yVue>
-              <a
-                href="https://github.com/vue-a11y/awesome-a11y-vue/pull/3"
-                target="_blank"
-                rel="noopener"
-                lang="en"
-                >awesome-a11y-vue<github-icon
-              /></a>
-            </template>
-          </i18n>
-        </li>
-        <li>
-          <span class="time">2020/05/03</span>
-          {{ $t("product.vueA11yPage2019.info.listitem03") }}
-        </li>
-        <li>
-          <span class="time">2021/09/20</span>
-          {{ $t("product.vueA11yPage2019.info.listitem04") }}
-        </li>
-      </ul>
+      <global-list-component :list-array="vueA11yPage2019ListItem" />
     </section>
   </article>
 </template>
 
 <script>
 export default {
-  name: "IndexSectionsProductsVuejsAccessibility2019"
+  name: "IndexSectionsProductsVuejsAccessibility2019",
+  data() {
+    return {
+      vueA11yPage2019ListItem: [
+        {
+          title: this.$t("product.vueA11yPage2019.info.listitem01"),
+          datetime: "2019-12-21T00:00:00.000Z"
+        },
+        {
+          title: "product.vueA11yPage2019.info.listitem02",
+          isI18n: true,
+          i18nLinkTitle: "awesome-a11y-vue",
+          url: "https://github.com/vue-a11y/awesome-a11y-vue/pull/3",
+          datetime: "2020-02-28T00:00:00.000Z",
+          isExternal: true,
+          isGitHubLink: true
+        },
+        {
+          title: this.$t("product.vueA11yPage2019.info.listitem03"),
+          datetime: "2020-05-03T00:00:00.000Z"
+        },
+        {
+          title: this.$t("product.vueA11yPage2019.info.listitem04"),
+          datetime: "2021-09-20T00:00:00.000Z"
+        }
+      ]
+    };
+  }
 };
 </script>

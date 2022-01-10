@@ -47,25 +47,7 @@
       /></a>
     </blockquote>
     <p>{{ $t("vueA11yPage2019.vueA11y.desc05") }}</p>
-    <ul>
-      <li>
-        <a
-          :href="$t('vueA11yPage2019.vueA11y.listitem01.link')"
-          target="_blank"
-          rel="noopener"
-          >{{ $t("vueA11yPage2019.vueA11y.listitem01.text")
-          }}<external-link-icon
-        /></a>
-      </li>
-      <li>
-        <a
-          href="https://angular.io/guide/accessibility"
-          target="_blank"
-          rel="noopener"
-          >Angular - Accessibility in Angular<external-link-icon
-        /></a>
-      </li>
-    </ul>
+    <global-list-component :list-array="VueAccessibilityListItem" />
     <p>{{ $t("vueA11yPage2019.vueA11y.desc06") }}</p>
     <a
       href="https://github.com/vuejs/vuejs.org/issues/974"
@@ -108,6 +90,22 @@
 
 <script>
 export default {
-  name: "VueA11y2019VueAccessibility"
+  name: "VueA11y2019VueAccessibility",
+  data() {
+    return {
+      VueAccessibilityListItem: [
+        {
+          title: this.$t("vueA11yPage2019.vueA11y.listitem01.text"),
+          url: this.$t("vueA11yPage2019.vueA11y.listitem01.link"),
+          isExternal: true
+        },
+        {
+          title: "Angular - Accessibility in Angular",
+          url: "https://angular.io/guide/accessibility",
+          isExternal: true
+        }
+      ]
+    };
+  }
 };
 </script>
