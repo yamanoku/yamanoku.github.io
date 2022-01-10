@@ -28,7 +28,11 @@
 
 ```html
 <section id="basic" aria-labelledby="basic-heading">
-  <h2 id="basic-heading">{{ $t("heading.basic") }}</h2>
+  <global-heading-component
+    id="basic-heading"
+    :heading-level="2"
+    :heading-text="$t('heading.basic')"
+  />
 </section>
 ```
 aria-labelledbyとsection要素を紐付けることで記事間を移動するときにユーザを支援します。
