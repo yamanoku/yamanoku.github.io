@@ -20,9 +20,7 @@
     <global-list-component :listArray="listWrite" />
     <i18n tag="p" path="archivePage.externalLink">
       <template v-slot:title>
-        <a href="https://archives.yamanoku.net" target="_blank" rel="noopener"
-          >{{ $t("archivePage.title") }}<external-link-icon />
-        </a>
+        <global-link-component :link-object="archiveLink" />
       </template>
     </i18n>
   </section>
@@ -37,7 +35,12 @@ export default {
   data() {
     return {
       listStage,
-      listWrite
+      listWrite,
+      archiveLink: {
+        title: this.$t("archivePage.title"),
+        url: "https://archives.yamanoku.net",
+        isExternal: true
+      }
     };
   }
 };

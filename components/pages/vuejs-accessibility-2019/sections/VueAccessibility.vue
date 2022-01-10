@@ -22,13 +22,7 @@
         <b>accessibility</b> feature to enlarge the text of blog posts, while
         leaving the rest of the page its default size:
       </p>
-      <a
-        href="https://vuejs.org/v2/guide/components.html#Listening-to-Child-Components-Events"
-        target="_blank"
-        rel="noopener"
-        >Components Basics — Listening-to-Child-Components-Events —
-        Vue.js<external-link-icon
-      /></a>
+      <global-link-component :link-object="vueGuideLink01" />
     </blockquote>
     <blockquote lang="en">
       <p>
@@ -39,30 +33,14 @@
         used for both the &lt;title&gt; content and its id for
         <b>accessibility</b>.
       </p>
-      <a
-        href="https://vuejs.org/v2/cookbook/editable-svg-icons.html#Base-Example"
-        target="_blank"
-        rel="noopener"
-        >Editable SVG Icon Systems — Base Example — Vue.js<external-link-icon
-      /></a>
+      <global-link-component :link-object="vueGuideLink02" />
     </blockquote>
     <p>{{ $t("vueA11yPage2019.vueA11y.desc05") }}</p>
     <global-list-component :list-array="VueAccessibilityListItem" />
     <p>{{ $t("vueA11yPage2019.vueA11y.desc06") }}</p>
-    <a
-      href="https://github.com/vuejs/vuejs.org/issues/974"
-      target="_blank"
-      rel="noopener"
-      >Accessibility docs · Issue #974 · vuejs/vuejs.org<external-link-icon
-    /></a>
+    <global-link-component :link-object="githubIssueLink" />
     <p>{{ $t("vueA11yPage2019.vueA11y.desc07") }}</p>
-    <a
-      href="https://github.com/callumacrae/vuejs.org/blob/a11y-docs/src/v2/guide/accessibility.md"
-      target="_blank"
-      rel="noopener"
-      >vuejs.org/accessibility.md at a11y-docs ·
-      callumacrae/vuejs.org<external-link-icon
-    /></a>
+    <global-link-component :link-object="accessibilityMarkdownLink" />
     <global-heading-component :heading-level="3" heading-text="Vue a11y" />
     <p>{{ $t("vueA11yPage2019.vueA11y.desc08") }}</p>
     <figure>
@@ -78,11 +56,7 @@
           loading="lazy"
         />
       </picture>
-      <figcaption>
-        <a href="https://vue-a11y-2019.com/" target="_blank" rel="noopener"
-          >Vue <abbr title="accessibility">a11y</abbr><external-link-icon
-        /></a>
-      </figcaption>
+      <figcaption>Vue <abbr title="accessibility">a11y</abbr></figcaption>
     </figure>
     <p>{{ $t("vueA11yPage2019.vueA11y.desc09") }}</p>
   </section>
@@ -93,6 +67,30 @@ export default {
   name: "VueA11y2019VueAccessibility",
   data() {
     return {
+      vueGuideLink01: {
+        title:
+          "Components Basics — Listening-to-Child-Components-Events — Vue.js",
+        url: "https://vuejs.org/v2/guide/components.html#Listening-to-Child-Components-Events",
+        isExternal: true
+      },
+      vueGuideLink02: {
+        title: "Editable SVG Icon Systems — Base Example — Vue.js",
+        url: "https://vuejs.org/v2/cookbook/editable-svg-icons.html#Base-Example",
+        isExternal: true
+      },
+      githubIssueLink: {
+        title: "Accessibility docs · Issue #974 · vuejs/vuejs.org",
+        url: "https://github.com/vuejs/vuejs.org/issues/974",
+        isExternal: true,
+        isGitHubLink: true
+      },
+      accessibilityMarkdownLink: {
+        title:
+          "vuejs.org/accessibility.md at a11y-docs · callumacrae/vuejs.org",
+        url: "https://github.com/callumacrae/vuejs.org/blob/a11y-docs/src/v2/guide/accessibility.md",
+        isExternal: true,
+        isGitHubLink: true
+      },
       VueAccessibilityListItem: [
         {
           title: this.$t("vueA11yPage2019.vueA11y.listitem01.text"),

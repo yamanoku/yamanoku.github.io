@@ -16,12 +16,7 @@
         :alt="$t('vueA11yPage2019.conclusion.imgAlt01')"
       />
       <figcaption>
-        <a
-          href="https://www.w3.org/History/1989/proposal.html"
-          target="_blank"
-          rel="noopener"
-          >The original proposal of the WWW, HTMLized<external-link-icon
-        /></a>
+        <global-link-component :link-object="proposalLink" />
       </figcaption>
     </figure>
     <blockquote lang="en">
@@ -29,13 +24,7 @@
         The power of the Web is in its universality. Access by everyone
         regardless of disability is an essential aspect.
       </p>
-      <a
-        href="https://www.w3.org/Press/IPO-announce"
-        target="_blank"
-        rel="noopener"
-        >Press Release: W3C Launches International Program Office for
-        WAI<external-link-icon
-      /></a>
+      <global-link-component :link-object="pressReleaseLink" />
     </blockquote>
     <p>
       {{ $t("vueA11yPage2019.conclusion.desc02") }}
@@ -45,12 +34,7 @@
         Whatever the device you use for getting your information out, it should
         be the same information.
       </p>
-      <a
-        href="https://www.wired.com/1999/10/interview-with-the-webs-creator/"
-        target="_blank"
-        rel="noopener"
-        >Interview with the Web’s Creator | WIRED<external-link-icon
-      /></a>
+      <global-link-component :link-object="wiredLink" />
     </blockquote>
     <p>
       {{ $t("vueA11yPage2019.conclusion.desc03") }}
@@ -60,14 +44,7 @@
     </p>
     <i18n tag="p" path="vueA11yPage2019.conclusion.desc05">
       <template v-slot:link01>
-        <a
-          href="https://www.digima-japan.com/knowhow/world/15167.php"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("vueA11yPage2019.conclusion.link01") }}
-          <external-link-icon />
-        </a>
+        <global-link-component :link-object="digimaJapanLink" />
       </template>
     </i18n>
     <p>
@@ -83,14 +60,7 @@
       <p>
         {{ $t("vueA11yPage2019.conclusion.quote03") }}
       </p>
-      <a
-        :href="$t('vueA11yPage2019.conclusion.quote04.link')"
-        target="_blank"
-        rel="noopener"
-      >
-        {{ $t("vueA11yPage2019.conclusion.quote04.text") }}
-        <external-link-icon
-      /></a>
+      <global-link-component :link-object="forTheWebLink" />
     </blockquote>
     <global-heading-component
       :heading-level="3"
@@ -107,13 +77,7 @@
         “Start Small, Start
         Now（小さく初めていこう、でも、できることから今やりましょう）”と呼びかけていきたいし、自分自身も肝に銘じておきたい。
       </p>
-      <a
-        href="https://code.kzakza.com/2019/03/start-small-start-now/"
-        target="_blank"
-        rel="noopener"
-        >アクセシビリティは &quot;Start Small, Start Now&quot; でいこう |
-        kzakza<external-link-icon
-      /></a>
+      <global-link-component :link-object="kzakzaLink" />
     </blockquote>
     <p>
       {{ $t("vueA11yPage2019.conclusion.desc09") }}
@@ -126,6 +90,41 @@
 
 <script>
 export default {
-  name: "VueA11y2019Conclusion"
+  name: "VueA11y2019Conclusion",
+  data() {
+    return {
+      proposalLink: {
+        title: "The original proposal of the WWW, HTMLized",
+        url: "https://www.w3.org/History/1989/proposal.html",
+        isExternal: true
+      },
+      pressReleaseLink: {
+        title:
+          "Press Release: W3C Launches International Program Office for WAI",
+        url: "https://www.w3.org/Press/IPO-announce",
+        isExternal: true
+      },
+      wiredLink: {
+        title: "Interview with the Web’s Creator | WIRED",
+        url: "https://www.wired.com/1999/10/interview-with-the-webs-creator/",
+        isExternal: true
+      },
+      digimaJapanLink: {
+        title: this.$t("vueA11yPage2019.conclusion.link01"),
+        url: "https://www.digima-japan.com/knowhow/world/15167.php",
+        isExternal: true
+      },
+      forTheWebLink: {
+        title: this.$t("vueA11yPage2019.conclusion.quote04.text"),
+        url: this.$t("vueA11yPage2019.conclusion.quote04.link"),
+        isExternal: true
+      },
+      kzakzaLink: {
+        title: "アクセシビリティは “Start Small, Start Now” でいこう | kzakza",
+        url: "https://code.kzakza.com/2019/03/start-small-start-now/",
+        isExternal: true
+      }
+    };
+  }
 };
 </script>

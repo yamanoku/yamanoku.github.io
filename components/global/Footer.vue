@@ -4,15 +4,7 @@
       $t("privacyPage.title")
     }}</nuxt-link>
     <p>Copyright {{ currentYear }}, Okuto Oyama</p>
-    <p>
-      Source :
-      <a
-        href="https://github.com/yamanoku/yamanoku.github.io/"
-        target="_blank"
-        rel="noopener"
-        >yamanoku/yamanoku.github.io<github-icon
-      /></a>
-    </p>
+    <p>Source : <global-link-component :linkObject="sourceLink" /></p>
   </footer>
 </template>
 
@@ -23,7 +15,13 @@ export default {
   name: "GlobalFooter",
   data() {
     return {
-      currentYear: dayjs().year()
+      currentYear: dayjs().year(),
+      sourceLink: {
+        title: "yamanoku/yamanoku.github.io",
+        url: "https://github.com/yamanoku/yamanoku.github.io/",
+        isExternal: true,
+        isGitHubLink: true
+      }
     };
   }
 };

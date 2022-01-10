@@ -30,13 +30,7 @@
         <p>
           {{ $t("vueA11yPage2019.book.desc03") }}
         </p>
-        <a
-          href="https://github.com/yamanoku/accessibility_book-issues"
-          target="_blank"
-          rel="noopener"
-          >yamanoku/accessibility_book-issues:
-          「これからはじめるwebアクセシビリティ」へのFB専用リポジトリ<external-link-icon
-        /></a>
+        <global-link-component :link-object="issuesLink" />
       </figcaption>
     </figure>
   </section>
@@ -59,7 +53,14 @@ export default {
           url: "https://note.mu/yamanoku/n/n3487a344ff84",
           isExternal: true
         }
-      ]
+      ],
+      issuesLink: {
+        title:
+          "yamanoku/accessibility_book-issues:「これからはじめるwebアクセシビリティ」へのFB専用リポジトリ",
+        url: "https://github.com/yamanoku/accessibility_book-issues",
+        isExternal: true,
+        isGitHubLink: true
+      }
     };
   }
 };

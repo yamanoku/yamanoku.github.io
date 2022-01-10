@@ -6,32 +6,10 @@
         -
       </template>
       <i18n v-if="list.isI18n" :path="list.title">
-        <a
-          :href="list.url"
-          v-bind="list.isExternal ? { target: '_blank', rel: 'noopener' } : ''"
-        >
-          {{ list.i18nLinkTitle }}
-          <template v-if="list.isGitHubLink">
-            <github-icon />
-          </template>
-          <template v-else-if="list.isExternal">
-            <external-link-icon />
-          </template>
-        </a>
+        <global-link-component :linkObject="list" />
       </i18n>
       <template v-else-if="list.url">
-        <a
-          :href="list.url"
-          v-bind="list.isExternal ? { target: '_blank', rel: 'noopener' } : ''"
-        >
-          {{ list.title }}
-          <template v-if="list.isGitHubLink">
-            <github-icon />
-          </template>
-          <template v-else-if="list.isExternal">
-            <external-link-icon />
-          </template>
-        </a>
+        <global-link-component :linkObject="list" />
       </template>
       <template v-else>
         {{ list.title }}

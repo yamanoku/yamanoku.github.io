@@ -14,14 +14,7 @@
     </figure>
     <i18n tag="p" path="vueA11yPage2019.titleSection.desc01">
       <template v-slot:link01>
-        <a
-          href="https://adventar.org/calendars/3994"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ $t("vueA11yPage2019.titleSection.link01") }}
-          <external-link-icon />
-        </a>
+        <global-link-component :link-object="titleLink" />
       </template>
     </i18n>
     <p>
@@ -35,7 +28,16 @@
 
 <script>
 export default {
-  name: "VueA11y2019Title"
+  name: "VueA11y2019Title",
+  data() {
+    return {
+      titleLink: {
+        title: this.$t("vueA11yPage2019.titleSection.link01"),
+        url: "https://adventar.org/calendars/3994",
+        isExternal: true
+      }
+    };
+  }
 };
 </script>
 
