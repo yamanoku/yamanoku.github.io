@@ -5,7 +5,6 @@
       :heading-text="$t('privacyPage.title')"
     />
     <privacy-analytics />
-    <global-local-switch />
   </main>
 </template>
 
