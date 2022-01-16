@@ -21,7 +21,7 @@ svg {
   vertical-align: bottom;
 }
 svg path {
-  fill: rgb(54, 70, 93 / 100%);
+  fill: rgb(54 70 93 / 100%);
   fill-rule: evenodd;
 }
 @media (prefers-color-scheme: dark) {
