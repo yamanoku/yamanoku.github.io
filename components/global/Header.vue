@@ -4,11 +4,12 @@
       <header-logo-icon />
     </nuxt-link>
     <nav class="local-nav-list" :aria-label="$t('multilingual')">
-      <template v-for="locale in $i18n.locales">
-        <nuxt-link :lang="locale.code" :to="switchLocalePath(locale.code)">{{
-          locale.name
-        }}</nuxt-link>
-      </template>
+      <nuxt-link
+        v-for="locale in $i18n.locales"
+        :key="locale.code"
+        :to="switchLocalePath(locale.code)"
+        >{{ locale.name }}</nuxt-link
+      >
     </nav>
   </header>
 </template>
@@ -26,7 +27,7 @@ header {
   padding: 0 var(--y-rhythm-2);
 }
 .logo-link-block {
-  display: block;
+  display: inline-block;
   margin: var(--y-rhythm-2) 0;
 }
 .local-nav-list {
