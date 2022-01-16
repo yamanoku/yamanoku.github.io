@@ -5,7 +5,6 @@
       :heading-text="$t('vueA11yPage2019.title')"
     />
     <vuejs-accessibility-2019-title />
-    <global-local-switch />
     <vuejs-accessibility-2019-sections-bio />
     <vuejs-accessibility-2019-sections-book />
     <vuejs-accessibility-2019-sections-web-accessibility />

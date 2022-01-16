@@ -8,7 +8,6 @@
     <index-sections-presentations />
     <index-sections-social-network-services />
     <index-sections-address />
-    <global-local-switch />
   </main>
 </template>
 
