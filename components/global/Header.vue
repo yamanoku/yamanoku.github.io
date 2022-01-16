@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nuxt-link :to="localePath({ name: 'index' })">
+    <nuxt-link class="logo-link-block" :to="localePath({ name: 'index' })">
       <svg
         width="246"
         height="242"
@@ -16,6 +16,13 @@
         />
       </svg>
     </nuxt-link>
+    <nav class="local-nav-list" :aria-label="$t('multilingual')">
+      <template v-for="locale in $i18n.locales">
+        <nuxt-link :lang="locale.code" :to="switchLocalePath(locale.code)">{{
+          locale.name
+        }}</nuxt-link>
+      </template>
+    </nav>
   </header>
 </template>
 
@@ -31,7 +38,7 @@ header {
   margin: auto;
   padding: 0 var(--y-rhythm-2);
 }
-a {
+.logo-link-block {
   display: block;
   margin: var(--y-rhythm-2) 0;
   width: 48px;
@@ -50,5 +57,12 @@ svg {
   .cls-1 {
     fill: var(--y-white-base);
   }
+}
+.local-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--y-rhythm-2);
 }
 </style>
