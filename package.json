@@ -15,7 +15,7 @@
   "dependencies": {
     "@nuxtjs/i18n": "7.2.0",
     "nuxt": "2.15.8",
-    "vuex": "3.6.2"
+    "vuex": "4.0.2"
   },
   "devDependencies": {
     "@markuplint/vue-parser": "1.0.0",
