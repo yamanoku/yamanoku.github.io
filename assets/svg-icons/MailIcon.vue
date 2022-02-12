@@ -1,10 +1,5 @@
 <template>
-  <svg
-    role="img"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-  >
+  <svg role="img" width="24" height="24" viewBox="0 0 24 24">
     <title>{{ $t("iconTitle.mail") }}</title>
     <path
       class="mail-1"
