@@ -19,6 +19,7 @@
           width="688"
           height="498"
           :alt="$t('prefixAlt.screenshot') + $t('product.oclock-app.title')"
+          decoding="async"
         />
       </picture>
       <figcaption id="product:oclock-app_caption">

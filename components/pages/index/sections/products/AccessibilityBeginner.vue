@@ -22,6 +22,7 @@
           width="663"
           height="480"
           :alt="$t('prefixAlt.photo') + $t('product.wafb.title')"
+          decoding="async"
         />
       </picture>
       <figcaption id="product:web-accessibility-for-beginner_caption">

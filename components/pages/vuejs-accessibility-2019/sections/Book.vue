@@ -17,6 +17,9 @@
         <img
           src="~/assets/img/product-web-accessibility-for-beginner.jpg"
           :alt="$t('prefixAlt.photo') + $t('product.wafb.title')"
+          width="663"
+          height="480"
+          decoding="async"
         />
       </picture>
       <figcaption>

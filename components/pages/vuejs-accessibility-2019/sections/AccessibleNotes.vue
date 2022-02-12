@@ -120,8 +120,10 @@
         />
         <img
           src="~/assets/img/vue-a11y-2019-vueaxe.png"
-          height="96"
+          width="2554"
+          height="342"
           :alt="$t('vueA11yPage2019.a11yNote.imgAlt01')"
+          decoding="async"
         />
       </picture>
     </figure>
@@ -137,8 +139,10 @@
     <figure>
       <img
         src="https://raw.githubusercontent.com/storybookjs/storybook/HEAD/addons/a11y/docs/screenshot.png"
-        height="360"
+        width="2862"
+        height="1746"
         :alt="$t('vueA11yPage2019.a11yNote.imgAlt02')"
+        decoding="async"
       />
     </figure>
     <global-heading-component

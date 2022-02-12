@@ -16,6 +16,7 @@
           width="688"
           height="498"
           :alt="$t('prefixAlt.screenshot') + $t('product.reading')"
+          decoding="async"
         />
       </picture>
       <figcaption id="product:reading_caption">

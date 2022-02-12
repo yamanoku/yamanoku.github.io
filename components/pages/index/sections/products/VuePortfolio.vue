@@ -22,6 +22,7 @@
           width="688"
           height="498"
           :alt="$t('prefixAlt.screenshot') + $t('product.vuePortfolio')"
+          decoding="async"
         />
       </picture>
       <figcaption id="product:vue-portfolio-template_caption">
