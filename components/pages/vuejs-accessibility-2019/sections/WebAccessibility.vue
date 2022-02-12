@@ -28,9 +28,10 @@
     <figure>
       <img
         src="https://o.aolcdn.com/dims-global/dims3/GLOB/resize/1200x577/quality/80/https://techcrunch.com/wp-content/uploads/2019/05/live-caption.jpg"
-        height="480"
+        width="1200"
+        height="577"
         :alt="$t('vueA11yPage2019.webA11y.imgAlt01')"
-        loading="lazy"
+        decoding="async"
       />
       <figcaption>
         <global-link-component :link-object="link02" />

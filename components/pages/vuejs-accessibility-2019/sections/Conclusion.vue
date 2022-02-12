@@ -14,6 +14,7 @@
         height="240"
         style="max-width: 220px"
         :alt="$t('vueA11yPage2019.conclusion.imgAlt01')"
+        decoding="async"
       />
       <figcaption>
         <global-link-component :link-object="proposalLink" />

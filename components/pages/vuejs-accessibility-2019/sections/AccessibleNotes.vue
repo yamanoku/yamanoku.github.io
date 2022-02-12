@@ -61,7 +61,7 @@
     />
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc08">
       <template v-slot:abbr01>
-        <abbr>{{ $t("vueA11yPage2019.a11yNote.abbr01") }}</abbr>
+        <abbr title="Single Page Application">SPA</abbr>
       </template>
     </i18n>
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc09">
@@ -120,8 +120,10 @@
         />
         <img
           src="~/assets/img/vue-a11y-2019-vueaxe.png"
-          height="96"
+          width="2554"
+          height="342"
           :alt="$t('vueA11yPage2019.a11yNote.imgAlt01')"
+          decoding="async"
         />
       </picture>
     </figure>
@@ -137,8 +139,10 @@
     <figure>
       <img
         src="https://raw.githubusercontent.com/storybookjs/storybook/HEAD/addons/a11y/docs/screenshot.png"
-        height="360"
+        width="2862"
+        height="1746"
         :alt="$t('vueA11yPage2019.a11yNote.imgAlt02')"
+        decoding="async"
       />
     </figure>
     <global-heading-component
@@ -169,7 +173,7 @@
     <p>{{ $t("vueA11yPage2019.a11yNote.desc20") }}</p>
     <i18n tag="p" path="vueA11yPage2019.a11yNote.desc21">
       <template v-slot:abbr02>
-        <abbr>Web Content Accessibility Guidelines</abbr>
+        <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>
       </template>
     </i18n>
     <global-link-component :link-object="guidelineLink01" />

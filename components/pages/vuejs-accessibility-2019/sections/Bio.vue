@@ -13,6 +13,9 @@
         <img
           src="~/assets/img/vue-a11y-2019-bio-photo-okuto.jpg"
           :alt="$t('prefixAlt.photo') + $t('vueA11yPage2019.bio.photoAlt')"
+          width="3850"
+          height="1344"
+          decoding="async"
         />
       </picture>
     </p>

@@ -51,9 +51,10 @@
         />
         <img
           src="~/assets/img/vue-a11y-2019-vuea11ycom.png"
-          height="360"
+          width="1920"
+          height="1101"
           :alt="$t('vueA11yPage2019.vueA11y.imgAlt01')"
-          loading="lazy"
+          decoding="async"
         />
       </picture>
       <figcaption>Vue <abbr title="accessibility">a11y</abbr></figcaption>

@@ -9,6 +9,9 @@
         <img
           src="~/assets/img/product-about-accessibility-with-vuejs-2019.png"
           :alt="$t('prefixAlt.photo') + $t('product.vueA11yPage2019.title')"
+          width="1326"
+          height="960"
+          decoding="async"
         />
       </picture>
     </figure>
