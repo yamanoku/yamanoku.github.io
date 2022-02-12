@@ -163,7 +163,7 @@ vueA11yPage2019:
     desc07:
       "Along with the consideration of keyboard operations, you should also be aware of the outlines for focus. This is because removing the outline would make it difficult to grasp the current position."
     desc08:
-      "In modern front-end development, we're seeing more and more implementations of SPA ({abbr01}), which treats itself as dynamic content using a single HTML and JavaScript, so it's sometimes impossible to tell what and how things have changed in the page."
+      "In modern front-end development, we're seeing more and more implementations of {abbr01}, which treats itself as dynamic content using a single HTML and JavaScript, so it's sometimes impossible to tell what and how things have changed in the page."
     abbr01: "Single Page Application"
     desc09:
       "Page changes and status updates require an implementation using the {ariaLive} attribute. However, since you need to understand how to handle attribute values, you may want to consume the {vueAnnouncer} library to start with, which allows you to easily set up the reading of page moves in a router or state changes in a component."
@@ -190,7 +190,7 @@ vueA11yPage2019:
     desc20:
       "Therefore, it also needs to be checked through user tests. We'll be doing some hands-on look and feel, such as browser checks, screen reader tests, and keyboard tests to make sure things are okay."
     desc21:
-      "The WCAG ({abbr02}) can be used as a reference to determine what kind of testing should be done. These are the guidelines for making web content accessible, published as W3C recommendations, and provide a technology-independent way to verify how to make it accessible."
+      "The {abbr02} can be used as a reference to determine what kind of testing should be done. These are the guidelines for making web content accessible, published as W3C recommendations, and provide a technology-independent way to verify how to make it accessible."
     desc22:
       "However, it is also difficult to refer to the WCAG specification every time, so it would be good to be able to create your own guidelines after referring to the necessary elements."
   conclusion:
