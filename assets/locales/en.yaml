@@ -164,7 +164,6 @@ vueA11yPage2019:
       "Along with the consideration of keyboard operations, you should also be aware of the outlines for focus. This is because removing the outline would make it difficult to grasp the current position."
     desc08:
       "In modern front-end development, we're seeing more and more implementations of {abbr01}, which treats itself as dynamic content using a single HTML and JavaScript, so it's sometimes impossible to tell what and how things have changed in the page."
-    abbr01: "Single Page Application"
     desc09:
       "Page changes and status updates require an implementation using the {ariaLive} attribute. However, since you need to understand how to handle attribute values, you may want to consume the {vueAnnouncer} library to start with, which allows you to easily set up the reading of page moves in a router or state changes in a component."
     desc10: "It may be a blind spot, but the language setting is required for {htmlAttrs} in {nuxtConfigJs}."
