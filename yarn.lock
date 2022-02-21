@@ -1768,10 +1768,10 @@
     leven "3"
     whatwg-mimetype "2"
 
-"@markuplint/vue-parser@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-2.0.0.tgz#3280d0b62f2a8afea60a0c36f4d1c96a88d1b2bc"
-  integrity sha512-NpHXyJXNUgz7mHhfsoTMd2mcrFRQcFNSlOiSDmZFTmUj1ZO+Fa3+q7lpyj2im848sv6FfTRSh27IQ+H4CMB5+g==
+"@markuplint/vue-parser@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-2.1.0.tgz#ebd13246b49b3fd8eb4474862a03f96d9a2c915a"
+  integrity sha512-qFP0ia9Xy+CaXVuVTMJ4RgD63U5CVOIv/yOcLxosegCm4+3aNS1Jloes0im/KolAKoCzaEDPi0BVAnVzYQ9xqQ==
   dependencies:
     "@markuplint/html-parser" "2.0.0"
     "@markuplint/ml-ast" "2.0.0"
