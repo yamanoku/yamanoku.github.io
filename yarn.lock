@@ -1688,10 +1688,10 @@
     parse5 "^6.0.1"
     tslib "^2.3.1"
 
-"@markuplint/html-spec@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-2.0.0.tgz#54f86de4e496a698066a095d5c4515d2004472ce"
-  integrity sha512-Ir4XwApndFxbsG5nRshIXJCRYinDVOgoGdh1pHI93+i02dPl/8t0bgM6HVxEJFKeanOTxiOIUDmjqWJ4VnT9Bg==
+"@markuplint/html-spec@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-2.1.0.tgz#2664523c6fee519a790d05c40b7bc201b45545b1"
+  integrity sha512-o07Eiw6LyrjlBslKAHUS9oOF/f7pQh7YpvlpXb3DBC22jj5i14oCCQbpJDID9ze3cjjL3c/xnt2aUtrRbyGO8Q==
   dependencies:
     "@markuplint/ml-spec" "2.0.0"
 
@@ -1745,12 +1745,12 @@
     tslib "^2.3.1"
     uuid "^8.3.2"
 
-"@markuplint/rules@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/rules/-/rules-2.0.0.tgz#854663186dcdabef7f33f83cfe2b2f5e67d6f338"
-  integrity sha512-Vdr9HXP9fb69di6U0O+Sx+H5iD2SyPT5/KrLHgN1VPOvQs3JCnkwLVJCgoy+bAoGaqMj7IH4v3GDnjekJwrASg==
+"@markuplint/rules@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/rules/-/rules-2.1.0.tgz#98a9b65c064a73c75e809c9655872ab3e27c6ec2"
+  integrity sha512-h4h1aQmTqwr7x7ys+XKMYON9DZRctcUmCmkUdF83EQcwAjpgca/1HKIRnVx/rDTK3zIdPMe6DELceI27+MNfpg==
   dependencies:
-    "@markuplint/html-spec" "2.0.0"
+    "@markuplint/html-spec" "^2.1.0"
     "@markuplint/ml-core" "2.0.0"
     "@markuplint/ml-spec" "2.0.0"
     "@markuplint/types" "2.0.0"
@@ -7363,21 +7363,21 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-markuplint@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/markuplint/-/markuplint-2.0.0.tgz#a3de113d9dad8beb148fd0074caaa2fa4499c596"
-  integrity sha512-rGTJxVUuhkvyF5IFshi0wlD3IPpQr/WXfoKLK7coDVvqfaHDVZnYfCqLuwuEXJ0DNWamU3HhhpHcb/HZrm40Eg==
+markuplint@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/markuplint/-/markuplint-2.1.0.tgz#aa7191dd8182797acebbd09dc8305c4586f4cffb"
+  integrity sha512-MMQy+oQe2liUhn3qtrTlodbMLEw+XMX5/EhiCbl/xNpW9SX3aQGD18XG0zjY4oMcDomMRo3+ModEBAg32Nlf6A==
   dependencies:
     "@markuplint/create-rule-helper" "2.0.0"
     "@markuplint/file-resolver" "2.0.0"
     "@markuplint/html-parser" "2.0.0"
-    "@markuplint/html-spec" "2.0.0"
+    "@markuplint/html-spec" "^2.1.0"
     "@markuplint/i18n" "2.0.0"
     "@markuplint/ml-ast" "2.0.0"
     "@markuplint/ml-config" "2.0.0"
     "@markuplint/ml-core" "2.0.0"
     "@markuplint/ml-spec" "2.0.0"
-    "@markuplint/rules" "2.0.0"
+    "@markuplint/rules" "^2.1.0"
     chokidar "^3.5.3"
     cli-color "^2.0.1"
     debug "^4.3.3"
