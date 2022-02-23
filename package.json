@@ -30,7 +30,7 @@
     "gh-pages": "3.2.3",
     "highlight.js": "10.7.3",
     "lerna": "4.0.0",
-    "markuplint": "2.1.0",
+    "markuplint": "2.1.1",
     "modern-normalize": "1.1.0",
     "prettier": "2.5.1",
     "style-loader": "3.3.1",
