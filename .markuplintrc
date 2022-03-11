@@ -1,6 +1,7 @@
 {
   "rules": {
-    "permitted-contents": false
+    "permitted-contents": false,
+    "require-accessible-name": false
   },
   "extends": ["markuplint:recommended"],
   "parser": {
