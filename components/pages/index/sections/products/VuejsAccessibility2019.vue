@@ -30,9 +30,9 @@
       </figcaption>
     </figure>
     <p>
-      <nuxt-link :to="localePath('/vue-a11y-2019')">
+      <a :href="productURLPath">
         {{ $t("product.vueA11yPage2019.link") }}
-      </nuxt-link>
+      </a>
     </p>
     <section
       id="product:about-accessibility-with-vuejs-2019_information"
@@ -41,7 +41,7 @@
       <global-heading-component
         id="product:about-accessibility-with-vuejs-2019_subheading"
         :heading-level="4"
-        :heading-text="$t('vueA11yPage2019.subHeading.info')"
+        :heading-text="$t('product.vueA11yPage2019.infoHeading')"
       />
       <global-list-component :list-array="vueA11yPage2019ListItem" />
     </section>
@@ -74,9 +74,26 @@ export default {
         {
           title: this.$t("product.vueA11yPage2019.info.listitem04"),
           datetime: "2021-09-20T00:00:00.000Z"
+        },
+        {
+          title: "product.vueA11yPage2019.info.listitem05",
+          isI18n: true,
+          i18nLinkTitle: "yamanoku/vue-a11y-2019",
+          url: "https://github.com/yamanoku/vue-a11y-2019",
+          datetime: "2022-03-07T00:00:00.000Z",
+          isExternal: true,
+          isGitHubLink: true
         }
       ]
     };
+  },
+  computed: {
+    productURLPath() {
+      if (this.$i18n.locale === "en") {
+        return "https://yamanoku.net/vue-a11y-2019/en/";
+      }
+      return "https://yamanoku.net/vue-a11y-2019/ja/";
+    }
   }
 };
 </script>

@@ -24,11 +24,13 @@ product:
   vueA11yPage2019:
     title: "Vue.jsから考えるアクセシビリティについて - 2019"
     link: "「Vue.jsから考えるアクセシビリティについて - 2019」記事ページ"
+    infoHeading: "このドキュメントに関する情報"
     info:
       listitem01: "公開"
       listitem02: "{0}に掲載"
       listitem03: "英訳ページ追加"
       listitem04: "URL変更 (vue-a11y から vue-a11y-2019)"
+      listitem05: "{0}にソースを移動"
   oclock-app:
     title: "O'clock App"
     zenn: "解説記事"
