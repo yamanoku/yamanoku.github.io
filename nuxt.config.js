@@ -98,5 +98,5 @@ module.exports = {
   render: {
     injectScripts: false
   },
-  plugins: ["~plugins/icons.js", "~plugins/vue-highlight.js"]
+  plugins: ["~plugins/icons.js"]
 };
