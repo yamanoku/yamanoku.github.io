@@ -57,10 +57,6 @@ module.exports = {
       prefix: "index"
     },
     {
-      path: "~/components/pages/vuejs-accessibility-2019/",
-      prefix: "vuejs-accessibility-2019"
-    },
-    {
       path: "~/components/pages/privacy/",
       prefix: "privacy"
     },
