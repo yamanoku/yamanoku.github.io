@@ -1,5 +1,11 @@
 export const listWrite = [
   {
+    title: "Vue 2 からVue 3 に移行完了しました！",
+    url: "https://engineer.crowdworks.jp/entry/migrate-vue3",
+    datetime: "2022-03-02T12:00:00.000Z",
+    isExternal: true
+  },
+  {
     title: "2021年オープンソースコントリビュート活動振り返り",
     url: "https://zenn.dev/yamanoku/articles/bd8d86ee79459b",
     datetime: "2021-12-30T10:00:00.000Z",
