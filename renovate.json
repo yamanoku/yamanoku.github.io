@@ -3,6 +3,7 @@
     "config:base",
     "group:monorepos"
   ],
+  "dependencyDashboard": false,
   "automerge": true,
   "major": {
     "automerge": false
