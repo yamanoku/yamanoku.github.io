@@ -1713,16 +1713,6 @@
     minimatch "^5.0.1"
     tslib "^2.3.1"
 
-"@markuplint/html-parser@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-2.0.0.tgz#b92f2f418647231c164c520b22b08dfa8c0a14a4"
-  integrity sha512-tj/Usq/IK+ph1fuoMqRkTlFImVEfiCzuRfLc579zupB0P+UUs1Fot21jWySy4tutUXYf+coY5W+xdCGQwH44dQ==
-  dependencies:
-    "@markuplint/ml-ast" "2.0.0"
-    "@markuplint/parser-utils" "2.0.0"
-    parse5 "^6.0.1"
-    tslib "^2.3.1"
-
 "@markuplint/html-parser@2.0.1-dev.20220307.0":
   version "2.0.1-dev.20220307.0"
   resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-2.0.1-dev.20220307.0.tgz#3c7b07ed9dbe32229ab8e31c0344a7cffe31459c"
@@ -1730,6 +1720,16 @@
   dependencies:
     "@markuplint/ml-ast" "2.0.1-dev.20220307.0"
     "@markuplint/parser-utils" "2.0.1-dev.20220307.0"
+    parse5 "^6.0.1"
+    tslib "^2.3.1"
+
+"@markuplint/html-parser@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-2.1.0.tgz#c4bb7f60ef9d1cbe059bdcb6a7bf6ce33cf3c7b8"
+  integrity sha512-rEmt31OVD4LET34KAP6e9v7DCcwpeiWQVy4hTNz+W21TQSct56Lf9XQ+OerOg6gxztjMw/SbvrI/Rm9vGIalEg==
+  dependencies:
+    "@markuplint/ml-ast" "2.0.1-dev.20220307.0"
+    "@markuplint/parser-utils" "2.1.0"
     parse5 "^6.0.1"
     tslib "^2.3.1"
 
@@ -1744,11 +1744,6 @@
   version "2.0.1-dev.20220307.0"
   resolved "https://registry.yarnpkg.com/@markuplint/i18n/-/i18n-2.0.1-dev.20220307.0.tgz#fe3262394ec265cf165ee0e3f1d741deb4dfd226"
   integrity sha512-6ag3Br1OwSYRGgiwsZUwQlLLEyaIh7hivmHqY3R4SwEp2j9cBW4bKu+jOQFd7uKWBIJ8rkekok44vpFrTu5x3A==
-
-"@markuplint/ml-ast@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/ml-ast/-/ml-ast-2.0.0.tgz#9aa7a43f0c62abcdfc288738c82ab38e51e5838c"
-  integrity sha512-vs9P1QmO/f0w+0ua0eX4GrlydIcklo5s9i6GVrp6OeMY2uzYoONaGEc/EoOc7H3vwEdcDRGx31K0Nrodm0r39A==
 
 "@markuplint/ml-ast@2.0.1-dev.20220307.0":
   version "2.0.1-dev.20220307.0"
@@ -1786,16 +1781,6 @@
   dependencies:
     tslib "^2.3.1"
 
-"@markuplint/parser-utils@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-2.0.0.tgz#1b8cb504192dbb65515dd95086b05e22ba6e4b00"
-  integrity sha512-bRk6gmA0TTSwKy3Tsr+qwsQEeiega65yCZFxQ+Bm17vi1gjHEUDtt/hqtQ98lhSgilm0XwQbLX8n2Yq5eIXiZA==
-  dependencies:
-    "@markuplint/ml-ast" "2.0.0"
-    "@markuplint/types" "2.0.0"
-    tslib "^2.3.1"
-    uuid "^8.3.2"
-
 "@markuplint/parser-utils@2.0.1-dev.20220307.0":
   version "2.0.1-dev.20220307.0"
   resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-2.0.1-dev.20220307.0.tgz#34af0eed54da2cc1d05524387ac817b320330698"
@@ -1803,6 +1788,16 @@
   dependencies:
     "@markuplint/ml-ast" "2.0.1-dev.20220307.0"
     "@markuplint/types" "2.0.1-dev.20220307.0"
+    tslib "^2.3.1"
+    uuid "^8.3.2"
+
+"@markuplint/parser-utils@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-2.1.0.tgz#edf63b7ed2db90fbcf81e0d8a47c8cc2967d4cba"
+  integrity sha512-vpg3P4pZUkhjm8cKf1d0lh2aNm/dZMOziSlPRmW4NNGeeOsox/zGU9ZKWS8NH5GsDJOv8vYRywfgtddO0UGRNw==
+  dependencies:
+    "@markuplint/ml-ast" "2.0.1-dev.20220307.0"
+    "@markuplint/types" "2.1.0"
     tslib "^2.3.1"
     uuid "^8.3.2"
 
@@ -1818,17 +1813,6 @@
     debug "^4.3.3"
     tslib "^2.3.1"
 
-"@markuplint/types@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/types/-/types-2.0.0.tgz#a7ff0bf1e1eaa6a27f792ea30ff64ccc24e252a2"
-  integrity sha512-4cpbP+nD5AXL+REy7Tmys0fkz46bmoHHguxSIWUQXkZozck1FrjmcUmiLESpvHznuu6F2ANUTCTOYFwQrp38Lw==
-  dependencies:
-    bcp-47 "1"
-    css-tree "1"
-    debug "^4.3.3"
-    leven "3"
-    whatwg-mimetype "2"
-
 "@markuplint/types@2.0.1-dev.20220307.0":
   version "2.0.1-dev.20220307.0"
   resolved "https://registry.yarnpkg.com/@markuplint/types/-/types-2.0.1-dev.20220307.0.tgz#0b6c6447fccbf48af63c50f4d7dbd306c401824b"
@@ -1840,16 +1824,27 @@
     leven "3"
     whatwg-mimetype "2"
 
-"@markuplint/vue-parser@2.1.0":
+"@markuplint/types@2.1.0":
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-2.1.0.tgz#ebd13246b49b3fd8eb4474862a03f96d9a2c915a"
-  integrity sha512-qFP0ia9Xy+CaXVuVTMJ4RgD63U5CVOIv/yOcLxosegCm4+3aNS1Jloes0im/KolAKoCzaEDPi0BVAnVzYQ9xqQ==
+  resolved "https://registry.yarnpkg.com/@markuplint/types/-/types-2.1.0.tgz#f93236bd07e89889c1ae672d1ac150f4111dd403"
+  integrity sha512-hsIJT8BBd+1fvmFehGYjuwpggIDSh87qRK7YL9zVlZy+qrCfpSrBqJe0XCC/RwQLR5CD3lKzKSUOuyB8ahcPYg==
   dependencies:
-    "@markuplint/html-parser" "2.0.0"
-    "@markuplint/ml-ast" "2.0.0"
-    "@markuplint/parser-utils" "2.0.0"
+    bcp-47 "1"
+    css-tree "1"
+    debug "^4.3.4"
+    leven "3"
+    whatwg-mimetype "2"
+
+"@markuplint/vue-parser@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-2.2.0.tgz#ea5d1b9410a64807fd1d19450f595ee96a53fb70"
+  integrity sha512-JF1fh9cRXQvXWVwj8HWxLifHjCo9KEeLW6MKSVqLGcV1qL9Q4dxeo/uNYuQWlIN+KxLBWUptbETTiO0+ZG+ZdQ==
+  dependencies:
+    "@markuplint/html-parser" "2.1.0"
+    "@markuplint/ml-ast" "2.0.1-dev.20220307.0"
+    "@markuplint/parser-utils" "2.1.0"
     tslib "^2.3.1"
-    vue-eslint-parser "^8.2.0"
+    vue-eslint-parser "^8.3.0"
 
 "@markuplint/vue-spec@2.0.2":
   version "2.0.2"
@@ -11589,7 +11584,7 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.1.0.tgz#1a67a47b8ecacfa86d75830173fffee3bf8a4ee3"
   integrity sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA==
 
-vue-eslint-parser@8.3.0, vue-eslint-parser@^8.0.0, vue-eslint-parser@^8.0.1, vue-eslint-parser@^8.2.0:
+vue-eslint-parser@8.3.0, vue-eslint-parser@^8.0.0, vue-eslint-parser@^8.0.1, vue-eslint-parser@^8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-8.3.0.tgz#5d31129a1b3dd89c0069ca0a1c88f970c360bd0d"
   integrity sha512-dzHGG3+sYwSf6zFBa0Gi9ZDshD7+ad14DGOdTLjruRVgZXe2J+DcZ9iUhyR48z5g1PqRa20yt3Njna/veLJL/g==
