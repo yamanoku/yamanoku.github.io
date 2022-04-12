@@ -21,7 +21,7 @@
     "yaml-loader": "0.6.0"
   },
   "devDependencies": {
-    "@markuplint/vue-parser": "2.1.0",
+    "@markuplint/vue-parser": "2.2.0",
     "@markuplint/vue-spec": "2.0.2",
     "eslint": "8.13.0",
     "eslint-config-prettier": "8.5.0",
