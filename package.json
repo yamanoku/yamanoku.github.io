@@ -13,12 +13,12 @@
     "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "dayjs": "1.11.1",
-    "modern-normalize": "1.1.0",
     "@nuxtjs/i18n": "7.2.1",
+    "dayjs": "1.11.1",
+    "js-yaml-loader": "1.2.2",
+    "modern-normalize": "1.1.0",
     "nuxt": "2.15.8",
-    "style-loader": "3.3.1",
-    "yaml-loader": "0.6.0"
+    "style-loader": "3.3.1"
   },
   "devDependencies": {
     "@markuplint/vue-parser": "2.3.0",
