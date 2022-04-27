@@ -13,7 +13,7 @@
     "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "7.2.1",
+    "@nuxtjs/i18n": "7.2.2",
     "dayjs": "1.11.1",
     "js-yaml-loader": "1.2.2",
     "modern-normalize": "1.1.0",
@@ -23,16 +23,16 @@
   "devDependencies": {
     "@markuplint/vue-parser": "2.3.0",
     "@markuplint/vue-spec": "2.1.0",
-    "eslint": "8.13.0",
+    "eslint": "8.14.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-friendly-formatter": "4.0.1",
     "eslint-loader": "4.0.2",
     "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-vue": "8.6.0",
+    "eslint-plugin-vue": "8.7.1",
     "eslint-plugin-vuejs-accessibility": "1.1.1",
     "gh-pages": "3.2.3",
     "lerna": "4.0.0",
-    "markuplint": "2.6.3",
+    "markuplint": "2.7.0",
     "prettier": "2.6.2",
     "vue-eslint-parser": "8.3.0"
   },
