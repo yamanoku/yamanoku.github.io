@@ -69,8 +69,7 @@ module.exports = {
     extend(config, { isDev }) {
       config.module.rules.push({
         test: /\.ya?ml$/,
-        type: "json",
-        use: "yaml-loader"
+        use: "js-yaml-loader"
       });
       if (isDev && process.client) {
         config.module.rules.push({
