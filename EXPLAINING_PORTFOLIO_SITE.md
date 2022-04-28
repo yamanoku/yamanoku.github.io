@@ -10,7 +10,6 @@
   - eslint-plugin-prettier
   - eslint-plugin-vue
   - eslint-plugin-vuejs-accessibility
-- lerna
 - markuplint
 - modern-normalize
 
