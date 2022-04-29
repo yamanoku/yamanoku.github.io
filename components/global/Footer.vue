@@ -1,8 +1,5 @@
 <template>
   <footer>
-    <nuxt-link :to="localePath({ name: 'privacy' })">{{
-      $t("privacyPage.title")
-    }}</nuxt-link>
     <p>Copyright {{ currentYear }}, Okuto Oyama</p>
     <p>Source : <global-link-component :linkObject="sourceLink" /></p>
   </footer>

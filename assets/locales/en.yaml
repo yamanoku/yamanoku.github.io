@@ -57,22 +57,6 @@ openSourceActivity:
   link01: "Open Source Activity Log 2021"
 home:
   title: "Home"
-privacyPage:
-  title: "Privacy Policy"
-  description: "yamanoku.net privacy policy page. Provides information about access analysis tools."
-  analytics:
-    heading: "About Access Analysis Tools"
-    desc01: "yamanoku.net uses Google's access analysis tool “Google Analytics”."
-    desc02:
-      "This Google Analytics server uses cookies to collect access information. This access information is collected anonymously and is not personally identifiable."
-    desc03:
-      "Google Analytics cookies on this site will be retained for 26 months. This feature can be rejected by disabling cookies, so please check your browser settings."
-    link01:
-      title: "Google Analytics Terms of Service"
-      url: "https://www.google.com/analytics/terms/us.html"
-    link02:
-      title: "How Google uses information from sites or apps that use our services"
-      url: "https://policies.google.com/technologies/partner-sites?hl=en"
 heading:
   basic: "Basic Info"
   job: "Job Info"
