@@ -1,8 +1,8 @@
 <template>
   <header>
-    <nuxt-link class="logo-link-block" :to="localePath({ name: 'index' })">
+    <div class="logo-link-block">
       <header-logo-icon />
-    </nuxt-link>
+    </div>
     <nav class="local-nav-list" :aria-label="$t('multilingual')">
       <nuxt-link
         v-for="locale in $i18n.locales"
