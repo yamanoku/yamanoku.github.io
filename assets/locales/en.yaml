@@ -44,8 +44,6 @@ product:
 sns:
   tumblr:
     text: "Tumblr"
-    tumblog: "Blog"
-    artworks: "art works"
   twitter: "Twitter"
   facebook: "Facebook"
   github: "Github"
@@ -79,7 +77,6 @@ error:
     text02: "If it is still not recovered, please contact us via the email address."
 prefixAlt:
   photo: "Photo"
-  thumbnail: "Thumbnail"
   screenshot: "ScreenShot"
 iconTitle:
   github: "Go to GitHub"
@@ -89,15 +86,4 @@ multilingual: "Multilingual Page"
 archivePage:
   title: "Archives"
   externalLink: "If you are looking for content older than 1 year, please visit {title} page."
-details:
-  summary: "Details"
-  summary_feedback: "Correction requests for articles"
-feedback:
-  github:
-    link: "Issue details"
-    title: "Creating a GitHub Issue"
-  twitter:
-    title: "Tweet for author"
-backHome: "Back to Home"
-alertOneYearText: "This article has been published for more than a year. Some parts of the content are outdated."
 onlyJPText: "Sorry, Japanese text only"

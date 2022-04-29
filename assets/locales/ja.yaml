@@ -44,8 +44,6 @@ product:
 sns:
   tumblr:
     text: "Tumblr"
-    tumblog: "ブログ"
-    artworks: "アートワーク"
   twitter: "Twitter"
   facebook: "Facebook"
   github: "Github"
@@ -79,7 +77,6 @@ error:
     text02: "それでも復旧していない場合は、お手数をおかけしますが以下メールよりご連絡ください。"
 prefixAlt:
   photo: "写真："
-  thumbnail: "サムネイル："
   screenshot: "スクリーンショット："
 iconTitle:
   github: "GitHub に移動する"
@@ -89,14 +86,3 @@ multilingual: "多言語ページ"
 archivePage:
   title: "アーカイブ"
   externalLink: "1年以上前のコンテンツをお探しの場合、{title}を参照してください。"
-details:
-  summary: "詳細を確認する"
-  summary_feedback: "この記事に関する修正依頼"
-feedback:
-  github:
-    link: "修正内容："
-    title: "GitHub Issueを作成する"
-  twitter:
-    title: "著者にツイートする"
-backHome: "ホームに戻る"
-alertOneYearText: "この記事は公開から1年以上が経過しています。内容が一部古い箇所があります。"
