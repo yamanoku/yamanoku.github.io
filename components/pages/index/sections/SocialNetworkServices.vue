@@ -19,28 +19,28 @@ export default {
     return {
       socialNetworkServicesListItem: [
         {
-          title: this.$t("sns.twitter"),
+          title: "Twitter",
           url: "https://twitter.com/okuto_oyama",
           isExternal: true
         },
         {
-          title: this.$t("sns.github"),
+          title: "GitHub",
           url: "https://github.com/yamanoku",
           isExternal: true,
           isGitHubLink: true
         },
         {
-          title: this.$t("sns.scrapbox"),
+          title: "Scrapbox",
           url: "https://scrapbox.io/yamanoku/",
           isExternal: true
         },
         {
-          title: this.$t("sns.facebook"),
+          title: "Facebook",
           url: "https://facebook.com/okutooyama",
           isExternal: true
         },
         {
-          title: this.$t("sns.tumblr.text"),
+          title: "Tumblr",
           url: "https://yamanoku.tumblr.com",
           isExternal: true
         }

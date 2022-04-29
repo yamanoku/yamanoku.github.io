@@ -41,13 +41,6 @@ product:
     vuePortfolio: "Portfolio template made by Vue.js. This is the first SPA created from vue cli. I used the Vue 1.0 versions at first, but now I can upgrade it to the Vue 3.0 versions."
     vueA11yPage2019: "Created with the motivation to make people aware of accessibility in Vue.js development. Initially, I put together this article as a presentation for a conference, and then I presented it again as an article for the 2019 Web Accessibility Advent Calendar. There is a difference between when I wrote the article and the current information. Please be aware of this when browsing."
     oclock-app: "Using Svelte, a digital clock that can see up to the second in PWA. I make it possible to check any OS that can do Web browsing. It took about half a day to implement, including setup. Consideration is also given to screen readers using WAI-ARIA."
-sns:
-  tumblr:
-    text: "Tumblr"
-  twitter: "Twitter"
-  facebook: "Facebook"
-  github: "Github"
-  scrapbox: "Scrapbox"
 donate:
   desc01: "If you are interested in my work, presentations and activities, you can donate me by."
 openSourceActivity:
