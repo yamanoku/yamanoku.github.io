@@ -57,20 +57,6 @@ openSourceActivity:
   link01: "オープンソース活動記録 2021年"
 home:
   title: "ホーム"
-privacyPage:
-  title: "プライバシーポリシー"
-  description: "yamanoku.netのプライバシーポリシーページです。アクセス解析ツールについての説明が載っています。"
-  analytics:
-    heading: "アクセス解析ツールについて"
-    desc01: "yamanoku.net（以下、当サイト）では、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。"
-    desc02: "このGoogleアナリティクスはアクセス情報の収集のためにCookieを使用しています。このアクセス情報は匿名で収集されており、個人を特定するものではありません。"
-    desc03: "当サイトでのGoogleアナリティクスのCookieは、26か月間保持されます。この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。"
-    link01:
-      title: "Googleアナリティクスの利用規約"
-      url: "https://www.google.com/analytics/terms/jp.html"
-    link02:
-      title: "Googleのサービスを使用するサイトやアプリから収集した情報のGoogleによる使用"
-      url: "https://policies.google.com/technologies/partner-sites?hl=jp"
 heading:
   basic: "基本情報"
   job: "職業"
