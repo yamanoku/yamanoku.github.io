@@ -72,6 +72,15 @@ html {
   outline: 2px solid var(--y-outline-color);
   outline-offset: 2px;
 }
+html[lang="ja"] {
+  font-kerning: none;
+}
+html:not([lang="ja"]) body {
+  hyphens: auto;
+}
+html[lang="ja"] body {
+  line-break: loose;
+}
 body {
   margin: 0;
 }
@@ -94,6 +103,9 @@ a:visited {
   margin-right: auto;
   padding-left: var(--y-rhythm-2);
   padding-right: var(--y-rhythm-2);
+}
+html[lang="ja"] :where(header, main, footer) {
+  max-width: 45rem;
 }
 h1 {
   margin: var(--y-rhythm-5) 0;
@@ -151,6 +163,7 @@ p {
 img {
   max-width: 100%;
   vertical-align: bottom;
+  height: auto;
 }
 figure {
   margin: var(--y-rhythm-3) 0;
