@@ -1,9 +1,9 @@
 <template>
   <header>
-    <div class="logo-link-block">
+    <div class="header-logo-link-block">
       <header-logo-icon />
     </div>
-    <nav class="local-nav-list" :aria-label="$t('multilingual')">
+    <nav :aria-label="$t('multilingual')">
       <nuxt-link
         v-for="locale in $i18n.locales"
         :key="locale.code"
@@ -21,16 +21,11 @@ export default {
 </script>
 
 <style scoped>
-header {
-  max-width: 80ch;
-  margin: auto;
-  padding: 0 var(--y-rhythm-2);
-}
-.logo-link-block {
+.header-logo-link-block {
   display: inline-block;
   margin: var(--y-rhythm-2) 0;
 }
-.local-nav-list {
+nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
