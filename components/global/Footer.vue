@@ -26,11 +26,6 @@ export default {
 
 <style scoped>
 footer {
-  padding: var(--y-rhythm-3);
   text-align: center;
-}
-footer p {
-  font-size: 1rem;
-  line-height: var(--y-rhythm-3);
 }
 </style>
