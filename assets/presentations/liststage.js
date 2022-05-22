@@ -1,6 +1,7 @@
 export const listStage = [
   {
-    title: "クラウドワークスのこれまでの取り組み、新たなミッションと考えるこれからについて",
+    title:
+      "クラウドワークスのこれまでの取り組み、新たなミッションと考えるこれからについて",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vQct0iDIdaywmCjhbf49BKd5DMXLEtFlZbFs6cLfUmAfp1HVzO2jVIrym5bEmlpaIrnPxbj-pVggmeW/pub?slide=id.p1",
     datetime: "2022-05-19T20:19:00.000Z",
     isExternal: true
