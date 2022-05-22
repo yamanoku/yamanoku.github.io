@@ -1,5 +1,11 @@
 export const listStage = [
   {
+    title: "クラウドワークスのこれまでの取り組み、新たなミッションと考えるこれからについて",
+    url: "https://docs.google.com/presentation/d/e/2PACX-1vQct0iDIdaywmCjhbf49BKd5DMXLEtFlZbFs6cLfUmAfp1HVzO2jVIrym5bEmlpaIrnPxbj-pVggmeW/pub?slide=id.p1",
+    datetime: "2022-05-19T20:19:00.000Z",
+    isExternal: true
+  },
+  {
     title: "PWA Night vol.35 yamanoku 登壇資料",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vRP89QW6DxVdEND2IpKqnJag1YUw9P3rZLjQbDIJwWVtzndRNZPXHhm1765XN-i3btQ1Io0-xJeU6Gf/pub?start=false&loop=false&delayms=3000",
     datetime: "2022-01-19T20:05:00.000Z",
