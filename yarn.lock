@@ -3820,14 +3820,14 @@ eslint-plugin-vue@9.0.1:
     vue-eslint-parser "^9.0.1"
     xml-name-validator "^4.0.0"
 
-eslint-plugin-vuejs-accessibility@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vuejs-accessibility/-/eslint-plugin-vuejs-accessibility-1.1.1.tgz#bb7bd0462b6a7be86514a8fc651c1b9d0c8b356f"
-  integrity sha512-vmXfZQMlVLLhoEd9WWOzzhwLKRFVOnteSsrWD/DGvIMUDZ9MkwB3gQ+sdSpjqYMC+bb68BPsp3YpNZBzygp9Xg==
+eslint-plugin-vuejs-accessibility@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vuejs-accessibility/-/eslint-plugin-vuejs-accessibility-1.2.0.tgz#b7304bc8dfe4fad930c5d95cd51a2e0979225bda"
+  integrity sha512-wF7kT22lS2VOmIpDeI65bnFFKFgESEEpI+CWKr43mdfDRywA4sCk7cKhtZsvfbPOtKO0GDlnpFxZbOIGsFn7IQ==
   dependencies:
     aria-query "^5.0.0"
     emoji-regex "^10.0.0"
-    vue-eslint-parser "^8.0.0"
+    vue-eslint-parser "^9.0.1"
 
 eslint-scope@^4.0.3:
   version "4.0.3"
@@ -9268,7 +9268,7 @@ vue-eslint-parser@9.0.2, vue-eslint-parser@^9.0.1:
     lodash "^4.17.21"
     semver "^7.3.6"
 
-vue-eslint-parser@^8.0.0, vue-eslint-parser@^8.3.0:
+vue-eslint-parser@^8.3.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-8.3.0.tgz#5d31129a1b3dd89c0069ca0a1c88f970c360bd0d"
   integrity sha512-dzHGG3+sYwSf6zFBa0Gi9ZDshD7+ad14DGOdTLjruRVgZXe2J+DcZ9iUhyR48z5g1PqRa20yt3Njna/veLJL/g==
