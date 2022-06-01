@@ -29,7 +29,7 @@
     "eslint-loader": "4.0.2",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-vue": "9.0.1",
-    "eslint-plugin-vuejs-accessibility": "1.1.1",
+    "eslint-plugin-vuejs-accessibility": "1.2.0",
     "gh-pages": "4.0.0",
     "markuplint": "2.8.0",
     "prettier": "2.6.2",
