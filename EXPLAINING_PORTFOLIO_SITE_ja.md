@@ -69,13 +69,6 @@ aria-labelledbyとsection要素を紐付けることで記事間を移動する�
 [ListComponent.vue](https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/global/ListComponent.vue)
 </details>
 
-### PWA (Progressive Web Application)
-Google Chromeで閲覧している場合、PCからはデスクトップPWA、モバイル端末からはPWAとして利用することができます。
-
-ブラウザを通さずにネイティブアプリとして起動できたり、キャッシュを活用した早いページ体験、1度ダウンロードするとオフラインで閲覧することもできます。
-
-- [Your First Progressive Web App | Web Fundamentals | Google Developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
-
 ### 国際化対応
 Nuxt.jsで開発しているのでnuxt-18nというツールを導入しています。国際化対応ほか、特定の言語のみに表示する場合などのレンダリング処理も可能となっています。
 
