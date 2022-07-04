@@ -1090,6 +1090,16 @@
     parse5 "^6.0.1"
     tslib "^2.3.1"
 
+"@markuplint/html-parser@2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-2.2.2.tgz#e24e4088efa188ea6ac2373744702f79fc9b0516"
+  integrity sha512-+QKMdQBFD3eUhYtdYzoSJMRnWNETMewWf1RyitfR1xgx7wEVnSW3VEem5ZIlr7FlSzYsKDl1rrhJZn5Qi/fw1Q==
+  dependencies:
+    "@markuplint/ml-ast" "2.0.1-dev.20220307.0"
+    "@markuplint/parser-utils" "2.2.1"
+    parse5 "^6.0.1"
+    tslib "^2.3.1"
+
 "@markuplint/html-spec@2.7.0":
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-2.7.0.tgz#a2e4eb2756540eae95026c04cb10addba17211b9"
@@ -1148,6 +1158,16 @@
     tslib "^2.3.1"
     uuid "^8.3.2"
 
+"@markuplint/parser-utils@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-2.2.1.tgz#4b38649bf923568269e6cda4bb80f92921b2301e"
+  integrity sha512-4KMfxMQBTiPlO4SeZrZtonvtz4clSrOPGqkB7tyj2mAP3zKj9CkpL3VPl9JGJL7xa8XndAKOgnIUsIvMomGZFQ==
+  dependencies:
+    "@markuplint/ml-ast" "2.0.1-dev.20220307.0"
+    "@markuplint/types" "2.2.0"
+    tslib "^2.3.1"
+    uuid "^8.3.2"
+
 "@markuplint/rules@2.4.2":
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/@markuplint/rules/-/rules-2.4.2.tgz#fb665b31135b08dc5b1e0b6eec3c470f61a744a4"
@@ -1172,14 +1192,25 @@
     leven "3"
     whatwg-mimetype "2"
 
-"@markuplint/vue-parser@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-2.3.1.tgz#2415a85f7351612ad647c30e0e7db42bfad4a51c"
-  integrity sha512-t1pINE1jzxatdscLJ4gOgbdOr9WB/MYdSr80E2BbwreRC8cYpJKT61vyfOmprBmnJSmssduxOUNi5YtkaiN5ig==
+"@markuplint/types@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/types/-/types-2.2.0.tgz#0e467df6b7ac77c8efcc4961091286186a997906"
+  integrity sha512-xz0PbKSsPlz+GENUgml8nf7AeIathrqhziULQgRo0c/K++LNGxe5WwRsKtVmQXUIyFrPCM1Hw+XWV4nJB5FLYw==
   dependencies:
-    "@markuplint/html-parser" "2.2.1"
+    bcp-47 "1"
+    css-tree "1"
+    debug "^4.3.4"
+    leven "3"
+    whatwg-mimetype "2"
+
+"@markuplint/vue-parser@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-2.3.2.tgz#386af46a93d0d9590029dbd03e1493497d868e77"
+  integrity sha512-9c4GetUNLE/q4d2G2jGwkoVSTAr8iM4om/cpGs2rjKRdczTgIADeTzjx2a88wEkWlBlVojdovR7t532mufomPA==
+  dependencies:
+    "@markuplint/html-parser" "2.2.2"
     "@markuplint/ml-ast" "2.0.1-dev.20220307.0"
-    "@markuplint/parser-utils" "2.2.0"
+    "@markuplint/parser-utils" "2.2.1"
     tslib "^2.3.1"
     vue-eslint-parser "^8.3.0"
 
