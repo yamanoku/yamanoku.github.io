@@ -13,7 +13,7 @@
     "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "7.2.2",
+    "@nuxtjs/i18n": "7.2.3",
     "dayjs": "1.11.4",
     "js-yaml-loader": "1.2.2",
     "modern-normalize": "1.1.0",
