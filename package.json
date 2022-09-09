@@ -33,7 +33,7 @@
     "gh-pages": "4.0.0",
     "markuplint": "2.10.1",
     "prettier": "2.7.1",
-    "vue-eslint-parser": "9.0.3"
+    "vue-eslint-parser": "9.1.0"
   },
   "workspaces": [
     "packages/*"
