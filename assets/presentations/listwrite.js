@@ -42,11 +42,5 @@ export const listWrite = [
     url: "https://engineer.crowdworks.jp/entry/using-markuplint",
     datetime: "2021-10-07T13:00:00.000Z",
     isExternal: true
-  },
-  {
-    title: "生まれ変わったログインページにまつわるフロントエンド開発の話",
-    url: "https://engineer.crowdworks.jp/entry/renewal-login",
-    datetime: "2021-08-18T18:00:00.000Z",
-    isExternal: true
   }
 ];
