@@ -38,11 +38,6 @@ export default {
           title: "Facebook",
           url: "https://facebook.com/okutooyama",
           isExternal: true
-        },
-        {
-          title: "Tumblr",
-          url: "https://yamanoku.tumblr.com",
-          isExternal: true
         }
       ]
     };
