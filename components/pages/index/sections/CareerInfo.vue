@@ -8,6 +8,12 @@
     <p>{{ $t("career.desc01") }}</p>
     <p>{{ $t("career.desc02") }}</p>
     <p>{{ $t("career.desc03") }}</p>
+    <p>{{ $t("career.desc04") }}</p>
+    <h3 id="job_heading">{{ $t("heading.job") }}</h3>
+    <global-list-component
+      aria-labelledby="job_heading"
+      :list-array="jobListItem"
+    />
     <global-heading-component
       id="related:career-heading"
       :heading-level="3"
@@ -25,17 +31,20 @@ export default {
   name: "IndexSectionsCareerInfo",
   data() {
     return {
+      jobListItem: [
+        {
+          title: this.$t("jobs.frontendDesigner")
+        },
+        {
+          title: this.$t("jobs.uiDesigner")
+        }
+      ],
       careerListItem: [
         {
           title: this.$t("career.curriculumVitae"),
           url: "https://github.com/yamanoku/Curriculum-Vitae/blob/main/README.md",
           isExternal: true,
           isGitHubLink: true
-        },
-        {
-          title: this.$t("career.experiencedSkills"),
-          url: "https://scrapbox.io/yamanoku/%E7%B5%8C%E9%A8%93%E3%81%AE%E3%81%82%E3%82%8B%E6%8A%80%E8%A1%93",
-          isExternal: true
         },
         {
           title: this.$t("career.wantedly"),
