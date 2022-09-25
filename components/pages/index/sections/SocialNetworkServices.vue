@@ -35,6 +35,11 @@ export default {
           isExternal: true
         },
         {
+          title: "Zenn",
+          url: "https://zenn.dev/yamanoku",
+          isExternal: true
+        },
+        {
           title: "Facebook",
           url: "https://facebook.com/okutooyama",
           isExternal: true
