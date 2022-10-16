@@ -36,11 +36,5 @@ export const listWrite = [
     url: "https://qiita.com/yamanoku/items/29a74ebf3d74b3017581",
     datetime: "2021-12-01T07:00:00.000Z",
     isExternal: true
-  },
-  {
-    title: "markuplintをプロダクトに導入してみた",
-    url: "https://engineer.crowdworks.jp/entry/using-markuplint",
-    datetime: "2021-10-07T13:00:00.000Z",
-    isExternal: true
   }
 ];
