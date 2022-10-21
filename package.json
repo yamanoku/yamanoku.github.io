@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/i18n": "7.3.0",
-    "dayjs": "1.11.5",
+    "dayjs": "1.11.6",
     "js-yaml-loader": "1.2.2",
     "modern-normalize": "1.1.0",
     "nuxt": "2.15.8",
