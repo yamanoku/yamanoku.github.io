@@ -4,7 +4,6 @@
     <index-sections-basic-info />
     <index-sections-career-info />
     <index-sections-open-source-activity />
-    <index-sections-products />
     <index-sections-presentations />
     <index-sections-social-network-services />
     <index-sections-address />
