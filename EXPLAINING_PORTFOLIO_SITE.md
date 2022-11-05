@@ -5,7 +5,6 @@
 ### Technology stack
 - Nuxt.js
   - nuxt-i18n
-- dayjs
 - eslint
   - eslint-plugin-prettier
   - eslint-plugin-vue
