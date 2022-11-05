@@ -5,7 +5,6 @@
 ### 利用技術
 - Nuxt.js
   - nuxt-i18n
-- dayjs
 - eslint
   - eslint-plugin-prettier
   - eslint-plugin-vue
