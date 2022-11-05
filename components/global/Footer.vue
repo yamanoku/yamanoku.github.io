@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import dayjs from "dayjs";
+const today = new Date();
 
 export default {
   name: "GlobalFooter",
   data() {
     return {
-      currentYear: dayjs().year(),
+      currentYear: today.getFullYear(),
       sourceLink: {
         title: "yamanoku/yamanoku.github.io",
         url: "https://github.com/yamanoku/yamanoku.github.io/",
