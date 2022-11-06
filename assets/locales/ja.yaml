@@ -2,7 +2,26 @@ jobs:
   frontendDesigner: "フロントエンドデザイナー"
   uiDesigner: "UIデザイナー"
 info:
-  caption: "ネット上では、おおやまみちのく、yamanokuと名乗って活動しています。誕生日は1989年10月30日。秋田県能代市生まれ。性別は男性。現在千葉県流山市在住。一児（娘）の父と3匹の猫と1匹の犬の飼い主。"
+  realName:
+    key: "本名"
+  hundleName:
+    key: "ハンドルネーム"
+    value: "おおやまみちのく、yamanoku"
+  birthday:
+    key: "誕生日"
+    value: "1989年10月30日"
+  sex:
+    key: "性別"
+    value: "男性"
+  birthplace:
+    key: "出身"
+    value: "秋田県能代市"
+  location:
+    key: "所在"
+    value: "千葉県流山市"
+  family:
+    key: "家族構成"
+    value: "妻、娘、猫（3匹）、大型犬（1頭）"
 career:
   wantedly: "Wantedly"
   lapras: "LAPRAS"

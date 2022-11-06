@@ -75,14 +75,14 @@ html {
 html[lang="ja"] {
   font-kerning: none;
 }
+body {
+  margin: 0;
+}
 html:not([lang="ja"]) body {
   hyphens: auto;
 }
 html[lang="ja"] body {
   line-break: loose;
-}
-body {
-  margin: 0;
 }
 a {
   color: var(--y-link-color);
@@ -208,6 +208,17 @@ ul:not([class]) li::before {
   margin: 9px 0 0;
   position: absolute;
   left: 0;
+}
+dl {
+  margin: var(--y-rhythm-3) 0;
+  line-height: 1;
+}
+dt, dd {
+  line-height: var(--y-rhythm-3);
+  font-size: 1rem;
+}
+dd {
+  margin-left: var(--y-rhythm-4);
 }
 details > summary {
   margin: var(--y-rhythm-3) 0;
