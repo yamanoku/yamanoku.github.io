@@ -55,7 +55,7 @@ html {
   background-color: var(--y-body-background);
   color: var(--y-body-text-color);
   font: inherit;
-  font-size: 100%;
+  font-size: 125%;
   line-height: var(--y-rhythm-3);
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
