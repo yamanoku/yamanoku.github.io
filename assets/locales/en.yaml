@@ -2,7 +2,26 @@ jobs:
   frontendDesigner: "FrontEnd Designer"
   uiDesigner: "UI Designer"
 info:
-  caption: "I'm active on the Internet under the name of Oyama-Michinoku, yamanoku. My birthday is October 30, 1989. I was born in Noshiro City, Akita Prefecture. I'm male. Currently, I lives in Nagareyama City, Chiba Prefecture. One daughter's father and owner of three cats and one dog."
+  realName:
+    key: "Real name"
+  hundleName:
+    key: "Hundle name"
+    value: "Oyama Michinoku, yamanoku"
+  birthday:
+    key: "Birthday"
+    value: "October 30, 1989"
+  sex:
+    key: "Sex"
+    value: "Male"
+  birthplace:
+    key: "Birthplace"
+    value: "Noshiro, Akita"
+  location:
+    key: "Location"
+    value: "Nagareyama, Chiba"
+  family:
+    key: "Family Composition"
+    value: "Wife, daughter, 3 cats and a large dog"
 career:
   wantedly: "Wantedly"
   lapras: "LAPRAS"
