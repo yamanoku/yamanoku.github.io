@@ -75,14 +75,14 @@ html {
 html[lang="ja"] {
   font-kerning: none;
 }
+body {
+  margin: 0;
+}
 html:not([lang="ja"]) body {
   hyphens: auto;
 }
 html[lang="ja"] body {
   line-break: loose;
-}
-body {
-  margin: 0;
 }
 a {
   color: var(--y-link-color);
