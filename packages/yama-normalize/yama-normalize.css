@@ -209,6 +209,17 @@ ul:not([class]) li::before {
   position: absolute;
   left: 0;
 }
+dl {
+  margin: var(--y-rhythm-3) 0;
+  line-height: 1;
+}
+dt, dd {
+  line-height: var(--y-rhythm-3);
+  font-size: 1rem;
+}
+dd {
+  margin-left: var(--y-rhythm-4);
+}
 details > summary {
   margin: var(--y-rhythm-3) 0;
   cursor: pointer;
