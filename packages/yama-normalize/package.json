@@ -24,7 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "@yamanoku/stylelint-config": "0.0.7",
-    "stylelint": "14.14.1",
+    "stylelint": "14.15.0",
     "stylelint-config-recommended": "9.0.0"
   },
   "stylelint": {
