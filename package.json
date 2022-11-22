@@ -20,7 +20,7 @@
     "style-loader": "3.3.1"
   },
   "devDependencies": {
-    "@markuplint/vue-parser": "2.3.3",
+    "@markuplint/vue-parser": "2.3.4",
     "@markuplint/vue-spec": "2.1.1",
     "eslint": "8.28.0",
     "eslint-config-prettier": "8.5.0",
