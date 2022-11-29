@@ -1252,10 +1252,10 @@
     tslib "^2.3.1"
     uuid "^8.3.2"
 
-"@markuplint/rules@2.4.7":
-  version "2.4.7"
-  resolved "https://registry.yarnpkg.com/@markuplint/rules/-/rules-2.4.7.tgz#e0e82f068b105f8a9a8da0fa46fe7c14ba33f102"
-  integrity sha512-RvUqQUZB1Kwd4xuKcLR3UivWxaBHEWl4gjW1BolG6kKgM3lN0j05tG9bUt8YUvove/x83UG4sxh/ztSq2B0oKw==
+"@markuplint/rules@2.4.8":
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/@markuplint/rules/-/rules-2.4.8.tgz#11b1418b183a49be9c4ae735a6e90538b9b0fab1"
+  integrity sha512-zcZWalox5+GDOn0Jzrss7EShhIC9Bw3ckuobyB9AMIdozpINV92Lv6LXZc59RzbsHYsI9ZpujT3DrDoeTT0aIA==
   dependencies:
     "@markuplint/html-spec" "2.9.1"
     "@markuplint/ml-core" "2.3.6"
@@ -6101,10 +6101,10 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-markuplint@2.11.2:
-  version "2.11.2"
-  resolved "https://registry.yarnpkg.com/markuplint/-/markuplint-2.11.2.tgz#903a2663c81322d82a2defa072d3c38eaaceac7c"
-  integrity sha512-LaNBDQ1qlL7R4/v1XA439CxPC4v8U41MnwaheuxSf/aiysL3AQNreJtKa6fFR9j7IYMtzzIlAZUlP9yyQVGx6g==
+markuplint@2.11.3:
+  version "2.11.3"
+  resolved "https://registry.yarnpkg.com/markuplint/-/markuplint-2.11.3.tgz#7fb88fa322809eaad9e72c59f08b6e7fe6b9f702"
+  integrity sha512-IElbEBSgv1ucvmxBk5SraTnlNNbuYt7biJQ9+9NPoi4VsCH+HibXgPZhYn21Q5dBgyqbhMp2y015p+nu8g990A==
   dependencies:
     "@markuplint/create-rule-helper" "2.3.6"
     "@markuplint/file-resolver" "2.5.6"
@@ -6115,7 +6115,7 @@ markuplint@2.11.2:
     "@markuplint/ml-config" "2.1.0"
     "@markuplint/ml-core" "2.3.6"
     "@markuplint/ml-spec" "2.1.2"
-    "@markuplint/rules" "2.4.7"
+    "@markuplint/rules" "2.4.8"
     chokidar "^3.5.3"
     cli-color "^2.0.2"
     debug "^4.3.4"
