@@ -30,7 +30,7 @@
     "eslint-plugin-vue": "9.8.0",
     "eslint-plugin-vuejs-accessibility": "2.0.0",
     "gh-pages": "4.0.0",
-    "markuplint": "2.11.3",
+    "markuplint": "2.11.4",
     "prettier": "2.8.0",
     "vue-eslint-parser": "9.1.0"
   },
