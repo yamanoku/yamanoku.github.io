@@ -1194,6 +1194,16 @@
     parse5 "^6.0.1"
     tslib "^2.3.1"
 
+"@markuplint/html-parser@2.2.5":
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-2.2.5.tgz#8190b7c2b65771097454465c1ed79220b7bc1078"
+  integrity sha512-+veW/PNWEMOxnEKhjxGV0npWfxSN7goWPaFUvU+aNQxx/uLrUxMRqnTMmhUrx36waak4F4LkUwxLCP5AsxSDUg==
+  dependencies:
+    "@markuplint/ml-ast" "2.0.1"
+    "@markuplint/parser-utils" "2.2.4"
+    parse5 "^6.0.1"
+    tslib "^2.3.1"
+
 "@markuplint/html-spec@2.9.1":
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-2.9.1.tgz#82dc566872ec8f17d6b032c56894abba94c7b022"
@@ -1205,6 +1215,11 @@
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@markuplint/i18n/-/i18n-2.1.1.tgz#32b98135843fd1bfee091f019f439b2c88d55a7c"
   integrity sha512-F8L73ElN9XHATBJdUmyxZuPy/pYJcXyn9fguiq6vDWGPiBHjoiXjtMvvhtzajE9SaXH4gSvrJrWfS3jNqN9lAw==
+
+"@markuplint/ml-ast@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@markuplint/ml-ast/-/ml-ast-2.0.1.tgz#af5f1a20bd6fe94c9bd19525b033708b9cd5e673"
+  integrity sha512-YJId4sUegn+wrUs++o7qV3vUUHHd2ZbNLyGVprOkMQZRY8zuX9voJBbGF6Xo9qZxV8NR+bwOUXbC7M1SrBAz5w==
 
 "@markuplint/ml-ast@2.0.1-dev.20220307.0":
   version "2.0.1-dev.20220307.0"
@@ -1252,6 +1267,16 @@
     tslib "^2.3.1"
     uuid "^8.3.2"
 
+"@markuplint/parser-utils@2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-2.2.4.tgz#517c4c085d922774aab8c80363f66d33e0934dcd"
+  integrity sha512-ar1/74naxgXb7Tr6pRtIXCKU+MkMIwJChTiGv+bYekjhDpWl7+pgmJOodlHECHzKL/bl7VoM9LKoN+V3++SEGQ==
+  dependencies:
+    "@markuplint/ml-ast" "2.0.1"
+    "@markuplint/types" "2.2.2"
+    tslib "^2.3.1"
+    uuid "^8.3.2"
+
 "@markuplint/rules@2.4.8":
   version "2.4.8"
   resolved "https://registry.yarnpkg.com/@markuplint/rules/-/rules-2.4.8.tgz#11b1418b183a49be9c4ae735a6e90538b9b0fab1"
@@ -1276,14 +1301,25 @@
     leven "3"
     whatwg-mimetype "2"
 
-"@markuplint/vue-parser@2.3.4":
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-2.3.4.tgz#a658ec443eac3c6174683cb74307bad3d8668aa6"
-  integrity sha512-l9LJa+dq+78ToQVr8PX92kvbEaRA1jUkNvU6yumD7Lbh3H1ee8JtGtbm8/+sE+1WcG8TOKn9acMVx6fWtA2UsQ==
+"@markuplint/types@2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@markuplint/types/-/types-2.2.2.tgz#cbfc3a9d829260e6a5b6998e0418ddf582e57237"
+  integrity sha512-OHoH524XBVgN8FrJvg6b2NR5KwwAz37OV0FVFnMxv37IEnJC8DX20Kx+3IemgzgItLQNCsRpbagHit8zvBgmjA==
   dependencies:
-    "@markuplint/html-parser" "2.2.4"
-    "@markuplint/ml-ast" "2.0.1-dev.20220307.0"
-    "@markuplint/parser-utils" "2.2.3"
+    bcp-47 "1"
+    css-tree "1"
+    debug "^4.3.4"
+    leven "3"
+    whatwg-mimetype "2"
+
+"@markuplint/vue-parser@2.3.5":
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-2.3.5.tgz#11ff798496a42fb6ce2b5402a016f2c3aab1923a"
+  integrity sha512-3WKUxg41lH/mAc7ldLZPAX198R6DiDTIbRYENnxmQbXj2BhpiPjOti0KhwNpq7oj9A4JcJQp95OI1fZpJ/66/w==
+  dependencies:
+    "@markuplint/html-parser" "2.2.5"
+    "@markuplint/ml-ast" "2.0.1"
+    "@markuplint/parser-utils" "2.2.4"
     tslib "^2.3.1"
     vue-eslint-parser "^8.3.0"
 
