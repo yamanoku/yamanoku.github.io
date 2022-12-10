@@ -23,11 +23,5 @@ export const listStage = [
     url: "https://docs.google.com/presentation/d/e/2PACX-1vRP89QW6DxVdEND2IpKqnJag1YUw9P3rZLjQbDIJwWVtzndRNZPXHhm1765XN-i3btQ1Io0-xJeU6Gf/pub?start=false&loop=false&delayms=3000",
     datetime: "2022-01-19T20:05:00.000Z",
     isExternal: true
-  },
-  {
-    title: "アクセシブルなフロントエンド開発のこれまでとこれから",
-    url: "https://speakerdeck.com/yamanoku/the-past-and-future-of-accessible-front-end-development",
-    datetime: "2021-11-27T16:20:00.000Z",
-    isExternal: true
   }
 ];
