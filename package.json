@@ -20,8 +20,8 @@
     "style-loader": "3.3.1"
   },
   "devDependencies": {
-    "@markuplint/vue-parser": "2.3.5",
-    "@markuplint/vue-spec": "2.1.3",
+    "@markuplint/vue-parser": "3.0.0",
+    "@markuplint/vue-spec": "3.0.0",
     "eslint": "8.30.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-friendly-formatter": "4.0.1",
@@ -30,7 +30,7 @@
     "eslint-plugin-vue": "9.8.0",
     "eslint-plugin-vuejs-accessibility": "2.0.0",
     "gh-pages": "4.0.0",
-    "markuplint": "2.11.4",
+    "markuplint": "3.0.0",
     "prettier": "2.8.1",
     "vue-eslint-parser": "9.1.0"
   },

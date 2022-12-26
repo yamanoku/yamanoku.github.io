@@ -1,11 +1,17 @@
 {
   "rules": {
-    "permitted-contents": false,
-    "require-accessible-name": false
+    "no-hard-code-id": false
   },
-  "extends": ["markuplint:recommended"],
+  "extends": [
+    "markuplint:html-standard",
+    "markuplint:a11y",
+    "markuplint:recommended-vue"
+  ],
   "parser": {
     ".vue$": "@markuplint/vue-parser"
+  },
+  "parserOptions": {
+    "authoredElementName": ["nuxt"]
   },
   "specs": ["@markuplint/vue-spec"],
   "excludeFiles": ["./node_modules/**/*"]
