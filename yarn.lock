@@ -1305,10 +1305,10 @@
     tslib "^2.4.1"
     vue-eslint-parser "^9.1.0"
 
-"@markuplint/vue-spec@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/vue-spec/-/vue-spec-3.0.0.tgz#d682f36f66e80689145900a8256dd21ded0bfe92"
-  integrity sha512-ajNM6/tI5LBk3XqB4K2g58ponLr4JkgkyC4b3TEUw73802FJG3xO62zGIkijvEB9SqFtI5yBz9c+VyeuP1NkOw==
+"@markuplint/vue-spec@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@markuplint/vue-spec/-/vue-spec-3.0.1.tgz#26e94a2dc6d6e45b6f61519b9a49f2cd7c956141"
+  integrity sha512-+v04aQQSLWLjZz+0ENAF83TH2V8ggh7B/F975zYs0zbQeUfV2qFoVznnhL27MwoISyUKs4PEDKxI4xJf+ouXbw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
