@@ -9,8 +9,13 @@
       <dt>{{ this.$t("info.realName.key") }}</dt>
       <dd>
         <template v-if="this.$i18n.locale === 'ja'">
-          <ruby>大<rt>おお</rt>山<rt>やま</rt></ruby
-          ><ruby>奥<rt>おく</rt>人<rt>と</rt></ruby>
+          <ruby
+            >大<rp>(</rp><rt>おお</rt><rp>)</rp>山<rp>(</rp><rt>やま</rt
+            ><rp>)</rp></ruby
+          ><ruby
+            >奥<rp>(</rp><rt>おく</rt><rp>)</rp>人<rp>(</rp><rt>と</rt
+            ><rp>)</rp></ruby
+          >
         </template>
         <template v-else>Okuto Oyama</template>
       </dd>
