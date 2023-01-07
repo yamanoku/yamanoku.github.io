@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "dev:astro": "astro dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "lint": "yarn eslint && yarn markuplint",
