@@ -1,0 +1,190 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <BaseHead title="ホーム | yamanoku.net" description="大山奥人のポートフォリオサイト" />
+  </head>
+  <body>
+    <Header />
+    <main id="main">
+      <h1>yamanoku.net</h1>
+      <section id="basic" aria-labelledby="basic-heading">
+        <h2 id="basic-heading">基本情報</h2>
+        <dl>
+          <dt>本名</dt>
+          <dd>
+            <ruby>大<rp>(</rp><rt>おお</rt><rp>)</rp>山<rp>(</rp><rt>やま</rt><rp>)</rp></ruby><ruby>奥<rp>(</rp><rt>おく</rt><rp>)</rp>人<rp>(</rp><rt>と</rt><rp>)</rp></ruby>
+          </dd>
+          <dt>ハンドルネーム</dt>
+          <dd>おおやまみちのく、yamanoku</dd>
+          <dt>誕生日</dt>
+          <dd>1989年10月30日</dd>
+          <dt>性別</dt>
+          <dd>男性</dd>
+          <dt>出身</dt>
+          <dd>秋田県能代市</dd>
+          <dt>所在</dt>
+          <dd>千葉県流山市</dd>
+          <dt>家族構成</dt>
+          <dd>妻、娘、猫（3匹）、大型犬（1頭）</dd>
+        </dl>
+      </section>
+      <section id="career" aria-labelledby="career-heading">
+        <h2 id="career-heading">職歴</h2>
+        <p>自分のキャリアのスタートはWebデザイナーとしてで、エンジニアから始まったわけではありません。</p>
+        <p>これまでのキャリアの中でディレクション・デザイン・プログラミングをすべて担当する業務に就いた影響より、ブラウザ上のできること・できないことの根幹の理解をせず、ユーザにとって喜ばれる表現や機能提案は出来ないのだと思い、プログラミングに専任するためエンジニアとして転職しました。</p>
+        <p>最初はマークアップエンジニアとして業務を通じ基礎的なコーディングを取得し、jQuery、Ajax通信、タスクランナー、CSS設計、フレームワークの使用など徐々にフロントエンドエンジニアという領域にも踏み入れていきました。</p>
+        <p>事業会社に所属してからは、モノリシックなサーバーサイドアプリケーションでフロントエンド開発がしやすくなるような環境つくりや技術的な負債解消を行っています。UIデザイナーとしての側面では、Web技術を活用したUI設計・構築やアクセシビリティチェックの対応をしています。</p>
+        <h3 id="job_heading">職業</h3>
+        <ul aria-labelledby="job_heading">
+          <li>フロントエンドデザイナー</li>
+          <li>UIデザイナー</li>
+        </ul>
+        <h3 id="related:career-heading">関連リンク一覧</h3>
+        <ul aria-labelledby="related:career-heading">
+          <li>
+            <a href="https://github.com/yamanoku/Curriculum-Vitae/blob/main/README.md" target="_blank" rel="noopener">
+              職務経歴書
+            </a>
+          </li>
+          <li>
+            <a href="https://www.wantedly.com/id/okutooyama" target="_blank" rel="noopener">
+              Wantedly
+            </a>
+          </li>
+          <li>
+            <a href="https://lapras.com/public/ZQJMZYO" target="_blank" rel="noopener">
+              LAPRAS
+            </a>
+          </li>
+          <li>
+            <a href="https://youtrust.jp/users/57ea573ffca186c3b339f1739915f40b" target="_blank" rel="noopener">
+              YOUTRUST
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section id="open-source-activity" aria-labelledby="open-source-activity_heading">
+        <h2 id="open-source-activity_heading">オープンソース活動</h2>
+        <p>企業に所属して働く傍ら、余暇時間を使って2020年よりオープンソースへのコントリビュート活動をしています。ドキュメントの翻訳やアクセシビリティ改善提案や修正対応、その他軽微な修正などを行っています。</p>
+        <ul>
+          <li>
+            <a href="https://www.notion.so/yamanoku/2021-2c4fa51b832645f494698ebd11e069f9" target="_blank" rel="noopener">
+              オープンソース活動記録 2021年
+            </a>
+          </li>
+        </ul>
+        <article id="donate" aria-labelledby="donate_heading" class="donate">
+          <div>
+            <em id="donate_heading">寄付・支援</em>
+          </div>
+          <p>もし私の制作物や発表、活動に興味をもっていただけた場合以下より支援することができます。</p>
+          <ul>
+            <li>
+              <a href="https://github.com/sponsors/yamanoku" target="_blank" rel="noopener">
+                GitHub Sponsors
+              </a>
+            </li>
+            <li>
+              <a href="https://buy.stripe.com/00gaEY1Eh5bE7VC8ww" target="_blank" rel="noopener">
+                Stripe Payment Links
+              </a>
+            </li>
+            <li>
+              <a href="https://buymeacoffee.com/yamanoku" target="_blank" rel="noopener">
+                Buy me a coffee
+              </a>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section id="presentations" aria-labelledby="presentations_heading">
+        <h2 id="presentations_heading">発表一覧</h2>
+        <h3 id="presentations-stage">登壇</h3>
+        <ul>
+          <li>
+            <span class="time">2022/10/16</span> - <a href="https://speakerdeck.com/yamanoku/to-make-accessible-components-in-vuejs" target="_blank" rel="noopener">Vue.js でアクセシブルなコンポーネントをつくるために</a>
+          </li>
+          <li>
+            <span class="time">2022/08/30</span> - <a href="https://scrapbox.io/yamanoku/Storybook_%E3%81%A7%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E9%96%8B%E7%99%BA%E3%81%AE%E6%B2%BB%E5%AE%89%E3%82%92%E8%89%AF%E3%81%8F%E3%81%97%E3%81%A6%E3%81%84%E3%81%8F%E8%A9%B1" target="_blank" rel="noopener">Storybook でフロントエンド開発の治安を良くしていく話</a>
+          </li>
+          <li>
+            <span class="time">2022/05/19</span> - <a href="https://docs.google.com/presentation/d/e/2PACX-1vQct0iDIdaywmCjhbf49BKd5DMXLEtFlZbFs6cLfUmAfp1HVzO2jVIrym5bEmlpaIrnPxbj-pVggmeW/pub?slide=id.p1" target="_blank" rel="noopener">クラウドワークスのこれまでの取り組み、新たなミッションと考えるこれからについて</a>
+          </li>
+          <li>
+            <span class="time">2022/01/19</span> - <a href="https://docs.google.com/presentation/d/e/2PACX-1vRP89QW6DxVdEND2IpKqnJag1YUw9P3rZLjQbDIJwWVtzndRNZPXHhm1765XN-i3btQ1Io0-xJeU6Gf/pub?start=false&amp;loop=false&amp;delayms=3000" target="_blank" rel="noopener">PWA Night vol.35 yamanoku 登壇資料</a>
+          </li>
+        </ul>
+        <h3 id="presentations-write">執筆</h3>
+        <ul>
+          <li>
+            <span class="time">2022/12/13</span> - <a href="https://engineer.crowdworks.jp/entry/thanks_webpacker_goodbye_webpacker" target="_blank" rel="noopener">ありがとう Webpacker さようなら Webpacker</a>
+          </li>
+          <li>
+            <span class="time">2022/12/12</span> - <a href="https://zenn.dev/yamanoku/scraps/afe08c2634034c" target="_blank" rel="noopener">クラウドワークス #accessibility チャンネル 気になる話題 Pickup 2022</a>
+          </li>
+          <li>
+            <span class="time">2022/12/01</span> - <a href="https://engineer.crowdworks.jp/entry/crowdworks_frontend_2022" target="_blank" rel="noopener">crowdworks.jp のフロントエンド活動を振り返る 2022</a>
+          </li>
+          <li>
+            <span class="time">2022/10/25</span> - <a href="https://engineer.crowdworks.jp/entry/report-vue-fes-japan-online-2022" target="_blank" rel="noopener">Vue Fes Japan Online 2022 参加レポート</a>
+          </li>
+          <li>
+            <span class="time">2022/04/19</span> - <a href="https://engineer.crowdworks.jp/entry/html-anatomische-tabell" target="_blank" rel="noopener">「HTML解体新書」HTMLのこれからと向き合うための本</a>
+          </li>
+          <li>
+            <span class="time">2022/03/02</span> - <a href="https://engineer.crowdworks.jp/entry/migrate-vue3" target="_blank" rel="noopener">Vue 2 からVue 3 に移行完了しました！</a>
+          </li>
+          <li>
+            <span class="time">2021/12/30</span> - <a href="https://zenn.dev/yamanoku/articles/bd8d86ee79459b" target="_blank" rel="noopener">2021年オープンソースコントリビュート活動振り返り</a>
+          </li>
+        </ul>
+        <p>1年以上前のコンテンツをお探しの場合、<a href="https://archives.yamanoku.net" target="_blank" rel="noopener">アーカイブ</a>を参照してください。</p>
+      </section>
+      <section id="social-network-services" aria-labelledby="social-network-services_heading">
+        <h2 id="social-network-services_heading">ソーシャルサービス</h2>
+        <ul>
+          <li>
+            <a href="https://twitter.com/okuto_oyama" target="_blank" rel="noopener">Twitter</a>
+          </li>
+          <li>
+            <a href="https://github.com/yamanoku" target="_blank" rel="noopener">GitHub</a>
+          </li>
+          <li>
+            <a href="https://scrapbox.io/yamanoku/" target="_blank" rel="noopener">Scrapbox</a>
+          </li>
+          <li>
+            <a href="https://zenn.dev/yamanoku" target="_blank" rel="noopener">Zenn</a>
+          </li>
+          <li>
+            <a href="https://facebook.com/okutooyama" target="_blank" rel="noopener">Facebook</a>
+          </li>
+        </ul>
+      </section>
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">連絡先</h2>
+        <address>
+          <a href="mailto:0910yama@gmail.com">0910yama@gmail.com</a>
+        </address>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .donate {
+    border: 1px solid var(--y-arcticle-border-color);
+    padding-top: var(--y-rhythm-3);
+    padding-left: var(--y-rhythm-3);
+    padding-right: var(--y-rhythm-3);
+  }
+  .donate::before {
+    display: none;
+  }
+</style>
