@@ -1,32 +1,32 @@
 ---
 import ExternalLinkIcon from '../svg-icons/ExternalLinkIcon.astro'
 import GithubIcon from '../svg-icons/GithubIcon.astro'
-const langCodeMatch = Astro.url.pathname.replace(/(\\|\/)/g,'');
-const curriculumVitae = langCodeMatch === 'en' ? 'Curriculum Vitae' : '職務経歴書';
+import { useTranslations } from '../../i18n/util';
+const t = useTranslations(Astro);
 ---
 
 <ul>
   <li>
     <a href="https://github.com/yamanoku/Curriculum-Vitae/blob/main/README.md" target="_blank" rel="noopener">
-      {curriculumVitae}
+      {t("carrer.links.curriculum-vitae")}
       <GithubIcon />
     </a>
   </li>
   <li>
     <a href="https://www.wantedly.com/id/okutooyama" target="_blank" rel="noopener">
-      Wantedly
+      {t("carrer.links.wantedly")}
       <ExternalLinkIcon />
     </a>
   </li>
   <li>
     <a href="https://lapras.com/public/ZQJMZYO" target="_blank" rel="noopener">
-      LAPRAS
+      {t("carrer.links.lapras")}
       <ExternalLinkIcon />
     </a>
   </li>
   <li>
     <a href="https://youtrust.jp/users/57ea573ffca186c3b339f1739915f40b" target="_blank" rel="noopener">
-      YOUTRUST
+      {t("carrer.links.youtrust")}
       <ExternalLinkIcon />
     </a>
   </li>

@@ -8,87 +8,90 @@ import PresentationsStageList from '../components/list-contents/PresentationsSta
 import PresentationsWriteList from '../components/list-contents/PresentationsWriteList.astro'
 import SocialServiceList from '../components/list-contents/SocialServiceList.astro'
 import ExternalLinkIcon from '../components/svg-icons/ExternalLinkIcon.astro'
-import GithubIcon from '../components/svg-icons/GithubIcon.astro'
 import MailIcon from '../components/svg-icons/MailIcon.astro'
+
+import { useTranslations, getLanguageFromURL } from '../i18n/util';
+const lang = getLanguageFromURL(Astro.url.pathname);
+const t = useTranslations(Astro);
 ---
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang={lang}>
   <head>
-    <BaseHead title="ホーム | yamanoku.net" description="大山奥人のポートフォリオサイト" />
+    <BaseHead />
   </head>
   <body>
     <Header />
     <main id="main">
       <h1>yamanoku.net</h1>
       <section id="basic" aria-labelledby="basic-heading">
-        <h2 id="basic-heading">基本情報</h2>
+        <h2 id="basic-heading">{t("heading.basic")}</h2>
         <dl>
-          <dt>本名</dt>
+          <dt>{t("info.real-name")}</dt>
           <dd>
             <ruby>大<rp>(</rp><rt>おお</rt><rp>)</rp>山<rp>(</rp><rt>やま</rt><rp>)</rp></ruby><ruby>奥<rp>(</rp><rt>おく</rt><rp>)</rp>人<rp>(</rp><rt>と</rt><rp>)</rp></ruby>
           </dd>
-          <dt>ハンドルネーム</dt>
+          <dt>{t("info.hundle-name")}</dt>
           <dd>おおやまみちのく、yamanoku</dd>
-          <dt>誕生日</dt>
+          <dt>{t("info.birthday")}</dt>
           <dd>1989年10月30日</dd>
-          <dt>性別</dt>
+          <dt>{t("info.sex")}</dt>
           <dd>男性</dd>
-          <dt>出身</dt>
+          <dt>{t("info.birthplace")}</dt>
           <dd>秋田県能代市</dd>
-          <dt>所在</dt>
+          <dt>{t("info.location")}</dt>
           <dd>千葉県流山市</dd>
-          <dt>家族構成</dt>
+          <dt>{t("info.family")}</dt>
           <dd>妻、娘、猫（3匹）、大型犬（1頭）</dd>
         </dl>
       </section>
       <section id="career" aria-labelledby="career-heading">
-        <h2 id="career-heading">職歴</h2>
+        <h2 id="career-heading">{t("heading.career")}</h2>
         <p>自分のキャリアのスタートはWebデザイナーとしてで、エンジニアから始まったわけではありません。</p>
         <p>これまでのキャリアの中でディレクション・デザイン・プログラミングをすべて担当する業務に就いた影響より、ブラウザ上のできること・できないことの根幹の理解をせず、ユーザにとって喜ばれる表現や機能提案は出来ないのだと思い、プログラミングに専任するためエンジニアとして転職しました。</p>
         <p>最初はマークアップエンジニアとして業務を通じ基礎的なコーディングを取得し、jQuery、Ajax通信、タスクランナー、CSS設計、フレームワークの使用など徐々にフロントエンドエンジニアという領域にも踏み入れていきました。</p>
         <p>事業会社に所属してからは、モノリシックなサーバーサイドアプリケーションでフロントエンド開発がしやすくなるような環境つくりや技術的な負債解消を行っています。UIデザイナーとしての側面では、Web技術を活用したUI設計・構築やアクセシビリティチェックの対応をしています。</p>
-        <h3 id="job_heading">職業</h3>
-        <ul aria-labelledby="job_heading">
-          <li>フロントエンドデザイナー</li>
-          <li>UIデザイナー</li>
+        <h3 id="job_heading">{t("heading.jobs")}</h3>
+        <ul>
+          <li>{t("career.jobs.frontend-designer")}</li>
+          <li>{t("career.jobs.ui-designer")}</li>
         </ul>
-        <h3>関連リンク一覧</h3>
+        <h3>{t("heading.related-list")}</h3>
         <CareerLinkList />
       </section>
       <section id="open-source-activity" aria-labelledby="open-source-activity_heading">
-        <h2 id="open-source-activity_heading">オープンソース活動</h2>
-        <p>企業に所属して働く傍ら、余暇時間を使って2020年よりオープンソースへのコントリビュート活動をしています。ドキュメントの翻訳やアクセシビリティ改善提案や修正対応、その他軽微な修正などを行っています。</p>
+        <h2 id="open-source-activity_heading">{t('heading.open-source-activity')}</h2>
+        <p>{t('open-source-activity.descripion')}</p>
         <ul>
           <li>
             <a href="https://www.notion.so/yamanoku/2021-2c4fa51b832645f494698ebd11e069f9" target="_blank" rel="noopener">
-              オープンソース活動記録 2021年
+              {t("open-source-activity.link-2021")}
               <ExternalLinkIcon />
             </a>
           </li>
         </ul>
         <article id="donate" aria-labelledby="donate_heading" class="donate">
           <div>
-            <em id="donate_heading">寄付・支援</em>
+            <em id="donate_heading">{t("heading.donate")}</em>
           </div>
-          <p>もし私の制作物や発表、活動に興味をもっていただけた場合以下より支援することができます。</p>
+          <p>{t("donate.description")}</p>
           <DonateServiceList />
         </article>
       </section>
       <section id="presentations" aria-labelledby="presentations_heading">
-        <h2 id="presentations_heading">発表一覧</h2>
-        <h3 id="presentations-stage">登壇</h3>
+        <h2 id="presentations_heading">{t("heading.presentations.title")}</h2>
+        <h3 id="presentations-stage">{t("heading.presentations.stage")}</h3>
         <PresentationsStageList />
-        <h3 id="presentations-write">執筆</h3>
+        <h3 id="presentations-write">{t("heading.presentations.write")}</h3>
         <PresentationsWriteList />
         <p>1年以上前のコンテンツをお探しの場合、<a href="https://archives.yamanoku.net" target="_blank" rel="noopener">アーカイブ<ExternalLinkIcon /></a>を参照してください。</p>
       </section>
       <section id="social-network-services" aria-labelledby="social-network-services_heading">
-        <h2 id="social-network-services_heading">ソーシャルサービス</h2>
+        <h2 id="social-network-services_heading">{t("heading.sns")}</h2>
         <SocialServiceList />
       </section>
       <section id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">連絡先</h2>
+        <h2 id="contact-heading">{t("heading.contact")}</h2>
         <address>
           <a href="mailto:0910yama@gmail.com">
             0910yama@gmail.com
