@@ -1,6 +1,6 @@
 ---
 import ExternalLinkIcon from '../svg-icons/ExternalLinkIcon.astro';
-import GitHubIcon from '../svg-icons/GithubIcon.astro';
+import GithubIcon from '../svg-icons/GithubIcon.astro';
 import type { LinkItem } from './GlobalTypes'
 
 interface Props {
@@ -16,5 +16,5 @@ const { link } = Astro.props;
   rel={link.isExternal ? 'noopener': undefined}
 >
   {link.title}
-  {link.isGitHubLink ? <GitHubIcon /> : link.isExternal ? <ExternalLinkIcon /> : ''}
+  {link.isGitHubLink ? <GithubIcon /> : link.isExternal ? <ExternalLinkIcon /> : ''}
 </a>

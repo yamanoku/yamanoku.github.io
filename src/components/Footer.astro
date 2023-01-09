@@ -1,5 +1,5 @@
 ---
-import GithubIcon from './svg-icons/GithubIcon.astro'
+import GlobalLinkComponent from './global/GlobalLinkComponent.astro';
 const today = new Date()
 ---
 
@@ -7,13 +7,13 @@ const today = new Date()
   <p>&copy; Copyright {today.getFullYear()}, Okuto Oyama</p>
   <p>
     Source :
-    <a
-      href="https://github.com/yamanoku/yamanoku.github.io/"
-      target="_blank"
-      rel="noopener">
-      yamanoku/yamanoku.github.io
-      <GithubIcon />
-    </a>
+    <GlobalLinkComponent link={
+      {
+        title: "yamanoku/yamanoku.github.io",
+        url: "https://github.com/yamanoku/yamanoku.github.io/",
+        isGitHubLink: true
+      }
+    } />
   </p>
 </footer>
 <style>
