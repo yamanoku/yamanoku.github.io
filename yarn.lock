@@ -1199,6 +1199,16 @@
     parse5 "7.1.2"
     tslib "^2.4.1"
 
+"@markuplint/html-parser@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/html-parser/-/html-parser-3.1.0.tgz#42a45b17d2dbc43201957284219994e2bf8d8be6"
+  integrity sha512-aW8ascbCOYSyVWxwAfzEfykdbIZ/jS0s9IhFsm/qHbdduK8h1QctsSQVJBKWW5zhfJeSjqZ7DR6i9hsVJ1/8DQ==
+  dependencies:
+    "@markuplint/ml-ast" "3.0.0-rc.5"
+    "@markuplint/parser-utils" "3.1.0"
+    parse5 "7.1.2"
+    tslib "^2.4.1"
+
 "@markuplint/html-spec@3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@markuplint/html-spec/-/html-spec-3.0.1.tgz#607b46335d7c9e737bed51cb47b5f9a4733ba55f"
@@ -1260,6 +1270,16 @@
     tslib "^2.4.1"
     uuid "^9.0.0"
 
+"@markuplint/parser-utils@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/parser-utils/-/parser-utils-3.1.0.tgz#745cc54d08d6d005f54f3b73769296389a79fb46"
+  integrity sha512-iZyvUUYpbCy/XxaPmPrkPTqWlvLYqEZQzJTJt7ch7m+OIiVBJ2pBkpQGuWWgfZKAnG7iZmO4BMCkW1oXADINAA==
+  dependencies:
+    "@markuplint/ml-ast" "3.0.0-rc.5"
+    "@markuplint/types" "3.0.0"
+    tslib "^2.4.1"
+    uuid "^9.0.0"
+
 "@markuplint/rules@3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@markuplint/rules/-/rules-3.0.1.tgz#f7e06c30225cabe385e946d718486a10c90cd980"
@@ -1294,14 +1314,14 @@
     leven "3"
     whatwg-mimetype "2"
 
-"@markuplint/vue-parser@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-3.0.0.tgz#ab7006b48a6a2aca2830edb343ece91639374605"
-  integrity sha512-n12ML624Bqrtz8zhZ0JpZ8tyh8zxbCLK9tuNibZJHbKWD+5g72p09EfqvEHTKrzYI6TAZlzBtY8KQn6rQM13EA==
+"@markuplint/vue-parser@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@markuplint/vue-parser/-/vue-parser-3.1.0.tgz#2e3915da850bdee963c4f0776a21fcf70d0b2566"
+  integrity sha512-uM7LqzVMeHqxgv8Yqg5nOiN522FyO9K6HLQbprR+ddjNG+vMYpXdT0iA4DA9fGKNUjrf39W3iMfHYxZwD3y2bA==
   dependencies:
-    "@markuplint/html-parser" "3.0.0"
+    "@markuplint/html-parser" "3.1.0"
     "@markuplint/ml-ast" "3.0.0-rc.5"
-    "@markuplint/parser-utils" "3.0.0"
+    "@markuplint/parser-utils" "3.1.0"
     tslib "^2.4.1"
     vue-eslint-parser "^9.1.0"
 
