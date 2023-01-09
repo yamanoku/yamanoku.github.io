@@ -34,14 +34,16 @@ export default {
   "career.links.youtrust": "YOUTRUST",
 
   // オープンソース活動
-  "open-source-activity.descripion": "企業に所属して働く傍ら、余暇時間を使って2020年よりオープンソースへのコントリビュート活動をしています。ドキュメントの翻訳やアクセシビリティ改善提案や修正対応、その他軽微な修正などを行っています。",
+  "open-source-activity.descripion":
+    "企業に所属して働く傍ら、余暇時間を使って2020年よりオープンソースへのコントリビュート活動をしています。ドキュメントの翻訳やアクセシビリティ改善提案や修正対応、その他軽微な修正などを行っています。",
   "open-source-activity.link-2021": "オープンソース活動記録 2021年",
 
   // 寄付・支援
-  "donate.description": "もし私の制作物や発表、活動に興味をもっていただけた場合以下より支援することができます。",
+  "donate.description":
+    "もし私の制作物や発表、活動に興味をもっていただけた場合以下より支援することができます。",
 
   // アイコン
   "icon-title.github": "GitHub に移動する",
   "icon-title.mail": "メールアプリを立ち上げる",
-  "icon-title.external-link": "外部サイトに移動する",
+  "icon-title.external-link": "外部サイトに移動する"
 };

@@ -1,4 +1,4 @@
-import { Dictionary } from '../translation-checkers';
+import { Dictionary } from "../translation-checkers";
 
 export default Dictionary({
   // meta infomation
@@ -36,14 +36,16 @@ export default Dictionary({
   "career.links.youtrust": "YOUTRUST",
 
   // open source activity
-  "open-source-activity.descripion": "In addition to working for a company, I have been contributing to open source since 2020 in my spare time. I translate documents, propose accessibility improvements, respond to fixes, and make other minor corrections.",
+  "open-source-activity.descripion":
+    "In addition to working for a company, I have been contributing to open source since 2020 in my spare time. I translate documents, propose accessibility improvements, respond to fixes, and make other minor corrections.",
   "open-source-activity.link-2021": "Open Source Activity Log 2021",
 
   // donate
-  "donate.description": "If you are interested in my work, presentations and activities, you can donate me by.",
+  "donate.description":
+    "If you are interested in my work, presentations and activities, you can donate me by.",
 
   // icon
   "icon-title.github": "Go to GitHub",
   "icon-title.mail": "Launch the Mail application",
-  "icon-title.external-link": "Go to external site",
+  "icon-title.external-link": "Go to external site"
 });
