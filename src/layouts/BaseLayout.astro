@@ -1,0 +1,20 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+import { getLanguageFromURL } from '../i18n/util';
+const lang = getLanguageFromURL(Astro.url.pathname);
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <BaseHead />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
