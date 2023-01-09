@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
+import GlobalHeader from '../components/global/GlobalHeader.astro'
+import GlobalFooter from '../components/global/GlobalFooter.astro'
 
 import { getLanguageFromURL } from '../i18n/util';
 const lang = getLanguageFromURL(Astro.url.pathname);
@@ -13,8 +13,8 @@ const lang = getLanguageFromURL(Astro.url.pathname);
     <BaseHead />
   </head>
   <body>
-    <Header />
+    <GlobalHeader />
     <slot />
-    <Footer />
+    <GlobalFooter />
   </body>
 </html>
