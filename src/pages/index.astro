@@ -2,17 +2,16 @@
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
-import CareerLinkList from '../components/list-contents/CareerLinkList.astro'
-import DonateServiceList from '../components/list-contents/DonateServiceList.astro'
-import PresentationsStageList from '../components/list-contents/PresentationsStageList.astro'
-import PresentationsWriteList from '../components/list-contents/PresentationsWriteList.astro'
-import SocialServiceList from '../components/list-contents/SocialServiceList.astro'
 import ExternalLinkIcon from '../components/svg-icons/ExternalLinkIcon.astro'
-import MailIcon from '../components/svg-icons/MailIcon.astro'
+import BasicInfoSection from '../components/index/sections/BasicInfoSection.astro'
+import CareerInfoSection from '../components/index/sections/CareerInfoSection.astro'
+import OpenSourceActivitySection from '../components/index/sections/OpenSourceActivitySection.astro'
+import PresentationsSection from '../components/index/sections/PresentationsSection.astro'
+import SocialNetworkServicesSection from '../components/index/sections/SocialNetworkServicesSection.astro'
+import AddressSection from '../components/index/sections/AddressSection.astro'
 
-import { useTranslations, getLanguageFromURL } from '../i18n/util';
+import { getLanguageFromURL } from '../i18n/util';
 const lang = getLanguageFromURL(Astro.url.pathname);
-const t = useTranslations(Astro);
 ---
 
 <!DOCTYPE html>
@@ -24,94 +23,30 @@ const t = useTranslations(Astro);
     <Header />
     <main id="main">
       <h1>yamanoku.net</h1>
-      <section id="basic" aria-labelledby="basic-heading">
-        <h2 id="basic-heading">{t("heading.basic")}</h2>
-        <dl>
-          <dt>{t("info.real-name")}</dt>
-          <dd>
-            <ruby>大<rp>(</rp><rt>おお</rt><rp>)</rp>山<rp>(</rp><rt>やま</rt><rp>)</rp></ruby><ruby>奥<rp>(</rp><rt>おく</rt><rp>)</rp>人<rp>(</rp><rt>と</rt><rp>)</rp></ruby>
-          </dd>
-          <dt>{t("info.hundle-name")}</dt>
-          <dd>おおやまみちのく、yamanoku</dd>
-          <dt>{t("info.birthday")}</dt>
-          <dd>1989年10月30日</dd>
-          <dt>{t("info.sex")}</dt>
-          <dd>男性</dd>
-          <dt>{t("info.birthplace")}</dt>
-          <dd>秋田県能代市</dd>
-          <dt>{t("info.location")}</dt>
-          <dd>千葉県流山市</dd>
-          <dt>{t("info.family")}</dt>
-          <dd>妻、娘、猫（3匹）、大型犬（1頭）</dd>
-        </dl>
-      </section>
-      <section id="career" aria-labelledby="career-heading">
-        <h2 id="career-heading">{t("heading.career")}</h2>
+      <BasicInfoSection>
+        <dd slot="info-real-name">
+          <ruby>大<rp>(</rp><rt>おお</rt><rp>)</rp>山<rp>(</rp><rt>やま</rt><rp>)</rp></ruby><ruby>奥<rp>(</rp><rt>おく</rt><rp>)</rp>人<rp>(</rp><rt>と</rt><rp>)</rp></ruby>
+        </dd>
+        <dd slot="info-hundle-name">おおやまみちのく、yamanoku</dd>
+        <dd slot="info-birthday">1989年10月30日</dd>
+        <dd slot="info-sex">男性</dd>
+        <dd slot="info-birthplace">秋田県能代市</dd>
+        <dd slot="info-location">千葉県流山市</dd>
+        <dd slot="info-family">妻、娘、猫（3匹）、大型犬（1頭）</dd>
+      </BasicInfoSection>
+      <CareerInfoSection>
         <p>自分のキャリアのスタートはWebデザイナーとしてで、エンジニアから始まったわけではありません。</p>
         <p>これまでのキャリアの中でディレクション・デザイン・プログラミングをすべて担当する業務に就いた影響より、ブラウザ上のできること・できないことの根幹の理解をせず、ユーザにとって喜ばれる表現や機能提案は出来ないのだと思い、プログラミングに専任するためエンジニアとして転職しました。</p>
         <p>最初はマークアップエンジニアとして業務を通じ基礎的なコーディングを取得し、jQuery、Ajax通信、タスクランナー、CSS設計、フレームワークの使用など徐々にフロントエンドエンジニアという領域にも踏み入れていきました。</p>
         <p>事業会社に所属してからは、モノリシックなサーバーサイドアプリケーションでフロントエンド開発がしやすくなるような環境つくりや技術的な負債解消を行っています。UIデザイナーとしての側面では、Web技術を活用したUI設計・構築やアクセシビリティチェックの対応をしています。</p>
-        <h3 id="job_heading">{t("heading.jobs")}</h3>
-        <ul>
-          <li>{t("career.jobs.frontend-designer")}</li>
-          <li>{t("career.jobs.ui-designer")}</li>
-        </ul>
-        <h3>{t("heading.related-list")}</h3>
-        <CareerLinkList />
-      </section>
-      <section id="open-source-activity" aria-labelledby="open-source-activity_heading">
-        <h2 id="open-source-activity_heading">{t('heading.open-source-activity')}</h2>
-        <p>{t('open-source-activity.descripion')}</p>
-        <ul>
-          <li>
-            <a href="https://www.notion.so/yamanoku/2021-2c4fa51b832645f494698ebd11e069f9" target="_blank" rel="noopener">
-              {t("open-source-activity.link-2021")}
-              <ExternalLinkIcon />
-            </a>
-          </li>
-        </ul>
-        <article id="donate" aria-labelledby="donate_heading" class="donate">
-          <div>
-            <em id="donate_heading">{t("heading.donate")}</em>
-          </div>
-          <p>{t("donate.description")}</p>
-          <DonateServiceList />
-        </article>
-      </section>
-      <section id="presentations" aria-labelledby="presentations_heading">
-        <h2 id="presentations_heading">{t("heading.presentations.title")}</h2>
-        <h3 id="presentations-stage">{t("heading.presentations.stage")}</h3>
-        <PresentationsStageList />
-        <h3 id="presentations-write">{t("heading.presentations.write")}</h3>
-        <PresentationsWriteList />
+      </CareerInfoSection>
+      <OpenSourceActivitySection />
+      <PresentationsSection>
         <p>1年以上前のコンテンツをお探しの場合、<a href="https://archives.yamanoku.net" target="_blank" rel="noopener">アーカイブ<ExternalLinkIcon /></a>を参照してください。</p>
-      </section>
-      <section id="social-network-services" aria-labelledby="social-network-services_heading">
-        <h2 id="social-network-services_heading">{t("heading.sns")}</h2>
-        <SocialServiceList />
-      </section>
-      <section id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">{t("heading.contact")}</h2>
-        <address>
-          <a href="mailto:0910yama@gmail.com">
-            0910yama@gmail.com
-            <MailIcon />
-          </a>
-        </address>
-      </section>
+      </PresentationsSection>
+      <SocialNetworkServicesSection />
+      <AddressSection />
     </main>
     <Footer />
   </body>
 </html>
-
-<style>
-  .donate {
-    border: 1px solid var(--y-arcticle-border-color);
-    padding-top: var(--y-rhythm-3);
-    padding-left: var(--y-rhythm-3);
-    padding-right: var(--y-rhythm-3);
-  }
-  .donate::before {
-    display: none;
-  }
-</style>
