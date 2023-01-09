@@ -1,6 +1,6 @@
 ---
-const langCodeMatch = Astro.url.pathname;
-const iconTitle = langCodeMatch === '/en' ? 'Launch the Mail application' : 'メールアプリを立ち上げる'
+const langCodeMatch = Astro.url.pathname.replace(/(\\|\/)/g,'');
+const iconTitle = langCodeMatch === 'en' ? 'Launch the Mail application' : 'メールアプリを立ち上げる'
 ---
 
 <svg role="img" width="24" height="24" viewBox="0 0 24 24">

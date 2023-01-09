@@ -1,6 +1,6 @@
 ---
-const langCodeMatch = Astro.url.pathname;
-const iconTitle = langCodeMatch === '/en' ? 'Go to GitHub' : 'GitHub に移動する';
+const langCodeMatch = Astro.url.pathname.replace(/(\\|\/)/g,'');
+const iconTitle = langCodeMatch === 'en' ? 'Go to GitHub' : 'GitHub に移動する';
 ---
 
 <svg role="img" width="12" height="12" viewBox="0 0 24 24">
