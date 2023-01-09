@@ -44,6 +44,9 @@ export default Dictionary({
   "donate.description":
     "If you are interested in my work, presentations and activities, you can donate me by.",
 
+  // 多言語
+  multilingual: "Multilingual Page",
+
   // icon
   "icon-title.github": "Go to GitHub",
   "icon-title.mail": "Launch the Mail application",
