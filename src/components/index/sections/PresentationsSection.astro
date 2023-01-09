@@ -1,0 +1,16 @@
+---
+import PresentationsStageList from '../../list-contents/PresentationsStageList.astro';
+import PresentationsWriteList from '../../list-contents/PresentationsWriteList.astro';
+import { useTranslations } from '../../../i18n/util';
+const t = useTranslations(Astro);
+---
+
+<section id="presentations" aria-labelledby="presentations_heading">
+  <h2 id="presentations_heading">{t("heading.presentations.title")}</h2>
+  <slot name="note" />
+  <h3 id="presentations-stage">{t("heading.presentations.stage")}</h3>
+  <PresentationsStageList />
+  <h3 id="presentations-write">{t("heading.presentations.write")}</h3>
+  <PresentationsWriteList />
+  <slot />
+</section>

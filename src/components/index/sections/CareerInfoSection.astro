@@ -1,0 +1,17 @@
+---
+import CareerLinkList from '../../list-contents/CareerLinkList.astro';
+import { useTranslations } from '../../../i18n/util';
+const t = useTranslations(Astro);
+---
+
+<section id="career" aria-labelledby="career-heading">
+  <h2 id="career-heading">{t("heading.career")}</h2>
+  <slot />
+  <h3 id="job_heading">{t("heading.jobs")}</h3>
+  <ul>
+    <li>{t("career.jobs.frontend-designer")}</li>
+    <li>{t("career.jobs.ui-designer")}</li>
+  </ul>
+  <h3>{t("heading.related-list")}</h3>
+  <CareerLinkList />
+</section>

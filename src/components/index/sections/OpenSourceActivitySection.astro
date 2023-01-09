@@ -1,0 +1,38 @@
+---
+import DonateServiceList from '../../list-contents/DonateServiceList.astro';
+import ExternalLinkIcon from '../../svg-icons/ExternalLinkIcon.astro';
+import { useTranslations } from '../../../i18n/util';
+const t = useTranslations(Astro);
+---
+
+<section id="open-source-activity" aria-labelledby="open-source-activity_heading">
+  <h2 id="open-source-activity_heading">{t('heading.open-source-activity')}</h2>
+  <p>{t('open-source-activity.descripion')}</p>
+  <ul>
+    <li>
+      <a href="https://www.notion.so/yamanoku/2021-2c4fa51b832645f494698ebd11e069f9" target="_blank" rel="noopener">
+        {t("open-source-activity.link-2021")}
+        <ExternalLinkIcon />
+      </a>
+    </li>
+  </ul>
+  <article id="donate" aria-labelledby="donate_heading" class="donate">
+    <div>
+      <em id="donate_heading">{t("heading.donate")}</em>
+    </div>
+    <p>{t("donate.description")}</p>
+    <DonateServiceList />
+  </article>
+</section>
+
+<style>
+.donate {
+  border: 1px solid var(--y-arcticle-border-color);
+  padding-top: var(--y-rhythm-3);
+  padding-left: var(--y-rhythm-3);
+  padding-right: var(--y-rhythm-3);
+}
+.donate::before {
+  display: none;
+}
+</style>

@@ -1,0 +1,10 @@
+---
+import SocialServiceList from '../../list-contents/SocialServiceList.astro';
+import { useTranslations } from '../../../i18n/util';
+const t = useTranslations(Astro);
+---
+
+<section id="social-network-services" aria-labelledby="social-network-services_heading">
+  <h2 id="social-network-services_heading">{t("heading.sns")}</h2>
+  <SocialServiceList />
+</section>
