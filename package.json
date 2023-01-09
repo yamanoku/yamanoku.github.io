@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "dev:astro": "astro dev",
     "build": "nuxt build",
+    "build:astro": "astro build",
+    "preview:astro": "astro preview",
     "generate": "nuxt generate",
     "lint": "yarn eslint && yarn markuplint",
     "eslint": "eslint --ext .js,.vue --ignore-path .gitignore .",
@@ -14,6 +17,7 @@
   },
   "dependencies": {
     "@nuxtjs/i18n": "7.3.0",
+    "astro": "1.9.1",
     "js-yaml-loader": "1.2.2",
     "modern-normalize": "1.1.0",
     "nuxt": "2.15.8",

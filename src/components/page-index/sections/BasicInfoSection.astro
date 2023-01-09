@@ -1,0 +1,24 @@
+---
+import { useTranslations } from '../../../i18n/util';
+const t = useTranslations(Astro);
+---
+
+<section id="basic" aria-labelledby="basic-heading">
+  <h2 id="basic-heading">{t("heading.basic")}</h2>
+  <dl>
+    <dt>{t("info.real-name")}</dt>
+    <slot name="info-real-name" />
+    <dt>{t("info.hundle-name")}</dt>
+    <slot name="info-hundle-name" />
+    <dt>{t("info.birthday")}</dt>
+    <slot name="info-birthday" />
+    <dt>{t("info.sex")}</dt>
+    <slot name="info-sex" />
+    <dt>{t("info.birthplace")}</dt>
+    <slot name="info-birthplace" />
+    <dt>{t("info.location")}</dt>
+    <slot name="info-location" />
+    <dt>{t("info.family")}</dt>
+    <slot name="info-family" />
+  </dl>
+</section>

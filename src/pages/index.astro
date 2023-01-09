@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+import BasicInfoSection from '../components/page-index/sections/BasicInfoSection.astro'
+import CareerInfoSection from '../components/page-index/sections/CareerInfoSection.astro'
+import OpenSourceActivitySection from '../components/page-index/sections/OpenSourceActivitySection.astro'
+import PresentationsSection from '../components/page-index/sections/PresentationsSection.astro'
+import SocialNetworkServicesSection from '../components/page-index/sections/SocialNetworkServicesSection.astro'
+import AddressSection from '../components/page-index/sections/AddressSection.astro'
+---
+
+<BaseLayout>
+  <main id="main">
+    <h1>yamanoku.net</h1>
+    <BasicInfoSection>
+      <dd slot="info-real-name">
+        <ruby>大<rp>(</rp><rt>おお</rt><rp>)</rp>山<rp>(</rp><rt>やま</rt><rp>)</rp></ruby><ruby>奥<rp>(</rp><rt>おく</rt><rp>)</rp>人<rp>(</rp><rt>と</rt><rp>)</rp></ruby>
+      </dd>
+      <dd slot="info-hundle-name">おおやまみちのく、yamanoku</dd>
+      <dd slot="info-birthday">1989年10月30日</dd>
+      <dd slot="info-sex">男性</dd>
+      <dd slot="info-birthplace">秋田県能代市</dd>
+      <dd slot="info-location">千葉県流山市</dd>
+      <dd slot="info-family">妻、娘、猫（3匹）、大型犬（1頭）</dd>
+    </BasicInfoSection>
+    <CareerInfoSection>
+      <p>自分のキャリアのスタートはWebデザイナーとしてで、エンジニアから始まったわけではありません。</p>
+      <p>これまでのキャリアの中でディレクション・デザイン・プログラミングをすべて担当する業務に就いた影響より、ブラウザ上のできること・できないことの根幹の理解をせず、ユーザにとって喜ばれる表現や機能提案は出来ないのだと思い、プログラミングに専任するためエンジニアとして転職しました。</p>
+      <p>最初はマークアップエンジニアとして業務を通じ基礎的なコーディングを取得し、jQuery、Ajax通信、タスクランナー、CSS設計、フレームワークの使用など徐々にフロントエンドエンジニアという領域にも踏み入れていきました。</p>
+      <p>事業会社に所属してからは、モノリシックなサーバーサイドアプリケーションでフロントエンド開発がしやすくなるような環境つくりや技術的な負債解消を行っています。UIデザイナーとしての側面では、Web技術を活用したUI設計・構築やアクセシビリティチェックの対応をしています。</p>
+    </CareerInfoSection>
+    <OpenSourceActivitySection />
+    <PresentationsSection />
+    <SocialNetworkServicesSection />
+    <AddressSection />
+  </main>
+</BaseLayout>
