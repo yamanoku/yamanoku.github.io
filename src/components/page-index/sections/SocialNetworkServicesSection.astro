@@ -1,10 +1,39 @@
 ---
-import SocialServiceList from '../../list-contents/SocialServiceList.astro';
+import GlobalListComponent from '../../global/GlobalListComponent.astro';
 import { useTranslations } from '../../../i18n/util';
 const t = useTranslations(Astro);
 ---
 
 <section id="social-network-services" aria-labelledby="social-network-services_heading">
   <h2 id="social-network-services_heading">{t("heading.sns")}</h2>
-  <SocialServiceList />
+  <GlobalListComponent list={
+    [
+      {
+        title: "Twitter",
+        url: "https://twitter.com/okuto_oyama",
+        isExternal: true
+      },
+      {
+        title: "GitHub",
+        url: "https://github.com/yamanoku",
+        isExternal: true,
+        isGitHubLink: true
+      },
+      {
+        title: "Scrapbox",
+        url: "https://scrapbox.io/yamanoku/",
+        isExternal: true
+      },
+      {
+        title: "Zenn",
+        url: "https://zenn.dev/yamanoku",
+        isExternal: true
+      },
+      {
+        title: "Facebook",
+        url: "https://facebook.com/okutooyama",
+        isExternal: true
+      }
+    ]
+  } />
 </section>

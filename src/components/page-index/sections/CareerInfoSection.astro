@@ -1,5 +1,5 @@
 ---
-import CareerLinkList from '../../list-contents/CareerLinkList.astro';
+import GlobalListComponent from '../../global/GlobalListComponent.astro';
 import { useTranslations } from '../../../i18n/util';
 const t = useTranslations(Astro);
 ---
@@ -8,10 +8,40 @@ const t = useTranslations(Astro);
   <h2 id="career-heading">{t("heading.career")}</h2>
   <slot />
   <h3 id="job_heading">{t("heading.jobs")}</h3>
-  <ul>
-    <li>{t("career.jobs.frontend-designer")}</li>
-    <li>{t("career.jobs.ui-designer")}</li>
-  </ul>
+  <GlobalListComponent list={
+    [
+      {
+        title: t("career.jobs.frontend-designer")
+      },
+      {
+        title: t("career.jobs.ui-designer")
+      }
+    ]
+  } />
   <h3>{t("heading.related-list")}</h3>
-  <CareerLinkList />
+  <GlobalListComponent list={
+    [
+      {
+        title: t("career.links.curriculum-vitae"),
+        url: "https://github.com/yamanoku/Curriculum-Vitae/blob/main/README.md",
+        isExternal: true,
+        isGitHubLink: true
+      },
+      {
+        title: t("career.links.wantedly"),
+        url: "https://www.wantedly.com/id/okutooyama",
+        isExternal: true
+      },
+      {
+        title: t("career.links.lapras"),
+        url: "https://lapras.com/public/ZQJMZYO",
+        isExternal: true
+      },
+      {
+        title: t("career.links.youtrust"),
+        url: "https://youtrust.jp/users/57ea573ffca186c3b339f1739915f40b",
+        isExternal: true
+      }
+    ]
+  } />
 </section>
