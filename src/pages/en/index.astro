@@ -2,6 +2,11 @@
 import BaseHead from '../../components/BaseHead.astro'
 import Header from '../../components/Header.astro'
 import Footer from '../../components/Footer.astro'
+import CareerLinkList from '../../components/list-contents/CareerLinkList.astro'
+import DonateServiceList from '../../components/list-contents/DonateServiceList.astro'
+import PresentationsStageList from '../../components/list-contents/PresentationsStageList.astro'
+import PresentationsWriteList from '../../components/list-contents/PresentationsWriteList.astro'
+import SocialServiceList from '../../components/list-contents/SocialServiceList.astro'
 import ExternalLinkIcon from '../../components/svg-icons/ExternalLinkIcon.astro'
 import GithubIcon from '../../components/svg-icons/GithubIcon.astro'
 import MailIcon from '../../components/svg-icons/MailIcon.astro'
@@ -48,33 +53,8 @@ import MailIcon from '../../components/svg-icons/MailIcon.astro'
           <li>FrontEnd Designer</li>
           <li>UI Designer</li>
         </ul>
-        <h3 id="related:career-heading">Related Links List</h3>
-        <ul aria-labelledby="related:career-heading">
-          <li>
-            <a href="https://github.com/yamanoku/Curriculum-Vitae/blob/main/README.md" target="_blank" rel="noopener">
-              Curriculum Vitae
-              <GithubIcon />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.wantedly.com/id/okutooyama" target="_blank" rel="noopener">
-              Wantedly
-              <ExternalLinkIcon />
-            </a>
-          </li>
-          <li>
-            <a href="https://lapras.com/public/ZQJMZYO" target="_blank" rel="noopener">
-              LAPRAS
-              <ExternalLinkIcon />
-            </a>
-          </li>
-          <li>
-            <a href="https://youtrust.jp/users/57ea573ffca186c3b339f1739915f40b" target="_blank" rel="noopener">
-              YOUTRUST
-              <ExternalLinkIcon />
-            </a>
-          </li>
-        </ul>
+        <h3>Related Links List</h3>
+        <CareerLinkList />
       </section>
       <section id="open-source-activity" aria-labelledby="open-source-activity_heading">
         <h2 id="open-source-activity_heading">Open Source Activity</h2>
@@ -92,126 +72,23 @@ import MailIcon from '../../components/svg-icons/MailIcon.astro'
             <em id="donate_heading">Donate & Sponsor</em>
           </div>
           <p>If you are interested in my work, presentations and activities, you can donate me by.</p>
-          <ul>
-            <li>
-              <a href="https://github.com/sponsors/yamanoku" target="_blank" rel="noopener">
-                GitHub Sponsors
-                <GithubIcon />
-              </a>
-            </li>
-            <li>
-              <a href="https://buy.stripe.com/00gaEY1Eh5bE7VC8ww" target="_blank" rel="noopener">
-                Stripe Payment Links
-                <ExternalLinkIcon />
-              </a>
-            </li>
-            <li>
-              <a href="https://buymeacoffee.com/yamanoku" target="_blank" rel="noopener">
-                Buy me a coffee
-                <ExternalLinkIcon />
-              </a>
-            </li>
-          </ul>
+          <DonateServiceList />
         </article>
       </section>
       <section id="presentations" aria-labelledby="presentations_heading">
         <h2 id="presentations_heading">Presentations</h2>
         <em>Sorry, Japanese text only</em>
         <h3 id="presentations-stage">Stage</h3>
-        <ul>
-          <li>
-            <span class="time">2022/10/16</span> - <a href="https://speakerdeck.com/yamanoku/to-make-accessible-components-in-vuejs" target="_blank" rel="noopener">
-              Vue.js でアクセシブルなコンポーネントをつくるために
-              <ExternalLinkIcon />
-            </a>
-          </li>
-          <li>
-            <span class="time">2022/08/30</span> - <a href="https://scrapbox.io/yamanoku/Storybook_%E3%81%A7%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E9%96%8B%E7%99%BA%E3%81%AE%E6%B2%BB%E5%AE%89%E3%82%92%E8%89%AF%E3%81%8F%E3%81%97%E3%81%A6%E3%81%84%E3%81%8F%E8%A9%B1" target="_blank" rel="noopener">
-              Storybook でフロントエンド開発の治安を良くしていく話
-              <ExternalLinkIcon />
-            </a>
-          </li>
-          <li>
-            <span class="time">2022/05/19</span> - <a href="https://docs.google.com/presentation/d/e/2PACX-1vQct0iDIdaywmCjhbf49BKd5DMXLEtFlZbFs6cLfUmAfp1HVzO2jVIrym5bEmlpaIrnPxbj-pVggmeW/pub?slide=id.p1" target="_blank" rel="noopener">
-              クラウドワークスのこれまでの取り組み、新たなミッションと考えるこれからについて
-              <ExternalLinkIcon />
-            </a>
-          </li>
-          <li>
-            <span class="time">2022/01/19</span> - <a href="https://docs.google.com/presentation/d/e/2PACX-1vRP89QW6DxVdEND2IpKqnJag1YUw9P3rZLjQbDIJwWVtzndRNZPXHhm1765XN-i3btQ1Io0-xJeU6Gf/pub?start=false&amp;loop=false&amp;delayms=3000" target="_blank" rel="noopener">
-              PWA Night vol.35 yamanoku 登壇資料
-              <ExternalLinkIcon />
-            </a>
-          </li>
-        </ul>
+        <PresentationsStageList />
         <h3 id="presentations-write">Writing</h3>
-        <ul>
-          <li>
-            <span class="time">2022/12/13</span> - <a href="https://engineer.crowdworks.jp/entry/thanks_webpacker_goodbye_webpacker" target="_blank" rel="noopener">
-              ありがとう Webpacker さようなら Webpacker
-              <ExternalLinkIcon />
-            </a>
-          </li>
-          <li>
-            <span class="time">2022/12/12</span> - <a href="https://zenn.dev/yamanoku/scraps/afe08c2634034c" target="_blank" rel="noopener">
-              クラウドワークス #accessibility チャンネル 気になる話題 Pickup 2022
-              <ExternalLinkIcon />
-            </a>
-          </li>
-          <li>
-            <span class="time">2022/12/01</span> - <a href="https://engineer.crowdworks.jp/entry/crowdworks_frontend_2022" target="_blank" rel="noopener">
-              crowdworks.jp のフロントエンド活動を振り返る 2022
-              <ExternalLinkIcon />
-            </a>
-          </li>
-          <li>
-            <span class="time">2022/10/25</span> - <a href="https://engineer.crowdworks.jp/entry/report-vue-fes-japan-online-2022" target="_blank" rel="noopener">
-              Vue Fes Japan Online 2022 参加レポート
-              <ExternalLinkIcon />
-            </a>
-          </li>
-          <li>
-            <span class="time">2022/04/19</span> - <a href="https://engineer.crowdworks.jp/entry/html-anatomische-tabell" target="_blank" rel="noopener">
-              「HTML解体新書」HTMLのこれからと向き合うための本
-              <ExternalLinkIcon />
-            </a>
-          </li>
-          <li>
-            <span class="time">2022/03/02</span> - <a href="https://engineer.crowdworks.jp/entry/migrate-vue3" target="_blank" rel="noopener">
-              Vue 2 からVue 3 に移行完了しました！
-              <ExternalLinkIcon />
-            </a>
-          </li>
-          <li>
-            <span class="time">2021/12/30</span> - <a href="https://zenn.dev/yamanoku/articles/bd8d86ee79459b" target="_blank" rel="noopener">
-              2021年オープンソースコントリビュート活動振り返り
-              <ExternalLinkIcon />
-            </a>
-          </li>
-        </ul>
+        <PresentationsWriteList />
         <p>
           If you are looking for content older than 1 year, please visit <a href="https://archives.yamanoku.net" target="_blank" rel="noopener">Archives<ExternalLinkIcon /></a> page.
         </p>
       </section>
       <section id="social-network-services" aria-labelledby="social-network-services_heading">
         <h2 id="social-network-services_heading">Social Service</h2>
-        <ul>
-          <li>
-            <a href="https://twitter.com/okuto_oyama" target="_blank" rel="noopener">Twitter<ExternalLinkIcon /></a>
-          </li>
-          <li>
-            <a href="https://github.com/yamanoku" target="_blank" rel="noopener">GitHub<GithubIcon /></a>
-          </li>
-          <li>
-            <a href="https://scrapbox.io/yamanoku/" target="_blank" rel="noopener">Scrapbox<ExternalLinkIcon /></a>
-          </li>
-          <li>
-            <a href="https://zenn.dev/yamanoku" target="_blank" rel="noopener">Zenn<ExternalLinkIcon /></a>
-          </li>
-          <li>
-            <a href="https://facebook.com/okutooyama" target="_blank" rel="noopener">Facebook <ExternalLinkIcon /></a>
-          </li>
-        </ul>
+        <SocialServiceList />
       </section>
       <section id="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact</h2>

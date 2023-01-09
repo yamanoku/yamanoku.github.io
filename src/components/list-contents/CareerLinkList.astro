@@ -1,0 +1,33 @@
+---
+import ExternalLinkIcon from '../svg-icons/ExternalLinkIcon.astro'
+import GithubIcon from '../svg-icons/GithubIcon.astro'
+const langCodeMatch = Astro.url.pathname.replace(/(\\|\/)/g,'');
+const curriculumVitae = langCodeMatch === 'en' ? 'Curriculum Vitae' : '職務経歴書';
+---
+
+<ul>
+  <li>
+    <a href="https://github.com/yamanoku/Curriculum-Vitae/blob/main/README.md" target="_blank" rel="noopener">
+      {curriculumVitae}
+      <GithubIcon />
+    </a>
+  </li>
+  <li>
+    <a href="https://www.wantedly.com/id/okutooyama" target="_blank" rel="noopener">
+      Wantedly
+      <ExternalLinkIcon />
+    </a>
+  </li>
+  <li>
+    <a href="https://lapras.com/public/ZQJMZYO" target="_blank" rel="noopener">
+      LAPRAS
+      <ExternalLinkIcon />
+    </a>
+  </li>
+  <li>
+    <a href="https://youtrust.jp/users/57ea573ffca186c3b339f1739915f40b" target="_blank" rel="noopener">
+      YOUTRUST
+      <ExternalLinkIcon />
+    </a>
+  </li>
+</ul>
