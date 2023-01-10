@@ -16,7 +16,7 @@
     "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "7.3.0",
+    "@nuxtjs/i18n": "7.3.1",
     "astro": "1.9.1",
     "js-yaml-loader": "1.2.2",
     "modern-normalize": "1.1.0",
