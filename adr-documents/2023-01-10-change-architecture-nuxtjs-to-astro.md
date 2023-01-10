@@ -1,5 +1,9 @@
 # 2023-01-10　Nuxt.js から Astro にアーキテクチャを変更する
 
+## Status
+
+Accepted.
+
 ## Context
 
 2023年1月現在の yamanoku.github.io は Nuxt.js（v2）のアーキテクチャを使用して静的サイトを作成している。Nuxt3 がリリースされたことでこのリポジトリでもアップデートする必要が出てきた。
