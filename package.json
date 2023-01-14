@@ -30,15 +30,10 @@
     "@markuplint/vue-parser": "3.1.0",
     "@markuplint/vue-spec": "3.1.0",
     "eslint": "8.31.0",
-    "eslint-friendly-formatter": "4.0.1",
-    "eslint-loader": "4.0.2",
-    "eslint-plugin-vue": "9.9.0",
-    "eslint-plugin-vuejs-accessibility": "2.0.0",
     "gh-pages": "4.0.0",
     "markuplint": "3.1.0",
     "prettier": "2.8.2",
-    "prettier-plugin-astro": "0.7.2",
-    "vue-eslint-parser": "9.1.0"
+    "prettier-plugin-astro": "0.7.2"
   },
   "workspaces": [
     "packages/*"
