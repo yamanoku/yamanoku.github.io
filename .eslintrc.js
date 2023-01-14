@@ -8,8 +8,11 @@ module.exports = {
     sourceType: "module"
   },
   extends: [
+    "plugin:@typescript-eslint/recommended",
     "plugin:astro/recommended",
   ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   overrides: [
     {
       files: ["*.astro"],
