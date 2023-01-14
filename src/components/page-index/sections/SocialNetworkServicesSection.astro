@@ -1,13 +1,16 @@
 ---
-import GlobalListComponent from '../../global/GlobalListComponent.astro';
-import { useTranslations } from '../../../i18n/util';
+import GlobalListComponent from "../../global/GlobalListComponent.astro";
+import { useTranslations } from "../../../i18n/util";
 const t = useTranslations(Astro);
 ---
 
-<section id="social-network-services" aria-labelledby="social-network-services_heading">
+<section
+  id="social-network-services"
+  aria-labelledby="social-network-services_heading"
+>
   <h2 id="social-network-services_heading">{t("heading.sns")}</h2>
-  <GlobalListComponent list={
-    [
+  <GlobalListComponent
+    list={[
       {
         title: "Twitter",
         url: "https://twitter.com/okuto_oyama",
@@ -34,6 +37,6 @@ const t = useTranslations(Astro);
         url: "https://facebook.com/okutooyama",
         isExternal: true
       }
-    ]
-  } />
+    ]}
+  />
 </section>

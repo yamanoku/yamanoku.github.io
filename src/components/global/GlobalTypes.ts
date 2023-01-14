@@ -3,8 +3,8 @@ export type LinkItem = {
   title?: string;
   isExternal?: boolean;
   isGitHubLink?: boolean;
-}
+};
 
 export type ListItem = LinkItem & {
   datetime?: string;
-}
+};

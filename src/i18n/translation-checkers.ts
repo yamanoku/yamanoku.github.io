@@ -1,5 +1,5 @@
-import type jaDictionary from './ja/dictionary';
-import languages from './languages';
+import type jaDictionary from "./ja/dictionary";
+import languages from "./languages";
 
 export type DictionaryKeys = keyof typeof jaDictionary;
 export type Dict = Partial<typeof jaDictionary>;

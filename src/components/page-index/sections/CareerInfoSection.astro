@@ -1,6 +1,6 @@
 ---
-import GlobalListComponent from '../../global/GlobalListComponent.astro';
-import { useTranslations } from '../../../i18n/util';
+import GlobalListComponent from "../../global/GlobalListComponent.astro";
+import { useTranslations } from "../../../i18n/util";
 const t = useTranslations(Astro);
 ---
 
@@ -8,19 +8,19 @@ const t = useTranslations(Astro);
   <h2 id="career-heading">{t("heading.career")}</h2>
   <slot />
   <h3 id="job_heading">{t("heading.jobs")}</h3>
-  <GlobalListComponent list={
-    [
+  <GlobalListComponent
+    list={[
       {
         title: t("career.jobs.frontend-designer")
       },
       {
         title: t("career.jobs.ui-designer")
       }
-    ]
-  } />
+    ]}
+  />
   <h3>{t("heading.related-list")}</h3>
-  <GlobalListComponent list={
-    [
+  <GlobalListComponent
+    list={[
       {
         title: t("career.links.curriculum-vitae"),
         url: "https://github.com/yamanoku/Curriculum-Vitae/blob/main/README.md",
@@ -42,6 +42,6 @@ const t = useTranslations(Astro);
         url: "https://youtrust.jp/users/57ea573ffca186c3b339f1739915f40b",
         isExternal: true
       }
-    ]
-  } />
+    ]}
+  />
 </section>

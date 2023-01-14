@@ -1,27 +1,38 @@
 ---
-import GlobalListComponent from '../../global/GlobalListComponent.astro';
-import { listStage, listWrite } from '../../../presentations/listPresentation';
-import ExternalLinkIcon from '../../svg-icons/ExternalLinkIcon.astro'
-import { getLanguageFromURL, useTranslations } from '../../../i18n/util';
+import GlobalListComponent from "../../global/GlobalListComponent.astro";
+import { listStage, listWrite } from "../../../presentations/listPresentation";
+import ExternalLinkIcon from "../../svg-icons/ExternalLinkIcon.astro";
+import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
 const lang = getLanguageFromURL(Astro.url.pathname);
 const t = useTranslations(Astro);
 ---
 
 <section id="presentations" aria-labelledby="presentations_heading">
   <h2 id="presentations_heading">{t("heading.presentations.title")}</h2>
-  { lang === 'en' && <em>Sorry, Japanese text only</em> }
+  {lang === "en" && <em>Sorry, Japanese text only</em>}
   <h3 id="presentations-stage">{t("heading.presentations.stage")}</h3>
   <GlobalListComponent list={listStage} />
   <h3 id="presentations-write">{t("heading.presentations.write")}</h3>
   <GlobalListComponent list={listWrite} />
   {
-    lang === 'en' ?
+    lang === "en" ? (
       <p>
-        If you are looking for content older than 1 year, please visit <a href="https://archives.yamanoku.net" target="_blank" rel="noopener">Archives<ExternalLinkIcon /></a> page.
+        If you are looking for content older than 1 year, please visit{" "}
+        <a href="https://archives.yamanoku.net" target="_blank" rel="noopener">
+          Archives
+          <ExternalLinkIcon />
+        </a>{" "}
+        page.
       </p>
-        :
+    ) : (
       <p>
-        1年以上前のコンテンツをお探しの場合、<a href="https://archives.yamanoku.net" target="_blank" rel="noopener">アーカイブ<ExternalLinkIcon /></a>を参照してください。
+        1年以上前のコンテンツをお探しの場合、
+        <a href="https://archives.yamanoku.net" target="_blank" rel="noopener">
+          アーカイブ
+          <ExternalLinkIcon />
+        </a>
+        を参照してください。
       </p>
+    )
   }
 </section>
