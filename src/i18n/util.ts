@@ -13,6 +13,7 @@ export function getLanguageFromURL(pathname: string) {
 function mapDefaultExports<T>(modules: Record<string, { default: T }>) {
   const exportMap: Record<string, T> = {};
   for (const [path, module] of Object.entries(modules)) {
+    /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
     const [_dot, lang] = path.split("/");
     exportMap[lang] = module.default;
   }

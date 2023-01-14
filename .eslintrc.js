@@ -4,23 +4,23 @@ module.exports = {
     browser: true,
     node: true
   },
-  parser: "vue-eslint-parser",
   parserOptions: {
     sourceType: "module"
   },
   extends: [
-    "plugin:vue/essential",
-    "plugin:vuejs-accessibility/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:astro/recommended",
   ],
-  plugins: ["vue", "vuejs-accessibility"],
-  rules: {
-    "vuejs-accessibility/no-redundant-roles": 0,
-    "vue/no-template-target-blank": [
-      "error",
-      {
-        allowReferrer: true,
-        enforceDynamicLinks: "always"
-      }
-    ]
-  }
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  overrides: [
+    {
+      files: ["*.astro"],
+      parser: "astro-eslint-parser",
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+        extraFileExtensions: [".astro"],
+      },
+    }
+  ]
 };
