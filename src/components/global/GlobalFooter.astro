@@ -1,19 +1,19 @@
 ---
-import GlobalLinkComponent from './GlobalLinkComponent.astro';
-const today = new Date()
+import GlobalLinkComponent from "./GlobalLinkComponent.astro";
+const today = new Date();
 ---
 
 <footer>
   <p>&copy; Copyright {today.getFullYear()}, Okuto Oyama</p>
   <p>
     Source :
-    <GlobalLinkComponent link={
-      {
+    <GlobalLinkComponent
+      link={{
         title: "yamanoku/yamanoku.github.io",
         url: "https://github.com/yamanoku/yamanoku.github.io/",
         isGitHubLink: true
-      }
-    } />
+      }}
+    />
   </p>
 </footer>
 <style>

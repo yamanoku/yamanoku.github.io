@@ -1,5 +1,5 @@
 ---
-import { getLanguageFromURL, useTranslations } from '../../i18n/util';
+import { getLanguageFromURL, useTranslations } from "../../i18n/util";
 const lang = getLanguageFromURL(Astro.url.pathname);
 const t = useTranslations(Astro);
 ---
@@ -20,8 +20,8 @@ const t = useTranslations(Astro);
     </svg>
   </div>
   <nav aria-label={t("multilingual")}>
-    <a href="/" aria-current={lang === 'ja' && 'page'}>日本語ページ</a>
-    <a href="/en/" aria-current={lang === 'en' && 'page'}>English Page</a>
+    <a href="/" aria-current={lang === "ja" && "page"}>日本語ページ</a>
+    <a href="/en/" aria-current={lang === "en" && "page"}>English Page</a>
   </nav>
 </header>
 <style>
