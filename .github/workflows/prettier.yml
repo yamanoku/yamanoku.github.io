@@ -1,9 +1,12 @@
-name: Lint
+name: Prettier
 
 on:
   pull_request:
     branches:
       - dev
+    paths:
+      - "**.ts"
+      - "**.astro"
 
 jobs:
   build:
@@ -20,11 +23,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - name: yarn install and lint and prettier
+    - name: check prettier
       run: |
         yarn install
-        yarn build
-        yarn lint
         yarn prettier
       env:
         CI: true
