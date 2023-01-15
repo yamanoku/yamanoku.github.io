@@ -3,16 +3,15 @@
 ## Explaining on the implementation of a portfolio site
 
 ### Technology stack
-- Nuxt.js
-  - nuxt-i18n
-- eslint
-  - eslint-plugin-prettier
-  - eslint-plugin-vue
-  - eslint-plugin-vuejs-accessibility
-- markuplint
+- Astro
+- ESLint
+  - eslint-plugin-astro
+- Markuplint
+- Prettier
+  - prettier-plugin-astro
 - modern-normalize
 
-See [package.json](https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/package.json) for more details.
+See [package.json](https://github.com/yamanoku/yamanoku.github.io/blob/dev/package.json) for more details.
 
 ### Markup
 Semantic markup implementation to realize information design of human-readable (Human can understand) and machine-readable (Be understood by the machine).
@@ -22,22 +21,17 @@ It also implements content completion using WAI-ARIA (Web Accessibility Initiati
 <details>
 <summary>Details</summary>
 
-```html
+```astro
 <section id="basic" aria-labelledby="basic-heading">
-  <global-heading-component
-    id="basic-heading"
-    :heading-level="2"
-    :heading-text="$t('heading.basic')"
-  />
+  <h2 id="basic-heading">{t("heading.basic")}</h2>
 </section>
 ```
 Assist users as they move from article to article by tying aria-labelledby to article elements.
 
-- [5.3.4 Accessible Name Guidance by Role - WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/#naming_role_guidance)
+- [Accessible Name Guidance by Role - Providing Accessible Names and Descriptions | APG | WAI | W3C](https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#x5-6-accessible-name-guidance-by-role)
 </details>
 
 ### Component oriented design
-
 You need to format the API you get for display, but managing it as a single component simplifies source code, allows multiple uses, and simplifies information design.
 
 <details>
@@ -45,40 +39,64 @@ You need to format the API you get for display, but managing it as a single comp
 
 For example, the slide list uses the following components to render:
 
-```html
+```astro
 <ul>
-  <li v-for="list in listItem" :key="list.index">
-    <template v-if="list.datetime">
-      <span class="time">{{ dateStirngReplace(list.datetime) }}</span>
-      -
-    </template>
-    <i18n v-if="list.isI18n" :path="list.title">
-      <global-link-component :link-object="list" />
-    </i18n>
-    <template v-else-if="list.url">
-      <global-link-component :link-object="list" />
-    </template>
-    <template v-else>
-      {{ list.title }}
-    </template>
-  </li>
+  {
+    list.map(listItem => (
+      <li>
+        {listItem.datetime && (
+          <span class="time">{dateStirngReplace(listItem.datetime)} - </span>
+        )}
+        {listItem.url ? (
+          <GlobalLinkComponent link={listItem} />
+        ) : (
+          listItem.title
+        )}
+      </li>
+    ))
+  }
 </ul>
 ```
 
-[ListComponent.vue](https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/global/ListComponent.vue)
+[GlobalListComponent.astro](https://github.com/yamanoku/yamanoku.github.io/blob/dev/src/components/global/GlobalListComponent.astro)
 </details>
 
 ### Internationalization
-Since we are developing on Nuxt.js, we have introduced a tool called nuxt-18n. In addition to internationalization, rendering can also be done for specific languages.
+The portfolio site is designed to be displayed in Japanese and English, with one file automatically translated for each of the supported languages.
 
 <details>
 <summary>Details</summary>
+
+Each language to be translated is managed by directory.
+
+```
+src/i18n
+├── en
+│   └── dictionary.ts // English
+└──ja
+    └── dictionary.ts // Japanese
+```
+
+If a match is found with the supported key using `useTranslations`, the translated wording will be displayed.
+
+```astro
+---
+import { useTranslations } from "../../../i18n/util";
+const t = useTranslations(Astro);
+---
+<h2 id="contact-heading">{t("heading.contact")}</h2>
+<!-- English: <h2 id="contact-heading">Contact</h2> -->
+```
+
+The rendering process is also possible, for example, when displaying only in a specific language.
+
 The following is a conditional expression that is displayed when it is not in Japanese.
 
-```html
-<template v-if="this.$i18n.locale !== 'ja'">
-  <em>{{ $t("onlyJPText") }}</em>
-</template>
+```astro
+---
+const lang = getLanguageFromURL(Astro.url.pathname);
+---
+{lang === "en" && <em>Sorry, Japanese text only</em>}
 ```
 </details>
 

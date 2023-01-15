@@ -3,16 +3,15 @@
 ## ポートフォリオサイトの実装にまつわる解説
 
 ### 利用技術
-- Nuxt.js
-  - nuxt-i18n
-- eslint
-  - eslint-plugin-prettier
-  - eslint-plugin-vue
-  - eslint-plugin-vuejs-accessibility
-- markuplint
+- Astro
+- ESLint
+  - eslint-plugin-astro
+- Markuplint
+- Prettier
+  - prettier-plugin-astro
 - modern-normalize
 
-詳細をもっと知るには [package.json](https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/package.json) をご覧ください。
+詳細をもっと知るには [package.json](https://github.com/yamanoku/yamanoku.github.io/blob/dev/package.json) をご覧ください。
 
 ### マークアップ
 ヒューマンリーダブル（人が理解できる）とマシンリーダブル（機械が理解できる）となる情報設計を実現するためにセマンティクスなマークアップの実装しています。
@@ -22,18 +21,14 @@
 <details>
 <summary>詳細を確認する</summary>
 
-```html
+```astro
 <section id="basic" aria-labelledby="basic-heading">
-  <global-heading-component
-    id="basic-heading"
-    :heading-level="2"
-    :heading-text="$t('heading.basic')"
-  />
+  <h2 id="basic-heading">{t("heading.basic")}</h2>
 </section>
 ```
 aria-labelledbyとsection要素を紐付けることで記事間を移動するときにユーザを支援します。
 
-- [5.3.4 Accessible Name Guidance by Role - WAI-ARIA Authoring Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/#naming_role_guidance)
+- [Accessible Name Guidance by Role - Providing Accessible Names and Descriptions | APG | WAI | W3C](https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#x5-6-accessible-name-guidance-by-role)
 </details>
 
 ### コンポーネント指向設計
@@ -45,40 +40,64 @@ aria-labelledbyとsection要素を紐付けることで記事間を移動する�
 
 たとえばスライド一覧のリストでは以下コンポーネントを使ってレンダリングしています。
 
-```html
+```astro
 <ul>
-  <li v-for="list in listItem" :key="list.index">
-    <template v-if="list.datetime">
-      <span class="time">{{ dateStirngReplace(list.datetime) }}</span>
-      -
-    </template>
-    <i18n v-if="list.isI18n" :path="list.title">
-      <global-link-component :link-object="list" />
-    </i18n>
-    <template v-else-if="list.url">
-      <global-link-component :link-object="list" />
-    </template>
-    <template v-else>
-      {{ list.title }}
-    </template>
-  </li>
+  {
+    list.map(listItem => (
+      <li>
+        {listItem.datetime && (
+          <span class="time">{dateStirngReplace(listItem.datetime)} - </span>
+        )}
+        {listItem.url ? (
+          <GlobalLinkComponent link={listItem} />
+        ) : (
+          listItem.title
+        )}
+      </li>
+    ))
+  }
 </ul>
 ```
 
-[ListComponent.vue](https://github.com/yamanoku/yamanoku.github.io/blob/nuxt/components/global/ListComponent.vue)
+[GlobalListComponent.astro](https://github.com/yamanoku/yamanoku.github.io/blob/dev/src/components/global/GlobalListComponent.astro)
 </details>
 
 ### 国際化対応
-Nuxt.jsで開発しているのでnuxt-18nというツールを導入しています。国際化対応ほか、特定の言語のみに表示する場合などのレンダリング処理も可能となっています。
+ポートフォリオサイトは日本語と英語で表示されるようになっております。１ファイルで対応する各言語ごとに自動的に翻訳されるように設計されています。
 
 <details>
 <summary>詳細を確認する</summary>
-以下は日本語ではない場合に表示される条件式です。
 
-```html
-<template v-if="this.$i18n.locale !== 'ja'">
-  <em>{{ $t("onlyJPText") }}</em>
-</template>
+翻訳される各言語をディレクトリごとで管理しています。
+
+```
+src/i18n
+├── en
+│   └── dictionary.ts // 英語
+└──ja
+    └── dictionary.ts // 日本語
+```
+
+`useTranslations` を使用して対応するキーと一致した場合、翻訳された文言が表示されます。
+
+```astro
+---
+import { useTranslations } from "../../../i18n/util";
+const t = useTranslations(Astro);
+---
+<h2 id="contact-heading">{t("heading.contact")}</h2>
+<!-- 日本語： <h2 id="contact-heading">連絡先</h2> -->
+```
+
+特定の言語のみに表示する場合などのレンダリング処理も可能となっています。
+
+日本語ではない場合に表示される条件式は以下のようになっています。
+
+```astro
+---
+const lang = getLanguageFromURL(Astro.url.pathname);
+---
+{lang === "en" && <em>Sorry, Japanese text only</em>}
 ```
 </details>
 
