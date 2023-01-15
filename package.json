@@ -12,7 +12,7 @@
     "lint": "yarn eslint && yarn markuplint",
     "eslint": "eslint --ext .ts,.astro --ignore-path .gitignore .",
     "eslint:fix": "eslint --fix --ext .ts,.astro --ignore-path .gitignore .",
-    "markuplint": "markuplint './**/*.vue'",
+    "markuplint": "markuplint 'dist/**/*.html'",
     "prettier": "yarn prettier:ts && yarn prettier:astro",
     "prettier:ts": "prettier --check 'src/**/*.ts'",
     "prettier:astro": "prettier --check 'src/**/*.astro'",
