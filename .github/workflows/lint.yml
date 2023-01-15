@@ -23,6 +23,7 @@ jobs:
     - name: yarn install and lint and prettier
       run: |
         yarn install
+        yarn build:astro
         yarn lint
         yarn prettier
       env:

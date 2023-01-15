@@ -49,6 +49,9 @@ export default Dictionary({
 
   // icon
   "icon-title.github": "Go to GitHub",
+  "icon-label.github": "GitHub",
   "icon-title.mail": "Launch the Mail application",
-  "icon-title.external-link": "Go to external site"
+  "icon-label.mail": "Mail",
+  "icon-title.external-link": "Go to external site",
+  "icon-label.external-link": "External Link"
 });
