@@ -1,16 +1,11 @@
-# dependencies
-node_modules
-.env
+node_modules/
+dist/
+.DS_Store
+.vercel
+*.log
 
-# logs
-npm-debug.log
-yarn-error.log
+# ignore top-level vscode settings
+/.vscode/settings.json
 
-# Nuxt build
-.nuxt
-
-# Nuxt generate
-dist
-
-# PWA
-sw.*
+# do not commit .env files or any files that end with `.env`
+*.env

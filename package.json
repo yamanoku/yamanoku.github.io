@@ -3,12 +3,9 @@
   "author": "yamanoku <0910yama@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "dev:astro": "astro dev",
-    "build": "nuxt build",
-    "build:astro": "astro build",
-    "preview:astro": "astro preview",
-    "generate": "nuxt generate",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "lint": "yarn eslint && yarn markuplint",
     "eslint": "eslint --ext .ts,.astro --ignore-path .gitignore .",
     "eslint:fix": "eslint --fix --ext .ts,.astro --ignore-path .gitignore .",
@@ -19,12 +16,8 @@
     "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "7.3.1",
     "astro": "1.9.2",
-    "js-yaml-loader": "1.2.2",
-    "modern-normalize": "1.1.0",
-    "nuxt": "2.15.8",
-    "style-loader": "3.3.1"
+    "modern-normalize": "1.1.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.48.1",
