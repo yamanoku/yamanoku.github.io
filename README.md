@@ -5,7 +5,7 @@ Okuto Oyama Portfolio Site.
 
 ## Explaining portfolio site
 - [English](https://github.com/yamanoku/yamanoku.github.io/blob/dev/EXPLAINING_PORTFOLIO_SITE_EN.md)
-- [日本語](https://github.com/yamanoku/yamanoku.github.io/blob/dev/EXPLAINING_PORTFOLIO_SITE_JA.md)
+- [日本語](https://github.com/yamanoku/yamanoku.github.io/blob/dev/EXPLAINING_PORTFOLIO_SITE_ja.md)
 
 ## Web accessibility policy
 [WEB_ACCESSIBILITY_POLICY.md](./WEB_ACCESSIBILITY_POLICY.md) (Japanese Only)
