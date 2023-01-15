@@ -27,8 +27,6 @@
     "style-loader": "3.3.1"
   },
   "devDependencies": {
-    "@markuplint/vue-parser": "3.1.0",
-    "@markuplint/vue-spec": "3.1.0",
     "@typescript-eslint/eslint-plugin": "5.48.1",
     "@typescript-eslint/parser": "5.48.1",
     "eslint": "8.31.0",
