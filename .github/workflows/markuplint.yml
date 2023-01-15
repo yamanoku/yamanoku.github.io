@@ -5,7 +5,7 @@ on:
     branches:
       - dev
     paths:
-      - "*.astro"
+      - "**.astro"
 
 jobs:
   build:

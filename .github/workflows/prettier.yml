@@ -5,8 +5,8 @@ on:
     branches:
       - dev
     paths:
-      - "*.ts"
-      - "*.astro"
+      - "**.ts"
+      - "**.astro"
 
 jobs:
   build:
