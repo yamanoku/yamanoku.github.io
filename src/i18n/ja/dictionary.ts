@@ -1,6 +1,5 @@
 export default {
   // meta 情報
-  "meta.title": "ホーム | yamanoku.net",
   "meta.description": "大山奥人のポートフォリオサイト",
 
   // 見出し
