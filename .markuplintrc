@@ -1,18 +1,26 @@
 {
-  "rules": {
-    "no-hard-code-id": false
-  },
   "extends": [
     "markuplint:html-standard",
-    "markuplint:a11y",
-    "markuplint:recommended-vue"
+    "markuplint:a11y"
   ],
-  "parser": {
-    ".vue$": "@markuplint/vue-parser"
-  },
-  "parserOptions": {
-    "authoredElementName": ["nuxt"]
-  },
-  "specs": ["@markuplint/vue-spec"],
-  "excludeFiles": ["./node_modules/**/*"]
+  "nodeRules": [
+    {
+      "selector": "meta[property]",
+      "rules": {
+        "invalid-attr": {
+          "options": {
+            "attrs": {
+              "property": {
+                "type": "Any"
+              },
+              "content": {
+                "type": "Any"
+              }
+            }
+          }
+        },
+        "required-attr": false
+      }
+    }
+  ]
 }
