@@ -5,23 +5,24 @@ import "../../packages/yama-normalize";
 import { useTranslations } from "../i18n/util";
 
 const t = useTranslations(Astro);
+const pageTitle: string = Astro.props.title;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-<title>{t("meta.title")}</title>
-<meta name="title" content={t("meta.title")} />
+<title>{pageTitle}</title>
+<meta name="title" content={pageTitle} />
 <meta name="description" content={t("meta.description")} />
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={t("meta.title")} />
+<meta property="og:title" content={pageTitle} />
 <meta property="og:description" content={t("meta.description")} />
 <meta property="og:image" content="https://yamanoku.net/ogp/ogp@2x.png" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={t("meta.title")} />
+<meta property="twitter:title" content={pageTitle} />
 <meta property="twitter:description" content={t("meta.description")} />
 <meta property="twitter:image" content="https://yamanoku.net/ogp/ogp@2x.png" />
 <link rel="canonical" href={canonicalURL} />

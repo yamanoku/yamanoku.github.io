@@ -2,7 +2,6 @@ import { Dictionary } from "../translation-checkers";
 
 export default Dictionary({
   // meta infomation
-  "meta.title": "Home | yamanoku.net",
   "meta.description": "Okuto Oyama Portfolio Site",
 
   // heading

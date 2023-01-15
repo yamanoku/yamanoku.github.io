@@ -5,12 +5,13 @@ import GlobalFooter from "../components/global/GlobalFooter.astro";
 
 import { getLanguageFromURL } from "../i18n/util";
 const lang = getLanguageFromURL(Astro.url.pathname);
+const pageTitle: string = Astro.props.title;
 ---
 
 <!DOCTYPE html>
 <html lang={lang}>
   <head>
-    <BaseHead />
+    <BaseHead title={`${pageTitle} | yamanoku.net`} />
   </head>
   <body>
     <GlobalHeader />
