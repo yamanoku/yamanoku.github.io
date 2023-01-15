@@ -1,4 +1,4 @@
-name: Lint
+name: ESLint
 
 on:
   pull_request:
@@ -23,11 +23,10 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - name: yarn install and lint and prettier
+    - name: check eslint
       run: |
         yarn install
         yarn build
-        yarn lint
-        yarn prettier
+        yarn eslint
       env:
         CI: true
