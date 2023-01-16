@@ -1,4 +1,4 @@
-name: Build Checker
+name: Build HTML Checker
 
 on:
   pull_request:
