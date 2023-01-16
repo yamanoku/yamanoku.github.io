@@ -2,6 +2,8 @@ name: Build Checker
 
 on:
   pull_request:
+    types:
+      - opened
     branches:
       - dev
     paths:
