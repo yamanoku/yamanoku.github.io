@@ -1,0 +1,35 @@
+name: Build Checker
+
+on:
+  pull_request:
+    branches:
+      - dev
+    paths:
+      - "package.json"
+      - "yarn.lock"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: build check
+      run: |
+        rm yarn.lock
+        yarn install
+        yarn build
+    - name: check markuplint
+      run: |
+        yarn markuplint
+      env:
+        CI: true
