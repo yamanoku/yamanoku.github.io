@@ -1,0 +1,38 @@
+name: Build HTML Checker
+
+on:
+  pull_request:
+    types: [opened, synchronize, labeled]
+
+jobs:
+  build:
+    # プルリクエストに dependencies ラベルを付けたとき
+    # dependencies ラベルがついている状態で、 Push したとき
+    if: |
+      ((github.event.action == 'labeled') &&
+        (github.event.label.name == 'dependencies')) ||
+      ((github.event.action == 'synchronize') &&
+        contains(github.event.pull_request.labels.*.name, 'dependencies')
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: build check
+      run: |
+        rm yarn.lock
+        yarn install
+        yarn build
+    - name: check markuplint
+      run: |
+        yarn markuplint
+      env:
+        CI: true
