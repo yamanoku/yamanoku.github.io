@@ -2,16 +2,17 @@ name: Build HTML Checker
 
 on:
   pull_request:
-    types:
-      - opened
-    branches:
-      - dev
-    paths:
-      - "package.json"
-      - "yarn.lock"
+    types: [opened, synchronize, labeled]
 
 jobs:
   build:
+    # プルリクエストに dependencies ラベルを付けたとき
+    # dependencies ラベルがついている状態で、 Push したとき
+    if: |
+      ((github.event.action == 'labeled') &&
+        (github.event.label.name == 'dependencies')) ||
+      ((github.event.action == 'synchronize') &&
+        contains(github.event.pull_request.labels.*.name, 'dependencies')
 
     runs-on: ubuntu-latest
 
