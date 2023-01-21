@@ -5,5 +5,5 @@ export type DictionaryKeys = keyof typeof jaDictionary;
 export type Dict = Partial<typeof jaDictionary>;
 export type LanguageKeys = keyof typeof languages;
 
-/** Helper to type check a dictionary of string translations. */
+/** 文字列の翻訳をタイプチェックするヘルパー */
 export const Dictionary = (dict: Partial<typeof jaDictionary>) => dict;
