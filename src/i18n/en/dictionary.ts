@@ -43,7 +43,7 @@ export default Dictionary({
   "donate.description":
     "If you are interested in my work, presentations and activities, you can donate me by.",
 
-  // 多言語
+  // multilingual
   multilingual: "Multilingual Page",
 
   // icon

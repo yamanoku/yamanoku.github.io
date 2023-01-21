@@ -1,15 +1,6 @@
 import type { AstroGlobal } from "astro";
 import { Dict, DictionaryKeys, LanguageKeys } from "./translation-checkers";
 
-export function getLanguageFromURL(pathname: string) {
-  const langCodeMatch = pathname.match(/\/([a-z]{2}-?[a-z]{0,2})\//);
-  return langCodeMatch ? langCodeMatch[1] : "ja";
-}
-
-/**
- * Convert the map of modules returned by `import.meta.globEager` to an object
- * mapping the language code from each module’s filepath to the module’s default export.
- */
 function mapDefaultExports<T>(modules: Record<string, { default: T }>) {
   const exportMap: Record<string, T> = {};
   for (const [path, module] of Object.entries(modules)) {
@@ -27,13 +18,7 @@ const translations = mapDefaultExports<Dict>(
 const fallbackLang = "ja";
 
 /**
- * Create a helper function for getting translated strings.
- *
- * Within an Astro component, prefer the `UIString` component,
- * which only needs the key as it has access to the global Astro object.
- *
- * However, you can’t pass an Astro component as a prop to a framework component,
- * so this function creates a look-up method to get the string instead:
+ * 翻訳された文字列を取得するためのヘルパー関数
  *
  * @example
  * ---
@@ -58,4 +43,9 @@ export function useTranslationsForLang(
       console.error(`Missing translation for “${key}” in “${lang}”.`);
     return str;
   };
+}
+
+export function getLanguageFromURL(pathname: string) {
+  const langCodeMatch = pathname.match(/\/([a-z]{2}-?[a-z]{0,2})\//);
+  return langCodeMatch ? langCodeMatch[1] : "ja";
 }
