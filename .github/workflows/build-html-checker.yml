@@ -12,7 +12,7 @@ jobs:
       ((github.event.action == 'labeled') &&
         (github.event.label.name == 'dependencies')) ||
       ((github.event.action == 'synchronize') &&
-        contains(github.event.pull_request.labels.*.name, 'dependencies')
+        contains(github.event.pull_request.labels.*.name, 'dependencies'))
 
     runs-on: ubuntu-latest
 
