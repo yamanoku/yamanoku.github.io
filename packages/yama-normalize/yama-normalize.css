@@ -26,6 +26,7 @@
   --y-link-visited-color: var(--y-black-base);
   --y-outline-color: var(--y-blue-medium);
   --y-arcticle-border-color: var(--y-white-medium);
+  --y-image-border-color: var(--y-white-medium);
   --y-hr-border-color: var(--y-white-medium);
   --y-list-mark-color: var(--y-black-base);
   --y-blockquote-border-color: var(--y-blue-low);
@@ -45,6 +46,7 @@
     --y-link-visited-color: var(--y-purple-medium);
     --y-outline-color: var(--y-blue-low);
     --y-arcticle-border-color: var(--y-white-low);
+    --y-image-border-color: var(--y-white-low);
     --y-hr-border-color: var(--y-white-low);
     --y-list-mark-color: var(--y-white-low);
     --y-text-shadow-color: var(--y-black-base);
@@ -164,6 +166,7 @@ img {
   max-width: 100%;
   vertical-align: bottom;
   height: auto;
+  border: 1px solid var(--y-image-border-color);
 }
 figure {
   margin: var(--y-rhythm-3) 0;
