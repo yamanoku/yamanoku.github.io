@@ -19,10 +19,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.0.1.tgz#ed5d758c9824cc497361b632f1570d9ce2a4ce31"
   integrity sha512-77aacobLKcL98NmhK3OBS5EHIrX9gs1ckB/vGSIdkVZuB7u51V4jh05I6W0tSvG7/86tALv6QtHTRZ8rLhFTbQ==
 
-"@astrojs/compiler@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.1.0.tgz#ab77b1c9ed5dfa30588c99346974fb3038b96833"
-  integrity sha512-C4kTwirys+HafufMqaxCbML2wqkGaXJM+5AekXh/v1IIOnMIdcEON9GBYsG6qa8aAmLhZ58aUZGPhzcA3Dx7Uw==
+"@astrojs/compiler@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-1.2.0.tgz#26a544d40873df122754b4989888866d9f3c189b"
+  integrity sha512-O8yPCyuq+PU9Fjht2tIW6WzSWiq8qDF1e8uAX2x+SOGFzKqOznp52UlDG2mSf+ekf0Z3R34sb64O7SgX+asTxg==
 
 "@astrojs/language-server@^0.28.3":
   version "0.28.3"
@@ -1136,12 +1136,12 @@ astro-eslint-parser@^0.11.0:
     eslint-visitor-keys "^3.0.0"
     espree "^9.0.0"
 
-astro@2.0.16:
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.0.16.tgz#ebc24390f6b73edd7e55f08d1ba2573028a7129e"
-  integrity sha512-noQL+bbBZaCLbh7wmpVON+e4kDxymDsIQkEUzzuMKLQodYynxr/Sp7RBA/JnEqXz4CRyd7IrgeQBN0cKOuBtzQ==
+astro@2.0.17:
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.0.17.tgz#889ec009c0a9732570bbe90b7707ec0941258692"
+  integrity sha512-K/SAoe4Tfhg4XhOu1mFOp9qiC/m8YuBmL3//WAA+mcPTlg9A21nlXH/jmsfbizQdZn/AyoPrkTWQm1pnU05OsQ==
   dependencies:
-    "@astrojs/compiler" "^1.1.0"
+    "@astrojs/compiler" "^1.2.0"
     "@astrojs/language-server" "^0.28.3"
     "@astrojs/markdown-remark" "^2.0.1"
     "@astrojs/telemetry" "^2.0.1"
