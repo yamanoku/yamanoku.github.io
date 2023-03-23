@@ -16,7 +16,7 @@
     "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "astro": "2.1.4",
+    "astro": "2.1.5",
     "modern-normalize": "1.1.0"
   },
   "devDependencies": {
