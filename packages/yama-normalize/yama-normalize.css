@@ -237,6 +237,7 @@ address {
 }
 pre {
   margin: var(--y-rhythm-3) 0;
+  font-size: .8rem;
 }
 hr {
   margin: var(--y-rhythm-3) 0;
