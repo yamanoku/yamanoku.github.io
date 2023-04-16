@@ -64,11 +64,5 @@ export const listWrite: ListType[] = [
     url: "https://engineer.crowdworks.jp/entry/html-anatomische-tabell",
     datetime: "2022-04-19T17:00:00.000Z",
     isExternal: true
-  },
-  {
-    title: "Vue 2 からVue 3 に移行完了しました！",
-    url: "https://engineer.crowdworks.jp/entry/migrate-vue3",
-    datetime: "2022-03-02T12:00:00.000Z",
-    isExternal: true
   }
 ];
