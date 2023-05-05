@@ -38,6 +38,8 @@ export default Dictionary({
   "open-source-activity.descripion":
     "In addition to working for a company, I have been contributing to open source since 2020 in my spare time. I translate documents, propose accessibility improvements, respond to fixes, and make other minor corrections.",
   "open-source-activity.link-2021": "Open Source Activity Log 2021",
+  "open-source-activity.link-2022": "Open Source Activity Log 2022",
+  "open-source-activity.link-2023": "Open Source Activity Log 2023",
 
   // donate
   "donate.description":

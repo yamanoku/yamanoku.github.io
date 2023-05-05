@@ -36,6 +36,8 @@ export default {
   "open-source-activity.descripion":
     "企業に所属して働く傍ら、余暇時間を使って2020年よりオープンソースへのコントリビュート活動をしています。ドキュメントの翻訳やアクセシビリティ改善提案や修正対応、その他軽微な修正などを行っています。",
   "open-source-activity.link-2021": "オープンソース活動記録 2021年",
+  "open-source-activity.link-2022": "オープンソース活動記録 2022年",
+  "open-source-activity.link-2023": "オープンソース活動記録 2023年",
 
   // 寄付・支援
   "donate.description":
