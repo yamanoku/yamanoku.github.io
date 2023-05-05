@@ -30,6 +30,9 @@
   --y-hr-border-color: var(--y-white-medium);
   --y-list-mark-color: var(--y-black-base);
   --y-blockquote-border-color: var(--y-blue-low);
+  --y-thead-background-color: var(--y-white-low);
+  --y-thead-text-color: var(--y-black-base);
+  --y-table-border-color: var(--y-black-base);
   --y-rhythm-1: calc(var(--y-rhythm-base) * 1);
   --y-rhythm-2: calc(var(--y-rhythm-base) * 2);
   --y-rhythm-3: calc(var(--y-rhythm-base) * 3);
@@ -50,6 +53,8 @@
     --y-hr-border-color: var(--y-white-low);
     --y-list-mark-color: var(--y-white-low);
     --y-text-shadow-color: var(--y-black-base);
+    --y-thead-background-color: var(--y-white-medium);
+    --y-table-border-color: var(--y-white-low);
   }
 }
 
@@ -246,4 +251,27 @@ hr {
   height: 1px;
   border: 0;
   background-color: var(--y-hr-border-color);
+}
+table {
+  display: block;
+  overflow-x: scroll;
+  border-collapse: collapse;
+  width: max-content;
+  max-width: 100%;
+  margin: var(--y-rhythm-3) 0;
+}
+caption {
+  padding: 0 8px;
+  font-size: 1rem;
+  line-height: var(--y-rhythm-3);
+}
+thead {
+  background-color: var(--y-thead-background-color);
+  color: var(--y-thead-text-color);
+}
+th, td {
+  border: 1px solid var(--y-table-border-color);
+  padding: 0 8px;
+  font-size: .8rem;
+  line-height: var(--y-rhythm-3);
 }
