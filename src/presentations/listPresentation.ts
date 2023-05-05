@@ -58,11 +58,5 @@ export const listWrite: ListType[] = [
     url: "https://engineer.crowdworks.jp/entry/report-vue-fes-japan-online-2022",
     datetime: "2022-10-25T03:00:00.000Z",
     isExternal: true
-  },
-  {
-    title: "「HTML解体新書」HTMLのこれからと向き合うための本",
-    url: "https://engineer.crowdworks.jp/entry/html-anatomische-tabell",
-    datetime: "2022-04-19T17:00:00.000Z",
-    isExternal: true
   }
 ];
