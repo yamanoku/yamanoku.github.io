@@ -7,6 +7,13 @@ export type ListType = {
 
 export const listStage: ListType[] = [
   {
+    title:
+      "当事者不在でも変化してきたクラウドワークスのフロントエンド開発について",
+    url: "https://docs.google.com/presentation/d/e/2PACX-1vSeyDAwaa3AfYhhQDavajOc1ijSaJLO49_hFj_kvx2KetGvb6ozzlQ3VrQFjxaVCRr44XbId7lckT1k/pub?slide=id.p1",
+    datetime: "2023-05-17T12:30:00.000Z",
+    isExternal: true
+  },
+  {
     title: "JavaScript 開発のこれまでとこれから",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vQSVfknQSQjLyX64N2e-UqJAY14DNUc6AE4glPiIRi0bEPCidFajb9yCLZ4s2gpFyV5piKL3yiWsi8y/pub?slide=id.p1",
     datetime: "2023-03-21T14:15:00.000Z",
