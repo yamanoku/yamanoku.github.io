@@ -7,7 +7,8 @@ export type ListType = {
 
 export const listStage: ListType[] = [
   {
-    title: "当事者不在でも変化してきたクラウドワークスのフロントエンド開発について",
+    title:
+      "当事者不在でも変化してきたクラウドワークスのフロントエンド開発について",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vSeyDAwaa3AfYhhQDavajOc1ijSaJLO49_hFj_kvx2KetGvb6ozzlQ3VrQFjxaVCRr44XbId7lckT1k/pub?slide=id.p1",
     datetime: "2023-05-17T12:30:00.000Z",
     isExternal: true
