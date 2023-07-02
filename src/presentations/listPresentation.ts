@@ -7,10 +7,10 @@ export type ListType = {
 
 export const listStage: ListType[] = [
   {
-    title: 'WAI-ARIA の IDL 属性について',
-    url: 'https://scrapbox.io/yamanoku/WAI-ARIA_%E3%81%AE_IDL_%E5%B1%9E%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6',
+    title: "WAI-ARIA の IDL 属性について",
+    url: "https://scrapbox.io/yamanoku/WAI-ARIA_%E3%81%AE_IDL_%E5%B1%9E%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
     datetime: "2023-06-24T15:10:00.000Z",
-    isExternal: true,
+    isExternal: true
   },
   {
     title:
