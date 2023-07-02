@@ -7,6 +7,12 @@ export type ListType = {
 
 export const listStage: ListType[] = [
   {
+    title: "WAI-ARIA の IDL 属性について",
+    url: "https://scrapbox.io/yamanoku/WAI-ARIA_%E3%81%AE_IDL_%E5%B1%9E%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+    datetime: "2023-06-24T15:10:00.000Z",
+    isExternal: true
+  },
+  {
     title:
       "当事者不在でも変化してきたクラウドワークスのフロントエンド開発について",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vSeyDAwaa3AfYhhQDavajOc1ijSaJLO49_hFj_kvx2KetGvb6ozzlQ3VrQFjxaVCRr44XbId7lckT1k/pub?slide=id.p1",
@@ -29,13 +35,6 @@ export const listStage: ListType[] = [
     title: "Storybook でフロントエンド開発の治安を良くしていく話",
     url: "https://scrapbox.io/yamanoku/Storybook_%E3%81%A7%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E9%96%8B%E7%99%BA%E3%81%AE%E6%B2%BB%E5%AE%89%E3%82%92%E8%89%AF%E3%81%8F%E3%81%97%E3%81%A6%E3%81%84%E3%81%8F%E8%A9%B1",
     datetime: "2022-08-30T19:30:00.000Z",
-    isExternal: true
-  },
-  {
-    title:
-      "クラウドワークスのこれまでの取り組み、新たなミッションと考えるこれからについて",
-    url: "https://docs.google.com/presentation/d/e/2PACX-1vQct0iDIdaywmCjhbf49BKd5DMXLEtFlZbFs6cLfUmAfp1HVzO2jVIrym5bEmlpaIrnPxbj-pVggmeW/pub?slide=id.p1",
-    datetime: "2022-05-19T20:19:00.000Z",
     isExternal: true
   }
 ];
