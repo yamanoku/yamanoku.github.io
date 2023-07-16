@@ -12,6 +12,35 @@ const t = useTranslations(Astro);
   {lang === "en" && <em>Sorry, Japanese text only</em>}
   <h3 id="presentations-stage">{t("heading.presentations.stage")}</h3>
   <GlobalListComponent list={listStage} />
+  {
+    lang === "en" ? (
+      <p>
+        Please see{" "}
+        <a
+          href="https://github.com/yamanoku/records"
+          target="_blank"
+          rel="noopener"
+        >
+          Records
+          <ExternalLinkIcon />
+        </a>{" "}
+        for past stage.
+      </p>
+    ) : (
+      <p>
+        過去の登壇については
+        <a
+          href="https://github.com/yamanoku/records"
+          target="_blank"
+          rel="noopener"
+        >
+          Records
+          <ExternalLinkIcon />
+        </a>
+        を参照してください。
+      </p>
+    )
+  }
   <h3 id="presentations-write">{t("heading.presentations.write")}</h3>
   <GlobalListComponent list={listWrite} />
   {
