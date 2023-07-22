@@ -44,11 +44,5 @@ export default {
     "もし私の制作物や発表、活動に興味をもっていただけた場合以下より支援することができます。",
 
   // 多言語
-  multilingual: "多言語ページ",
-
-  // アイコン
-  "icon-title.github": "GitHub に移動する",
-  "icon-label.github": "GitHub",
-  "icon-title.mail": "メールアプリを立ち上げる",
-  "icon-label.mail": "メール"
+  multilingual: "多言語ページ"
 };
