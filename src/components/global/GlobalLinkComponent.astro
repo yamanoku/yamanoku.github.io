@@ -9,6 +9,6 @@ interface Props {
 const { link } = Astro.props;
 ---
 
-<a href={link.url}>
+<a rel={link.rel} href={link.url}>
   {link.title}
 </a>
