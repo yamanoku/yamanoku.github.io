@@ -1,7 +1,6 @@
 ---
 import GlobalListComponent from "../../global/GlobalListComponent.astro";
 import { listStage, listWrite } from "../../../presentations/listPresentation";
-import ExternalLinkIcon from "../../svg-icons/ExternalLinkIcon.astro";
 import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
 const lang = getLanguageFromURL(Astro.url.pathname);
 const t = useTranslations(Astro);
@@ -22,7 +21,6 @@ const t = useTranslations(Astro);
           rel="noopener"
         >
           Records
-          <ExternalLinkIcon />
         </a>{" "}
         for past stage.
       </p>
@@ -35,7 +33,6 @@ const t = useTranslations(Astro);
           rel="noopener"
         >
           Records
-          <ExternalLinkIcon />
         </a>
         を参照してください。
       </p>
@@ -49,7 +46,6 @@ const t = useTranslations(Astro);
         If you are looking for content older than 1 year, please visit{" "}
         <a href="https://archives.yamanoku.net" target="_blank" rel="noopener">
           Archives
-          <ExternalLinkIcon />
         </a>{" "}
         page.
       </p>
@@ -58,7 +54,6 @@ const t = useTranslations(Astro);
         1年以上前のコンテンツをお探しの場合、
         <a href="https://archives.yamanoku.net" target="_blank" rel="noopener">
           アーカイブ
-          <ExternalLinkIcon />
         </a>
         を参照してください。
       </p>
