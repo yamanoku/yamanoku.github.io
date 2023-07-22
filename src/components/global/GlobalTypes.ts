@@ -1,7 +1,6 @@
 export type LinkItem = {
   url?: string;
   title?: string;
-  isExternal?: boolean;
   isGitHubLink?: boolean;
 };
 

@@ -51,6 +51,4 @@ export default {
   "icon-label.github": "GitHub",
   "icon-title.mail": "メールアプリを立ち上げる",
   "icon-label.mail": "メール",
-  "icon-title.external-link": "外部サイトに移動する",
-  "icon-label.external-link": "外部リンク"
 };
