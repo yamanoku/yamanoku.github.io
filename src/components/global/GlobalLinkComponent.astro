@@ -1,7 +1,6 @@
 ---
 import type { LinkItem } from "./GlobalTypes";
 
-/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 interface Props {
   link: LinkItem;
 }
@@ -9,6 +8,6 @@ interface Props {
 const { link } = Astro.props;
 ---
 
-<a href={link.url}>
+<a rel={link.rel} href={link.url}>
   {link.title}
 </a>
