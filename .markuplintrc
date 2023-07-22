@@ -21,6 +21,16 @@
         },
         "required-attr": false
       }
+    },
+    {
+      "selector": "a[rel]",
+      "rules": {
+        "invalid-attr": {
+          "options": {
+            "allowAttrs": ["rel", "me"]
+          }
+        }
+      }
     }
   ]
 }
