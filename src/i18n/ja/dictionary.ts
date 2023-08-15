@@ -14,6 +14,7 @@ export default {
   "heading.donate": "寄付・支援",
   "heading.contact": "連絡先",
   "heading.open-source-activity": "オープンソース活動",
+  "heading.daily-journal": "日報",
 
   // 基本情報
   "info.real-name": "本名",

@@ -16,6 +16,7 @@ export default Dictionary({
   "heading.donate": "Donate & Sponsor",
   "heading.contact": "Contact",
   "heading.open-source-activity": "Open Source Activity",
+  "heading.daily-journal": "Daily journal",
 
   // basic Info
   "info.real-name": "Real name",
