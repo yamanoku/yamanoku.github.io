@@ -1466,10 +1466,10 @@ astro-eslint-parser@^0.16.0:
     espree "^9.0.0"
     semver "^7.3.8"
 
-astro@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-3.2.0.tgz#699fca50f3c424ed562bae660d78d0813821e528"
-  integrity sha512-sDQnSFV46ZzNkVU6co5f8wilZFmGiWsqnIVoMhd5/XPU76iZdA40WqFyBOhGaji7hGuqbcjN8MGobMg53lsoUg==
+astro@3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-3.2.2.tgz#2630cae4d4bcfb0de36fa3f27d3a6c1ff6bedfc7"
+  integrity sha512-vLOOGyD2g1HRkCQAFHmHUrVAbMI5sgUqKignBMtXNantgEq1P17sL2cvH0Yy2ibNN9DHZ/4TknXmwHAig8PJNg==
   dependencies:
     "@astrojs/compiler" "^2.1.0"
     "@astrojs/internal-helpers" "0.2.0"
