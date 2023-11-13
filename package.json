@@ -26,7 +26,7 @@
     "eslint-plugin-astro": "0.29.1",
     "gh-pages": "6.0.0",
     "markuplint": "3.14.0",
-    "prettier": "3.0.3",
+    "prettier": "3.1.0",
     "prettier-plugin-astro": "0.12.1"
   },
   "workspaces": [
