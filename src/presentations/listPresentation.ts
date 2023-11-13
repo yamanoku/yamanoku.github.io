@@ -35,6 +35,11 @@ export const listStage: ListType[] = [
 
 export const listWrite: ListType[] = [
   {
+    title: "Vue Fes Japan 2023 参加レポート",
+    url: "https://engineer.crowdworks.jp/entry/report-vue-fes-japan-2023",
+    datetime: "2022-11-08T15:00:00.000Z"
+  },
+  {
     title: "ありがとう Webpacker さようなら Webpacker",
     url: "https://engineer.crowdworks.jp/entry/thanks_webpacker_goodbye_webpacker",
     datetime: "2022-12-13T12:00:00.000Z"
@@ -54,10 +59,5 @@ export const listWrite: ListType[] = [
     title: "Vue Fes Japan Online 2022 参加レポート",
     url: "https://engineer.crowdworks.jp/entry/report-vue-fes-japan-online-2022",
     datetime: "2022-10-25T03:00:00.000Z"
-  },
-  {
-    title: "「HTML解体新書」HTMLのこれからと向き合うための本",
-    url: "https://engineer.crowdworks.jp/entry/html-anatomische-tabell",
-    datetime: "2022-04-19T17:00:00.000Z"
   }
 ];
