@@ -35,10 +35,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/internal-helpers/-/internal-helpers-0.2.1.tgz#4e2e6aabaa9819f17119aa10f413c4d6122c94cf"
   integrity sha512-06DD2ZnItMwUnH81LBLco3tWjcZ1lGU9rLCCBaeUCGYe9cI0wKyY2W3kDyoW1I6GmcWgt1fu+D1CTvz+FIKf8A==
 
-"@astrojs/markdown-remark@3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/markdown-remark/-/markdown-remark-3.4.0.tgz#fc15c737d41d6689223790323cb373b0fa673a7b"
-  integrity sha512-uzLSKBQ4e70aH8gEbBHZ2pnv/KOJKB3WrXFBOF0U5Uwjcr2LNWeIBLjPRQjA4tbtteELh84YPBHny21mhvBGVA==
+"@astrojs/markdown-remark@3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/markdown-remark/-/markdown-remark-3.5.0.tgz#548069043bf574cf3db95d0ac0ea251a7ae99a3a"
+  integrity sha512-q7vdIqzYhxpsfghg2YmkmSXCfp4w7lBTYP+SSHw89wVhC5Riltr3u8w2otBRxNLSByNi+ht/gGkFC23Shetytw==
   dependencies:
     "@astrojs/prism" "^3.0.0"
     github-slugger "^2.0.0"
@@ -1473,14 +1473,14 @@ astro-eslint-parser@^0.16.0:
     espree "^9.0.0"
     semver "^7.3.8"
 
-astro@3.5.3:
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-3.5.3.tgz#bf3166ea79748369b149ee163fb3ea41768d4c23"
-  integrity sha512-08ya96yvQLdZjwYYpylzDTUGcyuA+Kw9zIT2RHfL7VzXtLTL1ZxhQjSo6CiTBH8Tcrdam88Fez+Q1awwKKajGw==
+astro@3.5.4:
+  version "3.5.4"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-3.5.4.tgz#a0cbd3811963d30f522c5c00af42684a16139e55"
+  integrity sha512-tyOd2o9KDz9hDaHmYvnY7BbRxeQ1yDxoOW4AVlxAnmHOK6068k6Bivr/C4Wlc6ON40lZ/qIDG9gfNkiEhMEVow==
   dependencies:
     "@astrojs/compiler" "^2.3.0"
     "@astrojs/internal-helpers" "0.2.1"
-    "@astrojs/markdown-remark" "3.4.0"
+    "@astrojs/markdown-remark" "3.5.0"
     "@astrojs/telemetry" "3.0.4"
     "@babel/core" "^7.22.10"
     "@babel/generator" "^7.22.10"
