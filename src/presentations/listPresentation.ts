@@ -6,6 +6,11 @@ export type ListType = {
 
 export const listStage: ListType[] = [
   {
+    title: "画面遷移のアクセシビリティ課題を解決しうる Navigation API への期待",
+    url: "https://docs.google.com/presentation/d/e/2PACX-1vSosGMESLA5IiR4NPz3i2u8XF_wkHsqP80pHA1a4q-Gmk9CIFkUobNc5pMvJj6Tth0PEGmoExmalOQj/pub?slide=id.p1",
+    datetime: "2023-11-19T19:40:00.000Z"
+  },
+  {
     title: "画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法",
     url: "https://yamanoku.net/vuefes-japan-2023/ja/",
     datetime: "2023-10-28T13:30:00.000Z"
@@ -25,11 +30,6 @@ export const listStage: ListType[] = [
     title: "JavaScript 開発のこれまでとこれから",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vQSVfknQSQjLyX64N2e-UqJAY14DNUc6AE4glPiIRi0bEPCidFajb9yCLZ4s2gpFyV5piKL3yiWsi8y/pub?slide=id.p1",
     datetime: "2023-03-21T14:15:00.000Z"
-  },
-  {
-    title: "Vue.js でアクセシブルなコンポーネントをつくるために",
-    url: "https://speakerdeck.com/yamanoku/to-make-accessible-components-in-vuejs",
-    datetime: "2022-10-16T13:55:00.000Z"
   }
 ];
 
