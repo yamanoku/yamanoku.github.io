@@ -25,7 +25,7 @@
   "devDependencies": {
     "@yamanoku/stylelint-config": "0.0.7",
     "stylelint": "16.0.2",
-    "stylelint-config-recommended": "13.0.0"
+    "stylelint-config-recommended": "14.0.0"
   },
   "stylelint": {
     "extends": "@yamanoku/stylelint-config"
