@@ -25,10 +25,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.0.0.tgz#79bfe897b228a9d953240ddd9a9381a5c59dcf7d"
   integrity sha512-SKVWorXpOHff+OuZCd5kdTc5HxVX7bVXVXYP0jANT4crz7y2PdthUxMnE21iuYt4+Bq3aV5MId4OdgwlJ2/d/Q==
 
-"@astrojs/compiler@^2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.3.2.tgz#78001a4a86c3f2cf4bc80db46b13f6188fbb01da"
-  integrity sha512-jkY7bCVxl27KeZsSxIZ+pqACe+g8VQUdTiSJRj/sXYdIaZlW3ZMq4qF2M17P/oDt3LBq0zLNwQr4Cb7fSpRGxQ==
+"@astrojs/compiler@^2.3.4":
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.3.4.tgz#4dbc169de1f071508bf30db390890f16cb266416"
+  integrity sha512-33/YtWoBCE0cBUNy1kh78FCDXBoBANX87ShgATlAHECYbG2+buNTAgq4Xgz4t5NgnEHPN21GIBC2Mvvwisoutw==
 
 "@astrojs/internal-helpers@0.2.1":
   version "0.2.1"
@@ -1425,12 +1425,12 @@ astro-eslint-parser@^0.16.0:
     espree "^9.0.0"
     semver "^7.3.8"
 
-astro@4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-4.0.5.tgz#36d06dec35568ac67485186de2d77d5f50c93cfb"
-  integrity sha512-OTiTEiXYdXTkVJXNNKIWdYG1z2wpTST+92Qcldm36x91Pe4fKpLxeuRloy5cW175oHi8lvXytgG3Gl3VBP18RQ==
+astro@4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-4.0.6.tgz#353ed2db7c1619086a5b5f5253ea1a3cbcceb780"
+  integrity sha512-P7CfFqWKzkJozzF6IoOC6qoI2ONndV8P3ULhGDgMiXPL7xVkWI5haTBSpyrcjBx643tVXspIRsSV/v+Cx+CjGw==
   dependencies:
-    "@astrojs/compiler" "^2.3.2"
+    "@astrojs/compiler" "^2.3.4"
     "@astrojs/internal-helpers" "0.2.1"
     "@astrojs/markdown-remark" "4.0.1"
     "@astrojs/telemetry" "3.0.4"
