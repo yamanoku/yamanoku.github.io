@@ -23,12 +23,11 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@yamanoku/stylelint-config": "0.0.7",
     "stylelint": "16.0.2",
     "stylelint-config-recommended": "14.0.0"
   },
   "stylelint": {
-    "extends": "@yamanoku/stylelint-config"
+    "extends": "stylelint-config-recommended"
   },
   "gitHead": "460c76c71b0401ea0304f2b36537e3579391ae3c"
 }
