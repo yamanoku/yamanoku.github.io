@@ -211,9 +211,9 @@ ul:not([class]) li::before {
   border-radius: 50%;
   color: #fff;
   content: "";
-  width: 6px;
-  height: 6px;
-  margin: 9px 0 0;
+  width: .35em;
+  height: .35em;
+  margin: calc(.6em) 0 0;
   position: absolute;
   left: 0;
 }
