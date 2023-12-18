@@ -180,8 +180,8 @@ figure {
   align-items: center;
 }
 figcaption {
-  margin-top: var(--y-rhythm-3);
-  font-size: 1rem;
+  margin-top: var(--y-rhythm-2);
+  font-size: .8em;
 }
 small {
   line-height: 1;
