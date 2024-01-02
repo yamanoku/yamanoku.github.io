@@ -26,12 +26,13 @@ const t = useTranslations(Astro);
       }
     ]}
   />
-  <article id="donate" aria-labelledby="donate_heading" class="donate">
+  <article id="donate" aria-labelledby="donate_heading" class="border border-solid border-y-white-medium pt-y-rhythm-3 pl-y-rhythm-3 pr-y-rhythm-3 before:hidden">
     <div>
       <em id="donate_heading">{t("heading.donate")}</em>
     </div>
     <p>{t("donate.description")}</p>
     <GlobalListComponent
+      class="mb-0"
       list={[
         {
           title: "GitHub Sponsors",
@@ -50,17 +51,3 @@ const t = useTranslations(Astro);
   </article>
 </section>
 
-<style is:global>
-  .donate {
-    border: 1px solid var(--y-arcticle-border-color);
-    padding-top: var(--y-rhythm-3);
-    padding-left: var(--y-rhythm-3);
-    padding-right: var(--y-rhythm-3);
-  }
-  .donate::before {
-    display: none;
-  }
-  .donate > ul {
-    margin-bottom: 0;
-  }
-</style>

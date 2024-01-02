@@ -4,57 +4,23 @@ const lang = getLanguageFromURL(Astro.url.pathname);
 const t = useTranslations(Astro);
 ---
 
-<header>
-  <div class="header-logo-link-block">
+<header class="max-w-[80ch] m-auto py-0 px-y-rhythm-2">
+  <div class="flex my-y-rhythm-2 mx-0">
     <svg
-      width="246"
-      height="242"
+      width="48"
+      height="48"
       viewBox="0 0 246 242"
       role="img"
       aria-label="yamanoku logo"
     >
       <path
-        class="cls-1"
-        d="M64,67v54l82,82-46,46v60h56L310,155V96H230l-21,20L160,67H64ZM176,203l-45,46h25L293,113H230l-39,39-31-31H94Z"
-      ></path>
+        class="translate-x-[-64px] translate-y-[-67px] fill-[#36465d] dark:fill-y-white-base"
+        fill-rule="evenodd"
+        d="M64,67v54l82,82-46,46v60h56L310,155V96H230l-21,20L160,67H64ZM176,203l-45,46h25L293,113H230l-39,39-31-31H94Z"></path>
     </svg>
   </div>
-  <nav aria-label={t("multilingual")}>
+  <nav class="flex flex-wrap justify-start items-center gap-y-rhythm-2" aria-label={t("multilingual")}>
     <a href="/" aria-current={lang === "ja" && "page"}>日本語ページ</a>
     <a href="/en/" aria-current={lang === "en" && "page"}>English Page</a>
   </nav>
 </header>
-<style>
-  header {
-    max-width: 80ch;
-    margin: auto;
-    padding: 0 var(--y-rhythm-2);
-  }
-  .header-logo-link-block {
-    display: inline-block;
-    margin: var(--y-rhythm-2) 0;
-  }
-  svg {
-    width: 48px;
-    height: 48px;
-    vertical-align: middle;
-  }
-  .cls-1 {
-    fill: rgb(54, 70, 93);
-    fill-rule: evenodd;
-    transform: translate(-64px, -67px);
-  }
-  @media (prefers-color-scheme: dark) {
-    .cls-1 {
-      fill: var(--y-white-base);
-    }
-  }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    grid-gap: var(--y-rhythm-2);
-    gap: var(--y-rhythm-2);
-  }
-</style>
