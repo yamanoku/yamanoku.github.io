@@ -1,6 +1,7 @@
 ---
 import GlobalLinkComponent from "./GlobalLinkComponent.astro";
 import type { ListItem } from "./GlobalTypes";
+const { class: className } = Astro.props;
 
 interface Props {
   list: ListItem[];
@@ -13,12 +14,14 @@ const dateStirngReplace = (date: string) => {
 };
 ---
 
-<ul>
+<ul class={className}>
   {
     list.map(listItem => (
       <li>
         {listItem.datetime && (
-          <span class="time">{dateStirngReplace(listItem.datetime)} - </span>
+          <span class="tabular-nums">
+            {dateStirngReplace(listItem.datetime)} -{" "}
+          </span>
         )}
         {listItem.url ? (
           <GlobalLinkComponent link={listItem} />
@@ -29,9 +32,3 @@ const dateStirngReplace = (date: string) => {
     ))
   }
 </ul>
-
-<style>
-  .time {
-    font-variant-numeric: tabular-nums;
-  }
-</style>
