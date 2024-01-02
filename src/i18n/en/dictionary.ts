@@ -4,6 +4,9 @@ export default Dictionary({
   // meta infomation
   "meta.description": "Okuto Oyama Portfolio Site",
 
+  // header
+  "header.text-beside-logo": "Portal Site",
+
   // heading
   "heading.basic": "Basic Info",
   "heading.jobs": "Career Info",

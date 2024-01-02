@@ -2,6 +2,9 @@ export default {
   // meta 情報
   "meta.description": "大山奥人のポートフォリオサイト",
 
+  // header
+  "header.text-beside-logo": "ポータルサイト",
+
   // 見出し
   "heading.basic": "基本情報",
   "heading.jobs": "職業",
