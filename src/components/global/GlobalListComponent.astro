@@ -19,7 +19,9 @@ const dateStirngReplace = (date: string) => {
     list.map(listItem => (
       <li>
         {listItem.datetime && (
-          <span class="tabular-nums">{dateStirngReplace(listItem.datetime)} - </span>
+          <span class="tabular-nums">
+            {dateStirngReplace(listItem.datetime)} -{" "}
+          </span>
         )}
         {listItem.url ? (
           <GlobalLinkComponent link={listItem} />
