@@ -4,6 +4,7 @@
 
 ### 利用技術
 - Astro
+- Tailwind CSS
 - ESLint
   - eslint-plugin-astro
 - Markuplint

@@ -4,6 +4,7 @@
 
 ### Technology stack
 - Astro
+- Tailwind CSS
 - ESLint
   - eslint-plugin-astro
 - Markuplint
