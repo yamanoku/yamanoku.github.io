@@ -1,9 +1,12 @@
 ---
 import GlobalLinkComponent from "./GlobalLinkComponent.astro";
 const today = new Date();
+const foo = "hello"
 ---
 
 <footer class="text-center">
+  <button><div>hoge</div></button>
+  <p set:html={foo}>!</p>
   <p>&copy; Copyright {today.getFullYear()}, Okuto Oyama</p>
   <p>
     Source :
