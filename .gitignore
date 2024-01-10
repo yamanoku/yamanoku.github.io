@@ -3,6 +3,7 @@ dist/
 .DS_Store
 .vercel
 *.log
+.yarn
 
 # ignore top-level vscode settings
 /.vscode/settings.json
