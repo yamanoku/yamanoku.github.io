@@ -3220,29 +3220,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-compat-utils@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "eslint-compat-utils@npm:0.1.2"
+"eslint-compat-utils@npm:^0.2.0":
+  version: 0.2.1
+  resolution: "eslint-compat-utils@npm:0.2.1"
+  dependencies:
+    semver: "npm:^7.5.4"
   peerDependencies:
     eslint: ">=6.0.0"
-  checksum: 023fe1422eb5dfebe71e118fe144836f28c06b1f4d55ef4c1c42ec2dbfa3e09f19287b0092881aad307429cf247fec9ade603e050392033106d26bc981d82ee5
+  checksum: 10dd0df7fae2ca89a963645069210917ab0c1c8c5dd9cda1cef3febfe5dbb35d911bd4a1f7a8b75bb3c86418d56c760bc16360080d78d96d075341a48cce22fc
   languageName: node
   linkType: hard
 
-"eslint-plugin-astro@npm:0.31.0":
-  version: 0.31.0
-  resolution: "eslint-plugin-astro@npm:0.31.0"
+"eslint-plugin-astro@npm:0.31.1":
+  version: 0.31.1
+  resolution: "eslint-plugin-astro@npm:0.31.1"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.2.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
     "@typescript-eslint/types": "npm:^5.25.0"
     astro-eslint-parser: "npm:^0.16.0"
-    eslint-compat-utils: "npm:^0.1.2"
+    eslint-compat-utils: "npm:^0.2.0"
     postcss: "npm:^8.4.14"
     postcss-selector-parser: "npm:^6.0.10"
   peerDependencies:
     eslint: ">=7.0.0"
-  checksum: d6f6f403278f846cc4d8a9643e74e5df6530d3c119fbe90842397ed2a9801ef79115b071941f53e5c3e8d1b7a4aea3e2fa86b05247e9209ab8ec47d571d6c039
+  checksum: 8a5c3007bbea54e6475526af460c13d563f62b5aee2b033cf5e47b71707bd751bb350ed7e1b02ee7202190c945bab53b4d771477ab14326c3b8bf83f962daa9d
   languageName: node
   linkType: hard
 
@@ -8956,7 +8958,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:6.18.1"
     astro: "npm:4.1.2"
     eslint: "npm:8.56.0"
-    eslint-plugin-astro: "npm:0.31.0"
+    eslint-plugin-astro: "npm:0.31.1"
     gh-pages: "npm:6.1.1"
     markuplint: "npm:3.15.0"
     modern-normalize: "npm:2.0.0"
