@@ -6813,14 +6813,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-astro@npm:0.12.3":
-  version: 0.12.3
-  resolution: "prettier-plugin-astro@npm:0.12.3"
+"prettier-plugin-astro@npm:0.13.0":
+  version: 0.13.0
+  resolution: "prettier-plugin-astro@npm:0.13.0"
   dependencies:
     "@astrojs/compiler": "npm:^1.5.5"
     prettier: "npm:^3.0.0"
     sass-formatter: "npm:^0.7.6"
-  checksum: 6b07f86855fe742aa3ba32f87d4bd49365f182ee8d28e94e0f1cbc524c7fa49cef48545d5cbaccd3502cd872f1e085b03b2bd3371b9ad98e5329624d330950ad
+  checksum: 45936be6f5fdc293941291595b44c7ffe4d199ad2a4284f8fa793d638771622d36df12e216e2ba9ab955a3a1342620e77c9e57f135da7dea5ccd8286d8e66cec
   languageName: node
   linkType: hard
 
@@ -8970,7 +8970,7 @@ __metadata:
     markuplint: "npm:3.15.0"
     modern-normalize: "npm:2.0.0"
     prettier: "npm:3.2.4"
-    prettier-plugin-astro: "npm:0.12.3"
+    prettier-plugin-astro: "npm:0.13.0"
     tailwindcss: "npm:3.4.1"
   languageName: unknown
   linkType: soft
