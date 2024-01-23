@@ -43,10 +43,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^2.3.4":
-  version: 2.3.4
-  resolution: "@astrojs/compiler@npm:2.3.4"
-  checksum: 445b2faed9e7a8856126ce66477c97fc646b7cf9a259f43a060e73851ebf8b1fd31a2b8484b5c2ab0e1cc49c2cdff1c2eb5b79ca79ca28748e1fde53dab65431
+"@astrojs/compiler@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "@astrojs/compiler@npm:2.5.0"
+  checksum: 3644e5cd1dfd7ffc3fefb7995f8ed910c6e16f28b6c4bc28a0bf28632e5b2ed5dfa720a57090521d39d03d628727f4e65fb2be22270f5b406048868f8c527d28
   languageName: node
   linkType: hard
 
@@ -57,9 +57,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:4.1.0":
-  version: 4.1.0
-  resolution: "@astrojs/markdown-remark@npm:4.1.0"
+"@astrojs/markdown-remark@npm:4.2.0":
+  version: 4.2.0
+  resolution: "@astrojs/markdown-remark@npm:4.2.0"
   dependencies:
     "@astrojs/prism": "npm:^3.0.0"
     github-slugger: "npm:^2.0.0"
@@ -75,7 +75,7 @@ __metadata:
     unified: "npm:^11.0.4"
     unist-util-visit: "npm:^5.0.0"
     vfile: "npm:^6.0.1"
-  checksum: 9f3bc5468b605150a24eae38b9be21dbce418df348f557c43f80f7944a20b1e5d94f7d2d3ee9895e58f2b29b2b0b588a68eaf744818f089b3c05509925ec2d70
+  checksum: 16f6874332f7c38ddc0acc58c31c953d6f028d40e568217f4eff3cdb7860ab7eee4dcf708c9f079c582e35bb1a20b205cbdf9ef5b7b5d2e1e242351ea3761c29
   languageName: node
   linkType: hard
 
@@ -1972,13 +1972,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.2.1":
-  version: 4.2.1
-  resolution: "astro@npm:4.2.1"
+"astro@npm:4.2.3":
+  version: 4.2.3
+  resolution: "astro@npm:4.2.3"
   dependencies:
-    "@astrojs/compiler": "npm:^2.3.4"
+    "@astrojs/compiler": "npm:^2.5.0"
     "@astrojs/internal-helpers": "npm:0.2.1"
-    "@astrojs/markdown-remark": "npm:4.1.0"
+    "@astrojs/markdown-remark": "npm:4.2.0"
     "@astrojs/telemetry": "npm:3.0.4"
     "@babel/core": "npm:^7.23.3"
     "@babel/generator": "npm:^7.23.3"
@@ -2045,7 +2045,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 27dd1d04c5a6e9595a15caa0824baa1904b6905bac258188702693efd626a2fe1515735753eaf6d3086cc603061971081321f3d247913ae95c593c2b8ab15b5e
+  checksum: 92b5dbb47cb9264f35a0b7b1f451162c313a53953387a4ca86f6272f83da21b26b87abbe1032aa8db742e25c430031bab1cb64aa5f48852c4d5cf3a1dfba138b
   languageName: node
   linkType: hard
 
@@ -8974,7 +8974,7 @@ __metadata:
     "@astrojs/tailwind": "npm:5.1.0"
     "@typescript-eslint/eslint-plugin": "npm:6.19.1"
     "@typescript-eslint/parser": "npm:6.19.1"
-    astro: "npm:4.2.1"
+    astro: "npm:4.2.3"
     eslint: "npm:8.56.0"
     eslint-plugin-astro: "npm:0.31.3"
     gh-pages: "npm:6.1.1"
