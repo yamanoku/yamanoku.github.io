@@ -1972,9 +1972,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.2.3":
-  version: 4.2.3
-  resolution: "astro@npm:4.2.3"
+"astro@npm:4.2.4":
+  version: 4.2.4
+  resolution: "astro@npm:4.2.4"
   dependencies:
     "@astrojs/compiler": "npm:^2.5.0"
     "@astrojs/internal-helpers": "npm:0.2.1"
@@ -2035,7 +2035,7 @@ __metadata:
     tsconfck: "npm:^3.0.0"
     unist-util-visit: "npm:^5.0.0"
     vfile: "npm:^6.0.1"
-    vite: "npm:^5.0.10"
+    vite: "npm:^5.0.12"
     vitefu: "npm:^0.2.5"
     which-pm: "npm:^2.1.1"
     yargs-parser: "npm:^21.1.1"
@@ -2045,7 +2045,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 92b5dbb47cb9264f35a0b7b1f451162c313a53953387a4ca86f6272f83da21b26b87abbe1032aa8db742e25c430031bab1cb64aa5f48852c4d5cf3a1dfba138b
+  checksum: c69749982dcdc9c34e9c42fa5c0dd132fdbb7e72a7662ade0451ec6ecacd230bb2e478e5f9a8d2e72e397eea71fea6fbf6bb92ef448c6064d371bf66d28029fc
   languageName: node
   linkType: hard
 
@@ -8753,7 +8753,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.0.10":
+"vite@npm:^5.0.12":
   version: 5.0.12
   resolution: "vite@npm:5.0.12"
   dependencies:
@@ -8974,7 +8974,7 @@ __metadata:
     "@astrojs/tailwind": "npm:5.1.0"
     "@typescript-eslint/eslint-plugin": "npm:6.19.1"
     "@typescript-eslint/parser": "npm:6.19.1"
-    astro: "npm:4.2.3"
+    astro: "npm:4.2.4"
     eslint: "npm:8.56.0"
     eslint-plugin-astro: "npm:0.31.3"
     gh-pages: "npm:6.1.1"
