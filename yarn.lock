@@ -57,9 +57,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:4.2.0":
-  version: 4.2.0
-  resolution: "@astrojs/markdown-remark@npm:4.2.0"
+"@astrojs/markdown-remark@npm:4.2.1":
+  version: 4.2.1
+  resolution: "@astrojs/markdown-remark@npm:4.2.1"
   dependencies:
     "@astrojs/prism": "npm:^3.0.0"
     github-slugger: "npm:^2.0.0"
@@ -75,7 +75,7 @@ __metadata:
     unified: "npm:^11.0.4"
     unist-util-visit: "npm:^5.0.0"
     vfile: "npm:^6.0.1"
-  checksum: 10c0/16f6874332f7c38ddc0acc58c31c953d6f028d40e568217f4eff3cdb7860ab7eee4dcf708c9f079c582e35bb1a20b205cbdf9ef5b7b5d2e1e242351ea3761c29
+  checksum: 10c0/4afc661c94e59c984f5074f9ad83c6c4985470d3e956936aad85d5509a01858db02e88fdc7a914958e35854b333f5dec92b1b65afade2329f1d26105aee42b24
   languageName: node
   linkType: hard
 
@@ -1972,13 +1972,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.2.6":
-  version: 4.2.6
-  resolution: "astro@npm:4.2.6"
+"astro@npm:4.2.7":
+  version: 4.2.7
+  resolution: "astro@npm:4.2.7"
   dependencies:
     "@astrojs/compiler": "npm:^2.5.0"
     "@astrojs/internal-helpers": "npm:0.2.1"
-    "@astrojs/markdown-remark": "npm:4.2.0"
+    "@astrojs/markdown-remark": "npm:4.2.1"
     "@astrojs/telemetry": "npm:3.0.4"
     "@babel/core": "npm:^7.23.3"
     "@babel/generator": "npm:^7.23.3"
@@ -2046,7 +2046,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/d9fa39ca9b283271ae2005b47a8bdbf2faf111e19795223bc0f34e3eeae523d8c4652d088cdbf88a78bc2fd6bdf0e13eb4d3cec45d700e75663984561c062328
+  checksum: 10c0/5bfa6c0e3ab2cf7fc7620bdf42e80096f749e420f85365aefbc96c9dd975dcb4f4e405be9cf8ce47179ecbe98157bf394e58fb5b2e1076af9107dc2a5fe4debb
   languageName: node
   linkType: hard
 
@@ -8975,7 +8975,7 @@ __metadata:
     "@astrojs/tailwind": "npm:5.1.0"
     "@typescript-eslint/eslint-plugin": "npm:6.20.0"
     "@typescript-eslint/parser": "npm:6.20.0"
-    astro: "npm:4.2.6"
+    astro: "npm:4.2.7"
     eslint: "npm:8.56.0"
     eslint-plugin-astro: "npm:0.31.3"
     gh-pages: "npm:6.1.1"
