@@ -43,10 +43,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^2.5.0":
-  version: 2.5.0
-  resolution: "@astrojs/compiler@npm:2.5.0"
-  checksum: 10c0/3644e5cd1dfd7ffc3fefb7995f8ed910c6e16f28b6c4bc28a0bf28632e5b2ed5dfa720a57090521d39d03d628727f4e65fb2be22270f5b406048868f8c527d28
+"@astrojs/compiler@npm:^2.5.3":
+  version: 2.5.3
+  resolution: "@astrojs/compiler@npm:2.5.3"
+  checksum: 10c0/b2cdbdc2e951297874bb335d5b07ab7ed92a239ac9dca60bd6b886da5b6a4dded3cadda04f2b6efde7475e9a7bb9fab164570ea1ffe0e62e0af48484133643b3
   languageName: node
   linkType: hard
 
@@ -1854,11 +1854,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.3.2":
-  version: 4.3.2
-  resolution: "astro@npm:4.3.2"
+"astro@npm:4.3.3":
+  version: 4.3.3
+  resolution: "astro@npm:4.3.3"
   dependencies:
-    "@astrojs/compiler": "npm:^2.5.0"
+    "@astrojs/compiler": "npm:^2.5.3"
     "@astrojs/internal-helpers": "npm:0.2.1"
     "@astrojs/markdown-remark": "npm:4.2.1"
     "@astrojs/telemetry": "npm:3.0.4"
@@ -1928,7 +1928,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/daf339f6b7b5942d72fec808c8428c0757747b52d16d58512ff10fe32ce4a4187891f0a145f5465085942ef333e8eb3a77e3076c5d4a68c3715aff8d663068f8
+  checksum: 10c0/0990d2a2bac88c04449da1f321878bb68f0f9938d8ff33b158cfb30252e75c508fe537b97660a3cbdda39e941938a2ed40b4931bf9218f862ffcd80a26f24e8d
   languageName: node
   linkType: hard
 
@@ -8103,7 +8103,7 @@ __metadata:
     "@astrojs/tailwind": "npm:5.1.0"
     "@typescript-eslint/eslint-plugin": "npm:6.21.0"
     "@typescript-eslint/parser": "npm:6.21.0"
-    astro: "npm:4.3.2"
+    astro: "npm:4.3.3"
     eslint: "npm:8.56.0"
     eslint-plugin-astro: "npm:0.31.4"
     gh-pages: "npm:6.1.1"
