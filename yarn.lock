@@ -1854,9 +1854,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.3.5":
-  version: 4.3.5
-  resolution: "astro@npm:4.3.5"
+"astro@npm:4.3.6":
+  version: 4.3.6
+  resolution: "astro@npm:4.3.6"
   dependencies:
     "@astrojs/compiler": "npm:^2.5.3"
     "@astrojs/internal-helpers": "npm:0.2.1"
@@ -1912,7 +1912,8 @@ __metadata:
     semver: "npm:^7.5.4"
     server-destroy: "npm:^1.0.1"
     sharp: "npm:^0.32.6"
-    shikiji: "npm:^0.9.18"
+    shikiji: "npm:^0.9.19"
+    shikiji-core: "npm:^0.9.19"
     string-width: "npm:^7.0.0"
     strip-ansi: "npm:^7.1.0"
     tsconfck: "npm:^3.0.0"
@@ -1928,7 +1929,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/cf2b499a9c04c25b22eb74f568673708255a6e025c1db65b6b970ebc53f33e7504af92146590b88ac186e6695d20417e5a11eaeb33f80161f59cdfef4a949755
+  checksum: 10c0/1f7e09ea85b2558c17b1539175c312e854be4c2d0bfe2219ccbba9c7c103a7533f7903636a25ad6989078f8f29586084a4655cd48e10bab5b59d3e87ce652f3d
   languageName: node
   linkType: hard
 
@@ -6927,14 +6928,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shikiji-core@npm:0.9.19":
+"shikiji-core@npm:0.9.19, shikiji-core@npm:^0.9.19":
   version: 0.9.19
   resolution: "shikiji-core@npm:0.9.19"
   checksum: 10c0/1032439de1da5193e8ecee0f92d550d43738c1d4f282010794c183d0dff4e9f37f5ff3156186be518ad6f8536cca6f25adbc0643ab0a3111a89e59c5f02ba439
   languageName: node
   linkType: hard
 
-"shikiji@npm:^0.9.18":
+"shikiji@npm:^0.9.18, shikiji@npm:^0.9.19":
   version: 0.9.19
   resolution: "shikiji@npm:0.9.19"
   dependencies:
@@ -8129,7 +8130,7 @@ __metadata:
     "@astrojs/tailwind": "npm:5.1.0"
     "@typescript-eslint/eslint-plugin": "npm:6.21.0"
     "@typescript-eslint/parser": "npm:6.21.0"
-    astro: "npm:4.3.5"
+    astro: "npm:4.3.6"
     eslint: "npm:8.56.0"
     eslint-plugin-astro: "npm:0.31.4"
     gh-pages: "npm:6.1.1"
