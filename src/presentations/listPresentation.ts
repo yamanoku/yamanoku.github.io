@@ -34,6 +34,11 @@ export const listStage: ListType[] = [
 
 export const listWrite: ListType[] = [
   {
+    title: "eslint-plugin-vuejs-accessibility入門",
+    url: "https://zenn.dev/comm_vue_nuxt/articles/eslint-plugin-vuejs-accessibility-introduction",
+    datetime: "2024-02-18T14:30:00.000Z"
+  },
+  {
     title: "crowdworks.jp のフロントエンド活動を振り返る2023",
     url: "https://engineer.crowdworks.jp/entry/crowdworksjp_frontend_2023",
     datetime: "2023-12-01T09:30:00.000Z"
@@ -53,10 +58,5 @@ export const listWrite: ListType[] = [
       "クラウドワークス #accessibility チャンネル 気になる話題 Pickup 2022",
     url: "https://zenn.dev/yamanoku/scraps/afe08c2634034c",
     datetime: "2022-12-12T00:00:00.000Z"
-  },
-  {
-    title: "crowdworks.jp のフロントエンド活動を振り返る 2022",
-    url: "https://engineer.crowdworks.jp/entry/crowdworks_frontend_2022",
-    datetime: "2022-12-01T12:00:00.000Z"
   }
 ];
