@@ -1861,9 +1861,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.4.4":
-  version: 4.4.4
-  resolution: "astro@npm:4.4.4"
+"astro@npm:4.4.5":
+  version: 4.4.5
+  resolution: "astro@npm:4.4.5"
   dependencies:
     "@astrojs/compiler": "npm:^2.5.3"
     "@astrojs/internal-helpers": "npm:0.2.1"
@@ -1935,7 +1935,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/880a3d424138d7ca898d44942aafdcf04147735adf18ae25527e9e906704a0ff5d106f30595707baa3ae72c15aa3ffedd0cca2b91659e40743e5249e6299b9e4
+  checksum: 10c0/078d3dc03bee22bef0b1b2a2c26384e627a015525914e7ce3a8225ea220480eaac3ae27ad42e223e1490a7458fc36c22c1138b61ac66e3e3761a59bd0dedfde2
   languageName: node
   linkType: hard
 
@@ -8086,7 +8086,7 @@ __metadata:
     "@astrojs/tailwind": "npm:5.1.0"
     "@typescript-eslint/eslint-plugin": "npm:7.0.2"
     "@typescript-eslint/parser": "npm:7.0.2"
-    astro: "npm:4.4.4"
+    astro: "npm:4.4.5"
     eslint: "npm:8.57.0"
     eslint-plugin-astro: "npm:0.31.4"
     gh-pages: "npm:6.1.1"
