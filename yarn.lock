@@ -1861,9 +1861,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.4.6":
-  version: 4.4.6
-  resolution: "astro@npm:4.4.6"
+"astro@npm:4.4.9":
+  version: 4.4.9
+  resolution: "astro@npm:4.4.9"
   dependencies:
     "@astrojs/compiler": "npm:^2.5.3"
     "@astrojs/internal-helpers": "npm:0.2.1"
@@ -1925,7 +1925,7 @@ __metadata:
     tsconfck: "npm:^3.0.0"
     unist-util-visit: "npm:^5.0.0"
     vfile: "npm:^6.0.1"
-    vite: "npm:^5.1.2"
+    vite: "npm:^5.1.4"
     vitefu: "npm:^0.2.5"
     which-pm: "npm:^2.1.1"
     yargs-parser: "npm:^21.1.1"
@@ -1935,7 +1935,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/22f7274ef31027231a44d8b251611b3f1971108e2436894394c2e912140f9b6a7239e37bedafe6bbf58adb19b5e60c191b6c04e6111d32449bca2da1ea77af23
+  checksum: 10c0/466de719b5813dcdc72e137a824f40625bfc31644d9f74a3b71b8c9a9cc1aae6c45b9451f4fe885615d8cc299b327385591781d1c910d70a4718c3e9e7ce1395
   languageName: node
   linkType: hard
 
@@ -7891,9 +7891,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.1.2":
-  version: 5.1.3
-  resolution: "vite@npm:5.1.3"
+"vite@npm:^5.1.4":
+  version: 5.1.4
+  resolution: "vite@npm:5.1.4"
   dependencies:
     esbuild: "npm:^0.19.3"
     fsevents: "npm:~2.3.3"
@@ -7927,7 +7927,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/d3b19607d736de60b660f7daf4c0f86589edcbbc1fcb09f8aa36630f99518cc8a063062bb952899b8ccaed62f1314fac22c1df492dd035de3c65998ab27e2d2a
+  checksum: 10c0/8f04c8bed33f266bde27f432412456a3b893b51fe1857f0b8cd259100b376c1393a7927db1dd6344a4376baed72ed179ec5b0428aef2ae8508f1f28f95acb908
   languageName: node
   linkType: hard
 
@@ -8095,7 +8095,7 @@ __metadata:
     "@astrojs/tailwind": "npm:5.1.0"
     "@typescript-eslint/eslint-plugin": "npm:7.1.0"
     "@typescript-eslint/parser": "npm:7.1.0"
-    astro: "npm:4.4.6"
+    astro: "npm:4.4.9"
     eslint: "npm:8.57.0"
     eslint-plugin-astro: "npm:0.31.4"
     gh-pages: "npm:6.1.1"
