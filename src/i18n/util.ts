@@ -1,5 +1,9 @@
 import type { AstroGlobal } from "astro";
-import { Dict, DictionaryKeys, LanguageKeys } from "./translation-checkers";
+import type {
+  Dict,
+  DictionaryKeys,
+  LanguageKeys
+} from "./translation-checkers";
 
 function mapDefaultExports<T>(modules: Record<string, { default: T }>) {
   const exportMap: Record<string, T> = {};
