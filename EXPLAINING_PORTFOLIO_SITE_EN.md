@@ -5,11 +5,8 @@
 ### Technology stack
 - Astro
 - Tailwind CSS
-- ESLint
-  - eslint-plugin-astro
+- Biome
 - Markuplint
-- Prettier
-  - prettier-plugin-astro
 - modern-normalize
 
 See [package.json](https://github.com/yamanoku/yamanoku.github.io/blob/dev/package.json) for more details.
