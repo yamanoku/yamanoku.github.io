@@ -7,8 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "lint": "yarn biome && yarn markuplint",
-    "biome": "biome check --apply **/*.{astro,ts}",
-    "biome:ci": "biome ci **/*.{astro,ts}",
+    "biome": "biome check --apply .",
+    "biome:ci": "biome ci .",
     "markuplint": "markuplint 'dist/**/*.html'",
     "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
