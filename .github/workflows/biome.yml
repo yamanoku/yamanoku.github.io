@@ -28,6 +28,6 @@ jobs:
     - name: check biome
       run: |
         yarn install
-        yarn biome
+        yarn biome:ci
       env:
         CI: true
