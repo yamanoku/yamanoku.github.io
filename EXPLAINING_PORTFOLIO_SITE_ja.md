@@ -5,11 +5,8 @@
 ### 利用技術
 - Astro
 - Tailwind CSS
-- ESLint
-  - eslint-plugin-astro
+- Biome
 - Markuplint
-- Prettier
-  - prettier-plugin-astro
 - modern-normalize
 
 詳細をもっと知るには [package.json](https://github.com/yamanoku/yamanoku.github.io/blob/dev/package.json) をご覧ください。
