@@ -6,13 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "lint": "yarn eslint && yarn markuplint",
-    "eslint": "eslint --ext .ts,.astro --ignore-path .gitignore .",
-    "eslint:fix": "eslint --fix --ext .ts,.astro --ignore-path .gitignore .",
+    "lint": "yarn biome && yarn markuplint",
+    "biome": "biome check --apply **/*.{astro,ts}",
     "markuplint": "markuplint 'dist/**/*.html'",
-    "prettier": "yarn prettier:ts && yarn prettier:astro",
-    "prettier:ts": "prettier --check 'src/**/*.ts'",
-    "prettier:astro": "prettier --check 'src/**/*.astro'",
     "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
@@ -23,15 +19,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.0",
-    "@typescript-eslint/eslint-plugin": "7.1.1",
-    "@typescript-eslint/parser": "7.1.1",
-    "eslint": "8.57.0",
-    "eslint-plugin-astro": "0.31.4",
     "gh-pages": "6.1.1",
-    "markuplint": "4.3.0",
-    "prettier": "3.2.5",
-    "prettier-plugin-astro": "0.13.0",
-    "typescript": "5.4.2"
+    "markuplint": "4.3.0"
   },
   "workspaces": [
     "packages/*"
