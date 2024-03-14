@@ -1249,7 +1249,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shikijs/core@npm:1.1.7, @shikijs/core@npm:^1.1.2":
+"@shikijs/core@npm:1.1.7":
   version: 1.1.7
   resolution: "@shikijs/core@npm:1.1.7"
   checksum: 10c0/ee59b88d4c81422792651c0ca52ff378c3035f9d1e4907b58c1d6da06fad02d530775a2e6f43bb033832cd3d2a5f69c9aa4eb5b6b05311396acc503f15442f37
@@ -1618,9 +1618,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.5.2":
-  version: 4.5.2
-  resolution: "astro@npm:4.5.2"
+"astro@npm:4.5.3":
+  version: 4.5.3
+  resolution: "astro@npm:4.5.3"
   dependencies:
     "@astrojs/compiler": "npm:^2.7.0"
     "@astrojs/internal-helpers": "npm:0.3.0"
@@ -1632,7 +1632,6 @@ __metadata:
     "@babel/plugin-transform-react-jsx": "npm:^7.22.5"
     "@babel/traverse": "npm:^7.23.3"
     "@babel/types": "npm:^7.23.3"
-    "@shikijs/core": "npm:^1.1.2"
     "@types/babel__core": "npm:^7.20.4"
     acorn: "npm:^8.11.2"
     aria-query: "npm:^5.3.0"
@@ -1663,7 +1662,6 @@ __metadata:
     js-yaml: "npm:^4.1.0"
     kleur: "npm:^4.1.4"
     magic-string: "npm:^0.30.3"
-    mdast-util-to-hast: "npm:13.0.2"
     mime: "npm:^3.0.0"
     ora: "npm:^7.0.1"
     p-limit: "npm:^5.0.0"
@@ -1692,7 +1690,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/29f8df7cba04b09427fd137ffcf2775ea7512c3d26075a3cb4c4f29222861006486584523bb69fe01e563552ea9dd14d58615b852357d434381e84baf404dfb8
+  checksum: 10c0/e79233bab8b78b4200bcc37e30c5cc6c273246c51b22a0875410524417f629481cabfbbc288e80a7acb84d9a6c9fdb75aec0b042c0cc62b158f1444d0140e786
   languageName: node
   linkType: hard
 
@@ -4405,7 +4403,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdast-util-to-hast@npm:13.0.2, mdast-util-to-hast@npm:^13.0.0":
+"mdast-util-to-hast@npm:^13.0.0":
   version: 13.0.2
   resolution: "mdast-util-to-hast@npm:13.0.2"
   dependencies:
@@ -7332,7 +7330,7 @@ __metadata:
   dependencies:
     "@astrojs/tailwind": "npm:5.1.0"
     "@biomejs/biome": "npm:1.6.1"
-    astro: "npm:4.5.2"
+    astro: "npm:4.5.3"
     gh-pages: "npm:6.1.1"
     markuplint: "npm:4.3.0"
     modern-normalize: "npm:2.0.0"
