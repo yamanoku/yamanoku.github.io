@@ -36,9 +36,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:4.3.1":
-  version: 4.3.1
-  resolution: "@astrojs/markdown-remark@npm:4.3.1"
+"@astrojs/markdown-remark@npm:4.3.2":
+  version: 4.3.2
+  resolution: "@astrojs/markdown-remark@npm:4.3.2"
   dependencies:
     "@astrojs/prism": "npm:^3.0.0"
     github-slugger: "npm:^2.0.0"
@@ -58,7 +58,7 @@ __metadata:
     unist-util-visit: "npm:^5.0.0"
     unist-util-visit-parents: "npm:^6.0.0"
     vfile: "npm:^6.0.1"
-  checksum: 10c0/4bbfc19cd94bb0d6a18dee009a224f95088802163714972bfe0480736ba087a067331034660b71040afe9b172d610e0754264733ddffedd8a0001409dc25a826
+  checksum: 10c0/39a3add360fec697a46e05f23b11752b26188b1ce034399de52c87157e970f145a573f795337eef1508f3e5b749de489c1efdc2dd8653ccbf5da3f312bf35cae
   languageName: node
   linkType: hard
 
@@ -1743,13 +1743,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.5.9":
-  version: 4.5.9
-  resolution: "astro@npm:4.5.9"
+"astro@npm:4.5.10":
+  version: 4.5.10
+  resolution: "astro@npm:4.5.10"
   dependencies:
     "@astrojs/compiler": "npm:^2.7.0"
     "@astrojs/internal-helpers": "npm:0.3.0"
-    "@astrojs/markdown-remark": "npm:4.3.1"
+    "@astrojs/markdown-remark": "npm:4.3.2"
     "@astrojs/telemetry": "npm:3.0.4"
     "@babel/core": "npm:^7.24.3"
     "@babel/generator": "npm:^7.23.3"
@@ -1815,7 +1815,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/fe4c791f626325f300c4429a39c43f97ec84738ad16091ae4612835808608fb55a048a39ad3c5196ea93df4da5c58787bc74216f9de0d1ca1d5bd5a01ee2ef56
+  checksum: 10c0/bd610b9810756cd5b66f099a36227a8962828c9c5426d028dab0398211883f1b76fb3279578f9fbbac0ed65b6098fe36d25cf213be83b42922761825098037b9
   languageName: node
   linkType: hard
 
@@ -7474,7 +7474,7 @@ __metadata:
   dependencies:
     "@astrojs/tailwind": "npm:5.1.0"
     "@biomejs/biome": "npm:1.6.3"
-    astro: "npm:4.5.9"
+    astro: "npm:4.5.10"
     gh-pages: "npm:6.1.1"
     markuplint: "npm:4.4.0"
     modern-normalize: "npm:2.0.0"
