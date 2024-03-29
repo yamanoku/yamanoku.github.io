@@ -29,10 +29,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/internal-helpers@npm:0.3.0":
-  version: 0.3.0
-  resolution: "@astrojs/internal-helpers@npm:0.3.0"
-  checksum: 10c0/5208199c237feec67ef0f708744484448a3eb57c9950f3ab2fd0020f501985099ebf5db80fb0728817968c17d6da692fb6767d7229b1bc413155224c132dca50
+"@astrojs/internal-helpers@npm:0.4.0":
+  version: 0.4.0
+  resolution: "@astrojs/internal-helpers@npm:0.4.0"
+  checksum: 10c0/52f760cad24a18aac3a73342b0e2e89fe787e79a7cbe83d7a49063d2b11fc37721324005e0020fb517a7264a08b8e7c590493dc6c41c6d9c0dbddc16f3b92036
   languageName: node
   linkType: hard
 
@@ -1743,12 +1743,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.5.10":
-  version: 4.5.10
-  resolution: "astro@npm:4.5.10"
+"astro@npm:4.5.12":
+  version: 4.5.12
+  resolution: "astro@npm:4.5.12"
   dependencies:
     "@astrojs/compiler": "npm:^2.7.0"
-    "@astrojs/internal-helpers": "npm:0.3.0"
+    "@astrojs/internal-helpers": "npm:0.4.0"
     "@astrojs/markdown-remark": "npm:4.3.2"
     "@astrojs/telemetry": "npm:3.0.4"
     "@babel/core": "npm:^7.24.3"
@@ -1815,7 +1815,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/bd610b9810756cd5b66f099a36227a8962828c9c5426d028dab0398211883f1b76fb3279578f9fbbac0ed65b6098fe36d25cf213be83b42922761825098037b9
+  checksum: 10c0/9963135ca5722c90fa4b8492c302a9fe7b260ea5ec05495258821902802930d07b86b3db20193bd489f0dd1bdbeedd96a8f183e052710ae12b1665ae6dad4ddc
   languageName: node
   linkType: hard
 
@@ -7474,7 +7474,7 @@ __metadata:
   dependencies:
     "@astrojs/tailwind": "npm:5.1.0"
     "@biomejs/biome": "npm:1.6.3"
-    astro: "npm:4.5.10"
+    astro: "npm:4.5.12"
     gh-pages: "npm:6.1.1"
     markuplint: "npm:4.4.0"
     modern-normalize: "npm:2.0.0"
