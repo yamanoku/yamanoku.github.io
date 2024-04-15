@@ -1925,9 +1925,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.6.0":
-  version: 4.6.0
-  resolution: "astro@npm:4.6.0"
+"astro@npm:4.6.1":
+  version: 4.6.1
+  resolution: "astro@npm:4.6.1"
   dependencies:
     "@astrojs/compiler": "npm:^2.7.1"
     "@astrojs/internal-helpers": "npm:0.4.0"
@@ -1997,7 +1997,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/97d45b683d43d5d899ce2da25bb535bf9a22c1a7e26dcf25e8bfbbdaf1172f6640bb5d6f56a2087a913781523522e417e81d850e1aee85deba179623a64955f9
+  checksum: 10c0/142f2f01e185b863e1a3b0ecac81a6c8bcadc10bccc4f12c0a0161b013522d54369f7766c48761b2e4d47b5c17deabf7d46cd9ed0a71c4715468f789ce0833c6
   languageName: node
   linkType: hard
 
@@ -7735,7 +7735,7 @@ __metadata:
   dependencies:
     "@astrojs/tailwind": "npm:5.1.0"
     "@biomejs/biome": "npm:1.6.4"
-    astro: "npm:4.6.0"
+    astro: "npm:4.6.1"
     gh-pages: "npm:6.1.1"
     markuplint: "npm:4.5.0"
     modern-normalize: "npm:2.0.0"
