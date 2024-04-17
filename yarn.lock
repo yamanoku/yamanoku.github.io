@@ -1597,6 +1597,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cookie@npm:^0.5.4":
+  version: 0.5.4
+  resolution: "@types/cookie@npm:0.5.4"
+  checksum: 10c0/c5111f8c71fedabf0ccdfdf183676fc3aa89e146653e9ed87e5ea3780f33a46dde1ace06bf04374dcc363a0ef8db91e41060e9861199226c9a4deaa27fde03ba
+  languageName: node
+  linkType: hard
+
 "@types/css-tree@npm:2.3.7":
   version: 2.3.7
   resolution: "@types/css-tree@npm:2.3.7"
@@ -1925,9 +1932,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.6.1":
-  version: 4.6.1
-  resolution: "astro@npm:4.6.1"
+"astro@npm:4.6.2":
+  version: 4.6.2
+  resolution: "astro@npm:4.6.2"
   dependencies:
     "@astrojs/compiler": "npm:^2.7.1"
     "@astrojs/internal-helpers": "npm:0.4.0"
@@ -1940,6 +1947,7 @@ __metadata:
     "@babel/traverse": "npm:^7.23.3"
     "@babel/types": "npm:^7.23.3"
     "@types/babel__core": "npm:^7.20.4"
+    "@types/cookie": "npm:^0.5.4"
     acorn: "npm:^8.11.2"
     aria-query: "npm:^5.3.0"
     axobject-query: "npm:^4.0.0"
@@ -1997,7 +2005,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/142f2f01e185b863e1a3b0ecac81a6c8bcadc10bccc4f12c0a0161b013522d54369f7766c48761b2e4d47b5c17deabf7d46cd9ed0a71c4715468f789ce0833c6
+  checksum: 10c0/b08f4c95c1562a60ade2969f589d307eb2ae44a0a5e6ef20446a8a79897778884fb55354a0bae64b97fd25704aad3a426252dc3d6946f2a7cbff490d25bf85d0
   languageName: node
   linkType: hard
 
@@ -7735,7 +7743,7 @@ __metadata:
   dependencies:
     "@astrojs/tailwind": "npm:5.1.0"
     "@biomejs/biome": "npm:1.7.0"
-    astro: "npm:4.6.1"
+    astro: "npm:4.6.2"
     gh-pages: "npm:6.1.1"
     markuplint: "npm:4.6.0"
     modern-normalize: "npm:2.0.0"
