@@ -6,6 +6,11 @@ export type ListType = {
 
 export const listStage: ListType[] = [
   {
+    title: "令和最新静的サイトジェネレーター事情",
+    url: "https://scrapbox.io/yamanoku/%E4%BB%A4%E5%92%8C%E6%9C%80%E6%96%B0%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E4%BA%8B%E6%83%85",
+    datetime: "2024-04-25T19:30:00.000Z"
+  },
+  {
     title: "Svelte Accessibility Warning",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vQ8UFLM2Rxnx-pf8ZI9SgU5ZKY5hPpLQa060LHDQ9fu4ddHVPJO_ECDOomNlSp6a0PyeL6UNc36kt6r/pub?slide=id.p1",
     datetime: "2024-02-22T20:30:00.000Z"
@@ -24,11 +29,6 @@ export const listStage: ListType[] = [
     title: "画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法",
     url: "https://yamanoku.net/vuefes-japan-2023/ja/",
     datetime: "2023-10-28T13:30:00.000Z"
-  },
-  {
-    title: "WAI-ARIA の IDL 属性について",
-    url: "https://scrapbox.io/yamanoku/WAI-ARIA_%E3%81%AE_IDL_%E5%B1%9E%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
-    datetime: "2023-06-24T15:10:00.000Z"
   }
 ];
 
