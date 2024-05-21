@@ -6,6 +6,11 @@ export type ListType = {
 
 export const listStage: ListType[] = [
   {
+    title: "日本企業のアクセシビリティ事例をコツコツと収集している話",
+    url: "https://docs.google.com/presentation/d/e/2PACX-1vT22K28-kR821F3K_4UGLhx1UVD1EmyC5hoqGGUjtMO9Glg_btK048U8Vth1oMnjCTWaBTxXaRlGqL_/pub?slide=id.p1",
+    datetime: "2024-05-20T19:30:00.000Z"
+  },
+  {
     title: "令和最新静的サイトジェネレーター事情",
     url: "https://scrapbox.io/yamanoku/%E4%BB%A4%E5%92%8C%E6%9C%80%E6%96%B0%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E4%BA%8B%E6%83%85",
     datetime: "2024-04-25T19:30:00.000Z"
@@ -24,11 +29,6 @@ export const listStage: ListType[] = [
     title: "画面遷移のアクセシビリティ課題を解決しうる Navigation API への期待",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vSosGMESLA5IiR4NPz3i2u8XF_wkHsqP80pHA1a4q-Gmk9CIFkUobNc5pMvJj6Tth0PEGmoExmalOQj/pub?slide=id.p1",
     datetime: "2023-11-19T19:40:00.000Z"
-  },
-  {
-    title: "画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法",
-    url: "https://yamanoku.net/vuefes-japan-2023/ja/",
-    datetime: "2023-10-28T13:30:00.000Z"
   }
 ];
 
