@@ -34,6 +34,11 @@ export const listStage: ListType[] = [
 
 export const listWrite: ListType[] = [
   {
+    title: "TSKaigi 2024参加レポート",
+    url: "https://engineer.crowdworks.jp/entry/report-tskaigi-2024",
+    datetime: "2024-05-16T10:00:00.000Z"
+  },
+  {
     title: "eslint-plugin-vuejs-accessibility入門",
     url: "https://zenn.dev/comm_vue_nuxt/articles/eslint-plugin-vuejs-accessibility-introduction",
     datetime: "2024-02-18T14:30:00.000Z"
@@ -52,11 +57,5 @@ export const listWrite: ListType[] = [
     title: "ありがとう Webpacker さようなら Webpacker",
     url: "https://engineer.crowdworks.jp/entry/thanks_webpacker_goodbye_webpacker",
     datetime: "2022-12-13T12:00:00.000Z"
-  },
-  {
-    title:
-      "クラウドワークス #accessibility チャンネル 気になる話題 Pickup 2022",
-    url: "https://zenn.dev/yamanoku/scraps/afe08c2634034c",
-    datetime: "2022-12-12T00:00:00.000Z"
   }
 ];
