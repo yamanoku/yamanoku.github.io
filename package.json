@@ -19,7 +19,7 @@
     "tailwindcss": "3.4.4"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.2",
+    "@biomejs/biome": "1.8.3",
     "gh-pages": "6.1.1",
     "markuplint": "4.9.2"
   },
