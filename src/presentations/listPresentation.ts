@@ -34,6 +34,11 @@ export const listStage: ListType[] = [
 
 export const listWrite: ListType[] = [
   {
+    title: "SPA のアクセシビリティを強化する Nuxt の Route Announcer 機能",
+    url: "https://zenn.dev/comm_vue_nuxt/articles/feat-nuxt-route-announcer",
+    datetime: "2024-07-02T12:30:00.000Z"
+  },
+  {
     title: "TSKaigi 2024参加レポート",
     url: "https://engineer.crowdworks.jp/entry/report-tskaigi-2024",
     datetime: "2024-05-16T10:00:00.000Z"
@@ -52,10 +57,5 @@ export const listWrite: ListType[] = [
     title: "Vue Fes Japan 2023 参加レポート",
     url: "https://engineer.crowdworks.jp/entry/report-vue-fes-japan-2023",
     datetime: "2023-11-08T15:00:00.000Z"
-  },
-  {
-    title: "ありがとう Webpacker さようなら Webpacker",
-    url: "https://engineer.crowdworks.jp/entry/thanks_webpacker_goodbye_webpacker",
-    datetime: "2022-12-13T12:00:00.000Z"
   }
 ];
