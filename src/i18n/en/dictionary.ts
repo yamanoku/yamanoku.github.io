@@ -44,6 +44,7 @@ export default Dictionary({
   "open-source-activity.link-2021": "Open Source Activity Log 2021",
   "open-source-activity.link-2022": "Open Source Activity Log 2022",
   "open-source-activity.link-2023": "Open Source Activity Log 2023",
+  "open-source-activity.link-2024": "Open Source Activity Log 2024",
 
   // donate
   "donate.description":
