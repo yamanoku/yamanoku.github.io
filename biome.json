@@ -17,7 +17,7 @@
   "javascript": {
     "formatter": {
       "indentStyle": "space",
-      "trailingComma": "none"
+      "trailingCommas": "none"
     }
   },
   "linter": {
