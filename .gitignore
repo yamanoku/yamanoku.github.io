@@ -4,6 +4,7 @@ dist/
 .vercel
 *.log
 .yarn
+.astro/
 
 # ignore top-level vscode settings
 /.vscode/settings.json
