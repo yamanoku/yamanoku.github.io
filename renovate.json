@@ -1,8 +1,10 @@
 {
   "extends": [
     "config:base",
-    "group:monorepos"
+    "group:monorepos",
+    "customManagers:biomeVersions"
   ],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["dependencies"],
   "dependencyDashboard": false,
   "automerge": true,
