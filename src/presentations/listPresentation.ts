@@ -6,6 +6,12 @@ export type ListType = {
 
 export const listStage: ListType[] = [
   {
+    title:
+      "ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと",
+    url: "https://yamanoku.net/frontendo-2024/ja/",
+    datetime: "2024-08-24T13:20:00.000Z"
+  },
+  {
     title: "日本企業のアクセシビリティ事例をコツコツと収集している話",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vT22K28-kR821F3K_4UGLhx1UVD1EmyC5hoqGGUjtMO9Glg_btK048U8Vth1oMnjCTWaBTxXaRlGqL_/pub?slide=id.p1",
     datetime: "2024-05-20T19:30:00.000Z"
@@ -24,11 +30,6 @@ export const listStage: ListType[] = [
     title: "2020年から2023年までのCSSの変遷を振り返る",
     url: "https://scrapbox.io/yamanoku/2020%E5%B9%B4%E3%81%8B%E3%82%892023%E5%B9%B4%E3%81%BE%E3%81%A7%E3%81%AECSS%E3%81%AE%E5%A4%89%E9%81%B7%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8B",
     datetime: "2023-12-01T20:00:00.000Z"
-  },
-  {
-    title: "画面遷移のアクセシビリティ課題を解決しうる Navigation API への期待",
-    url: "https://docs.google.com/presentation/d/e/2PACX-1vSosGMESLA5IiR4NPz3i2u8XF_wkHsqP80pHA1a4q-Gmk9CIFkUobNc5pMvJj6Tth0PEGmoExmalOQj/pub?slide=id.p1",
-    datetime: "2023-11-19T19:40:00.000Z"
   }
 ];
 
