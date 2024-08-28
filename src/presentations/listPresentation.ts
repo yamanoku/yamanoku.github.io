@@ -7,7 +7,7 @@ export type ListType = {
 export const listStage: ListType[] = [
   {
     title:
-      "ブラウザ互換の​重要性 - あらゆる​ユーザーに​価値を​届ける​ために​必要な​こと",
+      "ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと",
     url: "https://yamanoku.net/frontendo-2024/ja/",
     datetime: "2024-08-24T13:20:00.000Z"
   },
