@@ -4,7 +4,11 @@ export type ListType = {
   datetime: string;
 };
 
-export const listStage: ListType[] = [
+type ExactPresantationLengthArray<T> = {
+  length: 5;
+} & T[];
+
+export const listStage: ExactPresantationLengthArray<ListType> = [
   {
     title:
       "ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと",
@@ -33,7 +37,7 @@ export const listStage: ListType[] = [
   }
 ];
 
-export const listWrite: ListType[] = [
+export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
     title: "Vue Fes Japanの歴代スピーカー一覧を見られるページを作った",
     url: "https://zenn.dev/yamanoku/articles/vuefes-japan-speakers",
