@@ -39,7 +39,8 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
-    title: "フロントエンドカンファレンス北海道でブラウザ互換についての発表をしてきました #frontendo",
+    title:
+      "フロントエンドカンファレンス北海道でブラウザ互換についての発表をしてきました #frontendo",
     url: "https://qiita.com/okuto_oyama/items/d15a5e49530a93848366",
     datetime: "2024-09-11T12:00:00.000Z"
   },
