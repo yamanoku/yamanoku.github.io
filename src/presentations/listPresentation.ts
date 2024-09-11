@@ -4,7 +4,11 @@ export type ListType = {
   datetime: string;
 };
 
-export const listStage: ListType[] = [
+type ExactPresantationLengthArray<T> = {
+  length: 5;
+} & T[];
+
+export const listStage: ExactPresantationLengthArray<ListType> = [
   {
     title:
       "ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと",
@@ -33,7 +37,13 @@ export const listStage: ListType[] = [
   }
 ];
 
-export const listWrite: ListType[] = [
+export const listWrite: ExactPresantationLengthArray<ListType> = [
+  {
+    title:
+      "フロントエンドカンファレンス北海道でブラウザ互換についての発表をしてきました #frontendo",
+    url: "https://qiita.com/okuto_oyama/items/d15a5e49530a93848366",
+    datetime: "2024-09-11T12:00:00.000Z"
+  },
   {
     title: "Vue Fes Japanの歴代スピーカー一覧を見られるページを作った",
     url: "https://zenn.dev/yamanoku/articles/vuefes-japan-speakers",
@@ -53,10 +63,5 @@ export const listWrite: ListType[] = [
     title: "eslint-plugin-vuejs-accessibility入門",
     url: "https://zenn.dev/comm_vue_nuxt/articles/eslint-plugin-vuejs-accessibility-introduction",
     datetime: "2024-02-18T14:30:00.000Z"
-  },
-  {
-    title: "crowdworks.jp のフロントエンド活動を振り返る2023",
-    url: "https://engineer.crowdworks.jp/entry/crowdworksjp_frontend_2023",
-    datetime: "2023-12-01T09:30:00.000Z"
   }
 ];
