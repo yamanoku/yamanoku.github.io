@@ -39,6 +39,11 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title: "Interop2025のプロポーザル投票が始まりました！",
+    url: "https://zenn.dev/yamanoku/articles/interop-2025-opens-for-proposals",
+    datetime: "2024-09-19T10:00:00.000Z"
+  },
+  {
     title:
       "フロントエンドカンファレンス北海道でブラウザ互換についての発表をしてきました #frontendo",
     url: "https://qiita.com/okuto_oyama/items/d15a5e49530a93848366",
@@ -58,10 +63,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "TSKaigi 2024参加レポート",
     url: "https://engineer.crowdworks.jp/entry/report-tskaigi-2024",
     datetime: "2024-05-16T10:00:00.000Z"
-  },
-  {
-    title: "eslint-plugin-vuejs-accessibility入門",
-    url: "https://zenn.dev/comm_vue_nuxt/articles/eslint-plugin-vuejs-accessibility-introduction",
-    datetime: "2024-02-18T14:30:00.000Z"
   }
 ];
