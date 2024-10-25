@@ -39,6 +39,11 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title: "Vue Fes Japan 2024参加レポート #vuefes",
+    url: "https://qiita.com/okuto_oyama/items/b4591d5ed30c011121c9",
+    datetime: "2024-10-25T08:12:24.00+09:00"
+  },
+  {
     title: "Vue3.5からの改善と振り返るdefineCustomElementについて",
     url: "https://zenn.dev/comm_vue_nuxt/articles/improvements-to-custom-elements-in-vue3-5",
     datetime: "2024-09-22T03:30:00.00+09:00"
@@ -58,10 +63,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "Vue Fes Japanの歴代スピーカー一覧を見られるページを作った",
     url: "https://zenn.dev/yamanoku/articles/vuefes-japan-speakers",
     datetime: "2024-08-31T10:10:00.00+09:00"
-  },
-  {
-    title: "SPA のアクセシビリティを強化する Nuxt の Route Announcer 機能",
-    url: "https://zenn.dev/comm_vue_nuxt/articles/feat-nuxt-route-announcer",
-    datetime: "2024-07-02T03:30:00.00+09:00"
   }
 ];
