@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "5.1.2",
-    "astro": "4.16.12",
+    "astro": "4.16.13",
     "modern-normalize": "3.0.1",
     "tailwindcss": "3.4.15",
     "typescript": "^5.5.4"
