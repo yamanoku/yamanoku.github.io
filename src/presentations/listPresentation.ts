@@ -10,6 +10,11 @@ type ExactPresantationLengthArray<T> = {
 
 export const listStage: ExactPresantationLengthArray<ListType> = [
   {
+    title: "動画にまつわるアクセシビリティ要件を探る",
+    url: "https://scrapbox.io/yamanoku/%E5%8B%95%E7%94%BB%E3%81%AB%E3%81%BE%E3%81%A4%E3%82%8F%E3%82%8B%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B7%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3%E8%A6%81%E4%BB%B6%E3%82%92%E6%8E%A2%E3%82%8B",
+    datetime: "2024-11-29T19:54:00.00+09:00"
+  },
+  {
     title:
       "ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと",
     url: "https://yamanoku.net/frontendo-2024/ja/",
@@ -29,15 +34,15 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
     title: "Svelte Accessibility Warning",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vQ8UFLM2Rxnx-pf8ZI9SgU5ZKY5hPpLQa060LHDQ9fu4ddHVPJO_ECDOomNlSp6a0PyeL6UNc36kt6r/pub?slide=id.p1",
     datetime: "2024-02-22T11:30:00.00+09:00"
-  },
-  {
-    title: "2020年から2023年までのCSSの変遷を振り返る",
-    url: "https://scrapbox.io/yamanoku/2020%E5%B9%B4%E3%81%8B%E3%82%892023%E5%B9%B4%E3%81%BE%E3%81%A7%E3%81%AECSS%E3%81%AE%E5%A4%89%E9%81%B7%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8B",
-    datetime: "2023-12-01T11:00:00.00+09:00"
   }
 ];
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
+  {
+    title: "フロントエンド技術周辺のアップデートから振り返る2024年",
+    url: "https://qiita.com/okuto_oyama/items/12d119671f4b350042e4",
+    datetime: "2024-12-01T07:00:00.00+09:00"
+  },
   {
     title: "Vue Fes Japan 2024参加レポート #vuefes",
     url: "https://qiita.com/okuto_oyama/items/b4591d5ed30c011121c9",
@@ -58,10 +63,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
       "フロントエンドカンファレンス北海道でブラウザ互換についての発表をしてきました #frontendo",
     url: "https://qiita.com/okuto_oyama/items/d15a5e49530a93848366",
     datetime: "2024-09-11T03:00:00.00+09:00"
-  },
-  {
-    title: "Vue Fes Japanの歴代スピーカー一覧を見られるページを作った",
-    url: "https://zenn.dev/yamanoku/articles/vuefes-japan-speakers",
-    datetime: "2024-08-31T10:10:00.00+09:00"
   }
 ];
