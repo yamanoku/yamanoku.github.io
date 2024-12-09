@@ -39,6 +39,16 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title: "Vue.jsと周辺エコシステムで振り返る2024年",
+    url: "https://zenn.dev/comm_vue_nuxt/articles/vuejs-2024-year-in-review",
+    datetime: "2024-12-09T12:00:00.00+09:00"
+  },
+  {
+    title: "Nuxt/UnJSと周辺エコシステムで振り返る2024年",
+    url: "https://zenn.dev/comm_vue_nuxt/articles/nuxt-unjs-2024-year-in-review",
+    datetime: "2024-12-09T12:00:00.00+09:00"
+  },
+  {
     title: "フロントエンド技術周辺のアップデートから振り返る2024年",
     url: "https://qiita.com/okuto_oyama/items/12d119671f4b350042e4",
     datetime: "2024-12-01T07:00:00.00+09:00"
@@ -52,16 +62,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "Vue3.5からの改善と振り返るdefineCustomElementについて",
     url: "https://zenn.dev/comm_vue_nuxt/articles/improvements-to-custom-elements-in-vue3-5",
     datetime: "2024-09-22T03:30:00.00+09:00"
-  },
-  {
-    title: "Interop2025のプロポーザル投票が始まりました！",
-    url: "https://zenn.dev/yamanoku/articles/interop-2025-opens-for-proposals",
-    datetime: "2024-09-19T01:00:00.00+09:00"
-  },
-  {
-    title:
-      "フロントエンドカンファレンス北海道でブラウザ互換についての発表をしてきました #frontendo",
-    url: "https://qiita.com/okuto_oyama/items/d15a5e49530a93848366",
-    datetime: "2024-09-11T03:00:00.00+09:00"
   }
 ];
