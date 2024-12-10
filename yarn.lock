@@ -26,9 +26,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@astrojs/markdown-remark@npm:6.0.0"
+"@astrojs/markdown-remark@npm:6.0.1":
+  version: 6.0.1
+  resolution: "@astrojs/markdown-remark@npm:6.0.1"
   dependencies:
     "@astrojs/prism": "npm:3.2.0"
     github-slugger: "npm:^2.0.0"
@@ -49,7 +49,7 @@ __metadata:
     unist-util-visit: "npm:^5.0.0"
     unist-util-visit-parents: "npm:^6.0.1"
     vfile: "npm:^6.0.3"
-  checksum: 10c0/9ba295445e24f38c2c665fb253ed345ab717b55edbe9521e138e6b76620a3db6b72f9bf8780415a7ebb376c793936f3deafdcf2f5e572b73ca9f0a7713ef2be3
+  checksum: 10c0/702fa5ddb2eb19da56000896495caaa2e1290fd669e7d4d766773bef9f581ce8536b2e1afc5fe779f2fa2f440c4f3e412499ac07359a5b26908e6bb8efe3a4cb
   languageName: node
   linkType: hard
 
@@ -1643,13 +1643,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.0.3":
-  version: 5.0.3
-  resolution: "astro@npm:5.0.3"
+"astro@npm:5.0.4":
+  version: 5.0.4
+  resolution: "astro@npm:5.0.4"
   dependencies:
     "@astrojs/compiler": "npm:^2.10.3"
     "@astrojs/internal-helpers": "npm:0.4.2"
-    "@astrojs/markdown-remark": "npm:6.0.0"
+    "@astrojs/markdown-remark": "npm:6.0.1"
     "@astrojs/telemetry": "npm:3.2.0"
     "@oslojs/encoding": "npm:^1.1.0"
     "@rollup/pluginutils": "npm:^5.1.3"
@@ -1711,7 +1711,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/df8e925a87c5904d286b44081cbbe9e8fb662e3647156e52a85a0f124b13f19648caadf2fe28e7338a4e644f70da984cd9bcd012779d40627d5dbe6c0f822d9e
+  checksum: 10c0/0a2835f7475f3c3228619f6a482f9aa5c5ea764b141b6a10ca6157dfe544a381528bd50d05eba855cd7c1f2e69fc7d141a6f8ead0e4af0d053d06bbbb4457c4f
   languageName: node
   linkType: hard
 
@@ -6888,7 +6888,7 @@ __metadata:
   dependencies:
     "@astrojs/tailwind": "npm:5.1.3"
     "@biomejs/biome": "npm:1.9.4"
-    astro: "npm:5.0.3"
+    astro: "npm:5.0.4"
     gh-pages: "npm:6.2.0"
     markuplint: "npm:4.11.4"
     modern-normalize: "npm:3.0.1"
