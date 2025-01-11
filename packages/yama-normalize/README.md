@@ -18,13 +18,19 @@ yamanoku.net default style
 ## Install
 
 ```
-$ yarn add yama-normalize
+$ npm install yama-normalize
 ```
 
 or
 
 ```
-$ npm install yama-normalize
+$ pnpm add yama-normalize
+```
+
+or
+
+```
+$ yarn add yama-normalize
 ```
 
 ## Usage
