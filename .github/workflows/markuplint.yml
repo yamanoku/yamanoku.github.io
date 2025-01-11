@@ -18,16 +18,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - run: corepack enable
-    - run: yarn set version stable
+        cache: 'pnpm'
     - name: check markuplint
       run: |
-        yarn install
-        yarn build
-        yarn markuplint
+        pnpm install
+        pnpm run build
+        pnpm run markuplint
       env:
         CI: true

@@ -2,8 +2,6 @@
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Runtime data
 pids
@@ -33,8 +31,9 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
-jspm_packages/
+**/node_modules/**
+_node_modules
+.pnp.cjs
 
 # TypeScript v1 declaration files
 typings/
@@ -51,8 +50,10 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
-.yarn-integrity
+# pnpm uses npm for publishing a new version with
+# dependencies bundled but the npm lockfile is not needed
+# because pnpm use pnpm for installation
+package-lock.json
 yarn.lock
 
 # dotenv environment variables file
