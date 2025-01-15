@@ -37,11 +37,11 @@ importers:
   packages/yama-normalize:
     devDependencies:
       stylelint:
-        specifier: 16.13.1
-        version: 16.13.1(typescript@5.7.3)
+        specifier: 16.13.2
+        version: 16.13.2(typescript@5.7.3)
       stylelint-config-recommended:
         specifier: 14.0.1
-        version: 14.0.1(stylelint@16.13.1(typescript@5.7.3))
+        version: 14.0.1(stylelint@16.13.2(typescript@5.7.3))
 
 packages:
 
@@ -2327,8 +2327,8 @@ packages:
     peerDependencies:
       stylelint: ^16.1.0
 
-  stylelint@16.13.1:
-    resolution: {integrity: sha512-691JjSIIcP6f9QJFz0J0/AMG3lupE9RqYAgYCON3wiqp5nQiKqDYIsz321GeTOYNznoRPNh0Mf6VjzP1eBVz/Q==}
+  stylelint@16.13.2:
+    resolution: {integrity: sha512-wDlgh0mRO9RtSa3TdidqHd0nOG8MmUyVKl+dxA6C1j8aZRzpNeEgdhFmU5y4sZx4Fc6r46p0fI7p1vR5O2DZqA==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -5256,11 +5256,11 @@ snapshots:
     dependencies:
       escape-string-regexp: 1.0.5
 
-  stylelint-config-recommended@14.0.1(stylelint@16.13.1(typescript@5.7.3)):
+  stylelint-config-recommended@14.0.1(stylelint@16.13.2(typescript@5.7.3)):
     dependencies:
-      stylelint: 16.13.1(typescript@5.7.3)
+      stylelint: 16.13.2(typescript@5.7.3)
 
-  stylelint@16.13.1(typescript@5.7.3):
+  stylelint@16.13.2(typescript@5.7.3):
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
