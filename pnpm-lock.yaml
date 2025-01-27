@@ -37,11 +37,11 @@ importers:
   packages/yama-normalize:
     devDependencies:
       stylelint:
-        specifier: 16.13.2
-        version: 16.13.2(typescript@5.7.3)
+        specifier: 16.14.0
+        version: 16.14.0(typescript@5.7.3)
       stylelint-config-recommended:
         specifier: 15.0.0
-        version: 15.0.0(stylelint@16.13.2(typescript@5.7.3))
+        version: 15.0.0(stylelint@16.14.0(typescript@5.7.3))
 
 packages:
 
@@ -1366,8 +1366,8 @@ packages:
     resolution: {integrity: sha512-InwqeHHN2XpumIkMvpl/DCJVrAHgCsG5+cn1XlnLWGwtZBm8QJfSusItfrwx81CTp5agNZqpKU2J/ccC5nGT4A==}
     engines: {node: '>= 4'}
 
-  ignore@7.0.1:
-    resolution: {integrity: sha512-D1gVletsbVOoiXF963rgZnfobGAbq7Lb+dz3fcBmlOmZg6hHkpbycLqL8PLNB8f4GVv6dOVYwhPL/r7hwiH0Fw==}
+  ignore@7.0.3:
+    resolution: {integrity: sha512-bAH5jbK/F3T3Jls4I0SO1hmPR0dKU0a7+SY6n1yzRtG54FLO8d6w/nxLFX2Nb7dBu6cCWXPaAME6cYqFUMmuCA==}
     engines: {node: '>= 4'}
 
   import-fresh@3.3.0:
@@ -2188,8 +2188,8 @@ packages:
     peerDependencies:
       stylelint: ^16.13.0
 
-  stylelint@16.13.2:
-    resolution: {integrity: sha512-wDlgh0mRO9RtSa3TdidqHd0nOG8MmUyVKl+dxA6C1j8aZRzpNeEgdhFmU5y4sZx4Fc6r46p0fI7p1vR5O2DZqA==}
+  stylelint@16.14.0:
+    resolution: {integrity: sha512-orePw2dKxzXC0hd1VmxrDBqgf1KUV9DYsZY4guKLE9XcQD7m0BxVnWMaoQqMNsQIG14MyyTHf6zoajvOnDra8g==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -3982,7 +3982,7 @@ snapshots:
 
   ignore@6.0.2: {}
 
-  ignore@7.0.1: {}
+  ignore@7.0.3: {}
 
   import-fresh@3.3.0:
     dependencies:
@@ -4714,9 +4714,9 @@ snapshots:
 
   postcss-resolve-nested-selector@0.1.6: {}
 
-  postcss-safe-parser@7.0.1(postcss@8.4.49):
+  postcss-safe-parser@7.0.1(postcss@8.5.1):
     dependencies:
-      postcss: 8.4.49
+      postcss: 8.5.1
 
   postcss-selector-parser@6.1.2:
     dependencies:
@@ -5035,11 +5035,11 @@ snapshots:
     dependencies:
       escape-string-regexp: 1.0.5
 
-  stylelint-config-recommended@15.0.0(stylelint@16.13.2(typescript@5.7.3)):
+  stylelint-config-recommended@15.0.0(stylelint@16.14.0(typescript@5.7.3)):
     dependencies:
-      stylelint: 16.13.2(typescript@5.7.3)
+      stylelint: 16.14.0(typescript@5.7.3)
 
-  stylelint@16.13.2(typescript@5.7.3):
+  stylelint@16.14.0(typescript@5.7.3):
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
@@ -5059,7 +5059,7 @@ snapshots:
       globby: 11.1.0
       globjoin: 0.1.4
       html-tags: 3.3.1
-      ignore: 7.0.1
+      ignore: 7.0.3
       imurmurhash: 0.1.4
       is-plain-object: 5.0.0
       known-css-properties: 0.35.0
@@ -5068,9 +5068,9 @@ snapshots:
       micromatch: 4.0.8
       normalize-path: 3.0.0
       picocolors: 1.1.1
-      postcss: 8.4.49
+      postcss: 8.5.1
       postcss-resolve-nested-selector: 0.1.6
-      postcss-safe-parser: 7.0.1(postcss@8.4.49)
+      postcss-safe-parser: 7.0.1(postcss@8.5.1)
       postcss-selector-parser: 7.0.0
       postcss-value-parser: 4.2.0
       resolve-from: 5.0.0
