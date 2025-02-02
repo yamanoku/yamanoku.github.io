@@ -1,0 +1,22 @@
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'modern-normalize' layer(base);
+@import '../../packages/yama-normalize/yama-normalize.css' layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  --spacing-y-rhythm-1: var(--y-rhythm-1);
+  --spacing-y-rhythm-2: var(--y-rhythm-2);
+  --spacing-y-rhythm-3: var(--y-rhythm-3);
+  --spacing-y-rhythm-4: var(--y-rhythm-4);
+  --spacing-y-rhythm-5: var(--y-rhythm-5);
+  --color-y-white-base: var(--y-white-base);
+  --color-y-black-base: var(--y-black-base);
+  --color-y-white-low: var(--y-white-low);
+  --color-y-white-medium: var(--y-white-medium);
+  --color-y-blue-low: var(--y-blue-low);
+  --color-y-blue-medium: var(--y-blue-medium);
+  --color-y-purple-medium: var(--y-purple-medium);
+  --color-y-arcticle-border-color: var(--y-arcticle-border-color);
+}
