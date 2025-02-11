@@ -29,8 +29,8 @@
     "packages/*"
   ],
   "engines": {
-    "pnpm": "10.2.1",
+    "pnpm": "10.3.0",
     "npm": "please_use_pnpm_instead"
   },
-  "packageManager": "pnpm@10.2.1"
+  "packageManager": "pnpm@10.3.0"
 }
