@@ -10,6 +10,11 @@ type ExactPresantationLengthArray<T> = {
 
 export const listStage: ExactPresantationLengthArray<ListType> = [
   {
+    title: "Vue3.5からのuseIdでアクセシブルな汎用コンポーネントを作ってみよう",
+    url: "https://qiita.com/okuto_oyama/items/31ea75201d84856df8f8",
+    datetime: "2025-02-18T20:07:00.00+09:00"
+  },
+  {
     title: "分散型SNSで生活してみての所感〜周辺動向と鯖引越しを添えて〜",
     url: "https://scrapbox.io/yamanoku/%E5%88%86%E6%95%A3%E5%9E%8BSNS%E3%81%A7%E7%94%9F%E6%B4%BB%E3%81%97%E3%81%A6%E3%81%BF%E3%81%A6%E3%81%AE%E6%89%80%E6%84%9F%E3%80%9C%E5%91%A8%E8%BE%BA%E5%8B%95%E5%90%91%E3%81%A8%E9%AF%96%E5%BC%95%E8%B6%8A%E3%81%97%E3%82%92%E6%B7%BB%E3%81%88%E3%81%A6%E3%80%9C",
     datetime: "2025-02-08T:00:00.00+09:00"
@@ -29,11 +34,6 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
     title: "日本企業のアクセシビリティ事例をコツコツと収集している話",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vT22K28-kR821F3K_4UGLhx1UVD1EmyC5hoqGGUjtMO9Glg_btK048U8Vth1oMnjCTWaBTxXaRlGqL_/pub?slide=id.p1",
     datetime: "2024-05-20T10:30:00.00+09:00"
-  },
-  {
-    title: "令和最新静的サイトジェネレーター事情",
-    url: "https://scrapbox.io/yamanoku/%E4%BB%A4%E5%92%8C%E6%9C%80%E6%96%B0%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E4%BA%8B%E6%83%85",
-    datetime: "2024-04-25T10:30:00.00+09:00"
   }
 ];
 
