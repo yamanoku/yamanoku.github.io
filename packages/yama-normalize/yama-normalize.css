@@ -38,6 +38,9 @@
   --y-rhythm-3: calc(var(--y-rhythm-base) * 3);
   --y-rhythm-4: calc(var(--y-rhythm-base) * 4);
   --y-rhythm-5: calc(var(--y-rhythm-base) * 5);
+
+  /* yama-normalize supports both light mode and dark mode */
+  color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
