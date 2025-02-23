@@ -10,7 +10,8 @@
   },
   "main": "yama-normalize.css",
   "scripts": {
-    "test": "stylelint yama-normalize.css"
+    "test": "stylelint yama-normalize.css",
+    "eslint": "pnpx eslint yama-normalize.css"
   },
   "files": [
     "yama-normalize.css"
@@ -23,6 +24,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "@eslint/css": "0.4.0",
     "stylelint": "16.14.1",
     "stylelint-config-recommended": "15.0.0"
   },
