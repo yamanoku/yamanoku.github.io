@@ -79,7 +79,9 @@ html {
   box-sizing: border-box;
 }
 *:focus-visible {
-  outline: 2px solid var(--y-outline-color);
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--y-outline-color);
   outline-offset: 2px;
 }
 html[lang="ja"] {
