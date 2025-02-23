@@ -1,14 +1,4 @@
 :root {
-  /* Old Custom Properties */
-  --black: rgb(21, 32, 43);
-  --white: rgb(210, 210, 210);
-  --gray: rgba(70, 70, 70, .5);
-  --blue: rgb(90, 190, 255);
-  --purple: rgb(220, 100, 220);
-  --linkBlue: rgb(18, 122, 200);
-  --linkVisited: var(--black);
-  --rhythm: .5rem;
-
   /* Base Tokens */
   --y-black-base: rgba(21, 32, 43);
   --y-white-base: rgba(255, 255, 255);
