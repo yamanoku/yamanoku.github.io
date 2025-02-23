@@ -25,6 +25,15 @@
     "gh-pages": "6.3.0",
     "markuplint": "4.11.6"
   },
+  "pnpm": {
+    "packageExtensions": {
+      "@eslint/css": {
+        "peerDependencies": {
+          "@types/css-tree": "2.3.10"
+        }
+      }
+    }
+  },
   "workspaces": [
     "packages/*"
   ],
