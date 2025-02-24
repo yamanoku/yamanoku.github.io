@@ -29,14 +29,7 @@ export default Dictionary({
   "info.birthplace": "Birthplace",
   "info.location": "Location",
   "info.family": "Family",
-
-  // career
-  "career.jobs.frontend-designer": "Frontend Designer",
-  "career.jobs.ui-designer": "UI Designer",
-  "career.links.curriculum-vitae": "Curriculum Vitae",
-  "career.links.wantedly": "Wantedly",
-  "career.links.lapras": "LAPRAS",
-  "career.links.youtrust": "YOUTRUST",
+  "info.organization": "Organization",
 
   // open source activity
   "open-source-activity.descripion":
