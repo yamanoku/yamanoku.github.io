@@ -27,14 +27,7 @@ export default {
   "info.birthplace": "出身",
   "info.location": "所在",
   "info.family": "家族構成",
-
-  // 職歴
-  "career.jobs.frontend-designer": "フロントエンドデザイナー",
-  "career.jobs.ui-designer": "UIデザイナー",
-  "career.links.curriculum-vitae": "職務経歴書",
-  "career.links.wantedly": "Wantedly",
-  "career.links.lapras": "LAPRAS",
-  "career.links.youtrust": "YOUTRUST",
+  "info.organization": "所属組織",
 
   // オープンソース活動
   "open-source-activity.descripion":
