@@ -1,0 +1,68 @@
+# yamanoku.net
+
+> yamanoku.net is Okuto Oyama's portal site.
+
+## Languages
+
+- [日本語](https://yamanoku.net)
+- [English](https://yamanoku.net/en/)
+
+## Basic Info
+
+- Real name: Okuto Oyama
+- Hundle name: Oyama Michinoku, yamanoku
+- Birthday: October 30, 1989
+- Sex: Male
+- Birthplace: Noshiro, Akita
+- Location: Nagareyama, Chiba
+- Family: Wife, daughter, 3 cats and a large dog
+- Organization: Schoo Inc.
+
+## Open Source Activity
+
+> In addition to working for a company, I have been contributing to open source since 2020 in my spare time. I translate documents, propose accessibility improvements, respond to fixes, and make other minor corrections.
+
+- [Open Source Activity All Logs](https://yamanoku.notion.site/170f2fefa69c80959582f75f6e5b4b3f)
+- [Open Source Activity Log 2025](https://yamanoku.notion.site/2025-6415641600a749d58ae57cb39f1bdbbb)
+- [Open Source Activity Log 2024](https://yamanoku.notion.site/2024-170f2fefa69c80c1a13dfe86d477010e)
+- [Open Source Activity Log 2023](https://yamanoku.notion.site/2023-9c066732fb5f40aa92dc19602047b445)
+- [Open Source Activity Log 2022](https://yamanoku.notion.site/2022-0c6dae397ac8424ebd626d06afd822b8)
+- [Open Source Activity Log 2021](https://yamanoku.notion.site/2021-2c4fa51b832645f494698ebd11e069f9)
+
+### Donate & Sponsor
+
+> If you are interested in my work, presentations and activities, you can donate me by.
+
+- [GitHub Sponsors](https://github.com/sponsors/yamanoku)
+- [Stripe Payment Links](https://buy.stripe.com/00gaEY1Eh5bE7VC8ww)
+- [Buy me a coffee](https://buymeacoffee.com/yamanoku)
+
+## Daily journal
+
+> I utilize Helpfeel Cosense to compile daily events and interesting news in the form of a journal. Rather than updating daily, I post whenever inspiration strikes.
+
+- [nippo-2025](https://scrapbox.io/yamanoku/nippo-2025)
+- [nippo-2024](https://scrapbox.io/yamanoku/nippo-2024)
+- [nippo-2023](https://scrapbox.io/yamanoku/nippo-2023)
+- [nippo-2022](https://scrapbox.io/yamanoku/nippo-2022)
+- [nippo-2021](https://scrapbox.io/yamanoku/nippo-2021)
+
+## Presentations - Stage
+
+> yamanoku / Oyama Okuto's past presentations
+
+- [yamanoku/Records](https://github.com/yamanoku/records)
+
+## Presentations - Writing
+
+> yamanoku / Oyama Okuto's past writing contents
+
+- [アーカイブ | yamanoku.net](https://archives.yamanoku.net/)
+
+## Social Service
+
+- [X (formerly Twitter)](https://twitter.com/okuto_oyama)
+- [Hollo](https://hollo.yamanoku.net/@yamanoku)
+- [Bluesky](https://bsky.app/profile/yamanoku.net)
+- [GitHub](https://github.com/yamanoku)
+- [Facebook](https://facebook.com/okutooyama)
