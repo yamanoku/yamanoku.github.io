@@ -22,7 +22,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "gh-pages": "6.3.0",
-    "markuplint": "4.11.7"
+    "markuplint": "4.11.8"
   },
   "pnpm": {
     "packageExtensions": {
