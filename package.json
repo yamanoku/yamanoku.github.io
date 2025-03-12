@@ -14,10 +14,10 @@
     "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "@tailwindcss/vite": "4.0.12",
+    "@tailwindcss/vite": "4.0.13",
     "astro": "5.4.3",
     "modern-normalize": "3.0.1",
-    "tailwindcss": "4.0.12"
+    "tailwindcss": "4.0.13"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
