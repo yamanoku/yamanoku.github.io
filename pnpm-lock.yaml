@@ -36,8 +36,8 @@ importers:
   packages/yama-normalize:
     devDependencies:
       '@eslint/css':
-        specifier: 0.4.0
-        version: 0.4.0(@types/css-tree@2.3.10)
+        specifier: 0.5.0
+        version: 0.5.0(@types/css-tree@2.3.10)
 
 packages:
 
@@ -293,8 +293,12 @@ packages:
     resolution: {integrity: sha512-cmrR6pytBuSMTaBweKoGMwu3EiHiEC+DoyupPmlZ0HxBJBtIxwe+j/E4XPIKNx+Q74c8lXKPwYawBf5glsTkHg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/css@0.4.0':
-    resolution: {integrity: sha512-aEvoIhIxa6nHvqTQxg56YgV8/9FO78ka1XnqkVnM07ZqJgeeILCNOHzwPs1z0N1vlj0Um2s4yMG8Ilau+D05Hg==}
+  '@eslint/css-tree@3.2.0':
+    resolution: {integrity: sha512-GWGIXIhTS+lUgO+L9pydqeDbWtMiYB5o8hRQmUmBM3oaU3VFSL1szgU0joCkNwW2J9m9ZVrb8rrYO+HCtW2/oQ==}
+    engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
+
+  '@eslint/css@0.5.0':
+    resolution: {integrity: sha512-40n/DbZuJwYe15u64BCck1wU4X67wgvoejiOrc4GKJeFojv2jVZvy7zU2rYADxglCXn/US8SreXSrAsNJDSKFg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       '@types/css-tree': 2.3.10
@@ -1521,6 +1525,9 @@ packages:
   mdn-data@2.12.2:
     resolution: {integrity: sha512-IEn+pegP1aManZuckezWCO+XZQDplx1366JoVhTpMpBB1sPey/SbveZQUosKiKiGYjg1wH4pMlNgXbCiYgihQA==}
 
+  mdn-data@2.18.0:
+    resolution: {integrity: sha512-gtCy1yim/vpHF/tq3B4Z43x3zKWpYeb4IM3d/Mf4oMYcNuoXOYEaqtoFlLHw9zd7+WNN3jNh6/WXyUrD3OIiwQ==}
+
   memoizee@0.4.17:
     resolution: {integrity: sha512-DGqD7Hjpi/1or4F/aYAspXKNm5Yili0QDAFAY4QYvpqpgiY6+1jOfqpmByzjxbWd/T9mChbCArXAbDAsTm5oXA==}
     engines: {node: '>=0.12'}
@@ -2452,12 +2459,17 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/css@0.4.0(@types/css-tree@2.3.10)':
+  '@eslint/css-tree@3.2.0':
+    dependencies:
+      mdn-data: 2.18.0
+      source-map-js: 1.2.1
+
+  '@eslint/css@0.5.0(@types/css-tree@2.3.10)':
     dependencies:
       '@eslint/core': 0.10.0
+      '@eslint/css-tree': 3.2.0
       '@eslint/plugin-kit': 0.2.7
       '@types/css-tree': 2.3.10
-      css-tree: 3.1.0
 
   '@eslint/plugin-kit@0.2.7':
     dependencies:
@@ -3912,6 +3924,8 @@ snapshots:
       '@types/mdast': 4.0.4
 
   mdn-data@2.12.2: {}
+
+  mdn-data@2.18.0: {}
 
   memoizee@0.4.17:
     dependencies:
