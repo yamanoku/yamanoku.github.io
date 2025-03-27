@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@eslint/css": "0.5.0"
+    "@eslint/css": "0.6.0"
   },
   "gitHead": "460c76c71b0401ea0304f2b36537e3579391ae3c"
 }
