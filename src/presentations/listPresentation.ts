@@ -39,6 +39,12 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title:
+      "Nuxt 3 SSRでの@datadog/browser-logs、@datadog/browser-rum、dd-traceの設定方法",
+    url: "https://qiita.com/okuto_oyama/items/7fc03b13fe0c6be2f07b",
+    datetime: "2025-03-26T12:39:20.00+09:00"
+  },
+  {
     title: "Webフロントエンドでのリアクティビティからalien-signalsを知ろう",
     url: "https://zenn.dev/comm_vue_nuxt/articles/about-alien-signals",
     datetime: "2025-03-24T12:00:00.00+09:00"
@@ -57,10 +63,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "Nuxt/UnJSと周辺エコシステムで振り返る2024年",
     url: "https://zenn.dev/comm_vue_nuxt/articles/nuxt-unjs-2024-year-in-review",
     datetime: "2024-12-09T12:00:00.00+09:00"
-  },
-  {
-    title: "フロントエンド技術周辺のアップデートから振り返る2024年",
-    url: "https://qiita.com/okuto_oyama/items/12d119671f4b350042e4",
-    datetime: "2024-12-01T07:00:00.00+09:00"
   }
 ];
