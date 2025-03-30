@@ -10,6 +10,11 @@ type ExactPresantationLengthArray<T> = {
 
 export const listStage: ExactPresantationLengthArray<ListType> = [
   {
+    title: "リアクティブシステムの変遷から理解するalien-signals",
+    url: "https://speakerdeck.com/yamanoku/learning-alien-signals-from-the-evolution-of-reactive-systems",
+    datetime: "2025-03-28T19:20:00.00+09:00"
+  },
+  {
     title: "Vue3.5からのuseIdでアクセシブルな汎用コンポーネントを作ってみよう",
     url: "https://qiita.com/okuto_oyama/items/31ea75201d84856df8f8",
     datetime: "2025-02-18T20:07:00.00+09:00"
@@ -29,11 +34,6 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
       "ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと",
     url: "https://yamanoku.net/frontendo-2024/ja/",
     datetime: "2024-08-23T04:20:00.00+09:00"
-  },
-  {
-    title: "日本企業のアクセシビリティ事例をコツコツと収集している話",
-    url: "https://docs.google.com/presentation/d/e/2PACX-1vT22K28-kR821F3K_4UGLhx1UVD1EmyC5hoqGGUjtMO9Glg_btK048U8Vth1oMnjCTWaBTxXaRlGqL_/pub?slide=id.p1",
-    datetime: "2024-05-20T10:30:00.00+09:00"
   }
 ];
 
