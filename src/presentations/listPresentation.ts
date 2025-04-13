@@ -39,6 +39,11 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title: "Baseline MCP Serverを公開しました！",
+    url: "https://zenn.dev/yamanoku/articles/baseline-mcp-server",
+    datetime: "2025-04-13T15:04:00.00+09:00"
+  },
+  {
     title:
       "まだ内容を把握できてないことを調査して、勉強会で発表するまでにやってきたこと",
     url: "https://qiita.com/okuto_oyama/items/c941c4200c66bffb4d2b",
@@ -59,10 +64,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "Interop 2025が始まりました！",
     url: "https://zenn.dev/yamanoku/articles/interop-2025-launched",
     datetime: "2025-02-15T16:11:00.00+09:00"
-  },
-  {
-    title: "Vue.jsと周辺エコシステムで振り返る2024年",
-    url: "https://zenn.dev/comm_vue_nuxt/articles/vuejs-2024-year-in-review",
-    datetime: "2024-12-09T12:00:00.00+09:00"
   }
 ];
