@@ -37,8 +37,8 @@
     "packages/*"
   ],
   "engines": {
-    "pnpm": "10.8.0",
+    "pnpm": "10.8.1",
     "npm": "please_use_pnpm_instead"
   },
-  "packageManager": "pnpm@10.8.0"
+  "packageManager": "pnpm@10.8.1"
 }
