@@ -6,7 +6,7 @@ export default [
     language: "css/css",
     ...css.configs.recommended,
     rules: {
-      "css/require-baseline": [
+      "css/use-baseline": [
         "error",
         {
           available: "newly",
