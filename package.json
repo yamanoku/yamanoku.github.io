@@ -31,7 +31,13 @@
           "@types/css-tree": "2.3.10"
         }
       }
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "es5-ext",
+      "esbuild",
+      "sharp"
+    ]
   },
   "workspaces": [
     "packages/*"
