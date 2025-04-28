@@ -1,0 +1,36 @@
+name: yama-normalize Lint
+
+
+on:
+  pull_request:
+    branches:
+      - dev
+    paths:
+      - "packages/yama-normalize/yama-normalize.css"
+      - "packages/yama-normalize/eslint.config.mjs"
+      - "packages/yama-normalize/package.json"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [latest]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+    - name: eslint/css
+      run: |
+        pnpm install
+        pnpm yama-normalize test
+      env:
+        CI: true
