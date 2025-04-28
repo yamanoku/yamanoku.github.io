@@ -28,7 +28,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
-    - name: check biome
+    - name: eslint/css
       run: |
         pnpm install
         pnpm yama-normalize test
