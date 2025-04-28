@@ -2,7 +2,8 @@
   "extends": [
     "config:base",
     "group:monorepos",
-    "customManagers:biomeVersions"
+    "customManagers:biomeVersions",
+    "helpers:pinGitHubActionDigests"
   ],
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "rangeStrategy": "bump",
