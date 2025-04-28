@@ -3,7 +3,6 @@ name: yama-normalize Lint
 
 on:
   pull_request:
-    types: [opened, synchronize, labeled]
     branches:
       - dev
     paths:
