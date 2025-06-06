@@ -5,10 +5,15 @@ export type ListType = {
 };
 
 type ExactPresantationLengthArray<T> = {
-  length: 5;
+  length: 6;
 } & T[];
 
 export const listStage: ExactPresantationLengthArray<ListType> = [
+  {
+    title: "Proposal for ECMAScript enumsについて（2025-06-06時点）",
+    url: "https://scrapbox.io/yamanoku/Proposal_for_ECMAScript_enums%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BC%882025-06-06%E6%99%82%E7%82%B9%EF%BC%89",
+    datetime: "2025-06-07T19:48:00.00+09:00"
+  },
   {
     title:
       "転生したら​TypeScriptの​Enumだった​件～型​安全性と​エコシステムの​変化で​挫けそうになっているんだが​～",
