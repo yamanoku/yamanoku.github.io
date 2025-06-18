@@ -10,6 +10,11 @@ type ExactPresantationLengthArray<T> = {
 
 export const listStage: ExactPresantationLengthArray<ListType> = [
   {
+    title: "DenoとJSRで実現する最速MCPサーバー開発記",
+    url: "https://speakerdeck.com/yamanoku/building-mcp-servers-at-lightning-speed-with-deno-and-jsr",
+    datetime: "2025-06-18T20:10:00.00+09:00"
+  },
+  {
     title: "Proposal for ECMAScript enumsについて（2025-06-06時点）",
     url: "https://scrapbox.io/yamanoku/Proposal_for_ECMAScript_enums%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BC%882025-06-06%E6%99%82%E7%82%B9%EF%BC%89",
     datetime: "2025-06-06T19:48:00.00+09:00"
@@ -29,11 +34,6 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
     title: "リアクティブシステムの変遷から理解するalien-signals",
     url: "https://speakerdeck.com/yamanoku/learning-alien-signals-from-the-evolution-of-reactive-systems",
     datetime: "2025-03-28T19:20:00.00+09:00"
-  },
-  {
-    title: "Vue3.5からのuseIdでアクセシブルな汎用コンポーネントを作ってみよう",
-    url: "https://qiita.com/okuto_oyama/items/31ea75201d84856df8f8",
-    datetime: "2025-02-18T20:07:00.00+09:00"
   }
 ];
 
