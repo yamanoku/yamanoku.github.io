@@ -1,5 +1,6 @@
 ---
 import { getLanguageFromURL, useTranslations } from "../../i18n/util";
+
 const lang = getLanguageFromURL(Astro.url.pathname);
 const t = useTranslations(Astro);
 ---
