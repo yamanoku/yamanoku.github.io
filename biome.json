@@ -3,12 +3,15 @@
   "vcs": {
     "defaultBranch": "dev"
   },
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "files": {
-    "include": ["**/*.ts", "**/*.astro"],
-    "ignore": ["node_modules", "dist"]
+    "includes": [
+      "**/*.ts",
+      "**/*.astro",
+      "!**/node_modules",
+      "!**/dist",
+      "!.astro/**"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -23,7 +26,32 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "style": {
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error"
+      }
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.astro"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedVariables": "off",
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    }
+  ]
 }
