@@ -1,6 +1,7 @@
 ---
 import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
 import GlobalListComponent from "../../global/GlobalListComponent.astro";
+
 const lang = getLanguageFromURL(Astro.url.pathname);
 const t = useTranslations(Astro);
 ---
