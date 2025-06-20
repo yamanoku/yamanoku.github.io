@@ -89,6 +89,10 @@ const { title, items = [] } = Astro.props;
 
 ### TypeScriptガイドライン
 
+#### 基本ルール
+- 指示なく既存の型定義を変更しない・型定義のルールに従う
+  - 例: `ExactPresantationLengthArray` の `length` は勝手に変えない
+
 #### 型定義
 ```typescript
 // 基本的なリンク項目
@@ -212,7 +216,7 @@ const t = useTranslations(lang);
      title: string;
      items?: Array<{ url: string; title: string }>;
    }
-   
+
    const { title, items = [] } = Astro.props;
    ---
    ```
