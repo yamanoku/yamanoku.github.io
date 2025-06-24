@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "4.1.10",
-    "astro": "5.10.0",
+    "astro": "5.10.1",
     "modern-normalize": "3.0.1",
     "tailwindcss": "4.1.10"
   },
