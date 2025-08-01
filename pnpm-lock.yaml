@@ -14,8 +14,8 @@ importers:
         specifier: 4.1.11
         version: 4.1.11(vite@6.3.4(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.7.0))
       astro:
-        specifier: 5.12.6
-        version: 5.12.6(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0)
+        specifier: 5.12.7
+        version: 5.12.7(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0)
       modern-normalize:
         specifier: 3.0.1
         version: 3.0.1
@@ -48,11 +48,11 @@ packages:
   '@astrojs/compiler@2.12.2':
     resolution: {integrity: sha512-w2zfvhjNCkNMmMMOn5b0J8+OmUaBL1o40ipMvqcG6NRpdC+lKxmTi48DT8Xw0SzJ3AfmeFLB45zXZXtmbsjcgw==}
 
-  '@astrojs/internal-helpers@0.6.1':
-    resolution: {integrity: sha512-l5Pqf6uZu31aG+3Lv8nl/3s4DbUzdlxTWDof4pEpto6GUJNhhCbelVi9dEyurOVyqaelwmS9oSyOWOENSfgo9A==}
+  '@astrojs/internal-helpers@0.7.0':
+    resolution: {integrity: sha512-+yrFHlYnknIFxi3QfbVgyHQigkfgsU9SKMjYqijq1Q6xzPco+SmaYXgcw0W7+KnWCifni4o61cgwzMkld7jkXg==}
 
-  '@astrojs/markdown-remark@6.3.3':
-    resolution: {integrity: sha512-DDRtD1sPvAuA7ms2btc9A7/7DApKqgLMNrE6kh5tmkfy8utD0Z738gqd3p5aViYYdUtHIyEJ1X4mCMxfCfu15w==}
+  '@astrojs/markdown-remark@6.3.4':
+    resolution: {integrity: sha512-ARu+6J3006U3NylQk2OmV0tVsXGbkz+ofgxE3S0/KuCxyk3HvZ5FQ5jQDTYCDOAdFY1376tRn0S/sUjT3KZxfw==}
 
   '@astrojs/prism@3.3.0':
     resolution: {integrity: sha512-q8VwfU/fDZNoDOf+r7jUnMC2//H2l0TuQ6FkGJL8vD8nw/q5KiL3DS1KKBI3QhI9UQhpJ5dc7AtqfbXWuOgLCQ==}
@@ -820,8 +820,8 @@ packages:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
 
-  astro@5.12.6:
-    resolution: {integrity: sha512-vDtuDYj/XlxyI2Ex63BM4/Awde8Pl3U3wS5I1NhogFIBPohBaJ1g9puu42XEm7GMZxRn9N3xFEpSP9uEO0W9/w==}
+  astro@5.12.7:
+    resolution: {integrity: sha512-PGXbxql0SekhP46Ci4P3OFRdBp0+5HRKj6bcjZ/Upq5gyF0T2KzCJgj5JRxot+8qpSu8Jz9wksWzQnV2cfvi3A==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2363,11 +2363,11 @@ snapshots:
 
   '@astrojs/compiler@2.12.2': {}
 
-  '@astrojs/internal-helpers@0.6.1': {}
+  '@astrojs/internal-helpers@0.7.0': {}
 
-  '@astrojs/markdown-remark@6.3.3':
+  '@astrojs/markdown-remark@6.3.4':
     dependencies:
-      '@astrojs/internal-helpers': 0.6.1
+      '@astrojs/internal-helpers': 0.7.0
       '@astrojs/prism': 3.3.0
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.3
@@ -3094,11 +3094,11 @@ snapshots:
 
   array-union@2.1.0: {}
 
-  astro@5.12.6(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0):
+  astro@5.12.7(@types/node@22.15.17)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
-      '@astrojs/internal-helpers': 0.6.1
-      '@astrojs/markdown-remark': 6.3.3
+      '@astrojs/internal-helpers': 0.7.0
+      '@astrojs/markdown-remark': 6.3.4
       '@astrojs/telemetry': 3.3.0
       '@capsizecss/unpack': 2.4.0
       '@oslojs/encoding': 1.1.0
