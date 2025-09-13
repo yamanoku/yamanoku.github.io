@@ -39,6 +39,11 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title: "Nuxt設定ファイルにあるcompatibilityDateとは何か？",
+    url: "https://zenn.dev/comm_vue_nuxt/articles/what-is-nuxt-compatibility-date-config",
+    datetime: "2025-09-13T10:12:49.00+09:00"
+  },
+  {
     title: "Baseline MCP Serverを公開しました！",
     url: "https://zenn.dev/yamanoku/articles/baseline-mcp-server",
     datetime: "2025-04-13T15:04:00.00+09:00"
@@ -59,10 +64,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "Webフロントエンドでのリアクティビティからalien-signalsを知ろう",
     url: "https://zenn.dev/comm_vue_nuxt/articles/about-alien-signals",
     datetime: "2025-03-24T12:00:00.00+09:00"
-  },
-  {
-    title: "Interop 2025が始まりました！",
-    url: "https://zenn.dev/yamanoku/articles/interop-2025-launched",
-    datetime: "2025-02-15T16:11:00.00+09:00"
   }
 ];
