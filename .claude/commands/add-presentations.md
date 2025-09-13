@@ -1,0 +1,1 @@
+$ARGUMENTS に含まれるURLを受け取ったらその内容を取得してsrc/presentations/listPresentation.tsに追加・編集する作業をしてください。
