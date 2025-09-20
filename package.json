@@ -14,15 +14,15 @@
     "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
   },
   "dependencies": {
-    "@tailwindcss/vite": "4.1.13",
-    "astro": "5.13.8",
-    "modern-normalize": "3.0.1",
-    "tailwindcss": "4.1.13"
+    "@tailwindcss/vite": "catalog:website",
+    "astro": "catalog:website",
+    "modern-normalize": "catalog:website",
+    "tailwindcss": "catalog:website"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.4",
-    "gh-pages": "6.3.0",
-    "markuplint": "4.13.1"
+    "@biomejs/biome": "catalog:website",
+    "gh-pages": "catalog:website",
+    "markuplint": "catalog:website"
   },
   "pnpm": {
     "packageExtensions": {
