@@ -4,6 +4,34 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  website:
+    '@biomejs/biome':
+      specifier: 2.2.4
+      version: 2.2.4
+    '@tailwindcss/vite':
+      specifier: 4.1.13
+      version: 4.1.13
+    astro:
+      specifier: 5.13.8
+      version: 5.13.8
+    gh-pages:
+      specifier: 6.3.0
+      version: 6.3.0
+    markuplint:
+      specifier: 4.13.1
+      version: 4.13.1
+    modern-normalize:
+      specifier: 3.0.1
+      version: 3.0.1
+    tailwindcss:
+      specifier: 4.1.13
+      version: 4.1.13
+  yama-normalize:
+    '@eslint/css':
+      specifier: 0.11.0
+      version: 0.11.0
+
 packageExtensionsChecksum: sha256-/tpsUxzak38xPTtJAqMSdL/7jBwF7hgy7k264Dv0vPY=
 
 importers:
@@ -11,32 +39,32 @@ importers:
   .:
     dependencies:
       '@tailwindcss/vite':
-        specifier: 4.1.13
+        specifier: catalog:website
         version: 4.1.13(vite@6.3.6(@types/node@22.15.17)(jiti@2.5.1)(lightningcss@1.30.1)(yaml@2.7.0))
       astro:
-        specifier: 5.13.8
+        specifier: catalog:website
         version: 5.13.8(@types/node@22.15.17)(jiti@2.5.1)(lightningcss@1.30.1)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0)
       modern-normalize:
-        specifier: 3.0.1
+        specifier: catalog:website
         version: 3.0.1
       tailwindcss:
-        specifier: 4.1.13
+        specifier: catalog:website
         version: 4.1.13
     devDependencies:
       '@biomejs/biome':
-        specifier: 2.2.4
+        specifier: catalog:website
         version: 2.2.4
       gh-pages:
-        specifier: 6.3.0
+        specifier: catalog:website
         version: 6.3.0
       markuplint:
-        specifier: 4.13.1
+        specifier: catalog:website
         version: 4.13.1(typescript@5.7.3)
 
   packages/yama-normalize:
     devDependencies:
       '@eslint/css':
-        specifier: 0.11.0
+        specifier: catalog:yama-normalize
         version: 0.11.0(@types/css-tree@2.3.10)
 
 packages:
