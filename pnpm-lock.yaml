@@ -29,8 +29,8 @@ catalogs:
       version: 4.1.13
   yama-normalize:
     '@eslint/css':
-      specifier: 0.11.0
-      version: 0.11.0
+      specifier: 0.11.1
+      version: 0.11.1
 
 packageExtensionsChecksum: sha256-/tpsUxzak38xPTtJAqMSdL/7jBwF7hgy7k264Dv0vPY=
 
@@ -65,7 +65,7 @@ importers:
     devDependencies:
       '@eslint/css':
         specifier: catalog:yama-normalize
-        version: 0.11.0(@types/css-tree@2.3.10)
+        version: 0.11.1(@types/css-tree@2.3.10)
 
 packages:
 
@@ -324,8 +324,8 @@ packages:
     resolution: {integrity: sha512-bJgnXu0D0K1BbfPfHTmCaJe2ucBOjeg/tG37H2CSqYCw51VMmBtPfWrH8LKPLAVCOp0h94e1n8PfR3v9iRbtyA==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
 
-  '@eslint/css@0.11.0':
-    resolution: {integrity: sha512-QQEw1zoOnF6E7+i9cyWpsXdOyy2ebH9hR9O2q+Vvl5mmBwBGBa33BkhKlWHqZiG9ib0AKlw0hGgnxOH0r12l9g==}
+  '@eslint/css@0.11.1':
+    resolution: {integrity: sha512-EWwIOS/NlvYYen+Bqzedruuvc0JpsHAm4fbkr/N5E0daEN0OaTQPFLoS/UayG7R0giFIpRDdjQ3l/wt3Z3Rf4A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       '@types/css-tree': 2.3.10
@@ -2606,7 +2606,7 @@ snapshots:
       mdn-data: 2.23.0
       source-map-js: 1.2.1
 
-  '@eslint/css@0.11.0(@types/css-tree@2.3.10)':
+  '@eslint/css@0.11.1(@types/css-tree@2.3.10)':
     dependencies:
       '@eslint/core': 0.15.2
       '@eslint/css-tree': 3.6.5
