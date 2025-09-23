@@ -30,4 +30,4 @@ jobs:
       run: |
         pnpm install
         pnpm yama-normalize test
-        pnpm publish --no-git-checks
+        pnpm publish --no-git-checks ./packages/yama-normalize
