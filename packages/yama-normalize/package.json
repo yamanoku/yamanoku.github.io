@@ -2,7 +2,10 @@
   "name": "yama-normalize",
   "version": "2.2.1",
   "description": "yamanoku.net default style",
-  "repository": "yamanoku/yama-normalize",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yamanoku/yamanoku.github.io"
+  },
   "author": {
     "name": "yamanoku",
     "email": "0910yama@gmail.com",
