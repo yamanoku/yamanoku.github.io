@@ -1,9 +1,9 @@
-name: Publish Package
+name: Publish Package yama-normalize
 
 on:
   push:
     tags:
-      - 'v*'
+      - 'yama-normalize@*'
 
 permissions:
   id-token: write  # Required for OIDC
