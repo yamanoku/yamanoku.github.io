@@ -19,5 +19,5 @@
   --color-y-blue-medium: var(--y-blue-medium);
   --color-y-purple-medium: var(--y-purple-medium);
   --color-y-arcticle-border-color: var(--y-arcticle-border-color);
-  --color-y-icon-color: var(--y-identity-color);
+  --color-y-identity-color: var(--y-identity-color);
 }
