@@ -7,6 +7,7 @@
   --y-blue-low: rgba(90, 190, 255);
   --y-blue-medium: rgba(18, 122, 200);
   --y-purple-medium: rgba(220, 100, 220);
+  --y-navy-dark: rgba(54, 70, 93);
   --y-rhythm-base: .5rem;
 
   /* Semantics Tokens */
@@ -23,6 +24,7 @@
   --y-thead-background-color: var(--y-white-low);
   --y-thead-text-color: var(--y-black-base);
   --y-table-border-color: var(--y-black-base);
+  --y-identity-color: var(--y-navy-dark);
   --y-rhythm-1: calc(var(--y-rhythm-base) * 1);
   --y-rhythm-2: calc(var(--y-rhythm-base) * 2);
   --y-rhythm-3: calc(var(--y-rhythm-base) * 3);
