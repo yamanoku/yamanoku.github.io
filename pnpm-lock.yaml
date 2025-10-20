@@ -13,8 +13,8 @@ catalogs:
       specifier: 4.1.14
       version: 4.1.14
     astro:
-      specifier: 5.14.6
-      version: 5.14.6
+      specifier: 5.14.7
+      version: 5.14.7
     gh-pages:
       specifier: 6.3.0
       version: 6.3.0
@@ -43,7 +43,7 @@ importers:
         version: 4.1.14(vite@6.3.6(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.30.1)(yaml@2.7.0))
       astro:
         specifier: catalog:website
-        version: 5.14.6(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.30.1)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0)
+        version: 5.14.7(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.30.1)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0)
       modern-normalize:
         specifier: catalog:website
         version: 3.0.1
@@ -873,8 +873,8 @@ packages:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
 
-  astro@5.14.6:
-    resolution: {integrity: sha512-MSdjKt2W2a56x868DqDWgbfw4D689/8EGhHG4465h7eivTI237u1aBx4iJvgI6WfgdUE61+coAvMjUkEvOWbpA==}
+  astro@5.14.7:
+    resolution: {integrity: sha512-vdZmRN2MFf60ZTjFkZNrQQkrmeeZzTI1c6N3ZRQN55rPGHjywM2VplJwJ68q496DfpaoDoAroDBpdm+eTgHUtQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3133,7 +3133,7 @@ snapshots:
 
   array-union@2.1.0: {}
 
-  astro@5.14.6(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.30.1)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0):
+  astro@5.14.7(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.30.1)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.7.4
