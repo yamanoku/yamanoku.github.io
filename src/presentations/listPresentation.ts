@@ -11,7 +11,7 @@ type ExactPresantationLengthArray<T> = {
 export const listStage: ExactPresantationLengthArray<ListType> = [
   {
     title: "生成AI時代のWebアプリケーションアクセシビリティ改善",
-    url: "https://yamanoku.net/vuefes-japan-2025/ja/",
+    url: "https://yamanoku.net/vuefes-japan-2025/slide/",
     datetime: "2025-10-25T12:50:00.00+09:00"
   },
   {
