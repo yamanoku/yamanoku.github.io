@@ -29,8 +29,8 @@ catalogs:
       version: 4.1.16
   yama-normalize:
     '@eslint/css':
-      specifier: 0.13.0
-      version: 0.13.0
+      specifier: 0.14.0
+      version: 0.14.0
 
 packageExtensionsChecksum: sha256-/tpsUxzak38xPTtJAqMSdL/7jBwF7hgy7k264Dv0vPY=
 
@@ -65,7 +65,7 @@ importers:
     devDependencies:
       '@eslint/css':
         specifier: catalog:yama-normalize
-        version: 0.13.0(@types/css-tree@2.3.10)
+        version: 0.14.0(@types/css-tree@2.3.10)
 
 packages:
 
@@ -321,12 +321,12 @@ packages:
     resolution: {integrity: sha512-nmC8/totwobIiFcGkDza3GIKfAw1+hLiYVrh3I1nIomQ8PEr5cxg34jnkmGawul/ep52wGRAcyeDCNtWKSOj4Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/css-tree@3.6.5':
-    resolution: {integrity: sha512-bJgnXu0D0K1BbfPfHTmCaJe2ucBOjeg/tG37H2CSqYCw51VMmBtPfWrH8LKPLAVCOp0h94e1n8PfR3v9iRbtyA==}
+  '@eslint/css-tree@3.6.6':
+    resolution: {integrity: sha512-C3YiJMY9OZyZ/3vEMFWJIesdGaRY6DmIYvmtyxMT934CbrOKqRs+Iw7NWSRlJQEaK4dPYy2lZ2y1zkaj8z0p5A==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
 
-  '@eslint/css@0.13.0':
-    resolution: {integrity: sha512-nPUDpWDKq3uXrvvft+wfZmx7jCF/TLMzXassUrSxLTumQ7Cr4F/HTUcibVit2MdbSqfgAkWgLRc6Gns5/PRAEA==}
+  '@eslint/css@0.14.0':
+    resolution: {integrity: sha512-2UDkW1Oolf27KCWI9nceLFrpcDqSlJH1JMiXu8v4S9bYEEPr1KT5cvEjQkITjACR8EkQQYNrMYggvg8bVHp9fA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       '@types/css-tree': 2.3.10
@@ -2551,15 +2551,15 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/css-tree@3.6.5':
+  '@eslint/css-tree@3.6.6':
     dependencies:
       mdn-data: 2.23.0
       source-map-js: 1.2.1
 
-  '@eslint/css@0.13.0(@types/css-tree@2.3.10)':
+  '@eslint/css@0.14.0(@types/css-tree@2.3.10)':
     dependencies:
       '@eslint/core': 0.16.0
-      '@eslint/css-tree': 3.6.5
+      '@eslint/css-tree': 3.6.6
       '@eslint/plugin-kit': 0.4.0
       '@types/css-tree': 2.3.10
 
