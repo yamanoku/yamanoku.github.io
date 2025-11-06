@@ -7,7 +7,7 @@ catalogs:
     "@tailwindcss/vite": 4.1.16
     astro: 5.15.3
     gh-pages: 6.3.0
-    markuplint: 4.13.1
+    markuplint: 4.14.0
     modern-normalize: 3.0.1
     tailwindcss: 4.1.16
   yama-normalize:
