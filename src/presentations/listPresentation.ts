@@ -38,6 +38,11 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title: "Vue Fes Japan 2025 After Talk参加レポート #vuefes_aftertalk",
+    url: "https://qiita.com/okuto_oyama/items/7e7d6d2bc26d652516b3",
+    datetime: "2025-11-12T09:10:49.00+09:00"
+  },
+  {
     title: "Nuxt設定ファイルにあるcompatibilityDateとは何か？",
     url: "https://zenn.dev/comm_vue_nuxt/articles/what-is-nuxt-compatibility-date-config",
     datetime: "2025-09-13T10:12:49.00+09:00"
@@ -58,10 +63,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
       "Nuxt 3 SSRでの@datadog/browser-logs、@datadog/browser-rum、dd-traceの設定方法",
     url: "https://qiita.com/okuto_oyama/items/7fc03b13fe0c6be2f07b",
     datetime: "2025-03-26T12:39:20.00+09:00"
-  },
-  {
-    title: "Webフロントエンドでのリアクティビティからalien-signalsを知ろう",
-    url: "https://zenn.dev/comm_vue_nuxt/articles/about-alien-signals",
-    datetime: "2025-03-24T12:00:00.00+09:00"
   }
 ];
