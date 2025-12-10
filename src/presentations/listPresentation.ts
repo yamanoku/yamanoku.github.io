@@ -38,6 +38,11 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title: "Vueユーザーから見るReact Tokyoコミュニティ",
+    url: "https://zenn.dev/yamanoku/articles/react-tokyo-advent-calender-2025",
+    datetime: "2025-12-10T10:00:00.00+09:00"
+  },
+  {
     title: "フロントエンド技術周辺のアップデートから振り返る2025年",
     url: "https://qiita.com/okuto_oyama/items/6a5e5029c385a360f7fc",
     datetime: "2025-12-01T10:00:00.00+09:00"
@@ -56,11 +61,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "Baseline MCP Serverを公開しました！",
     url: "https://zenn.dev/yamanoku/articles/baseline-mcp-server",
     datetime: "2025-04-13T15:04:00.00+09:00"
-  },
-  {
-    title:
-      "まだ内容を把握できてないことを調査して、勉強会で発表するまでにやってきたこと",
-    url: "https://qiita.com/okuto_oyama/items/c941c4200c66bffb4d2b",
-    datetime: "2025-04-04T12:11:20.00+09:00"
   }
 ];
