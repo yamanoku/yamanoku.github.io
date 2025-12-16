@@ -3,7 +3,7 @@ packages:
 
 catalogs:
   website:
-    "@biomejs/biome": 2.3.8
+    "@biomejs/biome": 2.3.9
     "@tailwindcss/vite": 4.1.18
     astro: 5.16.5
     gh-pages: 6.3.0
