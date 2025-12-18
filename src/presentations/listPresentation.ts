@@ -10,6 +10,11 @@ type ExactPresantationLengthArray<T> = {
 
 export const listStage: ExactPresantationLengthArray<ListType> = [
   {
+    title: "ひとりNavigation API Advent Calendarの紹介 / Mita.ts #9",
+    url: "https://speakerdeck.com/yamanoku/solo-navigation-api-advent-calendar",
+    datetime: "2025-12-17T20:30:00.00+09:00"
+  },
+  {
     title: "生成AI時代のWebアプリケーションアクセシビリティ改善",
     url: "https://yamanoku.net/vuefes-japan-2025/slide/",
     datetime: "2025-10-25T12:50:00.00+09:00"
@@ -28,15 +33,15 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
     title: "DenoとJSRで実現する最速MCPサーバー開発記",
     url: "https://speakerdeck.com/yamanoku/building-mcp-servers-at-lightning-speed-with-deno-and-jsr",
     datetime: "2025-06-18T20:10:00.00+09:00"
-  },
-  {
-    title: "Proposal for ECMAScript enumsについて（2025-06-06時点）",
-    url: "https://scrapbox.io/yamanoku/Proposal_for_ECMAScript_enums%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BC%882025-06-06%E6%99%82%E7%82%B9%EF%BC%89",
-    datetime: "2025-06-06T19:48:00.00+09:00"
   }
 ];
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
+  {
+    title: "SvelteKitのクライアントサイドルーティングはどういう仕組みなの？",
+    url: "https://zenn.dev/yamanoku/articles/svelte-advent-calender-2025",
+    datetime: "2025-12-18T17:46:27.00+09:00"
+  },
   {
     title: "Vueユーザーから見るReact Tokyoコミュニティ",
     url: "https://zenn.dev/yamanoku/articles/react-tokyo-advent-calender-2025",
@@ -56,10 +61,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "Nuxt設定ファイルにあるcompatibilityDateとは何か？",
     url: "https://zenn.dev/comm_vue_nuxt/articles/what-is-nuxt-compatibility-date-config",
     datetime: "2025-09-13T10:12:49.00+09:00"
-  },
-  {
-    title: "Baseline MCP Serverを公開しました！",
-    url: "https://zenn.dev/yamanoku/articles/baseline-mcp-server",
-    datetime: "2025-04-13T15:04:00.00+09:00"
   }
 ];
