@@ -10,7 +10,7 @@
       "**/*.astro",
       "!**/node_modules",
       "!**/dist",
-      "!.astro/**"
+      "!.astro"
     ]
   },
   "formatter": {
