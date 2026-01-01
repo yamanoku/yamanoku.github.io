@@ -4,34 +4,17 @@ import GlobalListComponent from "../../global/GlobalListComponent.astro";
 
 const lang = getLanguageFromURL(Astro.url.pathname);
 const t = useTranslations(Astro);
+
+const nippoYears = [2026, 2025, 2024, 2023, 2022, 2021];
+const nippoList = nippoYears.map((year) => ({
+  title: `nippo-${year}`,
+  url: `https://scrapbox.io/yamanoku/nippo-${year}`
+}));
 ---
 
 <section id="daily-journal" aria-labelledby="daily-journal_heading">
   <h2 id="daily-journal_heading">{t("heading.daily-journal")}</h2>
   <slot />
   {lang === "en" && <em>Sorry, Japanese text only</em>}
-  <GlobalListComponent
-    list={[
-      {
-        title: "nippo-2025",
-        url: "https://scrapbox.io/yamanoku/nippo-2025"
-      },
-      {
-        title: "nippo-2024",
-        url: "https://scrapbox.io/yamanoku/nippo-2024"
-      },
-      {
-        title: "nippo-2023",
-        url: "https://scrapbox.io/yamanoku/nippo-2023"
-      },
-      {
-        title: "nippo-2022",
-        url: "https://scrapbox.io/yamanoku/nippo-2022"
-      },
-      {
-        title: "nippo-2021",
-        url: "https://scrapbox.io/yamanoku/nippo-2021"
-      }
-    ]}
-  />
+  <GlobalListComponent list={nippoList} />
 </section>
