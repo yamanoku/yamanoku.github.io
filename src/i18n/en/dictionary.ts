@@ -29,7 +29,6 @@ export default Dictionary({
   "info.birthplace": "Birthplace",
   "info.location": "Location",
   "info.family": "Family",
-  "info.organization": "Organization",
 
   // open source activity
   "open-source-activity.descripion":

@@ -27,7 +27,6 @@ export default {
   "info.birthplace": "出身",
   "info.location": "所在",
   "info.family": "家族構成",
-  "info.organization": "所属組織",
 
   // オープンソース活動
   "open-source-activity.descripion":
