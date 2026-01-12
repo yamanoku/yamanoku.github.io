@@ -82,6 +82,11 @@ html[lang="ja"] {
 body {
   margin: 0;
 }
+@supports (text-autospace: normal) {
+  body {
+    text-autospace: normal;
+  }
+}
 html:not([lang="ja"]) body {
   hyphens: auto;
 }
