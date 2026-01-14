@@ -39,7 +39,7 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
-    title: "BuriKaigi 2026 参加レポート",
+    title: "BuriKaigi 2026に登壇しました",
     url: "https://note.com/yamanoku/n/n7ea134e44551",
     datetime: "2026-01-14T22:17:00.00+09:00"
   },
