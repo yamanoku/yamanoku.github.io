@@ -39,6 +39,11 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title: "BuriKaigi 2026に登壇しました",
+    url: "https://note.com/yamanoku/n/n7ea134e44551",
+    datetime: "2026-01-14T22:17:00.00+09:00"
+  },
+  {
     title: "2025年オープンソースコントリビュート活動振り返り",
     url: "https://zenn.dev/yamanoku/articles/2025-oss-contribute-activity",
     datetime: "2025-12-31T20:43:00.00+09:00"
@@ -57,10 +62,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "フロントエンド技術周辺のアップデートから振り返る2025年",
     url: "https://qiita.com/okuto_oyama/items/6a5e5029c385a360f7fc",
     datetime: "2025-12-01T10:00:00.00+09:00"
-  },
-  {
-    title: "Vue Fes Japan 2025 After Talk参加レポート #vuefes_aftertalk",
-    url: "https://qiita.com/okuto_oyama/items/7e7d6d2bc26d652516b3",
-    datetime: "2025-11-12T09:10:49.00+09:00"
   }
 ];
