@@ -13,8 +13,8 @@ catalogs:
       specifier: 4.1.18
       version: 4.1.18
     astro:
-      specifier: 5.16.14
-      version: 5.16.14
+      specifier: 5.16.15
+      version: 5.16.15
     gh-pages:
       specifier: 6.3.0
       version: 6.3.0
@@ -43,7 +43,7 @@ importers:
         version: 4.1.18(vite@6.4.1(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.7.0))
       astro:
         specifier: catalog:website
-        version: 5.16.14(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0)
+        version: 5.16.15(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0)
       modern-normalize:
         specifier: catalog:website
         version: 3.0.1
@@ -863,8 +863,8 @@ packages:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
 
-  astro@5.16.14:
-    resolution: {integrity: sha512-+XtShBCwsL5IezGvSeJTIHoZl3RGDOiB2u54t5phS+3haa0A5kGWXbZAmh5O/xFIv19/1cxHbDFa2i0Ot16SMw==}
+  astro@5.16.15:
+    resolution: {integrity: sha512-+X1Z0NTi2pa5a0Te6h77Dgc44fYj63j1yx6+39Nvg05lExajxSq7b1Uj/gtY45zoum8fD0+h0nak+DnHighs3A==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1543,10 +1543,6 @@ packages:
 
   longest-streak@3.1.0:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==}
-
-  lru-cache@11.0.2:
-    resolution: {integrity: sha512-123qHRfJBmo2jXDbo/a5YOQrJoHF/GNQTLzQ5+IdK5pWpceK17yRc6ozlWd25FxvGKQbIUs91fDFkXmDHTKcyA==}
-    engines: {node: 20 || >=22}
 
   lru-cache@11.2.4:
     resolution: {integrity: sha512-B5Y16Jr9LB9dHVkh6ZevG+vAbOsNOYCX+sXvFWFu7B3Iz5mijW3zdbMyhsh8ANd2mSWBYdJgnqi+mL7/LrOPYg==}
@@ -3127,7 +3123,7 @@ snapshots:
 
   array-union@2.1.0: {}
 
-  astro@5.16.14(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0):
+  astro@5.16.15(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.40.1)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.5
@@ -3915,8 +3911,6 @@ snapshots:
 
   longest-streak@3.1.0: {}
 
-  lru-cache@11.0.2: {}
-
   lru-cache@11.2.4: {}
 
   magic-string@0.30.21:
@@ -4410,7 +4404,7 @@ snapshots:
 
   path-scurry@2.0.0:
     dependencies:
-      lru-cache: 11.0.2
+      lru-cache: 11.2.4
       minipass: 7.1.2
 
   path-type@4.0.0: {}
