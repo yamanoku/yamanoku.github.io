@@ -10,6 +10,11 @@ type ExactPresantationLengthArray<T> = {
 
 export const listStage: ExactPresantationLengthArray<ListType> = [
   {
+    title: "SchooでVue.js/Nuxtを技術選定している理由",
+    url: "https://speakerdeck.com/yamanoku/why-choose-vue-nuxt",
+    datetime: "2026-02-12T19:10:00.00+09:00"
+  },
+  {
     title:
       "たかがボタン、されどボタン～button要素から深ぼるボタンUIの定義について～",
     url: "https://yamanoku.net/burikaigi-2026/slide/",
@@ -29,15 +34,15 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
     title: "Svelte Accessibility on 2025-10-24",
     url: "https://scrapbox.io/yamanoku/Svelte_Accessibility_on_2025-10-24",
     datetime: "2025-10-24T20:39:00.00+09:00"
-  },
-  {
-    title: "改めてカルーセルを見つめ直してみる Summer 2025",
-    url: "https://scrapbox.io/yamanoku/%E6%94%B9%E3%82%81%E3%81%A6%E3%82%AB%E3%83%AB%E3%83%BC%E3%82%BB%E3%83%AB%E3%82%92%E8%A6%8B%E3%81%A4%E3%82%81%E7%9B%B4%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B_Summer_2025",
-    datetime: "2025-09-08T20:03:00.00+09:00"
   }
 ];
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
+  {
+    title: "Interop 2026が始まりました！",
+    url: "https://zenn.dev/yamanoku/articles/interop-2026-launched",
+    datetime: "2026-02-13T21:52:20+09:00"
+  },
   {
     title: "BuriKaigi 2026に登壇しました",
     url: "https://note.com/yamanoku/n/n7ea134e44551",
@@ -57,10 +62,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "Vueユーザーから見るReact Tokyoコミュニティ",
     url: "https://zenn.dev/yamanoku/articles/react-tokyo-advent-calender-2025",
     datetime: "2025-12-10T10:00:00.00+09:00"
-  },
-  {
-    title: "フロントエンド技術周辺のアップデートから振り返る2025年",
-    url: "https://qiita.com/okuto_oyama/items/6a5e5029c385a360f7fc",
-    datetime: "2025-12-01T10:00:00.00+09:00"
   }
 ];
