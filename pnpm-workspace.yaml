@@ -5,7 +5,7 @@ catalogs:
   website:
     "@biomejs/biome": 2.4.2
     "@tailwindcss/vite": 4.1.18
-    astro: 5.17.2
+    astro: 5.17.3
     gh-pages: 6.3.0
     markuplint: 4.14.1
     modern-normalize: 3.0.1
