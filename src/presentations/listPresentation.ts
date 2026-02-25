@@ -39,6 +39,12 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title:
+      "選んだ技術を、自分たちで正解にする。SchooがVueエコシステムと共に歩む理由",
+    url: "https://qiita.com/okuto_oyama/items/a981c84dbcf90edd9b62",
+    datetime: "2026-02-24T08:20:00.00+09:00"
+  },
+  {
     title: "Interop 2026が始まりました！",
     url: "https://zenn.dev/yamanoku/articles/interop-2026-launched",
     datetime: "2026-02-13T21:52:20+09:00"
@@ -57,10 +63,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "SvelteKitのクライアントサイドルーティングはどういう仕組みなの？",
     url: "https://zenn.dev/yamanoku/articles/svelte-advent-calender-2025",
     datetime: "2025-12-18T17:46:27.00+09:00"
-  },
-  {
-    title: "Vueユーザーから見るReact Tokyoコミュニティ",
-    url: "https://zenn.dev/yamanoku/articles/react-tokyo-advent-calender-2025",
-    datetime: "2025-12-10T10:00:00.00+09:00"
   }
 ];
