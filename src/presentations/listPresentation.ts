@@ -10,6 +10,11 @@ type ExactPresantationLengthArray<T> = {
 
 export const listStage: ExactPresantationLengthArray<ListType> = [
   {
+    title: "Shifting from MCP to Skills ベストプラクティスの変遷を辿る",
+    url: "https://speakerdeck.com/yamanoku/shifting-from-mcp-to-skills",
+    datetime: "2026-03-06T19:30:00.00+09:00"
+  },
+  {
     title: "ReactにおけるWebアクセシビリティ実践",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vRuddSQ6OqS0cTmfpd5uA5KezqwofFs10JLVL8-oV0vmxw2NT2Iq0j7Y38RmK6kunz58ZyIDSyqkKjb/pub?start=false",
     datetime: "2026-02-28T10:00:00.00+09:00"
@@ -29,11 +34,6 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
     title: "ひとりNavigation API Advent Calendarの紹介 / Mita.ts #9",
     url: "https://speakerdeck.com/yamanoku/solo-navigation-api-advent-calendar",
     datetime: "2025-12-17T20:30:00.00+09:00"
-  },
-  {
-    title: "生成AI時代のWebアプリケーションアクセシビリティ改善",
-    url: "https://yamanoku.net/vuefes-japan-2025/slide/",
-    datetime: "2025-10-25T12:50:00.00+09:00"
   }
 ];
 
