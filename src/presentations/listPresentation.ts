@@ -39,6 +39,11 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title: "動的な変更をスクリーンリーダーに伝えるNuxtAnnouncerの紹介",
+    url: "https://zenn.dev/comm_vue_nuxt/articles/feat-nuxt-announcer",
+    datetime: "2026-03-13T12:00:00.00+09:00"
+  },
+  {
     title:
       "選んだ技術を、自分たちで正解にする。SchooがVueエコシステムと共に歩む理由",
     url: "https://qiita.com/okuto_oyama/items/a981c84dbcf90edd9b62",
@@ -58,10 +63,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "2025年オープンソースコントリビュート活動振り返り",
     url: "https://zenn.dev/yamanoku/articles/2025-oss-contribute-activity",
     datetime: "2025-12-31T20:43:00.00+09:00"
-  },
-  {
-    title: "SvelteKitのクライアントサイドルーティングはどういう仕組みなの？",
-    url: "https://zenn.dev/yamanoku/articles/svelte-advent-calender-2025",
-    datetime: "2025-12-18T17:46:27.00+09:00"
   }
 ];
