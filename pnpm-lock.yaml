@@ -13,8 +13,8 @@ catalogs:
       specifier: 4.2.1
       version: 4.2.1
     astro:
-      specifier: 6.0.4
-      version: 6.0.4
+      specifier: 6.0.5
+      version: 6.0.5
     gh-pages:
       specifier: 6.3.0
       version: 6.3.0
@@ -43,7 +43,7 @@ importers:
         version: 4.2.1(vite@7.3.1(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.7.0))
       astro:
         specifier: catalog:website
-        version: 6.0.4(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(typescript@5.7.3)(yaml@2.7.0)
+        version: 6.0.5(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(typescript@5.7.3)(yaml@2.7.0)
       modern-normalize:
         specifier: catalog:website
         version: 3.0.1
@@ -857,9 +857,6 @@ packages:
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
 
-  '@types/estree@1.0.7':
-    resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
-
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
@@ -937,8 +934,8 @@ packages:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
 
-  astro@6.0.4:
-    resolution: {integrity: sha512-1piLJCPTL/x7AMO2cjVFSTFyRqKuC3W8sSEySCt1aJio+p/wGs5H3K+Xr/rE9ftKtknLUtjxCqCE7/0NsXfGpQ==}
+  astro@6.0.5:
+    resolution: {integrity: sha512-JnLCwaoCaRXIHuIB8yNztJrd7M3hXrHUMAoQmeXtEBKxRu/738REhaCZ1lapjrS9HlpHsWTu3JUXTERB/0PA7g==}
     engines: {node: ^20.19.1 || >=22.12.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1255,10 +1252,6 @@ packages:
 
   fontace@0.4.1:
     resolution: {integrity: sha512-lDMvbAzSnHmbYMTEld5qdtvNH2/pWpICOqpean9IgC7vUbUJc3k+k5Dokp85CegamqQpFbXf0rAVkbzpyTA8aw==}
-
-  fontkitten@1.0.0:
-    resolution: {integrity: sha512-b0RdzQeztiiUFWEDzq6Ka26qkNVNLCehoRtifOIGNbQ4CfxyYRh73fyWaQX/JshPVcueITOEeoSWPy5XQv8FUg==}
-    engines: {node: '>=20'}
 
   fontkitten@1.0.3:
     resolution: {integrity: sha512-Wp1zXWPVUPBmfoa3Cqc9ctaKuzKAV6uLstRqlR56kSjplf5uAce+qeyYym7F+PHbGTk+tCEdkCW6RD7DX/gBZw==}
@@ -2434,7 +2427,7 @@ snapshots:
 
   '@capsizecss/unpack@4.0.0':
     dependencies:
-      fontkitten: 1.0.0
+      fontkitten: 1.0.3
 
   '@clack/core@1.1.0':
     dependencies:
@@ -2832,7 +2825,7 @@ snapshots:
 
   '@rollup/pluginutils@5.3.0(rollup@4.59.0)':
     dependencies:
-      '@types/estree': 1.0.7
+      '@types/estree': 1.0.8
       estree-walker: 2.0.2
       picomatch: 4.0.3
     optionalDependencies:
@@ -3029,8 +3022,6 @@ snapshots:
     dependencies:
       '@types/ms': 0.7.34
 
-  '@types/estree@1.0.7': {}
-
   '@types/estree@1.0.8': {}
 
   '@types/hast@3.0.4':
@@ -3091,7 +3082,7 @@ snapshots:
 
   array-union@2.1.0: {}
 
-  astro@6.0.4(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(typescript@5.7.3)(yaml@2.7.0):
+  astro@6.0.5(@types/node@22.15.17)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 3.0.0
       '@astrojs/internal-helpers': 0.8.0
@@ -3479,10 +3470,6 @@ snapshots:
   fontace@0.4.1:
     dependencies:
       fontkitten: 1.0.3
-
-  fontkitten@1.0.0:
-    dependencies:
-      tiny-inflate: 1.0.3
 
   fontkitten@1.0.3:
     dependencies:
