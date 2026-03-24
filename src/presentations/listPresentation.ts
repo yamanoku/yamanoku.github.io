@@ -10,6 +10,11 @@ type ExactPresantationLengthArray<T> = {
 
 export const listStage: ExactPresantationLengthArray<ListType> = [
   {
+    title: "Navigation APIと見るSvelteKitのWeb標準志向",
+    url: "https://speakerdeck.com/yamanoku/navigation-api-sveltekit-web-standards?slide=15",
+    datetime: "2026-03-23T19:00:00.00+09:00"
+  },
+  {
     title: "Shifting from MCP to Skills ベストプラクティスの変遷を辿る",
     url: "https://speakerdeck.com/yamanoku/shifting-from-mcp-to-skills",
     datetime: "2026-03-06T19:30:00.00+09:00"
@@ -29,11 +34,6 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
       "たかがボタン、されどボタン～button要素から深ぼるボタンUIの定義について～",
     url: "https://yamanoku.net/burikaigi-2026/slide/",
     datetime: "2026-01-10T14:30:00.00+09:00"
-  },
-  {
-    title: "ひとりNavigation API Advent Calendarの紹介 / Mita.ts #9",
-    url: "https://speakerdeck.com/yamanoku/solo-navigation-api-advent-calendar",
-    datetime: "2025-12-17T20:30:00.00+09:00"
   }
 ];
 
