@@ -11,7 +11,7 @@ type ExactPresantationLengthArray<T> = {
 export const listStage: ExactPresantationLengthArray<ListType> = [
   {
     title: "Navigation APIと見るSvelteKitのWeb標準志向",
-    url: "https://speakerdeck.com/yamanoku/navigation-api-sveltekit-web-standards?slide=15",
+    url: "https://speakerdeck.com/yamanoku/navigation-api-sveltekit-web-standards",
     datetime: "2026-03-23T19:00:00.00+09:00"
   },
   {
