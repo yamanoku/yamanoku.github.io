@@ -4,11 +4,11 @@ packages:
 catalogs:
   website:
     "@biomejs/biome": 2.4.12
-    "@tailwindcss/vite": 4.2.2
+    "@tailwindcss/vite": 4.2.3
     astro: 6.1.8
     gh-pages: 6.3.0
     markuplint: 4.14.1
     modern-normalize: 3.0.1
-    tailwindcss: 4.2.2
+    tailwindcss: 4.2.3
   yama-normalize:
     "@eslint/css": 1.1.0
