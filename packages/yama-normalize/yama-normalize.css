@@ -106,13 +106,12 @@ a:visited {
 }
 :where(header, main, footer) {
   display: block;
-  max-width: 80ch;
+  max-inline-size: 80ch;
   box-sizing: content-box;
-  margin-inline: auto;
   padding-inline: var(--y-rhythm-2);
 }
 html[lang="ja"] :where(header, main, footer) {
-  max-width: 45rem;
+  max-inline-size: 45rem;
 }
 h1 {
   margin-block: 1lh;
@@ -152,15 +151,7 @@ article {
   position: relative;
   margin-block: 1lh;
   padding-bottom: var(--y-rhythm-3);
-}
-article::before {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: var(--y-arcticle-border-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  border-block-end: 1px solid var(--y-arcticle-border-color);
 }
 p {
   margin-block: 1lh;
@@ -168,7 +159,7 @@ p {
   line-height: var(--y-rhythm-3);
 }
 img {
-  max-width: 100%;
+  max-inline-size: 100%;
   vertical-align: bottom;
   height: auto;
   border: 1px solid var(--y-image-border-color);
@@ -202,21 +193,6 @@ ol li {
   line-height: var(--y-rhythm-3);
   font-size: 1rem;
 }
-ul:not([class]) {
-  list-style-type: none;
-  position: relative;
-}
-ul:not([class]) li::before {
-  background-color: var(--y-list-mark-color);
-  border-radius: 50%;
-  color: #fff;
-  content: "";
-  width: .35em;
-  height: .35em;
-  margin: calc(.6em) 0 0;
-  position: absolute;
-  left: 0;
-}
 dl {
   margin-block: 1lh;
   line-height: 1;
@@ -234,7 +210,9 @@ details > summary {
 }
 blockquote {
   border-inline-start: 6px solid var(--y-blockquote-border-color);
-  margin: var(--rhythm) 0 var(--rhythm) var(--rhythm);
+  margin-block: var(--y-rhythm-1);
+  margin-inline-start: var(--y-rhythm-1);
+  margin-inline-end: 0;
   padding-inline: var(--y-rhythm-2);
 }
 address {
@@ -257,7 +235,7 @@ table {
   overflow-x: scroll;
   border-collapse: collapse;
   width: max-content;
-  max-width: 100%;
+  max-inline-size: 100%;
   margin-block: 1lh;
 }
 caption {
