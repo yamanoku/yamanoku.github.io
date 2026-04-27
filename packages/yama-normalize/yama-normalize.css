@@ -239,7 +239,8 @@ table {
   margin-block: 1lh;
 }
 caption {
-  padding: 0 8px;
+  padding-block: 0;
+  padding-inline: 8px;
   font-size: 1rem;
   line-height: var(--y-rhythm-3);
 }
@@ -249,7 +250,8 @@ thead {
 }
 th, td {
   border: 1px solid var(--y-table-border-color);
-  padding: 0 8px;
+  padding-block: 0;
+  padding-inline: 8px;
   font-size: .8rem;
   line-height: var(--y-rhythm-3);
 }
