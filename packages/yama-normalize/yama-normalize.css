@@ -1,5 +1,5 @@
 :root {
-  /* Base Tokens */
+  /** Base Tokens */
   --y-black-base: rgba(21, 32, 43);
   --y-white-base: rgba(255, 255, 255);
   --y-white-low: rgba(210, 210, 210);
@@ -9,8 +9,14 @@
   --y-purple-medium: rgba(220, 100, 220);
   --y-navy-dark: rgba(54, 70, 93);
   --y-rhythm-base: .5rem;
+  --y-padding-base: 8px;
+  --y-font-size-base: 125%;
+  --y-typography-base: 1em;
+  --y-font-ratio: 1.25;
+  --y-margin-base: 1lh;
 
-  /* Semantics Tokens */
+  /** Semantics Tokens */
+  /* Color */
   --y-body-background: var(--y-white-base);
   --y-body-text-color: var(--y-black-base);
   --y-link-color: var(--y-blue-medium);
@@ -25,11 +31,37 @@
   --y-thead-text-color: var(--y-black-base);
   --y-table-border-color: var(--y-black-base);
   --y-identity-color: var(--y-navy-dark);
+
+  /* Rhythm */
   --y-rhythm-1: calc(var(--y-rhythm-base) * 1);
   --y-rhythm-2: calc(var(--y-rhythm-base) * 2);
   --y-rhythm-3: calc(var(--y-rhythm-base) * 3);
   --y-rhythm-4: calc(var(--y-rhythm-base) * 4);
   --y-rhythm-5: calc(var(--y-rhythm-base) * 5);
+
+  /* Spacing */
+  --y-typography-margin: var(--y-margin-base);
+  --y-list-margin: var(--y-margin-base);
+  --y-block-margin: var(--y-margin-base);
+  --y-figcaption-margin: calc(var(--y-margin-base) * 2 / 3);
+  --y-container-padding: clamp(var(--y-rhythm-2), calc(1vw * 3), var(--y-rhythm-4));
+  --y-table-cell-padding: var(--y-padding-base);
+  --y-table-caption-padding: var(--y-padding-base);
+  
+  /* Typography */
+  --y-h1-size: calc(var(--y-font-size-h2) * var(--y-font-ratio));
+  --y-h2-size: calc(var(--y-font-size-h3) * var(--y-font-ratio));
+  --y-h3-size: calc(var(--y-font-size-h4) * var(--y-font-ratio));
+  --y-h4-size: var(--y-typography-base);
+  --y-h5-size: calc(var(--y-font-size-h4) / var(--y-font-ratio));
+  --y-h6-size: calc(var(--y-font-size-h5) / var(--y-font-ratio));
+  --y-paragraph-size: var(--y-typography-base);
+  --y-pre-size: calc(var(--y-typography-base) / var(--y-font-ratio));
+  --y-list-item-size: var(--y-typography-base);
+  --y-small-size: calc(var(--y-typography-base) / var(--y-font-ratio));
+  --y-figcaption-size: calc(var(--y-typography-base) / var(--y-font-ratio));
+  --y-table-caption-size: var(--y-typography-base);
+  --y-table-cell-size: calc(var(--y-typography-base) / var(--y-font-ratio));
 
   /* yama-normalize supports both light mode and dark mode */
   color-scheme: light dark;
@@ -57,7 +89,7 @@ html {
   background-color: var(--y-body-background);
   color: var(--y-body-text-color);
   font: inherit;
-  font-size: 125%;
+  font-size: var(--y-font-size-base);
   line-height: var(--y-rhythm-3);
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
@@ -108,54 +140,54 @@ a:visited {
   display: block;
   max-inline-size: 80ch;
   box-sizing: content-box;
-  padding-inline: var(--y-rhythm-2);
+  padding-inline: var(--y-container-padding);
 }
 html[lang="ja"] :where(header, main, footer) {
   max-inline-size: 45rem;
 }
 h1 {
-  margin-block: 1lh;
-  font-size: 1.953em;
+  margin-block: var(--y-typography-margin);
+  font-size: var(--y-h1-size);
   line-height: var(--y-rhythm-5);
 }
 h2 {
-  margin-block: 1lh;
-  font-size: 1.563em;
+  margin-block: var(--y-typography-margin);
+  font-size: var(--y-h2-size);
   line-height: var(--y-rhythm-5);
 }
 h3 {
-  margin-block: 1lh;
-  font-size: 1.25em;
+  margin-block: var(--y-typography-margin);
+  font-size: var(--y-h3-size);
   line-height: var(--y-rhythm-3);
 }
 h4 {
-  margin-block: 1lh;
-  font-size: 1rem;
+  margin-block: var(--y-typography-margin);
+  font-size: var(--y-h4-size);
   line-height: var(--y-rhythm-3);
 }
 h5 {
-  margin-block: 1lh;
-  font-size: .8em;
+  margin-block: var(--y-typography-margin);
+  font-size: var(--y-h5-size);
   line-height: var(--y-rhythm-2);
 }
 h6 {
-  margin-block: 1lh;
-  font-size: .64em;
+  margin-block: var(--y-typography-margin);
+  font-size: var(--y-h6-size);
   line-height: var(--y-rhythm-1);
 }
 section {
   display: block;
-  margin-block: 1lh;
+  margin-block: var(--y-block-margin);
 }
 article {
   position: relative;
-  margin-block: 1lh;
+  margin-block: var(--y-block-margin);
   padding-bottom: var(--y-rhythm-3);
   border-block-end: 1px solid var(--y-arcticle-border-color);
 }
 p {
-  margin-block: 1lh;
-  font-size: 1rem;
+  margin-block: var(--y-typography-margin);
+  font-size: var(--y-paragraph-size);
   line-height: var(--y-rhythm-3);
 }
 img {
@@ -165,20 +197,18 @@ img {
   border: 1px solid var(--y-image-border-color);
 }
 figure {
-  margin-block: 1lh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-block: var(--y-block-margin);
+  margin-inline: 0;
 }
 figcaption {
-  margin-block-start: 0.66667lh;
-  font-size: .8em;
+  margin-block-start: var(--y-figcaption-margin);
+  font-size: var(--y-figcaption-size);
 }
 small {
   line-height: 1;
 }
 ul, ol {
-  margin-block: 1lh;
+  margin-block: var(--y-list-margin);
   line-height: 1;
   padding-inline-start: var(--y-rhythm-2);
 }
@@ -191,21 +221,21 @@ ol ul {
 ul li,
 ol li {
   line-height: var(--y-rhythm-3);
-  font-size: 1rem;
+  font-size: var(--y-list-item-size);
 }
 dl {
-  margin-block: 1lh;
+  margin-block: var(--y-block-margin);
   line-height: 1;
 }
 dt, dd {
   line-height: var(--y-rhythm-3);
-  font-size: 1rem;
+  font-size: var(--y-list-item-size);
 }
 dd {
   margin-inline-start: var(--y-rhythm-4);
 }
 details > summary {
-  margin-block: 1lh;
+  margin-block: var(--y-block-margin);
   cursor: pointer;
 }
 blockquote {
@@ -216,14 +246,14 @@ blockquote {
   padding-inline: var(--y-rhythm-2);
 }
 address {
-  margin-block: 1lh;
+  margin-block: var(--y-block-margin);
 }
 pre {
-  margin-block: 1lh;
-  font-size: .8rem;
+  margin-block: var(--y-block-margin);
+  font-size: var(--y-pre-size);
 }
 hr {
-  margin-block: 1lh;
+  margin-block: var(--y-block-margin);
   display: block;
   width: 100%;
   height: 1px;
@@ -236,12 +266,12 @@ table {
   border-collapse: collapse;
   width: max-content;
   max-inline-size: 100%;
-  margin-block: 1lh;
+  margin-block: var(--y-block-margin);
 }
 caption {
   padding-block: 0;
-  padding-inline: 8px;
-  font-size: 1rem;
+  padding-inline: var(--y-table-caption-padding);
+  font-size: var(--y-table-caption-size);
   line-height: var(--y-rhythm-3);
 }
 thead {
@@ -251,7 +281,7 @@ thead {
 th, td {
   border: 1px solid var(--y-table-border-color);
   padding-block: 0;
-  padding-inline: 8px;
-  font-size: .8rem;
+  padding-inline: var(--y-table-cell-padding);
+  font-size: var(--y-table-cell-size);
   line-height: var(--y-rhythm-3);
 }
