@@ -49,16 +49,15 @@
   --y-table-caption-padding: var(--y-padding-base);
   
   /* Typography */
-  --y-h1-size: calc(var(--y-font-size-h2) * var(--y-font-ratio));
-  --y-h2-size: calc(var(--y-font-size-h3) * var(--y-font-ratio));
-  --y-h3-size: calc(var(--y-font-size-h4) * var(--y-font-ratio));
+  --y-h1-size: calc(var(--y-h2-size) * var(--y-font-ratio));
+  --y-h2-size: calc(var(--y-h3-size) * var(--y-font-ratio));
+  --y-h3-size: calc(var(--y-h4-size) * var(--y-font-ratio));
   --y-h4-size: var(--y-typography-base);
-  --y-h5-size: calc(var(--y-font-size-h4) / var(--y-font-ratio));
-  --y-h6-size: calc(var(--y-font-size-h5) / var(--y-font-ratio));
+  --y-h5-size: calc(var(--y-h4-size) / var(--y-font-ratio));
+  --y-h6-size: calc(var(--y-h5-size) / var(--y-font-ratio));
   --y-paragraph-size: var(--y-typography-base);
   --y-pre-size: calc(var(--y-typography-base) / var(--y-font-ratio));
   --y-list-item-size: var(--y-typography-base);
-  --y-small-size: calc(var(--y-typography-base) / var(--y-font-ratio));
   --y-figcaption-size: calc(var(--y-typography-base) / var(--y-font-ratio));
   --y-table-caption-size: var(--y-typography-base);
   --y-table-cell-size: calc(var(--y-typography-base) / var(--y-font-ratio));
