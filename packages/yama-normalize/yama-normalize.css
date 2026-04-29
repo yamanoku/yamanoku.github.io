@@ -198,9 +198,7 @@ img {
 }
 figure {
   margin-block: var(--y-block-margin);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-inline: 0;
 }
 figcaption {
   margin-block-start: var(--y-figcaption-margin);
