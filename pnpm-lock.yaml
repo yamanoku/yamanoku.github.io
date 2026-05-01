@@ -13,8 +13,8 @@ catalogs:
       specifier: 4.2.4
       version: 4.2.4
     astro:
-      specifier: 6.1.10
-      version: 6.1.10
+      specifier: 6.2.1
+      version: 6.2.1
     gh-pages:
       specifier: 6.3.0
       version: 6.3.0
@@ -41,7 +41,7 @@ importers:
         version: 4.2.4(vite@7.3.2(jiti@2.6.1)(lightningcss@1.32.0))
       astro:
         specifier: catalog:website
-        version: 6.1.10(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)
+        version: 6.2.1(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)
       modern-normalize:
         specifier: catalog:website
         version: 3.0.1
@@ -67,8 +67,8 @@ importers:
 
 packages:
 
-  '@astrojs/compiler@3.0.1':
-    resolution: {integrity: sha512-z97oYbdebO5aoWzuJ/8q5hLK232+17KcLZ7cJ8BCWk6+qNzVxn/gftC0KzMBUTD8WAaBkPpNSQK6PXLnNrZ0CA==}
+  '@astrojs/compiler@4.0.0':
+    resolution: {integrity: sha512-eouss7G8ygdZqHuke033VMcVw5HTZUu+PXd/h06DGDUg/jt5btPYPqh66ENWw/mU78rBrf/oeC4oqoBwMtDMNA==}
 
   '@astrojs/internal-helpers@0.9.0':
     resolution: {integrity: sha512-GdYkzR26re8izmyYlBqf4z2s7zNngmWLFuxw0UKiPNqHraZGS6GKWIwSHgS22RDlu2ePFJ8bzmpBcUszut/SDg==}
@@ -916,8 +916,8 @@ packages:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
 
-  astro@6.1.10:
-    resolution: {integrity: sha512-jQAIki6c862oxRr7OXXC+h3n4wg1EpmKgCH3vv1FtXM9VFmD2iTjlaxrfb0I6eQCwtUjSBxfJBFBDSXHu7Wing==}
+  astro@6.2.1:
+    resolution: {integrity: sha512-3g1sYNly+QAkuO5ErNEQBYvsxorNDSCUNIeStBs+kcXGchvKQl1Q9EuDNOvSg010XLlHJFLVFZs9LV18Jjp4Hg==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2308,7 +2308,7 @@ packages:
 
 snapshots:
 
-  '@astrojs/compiler@3.0.1': {}
+  '@astrojs/compiler@4.0.0': {}
 
   '@astrojs/internal-helpers@0.9.0':
     dependencies:
@@ -3050,9 +3050,9 @@ snapshots:
 
   array-union@2.1.0: {}
 
-  astro@6.1.10(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0):
+  astro@6.2.1(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0):
     dependencies:
-      '@astrojs/compiler': 3.0.1
+      '@astrojs/compiler': 4.0.0
       '@astrojs/internal-helpers': 0.9.0
       '@astrojs/markdown-remark': 7.1.1
       '@astrojs/telemetry': 3.3.1
