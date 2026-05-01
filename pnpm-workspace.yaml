@@ -15,4 +15,4 @@ catalogs:
     modern-normalize: 3.0.1
     tailwindcss: 4.2.4
   yama-normalize:
-    "@eslint/css": 1.1.0
+    "@eslint/css": 1.2.0
