@@ -43,8 +43,8 @@
     "packages/*"
   ],
   "engines": {
-    "pnpm": "11.0.3",
+    "pnpm": "11.0.4",
     "npm": "please_use_pnpm_instead"
   },
-  "packageManager": "pnpm@11.0.3"
+  "packageManager": "pnpm@11.0.4"
 }
