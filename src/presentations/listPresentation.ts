@@ -10,6 +10,11 @@ type ExactPresantationLengthArray<T> = {
 
 export const listStage: ExactPresantationLengthArray<ListType> = [
   {
+    title: "Navigation APIが​lib.dom.d.tsに​採用されるまでの​道のり",
+    url: "https://yamanoku.net/tskaigi-2026/slide/",
+    datetime: "2026-05-22T17:40:00.00+09:00"
+  },
+  {
     title: "Navigation APIと見るSvelteKitのWeb標準志向",
     url: "https://speakerdeck.com/yamanoku/navigation-api-sveltekit-web-standards",
     datetime: "2026-03-23T19:00:00.00+09:00"
@@ -28,12 +33,6 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
     title: "SchooでVue.js/Nuxtを技術選定している理由",
     url: "https://speakerdeck.com/yamanoku/why-choose-vue-nuxt",
     datetime: "2026-02-12T19:10:00.00+09:00"
-  },
-  {
-    title:
-      "たかがボタン、されどボタン～button要素から深ぼるボタンUIの定義について～",
-    url: "https://yamanoku.net/burikaigi-2026/slide/",
-    datetime: "2026-01-10T14:30:00.00+09:00"
   }
 ];
 
