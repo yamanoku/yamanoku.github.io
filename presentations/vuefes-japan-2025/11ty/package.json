@@ -1,0 +1,15 @@
+{
+  "name": "vuefes-japan-2025-11ty",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "catalog:11ty",
+    "budoux": "catalog:11ty",
+    "markdown-it": "catalog:11ty",
+    "markdown-it-footnote": "catalog:11ty"
+  }
+}

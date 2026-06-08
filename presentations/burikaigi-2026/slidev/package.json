@@ -1,0 +1,17 @@
+{
+  "name": "burikaigi-2026-slidev",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build --base /burikaigi-2026/slide/ --out ../docs/slide/",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@iconify-json/twemoji": "catalog:slidev",
+    "@slidev/cli": "catalog:slidev",
+    "@slidev/theme-apple-basic": "catalog:slidev",
+    "@slidev/theme-default": "catalog:slidev",
+    "vue": "catalog:slidev"
+  }
+}

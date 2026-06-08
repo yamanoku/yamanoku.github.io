@@ -1,0 +1,15 @@
+{
+  "name": "vuefes-japan-2025-slidev",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build --base /vuefes-japan-2025/slide/ --out ../docs/slide/",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "catalog:slidev",
+    "@slidev/theme-apple-basic": "catalog:slidev",
+    "vue": "catalog:slidev"
+  }
+}

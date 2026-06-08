@@ -1,0 +1,16 @@
+{
+  "name": "vuefes-japan-online-2022",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "catalog:11ty",
+    "budoux": "catalog:11ty",
+    "markdown-it": "catalog:11ty",
+    "markdown-it-footnote": "catalog:11ty",
+    "markdown-it-link-attributes": "catalog:11ty"
+  }
+}
