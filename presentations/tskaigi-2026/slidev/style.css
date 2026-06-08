@@ -1,0 +1,99 @@
+:root {
+  --prism-font-size: 1.075rem;
+  --slidev-theme-primary: rgba(18, 122, 200);
+}
+
+html.dark:root {
+  --slidev-theme-primary: rgba(220, 100, 220);
+}
+
+.slidev-page-25 code {
+  font-size: 2rem;
+}
+
+.slidev-layout ul ul {
+  margin-bottom: 0;
+}
+
+.slidev-layout h1 + h2 {
+  margin-top: 1lh;
+}
+
+.slidev-layout h2 {
+  margin-top: 1lh;
+  font-size: 2rem;
+  margin-bottom: 1lh;
+}
+
+.slidev-layout h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1lh;
+  opacity: 1 !important;
+  letter-spacing: 0;
+}
+
+.slidev-layout li {
+  font-size: 1.4rem;
+}
+
+.slidev-layout.intro li {
+  font-size: 1rem;
+}
+
+.slidev-layout.center h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.slidev-layout.center h1 + h2 {
+  text-align: center;
+}
+
+.slidev-layout.section h1 {
+  font-weight: 700;
+}
+
+.slidev-layout a {
+  border-style: double;
+}
+
+.slidev-layout blockquote {
+  font-size: 1.2rem;
+}
+
+.slidev-layout blockquote + blockquote {
+  margin-top: 1lh;
+}
+
+.place-content-center {
+  place-content: unset !important;
+  align-items: center;
+}
+
+.slidev-layout blockquote {
+  border-inline-start: 6px solid rgba(90, 190, 255);
+  border-radius: 0;
+  padding-inline: 1rem;
+  background-color: transparent;
+}
+
+.slidev-layout blockquote p {
+  line-height: 1.75rem;
+}
+
+.slidev-layout thead {
+  background-color: rgba(210, 210, 210);
+}
+
+.slidev-layout tr {
+  border-color: rgba(21, 32, 43);
+}
+
+html.dark .slidev-layout tr {
+  border-color: rgba(210, 210, 210);
+}
+
+html.dark .slidev-layout thead {
+  color: black
+}
