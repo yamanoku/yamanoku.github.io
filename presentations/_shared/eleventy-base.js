@@ -29,11 +29,7 @@ export function configureEleventy(eleventyConfig, options = {}) {
       return "";
     },
   };
-  let markdownLib = markdownit(mdOptions);
-
-  if (options.footnote !== false) {
-    markdownLib = markdownLib.use(markdownItFootnote);
-  }
+  const markdownLib = markdownit(mdOptions).use(markdownItFootnote);
 
   eleventyConfig.addJavaScriptFunction("budoux", (t) => {
     return parser.translateHTMLString(t);
