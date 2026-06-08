@@ -13,7 +13,7 @@ export function render(data) {
         <meta name="twitter:site" content="@yamanoku">
         <meta name="twitter:image:alt" content="${data.title} ${data.subtitle}">
         <meta property="og:locale" content="${data.lang}">
-        <link rel="stylesheet" href="./yama-normalize.css">
+        <link rel="stylesheet" href="${this.rootPath()}yama-normalize.css">
       </head>
       <body>
         <main id="main">

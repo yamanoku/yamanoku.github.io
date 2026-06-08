@@ -16,8 +16,8 @@ export function render(data) {
         <meta name="twitter:site" content="@yamanoku">
         <meta name="twitter:image:alt" content="How to make Nuxt applications accessible based on page transitions">
         <meta property="og:locale" content="${data.lang}">
-        <link rel="stylesheet" href="./yama-normalize.css">
-        ${highlightjsTags()}
+        <link rel="stylesheet" href="${this.rootPath()}yama-normalize.css">
+        ${highlightjsTags(this.rootPath())}
       </head>
       <body>
         <main id="main">

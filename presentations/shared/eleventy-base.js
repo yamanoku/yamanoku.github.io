@@ -38,6 +38,11 @@ export function configureEleventy(eleventyConfig, options = {}) {
     return parser.translateHTMLString(t);
   });
 
+  eleventyConfig.addJavaScriptFunction("rootPath", function () {
+    const depth = (this.page.url.match(/\//g) || []).length - 1;
+    return depth > 0 ? "../".repeat(depth) : "./";
+  });
+
   const today = new Date();
   eleventyConfig.addJavaScriptFunction("year", () => {
     return today.getFullYear();
