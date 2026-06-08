@@ -21,6 +21,7 @@ export function configureEleventy(eleventyConfig, options = {}) {
 
   const mdOptions = {
     html: true,
+    langPrefix: "hljs language-",
     highlight(str, lang) {
       if (lang && hljs.getLanguage(lang)) {
         return hljs.highlight(str, { language: lang }).value;
