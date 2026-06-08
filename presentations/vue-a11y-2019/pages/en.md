@@ -11,7 +11,7 @@ lang: en
 
 This article is Day 21 of the [Web Accessibility Advent Calendar 2019](https://adventar.org/calendars/3994).
 
-This is about web accessibility support in Vue.js development. ([Japanese Version](/ja/))
+This is about web accessibility support in Vue.js development. ([Japanese Version](../ja/))
 
 **This article has been published for more than a year. Some parts of the content are outdated.**
 
