@@ -1,0 +1,18 @@
+{
+  "name": "presentations",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@11ty/eleventy": "3.1.6",
+    "@iconify-json/twemoji": "1.2.5",
+    "@iconify-json/vscode-icons": "1.2.53",
+    "@slidev/cli": "52.16.0",
+    "@slidev/theme-apple-basic": "0.25.1",
+    "@slidev/theme-default": "0.25.0",
+    "budoux": "0.8.4",
+    "markdown-it": "14.2.0",
+    "markdown-it-footnote": "4.0.0",
+    "markdown-it-link-attributes": "4.0.1",
+    "vue": "3.5.35"
+  }
+}
