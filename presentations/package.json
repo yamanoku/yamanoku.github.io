@@ -12,7 +12,6 @@
     "budoux": "0.8.4",
     "markdown-it": "14.2.0",
     "markdown-it-footnote": "4.0.0",
-    "markdown-it-link-attributes": "4.0.1",
     "vue": "3.5.35"
   }
 }
