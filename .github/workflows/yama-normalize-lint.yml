@@ -4,7 +4,7 @@ name: yama-normalize Lint
 on:
   pull_request:
     branches:
-      - dev
+      - main
     paths:
       - "packages/yama-normalize/yama-normalize.css"
       - "packages/yama-normalize/eslint.config.mjs"

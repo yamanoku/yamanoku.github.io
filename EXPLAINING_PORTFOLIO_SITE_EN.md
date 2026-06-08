@@ -9,7 +9,7 @@
 - Markuplint
 - modern-normalize
 
-See [package.json](https://github.com/yamanoku/yamanoku.github.io/blob/dev/package.json) for more details.
+See [package.json](https://github.com/yamanoku/yamanoku.github.io/blob/main/package.json) for more details.
 
 ### Markup
 Semantic markup implementation to realize information design of human-readable (Human can understand) and machine-readable (Be understood by the machine).
@@ -56,7 +56,7 @@ For example, the slide list uses the following components to render:
 </ul>
 ```
 
-[GlobalListComponent.astro](https://github.com/yamanoku/yamanoku.github.io/blob/dev/src/components/global/GlobalListComponent.astro)
+[GlobalListComponent.astro](https://github.com/yamanoku/yamanoku.github.io/blob/main/src/components/global/GlobalListComponent.astro)
 </details>
 
 ### Internationalization
