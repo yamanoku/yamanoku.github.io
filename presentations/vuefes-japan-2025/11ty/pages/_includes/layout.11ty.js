@@ -1,4 +1,4 @@
-import { highlightjsTags } from "../../../../shared/highlightjs.js";
+import { highlightjsTags } from "../../../../_shared/highlightjs.js";
 
 export function render(data) {
   const ogpImage = data.lang === 'ja' ? `<meta name="og:image" content="https://yamanoku.net/vuefes-japan-2025/images/ogp-image-ja.png">` : `<meta name="og:image" content="https://yamanoku.net/vuefes-japan-2025/images/ogp-image-en.png">`;

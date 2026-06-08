@@ -1,4 +1,4 @@
-import { highlightjsTags } from "../../../../shared/highlightjs.js";
+import { highlightjsTags } from "../../../../_shared/highlightjs.js";
 
 export function render(data) {
   return `

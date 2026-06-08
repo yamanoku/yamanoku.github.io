@@ -1,4 +1,4 @@
-import { highlightjsTags } from "../../../../shared/highlightjs.js";
+import { highlightjsTags } from "../../../../_shared/highlightjs.js";
 
 export function render(data) {
   const ogpImage = `<meta name="og:image" content="https://yamanoku.net/tskaigi-2026/images/ogp-image-${data.lang === 'ja' || data.lang === 'ko' ? data.lang : 'en'}.png">`;
