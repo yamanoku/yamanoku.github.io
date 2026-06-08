@@ -10,8 +10,7 @@
     "biome": "biome check --write .",
     "biome:ci": "biome ci .",
     "markuplint": "markuplint 'dist/*.html' 'dist/en/**/*.html'",
-    "yama-normalize": "pnpm -C packages/yama-normalize",
-    "deploy": "gh-pages -d dist -b main -m 'chore: deploy [skip ci]' -t"
+    "yama-normalize": "pnpm -C packages/yama-normalize"
   },
   "dependencies": {
     "@tailwindcss/vite": "catalog:website",
@@ -22,7 +21,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:website",
-    "gh-pages": "catalog:website",
     "markuplint": "catalog:website"
   },
   "workspaces": [
