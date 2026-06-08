@@ -20,7 +20,6 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.setLibrary("md", markdownLib);
   eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("videos");
   return {
     dir: {
       input: "pages",
