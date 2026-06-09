@@ -3,16 +3,16 @@
   "type": "module",
   "private": true,
   "dependencies": {
-    "@11ty/eleventy": "3.1.6",
-    "@iconify-json/twemoji": "1.2.5",
-    "@iconify-json/vscode-icons": "1.2.55",
-    "@slidev/cli": "52.16.0",
-    "@slidev/theme-apple-basic": "0.25.1",
-    "@slidev/theme-default": "0.25.0",
-    "budoux": "0.8.4",
-    "highlight.js": "^11.11.1",
-    "markdown-it": "14.2.0",
-    "markdown-it-footnote": "4.0.0",
-    "vue": "3.5.35"
+    "@11ty/eleventy": "catalog:presentations",
+    "@iconify-json/twemoji": "catalog:presentations",
+    "@iconify-json/vscode-icons": "catalog:presentations",
+    "@slidev/cli": "catalog:presentations",
+    "@slidev/theme-apple-basic": "catalog:presentations",
+    "@slidev/theme-default": "catalog:presentations",
+    "budoux": "catalog:presentations",
+    "highlight.js": "catalog:presentations",
+    "markdown-it": "catalog:presentations",
+    "markdown-it-footnote": "catalog:presentations",
+    "vue": "catalog:presentations"
   }
 }
