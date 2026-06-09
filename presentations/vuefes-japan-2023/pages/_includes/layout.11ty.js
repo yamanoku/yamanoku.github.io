@@ -1,5 +1,3 @@
-import { highlightjsTags } from "../../../_shared/highlightjs.js";
-
 export function render(data) {
   const ogpImage = data.lang === 'ja' ? `<meta name="og:image" content="https://yamanoku.net/vuefes-japan-2023/images/ogp-image-ja.png">` : `<meta name="og:image" content="https://yamanoku.net/vuefes-japan-2023/images/ogp-image-en.png">`;
   return `
@@ -17,7 +15,7 @@ export function render(data) {
         <meta name="twitter:image:alt" content="How to make Nuxt applications accessible based on page transitions">
         <meta property="og:locale" content="${data.lang}">
         <link rel="stylesheet" href="${this.rootPath()}yama-normalize.css">
-        ${highlightjsTags(this.rootPath())}
+        ${this.highlightjsTags()}
       </head>
       <body>
         <main id="main">

@@ -1,5 +1,3 @@
-import { highlightjsTags } from "../../../../_shared/highlightjs.js";
-
 export function render(data) {
   const ogpImage = `<meta name="og:image" content="https://yamanoku.net/tskaigi-2026/images/ogp-image-${data.lang === 'ja' || data.lang === 'ko' ? data.lang : 'en'}.png">`;
   return `
@@ -17,7 +15,7 @@ export function render(data) {
         <meta name="twitter:image:alt" content="${data.title}">
         <meta property="og:locale" content="${data.lang}">
         <link rel="stylesheet" href="${this.rootPath()}yama-normalize.css">
-        ${highlightjsTags(this.rootPath())}
+        ${this.highlightjsTags()}
         <script src="https://cdn.jsdelivr.net/npm/baseline-status@1/baseline-status.min.js" type="module"></script>
       </head>
       <body>

@@ -1,5 +1,3 @@
-import { highlightjsTags } from "../../../_shared/highlightjs.js";
-
 export function render(data) {
   return `
     <!doctype html>
@@ -16,7 +14,7 @@ export function render(data) {
         <meta name="twitter:image:alt" content="To make accessible components in Vue.js">
         <meta property="og:locale" content="${data.lang}">
         <link rel="stylesheet" href="${this.rootPath()}yama-normalize.css">
-        ${highlightjsTags(this.rootPath())}
+        ${this.highlightjsTags()}
         <style>.footnote-item > p {margin: 0;}</style>
       </head>
       <body>
