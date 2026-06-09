@@ -17,6 +17,7 @@ export function render(data) {
         <meta property="og:locale" content="${data.lang}">
         <link rel="stylesheet" href="${this.rootPath()}yama-normalize.css">
         ${highlightjsTags(this.rootPath())}
+        <style>.footnote-item > p {margin: 0;}</style>
       </head>
       <body>
         <main id="main">

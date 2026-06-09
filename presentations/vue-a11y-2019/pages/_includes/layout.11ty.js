@@ -23,7 +23,7 @@ export function render(data) {
           ${data.content}
         </main>
         <footer>
-          <p>Copyright 2019, Okuto Oyama</p>
+          <p>Copyright ${this.year()}, Okuto Oyama</p>
         </footer>
       </body>
     </html>
