@@ -26,4 +26,4 @@ export function render(data) {
       </body>
     </html>
   `;
-};
+}

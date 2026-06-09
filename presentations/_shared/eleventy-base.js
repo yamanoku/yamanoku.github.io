@@ -1,19 +1,19 @@
-import { resolve, dirname } from "node:path";
+import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadDefaultJapaneseParser } from "budoux";
+import hljs from "highlight.js";
 import markdownit from "markdown-it";
 import markdownItFootnote from "markdown-it-footnote";
-import hljs from "highlight.js";
-import { loadDefaultJapaneseParser } from "budoux";
 
 const parser = loadDefaultJapaneseParser();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const yamaNormalizePath = resolve(
   __dirname,
-  "../../packages/yama-normalize/yama-normalize.css",
+  "../../packages/yama-normalize/yama-normalize.css"
 );
 const hljsCssPath = resolve(
   __dirname,
-  "../node_modules/highlight.js/styles/a11y-dark.min.css",
+  "../node_modules/highlight.js/styles/a11y-dark.min.css"
 );
 
 export function configureEleventy(eleventyConfig, options = {}) {
@@ -27,7 +27,7 @@ export function configureEleventy(eleventyConfig, options = {}) {
         return hljs.highlight(str, { language: lang }).value;
       }
       return "";
-    },
+    }
   };
   const markdownLib = markdownit(mdOptions).use(markdownItFootnote);
 
@@ -57,10 +57,10 @@ export function configureEleventy(eleventyConfig, options = {}) {
   eleventyConfig.setLibrary("md", markdownLib);
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy({
-    [yamaNormalizePath]: "yama-normalize.css",
+    [yamaNormalizePath]: "yama-normalize.css"
   });
   eleventyConfig.addPassthroughCopy({
-    [hljsCssPath]: "hljs-a11y-dark.css",
+    [hljsCssPath]: "hljs-a11y-dark.css"
   });
 
   if (options.passthroughCopy) {
@@ -72,7 +72,7 @@ export function configureEleventy(eleventyConfig, options = {}) {
   return {
     dir: {
       input: "pages",
-      output: options.output || "docs",
-    },
+      output: options.output || "docs"
+    }
   };
 }

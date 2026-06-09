@@ -1,5 +1,5 @@
 export function render(data) {
-  const ogpImage = `<meta name="og:image" content="https://yamanoku.net/tskaigi-2026/images/ogp-image-${data.lang === 'ja' || data.lang === 'ko' ? data.lang : 'en'}.png">`;
+  const ogpImage = `<meta name="og:image" content="https://yamanoku.net/tskaigi-2026/images/ogp-image-${data.lang === "ja" || data.lang === "ko" ? data.lang : "en"}.png">`;
   return `
     <!doctype html>
     <html lang="${data.lang}">
@@ -28,4 +28,4 @@ export function render(data) {
       </body>
     </html>
   `;
-};
+}

@@ -3,11 +3,11 @@
 }
 
 .slidev-page-29 {
-  --prism-font-size: .875rem; 
+  --prism-font-size: 0.875rem;
 }
 
 .slidev-page-42 {
-  --prism-font-size: 2rem; 
+  --prism-font-size: 2rem;
 }
 
 .slidev-layout ul ul {
@@ -92,5 +92,5 @@ blockquote + .slidev-code-wrapper,
 }
 
 .dark .slidev-layout thead {
-  color: black
+  color: black;
 }

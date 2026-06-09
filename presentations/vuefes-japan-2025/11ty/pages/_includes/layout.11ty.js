@@ -1,5 +1,8 @@
 export function render(data) {
-  const ogpImage = data.lang === 'ja' ? `<meta name="og:image" content="https://yamanoku.net/vuefes-japan-2025/images/ogp-image-ja.png">` : `<meta name="og:image" content="https://yamanoku.net/vuefes-japan-2025/images/ogp-image-en.png">`;
+  const ogpImage =
+    data.lang === "ja"
+      ? `<meta name="og:image" content="https://yamanoku.net/vuefes-japan-2025/images/ogp-image-ja.png">`
+      : `<meta name="og:image" content="https://yamanoku.net/vuefes-japan-2025/images/ogp-image-en.png">`;
   return `
     <!doctype html>
     <html lang="${data.lang}">
@@ -27,4 +30,4 @@ export function render(data) {
       </body>
     </html>
   `;
-};
+}
