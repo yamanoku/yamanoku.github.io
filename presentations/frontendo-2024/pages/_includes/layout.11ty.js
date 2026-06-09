@@ -13,7 +13,7 @@ export function render(data) {
         <meta name="twitter:site" content="@yamanoku">
         <meta name="twitter:image:alt" content="${data.title} ${data.subtitle}">
         <meta property="og:locale" content="${data.lang}">
-        <link rel="stylesheet" href="https://cdn.skypack.dev/yama-normalize">
+        ${this.baseStyleTags()}
       </head>
       <body>
         <main id="main">
@@ -25,7 +25,6 @@ export function render(data) {
         </main>
         <footer>
           <p>Copyright ${this.year()}, Okuto Oyama</p>
-          <p>Source : <a href="https://github.com/yamanoku/frontendo-2024/" target="_blank">yamanoku/frontendo-2024</a></p>
         </footer>
       </body>
     </html>

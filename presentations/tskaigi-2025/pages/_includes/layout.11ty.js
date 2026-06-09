@@ -13,11 +13,7 @@ export function render(data) {
         <meta name="twitter:site" content="@yamanoku">
         <meta name="twitter:image:alt" content="${data.title}${data.subtitle} 2025-05-23 TSKaigi 2025">
         <meta property="og:locale" content="${data.lang}">
-        <link rel="stylesheet" href="https://cdn.skypack.dev/yama-normalize">
-        <script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
-        <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/a11y-dark.min.css">
-        <script type="module">hljs.initHighlightingOnLoad()</script>
-        <style>code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:1em;}pre code.hljs{padding:calc(var(--rhythm)*3);}</style>
+        ${this.baseStyleTags()}
       </head>
       <body>
         <main id="main">
@@ -29,7 +25,6 @@ export function render(data) {
         </main>
         <footer>
           <p>Copyright ${this.year()}, Okuto Oyama</p>
-          <p>Source : <a href="https://github.com/yamanoku/tskaigi-2025/" target="_blank">yamanoku/tskaigi-2025</a></p>
         </footer>
       </body>
     </html>

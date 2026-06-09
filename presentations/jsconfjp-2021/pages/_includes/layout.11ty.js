@@ -13,11 +13,7 @@ export function render(data) {
         <meta name="twitter:site" content="@yamanoku">
         <meta name="twitter:image:alt" content="${data.title}">
         <meta property="og:locale" content="${data.lang}">
-        <link rel="stylesheet" href="https://cdn.skypack.dev/yama-normalize">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/a11y-dark.min.css">
-        <script type="module">hljs.highlightAll();</script>
-        <style>code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:1em;}pre code.hljs{padding:var(--y-rhythm-3)}</style>
+        ${this.baseStyleTags()}
       </head>
       <body>
         <main id="main">
@@ -26,7 +22,6 @@ export function render(data) {
         </main>
         <footer>
           <p>Copyright 2021, Okuto Oyama</p>
-          <p>Source : <a href="https://github.com/yamanoku/jsconfjp-2021/" target="_blank" rel="noopener">yamanoku/jsconfjp-2021</a></p>
         </footer>
       </body>
     </html>

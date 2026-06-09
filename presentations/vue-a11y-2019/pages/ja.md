@@ -5,8 +5,6 @@ description: こちらは、Webアクセシビリティ Advent Calendar 2019 の
 lang: ja
 ---
 
-# Vue.js から考えるアクセシビリティについて - 2019
-
 ![写真：Vue.jsから考えるアクセシビリティについて - 2019](../images/about-accessibility-with-vuejs-2019.png)
 
 こちらは、[Webアクセシビリティ Advent Calendar 2019](https://adventar.org/calendars/3994) の２１日目の記事です。
