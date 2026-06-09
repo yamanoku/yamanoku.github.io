@@ -5,19 +5,37 @@
 yamanoku.netのポートフォリオサイトの開発ガイドラインです。
 
 ### 技術スタック
-- **フレームワーク**: Astro
+- **フレームワーク**: Astro（ポートフォリオサイト）
 - **スタイリング**: TailwindCSS v4
-- **パッケージマネージャー**: pnpm
+- **パッケージマネージャー**: pnpm（workspaces + catalog）
 - **リンター**: Biome
 - **HTML検証**: Markuplint
 - **国際化**: カスタムi18nシステム（日本語・英語対応）
+- **プレゼンテーション**: 11ty + Slidev（登壇資料）
+
+### モノレポ構成
+pnpm workspacesによるモノレポ。依存バージョンは `pnpm-workspace.yaml` の `catalogs` で一元管理。
+
+```yaml
+# pnpm-workspace.yaml
+packages:
+  - packages           # yama-normalize等の内部パッケージ
+  - presentations      # 登壇資料（11ty + Slidev）
+
+catalogs:
+  website: ...         # ポートフォリオサイト用
+  presentations: ...   # プレゼンテーション用
+  yama-normalize: ... # yama-normalize用
+```
+
+package.jsonでは `catalog:<カタログ名>` で参照する。
 
 ### 開発コマンド
 ```bash
 # 開発サーバー起動
 pnpm dev
 
-# ビルド
+# ビルド（Astro + プレゼンテーション）
 pnpm build
 
 # プレビュー
@@ -25,9 +43,6 @@ pnpm preview
 
 # リント・フォーマット
 pnpm lint
-
-# デプロイ
-pnpm deploy
 ```
 
 ## コードスタイルガイドライン
@@ -36,14 +51,30 @@ pnpm deploy
 ```
 src/
 ├── components/           # 再利用可能なコンポーネント
+│   ├── BaseHead.astro   # 共通<head>コンポーネント
 │   ├── global/          # グローバルコンポーネント
 │   ├── page-index/      # インデックスページ専用
 │   └── page-status-404/ # 404ページ専用
 ├── layouts/             # レイアウトコンポーネント
 ├── pages/               # ページファイル（ルーティング）
 ├── i18n/               # 国際化関連
-├── presentations/       # プレゼンテーション一覧
+├── presentations/       # プレゼンテーション一覧データ（listPresentation.ts）
 └── styles/             # グローバルスタイル
+
+packages/
+└── yama-normalize/      # 独自Normalize CSS
+
+presentations/           # 登壇資料
+├── _shared/             # 共通設定
+├── <name>/              # flat型: 11tyのみ
+│   ├── .eleventy.js
+│   └── pages/
+└── <name>/              # monorepo型: 11ty + Slidev
+    ├── 11ty/
+    └── slidev/
+
+scripts/
+└── build-presentations.mjs
 ```
 
 ### 命名規則
@@ -86,6 +117,24 @@ const { title, items = [] } = Astro.props;
 - ページ名でディレクトリを作成（例：`page-index/`）
 - セクション単位でコンポーネント分割
 - 例：`BasicInfoSection.astro`, `PresentationsSection.astro`
+
+### プレゼンテーション（登壇資料）
+
+登壇資料は `presentations/` ディレクトリにモノレポとして集約されている。
+
+#### 2つの構成タイプ
+- **flat型**: 11tyのみで構成（テキスト原稿のみ）
+- **monorepo型**: 11ty（原稿）+ Slidev（スライド）で構成
+
+#### 共通設定
+`presentations/_shared/eleventy-base.js` に11tyの共通設定を集約。
+各プレゼンテーションの `.eleventy.js` からインポートして使用する。
+
+#### ビルド
+`scripts/build-presentations.mjs` がすべてのプレゼンテーションをビルドし `dist/` に出力する。`pnpm build` 実行時にAstroビルドの後に自動実行される。
+
+#### プレゼンテーション一覧データ
+`src/presentations/listPresentation.ts` にポートフォリオサイトに表示する登壇・執筆一覧を管理。`ExactPresantationLengthArray` 型で5件で固定されている。
 
 ### TypeScriptガイドライン
 
