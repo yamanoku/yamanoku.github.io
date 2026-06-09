@@ -5,6 +5,40 @@ settings:
   excludeLinksFromLockfile: false
 
 catalogs:
+  presentations:
+    '@11ty/eleventy':
+      specifier: 3.1.6
+      version: 3.1.6
+    '@iconify-json/twemoji':
+      specifier: 1.2.5
+      version: 1.2.5
+    '@iconify-json/vscode-icons':
+      specifier: 1.2.55
+      version: 1.2.55
+    '@slidev/cli':
+      specifier: 52.16.0
+      version: 52.16.0
+    '@slidev/theme-apple-basic':
+      specifier: 0.25.1
+      version: 0.25.1
+    '@slidev/theme-default':
+      specifier: 0.25.0
+      version: 0.25.0
+    budoux:
+      specifier: 0.8.4
+      version: 0.8.4
+    highlight.js:
+      specifier: 11.11.1
+      version: 11.11.1
+    markdown-it:
+      specifier: 14.2.0
+      version: 14.2.0
+    markdown-it-footnote:
+      specifier: 4.0.0
+      version: 4.0.0
+    vue:
+      specifier: 3.5.35
+      version: 3.5.35
   website:
     '@biomejs/biome':
       specifier: 2.4.16
@@ -70,37 +104,37 @@ importers:
   presentations:
     dependencies:
       '@11ty/eleventy':
-        specifier: 3.1.6
+        specifier: catalog:presentations
         version: 3.1.6
       '@iconify-json/twemoji':
-        specifier: 1.2.5
+        specifier: catalog:presentations
         version: 1.2.5
       '@iconify-json/vscode-icons':
-        specifier: 1.2.55
+        specifier: catalog:presentations
         version: 1.2.55
       '@slidev/cli':
-        specifier: 52.16.0
+        specifier: catalog:presentations
         version: 52.16.0(@nuxt/kit@3.21.7(magicast@0.5.2))(@types/markdown-it@14.1.2)(@types/node@22.19.20)(@vue/compiler-sfc@3.5.35)(esbuild@0.27.3)(lightningcss@1.32.0)(magicast@0.5.2)(markdown-it@14.2.0)(postcss@8.5.15)(rolldown@1.0.3)
       '@slidev/theme-apple-basic':
-        specifier: 0.25.1
+        specifier: catalog:presentations
         version: 0.25.1
       '@slidev/theme-default':
-        specifier: 0.25.0
+        specifier: catalog:presentations
         version: 0.25.0
       budoux:
-        specifier: 0.8.4
+        specifier: catalog:presentations
         version: 0.8.4
       highlight.js:
-        specifier: ^11.11.1
+        specifier: catalog:presentations
         version: 11.11.1
       markdown-it:
-        specifier: 14.2.0
+        specifier: catalog:presentations
         version: 14.2.0
       markdown-it-footnote:
-        specifier: 4.0.0
+        specifier: catalog:presentations
         version: 4.0.0
       vue:
-        specifier: 3.5.35
+        specifier: catalog:presentations
         version: 3.5.35(typescript@6.0.3)
 
 packages:
