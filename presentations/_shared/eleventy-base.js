@@ -40,11 +40,12 @@ export function configureEleventy(eleventyConfig, options = {}) {
     return depth > 0 ? "../".repeat(depth) : "./";
   });
 
-  eleventyConfig.addJavaScriptFunction("highlightjsTags", function () {
+  eleventyConfig.addJavaScriptFunction("baseStyleTags", function () {
     const root = this.rootPath();
     return `
+      <link rel="stylesheet" href="${root}yama-normalize.css">
       <link rel="stylesheet" href="${root}hljs-a11y-dark.css">
-      <style>code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:1em;}pre code.hljs{padding:var(--y-rhythm-3)}</style>
+      <style>code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:1em;}pre code.hljs{padding:var(--y-rhythm-3)}.footnote-item > p{margin:0;}</style>
     `;
   });
 

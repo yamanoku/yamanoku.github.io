@@ -14,8 +14,7 @@ export function render(data) {
         <meta name="twitter:site" content="@yamanoku">
         <meta name="twitter:image:alt" content="${data.title}">
         <meta property="og:locale" content="${data.lang}">
-        <link rel="stylesheet" href="${this.rootPath()}yama-normalize.css">
-        ${this.highlightjsTags()}
+        ${this.baseStyleTags()}
         <script src="https://cdn.jsdelivr.net/npm/baseline-status@1/baseline-status.min.js" type="module"></script>
       </head>
       <body>

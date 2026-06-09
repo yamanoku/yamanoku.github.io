@@ -13,9 +13,7 @@ export function render(data) {
         <meta name="twitter:site" content="@yamanoku">
         <meta name="twitter:image:alt" content="To make accessible components in Vue.js">
         <meta property="og:locale" content="${data.lang}">
-        <link rel="stylesheet" href="${this.rootPath()}yama-normalize.css">
-        ${this.highlightjsTags()}
-        <style>.footnote-item > p {margin: 0;}</style>
+        ${this.baseStyleTags()}
       </head>
       <body>
         <main id="main">

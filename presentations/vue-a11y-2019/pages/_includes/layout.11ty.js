@@ -13,8 +13,7 @@ export function render(data) {
         <meta name="twitter:site" content="@yamanoku">
         <meta name="twitter:image:alt" content="About accessibility with Vue.js - 2019">
         <meta property="og:locale" content="${data.lang}">
-        <link rel="stylesheet" href="${this.rootPath()}yama-normalize.css">
-        ${this.highlightjsTags()}
+        ${this.baseStyleTags()}
       </head>
       <body>
         <main id="main">
