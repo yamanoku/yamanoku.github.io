@@ -5,8 +5,6 @@ description: This post is from day 21 of the Web Accessibility Advent Calendar 2
 lang: en
 ---
 
-# About accessibility with Vue.js - 2019
-
 ![Photo: About accessibility with Vue.js - 2019](../images/about-accessibility-with-vuejs-2019.png)
 
 This article is Day 21 of the [Web Accessibility Advent Calendar 2019](https://adventar.org/calendars/3994).
