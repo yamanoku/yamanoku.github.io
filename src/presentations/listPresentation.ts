@@ -38,6 +38,11 @@ export const listStage: ExactPresantationLengthArray<ListType> = [
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title: "TSKaigi 2026に参加＆登壇してきました！",
+    url: "https://qiita.com/okuto_oyama/items/6b93d82a7da79f7e3d15",
+    datetime: "2026-06-12T12:00:00+09:00"
+  },
+  {
     title: "動的な変更をスクリーンリーダーに伝えるNuxtAnnouncerの紹介",
     url: "https://zenn.dev/comm_vue_nuxt/articles/feat-nuxt-announcer",
     datetime: "2026-03-13T12:00:00.00+09:00"
@@ -57,10 +62,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "BuriKaigi 2026に登壇しました",
     url: "https://note.com/yamanoku/n/n7ea134e44551",
     datetime: "2026-01-14T22:17:00.00+09:00"
-  },
-  {
-    title: "2025年オープンソースコントリビュート活動振り返り",
-    url: "https://zenn.dev/yamanoku/articles/2025-oss-contribute-activity",
-    datetime: "2025-12-31T20:43:00.00+09:00"
   }
 ];
