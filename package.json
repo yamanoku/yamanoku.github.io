@@ -28,8 +28,8 @@
     "presentations"
   ],
   "engines": {
-    "pnpm": "11.5.3",
+    "pnpm": "11.6.0",
     "npm": "please_use_pnpm_instead"
   },
-  "packageManager": "pnpm@11.5.3"
+  "packageManager": "pnpm@11.6.0"
 }
