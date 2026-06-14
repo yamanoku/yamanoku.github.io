@@ -10,10 +10,7 @@ type ExactPresantationLengthArray<T> = {
   length: 5;
 } & T[];
 
-// records.md（records.yamanoku.net の登壇記録）を唯一の情報源として
-// 登壇一覧を導出する。サークル出展・座談会参加などの非登壇エントリは除外する。
-const EXCLUDE_KEYWORDS = ["出展", "出典", "座談会", "ポッドキャスト開始"];
-
+// records.md（records.yamanoku.netの登壇記録）を唯一の情報源として導出する
 const HEADING_PATTERN = /^### (\d{4}-\d{2}-\d{2})\s+(.+)$/;
 const LINK_PATTERN = /^-?\s*\[(.+?)\]\((.+?)\)/;
 
@@ -27,13 +24,10 @@ const parseRecords = (markdown: string): ListType[] => {
     const heading = lines[i].match(HEADING_PATTERN);
     if (!heading) continue;
 
-    const [, datetime, eventName] = heading;
+    const [, datetime] = heading;
 
     // 未来日付（予定）を除外
     if (new Date(datetime) >= now) continue;
-    // 登壇/発表以外のエントリを除外
-    if (EXCLUDE_KEYWORDS.some((keyword) => eventName.includes(keyword)))
-      continue;
 
     // 見出し直後の最初のリンクを採用
     for (let j = i + 1; j < lines.length; j++) {
