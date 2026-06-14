@@ -1,4 +1,7 @@
 ---
+import GlobalFooter from "../components/global/GlobalFooter.astro";
+import GlobalHeader from "../components/global/GlobalHeader.astro";
+
 import "../styles/global.css";
 
 interface Props {
@@ -37,15 +40,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonicalURL} />
   </head>
   <body>
+    <GlobalHeader />
     <slot />
+    <GlobalFooter />
   </body>
 </html>
 
-<style>
-  body {
-    max-width: 60rem;
-    margin-inline: auto;
-    padding-inline: 1rem;
-    padding-block: 2rem;
-  }
-</style>
