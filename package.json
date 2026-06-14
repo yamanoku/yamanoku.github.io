@@ -25,7 +25,8 @@
   },
   "workspaces": [
     "packages/*",
-    "presentations"
+    "presentations",
+    "records"
   ],
   "engines": {
     "pnpm": "11.6.0",

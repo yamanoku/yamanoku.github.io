@@ -19,6 +19,7 @@ allowBuilds:
 packages:
   - packages/*
   - presentations
+  - records
 
 catalogs:
   website:

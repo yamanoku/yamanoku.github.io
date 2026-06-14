@@ -12,7 +12,7 @@
       "!**/node_modules",
       "!**/dist",
       "!**/docs",
-      "!.astro"
+      "!**/.astro"
     ]
   },
   "formatter": {
