@@ -44,7 +44,9 @@ Cloudflare Pages のダッシュボードで GitHub リポジトリ（`yamanoku/
 | Production branch | `main` |
 | Root directory | （リポジトリルートのまま） |
 | Build command | `pnpm install --frozen-lockfile && pnpm --filter records build` |
-| Build output directory | `records/dist` |
+| Build output directory | `records/dist`（リポジトリルートの `wrangler.jsonc` で指定） |
+
+ビルド出力ディレクトリはリポジトリルートの `wrangler.jsonc`（`pages_build_output_dir: "records/dist"`）で構成しているため、Cloudflare Pages はこの設定を参照する。ダッシュボードの Build output directory 欄は空でもよい（設定した場合は wrangler.jsonc が優先）。
 
 - **Node バージョン**: `records/.node-version`（`22`）で固定。ダッシュボードの環境変数 `NODE_VERSION` でも指定可。
 - **pnpm**: ルート `package.json` の `packageManager: pnpm@11.6.0` を corepack 経由で使用（catalog 解決に必要）。

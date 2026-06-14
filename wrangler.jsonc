@@ -1,0 +1,6 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "records",
+  "compatibility_date": "2026-06-14",
+  "pages_build_output_dir": "records/dist"
+}
