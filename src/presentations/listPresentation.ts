@@ -1,3 +1,5 @@
+import recordsMarkdown from "../../records/src/data/records.md?raw";
+
 export type ListType = {
   title: string;
   url: string;
@@ -8,33 +10,47 @@ type ExactPresantationLengthArray<T> = {
   length: 5;
 } & T[];
 
-export const listStage: ExactPresantationLengthArray<ListType> = [
-  {
-    title: "Navigation APIが​lib.dom.d.tsに​採用されるまでの​道のり",
-    url: "https://yamanoku.net/tskaigi-2026/slide/",
-    datetime: "2026-05-22T17:40:00.00+09:00"
-  },
-  {
-    title: "Navigation APIと見るSvelteKitのWeb標準志向",
-    url: "https://speakerdeck.com/yamanoku/navigation-api-sveltekit-web-standards",
-    datetime: "2026-03-23T19:00:00.00+09:00"
-  },
-  {
-    title: "Shifting from MCP to Skills ベストプラクティスの変遷を辿る",
-    url: "https://speakerdeck.com/yamanoku/shifting-from-mcp-to-skills",
-    datetime: "2026-03-06T19:30:00.00+09:00"
-  },
-  {
-    title: "ReactにおけるWebアクセシビリティ実践",
-    url: "https://docs.google.com/presentation/d/e/2PACX-1vRuddSQ6OqS0cTmfpd5uA5KezqwofFs10JLVL8-oV0vmxw2NT2Iq0j7Y38RmK6kunz58ZyIDSyqkKjb/pub?start=false",
-    datetime: "2026-02-28T10:00:00.00+09:00"
-  },
-  {
-    title: "SchooでVue.js/Nuxtを技術選定している理由",
-    url: "https://speakerdeck.com/yamanoku/why-choose-vue-nuxt",
-    datetime: "2026-02-12T19:10:00.00+09:00"
+// records.md（records.yamanoku.net の登壇記録）を唯一の情報源として
+// 登壇一覧を導出する。サークル出展・座談会参加などの非登壇エントリは除外する。
+const EXCLUDE_KEYWORDS = ["出展", "出典", "座談会", "ポッドキャスト開始"];
+
+const HEADING_PATTERN = /^### (\d{4}-\d{2}-\d{2})\s+(.+)$/;
+const LINK_PATTERN = /^-?\s*\[(.+?)\]\((.+?)\)/;
+
+// records.md をパースし、新しい順（記載順）の登壇エントリ5件を返す
+const parseRecords = (markdown: string): ListType[] => {
+  const lines = markdown.split("\n");
+  const entries: ListType[] = [];
+  const now = new Date();
+
+  for (let i = 0; i < lines.length; i++) {
+    const heading = lines[i].match(HEADING_PATTERN);
+    if (!heading) continue;
+
+    const [, datetime, eventName] = heading;
+
+    // 未来日付（予定）を除外
+    if (new Date(datetime) >= now) continue;
+    // 登壇/発表以外のエントリを除外
+    if (EXCLUDE_KEYWORDS.some((keyword) => eventName.includes(keyword)))
+      continue;
+
+    // 見出し直後の最初のリンクを採用
+    for (let j = i + 1; j < lines.length; j++) {
+      if (HEADING_PATTERN.test(lines[j])) break;
+      const link = lines[j].match(LINK_PATTERN);
+      if (link) {
+        const [, title, url] = link;
+        entries.push({ title, url, datetime });
+        break;
+      }
+    }
   }
-];
+
+  return entries.slice(0, 5);
+};
+
+export const listStage = parseRecords(recordsMarkdown);
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
