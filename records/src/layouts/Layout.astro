@@ -41,7 +41,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body>
     <GlobalHeader />
-    <slot />
+    <main id="main">
+      <slot />
+      <section aria-labelledby="related-pages">
+        <h2 id="related-pages">yamanoku.net関連ページ</h2>
+        <ul>
+          <li><a href="https://yamanoku.net">ポータルサイト</a></li>
+          <li><a href="https://archives.yamanoku.net">アーカイブ</a></li>
+        </ul>
+      </section>
+    </main>
     <GlobalFooter />
   </body>
 </html>
