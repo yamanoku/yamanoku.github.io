@@ -13,8 +13,8 @@ catalogs:
       specifier: 1.2.5
       version: 1.2.5
     '@iconify-json/vscode-icons':
-      specifier: 1.2.56
-      version: 1.2.56
+      specifier: 1.2.57
+      version: 1.2.57
     '@slidev/cli':
       specifier: 52.16.0
       version: 52.16.0
@@ -114,7 +114,7 @@ importers:
         version: 1.2.5
       '@iconify-json/vscode-icons':
         specifier: catalog:presentations
-        version: 1.2.56
+        version: 1.2.57
       '@slidev/cli':
         specifier: catalog:presentations
         version: 52.16.0(@nuxt/kit@3.21.7(magicast@0.5.2))(@types/markdown-it@14.1.2)(@types/node@22.19.20)(@vue/compiler-sfc@3.5.38)(esbuild@0.27.3)(lightningcss@1.32.0)(magicast@0.5.2)(markdown-it@14.2.0)(postcss@8.5.15)(rolldown@1.0.3)
@@ -670,8 +670,8 @@ packages:
   '@iconify-json/twemoji@1.2.5':
     resolution: {integrity: sha512-uKpuIEV0v6K5BW3Mjdyl+XKFVAbbcPxAgifKvEMtZoUZB5+YiY5zaMm2uNNCxyXzAWU9yNLlj41WU6/mvgALsw==}
 
-  '@iconify-json/vscode-icons@1.2.56':
-    resolution: {integrity: sha512-AZYFHK0IuynkOwO4h22IGZQ4+2/dHAZocUHSO9rPGwU6MrZtzAyb6atdO6iEocHOcB5PQdG7xmCkRCYsGTo3iQ==}
+  '@iconify-json/vscode-icons@1.2.57':
+    resolution: {integrity: sha512-J8KQRntAuOqSA2W5sUJm6MFDulDSTAb5sQ/qI52rHFw6TPkDaxoaq7u9to/ExYYFwmD/F381J9Gn75OGHp4Gmw==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -5753,7 +5753,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/vscode-icons@1.2.56':
+  '@iconify-json/vscode-icons@1.2.57':
     dependencies:
       '@iconify/types': 2.0.0
 
