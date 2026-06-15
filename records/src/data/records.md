@@ -14,7 +14,7 @@
 
 ### 2026-05-22 TSKaigi 2026
 
-[Navigation APIがlib.dom.d.tsに採用されるまでの道のり](https://yamanoku.net/tskaigi-2026/slide)
+[Navigation APIがlib.dom.d.tsに採用されるまでの道のり](https://records.yamanoku.net/tskaigi-2026/slide)
 
 ### 2026-03-23 Svelte Japan Offline Meetup #7
 
@@ -34,7 +34,7 @@
 
 ### 2026-01-10 BuriKaigi 2026 発表
 
-[たかがボタン、されどボタン ～button要素から深ぼるボタンUIの定義について～](https://yamanoku.net/burikaigi-2026/slide)
+[たかがボタン、されどボタン ～button要素から深ぼるボタンUIの定義について～](https://records.yamanoku.net/burikaigi-2026/slide)
 
 ## 2025年
 
@@ -48,7 +48,7 @@
 
 ### 2025-10-25 Vue Fes Japan 2025 発表
 
-[生成AI時代のWebアプリケーションアクセシビリティ改善](https://yamanoku.net/vuefes-japan-2025/slide/1)
+[生成AI時代のWebアプリケーションアクセシビリティ改善](https://records.yamanoku.net/vuefes-japan-2025/slide/1)
 
 ### 2025-10-24 Svelte Japan Offline Meetup 発表
 
@@ -67,7 +67,7 @@
 [Proposal for ECMAScript enumsについて（2025-06-06時点） - yamaScrapbox](https://scrapbox.io/yamanoku/Proposal_for_ECMAScript_enums%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BC%882025-06-06%E6%99%82%E7%82%B9%EF%BC%89)
 
 ### 2025-05-23 TSKaigi 2025（1日目） 発表
-[転生したら​TypeScriptの​Enumだった​件～型​安全性と​エコシステムの​変化で​挫けそうになっているんだが​～](https://yamanoku.net/tskaigi-2025/)
+[転生したら​TypeScriptの​Enumだった​件～型​安全性と​エコシステムの​変化で​挫けそうになっているんだが​～](https://records.yamanoku.net/tskaigi-2025/)
 
 ### 2025-05-17 React Tokyo LT大会 発表
 [React 18からのAPI useIDを使おう！/ Let's Use the useID API from React 18 - Speaker Deck](https://speakerdeck.com/yamanoku/lets-use-the-useid-api-from-react-18)
@@ -91,7 +91,7 @@
 
 ### 2024-08-24 フロントエンドカンファレンス北海道 2024 発表
 
-[ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと](https://yamanoku.net/frontendo-2024/ja/)
+[ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと](https://records.yamanoku.net/frontendo-2024/ja/)
 
 ### 2024-05-20 アクセシビリティやるぞ！LT祭り #5 発表
 
@@ -117,7 +117,7 @@
 
 ### 2023-10-28 Vue Fes Japan 2023 発表
 
-[画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法](https://yamanoku.net/vuefes-japan-2023/ja/)
+[画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法](https://records.yamanoku.net/vuefes-japan-2023/ja/)
 
 ### 2023-06-24 Saitama.js vol.6 発表
 
@@ -135,7 +135,7 @@
 
 ### 2022-10-16 Vue Fes Japan Online 2022 発表
 
-[Vue.js でアクセシブルなコンポーネントをつくるために](https://yamanoku.net/vuefes-japan-online-2022/ja/)
+[Vue.js でアクセシブルなコンポーネントをつくるために](https://records.yamanoku.net/vuefes-japan-online-2022/ja/)
 
 ### 2022-08-30 Saitama.js vol.3 発表
 
@@ -158,7 +158,7 @@
 
 ### 2021-11-27 JSConf JP 2021 発表
 
-- [アクセシブルなフロントエンド開発のこれまでとこれから](https://yamanoku.net/jsconfjp-2021/)
+- [アクセシブルなフロントエンド開発のこれまでとこれから](https://records.yamanoku.net/jsconfjp-2021/)
 - [アクセシブルなフロントエンド開発のこれまでとこれから - YouTube](https://www.youtube.com/watch?v=58TkWIsH20E&source_ve_path=MjM4NTE&feature=emb_title)
 
 ### 2021-09-17 CrowdworksDevLive -働きやすさを生むCWの文化とは？ 座談会登壇
