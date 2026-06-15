@@ -9,6 +9,7 @@
 - **フレームワーク**: Astro（静的出力）
 - **スタイル**: `yama-normalize`（`packages/yama-normalize`）+ `modern-normalize` + TailwindCSS v4
 - **コンテンツ**: `src/data/records.md` を Astro が直接 import して描画する
+- **発表資料（11ty / Slidev）**: `records/presentations/` 配下に同梱。records ビルドの一部として `records/dist/<name>/` に出力され、`https://records.yamanoku.net/<name>/`（例: `/tskaigi-2026/`）で配信される
 
 登壇・発表記録を追記・編集するときは **`src/data/records.md` を編集する**。Markdown のフォーマットは次のとおり。
 
@@ -29,11 +30,21 @@
 pnpm --filter records dev
 
 # ビルド（出力: records/dist）
+# astro build（記録ページ）→ scripts/build-presentations.mjs（発表資料を records/dist/<name>/ へ出力）の2段で実行される
 pnpm --filter records build
 
 # プレビュー
 pnpm --filter records preview
 ```
+
+### 発表資料（11ty / Slidev）
+
+`records/presentations/` 配下に発表資料を集約している（pnpm ワークスペース `yamanoku-presentations`）。
+
+- **flat 型**: 11ty のみ（`<name>/.eleventy.js`、原稿 `<name>/pages/`）
+- **monorepo 型**: 11ty（原稿）+ Slidev（スライド）（`<name>/11ty/`・`<name>/slidev/`、スライドは `/<name>/slide/` で配信）
+- 共通の 11ty 設定は `records/presentations/_shared/eleventy-base.js`
+- ビルドは `records/scripts/build-presentations.mjs` が全資料を 11ty / Slidev でビルドし `records/dist/<name>/` にコピーする（`pnpm --filter records build` から自動実行）
 
 ## デプロイ（Cloudflare Pages / Git 連携）
 
@@ -62,11 +73,13 @@ Cloudflare Pages のダッシュボードで GitHub リポジトリ（`yamanoku/
 
 | プロジェクト | 設定 | 値 |
 | --- | --- | --- |
-| `records-yamanoku` | Include paths | `records/*`, `packages/yama-normalize/*`, `pnpm-lock.yaml`, `pnpm-workspace.yaml` |
-| `yamanoku-net` | Exclude paths | `records/*` |
+| `records-yamanoku` | Include paths | `records/**`, `packages/yama-normalize/*`, `pnpm-lock.yaml`, `pnpm-workspace.yaml` |
+| `yamanoku-net` | Exclude paths | `records/**` |
+
+> 発表資料は `records/presentations/` 配下にあるため、ワイルドカードは `records/**`（再帰）にすること。`records/*` だと `records/presentations/` 配下の変更を拾えない。
 
 この設定により次のように振り分けられる。
 
-- `records/` 配下のみの変更 → `records-yamanoku` のみビルド
+- `records/`（発表資料 `records/presentations/` を含む）配下のみの変更 → `records-yamanoku` のみビルド
 - 本体サイト（`src/` など）のみの変更 → `yamanoku-net` のみビルド
 - 共有依存（`packages/yama-normalize`・ルートの lockfile / workspace）の変更 → 両方ビルド

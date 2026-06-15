@@ -18,8 +18,8 @@ allowBuilds:
 
 packages:
   - packages/*
-  - presentations
   - records
+  - records/presentations
 
 catalogs:
   website:
