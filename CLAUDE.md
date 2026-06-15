@@ -20,7 +20,8 @@ pnpm workspacesによるモノレポ。依存バージョンは `pnpm-workspace.
 # pnpm-workspace.yaml
 packages:
   - packages           # yama-normalize等の内部パッケージ
-  - presentations      # 登壇資料（11ty + Slidev）
+  - records            # records.yamanoku.net（Astro）。発表資料も配下に同梱
+  - records/presentations # 登壇資料（11ty + Slidev）
 
 catalogs:
   website: ...         # ポートフォリオサイト用
@@ -35,7 +36,7 @@ package.jsonでは `catalog:<カタログ名>` で参照する。
 # 開発サーバー起動
 pnpm dev
 
-# ビルド（Astro + プレゼンテーション）
+# ビルド（本体サイトのAstroのみ。発表資料は records 側でビルド: pnpm --filter records build）
 pnpm build
 
 # プレビュー
@@ -64,17 +65,18 @@ src/
 packages/
 └── yama-normalize/      # 独自Normalize CSS
 
-presentations/           # 登壇資料
-├── _shared/             # 共通設定
-├── <name>/              # flat型: 11tyのみ
-│   ├── .eleventy.js
-│   └── pages/
-└── <name>/              # monorepo型: 11ty + Slidev
-    ├── 11ty/
-    └── slidev/
-
-scripts/
-└── build-presentations.mjs
+records/                 # records.yamanoku.net（Astro / 別Cloudflare Pages）
+├── src/                 # 記録ページ（src/data/records.md）
+├── scripts/
+│   └── build-presentations.mjs   # 発表資料を records/dist/<name>/ に出力
+└── presentations/       # 登壇資料（records.yamanoku.net/<name>/ で配信）
+    ├── _shared/         # 共通設定
+    ├── <name>/          # flat型: 11tyのみ
+    │   ├── .eleventy.js
+    │   └── pages/
+    └── <name>/          # monorepo型: 11ty + Slidev
+        ├── 11ty/
+        └── slidev/
 ```
 
 ### 命名規則
@@ -120,18 +122,18 @@ const { title, items = [] } = Astro.props;
 
 ### プレゼンテーション（登壇資料）
 
-登壇資料は `presentations/` ディレクトリにモノレポとして集約されている。
+登壇資料は `records/presentations/` ディレクトリにモノレポとして集約され、`records.yamanoku.net/<name>/` で配信される。
 
 #### 2つの構成タイプ
 - **flat型**: 11tyのみで構成（テキスト原稿のみ）
 - **monorepo型**: 11ty（原稿）+ Slidev（スライド）で構成
 
 #### 共通設定
-`presentations/_shared/eleventy-base.js` に11tyの共通設定を集約。
+`records/presentations/_shared/eleventy-base.js` に11tyの共通設定を集約。
 各プレゼンテーションの `.eleventy.js` からインポートして使用する。
 
 #### ビルド
-`scripts/build-presentations.mjs` がすべてのプレゼンテーションをビルドし `dist/` に出力する。`pnpm build` 実行時にAstroビルドの後に自動実行される。
+`records/scripts/build-presentations.mjs` がすべてのプレゼンテーションをビルドし `records/dist/<name>/` に出力する。`pnpm --filter records build` 実行時にAstroビルドの後に自動実行される。
 
 #### プレゼンテーション一覧データ
 `src/presentations/listPresentation.ts` にポートフォリオサイトに表示する登壇・執筆一覧を管理。`ExactPresantationLengthArray` 型で5件で固定されている。

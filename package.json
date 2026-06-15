@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/build-presentations.mjs",
+    "build": "astro build",
     "preview": "astro preview",
     "lint": "pnpm run biome && pnpm run markuplint",
     "biome": "biome check --write .",
@@ -25,8 +25,8 @@
   },
   "workspaces": [
     "packages/*",
-    "presentations",
-    "records"
+    "records",
+    "records/presentations"
   ],
   "engines": {
     "pnpm": "11.6.0",

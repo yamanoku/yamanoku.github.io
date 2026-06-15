@@ -4,7 +4,7 @@ dist/
 .vercel
 *.log
 .astro/
-presentations/*/docs/
+records/presentations/*/docs/
 
 # ignore top-level vscode settings
 /.vscode/settings.json
