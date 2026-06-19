@@ -47,8 +47,8 @@ catalogs:
       specifier: 4.3.1
       version: 4.3.1
     astro:
-      specifier: 6.4.7
-      version: 6.4.7
+      specifier: 6.4.8
+      version: 6.4.8
     markuplint:
       specifier: 4.18.3
       version: 4.18.3
@@ -80,7 +80,7 @@ importers:
         version: 4.3.1(vite@7.3.5(@types/node@22.19.20)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
       astro:
         specifier: catalog:website
-        version: 6.4.7(@types/node@22.19.20)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(yaml@2.9.0)
+        version: 6.4.8(@types/node@22.19.20)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(yaml@2.9.0)
       modern-normalize:
         specifier: catalog:website
         version: 3.0.1
@@ -111,7 +111,7 @@ importers:
         version: 4.3.1(vite@7.3.5(@types/node@22.19.20)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
       astro:
         specifier: catalog:website
-        version: 6.4.7(@types/node@22.19.20)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(yaml@2.9.0)
+        version: 6.4.8(@types/node@22.19.20)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(yaml@2.9.0)
       modern-normalize:
         specifier: catalog:website
         version: 3.0.1
@@ -2278,8 +2278,8 @@ packages:
     resolution: {integrity: sha512-IJdzo2vLiElBxKzwS36VsCue/62d6IdWjnPB2v3nuPKeWGynp6FF/CYoLa5i/3jXH/z97ZDdsXz6abpgM6w07A==}
     engines: {node: '>=20.19.0'}
 
-  astro@6.4.7:
-    resolution: {integrity: sha512-5vsXx0H52u23Jpshs9tM81D03Tb3Oh2Vt2Zo0bpqjXN+njkAWjFyGjTfmWJLAcrCQd9Q+iWB1eqfhR1sZJEaUA==}
+  astro@6.4.8:
+    resolution: {integrity: sha512-KK5lX90uU9EeVaTjINyj3sy9/NFXVa59aowaqbWBDDKLXZh4rr7GwIaCFYVetE22MJtsCNFerQXn0vlCLmpP/Q==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -7457,7 +7457,7 @@ snapshots:
       '@babel/types': 7.29.7
       ast-kit: 2.2.0
 
-  astro@6.4.7(@types/node@22.19.20)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(yaml@2.9.0):
+  astro@6.4.8(@types/node@22.19.20)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.59.0)(yaml@2.9.0):
     dependencies:
       '@astrojs/compiler': 4.0.0
       '@astrojs/internal-helpers': 0.10.0
