@@ -4,6 +4,10 @@
 
 ## 2026年
 
+### 2026-09-12 大Funabashi.dev supported by KIKKAKE CREATION 2026
+
+TBD
+
 ### 2026-07-25 大吉祥寺.pm 2026
 
 [お元気ですか.fm～5年間の配信で振り返る「かわるもの」と「かわらないもの」](https://fortee.jp/dai-kichijojipm-2026/proposal/f16db038-dd76-485e-ac02-d5d0b7e547e8)
