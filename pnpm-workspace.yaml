@@ -24,11 +24,11 @@ packages:
 catalogs:
   website:
     "@biomejs/biome": 2.5.1
-    "@tailwindcss/vite": 4.3.1
+    "@tailwindcss/vite": 4.3.2
     astro: 6.4.8
     markuplint: 4.18.3
     modern-normalize: 3.0.1
-    tailwindcss: 4.3.1
+    tailwindcss: 4.3.2
     vite: 7.3.6
   yama-normalize:
     "@eslint/css": 1.3.0
