@@ -44,7 +44,24 @@ pnpm --filter records preview
 - **flat 型**: 11ty のみ（`<name>/.eleventy.js`、原稿 `<name>/pages/`）
 - **monorepo 型**: 11ty（原稿）+ Slidev（スライド）（`<name>/11ty/`・`<name>/slidev/`、スライドは `/<name>/slide/` で配信）
 - 共通の 11ty 設定は `records/presentations/_shared/eleventy-base.js`
+- 資料の一覧（name / type / wip）は `records/scripts/presentations.mjs` で一元管理。資料を追加したらここに追記する（`wip: true` はビルド対象外）
 - ビルドは `records/scripts/build-presentations.mjs` が全資料を 11ty / Slidev でビルドし `records/dist/<name>/` にコピーする（`pnpm --filter records build` から自動実行）
+
+#### デバッグ（開発サーバー）
+
+`records/scripts/dev-presentation.mjs` で資料ごとに開発サーバーを起動できる。flat 型は 11ty（http://localhost:8080/）、monorepo 型は 11ty（8080）と Slidev（http://localhost:3030/）を同時に起動し、Ctrl+C で両方停止する。
+
+```bash
+# 資料名を指定して起動（引数なし・不明な名前のときは利用可能な一覧を表示）
+pnpm --filter records dev:presentation <name>
+
+# monorepo 型で片方だけ起動する
+pnpm --filter records dev:presentation <name> --slide  # Slidev のみ
+pnpm --filter records dev:presentation <name> --pages  # 11ty のみ
+```
+
+- 11ty は `docs/` に書き出しながら配信するが、`records/presentations/*/docs/` は gitignore 済みのため git は汚れない
+- Slidev の開発サーバーはルート（`/`）配信のため `--base` は不要。11ty ページ内のスライドリンクは本番 URL のハードコードなので、開発中は各ポートを直接開く
 
 ## デプロイ（Cloudflare Pages / Git 連携）
 
