@@ -12,6 +12,10 @@ TBD
 
 [お元気ですか.fm～5年間の配信で振り返る「かわるもの」と「かわらないもの」](https://fortee.jp/dai-kichijojipm-2026/proposal/f16db038-dd76-485e-ac02-d5d0b7e547e8)
 
+### 2026-07-17 Svelte Japan Offline Meetup #8
+
+[SvelteのHTMLはどう解釈されているのか](https://speakerdeck.com/yamanoku/how-svelte-compile-html)
+
 ### 2026-06-16 v-tokyo Meetup #25
 
 [とあるサイトがkingnizeされるまで～Nuxtからvuerend & Vizeへ](https://scrapbox.io/yamanoku/%E3%81%A8%E3%81%82%E3%82%8B%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8Ckingnize%E3%81%95%E3%82%8C%E3%82%8B%E3%81%BE%E3%81%A7%EF%BD%9ENuxt%E3%81%8B%E3%82%89vuerend_&_Vize%E3%81%B8)
