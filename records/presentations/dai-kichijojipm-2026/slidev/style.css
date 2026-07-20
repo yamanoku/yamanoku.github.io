@@ -43,7 +43,6 @@ html.dark:root {
 .slidev-layout.center h1 {
   font-size: 3rem;
   line-height: 1.2;
-  text-align: center;
 }
 
 .slidev-layout.center h1 + h2 {
