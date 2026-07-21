@@ -1,7 +1,7 @@
 ---
 theme: apple-basic
 layout: intro
-title: お元気ですか.fm～5年間の配信で振り返る「かわるもの」と「かわらないもの」
+title: お元気ですかFM～5年間の配信で振り返る「かわるもの」と「かわらないもの」
 mdc: true
 fonts:
   sans: Roboto, "Noto Sans JP", "Noto Serif JP"
@@ -15,7 +15,7 @@ htmlAttrs:
 duration: 15min
 ---
 
-<h1 mt="24">お元気ですか.fm</h1>
+<h1 mt="24">お元気ですかFM</h1>
 
 <div class="text-8 font-700">
   <span>5年間の配信で振り返る</span><br>
@@ -43,7 +43,7 @@ layout: center
 <!--
 はい、ありがとうございます。今この瞬間、皆さんに「お元気ですか？」と問いかけて、心の中ででも「はい」と答えていただけたなら、それだけでこの発表は半分成功したようなものです。
 
-というのも、今日は「お元気ですか.fm」という、私が5年間続けているポッドキャストの話をするからです。この5年で「かわったもの」と「かわらなかったもの」を、皆さんと一緒に振り返っていきたいと思います。
+というのも、今日は「お元気ですかFM」という、私が5年間続けているポッドキャストの話をするからです。この5年で「かわったもの」と「かわらなかったもの」を、皆さんと一緒に振り返っていきたいと思います。
 -->
 
 ---
@@ -54,9 +54,10 @@ layout: center
 - 千葉県流山市在住
   - 東葛.dev、Funabashi.dev 参加中
 - Vue Fes Japan 2026 コアスタッフ
+- HTML Night in Tokyo 主催
 - 大吉祥寺.pm 初登壇！
 
-<v-drag pos="589,109,284,284">
+<v-drag pos="555,102,307,308">
   <img src="https://i.gyazo.com/c6448ef4958591138994a4b420590561.png" width="300">
 </v-drag>
 
@@ -72,18 +73,36 @@ layout: center
 
 # どんなポッドキャストを<br>聴いていますか？
 
+---
+layout: center
+---
+
+<div class="flex flex-wrap justify-center gap-4">
+  <img src="https://i.gyazo.com/c0554cea5c3c39ede7ca303ef2aaf4f7.png" width="150">
+  <img src="https://i.gyazo.com/c8cf1e78fb874ae7d1732069a6886907.png" width="150">
+  <img src="https://i.gyazo.com/4a2f44352434eaceb2b73d25e604c09c.png" width="150">
+  <img src="https://i.gyazo.com/3877b763533fd1c5f3e74871359dd22d.png" width="150">
+  <img src="https://i.gyazo.com/8865959f59e6b98233e287188394ca58.png" width="150">
+  <img src="https://i.gyazo.com/bd0f60d41081bed4b698e62158c3df0f.png" width="150">
+  <img src="https://i.gyazo.com/ed81091d05e7355af8ea5b21bba2b561.png" width="150">
+  <img src="https://i.gyazo.com/ad553d08db2c073b2697fb425c2c5b4e.png" width="150">
+  <img src="https://i.gyazo.com/59ca8a72d85ab6f9922a234a258a2b6a.png" width="150">
+  <img src="https://i.gyazo.com/5b85fd6fc525d0eb9c0c8c04ed8e8f03.png" width="150">
+</div>
 
 ---
 layout: center
 ---
 
-# ポッドキャストやってます
+# 私もポッドキャストやってます
 
 ---
 layout: center
 ---
 
-# お元気ですか.fmについて
+<div class="flex items-center justify-center">
+  <img src="https://i.gyazo.com/759e8f1ee7e2841f29df75b6b84180d8.png" width="300">
+</div>
 
 ---
 
@@ -91,41 +110,36 @@ layout: center
 
 - [takanorip](https://x.com/takanoripe)の2人でやるポッドキャスト
 - 毎回「お互いの近況」を話してからテーマトーク
-- フロントエンド、デザイン、組織、キャリア等
 - 2021年8月に第1回をanchor.fmにて配信
 - 月1〜2回ペースで公開し、**46エピソード**が公開中
 - 2026年にはYouTubeチャンネルも開設
 - 今年で**5周年**
 
-<v-drag pos="647,130,284,284">
-  <img src="https://i.gyazo.com/759e8f1ee7e2841f29df75b6b84180d8.png" width="300">
-</v-drag>
-
 <!--
-「お元気ですか.fm」は、takanoripという相方と2人でやっている雑談ポッドキャストです。デザインやWeb、キャリアについてゆるく話しています。
+「お元気ですかFM」は、takanoripという相方と2人でやっている雑談ポッドキャストです。デザインやWeb、キャリアについてゆるく話しています。
 
 2021年の8月に第1回を配信しました。毎回、まずお互いの近況を話してから本題に入る、という形式を最初からずっと続けています。だいたい月に1〜2回のペースで、5年でエピソードは41本になりました。今年の8月で、ついに5周年を迎えます。
 -->
 
 ---
 
-## 役割分担
+## これまでのトークテーマ（抜粋）
 
-- takanorip
-  - 収録、アップロード
-- yamanoku
-  - 概要編集
-  - SNS宣伝
+<div class="text-6">
+カラーパレット、日報、Atomic Design、Web Components、デザインシステム、ワークライフバランス、英語学習、複雑GUI、OOUI、アクセシビリティ、JSConf JP、デザインエンジニア、Every Layout、HTML解体新書、統計学、Figma Config、KPI、哲学、Storybook、ダークパターン、デザイン読書日和、Web制作、モダンCSS、ActivityPub、社会人美大生、お金とデザイン、OpenUI、Vue Fes Japan、Tailwind CSS、生成AI、UXデザイナー、Config APAC、デザインの品質、転職後の立ち上がり、肩書き・キャリア、モーション、アウトカムファースト、越境、Design Ship、エターなる、評価制度、Astro、技術同人誌博覧会、カンファレンス、Vite Plus、OSS...
+</div>
 
 ---
 
-## 「お元気ですか.fm」の由来
+## 「お元気ですかFM」の由来
 
 - 発足当時はコロナ禍で気軽に人と話せる状況ではない
 - 1ヶ月に1回配信するペースで考えていた
 - 最近元気だった？と聞いてスタートする
 
-![なんか1ヶ月位のスパンイメージなので、最近元気?くらいのノリでやりたいなとおもって浮かんだ](./images/ogenkidesuka-first-time.png)
+<v-drag pos="409,301,513,147">
+  <img src="./images/ogenkidesuka-first-time.png" width="500" alt="なんか1ヶ月位のスパンイメージなので、最近元気?くらいのノリでやりたいなとおもって浮かんだ">
+</v-drag>
 
 ---
 layout: two-cols-header
@@ -143,7 +157,7 @@ layout: two-cols-header
 
 ---
 
-## データで見る「お元気ですか.fm」
+## データで見る「お元気ですかFM」
 
 - 総再生回数: 9,304回
   - Spotify: 3,804回
@@ -156,23 +170,15 @@ layout: two-cols-header
 
 ---
 
-## データで見る「お元気ですか.fm」
+## データで見る「お元気ですかFM」
 
 <img src="./images/audience_sex-age_type.png" width="700">
-
----
-
-## これまでのトークテーマ（抜粋）
-
-<div class="text-6">
-カラーパレット、日報、Atomic Design、Web Components、デザインシステム、ワークライフバランス、英語学習、複雑GUI、OOUI、アクセシビリティ、JSConf JP、デザインエンジニア、Every Layout、HTML解体新書、統計学、Figma Config、KPI、哲学、Storybook、ダークパターン、デザイン読書日和、Web制作、モダンCSS、ActivityPub、社会人美大生、お金とデザイン、OpenUI、Vue Fes Japan、Tailwind CSS、生成AI、UXデザイナー、Config APAC、デザインの品質、転職後の立ち上がり、肩書き・キャリア、モーション、アウトカムファースト、越境、Design Ship、エターなる、評価制度、Astro、技術同人誌博覧会、カンファレンス、Vite Plus、OSS...
-</div>
 
 ---
 layout: center
 ---
 
-# お元気ですか.fmと<br>「かわるもの」
+# お元気ですかFMと<br>「かわるもの」
 
 ---
 
@@ -252,18 +258,18 @@ layout: two-cols-header
 ::right::
 
 <div class="flex items-center gap-4 flex-wrap">
-  <img src="https://i.gyazo.com/8eae4c3335a4c8209d269792ec6e4eb7.png" width="80">
-  <img src="https://i.gyazo.com/9e20f16dbabaac4318e49d343e5d1655.png" width="80">
-  <img src="https://i.gyazo.com/85262a58026beeb2e1c09586a0484533.png" width="80">
-  <img src="https://i.gyazo.com/887cb459d0388679d6c3b0b3d5b16068.png" width="80">
-  <img src="https://i.gyazo.com/22c844fea96ac2ae12b9172d9e5c0f04.png" width="80">
-  <img src="https://i.gyazo.com/637edddec279864b50fb9304f1600440.png" width="80">
-  <img src="https://i.gyazo.com/9bae09bd812ff764b2714df877216ef3.png" width="80">
-  <img src="https://i.gyazo.com/d21d6c182c1c26b76b24ffd2485f1b2a.png" width="80">
-  <img src="https://i.gyazo.com/fa7fd35fcc58cc5f729086323f9ed1f4.png" width="80">
-  <img src="https://i.gyazo.com/8e1a0b0cc17370c3e86d6f5f87928fec.png" width="80">
-  <img src="https://i.gyazo.com/ee6e5cd2934f5bf97420b91cea2b4364.png" width="80">
-  <img src="https://i.gyazo.com/930260a2e62d895d9900aa1fd78ae378.png" width="80">
+  <img src="https://i.gyazo.com/8eae4c3335a4c8209d269792ec6e4eb7.png" width="90">
+  <img src="https://i.gyazo.com/9e20f16dbabaac4318e49d343e5d1655.png" width="90">
+  <img src="https://i.gyazo.com/85262a58026beeb2e1c09586a0484533.png" width="90">
+  <img src="https://i.gyazo.com/887cb459d0388679d6c3b0b3d5b16068.png" width="90">
+  <img src="https://i.gyazo.com/22c844fea96ac2ae12b9172d9e5c0f04.png" width="90">
+  <img src="https://i.gyazo.com/637edddec279864b50fb9304f1600440.png" width="90">
+  <img src="https://i.gyazo.com/9bae09bd812ff764b2714df877216ef3.png" width="90">
+  <img src="https://i.gyazo.com/d21d6c182c1c26b76b24ffd2485f1b2a.png" width="90">
+  <img src="https://i.gyazo.com/fa7fd35fcc58cc5f729086323f9ed1f4.png" width="90">
+  <img src="https://i.gyazo.com/8e1a0b0cc17370c3e86d6f5f87928fec.png" width="90">
+  <img src="https://i.gyazo.com/ee6e5cd2934f5bf97420b91cea2b4364.png" width="90">
+  <img src="https://i.gyazo.com/930260a2e62d895d9900aa1fd78ae378.png" width="90">
 </div>
 
 ---
@@ -288,7 +294,7 @@ layout: center
 layout: center
 ---
 
-# お元気ですか.fmと<br>「かわらないもの」
+# お元気ですかFMと<br>「かわらないもの」
 
 ---
 
@@ -325,10 +331,11 @@ layout: center
 
 ## ポッドキャストはアウトプットに最適な手段
 
-- 自分の声の誤魔化しが効かない
+- 自分の声は誤魔化しが効かない
+- 文章を書くよりも整えずにアウトプットできる
 - 下手な炎上が起こりづらい
-  - 視覚的なノイズがない
-  - テキストよりも誤解されづらい
+  - 映像がないので視覚的ノイズはない
+  - テキストよりも解釈として誤解されづらい
   - もちろん一定の配慮をもった発言をすることを心掛ける
 
 ---
@@ -339,7 +346,7 @@ layout: center
 
 ---
 
-## 小さくていいから、まずやってみる
+## 小さく残していく
 
 <v-clicks>
 
@@ -373,10 +380,10 @@ layout: center
 
 ## 本発表のまとめ
 
-- お元気ですか.fmの5年間の振り返り
-- 変わるもの：技術トレンド、ツール、働き方
-- 変わらないもの：アウトプットを続ける意志
-- アウトプットは小さく、まずやってみる
+- お元気ですかFMの5年間の振り返り
+- かわるもの：技術トレンド、ツール、働き方
+- かわらないもの：アウトプットを続ける意志
+- アウトプットは小さく、まずやって残してみる
 
 ---
 layout: center
@@ -388,19 +395,19 @@ layout: center
 
 ## 5周年記念誌つくりました
 
-- お元気ですか.fm 5周年を記念した同人誌
+- お元気ですかFM 5周年を記念した同人誌
 - 技書博13にて頒布
 - これまでの5年間を振り返る内容
 - Boothにて販売中！
 
 https://ogenkidesukafm.booth.pm/items/8345795
 
-<v-drag pos="615,67,332,449">
+<v-drag pos="559,63,332,449">
   <img src="./images/book.png" width="300">
 </v-drag>
 
 <!--
-そして、この5周年を記念して同人誌を作りました。前編は、お元気ですか.fmの5年史とフロントエンドの変化、つまり今日の「かわるもの」の部分。後編は、私自身のキャリアとアウトプットの振り返り、つまり「かわらないもの」の部分です。
+そして、この5周年を記念して同人誌を作りました。前編は、お元気ですかFMの5年史とフロントエンドの変化、つまり今日の「かわるもの」の部分。後編は、私自身のキャリアとアウトプットの振り返り、つまり「かわらないもの」の部分です。
 
 今日の発表は、まさにこの本のエッセンスを20分に詰め込んだものになっています。もっと詳しく知りたくなった方は、ぜひ手に取ってもらえると嬉しいです。
 -->
@@ -419,7 +426,7 @@ layout: center
 
 <div>酷暑でも</div>
 
-<div v-click>体調崩さず</div>
+<div v-click>皆さまどうか</div>
 
 <div v-click>お元気で</div>
 
