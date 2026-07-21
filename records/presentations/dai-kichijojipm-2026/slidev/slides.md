@@ -72,6 +72,13 @@ layout: center
 
 # どんなポッドキャストを<br>聴いていますか？
 
+
+---
+layout: center
+---
+
+# ポッドキャストやってます
+
 ---
 layout: center
 ---
@@ -155,7 +162,7 @@ layout: two-cols-header
 
 ---
 
-## これまでのトークテーマ
+## これまでのトークテーマ（抜粋）
 
 <div class="text-6">
 カラーパレット、日報、Atomic Design、Web Components、デザインシステム、ワークライフバランス、英語学習、複雑GUI、OOUI、アクセシビリティ、JSConf JP、デザインエンジニア、Every Layout、HTML解体新書、統計学、Figma Config、KPI、哲学、Storybook、ダークパターン、デザイン読書日和、Web制作、モダンCSS、ActivityPub、社会人美大生、お金とデザイン、OpenUI、Vue Fes Japan、Tailwind CSS、生成AI、UXデザイナー、Config APAC、デザインの品質、転職後の立ち上がり、肩書き・キャリア、モーション、アウトカムファースト、越境、Design Ship、エターなる、評価制度、Astro、技術同人誌博覧会、カンファレンス、Vite Plus、OSS...
@@ -205,7 +212,8 @@ layout: center
   - 「フロントエンドエンジニア」「デザインエンジニア」「テックリード」「プロダクトエンジニア」…
   - もう「会社員」でいいんじゃないの？
 - お互いが転職をして環境を変える
-  - 業務・役割の上での難しさ
+  - 役割の上での難しさや葛藤
+  - 慣れない立場で悪戦苦闘
 
 <!--
 動いたのは技術だけではありません。「デザインエンジニア」「テックリード」といった役割の名前が増え、職種の境界を越えて動くことが当たり前になりました。私自身も越境を続けた結果、逆に肩書きにこだわるのをやめて「会社員」に落ち着いた、というのは先ほどお話しした通りです。
@@ -224,10 +232,15 @@ layout: center
 - ペット介護
 
 ---
+layout: two-cols-header
+---
+
 
 ## 関わってくれる人たちが増えた
 
-- ゲストの皆さん（総計: 9人）
+::left::
+
+- ゲストの皆さん（総計: 10人）
 - ポッドキャストとのコラボ配信
   - [よくわからないデザインと工学](https://open.spotify.com/show/3PHU1bIB5eqjchCOs0LZfV)
 - カンファレンスでのゲスト登壇
@@ -235,10 +248,41 @@ layout: center
   - Vue Fes Japan 2023 
 - 聴いてくれるリスナーの皆さん
 
-<v-drag pos="531,138,375,256">
+
+::right::
+
+<div class="flex items-center gap-4 flex-wrap">
+  <img src="https://i.gyazo.com/8eae4c3335a4c8209d269792ec6e4eb7.png" width="80">
+  <img src="https://i.gyazo.com/9e20f16dbabaac4318e49d343e5d1655.png" width="80">
+  <img src="https://i.gyazo.com/85262a58026beeb2e1c09586a0484533.png" width="80">
+  <img src="https://i.gyazo.com/887cb459d0388679d6c3b0b3d5b16068.png" width="80">
+  <img src="https://i.gyazo.com/22c844fea96ac2ae12b9172d9e5c0f04.png" width="80">
+  <img src="https://i.gyazo.com/637edddec279864b50fb9304f1600440.png" width="80">
+  <img src="https://i.gyazo.com/9bae09bd812ff764b2714df877216ef3.png" width="80">
+  <img src="https://i.gyazo.com/d21d6c182c1c26b76b24ffd2485f1b2a.png" width="80">
+  <img src="https://i.gyazo.com/fa7fd35fcc58cc5f729086323f9ed1f4.png" width="80">
+  <img src="https://i.gyazo.com/8e1a0b0cc17370c3e86d6f5f87928fec.png" width="80">
+  <img src="https://i.gyazo.com/ee6e5cd2934f5bf97420b91cea2b4364.png" width="80">
+  <img src="https://i.gyazo.com/930260a2e62d895d9900aa1fd78ae378.png" width="80">
+</div>
+
+---
+layout: center
+---
+
+<div class="flex flex-col items-center gap-4">
+  <img src="./images/yowadeko.png" width="600">
+  <div class="font-700 text-4">よわでこの皆さんとポッドキャスト収録</div>
+</div>
+
+---
+layout: center
+---
+
+<div class="flex flex-col items-center gap-4">
   <img src="./images/vuefesjapan2023.png" width="600">
-  <div class="mt-4 text-center font-700 text-4">Vue Fes Japan 2023のパネルディスカッション</div>
-</v-drag>
+  <div class="font-700 text-4">Vue Fes Japan 2023のパネルディスカッション</div>
+</div>
 
 ---
 layout: center
@@ -349,7 +393,7 @@ layout: center
 - これまでの5年間を振り返る内容
 - Boothにて販売中！
 
-<a href="https://ogenkidesukafm.booth.pm/items/8345795">https://ogenkidesukafm.booth.pm/items/8345795</a>
+https://ogenkidesukafm.booth.pm/items/8345795
 
 <v-drag pos="615,67,332,449">
   <img src="./images/book.png" width="300">
