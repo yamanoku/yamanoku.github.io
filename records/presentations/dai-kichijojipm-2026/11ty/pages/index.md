@@ -24,6 +24,10 @@ lang: ja
 
 「お元気ですか.fm」という名前は、発足当時の状況から自然に出てきたものです。始めた頃はコロナ禍で、気軽に人と会って話せる状況ではありませんでした。配信も1ヶ月に1回くらいのゆるいペースで考えていたので、「最近元気だった？」と近況を聞くところからスタートする、そのくらいのノリでやりたいなと思って浮かんだ名前でした。
 
+<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="ja" dir="ltr">お元気ですか.fm、また元気ないな</p>&mdash; miyaoka (@miyaoka) <a href="https://x.com/miyaoka/status/1668234313270464514?ref_src=twsrc%5Etfw">June 12, 2023</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">元気が足りない <a href="https://x.com/hashtag/%E3%81%8A%E5%85%83%E6%B0%97%E3%81%A7%E3%81%99%E3%81%8BFM?src=hash&amp;ref_src=twsrc%5Etfw">#お元気ですかFM</a></p>&mdash; miyaoka (@miyaoka) <a href="https://x.com/miyaoka/status/1619973346107731968?ref_src=twsrc%5Etfw">January 30, 2023</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+
 もっとも、名前のわりに配信間隔が空いてしまうこともあって、名前負けしがちなポッドキャストでもあるのですが……そのゆるさも含めて、5年続けてこられた理由なのかもしれません。
 
 ### なぜ5年も続いたのか
@@ -103,7 +107,7 @@ lang: ja
 ## 最後に一句
 
 <div style="writing-mode: vertical-rl;">
-<div style="display: flex; justify-content: center; flex-direction: column; font-size: 40px; gap: 30px; line-height: 1; font-family: serif;">
+<div style="display: flex; justify-content: center; flex-direction: column; font-size: 72px; gap: 36px; line-height: 1; font-family: serif;">
 <div>酷暑でも</div>
 <div>皆さまどうか</div>
 <div>お元気で。</div>
