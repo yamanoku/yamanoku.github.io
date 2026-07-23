@@ -189,7 +189,7 @@ function reset() {
 .countdown {
   position: fixed;
   right: 0.75rem;
-  bottom: 0.75rem;
+  top: 0.75rem;
   z-index: 100;
   display: flex;
   align-items: center;
