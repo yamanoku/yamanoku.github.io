@@ -1,5 +1,5 @@
 export const presentations = [
-  { name: "dai-kichijojipm-2026", type: "slidev", wip: true },
+  { name: "dai-kichijojipm-2026", type: "monorepo" },
   { name: "tskaigi-2026", type: "monorepo" },
   { name: "burikaigi-2026", type: "monorepo" },
   { name: "vuefes-japan-2025", type: "monorepo" },
