@@ -63,19 +63,20 @@ takanoripから誘いがあり、せっかくだからやってみるかと二�
 
 ### 関わってくれる人たち
 
-続けているうちに、関わってくれる人も増えていきました。ゲストに来てくださった方は総計10人。
+続けているうちに、関わってくれる人も増えていきました。ゲストに来てくださった方は総計11人。
 
-<div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px;">
-  <img src="https://i.gyazo.com/8eae4c3335a4c8209d269792ec6e4eb7.png" width="80">
-  <img src="https://i.gyazo.com/9e20f16dbabaac4318e49d343e5d1655.png" width="80">
-  <img src="https://i.gyazo.com/85262a58026beeb2e1c09586a0484533.png" width="80">
-  <img src="https://i.gyazo.com/887cb459d0388679d6c3b0b3d5b16068.png" width="80">
-  <img src="https://i.gyazo.com/22c844fea96ac2ae12b9172d9e5c0f04.png" width="80">
-  <img src="https://i.gyazo.com/637edddec279864b50fb9304f1600440.png" width="80">
-  <img src="https://i.gyazo.com/9bae09bd812ff764b2714df877216ef3.png" width="80">
-  <img src="https://i.gyazo.com/d21d6c182c1c26b76b24ffd2485f1b2a.png" width="80">
-  <img src="https://i.gyazo.com/fa7fd35fcc58cc5f729086323f9ed1f4.png" width="80">
-  <img src="https://i.gyazo.com/8e1a0b0cc17370c3e86d6f5f87928fec.png" width="80">
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px;">
+  <img src="https://i.gyazo.com/8eae4c3335a4c8209d269792ec6e4eb7.png" width="70">
+  <img src="https://i.gyazo.com/9e20f16dbabaac4318e49d343e5d1655.png" width="70">
+  <img src="https://i.gyazo.com/85262a58026beeb2e1c09586a0484533.png" width="70">
+  <img src="https://i.gyazo.com/887cb459d0388679d6c3b0b3d5b16068.png" width="70">
+  <img src="https://i.gyazo.com/22c844fea96ac2ae12b9172d9e5c0f04.png" width="70">
+  <img src="https://i.gyazo.com/d64ab7d5ed22ba1178a09f8872117929.png" width="70">
+  <img src="https://i.gyazo.com/637edddec279864b50fb9304f1600440.png" width="70">
+  <img src="https://i.gyazo.com/9bae09bd812ff764b2714df877216ef3.png" width="70">
+  <img src="https://i.gyazo.com/d21d6c182c1c26b76b24ffd2485f1b2a.png" width="70">
+  <img src="https://i.gyazo.com/fa7fd35fcc58cc5f729086323f9ed1f4.png" width="70">
+  <img src="https://i.gyazo.com/8e1a0b0cc17370c3e86d6f5f87928fec.png" width="70">
 </div>
 
 ほかのポッドキャストとのコラボ配信として[よくわからないデザインと工学](https://creators.spotify.com/pod/show/yowadeko)の皆さんと収録したり、Vue Fes Japan Online 2022やVue Fes Japan 2023ではゲストとして登壇させてもらったりもしました。
