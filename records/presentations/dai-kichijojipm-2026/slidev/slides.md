@@ -26,7 +26,7 @@ duration: 15min
 大吉祥寺.pm 2026 | <time datetime="2026-07-25">2026-07-25</time>
 </div>
 
-[ドキュメントページ](./dai-kichijojipm-2026/)
+[ドキュメントページ](https://records.yamanoku.net/dai-kichijojipm-2026/)
 
 <div class="absolute bottom-16">
   <span class="text-6 font-700">
