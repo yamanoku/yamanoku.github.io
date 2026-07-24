@@ -9,7 +9,7 @@ lang: ja
 
 ## スライド
 
-[スライド版ページ](./dai-kichijojipm-2026/slide/)
+[スライド版ページ](https://records.yamanoku.net/dai-kichijojipm-2026/slide/)
 
 ## 自己紹介
 
