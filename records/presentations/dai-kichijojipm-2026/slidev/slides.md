@@ -26,7 +26,7 @@ duration: 15min
 大吉祥寺.pm 2026 | <time datetime="2026-07-25">2026-07-25</time>
 </div>
 
-[ドキュメントページ](https://records.yamanoku.net/dai-kichijojipm-2026/)
+[ドキュメントページ](./dai-kichijojipm-2026/)
 
 <div class="absolute bottom-16">
   <span class="text-6 font-700">
@@ -55,7 +55,7 @@ duration: 15min
 
 <!--
 最初に自己紹介をさせていただきます。
-やまのくと申します。千葉県流山市に住んでおり、会社員で一児の父をしております。昨年の登壇者でもある河野さんが主催される東葛.devや、ちゃまほりさんが主催されるFunabashi.devといった千葉の技術者コミュニティに参加させていただいております。
+やまのくと申します。会社員で一児の父です。千葉県流山市に住んでおり、昨年の登壇者でもあるkounoさんが主催される東葛.devや、ちゃまほりさんが主催されるFunabashi.devといった千葉の技術者コミュニティに参加させていただいております。
 
 また、Vue.jsとViteのエコシステムにまつわるカンファレンス「Vue Fes Japan」の今年のコアスタッフや、8月7日にアララ株式会社さんで開催されるHTML限定のイベント「HTML Night in Tokyo」の主催も務めております。
 
