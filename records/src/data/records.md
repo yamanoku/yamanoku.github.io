@@ -10,7 +10,7 @@ TBD
 
 ### 2026-07-25 大吉祥寺.pm 2026
 
-[お元気ですか.fm～5年間の配信で振り返る「かわるもの」と「かわらないもの」](/dai-kichijojipm-2026/slide/)
+[お元気ですか.fm～5年間の配信で振り返る「かわるもの」と「かわらないもの」](https://records.yamanoku.net/dai-kichijojipm-2026/slide/)
 
 ### 2026-07-17 Svelte Japan Offline Meetup #8
 
