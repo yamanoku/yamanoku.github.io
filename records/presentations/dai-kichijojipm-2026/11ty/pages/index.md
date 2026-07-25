@@ -15,7 +15,7 @@ lang: ja
 
 最初に自己紹介をさせていただきます。
 
-やまのくと申します。会社員で一児の父です。千葉県流山市に住んでおり、昨年の登壇者でもあるkounoさんが主催される東葛.devや、ちゃまほりさんが主催されるFunabashi.devといった千葉の技術者コミュニティに参加させていただいております。
+やまのくと申します。会社員で一児の父です。千葉県流山市に住んでおり、昨年の登壇者でもある[kouno](https://x.com/hk_it7)さんが主催される[東葛.dev](https://toukatsu.dev/)や、[ちゃまほり](https://x.com/tyamahori)さんが主催される[Funabashi.dev](https://funabashi.dev/)といった千葉の技術者コミュニティに参加させていただいております。
 
 また、Vue.jsとViteのエコシステムにまつわるカンファレンス「[Vue Fes Japan 2026](https://vuefes.jp/2026/)」のコアスタッフや、8月7日にアララ株式会社さんで開催されるHTML限定のイベント「[HTML Night in Tokyo](https://connpass.com/event/399762/)」の主催も務めております。
 
@@ -23,7 +23,7 @@ lang: ja
 
 ところで皆さんは普段どのようなポッドキャストを聴いていますか？
 
-こちらが自分が最近聴いているポッドキャストです。有名どころから知り合いがやっているもの、そしてMagnoliaさんがやられている「[縁側テックトーク](https://open.spotify.com/show/033BdYH4w2tg0OKgvtlZi3)」などです。
+こちらが自分が最近聴いているポッドキャストです。有名どころから知り合いがやっているもの、そして[Magnolia](https://x.com/magnolia_k_)さんと[syossan](https://x.com/syossan27)さんがやられている「[縁側テックトーク](https://open.spotify.com/show/033BdYH4w2tg0OKgvtlZi3)」などです。
 
 仕事中だったり都内への移動時や散歩している時などにそれぞれ聞かせてもらっています。
 
@@ -83,7 +83,7 @@ lang: ja
 
 ### フロントエンド開発・デザイン
 
-まず、フロントエンド開発やデザインの変化についてです。大きなトピックとしてはInternet Explorer 11のサポート終了が挙げられます。それに伴い、InteropやBaselineといったWeb標準化に向けた取り組みが進み、クロスブラウザでの実装が以前より容易になってきたと感じます。また開発ツールに関しても、Rustによるツールチェーンの高速化が進んだり、DenoやBunといった新しいJavaScriptランタイムが登場したりしました。
+まず、フロントエンド開発やデザインの変化についてです。大きなトピックとしてはInternet Explorer 11のサポート終了が挙げられます。それに伴い、InteropやBaselineといったWeb標準化に向けた取り組みが進み、クロスブラウザでの実装が以前より容易になってきたと感じます。また開発ツールに関しても、Rustによるツールチェーンが参入してきて開発の高速化が進んだり、DenoやBunといった新しいJavaScriptランタイムが登場したりしました。
 
 デザインツールにおいては、Figmaが一強の時代になったと感じています。各社でデザインシステムの運用も定番化し、どのようなコンポーネントライブラリにするか、UXライティングやブランディングをどう設計するかといった議論が盛んに行われるようになりました。
 
@@ -126,7 +126,7 @@ lang: ja
   <img src="https://i.gyazo.com/9bae09bd812ff764b2714df877216ef3.png" width="70" alt="naoki haba">
 </div>
 
-ほかのポッドキャストとのコラボ配信として[よくわからないデザインと工学](https://creators.spotify.com/pod/show/yowadeko)の皆さんと収録したり、Vue Fes Japan Online 2022やVue Fes Japan 2023ではゲストとして登壇させてもらったりもしました。
+ほかのポッドキャストとのコラボ配信として[よくわからないデザインと工学](https://creators.spotify.com/pod/show/yowadeko)の皆さんと収録したり、[Vue Fes Japan Online 2022](https://vuefes.jp/2022/)や[Vue Fes Japan 2023](https://vuefes.jp/2023/)ではゲストとして登壇させてもらったりもしました。
 
 <figure>
   <img src="./images/yowadeko.png" alt="よくわからないデザインと工学の皆さんとの収録風景。複数のガジェットが並ぶ作業デスク。手前のノートパソコンを開きながら、機材（マイクスピーカーや三脚など）のセッティングや作業を行っている様子。">
@@ -135,7 +135,7 @@ lang: ja
 
 <figure>
   <img src="./images/vuefesjapan2023.png" alt="やまのく、miyaoka、ushironoko、kazupon、wattanx、takanoripが横に並んで椅子に座ってパネルディスカッションをしている様子。">
-  <figcaption>Vue Fes Japan 2023のパネルディスカッション</figcaption>
+  <figcaption><a href="https://vuefes.jp/2023/">Vue Fes Japan 2023</a>のパネルディスカッション</figcaption>
 </figure>
 
 そして何より、番組を聴いてくださるリスナーの皆さんから反応をいただけることが本当に励みになっています。
@@ -174,7 +174,9 @@ lang: ja
 
 改めて考えてみると、ポッドキャストはこうしたアウトプットの手段として非常に優れていると感じます。
 
-声というものは取り繕うことが難しく誤魔化しが効かないため、喋り手の等身大の感情や思考がストレートに伝わります。文章のようにかしこまって整える必要もなく、気軽に表現できる手軽さもあります。さらに、視覚的なノイズが入る動画や切り取りによって意図が歪みやすいテキストに比べ、声のニュアンスごと伝わるポッドキャストは、過度に炎上を恐れることなく伝えたい本質を届けやすいというメリットもあります。
+声というものは取り繕うことが難しく誤魔化しが効かないため、喋り手の等身大の感情や思考がストレートに伝わります。文章のようにかしこまって整える必要もなく、気軽に表現できる手軽さもあります。
+
+さらに、視覚的なノイズが入る動画や、切り取りによって意図が歪みやすいメディアに比べ、声のニュアンスごと伝わるポッドキャストは、過度に炎上を恐れることなく伝えたい本質を届けやすいというメリットもあります。もちろん一定の配慮を持った発言を心掛けるのは忘れないようにしましょう。
 
 ## アウトプットのファーストステップ
 
@@ -196,7 +198,7 @@ lang: ja
 <div style="writing-mode: vertical-rl;">
     <div style="display: flex; justify-content: center; flex-direction: column; font-size: 72px; gap: 36px; line-height: 1; font-family: serif;">
         <div>酷暑にも</div>
-        <div>負けずにみんな</div>
+        <div>負けるな みんな</div>
         <div>お元気で</div>
     </div>
 </div>  
