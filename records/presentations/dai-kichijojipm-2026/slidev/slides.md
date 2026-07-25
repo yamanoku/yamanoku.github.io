@@ -203,15 +203,15 @@ layout: two-cols-header
 
 ## データで見る「お元気ですか.fm」
 
-- 総再生回数: 9,304回
-  - Spotify: 3,804回
-  - Spotify以外: 5,500回
+- 総再生回数: 9,327回
+  - Spotify: 3,807回
+  - Spotify以外: 5,520回
 - 総視聴時間: 1,228時間
   - 平均視聴時間: 2時間44分
 - Spotifyフォロワー: 188人
 - YouTubeチャンネル登録者数: 14人
 
-※ 2026年7月20日時点
+※ 2026年7月25日時点
 
 <!--
 5年間の配信データについても少し触れさせていただきます。現在はSpotify for Creatorsを中心に配信しており、再生数やフォロワー数、YouTubeの登録者数などは、5年間の積み重ねとしては正直そこまで派手な数字ではありません。これからポッドキャストを始める方の参考程度に見ていただければと思います。
@@ -221,9 +221,9 @@ layout: two-cols-header
 
 ## データで見る「お元気ですか.fm」
 
-<img src="./images/audience_sex-age_type.png" width="640">
+<img src="./images/audience_sex-age_type.png" width="640" alt="全期間のオーディエンスの内訳を示すグラフ、性別構成は男性74.8%、女性14.9%、指定なし8.7%、ノンバイナリー1.6%となっている。年齢層は28〜34歳（34.2%）、35〜44歳（25.8%）、23〜27歳（23.3%）、18〜22歳（12.0%）、45〜59歳（4.3%）、不明（0.2%）、0〜17歳および60歳以上（各0.1%）の順に分布している。">
 
-※ 2026年7月20日時点
+※ 2026年7月25日時点
 
 <!--
 リスナーの層としては男性が7割近くを占めており、年齢層は20代から40代と、パーソナリティである自分たちの年齢に近いボリュームゾーンの方々に一番多く聴いていただいております。
@@ -243,18 +243,18 @@ layout: center
 
 ## かわるもの
 
-- フロントエンド開発・デザインの変遷
+- フロントエンド開発・デザイン
 - 役割・場所の変化
 - 日々の生活での変化
 - 関わってくれる人たち
 
 <!--
-まず、かわったものは、「フロントエンド開発・デザインの変遷」「役割・場所の変化」「日々の生活での変化」「関わってくれる人たち」の4つに分けられます。
+まず、かわったものは、「フロントエンド開発・デザイン」「役割・場所の変化」「日々の生活での変化」「関わってくれる人たち」の4つに分けられます。
 -->
 
 ---
 
-## フロントエンド開発・デザインの変遷
+## フロントエンド開発・デザイン
 
 - **Internet Explorer 11**のサポート終了
   - InteropやBaselineなど**Web標準化**の取り組みが前進
@@ -330,17 +330,17 @@ layout: two-cols-header
 ::right::
 
 <div class="flex items-center gap-4 flex-wrap">
-  <img src="https://i.gyazo.com/8eae4c3335a4c8209d269792ec6e4eb7.png" width="90">
-  <img src="https://i.gyazo.com/9e20f16dbabaac4318e49d343e5d1655.png" width="90">
-  <img src="https://i.gyazo.com/85262a58026beeb2e1c09586a0484533.png" width="90">
-  <img src="https://i.gyazo.com/887cb459d0388679d6c3b0b3d5b16068.png" width="90">
-  <img src="https://i.gyazo.com/22c844fea96ac2ae12b9172d9e5c0f04.png" width="90">
-  <img src="https://i.gyazo.com/d21d6c182c1c26b76b24ffd2485f1b2a.png" width="90">
-  <img src="https://i.gyazo.com/fa7fd35fcc58cc5f729086323f9ed1f4.png" width="90">
-  <img src="https://i.gyazo.com/8e1a0b0cc17370c3e86d6f5f87928fec.png" width="90">
-  <img src="https://i.gyazo.com/d64ab7d5ed22ba1178a09f8872117929.png" width="90">
-  <img src="https://i.gyazo.com/637edddec279864b50fb9304f1600440.png" width="90">
-  <img src="https://i.gyazo.com/9bae09bd812ff764b2714df877216ef3.png" width="90">
+  <img src="https://i.gyazo.com/8eae4c3335a4c8209d269792ec6e4eb7.png" width="90" alt="ushironoko">
+  <img src="https://i.gyazo.com/9e20f16dbabaac4318e49d343e5d1655.png" width="90" alt="yuhei">
+  <img src="https://i.gyazo.com/85262a58026beeb2e1c09586a0484533.png" width="90" alt="腹筋ローラーの力を信じろ">
+  <img src="https://i.gyazo.com/887cb459d0388679d6c3b0b3d5b16068.png" width="90" alt="lacolaco">
+  <img src="https://i.gyazo.com/22c844fea96ac2ae12b9172d9e5c0f04.png" width="90" alt="f_subal">
+  <img src="https://i.gyazo.com/d21d6c182c1c26b76b24ffd2485f1b2a.png" width="90" alt="たふみ">
+  <img src="https://i.gyazo.com/fa7fd35fcc58cc5f729086323f9ed1f4.png" width="90" alt="トビ">
+  <img src="https://i.gyazo.com/8e1a0b0cc17370c3e86d6f5f87928fec.png" width="90" alt="ちげ">
+  <img src="https://i.gyazo.com/d64ab7d5ed22ba1178a09f8872117929.png" width="90" alt="kubosho">
+  <img src="https://i.gyazo.com/637edddec279864b50fb9304f1600440.png" width="90" alt="Kenji">
+  <img src="https://i.gyazo.com/9bae09bd812ff764b2714df877216ef3.png" width="90" alt="naoki haba">
 </div>
 
 <!--
@@ -352,7 +352,7 @@ layout: center
 ---
 
 <div class="flex flex-col items-center gap-4">
-  <img src="./images/yowadeko.png" width="600">
+  <img src="./images/yowadeko.png" width="600" alt="よくわからないデザインと工学の皆さんとの収録風景。複数のガジェットが並ぶ作業デスク。手前のノートパソコンを開きながら、機材（マイクスピーカーや三脚など）のセッティングや作業を行っている様子。">
   <div class="font-700 text-4">よわでこの皆さんとポッドキャスト収録</div>
 </div>
 
@@ -366,7 +366,7 @@ layout: center
 ---
 
 <div class="flex flex-col items-center gap-4">
-  <img src="./images/vuefesjapan2023.png" width="600">
+  <img src="./images/vuefesjapan2023.png" width="600" alt="やまのく、miyaoka、ushironoko、kazupon、wattanx、takanoripが横に並んで椅子に座ってパネルディスカッションをしている様子。">
   <div class="font-700 text-4">Vue Fes Japan 2023のパネルディスカッション</div>
 </div>
 
@@ -515,7 +515,7 @@ https://ogenkidesukafm.booth.pm/items/8345795
 </div>
 
 <v-drag pos="559,63,332,449">
-  <img src="./images/book.png" width="300">
+  <img src="./images/book.png" width="300" alt="お元気ですか.fm 5周年記念誌の表紙">
 </v-drag>
 
 <!--
@@ -540,7 +540,7 @@ layout: center
 
 <div>酷暑にも</div>
 
-<div v-click>負けじとお体</div>
+<div v-click>負けずにみんな</div>
 
 <div v-click>お元気で</div>
 

@@ -17,19 +17,19 @@ lang: ja
 
 やまのくと申します。会社員で一児の父です。千葉県流山市に住んでおり、昨年の登壇者でもあるkounoさんが主催される東葛.devや、ちゃまほりさんが主催されるFunabashi.devといった千葉の技術者コミュニティに参加させていただいております。
 
-また、Vue.jsとViteのエコシステムにまつわるカンファレンス「Vue Fes Japan」の今年のコアスタッフや、8月7日にアララ株式会社さんで開催されるHTML限定のイベント「HTML Night in Tokyo」の主催も務めております。
+また、Vue.jsとViteのエコシステムにまつわるカンファレンス「[Vue Fes Japan 2026](https://vuefes.jp/2026/)」のコアスタッフや、8月7日にアララ株式会社さんで開催されるHTML限定のイベント「[HTML Night in Tokyo](https://connpass.com/event/399762/)」の主催も務めております。
 
 そして今回、大吉祥寺.pmには初参加かつ初登壇となります。実は過去2年連続でプロポーザルを出して落ちていたのですが、今年3度目の正直でようやく登壇の夢が叶いました。ありがとうございます。
 
 ところで皆さんは普段どのようなポッドキャストを聴いていますか？
 
-こちらが自分が最近聴いているポッドキャストです。有名どころから知り合いがやっているもの、そしてMagnoliaさんがやられている「縁側テックトーク」などです。
+こちらが自分が最近聴いているポッドキャストです。有名どころから知り合いがやっているもの、そしてMagnoliaさんがやられている「[縁側テックトーク](https://open.spotify.com/show/033BdYH4w2tg0OKgvtlZi3)」などです。
 
 仕事中だったり都内への移動時や散歩している時などにそれぞれ聞かせてもらっています。
 
 ここでポッドキャストの話題に触れたのは、私自身もポッドキャストを配信しているからです。
 
-どんなものかと言うと、「お元気ですか？」と相手に投げかけてから始める「お元気ですか.fm」というポッドキャストをやっております。
+どんなものかと言うと、「お元気ですか？」と相手に投げかけてから始める「[お元気ですか.fm](https://creators.spotify.com/pod/profile/ogenkidesuka-fm)」というポッドキャストをやっております。
 
 ## お元気ですか.fmについて
 
@@ -37,7 +37,7 @@ lang: ja
 
 2021年8月にanchor.fmで第1回を配信して以降、月に1、2回のペースで配信し、現在までで46エピソードを公開しています。
 
-2025年には公式のXアカウントを作成し、今年はYouTubeチャンネルも開設しました。この年になって初めて「チャンネル登録と高評価よろしくお願いします」と言えるようになり、大変感慨深く思っています。
+2025年には公式の[Xアカウント](https://x.com/ogenkidesuka_fm)を作成し、今年は[YouTubeチャンネル](https://www.youtube.com/channel/UCcn63WWRg6wnJAWgRMte6xw)も開設しました。この年になって初めて「チャンネル登録と高評価よろしくお願いします」と言えるようになり、大変感慨深く思っています。
 
 そして今年で5周年を迎えます。
 
@@ -55,31 +55,33 @@ lang: ja
 
 そこでお互いの状態を確認するために「最近元気？」と聞き合うところから始めるのが良いのではないかと考え、私がこの名前を提案しました。
 
+タイトルに「お元気ですか」と入っているため元気な番組だと思われがちなのですが、リスナーの方からは「名前の割に元気がないよね」とよく突っ込まれていました。
+
 <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="ja" dir="ltr">お元気ですか.fm、また元気ないな</p>&mdash; miyaoka (@miyaoka) <a href="https://x.com/miyaoka/status/1668234313270464514?ref_src=twsrc%5Etfw">June 12, 2023</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">元気が足りない <a href="https://x.com/hashtag/%E3%81%8A%E5%85%83%E6%B0%97%E3%81%A7%E3%81%99%E3%81%8BFM?src=hash&amp;ref_src=twsrc%5Etfw">#お元気ですかFM</a></p>&mdash; miyaoka (@miyaoka) <a href="https://x.com/miyaoka/status/1619973346107731968?ref_src=twsrc%5Etfw">January 30, 2023</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">元気が足りない <a href="https://x.com/hashtag/%E3%81%8A%E5%85%83%E6%B0%97%E3%81%A7%E3%81%99%E3%81%8BFM?src=hash&amp;ref_src=twsrc%5Etfw">#お元気ですか.fm</a></p>&mdash; miyaoka (@miyaoka) <a href="https://x.com/miyaoka/status/1619973346107731968?ref_src=twsrc%5Etfw">January 30, 2023</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
-タイトルに「お元気ですか」と入っているため元気な番組だと思われがちなのですが、リスナーの方からは「名前の割に元気がないよね」とよく突っ込まれていました。これには理由がありまして、お互いの仕事や家事が終わった夜の8時や9時過ぎに収録をしているためです。ただでさえ疲れている上に私の声も低いため、立ち上がりのテンションがどうしても低くなってしまい、名前負けしがちなポッドキャストと言われておりました。最近は以前より少し元気になってきたかなとは思っております。
+これには理由がありまして、お互いの仕事や家事が終わった夜の8時や9時過ぎに収録をしているためです。ただでさえ疲れている上に私の声も低いため、立ち上がりのテンションがどうしても低くなってしまい、名前負けしがちなポッドキャストと言われておりました。最近は以前より少し元気になってきたかなとは思っております。
 
-### データで見る「お元気ですかFM」
+### データで見る「お元気ですか.fm」
 
 せっかくなので、5年分の数字も少しだけ紹介させてください。
 
-現在はSpotify for Creatorsを中心に配信しており、2026年7月20日時点で、ポッドキャストの総再生回数は9,304回（Spotifyが3,804回、それ以外が5,500回）、総視聴時間は1,228時間、いちユーザーあたりの平均視聴時間は2時間44分、そしてフォロワーは188人です。
+現在はSpotify for Creatorsを中心に配信しており、2026年7月25日時点で、ポッドキャストの総再生回数は9,327回（Spotifyが3,807回、それ以外が5,520回）、総視聴時間は1,228時間、いちユーザーあたりの平均視聴時間は2時間44分、そしてSpotifyのフォロワー188人でYouTubeのチャンネル登録者は14人です。
 
 5年間の積み重ねとしては正直そこまで派手な数字ではありません。これからポッドキャストを始める方の参考程度に見ていただければと思います。
 
-<img src="./images/audience_sex-age_type.png" alt="リスナーの層">
+<img src="./images/audience_sex-age_type.png" alt="全期間のオーディエンスの内訳を示すグラフ、性別構成は男性74.8%、女性14.9%、指定なし8.7%、ノンバイナリー1.6%となっている。年齢層は28〜34歳（34.2%）、35〜44歳（25.8%）、23〜27歳（23.3%）、18〜22歳（12.0%）、45〜59歳（4.3%）、不明（0.2%）、0〜17歳および60歳以上（各0.1%）の順に分布している。">
 
 リスナーの層としては男性が7割近くを占めており、年齢層は20代から40代と、パーソナリティである自分たちの年齢に近いボリュームゾーンの方々に一番多く聴いていただいております。
 
-## お元気ですかFMと「かわるもの」
+## お元気ですか.fmと「かわるもの」
 
-今回の大吉祥寺.pmのテーマは「かわるもの、かわらないもの」です。お元気ですかFMのこの5年間を振り返り、「かわったもの」についてを触れていきます。
+今回の大吉祥寺.pmのテーマは「かわるもの、かわらないもの」です。お元気ですか.fmのこの5年間を振り返り、「かわったもの」についてを触れていきます。
 
-まず、かわったものは、「フロントエンド開発・デザインの変遷」「役割・場所の変化」「日々の生活での変化」「関わってくれる人たち」の4つに分けられます。
+まず、かわったものは、「フロントエンド開発・デザイン」「役割・場所の変化」「日々の生活での変化」「関わってくれる人たち」の4つに分けられます。
 
-### フロントエンド開発・デザインの変遷
+### フロントエンド開発・デザイン
 
 まず、フロントエンド開発やデザインの変化についてです。大きなトピックとしてはInternet Explorer 11のサポート終了が挙げられます。それに伴い、InteropやBaselineといったWeb標準化に向けた取り組みが進み、クロスブラウザでの実装が以前より容易になってきたと感じます。また開発ツールに関しても、Rustによるツールチェーンの高速化が進んだり、DenoやBunといった新しいJavaScriptランタイムが登場したりしました。
 
@@ -102,41 +104,43 @@ lang: ja
 
 ### 日々の生活での変化
 
-仕事以外のプライベートや日々の生活も変化しています。私自身、これまで経験のなかった副業を2度ほど経験させていただき、そこで得た収入で新車を購入したり、長年の夢だった大型犬を迎えることができました。また、妻のきょうだいに甥っ子や姪っ子が生まれ、新しい家族のつながりができたことも嬉しい変化でした。一方で、家族が入院したり、20歳になる愛猫が慢性腎不全のため1年近く自宅で皮下輸液のケアを続けたりと、身の回りで大きな試練や変化があったのも事実です。
+仕事以外のプライベートや日々の生活も変化しています。私自身、これまで経験のなかった副業を2度ほど経験させていただき、そこで得た収入で新車を購入したり、長年の夢だった大型犬を迎えることができました。甥っ子や姪っ子が生まれ、新しい家族のつながりができたことも嬉しい変化でした。
+
+一方で、家族が入院したり、20歳になる愛猫が慢性腎不全のため1年近く自宅で皮下輸液のケアを続けたりと、身の回りで大きな試練や変化があったのも事実です。
 
 ### 関わってくれる人たち
 
 そして最後に、ポッドキャストを通じて関わる人とその関係性が大きく広がったことも大きな変化です。これまでゲストとして総勢11名の方に出演していただきました。
 
 <div style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px;">
-  <img src="https://i.gyazo.com/8eae4c3335a4c8209d269792ec6e4eb7.png" width="70">
-  <img src="https://i.gyazo.com/9e20f16dbabaac4318e49d343e5d1655.png" width="70">
-  <img src="https://i.gyazo.com/85262a58026beeb2e1c09586a0484533.png" width="70">
-  <img src="https://i.gyazo.com/887cb459d0388679d6c3b0b3d5b16068.png" width="70">
-  <img src="https://i.gyazo.com/22c844fea96ac2ae12b9172d9e5c0f04.png" width="70">
-  <img src="https://i.gyazo.com/d64ab7d5ed22ba1178a09f8872117929.png" width="70">
-  <img src="https://i.gyazo.com/637edddec279864b50fb9304f1600440.png" width="70">
-  <img src="https://i.gyazo.com/9bae09bd812ff764b2714df877216ef3.png" width="70">
-  <img src="https://i.gyazo.com/d21d6c182c1c26b76b24ffd2485f1b2a.png" width="70">
-  <img src="https://i.gyazo.com/fa7fd35fcc58cc5f729086323f9ed1f4.png" width="70">
-  <img src="https://i.gyazo.com/8e1a0b0cc17370c3e86d6f5f87928fec.png" width="70">
+  <img src="https://i.gyazo.com/8eae4c3335a4c8209d269792ec6e4eb7.png" width="70" alt="ushironoko">
+  <img src="https://i.gyazo.com/9e20f16dbabaac4318e49d343e5d1655.png" width="70" alt="yuhei">
+  <img src="https://i.gyazo.com/85262a58026beeb2e1c09586a0484533.png" width="70" alt="腹筋ローラーの力を信じろ">
+  <img src="https://i.gyazo.com/887cb459d0388679d6c3b0b3d5b16068.png" width="70" alt="lacolaco">
+  <img src="https://i.gyazo.com/22c844fea96ac2ae12b9172d9e5c0f04.png" width="70" alt="f_subal">
+  <img src="https://i.gyazo.com/d21d6c182c1c26b76b24ffd2485f1b2a.png" width="70" alt="たふみ">
+  <img src="https://i.gyazo.com/fa7fd35fcc58cc5f729086323f9ed1f4.png" width="70" alt="トビ">
+  <img src="https://i.gyazo.com/8e1a0b0cc17370c3e86d6f5f87928fec.png" width="70" alt="ちげ">
+  <img src="https://i.gyazo.com/d64ab7d5ed22ba1178a09f8872117929.png" width="70" alt="kubosho">
+  <img src="https://i.gyazo.com/637edddec279864b50fb9304f1600440.png" width="70" alt="Kenji">
+  <img src="https://i.gyazo.com/9bae09bd812ff764b2714df877216ef3.png" width="70" alt="naoki haba">
 </div>
 
 ほかのポッドキャストとのコラボ配信として[よくわからないデザインと工学](https://creators.spotify.com/pod/show/yowadeko)の皆さんと収録したり、Vue Fes Japan Online 2022やVue Fes Japan 2023ではゲストとして登壇させてもらったりもしました。
 
 <figure>
-  <img src="./images/yowadeko.png" alt="よくわからないデザインと工学">
+  <img src="./images/yowadeko.png" alt="よくわからないデザインと工学の皆さんとの収録風景。複数のガジェットが並ぶ作業デスク。手前のノートパソコンを開きながら、機材（マイクスピーカーや三脚など）のセッティングや作業を行っている様子。">
   <figcaption>よわでこの皆さんとポッドキャスト収録</figcaption>
 </figure>
 
 <figure>
-  <img src="./images/vuefesjapan2023.png" alt="Vue Fes Japan 2023">
+  <img src="./images/vuefesjapan2023.png" alt="やまのく、miyaoka、ushironoko、kazupon、wattanx、takanoripが横に並んで椅子に座ってパネルディスカッションをしている様子。">
   <figcaption>Vue Fes Japan 2023のパネルディスカッション</figcaption>
 </figure>
 
 そして何より、番組を聴いてくださるリスナーの皆さんから反応をいただけることが本当に励みになっています。
 
-## お元気ですかFMと「かわらないもの」
+## お元気ですか.fmと「かわらないもの」
 
 一方で、変わらなかったことも見えてきました。
 
@@ -183,16 +187,16 @@ lang: ja
 この五周年を記念して本を作りました。技書博（技術書同人誌博覧会）13にて頒布したもので、これまでの五年間を振り返る内容になっています。今回の発表やポッドキャストを聴いてみて、もっと詳しく知りたくなった方は、ぜひ手に取ってもらえると嬉しいです。現在、[Booth](https://ogenkidesukafm.booth.pm/items/8345795)にて販売中です。
 
 <figure>
-  <img src="./images/book.png" alt="五周年記念誌">
-  <figcaption><a href="https://ogenkidesukafm.booth.pm/items/8345795">5年間、だいたいお元気でした - お元気ですかFM - BOOTH</a></figcaption>
+  <img src="./images/book.png" alt="お元気ですか.fm 五周年記念誌 表紙">
+  <figcaption><a href="https://ogenkidesukafm.booth.pm/items/8345795">5年間、だいたいお元気でした - お元気ですか.fm - BOOTH</a></figcaption>
 </figure>
 
 ## 最後に一句
 
 <div style="writing-mode: vertical-rl;">
     <div style="display: flex; justify-content: center; flex-direction: column; font-size: 72px; gap: 36px; line-height: 1; font-family: serif;">
-        <div>酷暑でも</div>
-        <div>皆さまどうか</div>
+        <div>酷暑にも</div>
+        <div>負けずにみんな</div>
         <div>お元気で</div>
     </div>
 </div>  
