@@ -4,6 +4,10 @@
 
 ## 2026年
 
+### 2026-10-24 Vue Fes Japan 2026
+
+Vue SFCから見直す正しいHTMLの守り方
+
 ### 2026-09-12 大Funabashi.dev supported by KIKKAKE CREATION 2026
 
 TBD
