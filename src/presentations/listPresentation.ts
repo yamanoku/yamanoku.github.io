@@ -48,6 +48,11 @@ export const listStage = parseRecords(recordsMarkdown);
 
 export const listWrite: ExactPresantationLengthArray<ListType> = [
   {
+    title: "大吉祥寺.pm 2026に登壇しました",
+    url: "https://note.com/yamanoku/n/n54968de306c4",
+    datetime: "2026-07-31T22:38:00+09:00"
+  },
+  {
     title: "TSKaigi 2026に参加＆登壇してきました！",
     url: "https://qiita.com/okuto_oyama/items/6b93d82a7da79f7e3d15",
     datetime: "2026-06-12T12:00:00+09:00"
@@ -67,10 +72,5 @@ export const listWrite: ExactPresantationLengthArray<ListType> = [
     title: "Interop 2026が始まりました！",
     url: "https://zenn.dev/yamanoku/articles/interop-2026-launched",
     datetime: "2026-02-13T21:52:20+09:00"
-  },
-  {
-    title: "BuriKaigi 2026に登壇しました",
-    url: "https://note.com/yamanoku/n/n7ea134e44551",
-    datetime: "2026-01-14T22:17:00.00+09:00"
   }
 ];
