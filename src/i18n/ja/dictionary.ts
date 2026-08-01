@@ -18,6 +18,7 @@ export default {
   "heading.contact": "連絡先",
   "heading.open-source-activity": "オープンソース活動",
   "heading.daily-journal": "日報",
+  "heading.ogenkidesuka-fm": "お元気ですか.fm",
 
   // 基本情報
   "info.real-name": "本名",
@@ -41,6 +42,10 @@ export default {
   // 寄付・支援
   "donate.description":
     "もし私の制作物や発表、活動に興味をもっていただけた場合以下より支援することができます。",
+
+  // お元気ですか.fm
+  "ogenkidesuka-fm.description":
+    "takanoripと最近の近況、UIやプロダクトのデザイン、キャリアやライフハックなどについて雑に話すPodcastです。最新のエピソードを掲載しています。",
 
   // 多言語
   multilingual: "多言語ページ"

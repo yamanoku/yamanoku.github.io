@@ -1,0 +1,31 @@
+{
+  "feedUrl": "https://anchor.fm/s/65c3f018/podcast/rss",
+  "homeUrl": "https://podcasters.spotify.com/pod/show/ogenkidesuka-fm",
+  "episodes": [
+    {
+      "title": "vol.45【ゲスト：naokihaba】Vite+ チームメンバーとお元気ですか",
+      "url": "https://podcasters.spotify.com/pod/show/ogenkidesuka-fm/episodes/vol-45naokihabaVite-e3lqj36",
+      "datetime": "2026-07-10T03:30:00.000Z"
+    },
+    {
+      "title": "vol.44 これからのカンファレンスについて考える",
+      "url": "https://podcasters.spotify.com/pod/show/ogenkidesuka-fm/episodes/vol-44-e3l94li",
+      "datetime": "2026-06-26T05:00:00.000Z"
+    },
+    {
+      "title": "vol.43 アクセシビリティをより広げていくためにどうする？",
+      "url": "https://podcasters.spotify.com/pod/show/ogenkidesuka-fm/episodes/vol-43-e3jl773",
+      "datetime": "2026-05-21T10:00:00.000Z"
+    },
+    {
+      "title": "vol.42 技書博13にサークル参加してきました！",
+      "url": "https://podcasters.spotify.com/pod/show/ogenkidesuka-fm/episodes/vol-42-13-e3jl75e",
+      "datetime": "2026-05-21T10:00:00.000Z"
+    },
+    {
+      "title": "vol.41：【ゲスト：Kenji】お元気ですかリスナーと一緒にわいわい",
+      "url": "https://podcasters.spotify.com/pod/show/ogenkidesuka-fm/episodes/vol-41Kenji-e3fsk89",
+      "datetime": "2026-03-05T03:00:00.000Z"
+    }
+  ]
+}

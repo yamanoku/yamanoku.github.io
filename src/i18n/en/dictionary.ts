@@ -20,6 +20,7 @@ export default Dictionary({
   "heading.contact": "Contact",
   "heading.open-source-activity": "Open Source Activity",
   "heading.daily-journal": "Daily journal",
+  "heading.ogenkidesuka-fm": "Ogenki-desuka.fm",
 
   // basic Info
   "info.real-name": "Real name",
@@ -43,6 +44,10 @@ export default Dictionary({
   // donate
   "donate.description":
     "If you are interested in my work, presentations and activities, you can donate me by.",
+
+  // ogenkidesuka.fm
+  "ogenkidesuka-fm.description":
+    "A podcast where I casually chat with takanorip about recent happenings, UI and product design, careers, life hacks, and more. Showing the latest episodes.",
 
   // multilingual
   multilingual: "Multilingual Page"

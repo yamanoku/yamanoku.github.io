@@ -1,0 +1,31 @@
+---
+import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
+import {
+  listOgenkidesukaFm,
+  ogenkidesukaFmUrl
+} from "../../../podcast/listPodcast";
+import GlobalListComponent from "../../global/GlobalListComponent.astro";
+
+const lang = getLanguageFromURL(Astro.url.pathname);
+const t = useTranslations(Astro);
+---
+
+<section id="ogenkidesuka-fm" aria-labelledby="ogenkidesuka-fm_heading">
+  <h2 id="ogenkidesuka-fm_heading">{t("heading.ogenkidesuka-fm")}</h2>
+  <p>{t("ogenkidesuka-fm.description")}</p>
+  <GlobalListComponent list={listOgenkidesukaFm} />
+  {
+    lang === "en" ? (
+      <p>
+        If you are looking for past episodes, please visit{" "}
+        <a href={ogenkidesukaFmUrl}>Spotify for Creators</a>.
+      </p>
+    ) : (
+      <p>
+        過去のエピソードをお探しの場合、
+        <a href={ogenkidesukaFmUrl}>Spotify for Creators</a>
+        より参照してください。
+      </p>
+    )
+  }
+</section>
