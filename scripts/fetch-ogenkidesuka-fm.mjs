@@ -44,11 +44,13 @@ const parseEpisodes = (xml) =>
   extractItems(xml)
     .slice(0, EPISODE_LIMIT)
     .map((item) => {
+      // Content Collections の file() ローダーは各エントリに id を要求するため guid を採用
+      const id = pickTag(item, "guid");
       const title = pickTag(item, "title");
       const url = pickTag(item, "link");
       const pubDate = pickTag(item, "pubDate");
       const datetime = pubDate ? new Date(pubDate).toISOString() : "";
-      return { title, url, datetime };
+      return { id, title, url, datetime };
     });
 
 const main = async () => {
@@ -64,7 +66,7 @@ const main = async () => {
     throw new Error("エピソードを1件も取得できませんでした");
   }
   for (const episode of episodes) {
-    if (!episode.title || !episode.url || !episode.datetime) {
+    if (!episode.id || !episode.title || !episode.url || !episode.datetime) {
       throw new Error(`エピソード情報が不完全です: ${JSON.stringify(episode)}`);
     }
   }

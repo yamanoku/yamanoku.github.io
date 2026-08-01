@@ -1,12 +1,16 @@
 ---
+import { getCollection } from "astro:content";
 import ogenkidesukaFm from "../../../data/ogenkidesukaFm.json";
 import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
 import GlobalListComponent from "../../global/GlobalListComponent.astro";
 import type { ListItem } from "../../global/GlobalTypes";
 
-// お元気ですか.fm のRSSから生成した最新エピソード一覧。
-// データは scripts/fetch-ogenkidesuka-fm.mjs が src/data/ogenkidesukaFm.json に生成する。
-const episodes: ListItem[] = ogenkidesukaFm.episodes;
+// エピソード一覧はContent Collectionsから読み込み、新しい順に並べる
+const episodes: ListItem[] = (await getCollection("ogenkidesukaFm"))
+  .map((entry) => entry.data)
+  .sort((a, b) => b.datetime.localeCompare(a.datetime));
+
+// homeUrl はチャンネルのメタ情報のためJSONから直接参照する
 const homeUrl = ogenkidesukaFm.homeUrl;
 
 const lang = getLanguageFromURL(Astro.url.pathname);
