@@ -1,10 +1,13 @@
 ---
+import ogenkidesukaFm from "../../../data/ogenkidesukaFm.json";
 import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
-import {
-  listOgenkidesukaFm,
-  ogenkidesukaFmUrl
-} from "../../../podcast/listPodcast";
 import GlobalListComponent from "../../global/GlobalListComponent.astro";
+import type { ListItem } from "../../global/GlobalTypes";
+
+// お元気ですか.fm のRSSから生成した最新エピソード一覧。
+// データは scripts/fetch-ogenkidesuka-fm.mjs が src/data/ogenkidesukaFm.json に生成する。
+const episodes: ListItem[] = ogenkidesukaFm.episodes;
+const homeUrl = ogenkidesukaFm.homeUrl;
 
 const lang = getLanguageFromURL(Astro.url.pathname);
 const t = useTranslations(Astro);
@@ -13,17 +16,17 @@ const t = useTranslations(Astro);
 <section id="ogenkidesuka-fm" aria-labelledby="ogenkidesuka-fm_heading">
   <h2 id="ogenkidesuka-fm_heading">{t("heading.ogenkidesuka-fm")}</h2>
   <p>{t("ogenkidesuka-fm.description")}</p>
-  <GlobalListComponent list={listOgenkidesukaFm} />
+  <GlobalListComponent list={episodes} />
   {
     lang === "en" ? (
       <p>
         If you are looking for past episodes, please visit{" "}
-        <a href={ogenkidesukaFmUrl}>Spotify for Creators</a>.
+        <a href={homeUrl}>Spotify for Creators</a>.
       </p>
     ) : (
       <p>
         過去のエピソードをお探しの場合、
-        <a href={ogenkidesukaFmUrl}>Spotify for Creators</a>
+        <a href={homeUrl}>Spotify for Creators</a>
         より参照してください。
       </p>
     )
