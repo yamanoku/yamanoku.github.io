@@ -40,7 +40,7 @@ catalogs:
     "@slidev/client": 52.19.0
     "@slidev/theme-apple-basic": 0.25.1
     "@slidev/theme-default": 0.25.0
-    "@slidev/types": 52.18.0
+    "@slidev/types": 52.19.0
     budoux: 0.8.4
     highlight.js: 11.11.1
     markdown-it: 14.3.0
