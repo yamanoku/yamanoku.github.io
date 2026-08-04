@@ -37,7 +37,7 @@ catalogs:
     "@iconify-json/twemoji": 1.2.5
     "@iconify-json/vscode-icons": 1.2.68
     "@slidev/cli": 52.19.0
-    "@slidev/client": 52.18.0
+    "@slidev/client": 52.19.0
     "@slidev/theme-apple-basic": 0.25.1
     "@slidev/theme-default": 0.25.0
     "@slidev/types": 52.18.0
