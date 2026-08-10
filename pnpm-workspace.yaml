@@ -35,7 +35,7 @@ catalogs:
   presentations:
     "@11ty/eleventy": 3.1.6
     "@iconify-json/twemoji": 1.2.5
-    "@iconify-json/vscode-icons": 1.2.68
+    "@iconify-json/vscode-icons": 1.2.70
     "@slidev/cli": 52.19.0
     "@slidev/client": 52.19.0
     "@slidev/theme-apple-basic": 0.25.1
