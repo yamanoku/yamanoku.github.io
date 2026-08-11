@@ -31,8 +31,8 @@ catalogs:
       specifier: 52.19.0
       version: 52.19.0
     budoux:
-      specifier: 0.8.4
-      version: 0.8.4
+      specifier: 0.9.0
+      version: 0.9.0
     highlight.js:
       specifier: 11.11.1
       version: 11.11.1
@@ -159,7 +159,7 @@ importers:
         version: 52.19.0(@modelcontextprotocol/sdk@1.29.0(zod@4.4.3))(@nuxt/kit@3.21.7(magicast@0.5.2))(@vue/compiler-sfc@3.5.41)(cac@7.0.0)(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.59.0)(srvx@0.12.5)(typescript@6.0.3)(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
       budoux:
         specifier: catalog:presentations
-        version: 0.8.4
+        version: 0.9.0
       highlight.js:
         specifier: catalog:presentations
         version: 11.11.1
@@ -2970,8 +2970,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
-  budoux@0.8.4:
-    resolution: {integrity: sha512-EogZewMIXDePuJeBetf2hQphKsTWup3oTaf4q4ibc3NPPW+wAvfpk5AsC71BxcfowGeO/5cHvzGd/d0x8bIYXQ==}
+  budoux@0.9.0:
+    resolution: {integrity: sha512-gdRJmZ2/NIiyIM3clPIaV7Ny8wfOSBiJBRC0BYnHpZif+HuGL/CiiL31pCudgOt8cmQDYoTNIemecKjzoy+IIQ==}
     hasBin: true
 
   buffer-equal-constant-time@1.0.1:
@@ -3104,9 +3104,9 @@ packages:
     resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
     engines: {node: '>=16'}
 
-  commander@14.0.3:
-    resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
-    engines: {node: '>=20'}
+  commander@15.0.0:
+    resolution: {integrity: sha512-z67u4ZhzCL/Tydu1lJARtEZYWbWaN7oYLHbsuzocr6y4N6WZAagG3RQ4FW61V1/0+jImpj293XfrcYnd1qxtPg==}
+    engines: {node: '>=22.12.0'}
 
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
@@ -10021,9 +10021,9 @@ snapshots:
       node-releases: 2.0.47
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
-  budoux@0.8.4:
+  budoux@0.9.0:
     dependencies:
-      commander: 14.0.3
+      commander: 15.0.0
       google-artifactregistry-auth: 3.5.0
       linkedom: 0.18.12
     transitivePeerDependencies:
@@ -10172,7 +10172,7 @@ snapshots:
 
   commander@11.1.0: {}
 
-  commander@14.0.3: {}
+  commander@15.0.0: {}
 
   commander@2.20.3:
     optional: true
@@ -11247,7 +11247,7 @@ snapshots:
   google-artifactregistry-auth@3.5.0:
     dependencies:
       google-auth-library: 9.15.1
-      js-yaml: 4.1.1
+      js-yaml: 4.3.0
       yargs: 17.7.2
     transitivePeerDependencies:
       - encoding
