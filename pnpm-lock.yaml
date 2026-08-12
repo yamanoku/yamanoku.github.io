@@ -53,8 +53,8 @@ catalogs:
       specifier: 4.3.3
       version: 4.3.3
     astro:
-      specifier: 7.2.0
-      version: 7.2.0
+      specifier: 7.2.1
+      version: 7.2.1
     markuplint:
       specifier: 4.18.3
       version: 4.18.3
@@ -86,7 +86,7 @@ importers:
         version: 4.3.3(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
       astro:
         specifier: catalog:website
-        version: 7.2.0(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@22.19.20)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0)
+        version: 7.2.1(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@22.19.20)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0)
       modern-normalize:
         specifier: catalog:website
         version: 3.0.1
@@ -117,7 +117,7 @@ importers:
         version: 4.3.3(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
       astro:
         specifier: catalog:website
-        version: 7.2.0(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@22.19.20)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0)
+        version: 7.2.1(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@22.19.20)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0)
       modern-normalize:
         specifier: catalog:website
         version: 3.0.1
@@ -2860,8 +2860,8 @@ packages:
     resolution: {integrity: sha512-IJdzo2vLiElBxKzwS36VsCue/62d6IdWjnPB2v3nuPKeWGynp6FF/CYoLa5i/3jXH/z97ZDdsXz6abpgM6w07A==}
     engines: {node: '>=20.19.0'}
 
-  astro@7.2.0:
-    resolution: {integrity: sha512-lLTYzx3fOvCmtwD3JVBLQcbORbIOW1/j0R+3IvJx/XKwMGrk7mFnF0BYSOeRiNw1qHUR5mdA6+hRnyvyDfqrWQ==}
+  astro@7.2.1:
+    resolution: {integrity: sha512-ynyMTiyF//GLcd8+gRNbvcKgS1ht+qTgp/fkkHIpGYNILLseQqQRuPZ9PqXYKfsact4J1emZaXRDpg2bl35Pag==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     peerDependencies:
@@ -9814,7 +9814,7 @@ snapshots:
       '@babel/types': 7.29.7
       ast-kit: 2.2.0
 
-  astro@7.2.0(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@22.19.20)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0):
+  astro@7.2.1(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(@types/node@22.19.20)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0):
     dependencies:
       '@astrojs/compiler-rs': 0.3.2(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)
       '@astrojs/internal-helpers': 0.10.2
