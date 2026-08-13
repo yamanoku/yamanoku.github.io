@@ -34,8 +34,8 @@ catalogs:
       specifier: 0.9.0
       version: 0.9.0
     highlight.js:
-      specifier: 11.11.1
-      version: 11.11.1
+      specifier: 11.12.0
+      version: 11.12.0
     markdown-it:
       specifier: 14.3.0
       version: 14.3.0
@@ -162,7 +162,7 @@ importers:
         version: 0.9.0
       highlight.js:
         specifier: catalog:presentations
-        version: 11.11.1
+        version: 11.12.0
       markdown-it:
         specifier: catalog:presentations
         version: 14.3.0
@@ -4112,8 +4112,8 @@ packages:
   hey-listen@1.0.8:
     resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==}
 
-  highlight.js@11.11.1:
-    resolution: {integrity: sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==}
+  highlight.js@11.12.0:
+    resolution: {integrity: sha512-nbfWpyRMcMrPMmDwJB+dhX/eiaPKtc2RB+0QZskqJ3WjRA/FDS0e9hZrx8EC/lbEv8gXy98FcDbNa/dspAaJMg==}
     engines: {node: '>=12.0.0'}
 
   homedir-polyfill@1.0.3:
@@ -11394,7 +11394,7 @@ snapshots:
 
   hey-listen@1.0.8: {}
 
-  highlight.js@11.11.1: {}
+  highlight.js@11.12.0: {}
 
   homedir-polyfill@1.0.3:
     dependencies:
