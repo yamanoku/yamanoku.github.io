@@ -28,8 +28,8 @@ catalogs:
       specifier: 0.25.0
       version: 0.25.0
     '@slidev/types':
-      specifier: 52.19.0
-      version: 52.19.0
+      specifier: 52.19.1
+      version: 52.19.1
     budoux:
       specifier: 0.9.0
       version: 0.9.0
@@ -156,7 +156,7 @@ importers:
         version: 0.25.0
       '@slidev/types':
         specifier: catalog:presentations
-        version: 52.19.0(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(@nuxt/kit@3.21.7(magicast@0.5.2))(@vue/compiler-sfc@3.5.41)(cac@7.0.0)(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.59.0)(srvx@0.12.5)(supports-color@7.2.0)(typescript@6.0.3)(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
+        version: 52.19.1(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(@nuxt/kit@3.21.7(magicast@0.5.2))(@vue/compiler-sfc@3.5.41)(cac@7.0.0)(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.59.0)(srvx@0.12.5)(supports-color@7.2.0)(typescript@6.0.3)(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
       budoux:
         specifier: catalog:presentations
         version: 0.9.0(supports-color@7.2.0)
@@ -1472,9 +1472,6 @@ packages:
     resolution: {integrity: sha512-00aAZ0F0NLik6I6Yba2emGbHLxv+QYrPH00qQ5dFKXlAo1Ll2RHDXwY7nN2WAfrx2pP+WrvSRFTGFCNGdzBDHw==}
     engines: {node: '>=20.0.0'}
 
-  '@mermaid-js/parser@1.2.0':
-    resolution: {integrity: sha512-oYPyv8A4As1yH5Bx+04iQEQxXuIQDe0GKCNSRgao6z8AM9jixXIfP0vsppRLvGf+nKIOb9/LdpWA4YuJiVvESA==}
-
   '@mermaid-js/parser@1.2.1':
     resolution: {integrity: sha512-n12NohV3mrUyUL2o93IgG/ifeW9FTyeJn3zDxkhwa8MJ9Fxg3HQMlA3RiGmD/3UnJvheztkjjQAjA2T4LmUcpw==}
 
@@ -2014,15 +2011,6 @@ packages:
       vue:
         optional: true
 
-  '@shikijs/markdown-it@4.4.1':
-    resolution: {integrity: sha512-Q2sJPPkZ5Nw3LG+uWRF7o21oHfD7V1UbGaH6OWHIgrSruds2OVUU0DGIx4+5Wl4iyxKvRGVmtL6MemXNRctOPA==}
-    engines: {node: '>=20'}
-    peerDependencies:
-      markdown-it-async: ^2.2.0
-    peerDependenciesMeta:
-      markdown-it-async:
-        optional: true
-
   '@shikijs/markdown-it@4.4.3':
     resolution: {integrity: sha512-VcMgQA4Y7jEHAt4ehOAHPP9LchYXQ71jyLmw3fxDJYq9xdsD11iZT48SxNiPTDx99NFks10F4iY95Xwtj+e13Q==}
     engines: {node: '>=20'}
@@ -2116,10 +2104,6 @@ packages:
   '@slidev/types@0.47.5':
     resolution: {integrity: sha512-X67V4cCgM0Sz50bP8GbVzmiL8DHC2IXvdKcsN7DlxHyf+/T4d9GveeGukwha5Fx3MuYeGZWKag7TFL2ZY4w54A==}
     engines: {node: '>=18.0.0'}
-
-  '@slidev/types@52.19.0':
-    resolution: {integrity: sha512-cDSS/muOPapOCdWhPig6om/OWzTwxLLZ4V1st7tal/L4CFqpZ3YjBe0aWIo9BCYsFqW6V555YYYihKkQAvp4Kw==}
-    engines: {node: '>=20.12.0'}
 
   '@slidev/types@52.19.1':
     resolution: {integrity: sha512-5kNwz0edVKcglD1OS1vkW5VETa9O3Ros5xK76yXBqxBGVBuGkDFhhR4wF/HV9zDFLsXjec6+rjkmFbDC8+xLAQ==}
@@ -4453,10 +4437,6 @@ packages:
     resolution: {integrity: sha512-Eeo8Ys1doU1z+x8AZsPpQu+p/QcZBI5PeOo7QGQdy2x2m0MU/hYagBbGOmXwr5KVbEfVuWv9LpnQWeehogurjg==}
     hasBin: true
 
-  katex@0.18.1:
-    resolution: {integrity: sha512-Td8GCYSxDAoMhHOlKmCFMJ/hz5qlAAb71n66Dryw9nfCVfumLo7nhuotbvKom/XPADmrYC3O5QR71EPq4DarJQ==}
-    hasBin: true
-
   katex@0.18.4:
     resolution: {integrity: sha512-IMPntbRLOU+eu88XDiFKqQ8Akhr9Tv7jDMXqPhjG9SI1JMA4DIgXk4x9k4skJz2NZJXBRbC+2pYBLj9olqcZow==}
     hasBin: true
@@ -4838,9 +4818,6 @@ packages:
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
-
-  mermaid@11.16.0:
-    resolution: {integrity: sha512-Zvm3kbstgdpvIJPPItlL7fppIZ3kibvc1oZIGxdvk9t6UFz6flv+Jw7FtRGKwfcI8OckmH04LqG6LlS6X4B1pA==}
 
   mermaid@11.17.1:
     resolution: {integrity: sha512-G1BP6qU4BRwEGk2SdsxgDk1cSuApimT32Nkb52YRSv+856FrmB8qo28BaNk9Ee8Fvuon3OxpXDJ4L6cD5AykXg==}
@@ -8123,10 +8100,6 @@ snapshots:
 
   '@mdit-vue/types@3.0.2': {}
 
-  '@mermaid-js/parser@1.2.0':
-    dependencies:
-      '@chevrotain/types': 11.1.2
-
   '@mermaid-js/parser@1.2.1':
     dependencies:
       '@chevrotain/types': 11.1.2
@@ -8542,11 +8515,6 @@ snapshots:
       shiki: 4.4.3
       vue: 3.5.41(typescript@6.0.3)
 
-  '@shikijs/markdown-it@4.4.1':
-    dependencies:
-      markdown-it: 14.3.0
-      shiki: 4.4.1
-
   '@shikijs/markdown-it@4.4.3':
     dependencies:
       markdown-it: 14.3.0
@@ -8878,52 +8846,6 @@ snapshots:
       prism-theme-vars: 0.2.5
 
   '@slidev/types@0.47.5': {}
-
-  '@slidev/types@52.19.0(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(@nuxt/kit@3.21.7(magicast@0.5.2))(@vue/compiler-sfc@3.5.41)(cac@7.0.0)(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.59.0)(srvx@0.12.5)(supports-color@7.2.0)(typescript@6.0.3)(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))':
-    dependencies:
-      '@antfu/utils': 9.3.0
-      '@shikijs/markdown-it': 4.4.1
-      '@vitejs/plugin-vue': 6.0.8(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))(vue@3.5.41(typescript@6.0.3))
-      '@vitejs/plugin-vue-jsx': 5.1.6(supports-color@7.2.0)(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))(vue@3.5.41(typescript@6.0.3))
-      katex: 0.18.1
-      mermaid: 11.16.0
-      monaco-editor: 0.56.0
-      shiki: 4.4.1
-      unocss: 66.7.5(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
-      unplugin-icons: 23.0.1(@vue/compiler-sfc@3.5.41)
-      unplugin-vue-markdown: 32.0.0(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.59.0)(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
-      vite-plugin-inspect: 12.0.2(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(@nuxt/kit@3.21.7(magicast@0.5.2))(cac@7.0.0)(srvx@0.12.5)(typescript@6.0.3)(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
-      vite-plugin-remote-assets: 2.1.0(supports-color@7.2.0)(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
-      vite-plugin-static-copy: 4.1.1(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
-      vite-plugin-vue-server-ref: 1.0.0(supports-color@7.2.0)(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))(vue@3.5.41(typescript@6.0.3))
-      vue: 3.5.41(typescript@6.0.3)
-      vue-router: 5.2.0(@vue/compiler-sfc@3.5.41)(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.59.0)(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))(vue@3.5.41(typescript@6.0.3))
-    transitivePeerDependencies:
-      - '@farmfe/core'
-      - '@modelcontextprotocol/sdk'
-      - '@nuxt/kit'
-      - '@pinia/colada'
-      - '@rspack/core'
-      - '@svgr/core'
-      - '@svgx/core'
-      - '@unocss/astro'
-      - '@unocss/postcss'
-      - '@unocss/webpack'
-      - '@vue/compiler-sfc'
-      - bun-types-no-globals
-      - cac
-      - esbuild
-      - markdown-it-async
-      - pinia
-      - rolldown
-      - rollup
-      - srvx
-      - supports-color
-      - svelte
-      - typescript
-      - unloader
-      - vite
-      - webpack
 
   '@slidev/types@52.19.1(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(@nuxt/kit@3.21.7(magicast@0.5.2))(@vue/compiler-sfc@3.5.41)(cac@7.0.0)(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.59.0)(srvx@0.12.5)(supports-color@7.2.0)(typescript@6.0.3)(vite@8.2.1(@types/node@22.19.20)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))':
     dependencies:
@@ -11763,10 +11685,6 @@ snapshots:
     dependencies:
       commander: 8.3.0
 
-  katex@0.18.1:
-    dependencies:
-      commander: 8.3.0
-
   katex@0.18.4:
     dependencies:
       commander: 8.3.0
@@ -12189,30 +12107,6 @@ snapshots:
     optional: true
 
   merge2@1.4.1: {}
-
-  mermaid@11.16.0:
-    dependencies:
-      '@braintree/sanitize-url': 7.1.2
-      '@iconify/utils': 3.1.3
-      '@mermaid-js/parser': 1.2.0
-      '@types/d3': 7.4.3
-      '@upsetjs/venn.js': 2.0.0
-      cytoscape: 3.34.0
-      cytoscape-cose-bilkent: 4.1.0(cytoscape@3.34.0)
-      cytoscape-fcose: 2.2.0(cytoscape@3.34.0)
-      d3: 7.9.0
-      d3-sankey: 0.12.3
-      dagre-d3-es: 7.0.14
-      dayjs: 1.11.21
-      dompurify: 3.4.8
-      es-toolkit: 1.47.0
-      katex: 0.16.47
-      khroma: 2.1.0
-      marked: 16.4.2
-      roughjs: 4.6.6
-      stylis: 4.4.0
-      ts-dedent: 2.2.0
-      uuid: 13.0.0
 
   mermaid@11.17.1:
     dependencies:
