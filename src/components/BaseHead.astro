@@ -1,9 +1,11 @@
 ---
+import siteContent from "../data/site-content.json";
 import { useTranslations } from "../i18n/util";
 
 const t = useTranslations(Astro);
 const pageTitle: string = Astro.props.title;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const relMeLinks = siteContent.links.social.filter((link) => link.relMe);
 ---
 
 <meta charset="utf-8" />
@@ -25,5 +27,4 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <link rel="canonical" href={canonicalURL} />
 <link rel="alternate" hreflang="ja" href="https://yamanoku.net/" />
 <link rel="alternate" hreflang="en-us" href="https://yamanoku.net/en/" />
-<link rel="me" href="https://hollo.yamanoku.net/@yamanoku" />
-<link rel="me" href="https://www.threads.net/@yamanoku" />
+{relMeLinks.map((link) => <link rel="me" href={link.url} />)}

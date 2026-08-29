@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import ogenkidesukaFm from "../../../data/ogenkidesukaFm.json";
-import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
+import { useTranslations } from "../../../i18n/util";
 import GlobalListComponent from "../../global/GlobalListComponent.astro";
 import type { ListItem } from "../../global/GlobalTypes";
 
@@ -13,7 +13,6 @@ const episodes: ListItem[] = (await getCollection("ogenkidesukaFm"))
 // homeUrl はチャンネルのメタ情報のためJSONから直接参照する
 const homeUrl = ogenkidesukaFm.homeUrl;
 
-const lang = getLanguageFromURL(Astro.url.pathname);
 const t = useTranslations(Astro);
 ---
 
@@ -21,18 +20,9 @@ const t = useTranslations(Astro);
   <h2 id="ogenkidesuka-fm_heading">{t("heading.ogenkidesuka-fm")}</h2>
   <p>{t("ogenkidesuka-fm.description")}</p>
   <GlobalListComponent list={episodes} />
-  {
-    lang === "en" ? (
-      <p>
-        If you are looking for past episodes, please visit{" "}
-        <a href={homeUrl}>Spotify for Creators</a>.
-      </p>
-    ) : (
-      <p>
-        過去のエピソードをお探しの場合、
-        <a href={homeUrl}>Spotify for Creators</a>
-        より参照してください。
-      </p>
-    )
-  }
+  <p>
+    {t("ogenkidesuka-fm.archive-before")}{" "}
+    <a href={homeUrl}>Spotify for Creators</a>
+    {t("ogenkidesuka-fm.archive-after")}
+  </p>
 </section>

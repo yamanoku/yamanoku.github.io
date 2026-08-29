@@ -3,37 +3,28 @@ import AddressSection from "../../components/page-index/sections/AddressSection.
 import BasicInfoSection from "../../components/page-index/sections/BasicInfoSection.astro";
 import DailyJournalSection from "../../components/page-index/sections/DailyJournalSection.astro";
 import OgenkidesukaFmSection from "../../components/page-index/sections/OgenkidesukaFmSection.astro";
-// import OpenSourceActivitySection from "../../components/page-index/sections/OpenSourceActivitySection.astro";
+import OpenSourceActivitySection from "../../components/page-index/sections/OpenSourceActivitySection.astro";
 import PresentationsSection from "../../components/page-index/sections/PresentationsSection.astro";
 import SocialNetworkServicesSection from "../../components/page-index/sections/SocialNetworkServicesSection.astro";
+import siteContent from "../../data/site-content.json";
+import { useTranslations } from "../../i18n/util";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import "../../styles/global.css";
+
+const t = useTranslations(Astro);
+const sections = siteContent.sections;
 ---
 
-<BaseLayout title={"Home"}>
+<BaseLayout title={t("page.home")}>
   <main id="main">
     <h1>yamanoku.net</h1>
-    <BasicInfoSection>
-      <dd slot="info-real-name">Okuto Oyama</dd>
-      <dd slot="info-hundle-name">Oyama Michinoku, yamanoku</dd>
-      <dd slot="info-birthday">October 30, 1989</dd>
-      <dd slot="info-sex">Male</dd>
-      <dd slot="info-birthplace">Noshiro, Akita</dd>
-      <dd slot="info-location">Nagareyama, Chiba</dd>
-      <dd slot="info-family">Wife, daughter, 3 cats and a large dog</dd>
-    </BasicInfoSection>
-    <!-- OpenSourceActivitySection -->
-    <PresentationsSection />
-    <OgenkidesukaFmSection />
-    <DailyJournalSection>
-      <p>
-        I utilize <a href="https://scrapbox.io/">Helpfeel Cosense</a> to compile daily events
-        and interesting news in the form of a journal. Rather than updating daily,
-        I post whenever inspiration strikes.
-      </p>
-    </DailyJournalSection>
-    <SocialNetworkServicesSection />
-    <AddressSection />
+    {sections.basic && <BasicInfoSection />}
+    {sections.openSource && <OpenSourceActivitySection />}
+    {sections.presentations && <PresentationsSection />}
+    {sections.podcast && <OgenkidesukaFmSection />}
+    {sections.journal && <DailyJournalSection />}
+    {sections.social && <SocialNetworkServicesSection />}
+    {sections.contact && <AddressSection />}
   </main>
 </BaseLayout>

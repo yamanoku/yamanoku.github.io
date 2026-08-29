@@ -1,23 +1,8 @@
 import type { AstroGlobal } from "astro";
-import type {
-  Dict,
-  DictionaryKeys,
-  LanguageKeys
-} from "./translation-checkers";
+import siteContent from "../data/site-content.json";
+import type { DictionaryKeys, LanguageKeys } from "./translation-checkers";
 
-function mapDefaultExports<T>(modules: Record<string, { default: T }>) {
-  const exportMap: Record<string, T> = {};
-  for (const [path, module] of Object.entries(modules)) {
-    /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
-    const [_dot, lang] = path.split("/");
-    exportMap[lang] = module.default;
-  }
-  return exportMap;
-}
-
-const translations = mapDefaultExports<Dict>(
-  import.meta.glob("./*/dictionary.ts", { eager: true })
-);
+const translations = siteContent.translations;
 
 const fallbackLang = "ja";
 

@@ -1,0 +1,21 @@
+{
+  "name": "@yamanoku/site-cli",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "cli": "tsx src/cli.ts",
+    "test": "tsx --test test/**/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "gunshi": "catalog:site-cli"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:site-cli",
+    "tsx": "catalog:site-cli",
+    "typescript": "catalog:site-cli"
+  }
+}

@@ -1,20 +1,24 @@
 ---
+import siteContent from "../../../data/site-content.json";
 import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
 import GlobalListComponent from "../../global/GlobalListComponent.astro";
 
 const lang = getLanguageFromURL(Astro.url.pathname);
 const t = useTranslations(Astro);
 
-const nippoYears = [2026, 2025, 2024, 2023, 2022, 2021];
-const nippoList = nippoYears.map((year) => ({
+const nippoList = siteContent.journal.years.map((year) => ({
   title: `nippo-${year}`,
-  url: `https://scrapbox.io/yamanoku/nippo-${year}`
+  url: `${siteContent.journal.entryBaseUrl}${year}`
 }));
 ---
 
 <section id="daily-journal" aria-labelledby="daily-journal_heading">
   <h2 id="daily-journal_heading">{t("heading.daily-journal")}</h2>
-  <slot />
-  {lang === "en" && <em>Sorry, Japanese text only</em>}
+  <p>
+    {t("daily-journal.description-before")}<a href={siteContent.journal.homeUrl}
+      >Helpfeel Cosense</a
+    >{t("daily-journal.description-after")}
+  </p>
+  {lang === "en" && <em>{t("daily-journal.japanese-only")}</em>}
   <GlobalListComponent list={nippoList} />
 </section>

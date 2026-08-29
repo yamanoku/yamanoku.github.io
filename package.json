@@ -6,6 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "site": "pnpm --filter @yamanoku/site-cli cli",
+    "site:check": "pnpm site -- check",
     "lint": "pnpm run biome && pnpm run markuplint",
     "biome": "biome check --write .",
     "biome:ci": "biome ci .",
