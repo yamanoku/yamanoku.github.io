@@ -133,6 +133,6 @@ pnpm --filter @yamanoku/site-cli typecheck
 pnpm --filter @yamanoku/site-cli test
 ```
 
-mutationは純粋関数として `src/mutations.ts` に置き、ファイル保存は `src/repository.ts` に限定します。テストでは `YAMANOKU_SITE_ROOT` を一時ディレクトリへ向けられます。
+mutationは純粋関数として `src/mutations.ts` に置き、ファイル保存は `src/repository.ts` に限定します。テストは対象モジュールと同じ `src/` にコロケーションし、`YAMANOKU_SITE_ROOT` を一時ディレクトリへ向けられます。
 
 失敗時はエラーを修正して同じコマンドを再実行してください。原子的に保存するため途中状態のファイルは残りません。意図しない更新を保存した場合は、commit前ならGitの差分を確認して対象JSONを戻してください。

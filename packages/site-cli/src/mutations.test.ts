@@ -7,7 +7,7 @@ import siteContent from "../../../src/data/site-content.json" with {
   type: "json"
 };
 import writings from "../../../src/data/writings.json" with { type: "json" };
-import type { SiteContent, StageRecord, Writing } from "../src/model.js";
+import type { SiteContent, StageRecord, Writing } from "./model.js";
 import {
   addJournalYear,
   addLink,
@@ -16,7 +16,7 @@ import {
   parseRubyParts,
   setProfile,
   setTranslation
-} from "../src/mutations.js";
+} from "./mutations.js";
 
 describe("writing mutations", () => {
   it("adds a writing, sorts it, and keeps exactly five items", () => {

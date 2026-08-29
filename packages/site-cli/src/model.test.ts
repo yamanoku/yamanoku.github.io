@@ -12,7 +12,7 @@ import {
   validateRecords,
   validateSiteContent,
   validateWritings
-} from "../src/model.js";
+} from "./model.js";
 
 describe("repository data validation", () => {
   it("accepts the checked-in canonical data", () => {

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { it } from "node:test";
-import { parsePodcastFeed } from "../src/podcast.js";
+import { parsePodcastFeed } from "./podcast.js";
 
 it("parses podcast channel metadata and episodes", () => {
   const xml = `<?xml version="1.0"?>
