@@ -108,6 +108,7 @@ const writingAddCommand = define({
 const writingRemoveCommand = define({
   name: "remove",
   description: "指定URLの執筆を置換（5件制約を維持するため置換先は必須）",
+  toKebab: true,
   args: {
     url: { type: "positional", required: true, description: "削除する記事URL" },
     replacementTitle: {
@@ -174,6 +175,7 @@ const resourceArgs = {
 const stageAddCommand = define({
   name: "add",
   description: "登壇記録を追加",
+  toKebab: true,
   args: {
     date: { type: "string", required: true, description: "開催日 YYYY-MM-DD" },
     event: { type: "string", required: true, description: "イベント名" },
@@ -208,6 +210,7 @@ const stageAddCommand = define({
 const stageUpdateCommand = define({
   name: "update",
   description: "日付とイベント名で登壇記録を更新",
+  toKebab: true,
   args: {
     date: { type: "positional", required: true, description: "現在の開催日" },
     event: { type: "string", required: true, description: "現在のイベント名" },
@@ -379,6 +382,7 @@ const visibilityArgs = {
 const linkAddCommand = define({
   name: "add",
   description: "リンクを追加",
+  toKebab: true,
   args: {
     group: {
       type: "positional",
@@ -411,6 +415,7 @@ const linkAddCommand = define({
 const linkUpdateCommand = define({
   name: "update",
   description: "idでリンクを更新",
+  toKebab: true,
   args: {
     group: {
       type: "positional",
@@ -646,6 +651,7 @@ const sectionCommand = define({
 const podcastSyncCommand = define({
   name: "sync",
   description: "RSSから最新Podcastエピソードを同期",
+  toKebab: true,
   args: {
     feedUrl: { type: "string", description: "上書きするRSS URL" },
     ...writeArg

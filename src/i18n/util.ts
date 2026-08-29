@@ -14,7 +14,7 @@ const fallbackLang = "ja";
  * import { useTranslations } from '~/i18n/util';
  * const t = useTranslations(Astro);
  * ---
- * <FrameworkComponent label={t('articleNav.nextPage')} />
+ * <FrameworkComponent label={t('heading.basic')} />
  */
 export function useTranslations(
   Astro: Readonly<AstroGlobal>

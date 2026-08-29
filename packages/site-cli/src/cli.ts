@@ -5,7 +5,8 @@ import { cli } from "gunshi";
 import { rootCommand } from "./commands.js";
 
 export async function runCli(args: string[]): Promise<void> {
-  await cli(args, rootCommand, {
+  const normalizedArgs = args[0] === "--" ? args.slice(1) : args;
+  await cli(normalizedArgs, rootCommand, {
     name: "site",
     version: "0.1.0",
     description: "yamanoku.netの更新を安全に行うCLI",

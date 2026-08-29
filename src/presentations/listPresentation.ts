@@ -12,9 +12,11 @@ type ExactPresantationLengthArray<T> = {
 } & T[];
 
 // records.json（records.yamanoku.netの登壇記録）を唯一の情報源として導出する
-const parseRecords = (): ListType[] => {
-  const now = new Date();
-  return records
+export const deriveListStage = (
+  source: typeof records,
+  now = new Date()
+): ListType[] =>
+  source
     .filter(
       (record) => new Date(record.date) < now && record.resources.length > 0
     )
@@ -24,9 +26,8 @@ const parseRecords = (): ListType[] => {
       url: record.resources[0].url,
       datetime: record.date
     }));
-};
 
-export const listStage = parseRecords();
+export const listStage = deriveListStage(records);
 
 if (writings.length !== 5) {
   throw new Error(`listWriteは5件必要です（現在${writings.length}件）`);

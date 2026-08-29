@@ -1,6 +1,7 @@
-import { readFile, rename, rm, writeFile } from "node:fs/promises";
+import { readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { dirname, relative, resolve } from "node:path";
 import {
+  DataValidationError,
   type PodcastData,
   type SiteContent,
   type StageRecord,
@@ -100,5 +101,35 @@ export async function writeJson(
 export async function validateRepository(
   root = getRepositoryRoot()
 ): Promise<RepositoryData> {
-  return readRepositoryData(root);
+  const data = await readRepositoryData(root);
+  const sourceEntries = await readdir(resolve(root, "src"), {
+    recursive: true,
+    withFileTypes: true
+  });
+  const sourceFiles = sourceEntries.filter(
+    (entry) => entry.isFile() && /\.(astro|ts)$/.test(entry.name)
+  );
+  const referencedKeys = new Set<string>();
+  await Promise.all(
+    sourceFiles.map(async (entry) => {
+      const source = await readFile(
+        resolve(entry.parentPath, entry.name),
+        "utf8"
+      );
+      for (const match of source.matchAll(/\bt\(\s*["']([^"']+)["']\s*\)/g)) {
+        referencedKeys.add(match[1]);
+      }
+    })
+  );
+  const missingKeys = [...referencedKeys].filter(
+    (key) =>
+      !(key in data.siteContent.translations.ja) ||
+      !(key in data.siteContent.translations.en)
+  );
+  if (missingKeys.length > 0) {
+    throw new DataValidationError(
+      missingKeys.map((key) => `使用中の翻訳キーがありません: ${key}`)
+    );
+  }
+  return data;
 }
