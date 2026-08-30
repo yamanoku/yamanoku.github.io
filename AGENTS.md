@@ -19,7 +19,7 @@ pnpm workspacesによるモノレポ。依存バージョンは `pnpm-workspace.
 ```yaml
 # pnpm-workspace.yaml
 packages:
-  - packages           # yama-normalize等の内部パッケージ
+  - packages           # site-cli、yama-normalize等の内部パッケージ
   - records            # records.yamanoku.net（Astro）。発表資料も配下に同梱
   - records/presentations # 登壇資料（11ty + Slidev）
 
@@ -27,6 +27,7 @@ catalogs:
   website: ...         # ポートフォリオサイト用
   presentations: ...   # プレゼンテーション用
   yama-normalize: ... # yama-normalize用
+  site-cli: ...        # サイト更新CLI用
 ```
 
 package.jsonでは `catalog:<カタログ名>` で参照する。
@@ -192,73 +193,67 @@ export type ListItem = LinkItem & {
 
 #### 国際化の型安全性
 ```typescript
-// 辞書の型を定義
-export type Dictionary = {
-  [key: string]: string | Dictionary;
-};
+// src/i18n/translation-checkers.ts
+import type siteContent from "../data/site-content.json";
+import type languages from "./languages";
 
-// 言語コードの型
-export type Language = 'ja' | 'en';
+export type DictionaryKeys = keyof typeof siteContent.translations.ja;
+export type LanguageKeys = keyof typeof languages;
 ```
 
 ### CSS・スタイリング
 
 #### TailwindCSS v4の使用
 - ユーティリティクラスを基本とする
-- カスタムコンポーネントクラスは`@component`で定義
+- デザイントークンは `yama-normalize` のCSS変数を `@theme` でTailwindに橋渡しする
 - レスポンシブデザインは`sm:`, `md:`, `lg:`を使用
 
 #### グローバルスタイル
 ```css
 /* src/styles/global.css */
-@import "tailwindcss";
+@layer theme, base, components, utilities;
 
-/* カスタムコンポーネント */
-@component .btn-primary {
-  @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'modern-normalize' layer(base);
+@import '../../packages/yama-normalize/yama-normalize.css' layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  --spacing-y-rhythm-1: var(--y-rhythm-1);
+  --color-y-black-base: var(--y-black-base);
 }
 ```
 
 ### 国際化（i18n）
 
+翻訳の正規データは `src/data/site-content.json` の `translations`。`src/i18n/` は言語一覧・型チェック・取得ヘルパーのみ。更新は `pnpm site -- i18n` を使い、JSONを直接編集しない。
+
 #### ディレクトリ構造
 ```
+src/data/site-content.json   # translations.ja / translations.en
 src/i18n/
-├── en/
-│   └── dictionary.ts    # 英語辞書
-├── ja/
-│   └── dictionary.ts    # 日本語辞書
-├── languages.ts         # 対応言語一覧
-├── translation-checkers.ts  # 翻訳チェック
-└── util.ts             # i18nユーティリティ
+├── languages.ts             # 対応言語一覧
+├── translation-checkers.ts  # 翻訳キーの型
+└── util.ts                  # useTranslations / getLanguageFromURL
 ```
 
-#### 翻訳パターン
-```typescript
-// src/i18n/ja/dictionary.ts
-export default {
-  site: {
-    title: 'やまのく',
-    description: 'フロントエンドエンジニアのポートフォリオサイト'
-  },
-  nav: {
-    home: 'ホーム',
-    about: 'について'
-  }
-} as const;
+#### 翻訳の更新
+```bash
+pnpm site -- i18n set heading.example --ja "見出し" --en "Heading" --write
 ```
+
+日英のキー完全一致を常に検証する。`i18n remove` はソース内で `t("...")` として使われているキーを拒否する。
 
 #### コンポーネントでの使用
 ```astro
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/util';
+import { useTranslations } from '../i18n/util';
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const t = useTranslations(Astro);
 ---
 
-<h1>{t('site.title')}</h1>
-<p>{t('site.description')}</p>
+<h1>{t('heading.basic')}</h1>
+<p>{t('meta.description')}</p>
 ```
 
 ## レビュー基準
@@ -304,7 +299,8 @@ const t = useTranslations(lang);
    ```
 
 2. **国際化対応**
-   - すべてのユーザー向けテキストは辞書ファイルに定義
+   - すべてのユーザー向けテキストは `src/data/site-content.json` の `translations` に定義
+   - 更新は `pnpm site -- i18n` を使う（JSONの直接編集はしない）
    - ハードコーディングした文字列は禁止
 
 3. **アクセシビリティ**

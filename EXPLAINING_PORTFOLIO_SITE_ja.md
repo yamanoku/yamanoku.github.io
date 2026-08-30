@@ -66,15 +66,17 @@ aria-labelledbyとsection要素を紐付けることで記事間を移動する�
 <details>
 <summary>詳細を確認する</summary>
 
-翻訳される各言語をディレクトリごとで管理しています。
+翻訳の正規データは `src/data/site-content.json` の `translations` です。`src/i18n/` は言語一覧・型・取得ヘルパーです。
 
 ```
+src/data/site-content.json  # translations.ja / translations.en
 src/i18n
-├── en
-│   └── dictionary.ts // 英語
-└──ja
-    └── dictionary.ts // 日本語
+├── languages.ts
+├── translation-checkers.ts
+└── util.ts
 ```
+
+更新は `pnpm site -- i18n set <key> --ja "..." --en "..." --write` を使います。
 
 `useTranslations` を使用して対応するキーと一致した場合、翻訳された文言が表示されます。
 
