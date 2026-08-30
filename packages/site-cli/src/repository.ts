@@ -49,9 +49,18 @@ export function formatJsonDiff(
   const body: string[] = [];
   let equalRun: string[] = [];
 
-  const flushEqual = (all: boolean) => {
+  const flushEqual = (trailing: boolean) => {
     if (equalRun.length === 0) return;
-    if (all || equalRun.length <= CONTEXT_LINES * 2) {
+    if (trailing) {
+      if (equalRun.length <= CONTEXT_LINES) {
+        body.push(...equalRun.map((line) => ` ${line}`));
+      } else {
+        body.push(
+          ...equalRun.slice(0, CONTEXT_LINES).map((line) => ` ${line}`)
+        );
+        body.push(` ... ${equalRun.length - CONTEXT_LINES} 行省略`);
+      }
+    } else if (equalRun.length <= CONTEXT_LINES * 2) {
       body.push(...equalRun.map((line) => ` ${line}`));
     } else {
       body.push(...equalRun.slice(0, CONTEXT_LINES).map((line) => ` ${line}`));

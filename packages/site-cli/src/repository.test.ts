@@ -31,6 +31,27 @@ it("formats a line diff of JSON changes", () => {
   assert.match(diff, /- {2}"title": "old"/);
 });
 
+it("omits unchanged trailing lines after an early change", () => {
+  const beforeValue: Record<string, string> = { title: "old" };
+  const afterValue: Record<string, string> = { title: "new" };
+  for (let index = 0; index < 80; index += 1) {
+    beforeValue[`field${index}`] = "same";
+    afterValue[`field${index}`] = "same";
+  }
+  const diff = formatJsonDiff(
+    `${JSON.stringify(beforeValue, null, 2)}\n`,
+    `${JSON.stringify(afterValue, null, 2)}\n`,
+    "src/data/example.json"
+  );
+  const lines = diff.split("\n");
+
+  assert.match(diff, /- {2}"title": "old"/);
+  assert.match(diff, /\+ {2}"title": "new"/);
+  assert.match(diff, /行省略/);
+  assert.doesNotMatch(diff, /field79/);
+  assert.ok(lines.length < 20);
+});
+
 it("prints the JSON diff during dry-run and does not write", async () => {
   const path = resolve(root, "src/data/example.json");
   await mkdir(resolve(root, "src/data"), { recursive: true });
