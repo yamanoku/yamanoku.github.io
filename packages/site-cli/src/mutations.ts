@@ -123,6 +123,9 @@ export function setProfile(
   return validateSiteContent(next);
 }
 
+const isSocialLink = (link: ContentLink | SocialLink): link is SocialLink =>
+  "relMe" in link && typeof link.relMe === "boolean";
+
 const resolveLinkGroup = (
   content: SiteContent,
   group: LinkGroupName
@@ -148,6 +151,17 @@ const resolveLinkGroup = (
     defaults: { visible: false, relMe: false }
   };
 };
+
+const findLinkIndex = (
+  links: Array<ContentLink | SocialLink>,
+  group: LinkGroupName,
+  id: string
+): number =>
+  links.findIndex((link) => {
+    if (link.id !== id) return false;
+    if (group !== "rel-me") return true;
+    return isSocialLink(link) && link.relMe;
+  });
 
 export type LinkInput = {
   id: string;
@@ -195,7 +209,7 @@ export function updateLink(
 ): SiteContent {
   const next = clone(content);
   const target = resolveLinkGroup(next, group);
-  const index = target.links.findIndex((link) => link.id === id);
+  const index = findLinkIndex(target.links, group, id);
   if (index === -1) throw new Error(`${group} のリンクが見つかりません: ${id}`);
   const current = target.links[index];
   const updated = {
@@ -221,7 +235,7 @@ export function removeLink(
 ): SiteContent {
   const next = clone(content);
   const target = resolveLinkGroup(next, group);
-  const index = target.links.findIndex((link) => link.id === id);
+  const index = findLinkIndex(target.links, group, id);
   if (index === -1) throw new Error(`${group} のリンクが見つかりません: ${id}`);
   target.links.splice(index, 1);
   return validateSiteContent(next);
@@ -264,11 +278,15 @@ export function setTranslation(
 
 export function removeTranslation(
   content: SiteContent,
-  key: string
+  key: string,
+  referencedKeys: ReadonlySet<string>
 ): SiteContent {
   const next = clone(content);
   if (!(key in next.translations.ja))
     throw new Error(`翻訳キーが見つかりません: ${key}`);
+  if (referencedKeys.has(key)) {
+    throw new Error(`使用中の翻訳キーは削除できません: ${key}`);
+  }
   delete next.translations.ja[key];
   delete next.translations.en[key];
   return validateSiteContent(next);

@@ -31,6 +31,7 @@ import {
 } from "./mutations.js";
 import { fetchPodcast } from "./podcast.js";
 import {
+  collectReferencedTranslationKeys,
   getDataPaths,
   getRepositoryRoot,
   readJson,
@@ -583,7 +584,11 @@ const i18nRemoveCommand = define({
   },
   run: async (ctx) => {
     const { paths, content } = await readSiteContent();
-    const next = removeTranslation(content, ctx.values.key);
+    const next = removeTranslation(
+      content,
+      ctx.values.key,
+      await collectReferencedTranslationKeys()
+    );
     await writeJson(paths.siteContent, next, {
       write: ctx.values.write,
       log: ctx.log

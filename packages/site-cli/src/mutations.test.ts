@@ -14,8 +14,11 @@ import {
   addStage,
   addWriting,
   parseRubyParts,
+  removeLink,
+  removeTranslation,
   setProfile,
-  setTranslation
+  setTranslation,
+  updateLink
 } from "./mutations.js";
 
 describe("writing mutations", () => {
@@ -97,6 +100,60 @@ describe("site content mutations", () => {
     const link = next.links.social.find((item) => item.id === "example");
     assert.equal(link?.visible, false);
     assert.equal(link?.relMe, true);
+  });
+
+  it("limits rel-me update and remove to identity links", () => {
+    const content = siteContent as SiteContent;
+    assert.equal(
+      content.links.social.find((link) => link.id === "x")?.relMe,
+      false
+    );
+    assert.throws(
+      () => removeLink(content, "rel-me", "x"),
+      /rel-me のリンクが見つかりません: x/
+    );
+    assert.throws(
+      () =>
+        updateLink(content, "rel-me", "x", { url: "https://example.com/x" }),
+      /rel-me のリンクが見つかりません: x/
+    );
+
+    const updated = updateLink(content, "rel-me", "hollo", {
+      url: "https://example.com/hollo"
+    });
+    assert.equal(
+      updated.links.social.find((link) => link.id === "hollo")?.url,
+      "https://example.com/hollo"
+    );
+    const removed = removeLink(content, "rel-me", "hollo");
+    assert.equal(
+      removed.links.social.some((link) => link.id === "hollo"),
+      false
+    );
+    assert.equal(
+      removed.links.social.some((link) => link.id === "x"),
+      true
+    );
+  });
+
+  it("rejects removing a translation key that is still referenced", () => {
+    const referenced = new Set(["heading.basic"]);
+    assert.throws(
+      () =>
+        removeTranslation(
+          siteContent as SiteContent,
+          "heading.basic",
+          referenced
+        ),
+      /使用中の翻訳キーは削除できません: heading.basic/
+    );
+    const next = removeTranslation(
+      siteContent as SiteContent,
+      "heading.jobs",
+      referenced
+    );
+    assert.equal("heading.jobs" in next.translations.ja, false);
+    assert.equal("heading.jobs" in next.translations.en, false);
   });
 
   it("requires real-name ruby text to match the Japanese value", () => {

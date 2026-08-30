@@ -24,6 +24,10 @@ export type WriteOptions = {
   log?: (message: string) => void;
 };
 
+type DiffOp = { kind: "eq" | "del" | "add"; value: string };
+
+const CONTEXT_LINES = 3;
+
 export const getRepositoryRoot = (): string =>
   process.env.YAMANOKU_SITE_ROOT
     ? resolve(process.env.YAMANOKU_SITE_ROOT)
@@ -35,6 +39,85 @@ export const getDataPaths = (root = getRepositoryRoot()) => ({
   records: resolve(root, "records/src/data/records.json"),
   podcast: resolve(root, "src/data/ogenkidesukaFm.json")
 });
+
+export function formatJsonDiff(
+  before: string,
+  after: string,
+  displayPath: string
+): string {
+  const ops = diffLines(before, after);
+  const body: string[] = [];
+  let equalRun: string[] = [];
+
+  const flushEqual = (all: boolean) => {
+    if (equalRun.length === 0) return;
+    if (all || equalRun.length <= CONTEXT_LINES * 2) {
+      body.push(...equalRun.map((line) => ` ${line}`));
+    } else {
+      body.push(...equalRun.slice(0, CONTEXT_LINES).map((line) => ` ${line}`));
+      body.push(` ... ${equalRun.length - CONTEXT_LINES * 2} 行省略`);
+      body.push(...equalRun.slice(-CONTEXT_LINES).map((line) => ` ${line}`));
+    }
+    equalRun = [];
+  };
+
+  for (const op of ops) {
+    if (op.kind === "eq") {
+      equalRun.push(op.value);
+      continue;
+    }
+    flushEqual(false);
+    body.push(`${op.kind === "del" ? "-" : "+"}${op.value}`);
+  }
+  flushEqual(true);
+
+  return [`--- a/${displayPath}`, `+++ b/${displayPath}`, ...body].join("\n");
+}
+
+const diffLines = (before: string, after: string): DiffOp[] => {
+  const a = before.split("\n");
+  const b = after.split("\n");
+  const n = a.length;
+  const m = b.length;
+  const dp: Uint16Array[] = Array.from(
+    { length: n + 1 },
+    () => new Uint16Array(m + 1)
+  );
+  for (let i = n - 1; i >= 0; i--) {
+    for (let j = m - 1; j >= 0; j--) {
+      dp[i][j] =
+        a[i] === b[j]
+          ? dp[i + 1][j + 1] + 1
+          : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    }
+  }
+
+  const ops: DiffOp[] = [];
+  let i = 0;
+  let j = 0;
+  while (i < n && j < m) {
+    if (a[i] === b[j]) {
+      ops.push({ kind: "eq", value: a[i] });
+      i += 1;
+      j += 1;
+    } else if (dp[i + 1][j] >= dp[i][j + 1]) {
+      ops.push({ kind: "del", value: a[i] });
+      i += 1;
+    } else {
+      ops.push({ kind: "add", value: b[j] });
+      j += 1;
+    }
+  }
+  while (i < n) {
+    ops.push({ kind: "del", value: a[i] });
+    i += 1;
+  }
+  while (j < m) {
+    ops.push({ kind: "add", value: b[j] });
+    j += 1;
+  }
+  return ops;
+};
 
 export async function readJson(path: string): Promise<unknown> {
   try {
@@ -81,6 +164,7 @@ export async function writeJson(
     log(
       `プレビュー: ${displayPath} を更新します（保存には --write が必要です）`
     );
+    log(formatJsonDiff(current, next, displayPath));
     return true;
   }
 
@@ -98,29 +182,44 @@ export async function writeJson(
   return true;
 }
 
+export async function collectReferencedTranslationKeys(
+  root = getRepositoryRoot()
+): Promise<Set<string>> {
+  const srcDir = resolve(root, "src");
+  try {
+    const sourceEntries = await readdir(srcDir, {
+      recursive: true,
+      withFileTypes: true
+    });
+    const sourceFiles = sourceEntries.filter(
+      (entry) => entry.isFile() && /\.(astro|ts)$/.test(entry.name)
+    );
+    const referencedKeys = new Set<string>();
+    await Promise.all(
+      sourceFiles.map(async (entry) => {
+        const source = await readFile(
+          resolve(entry.parentPath, entry.name),
+          "utf8"
+        );
+        for (const match of source.matchAll(/\bt\(\s*["']([^"']+)["']\s*\)/g)) {
+          referencedKeys.add(match[1]);
+        }
+      })
+    );
+    return referencedKeys;
+  } catch (error) {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      return new Set();
+    }
+    throw error;
+  }
+}
+
 export async function validateRepository(
   root = getRepositoryRoot()
 ): Promise<RepositoryData> {
   const data = await readRepositoryData(root);
-  const sourceEntries = await readdir(resolve(root, "src"), {
-    recursive: true,
-    withFileTypes: true
-  });
-  const sourceFiles = sourceEntries.filter(
-    (entry) => entry.isFile() && /\.(astro|ts)$/.test(entry.name)
-  );
-  const referencedKeys = new Set<string>();
-  await Promise.all(
-    sourceFiles.map(async (entry) => {
-      const source = await readFile(
-        resolve(entry.parentPath, entry.name),
-        "utf8"
-      );
-      for (const match of source.matchAll(/\bt\(\s*["']([^"']+)["']\s*\)/g)) {
-        referencedKeys.add(match[1]);
-      }
-    })
-  );
+  const referencedKeys = await collectReferencedTranslationKeys(root);
   const missingKeys = [...referencedKeys].filter(
     (key) =>
       !(key in data.siteContent.translations.ja) ||

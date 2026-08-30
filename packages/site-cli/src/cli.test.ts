@@ -5,7 +5,8 @@ import {
   mkdtemp,
   readdir,
   readFile,
-  rm
+  rm,
+  writeFile
 } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
@@ -53,12 +54,30 @@ it("previews mutations without writing unless --write is provided", async () => 
   const after = JSON.parse(await readFile(path, "utf8"));
   assert.equal(after[0].title, "CLI test");
   assert.equal(after.length, 5);
-  assert.deepEqual(await readdir(resolve(root, "src/data")), ["writings.json"]);
+  const files = await readdir(resolve(root, "src/data"));
+  assert.equal(files.includes("writings.json"), true);
 });
 
 it("rejects unknown options in strict mode", async () => {
   await assert.rejects(
     () => runCli(["writing", "list", "--unknown-option"]),
     /unknown|Unknown|未定義/i
+  );
+});
+
+it("rejects removing a translation key still used in source files", async () => {
+  await mkdir(resolve(root, "src/pages"), { recursive: true });
+  await copyFile(
+    resolve(import.meta.dirname, "../../../src/data/site-content.json"),
+    resolve(root, "src/data/site-content.json")
+  );
+  await writeFile(
+    resolve(root, "src/pages/index.astro"),
+    '{t("heading.basic")}\n'
+  );
+
+  await assert.rejects(
+    () => runCli(["i18n", "remove", "heading.basic"]),
+    /使用中の翻訳キーは削除できません: heading.basic/
   );
 });

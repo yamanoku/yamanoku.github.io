@@ -87,7 +87,7 @@ pnpm site -- link remove social example --write
 pnpm site -- link list social
 ```
 
-`rel-me` groupへ追加すると、デフォルトで一覧には非表示、`rel=me`には出力されます。同じデータから画面表示とhead要素を作るためURLのドリフトが起きません。
+`rel-me` groupへ追加すると、デフォルトで一覧には非表示、`rel=me`には出力されます。`rel-me` の更新・削除は `relMe: true` のリンクだけを対象にします。同じデータから画面表示とhead要素を作るためURLのドリフトが起きません。
 
 ### 日報、翻訳、セクション
 
@@ -104,7 +104,9 @@ pnpm site -- section hide podcast --write
 pnpm site -- section list
 ```
 
-翻訳はja/enのキー完全一致を常に検証します。既知のセクション名以外は拒否します。
+翻訳はja/enのキー完全一致を常に検証します。`i18n remove` はソース内で `t("...")` として使われているキーを拒否します。既知のセクション名以外は拒否します。
+
+変更系コマンドはプレビュー時に対象JSONの差分を表示します。内容を確認してから `--write` を付けてください。
 
 ### Podcast
 
