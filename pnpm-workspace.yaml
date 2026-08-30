@@ -22,6 +22,11 @@ packages:
   - records/presentations
 
 catalogs:
+  site-cli:
+    "@types/node": 26.4.0
+    gunshi: 0.37.1
+    tsx: 4.23.12
+    typescript: 7.0.2
   website:
     "@biomejs/biome": 2.5.11
     "@tailwindcss/vite": 4.3.3
@@ -43,6 +48,6 @@ catalogs:
     "@slidev/types": 52.19.1
     budoux: 0.9.1
     highlight.js: 11.12.0
-    markdown-it: 14.3.0
+    markdown-it: 14.3.1
     markdown-it-footnote: 4.0.0
     vue: 3.5.41

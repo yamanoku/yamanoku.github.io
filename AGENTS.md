@@ -45,6 +45,11 @@ pnpm preview
 # リント・フォーマット
 pnpm lint
 
+# サイト情報の更新（詳細: packages/site-cli/README.md）
+pnpm site -- --help
+pnpm site -- validate
+pnpm site -- check
+
 # 発表資料の開発サーバー（flat: 11tyのみ8080 / monorepo: 11ty 8080 + Slidev 3030）
 pnpm --filter records dev:presentation <name>
 pnpm --filter records dev:presentation <name> --slide  # Slidevのみ
@@ -64,14 +69,16 @@ src/
 ├── layouts/             # レイアウトコンポーネント
 ├── pages/               # ページファイル（ルーティング）
 ├── i18n/               # 国際化関連
+├── data/                # CLIが管理するサイト情報の正規データ
 ├── presentations/       # プレゼンテーション一覧データ（listPresentation.ts）
 └── styles/             # グローバルスタイル
 
 packages/
+├── site-cli/            # yamanoku.net更新用Gunshi CLI
 └── yama-normalize/      # 独自Normalize CSS
 
 records/                 # records.yamanoku.net（Astro / 別Cloudflare Pages）
-├── src/                 # 記録ページ（src/data/records.md）
+├── src/                 # 記録ページ（src/data/records.json）
 ├── scripts/
 │   └── build-presentations.mjs   # 発表資料を records/dist/<name>/ に出力
 └── presentations/       # 登壇資料（records.yamanoku.net/<name>/ で配信）
@@ -150,7 +157,17 @@ pnpm --filter records dev:presentation <name>
 ```
 
 #### プレゼンテーション一覧データ
-`src/presentations/listPresentation.ts` にポートフォリオサイトに表示する登壇・執筆一覧を管理。`ExactPresantationLengthArray` 型で5件で固定されている。
+登壇は `records/src/data/records.json`、執筆は `src/data/writings.json` を正規データとし、`src/presentations/listPresentation.ts` がポートフォリオサイト用の最新5件を導出する。情報更新時はこれらを直接編集せず、`pnpm site -- stage ...` または `pnpm site -- writing ...` を使用する。執筆の5件制約は変更しない。
+
+### サイト情報更新CLI
+
+プロフィール、翻訳、リンク、日報年次、セクション表示、登壇、執筆、Podcastは `packages/site-cli` のGunshi CLIで管理する。
+
+- 変更コマンドはデフォルトでプレビューのみ。内容を確認後に `--write` を付ける
+- `src/data/site-content.json`、`src/data/writings.json`、`records/src/data/records.json` を通常の情報更新で直接編集しない
+- 必要な操作がCLIにない場合は、データを直接書き換えずCLIへ安全なコマンドと検証を追加する
+- 更新後は `pnpm site -- validate`、最終確認は `pnpm site -- check` を実行する
+- CLIはGit操作を行わない。差分確認、commit、pushは別途行う
 
 ### TypeScriptガイドライン
 

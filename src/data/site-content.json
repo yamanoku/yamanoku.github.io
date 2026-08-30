@@ -1,0 +1,264 @@
+{
+  "profile": {
+    "realName": {
+      "ja": {
+        "parts": [
+          {
+            "text": "大山",
+            "reading": "おおやま"
+          },
+          {
+            "text": "奥人",
+            "reading": "おくと"
+          }
+        ]
+      },
+      "en": "Okuto Oyama"
+    },
+    "handleName": {
+      "ja": "おおやまみちのく、yamanoku",
+      "en": "Oyama Michinoku, yamanoku"
+    },
+    "birthday": {
+      "ja": "1989年10月30日",
+      "en": "October 30, 1989"
+    },
+    "sex": {
+      "ja": "男性",
+      "en": "Male"
+    },
+    "birthplace": {
+      "ja": "秋田県能代市",
+      "en": "Noshiro, Akita"
+    },
+    "location": {
+      "ja": "千葉県流山市",
+      "en": "Nagareyama, Chiba"
+    },
+    "family": {
+      "ja": "妻、娘、猫（3匹）、大型犬（1頭）",
+      "en": "Wife, daughter, 3 cats and a large dog"
+    }
+  },
+  "translations": {
+    "ja": {
+      "meta.description": "大山奥人のポートフォリオサイト",
+      "page.home": "ホーム",
+      "header.text-beside-logo": "ポータルサイト",
+      "heading.basic": "基本情報",
+      "heading.jobs": "職業",
+      "heading.career": "職歴",
+      "heading.related-list": "関連リンク一覧",
+      "heading.presentations.title": "発表一覧",
+      "heading.presentations.stage": "登壇",
+      "heading.presentations.write": "執筆",
+      "heading.sns": "ソーシャルサービス",
+      "heading.donate": "寄付・支援",
+      "heading.contact": "連絡先",
+      "heading.open-source-activity": "オープンソース活動",
+      "heading.daily-journal": "日報",
+      "heading.ogenkidesuka-fm": "お元気ですか.fm",
+      "info.real-name": "本名",
+      "info.hundle-name": "ハンドルネーム",
+      "info.birthday": "誕生日",
+      "info.sex": "性別",
+      "info.birthplace": "出身",
+      "info.location": "所在",
+      "info.family": "家族構成",
+      "open-source-activity.descripion": "企業に所属して働く傍ら、余暇時間を使って2020年よりオープンソースへのコントリビュート活動をしています。ドキュメントの翻訳やアクセシビリティ改善提案や修正対応、その他軽微な修正などを行っています。",
+      "donate.description": "もし私の制作物や発表、活動に興味をもっていただけた場合以下より支援することができます。",
+      "ogenkidesuka-fm.description": "takanoripと最近の近況、UIやプロダクトのデザイン、キャリアやライフハックなどについて雑に話すPodcastです。最新のエピソードを掲載しています。",
+      "ogenkidesuka-fm.archive-before": "過去のエピソードをお探しの場合、",
+      "ogenkidesuka-fm.archive-after": "より参照してください。",
+      "daily-journal.description-before": "",
+      "daily-journal.description-after": "を活用し、日々の出来事や気になるニュースを日報という形でまとめています。毎日更新ではなく、気が向いたら更新しています。",
+      "daily-journal.japanese-only": "",
+      "multilingual": "多言語ページ"
+    },
+    "en": {
+      "meta.description": "Okuto Oyama Portfolio Site",
+      "page.home": "Home",
+      "header.text-beside-logo": "Portal Site",
+      "heading.basic": "Basic Info",
+      "heading.jobs": "Career Info",
+      "heading.career": "Jobs Info",
+      "heading.related-list": "Related Links List",
+      "heading.presentations.title": "Presentations",
+      "heading.presentations.stage": "Stage",
+      "heading.presentations.write": "Writing",
+      "heading.sns": "Social Service",
+      "heading.donate": "Donate & Sponsor",
+      "heading.contact": "Contact",
+      "heading.open-source-activity": "Open Source Activity",
+      "heading.daily-journal": "Daily journal",
+      "heading.ogenkidesuka-fm": "Ogenki-desuka.fm",
+      "info.real-name": "Real name",
+      "info.hundle-name": "Hundle name",
+      "info.birthday": "Birthday",
+      "info.sex": "Sex",
+      "info.birthplace": "Birthplace",
+      "info.location": "Location",
+      "info.family": "Family",
+      "open-source-activity.descripion": "In addition to working for a company, I have been contributing to open source since 2020 in my spare time. I translate documents, propose accessibility improvements, respond to fixes, and make other minor corrections.",
+      "donate.description": "If you are interested in my work, presentations and activities, you can donate me by.",
+      "ogenkidesuka-fm.description": "A podcast where I casually chat with takanorip about recent happenings, UI and product design, careers, life hacks, and more. Showing the latest episodes.",
+      "ogenkidesuka-fm.archive-before": "If you are looking for past episodes, please visit",
+      "ogenkidesuka-fm.archive-after": ".",
+      "daily-journal.description-before": "I utilize ",
+      "daily-journal.description-after": " to compile daily events and interesting news in the form of a journal. Rather than updating daily, I post whenever inspiration strikes.",
+      "daily-journal.japanese-only": "Sorry, Japanese text only",
+      "multilingual": "Multilingual Page"
+    }
+  },
+  "journal": {
+    "homeUrl": "https://scrapbox.io/",
+    "entryBaseUrl": "https://scrapbox.io/yamanoku/nippo-",
+    "years": [
+      2026,
+      2025,
+      2024,
+      2023,
+      2022,
+      2021
+    ]
+  },
+  "links": {
+    "social": [
+      {
+        "id": "x",
+        "title": {
+          "ja": "X (formerly Twitter)",
+          "en": "X (formerly Twitter)"
+        },
+        "url": "https://x.com/yamanoku",
+        "visible": true,
+        "relMe": false
+      },
+      {
+        "id": "bluesky",
+        "title": {
+          "ja": "Bluesky",
+          "en": "Bluesky"
+        },
+        "url": "https://bsky.app/profile/yamanoku.net",
+        "visible": true,
+        "relMe": false
+      },
+      {
+        "id": "github",
+        "title": {
+          "ja": "GitHub",
+          "en": "GitHub"
+        },
+        "url": "https://github.com/yamanoku",
+        "visible": true,
+        "relMe": false
+      },
+      {
+        "id": "hollo",
+        "title": {
+          "ja": "Hollo",
+          "en": "Hollo"
+        },
+        "url": "https://hollo.yamanoku.net/@yamanoku",
+        "visible": false,
+        "relMe": true
+      },
+      {
+        "id": "threads",
+        "title": {
+          "ja": "Threads",
+          "en": "Threads"
+        },
+        "url": "https://www.threads.net/@yamanoku",
+        "visible": false,
+        "relMe": true
+      }
+    ],
+    "openSource": [
+      {
+        "id": "all",
+        "title": {
+          "ja": "オープンソース活動全まとめ",
+          "en": "Open Source Activity All Logs"
+        },
+        "url": "https://yamanoku.notion.site/170f2fefa69c80959582f75f6e5b4b3f"
+      },
+      {
+        "id": "2025",
+        "title": {
+          "ja": "オープンソース活動記録 2025年",
+          "en": "Open Source Activity Log 2025"
+        },
+        "url": "https://yamanoku.notion.site/2025-6415641600a749d58ae57cb39f1bdbbb"
+      },
+      {
+        "id": "2024",
+        "title": {
+          "ja": "オープンソース活動記録 2024年",
+          "en": "Open Source Activity Log 2024"
+        },
+        "url": "https://yamanoku.notion.site/2024-170f2fefa69c80c1a13dfe86d477010e"
+      },
+      {
+        "id": "2023",
+        "title": {
+          "ja": "オープンソース活動記録 2023年",
+          "en": "Open Source Activity Log 2023"
+        },
+        "url": "https://yamanoku.notion.site/2023-9c066732fb5f40aa92dc19602047b445"
+      },
+      {
+        "id": "2022",
+        "title": {
+          "ja": "オープンソース活動記録 2022年",
+          "en": "Open Source Activity Log 2022"
+        },
+        "url": "https://yamanoku.notion.site/2022-0c6dae397ac8424ebd626d06afd822b8"
+      },
+      {
+        "id": "2021",
+        "title": {
+          "ja": "オープンソース活動記録 2021年",
+          "en": "Open Source Activity Log 2021"
+        },
+        "url": "https://yamanoku.notion.site/2021-2c4fa51b832645f494698ebd11e069f9"
+      }
+    ],
+    "donate": [
+      {
+        "id": "github-sponsors",
+        "title": {
+          "ja": "GitHub Sponsors",
+          "en": "GitHub Sponsors"
+        },
+        "url": "https://github.com/sponsors/yamanoku"
+      },
+      {
+        "id": "stripe",
+        "title": {
+          "ja": "Stripe Payment Links",
+          "en": "Stripe Payment Links"
+        },
+        "url": "https://buy.stripe.com/00gaEY1Eh5bE7VC8ww"
+      },
+      {
+        "id": "buy-me-a-coffee",
+        "title": {
+          "ja": "Buy me a coffee",
+          "en": "Buy me a coffee"
+        },
+        "url": "https://buymeacoffee.com/yamanoku"
+      }
+    ]
+  },
+  "sections": {
+    "basic": true,
+    "openSource": false,
+    "presentations": true,
+    "podcast": true,
+    "journal": true,
+    "social": true,
+    "contact": true
+  }
+}

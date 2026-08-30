@@ -1,8 +1,61 @@
 ---
-import { Content } from "../data/records.md";
+import recordsData from "../data/records.json";
 import Layout from "../layouts/Layout.astro";
+
+interface Resource {
+  title: string;
+  url: string;
+}
+
+interface RecordItem {
+  date: string;
+  event: string;
+  resources: Resource[];
+  note?: string;
+}
+
+const records = recordsData as RecordItem[];
+const recordsByYear = records.reduce<Map<string, RecordItem[]>>(
+  (groups, record) => {
+    const year = record.date.slice(0, 4);
+    groups.set(year, [...(groups.get(year) ?? []), record]);
+    return groups;
+  },
+  new Map()
+);
 ---
 
 <Layout>
-  <Content />
+  <h1>Records</h1>
+  <p>やまのく（yamanoku）のこれまでの登壇・発表のまとめページ</p>
+  {
+    [...recordsByYear].map(([year, yearRecords]) => (
+      <>
+        <h2>{year}年</h2>
+        {yearRecords.map((record) => (
+          <>
+            <h3>
+              {record.date} {record.event}
+            </h3>
+            {record.note && <p>{record.note}</p>}
+            {record.resources.length === 1 ? (
+              <p>
+                <a href={record.resources[0].url}>{record.resources[0].title}</a>
+              </p>
+            ) : (
+              record.resources.length > 1 && (
+                <ul>
+                  {record.resources.map((resource) => (
+                    <li>
+                      <a href={resource.url}>{resource.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              )
+            )}
+          </>
+        ))}
+      </>
+    ))
+  }
 </Layout>
