@@ -1,8 +1,13 @@
 ---
-import { useTranslations } from "../../../i18n/util";
+import siteContent from "../../../data/site-content.json";
+import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
 import GlobalListComponent from "../../global/GlobalListComponent.astro";
 
+const lang = getLanguageFromURL(Astro.url.pathname) === "en" ? "en" : "ja";
 const t = useTranslations(Astro);
+const socialLinks = siteContent.links.social
+  .filter((link) => link.visible)
+  .map((link) => ({ title: link.title[lang], url: link.url }));
 ---
 
 <section
@@ -10,20 +15,5 @@ const t = useTranslations(Astro);
   aria-labelledby="social-network-services_heading"
 >
   <h2 id="social-network-services_heading">{t("heading.sns")}</h2>
-  <GlobalListComponent
-    list={[
-      {
-        title: "X (formerly Twitter)",
-        url: "https://x.com/yamanoku"
-      },
-      {
-        title: "Bluesky",
-        url: "https://bsky.app/profile/yamanoku.net"
-      },
-      {
-        title: "GitHub",
-        url: "https://github.com/yamanoku"
-      }
-    ]}
-  />
+  <GlobalListComponent list={socialLinks} />
 </section>

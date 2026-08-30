@@ -1,8 +1,18 @@
 ---
-import { useTranslations } from "../../../i18n/util";
+import siteContent from "../../../data/site-content.json";
+import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
 import GlobalListComponent from "../../global/GlobalListComponent.astro";
 
+const lang = getLanguageFromURL(Astro.url.pathname) === "en" ? "en" : "ja";
 const t = useTranslations(Astro);
+const openSourceLinks = siteContent.links.openSource.map((link) => ({
+  title: link.title[lang],
+  url: link.url
+}));
+const donateLinks = siteContent.links.donate.map((link) => ({
+  title: link.title[lang],
+  url: link.url
+}));
 ---
 
 <section
@@ -11,34 +21,7 @@ const t = useTranslations(Astro);
 >
   <h2 id="open-source-activity_heading">{t("heading.open-source-activity")}</h2>
   <p>{t("open-source-activity.descripion")}</p>
-  <GlobalListComponent
-    list={[
-      {
-        title: t("open-source-activity.link-all"),
-        url: "https://yamanoku.notion.site/170f2fefa69c80959582f75f6e5b4b3f"
-      },
-      {
-        title: t("open-source-activity.link-2025"),
-        url: "https://yamanoku.notion.site/2025-6415641600a749d58ae57cb39f1bdbbb"
-      },
-      {
-        title: t("open-source-activity.link-2024"),
-        url: "https://yamanoku.notion.site/2024-170f2fefa69c80c1a13dfe86d477010e"
-      },
-      {
-        title: t("open-source-activity.link-2023"),
-        url: "https://yamanoku.notion.site/2023-9c066732fb5f40aa92dc19602047b445"
-      },
-      {
-        title: t("open-source-activity.link-2022"),
-        url: "https://yamanoku.notion.site/2022-0c6dae397ac8424ebd626d06afd822b8"
-      },
-      {
-        title: t("open-source-activity.link-2021"),
-        url: "https://yamanoku.notion.site/2021-2c4fa51b832645f494698ebd11e069f9"
-      }
-    ]}
-  />
+  <GlobalListComponent list={openSourceLinks} />
   <article
     id="donate"
     aria-labelledby="donate_heading"
@@ -48,22 +31,6 @@ const t = useTranslations(Astro);
       <em id="donate_heading">{t("heading.donate")}</em>
     </div>
     <p>{t("donate.description")}</p>
-    <GlobalListComponent
-      class="mb-0"
-      list={[
-        {
-          title: "GitHub Sponsors",
-          url: "https://github.com/sponsors/yamanoku"
-        },
-        {
-          title: "Stripe Payment Links",
-          url: "https://buy.stripe.com/00gaEY1Eh5bE7VC8ww"
-        },
-        {
-          title: "Buy me a coffee",
-          url: "https://buymeacoffee.com/yamanoku"
-        }
-      ]}
-    />
+    <GlobalListComponent class="mb-0" list={donateLinks} />
   </article>
 </section>

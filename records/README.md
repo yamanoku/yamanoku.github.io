@@ -8,18 +8,23 @@
 
 - **フレームワーク**: Astro（静的出力）
 - **スタイル**: `yama-normalize`（`packages/yama-normalize`）+ `modern-normalize` + TailwindCSS v4
-- **コンテンツ**: `src/data/records.md` を Astro が直接 import して描画する
+- **コンテンツ**: `src/data/records.json` の構造化データを Astro が描画する
 - **発表資料（11ty / Slidev）**: `records/presentations/` 配下に同梱。records ビルドの一部として `records/dist/<name>/` に出力され、`https://records.yamanoku.net/<name>/`（例: `/tskaigi-2026/`）で配信される
 
-登壇・発表記録を追記・編集するときは **`src/data/records.md` を編集する**。Markdown のフォーマットは次のとおり。
+登壇・発表記録はルートのサイト更新CLIで管理する。`src/data/records.json` は直接編集しない。
 
-```markdown
-## YYYY年 - N件
+```bash
+pnpm site -- stage add \
+  --date YYYY-MM-DD \
+  --event "イベント名" \
+  --resource-title "資料タイトル" \
+  --resource-url "URL"
 
-### YYYY-MM-DD イベント名
-
-[資料タイトル](URL)
+# プレビュー確認後に保存
+pnpm site -- stage add ... --write
 ```
+
+資料が複数ある場合はtitleとURLを同じ件数だけ繰り返す。予定・資料未定はresourceを省略して `--note TBD` を指定できる。詳細は `packages/site-cli/README.md` を参照。
 
 ## 開発
 
@@ -75,7 +80,7 @@ Cloudflare Pages のダッシュボードで GitHub リポジトリ（`yamanoku/
 | Build output directory | `records/dist` |
 
 - **Node バージョン**: `records/.node-version`（`22`）で固定。ダッシュボードの環境変数 `NODE_VERSION` でも指定可。
-- **pnpm**: ルート `package.json` の `packageManager: pnpm@11.6.0` を corepack 経由で使用（catalog 解決に必要）。
+- **pnpm**: ルート `package.json` の `packageManager` で固定したpnpmを corepack 経由で使用（catalog 解決に必要）。
 - **カスタムドメイン**: `records.yamanoku.net` を Cloudflare Pages のカスタムドメインとして追加（DNS は Cloudflare 側で設定）。
 
 > Git 連携はモノレポルートで `pnpm install` を実行する。`--filter records` によりビルド対象は records のみに限定され、`presentations`（11ty/Slidev）の重いビルドは走らない。
