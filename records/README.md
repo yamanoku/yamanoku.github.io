@@ -79,11 +79,11 @@ Cloudflare Pages のダッシュボードで GitHub リポジトリ（`yamanoku/
 | Build command | `pnpm install --frozen-lockfile && pnpm --filter records build` |
 | Build output directory | `records/dist` |
 
-- **Node バージョン**: `records/.node-version`（`22`）で固定。ダッシュボードの環境変数 `NODE_VERSION` でも指定可。
+- **Node バージョン**: `records/.node-version`（`24.20.0`）で固定。ダッシュボードの環境変数 `NODE_VERSION` でも指定可。
 - **pnpm**: ルート `package.json` の `packageManager` で固定したpnpmを corepack 経由で使用（catalog 解決に必要）。
 - **カスタムドメイン**: `records.yamanoku.net` を Cloudflare Pages のカスタムドメインとして追加（DNS は Cloudflare 側で設定）。
 
-> Git 連携はモノレポルートで `pnpm install` を実行する。`--filter records` によりビルド対象は records のみに限定され、`presentations`（11ty/Slidev）の重いビルドは走らない。
+> Git 連携はモノレポルートで `pnpm install` を実行する。`pnpm --filter records build` は記録ページの Astro ビルドに加え、`scripts/build-presentations.mjs` で発表資料（11ty / Slidev）も `records/dist/<name>/` へ出力する。
 
 ### `wrangler.jsonc` は使わない
 

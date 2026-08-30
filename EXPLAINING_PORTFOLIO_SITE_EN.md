@@ -65,15 +65,17 @@ The portfolio site is designed to be displayed in Japanese and English, with one
 <details>
 <summary>Details</summary>
 
-Each language to be translated is managed by directory.
+Canonical translations live in `src/data/site-content.json` under `translations`. `src/i18n/` holds language lists, types, and helpers.
 
 ```
+src/data/site-content.json  # translations.ja / translations.en
 src/i18n
-├── en
-│   └── dictionary.ts // English
-└──ja
-    └── dictionary.ts // Japanese
+├── languages.ts
+├── translation-checkers.ts
+└── util.ts
 ```
+
+Updates use `pnpm site -- i18n set <key> --ja "..." --en "..." --write`.
 
 If a match is found with the supported key using `useTranslations`, the translated wording will be displayed.
 
