@@ -37,8 +37,8 @@ catalogs:
       specifier: 11.12.0
       version: 11.12.0
     markdown-it:
-      specifier: 14.3.1
-      version: 14.3.1
+      specifier: 15.0.1
+      version: 15.0.1
     markdown-it-footnote:
       specifier: 4.0.0
       version: 4.0.0
@@ -173,7 +173,7 @@ importers:
         version: 1.2.76
       '@slidev/cli':
         specifier: catalog:presentations
-        version: 52.19.1(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(@nuxt/kit@3.21.7(magicast@0.5.2))(@oxc-project/types@0.146.0)(@types/markdown-it@14.1.2)(@types/node@26.4.0)(@vitejs/devtools-kit@0.4.10(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(cac@7.0.0)(srvx@0.12.5)(typescript@6.0.3)(vite@8.2.2(@types/node@26.4.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0)))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(esbuild@0.28.1)(hono@4.12.29)(lightningcss@1.33.0)(magicast@0.5.2)(markdown-it@14.3.1)(oxc-parser@0.131.0)(postcss@8.5.26)(rolldown@1.2.5)(rollup@4.59.0)(srvx@0.12.5)(supports-color@7.2.0)(terser@5.49.0)(tsx@4.23.13)(vite-plugin-pwa@1.3.0(supports-color@7.2.0)(vite@8.2.2(@types/node@26.4.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0))(workbox-build@7.4.1(supports-color@7.2.0))(workbox-window@7.4.1))
+        version: 52.19.1(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(@nuxt/kit@3.21.7(magicast@0.5.2))(@oxc-project/types@0.146.0)(@types/markdown-it@14.1.2)(@types/node@26.4.0)(@vitejs/devtools-kit@0.4.10(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(cac@7.0.0)(srvx@0.12.5)(typescript@6.0.3)(vite@8.2.2(@types/node@26.4.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0)))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(esbuild@0.28.1)(hono@4.12.29)(lightningcss@1.33.0)(magicast@0.5.2)(markdown-it@15.0.1)(oxc-parser@0.131.0)(postcss@8.5.26)(rolldown@1.2.5)(rollup@4.59.0)(srvx@0.12.5)(supports-color@7.2.0)(terser@5.49.0)(tsx@4.23.13)(vite-plugin-pwa@1.3.0(supports-color@7.2.0)(vite@8.2.2(@types/node@26.4.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0))(workbox-build@7.4.1(supports-color@7.2.0))(workbox-window@7.4.1))
       '@slidev/client':
         specifier: catalog:presentations
         version: 52.19.1(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(@nuxt/kit@3.21.7(magicast@0.5.2))(@oxc-project/types@0.146.0)(@vitejs/devtools-kit@0.4.10(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(cac@7.0.0)(srvx@0.12.5)(typescript@6.0.3)(vite@8.2.2(@types/node@26.4.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0)))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(esbuild@0.28.1)(lightningcss@1.33.0)(magicast@0.5.2)(oxc-parser@0.131.0)(rolldown@1.2.5)(rollup@4.59.0)(srvx@0.12.5)(supports-color@7.2.0)(vite@8.2.2(@types/node@26.4.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0))
@@ -194,7 +194,7 @@ importers:
         version: 11.12.0
       markdown-it:
         specifier: catalog:presentations
-        version: 14.3.1
+        version: 15.0.1
       markdown-it-footnote:
         specifier: catalog:presentations
         version: 4.0.0
@@ -2869,6 +2869,9 @@ packages:
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
+  argparse@3.0.1:
+    resolution: {integrity: sha512-nM4mHF/KM1v59ZNKX7zfusQz5wUAxR511YG8Vo6TyiV4aqhu++rbJW4v04xsWhpSsHFj66flT8P7znVpyO20xQ==}
+
   aria-query@5.3.2:
     resolution: {integrity: sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw==}
     engines: {node: '>= 0.4'}
@@ -4787,6 +4790,9 @@ packages:
   linkify-it@5.0.2:
     resolution: {integrity: sha512-ONTm2jCMAVZjgQa/Fy1kScXsuOoF5NPTsoFBdE1KVIZ2vAh/r9+Bqo+0jINCBYnavTPQZz38QzFTme79ENoN3Q==}
 
+  linkify-it@6.1.0:
+    resolution: {integrity: sha512-wJ/TwpSDTLepCrQoYWYIExIKg5Zchex2Nn5yk2mFnB+6PtdkHtyLx742md9csRjjOnGkKIS/RrbY7l8D6gT9Vw==}
+
   liquidjs@10.27.0:
     resolution: {integrity: sha512-tw/OA59K7aIBlMKIrKlumr37fiZUheShVHXY8cVctWisgY1p9mc5hreOvlreoS0wTiwlWk14Ya7305c2a/Cg5w==}
     engines: {node: '>=16'}
@@ -4863,6 +4869,10 @@ packages:
     resolution: {integrity: sha512-4Ej49aYTDFIQ+uBkfX8GBvJGccoARxxPep+7aWTs55ozbjQJpW9M26Fe53vnGgvLeVzva/amzjQQaQu9w0vMhA==}
     hasBin: true
 
+  markdown-it@15.0.1:
+    resolution: {integrity: sha512-9/7gE95FNPkfUWrjJIoHZza2iLmuJlPD0UNMxPi7bxUrbCR525YZY0r+zyfes0dZI5ZZ/uNIXUJca0pJvtw41g==}
+    hasBin: true
+
   markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
 
@@ -4931,6 +4941,9 @@ packages:
 
   mdurl@2.0.0:
     resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
+
+  mdurl@2.1.0:
+    resolution: {integrity: sha512-1+HBaOx0zi/dQWht8rNv9MYf9qqpqL/kxI0hXImU6Y547zM6Sni8BQibt7ifgMcYtQg41ao3Ivd6cnSM86inpg==}
 
   media-typer@1.1.0:
     resolution: {integrity: sha512-aisnrDP4GNe06UcKFnV5bfMNPBUw4jsLGaWwWfnH3v02GnBuXX2MCVn5RbrWo0j3pczUilYblq7fQ7Nw2t5XKw==}
@@ -6040,6 +6053,9 @@ packages:
 
   uc.micro@2.1.0:
     resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
+
+  uc.micro@3.0.0:
+    resolution: {integrity: sha512-U3PppEkleoTnIfi8BozMx3yju3qc/L6SwqWo2Sw+54PX+PX0q9I+r1Um5HCmqD7n9VDX5/v3vQH/AjA6deDdtw==}
 
   ufo@1.6.4:
     resolution: {integrity: sha512-JFNbkD1Svwe0KvGi8GOeLcP4kAWQ609twvCdcHxq1oSL8svv39ZuSvajcD8B+5D0eL4+s1Is2D/O6KN3qcTeRA==}
@@ -7705,11 +7721,11 @@ snapshots:
       '@clack/core': 1.1.0
       sisteransi: 1.0.5
 
-  '@comark/markdown-it@0.3.4(@types/markdown-it@14.1.2)(markdown-it@14.3.1)':
+  '@comark/markdown-it@0.3.4(@types/markdown-it@14.1.2)(markdown-it@15.0.1)':
     dependencies:
       '@types/markdown-it': 14.1.2
       js-yaml: 4.3.0
-      markdown-it: 14.3.1
+      markdown-it: 15.0.1
 
   '@devframes/hub@0.7.16(devframe@0.7.16(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(cac@7.0.0)(srvx@0.12.5)(typescript@6.0.3))':
     dependencies:
@@ -8689,11 +8705,11 @@ snapshots:
     dependencies:
       escape-string-regexp: 5.0.0
 
-  '@slidev/cli@52.19.1(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(@nuxt/kit@3.21.7(magicast@0.5.2))(@oxc-project/types@0.146.0)(@types/markdown-it@14.1.2)(@types/node@26.4.0)(@vitejs/devtools-kit@0.4.10(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(cac@7.0.0)(srvx@0.12.5)(typescript@6.0.3)(vite@8.2.2(@types/node@26.4.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0)))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(esbuild@0.28.1)(hono@4.12.29)(lightningcss@1.33.0)(magicast@0.5.2)(markdown-it@14.3.1)(oxc-parser@0.131.0)(postcss@8.5.26)(rolldown@1.2.5)(rollup@4.59.0)(srvx@0.12.5)(supports-color@7.2.0)(terser@5.49.0)(tsx@4.23.13)(vite-plugin-pwa@1.3.0(supports-color@7.2.0)(vite@8.2.2(@types/node@26.4.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0))(workbox-build@7.4.1(supports-color@7.2.0))(workbox-window@7.4.1))':
+  '@slidev/cli@52.19.1(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(@nuxt/kit@3.21.7(magicast@0.5.2))(@oxc-project/types@0.146.0)(@types/markdown-it@14.1.2)(@types/node@26.4.0)(@vitejs/devtools-kit@0.4.10(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.4.3))(cac@7.0.0)(srvx@0.12.5)(typescript@6.0.3)(vite@8.2.2(@types/node@26.4.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0)))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(esbuild@0.28.1)(hono@4.12.29)(lightningcss@1.33.0)(magicast@0.5.2)(markdown-it@15.0.1)(oxc-parser@0.131.0)(postcss@8.5.26)(rolldown@1.2.5)(rollup@4.59.0)(srvx@0.12.5)(supports-color@7.2.0)(terser@5.49.0)(tsx@4.23.13)(vite-plugin-pwa@1.3.0(supports-color@7.2.0)(vite@8.2.2(@types/node@26.4.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0))(workbox-build@7.4.1(supports-color@7.2.0))(workbox-window@7.4.1))':
     dependencies:
       '@antfu/ni': 30.5.0
       '@antfu/utils': 9.3.0
-      '@comark/markdown-it': 0.3.4(@types/markdown-it@14.1.2)(markdown-it@14.3.1)
+      '@comark/markdown-it': 0.3.4(@types/markdown-it@14.1.2)(markdown-it@15.0.1)
       '@iconify-json/carbon': 1.2.25
       '@iconify-json/ph': 1.2.2
       '@iconify-json/svg-spinners': 1.2.4
@@ -8729,7 +8745,7 @@ snapshots:
       magic-string-stack: 2.0.0
       markdown-exit: 1.1.0-beta.2
       markdown-it-footnote: 4.0.0
-      markdown-it-github-alerts: 1.0.1(markdown-it@14.3.1)
+      markdown-it-github-alerts: 1.0.1(markdown-it@15.0.1)
       mlly: 1.8.2
       monaco-editor: 0.56.0
       obug: 2.1.4
@@ -9808,6 +9824,8 @@ snapshots:
       sprintf-js: 1.0.3
 
   argparse@2.0.1: {}
+
+  argparse@3.0.1: {}
 
   aria-query@5.3.2: {}
 
@@ -11972,6 +11990,10 @@ snapshots:
     dependencies:
       uc.micro: 2.1.0
 
+  linkify-it@6.1.0:
+    dependencies:
+      uc.micro: 3.0.0
+
   liquidjs@10.27.0:
     dependencies:
       commander: 10.0.1
@@ -12059,9 +12081,9 @@ snapshots:
 
   markdown-it-footnote@4.0.0: {}
 
-  markdown-it-github-alerts@1.0.1(markdown-it@14.3.1):
+  markdown-it-github-alerts@1.0.1(markdown-it@15.0.1):
     dependencies:
-      markdown-it: 14.3.1
+      markdown-it: 15.0.1
 
   markdown-it@14.3.1:
     dependencies:
@@ -12071,6 +12093,15 @@ snapshots:
       mdurl: 2.0.0
       punycode.js: 2.3.1
       uc.micro: 2.1.0
+
+  markdown-it@15.0.1:
+    dependencies:
+      argparse: 3.0.1
+      entities: 8.0.0
+      linkify-it: 6.1.0
+      mdurl: 2.1.0
+      punycode.js: 2.3.1
+      uc.micro: 3.0.0
 
   markdown-table@3.0.4: {}
 
@@ -12227,6 +12258,8 @@ snapshots:
   mdn-data@2.28.1: {}
 
   mdurl@2.0.0: {}
+
+  mdurl@2.1.0: {}
 
   media-typer@1.1.0:
     optional: true
@@ -13633,6 +13666,8 @@ snapshots:
       '@typescript/typescript-win32-x64': 7.0.2
 
   uc.micro@2.1.0: {}
+
+  uc.micro@3.0.0: {}
 
   ufo@1.6.4: {}
 
