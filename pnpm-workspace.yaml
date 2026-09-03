@@ -28,7 +28,7 @@ catalogs:
     tsx: 4.23.13
     typescript: 7.0.2
   website:
-    "@biomejs/biome": 2.5.11
+    "@biomejs/biome": 2.5.12
     "@tailwindcss/vite": 4.3.3
     astro: 7.2.9
     markuplint: 4.18.3
