@@ -15,7 +15,7 @@
 - Sex: Male
 - Birthplace: Noshiro, Akita
 - Location: Nagareyama, Chiba
-- Family: Wife, daughter, 3 cats and a large dog
+- Family: Wife, daughter, 2 cats and a large dog
 - Organization: Schoo Inc.
 
 ## Open Source Activity
