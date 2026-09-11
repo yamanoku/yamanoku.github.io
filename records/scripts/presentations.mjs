@@ -1,4 +1,5 @@
 export const presentations = [
+  { name: "dai-funabashidev-2026", type: "flat" },
   { name: "dai-kichijojipm-2026", type: "monorepo" },
   { name: "tskaigi-2026", type: "monorepo" },
   { name: "burikaigi-2026", type: "monorepo" },
