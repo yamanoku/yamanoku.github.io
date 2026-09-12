@@ -8,8 +8,12 @@
   {
     "date": "2026-09-12",
     "event": "大Funabashi.dev supported by KIKKAKE CREATION 2026",
-    "resources": [],
-    "note": "TBD"
+    "resources": [
+      {
+        "title": "Webと生きて、 Webに迷って、 またWebを好きになる",
+        "url": "https://records.yamanoku.net/dai-funabashidev-2026/"
+      }
+    ]
   },
   {
     "date": "2026-07-25",
