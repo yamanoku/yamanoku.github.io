@@ -5,8 +5,6 @@ description: 大Funabashi.dev supported by KIKKAKE CREATION 2026のyamanokuの�
 lang: ja
 ---
 
-![スライドタイトル：Webと生きて、 Webに迷って、 またWebを好きになる](./images/title.png)
-
 ## スピーカーノート
 
 みなさんこんにちは。今日は「Webと生きて、Webに迷って、またWebを好きになる」というタイトルで発表させていただきます。
