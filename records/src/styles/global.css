@@ -25,17 +25,10 @@
   --color-y-body-text: var(--y-body-text-color);
   --color-y-hr-border-color: var(--y-hr-border-color);
   --text-y-h2: var(--y-h2-size);
-  --text-y-h3: var(--y-h3-size);
   --text-y-small: calc(var(--y-typography-base) / var(--y-font-ratio));
-  --leading-y-rhythm-3: var(--y-rhythm-3);
-  --leading-y-rhythm-4: var(--y-rhythm-4);
-  --leading-y-rhythm-5: var(--y-rhythm-5);
 }
 
 @layer components {
-  html {
-    scroll-padding-top: 10px;
-  }
   html[lang="ja"] main {
     max-inline-size: 100%;
   }
