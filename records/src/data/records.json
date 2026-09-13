@@ -14,7 +14,7 @@
         "url": "https://records.yamanoku.net/dai-funabashidev-2026/"
       }
     ],
-    "description": "Webと同い年（1989年生まれ）という視点から、楽天ブログやTumblr、デザイナーからエンジニアへの転身、アクセシビリティとの出会いを振り返る。標準やWCAGへのこだわりが作る楽しさを狭めた迷いを語り、HTML Energyや手書きHTML、W3C Japanの議論を通じ再びWebを好きになる過程と、標準化と経済の関係への気づきを共有した個人史寄りの発表。"
+    "description": "楽天ブログやユーザー参加型の投稿サイト、Tumblrといった筆者に影響を与えてくれたサービスから、自身がWebエンジニアへの転身したのちにWeb標準を知ったことによる自身のこれまでを振り返る。Web標準やアクセシビリティへのこだわりが作る楽しさを狭めた迷いを語り、HTML Energyといった手触り感のあるWebコンテンツ作り、W3C Japanでのイベントの議論を通じ再びWebを好きになる過程と、標準化と経済の関係への気づきを共有した個人史の発表。"
   },
   {
     "date": "2026-07-25",
@@ -25,7 +25,7 @@
         "url": "https://records.yamanoku.net/dai-kichijojipm-2026/slide/"
       }
     ],
-    "description": "雑談ポッドキャスト「お元気ですか.fm」の5年を、大会テーマ「かわるもの／かわらないもの」で振り返る。Figma一強や生成AIなど開発・デザインの変化、役割や生活、関わる人の変化を定点観測しつつ、近況を聞き合う形式や対話の価値など変わらないものを整理。再生数などの数字も交え、続けてきた定点観測としての価値を示した。"
+    "description": "雑談ポッドキャスト「お元気ですか.fm」の5年を、カンファレンスのテーマ「かわるもの／かわらないもの」で振り返る。Webフロントエンドの変化、Figma一強や生成AIなど開発・デザインの変化、役割や生活、関わる人の変化を定点観測しつつ、近況を聞き合う形式や対話の価値など変わらないものを整理。再生数などの数字も交え、ポッドキャストを続けてきた価値を示した。"
   },
   {
     "date": "2026-07-17",
@@ -36,7 +36,7 @@
         "url": "https://speakerdeck.com/yamanoku/how-svelte-compile-html"
       }
     ],
-    "description": "AIが文書を書く時代に正しいHTMLを書かせたいという動機から、.svelte内のマークアップがコンパイラでどう解釈・変換されるかを解説。VueやAstroなど他ツールのHTML記法と比較しながら、Svelteがテンプレートを解析し実行時のDOM更新へ落とす仕組みを掘り下げ、フレームワーク固有の「HTML」理解を正しいマークアップへの関心と結びつけて伝えた。"
+    "description": "AIが文書を書く時代に正しいHTMLを書かせたいという動機から、Svelteファイルのマークアップがコンパイラでどう解釈・変換されるかを解説。自身が小さいコンパイラを作ってSvelteがテンプレートを解析し実行時のDOM更新へ落とす仕組みを掘り下げ、フレームワーク固有の「HTML」理解を正しいマークアップへの関心と結びつけて伝えた。"
   },
   {
     "date": "2026-06-16",
@@ -47,7 +47,7 @@
         "url": "https://scrapbox.io/yamanoku/%E3%81%A8%E3%81%82%E3%82%8B%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8Ckingnize%E3%81%95%E3%82%8C%E3%82%8B%E3%81%BE%E3%81%A7%EF%BD%9ENuxt%E3%81%8B%E3%82%89vuerend_&_Vize%E3%81%B8"
       }
     ],
-    "description": "Vue Fes Japan歴代スピーカー一覧をNuxtで公開し、地味だったUIをClaude Designで刷新、Vite+やVitestブラウザモードにも対応した経緯を紹介。その後ubugeeei氏のPRでvuerend/VizeによるRustツールチェーンへ「kingnize」され、MPA化やa11y Lintへのフィードバックまで含めた急激なリアーキテクチャ体験を語った。個人サイトがOSS検証場になった事例。"
+    "description": "Vue Fes Japan歴代スピーカーの一覧をNuxtにて公開し、サイトデザインをClaude Designで刷新されたことを紹介。その後ubugeeei氏のPRでvuerend/VizeによるRustツールチェーンへ「kingnize」され、MPA化やVize Lintのフィードバックまで含めた急激なリアーキテクチャ体験を語った。個人サイトがOSS検証場になった事例についてを語る。"
   },
   {
     "date": "2026-05-22",
@@ -58,7 +58,7 @@
         "url": "https://records.yamanoku.net/tskaigi-2026/slide"
       }
     ],
-    "description": "History APIの後継であるNavigation APIの特徴（履歴エントリや遷移インターセプト等）を整理したうえで、TypeScriptのlib.dom.d.tsへ型定義が取り込まれるまでの道のりを紹介。Web標準の仕様がブラウザ実装を経てDOM型として手元に届くプロセスを追い、型定義への貢献・追跡の視点を示した。"
+    "description": "History API・Location APIの後継であるNavigation APIの特徴を整理したうえで、TypeScriptのlib.dom.d.tsへの型定義が取り込まれるまでの道のりを紹介。Web標準の仕様がブラウザ実装を経てDOM型として手元に届くプロセスを追い、型定義への貢献・追跡の視点を示した。"
   },
   {
     "date": "2026-03-23",
@@ -69,7 +69,7 @@
         "url": "https://speakerdeck.com/yamanoku/navigation-api-sveltekit-web-standards"
       }
     ],
-    "description": "SvelteKitが独自のLinkコンポーネントを持たず、標準のa要素でSPA遷移を実現している点に着目。クリックやキー操作の除外判定、アンカー処理などルーティング実装を追い、FetchやFormDataなどプラットフォームAPIを活かす姿勢を確認。NuxtLinkとの対比を通じ、Web標準志向が実装判断を減らす利点を示した。"
+    "description": "SvelteKitが独自のLinkコンポーネントを持たず、Web標準のa要素でSPA遷移を実現している点に着目。クリックやキー操作の除外判定、アンカー処理など独自のルーティング実装を追い、他Linkコンポーネントとの対比を通じ、Web標準志向が実装判断を減らす利点を示す。加えてNavigation APIがSvelteKitで導入されるべきかを自身の見解を交えて語った。"
   },
   {
     "date": "2026-03-06",
@@ -80,7 +80,7 @@
         "url": "https://speakerdeck.com/yamanoku/shifting-from-mcp-to-skills"
       }
     ],
-    "description": "フロントエンドでもAIエージェントが書くコードが増える中、外部ツール連携の統一規格としてのMCPを解説し、Baseline情報を返す自作MCPサーバーの経験も紹介。その後ベストプラクティスがMCP中心からSkillsへ移る流れを追い、エージェントに正確な知識を渡す形がどう変遷したかを整理した。"
+    "description": "フロントエンドでもAIエージェントが書くコードが増える中、ベストプラクティスがMCPサーバーからSkillsへ移る流れを追った。それぞれの特徴を紹介した上で、今現在のエージェントに正確なコンテキストの渡し方について解説した。"
   },
   {
     "date": "2026-02-28",
@@ -91,7 +91,7 @@
         "url": "https://docs.google.com/presentation/d/e/2PACX-1vRuddSQ6OqS0cTmfpd5uA5KezqwofFs10JLVL8-oV0vmxw2NT2Iq0j7Y38RmK6kunz58ZyIDSyqkKjb/pub?start=false&loop=false&delayms=3000"
       }
     ],
-    "description": "適切なHTMLの利用、useIdやuseRef/useEffectによるフォーカス管理、React Aria等のヘッドレスUIという実装の三本柱を整理。加えてeslint-plugin-jsx-a11yやaxe、スクリーンリーダー検証などの多層チェックと、CIやデザインシステムによる継続改善の仕組みをポスター形式で提示した。"
+    "description": "適切なHTMLの利用、useIdやuseRef/useEffectによるフォーカス管理、React Aria等のヘッドレスUIという実装の三本柱を整理。加えてeslint-plugin-jsx-a11yや@axe-core/playwright、スクリーンリーダー検証などの多層チェックと、CIやデザインシステムによる継続改善の仕組みをポスターセッションで提示した。"
   },
   {
     "date": "2026-02-12",
@@ -102,7 +102,7 @@
         "url": "https://speakerdeck.com/yamanoku/why-choose-vue-nuxt"
       }
     ],
-    "description": "株式会社Schooの事例発表。Schoo for Personal/Schoo for Business/Swingなどプロダクトごとの構成を示しつつ、既存資産やチーム状況を踏まえてVue.js/Nuxtを選び続けている理由を共有。技術選定を「みんなで」語る場における現場寄りの意思決定事例として紹介した。"
+    "description": "各社でのフロントエンド技術選定における株式会社Schooの事例。Schoo for Personal/Schoo for Business/Schoo Swingなどプロダクトごとの構成を示しつつ、既存資産やチーム状況を踏まえてVue.js/Nuxtを選び続けている理由を共有。技術選定を「みんなで」語る場における現場寄りの意思決定事例として紹介した。"
   },
   {
     "date": "2026-01-10",
@@ -124,7 +124,7 @@
         "url": "https://docs.google.com/presentation/d/e/2PACX-1vRGV-SxffwYBEvr5Bc9jbWStWvjDch2vEV40wwN1ew8vW1Ya7YSkxRTn4e1RSFiV5_yF1PscUUEFgXD/pub?start=false&loop=false&delayms=3000"
       }
     ],
-    "description": "2025年のフロントエンド動向を俯瞰したうえで、個人で取り組んだNavigation API Advent Calendarを紹介。画面遷移や履歴周りの課題意識からAPIを日々深掘りした連載の狙いと、得られた学びをコミュニティ向けに共有した。"
+    "description": "2025年のフロントエンド動向を俯瞰したうえで、自身が注目するInterop 2025から個人で取り組んだNavigation API Advent Calendarを紹介。画面遷移や履歴周りの課題意識からAPIを日々深掘りした連載の狙いと、得られた学びをコミュニティ向けに共有した。"
   },
   {
     "date": "2025-11-07",
@@ -146,7 +146,7 @@
         "url": "https://records.yamanoku.net/vuefes-japan-2025/slide/1"
       }
     ],
-    "description": "AIエージェントでの開発が主流となってきた現在における特定フレームワークに閉じないWebアプリ全体のアクセシビリティ改善論。アクセシビリティの前提を揃えたうえで、生成AIが実装・検証に与える影響と、人が担保すべき観点や継続的な改善プロセスを実践的に提示。AI活用と人の責任分界を意識したa11y改善の話。"
+    "description": "AIエージェントでの開発が主流となってきた現在における特定フレームワークに閉じないWebアプリ全体のアクセシビリティ改善論。アクセシビリティの前提を揃えたうえで、生成AIが実装・検証に与える影響と、人が担保すべき観点や継続的な改善プロセスを実践的に提示。AI活用と人の責任分界を意識したアクセシビリティ改善の話について語った。"
   },
   {
     "date": "2025-10-24",
@@ -157,7 +157,7 @@
         "url": "https://scrapbox.io/yamanoku/Svelte_Accessibility_on_2025-10-24"
       }
     ],
-    "description": "2024年のAccessibility Warnings発表以降の差分を紹介。コンパイラ警告のa11yルールが32から42へ増え、明示的ラベルや暗黙ロールでのARIA対応など新規項目が加わった点を解説。2025/10/24時点のSvelteとアクセシビリティの関係をアップデートした。"
+    "description": "2024年のSvelte Accessibility Warnings発表以降のアクセシビリティに関するアップデートされた差分を2025/10/24時点のもので紹介。コンパイラ警告のa11yルールが32から42へ増え、useIdや視差効果を減らす場合に反映できるAPIが加わったこと、加えてHTMLの自己完結型タグをSvelteでどう扱うかについても決まった話を共有。"
   },
   {
     "date": "2025-09-08",
@@ -168,7 +168,7 @@
         "url": "https://scrapbox.io/yamanoku/%E6%94%B9%E3%82%81%E3%81%A6%E3%82%AB%E3%83%AB%E3%83%BC%E3%82%BB%E3%83%AB%E3%82%92%E8%A6%8B%E3%81%A4%E3%82%81%E7%9B%B4%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B_Summer_2025"
       }
     ],
-    "description": "カルーセル／スライダー／スライドといった用語の揺れを整理し、Web UIとして実装する際に必要な要素とアクセシブルにするための要件を再検討した。用途の是非や批判は扱わず、実装で分かったことと最新技術での解決策に焦点を当てた。"
+    "description": "カルーセルをWeb UIとして実装する際に必要な要素とアクセシブルにするための要件を再整理した。用途の是非や批判は扱わず、実装で分かったことと最新技術での解決策とその問題点についてを語った。"
   },
   {
     "date": "2025-06-18",
@@ -177,9 +177,13 @@
       {
         "title": "DenoとJSRで実現する最速MCPサーバー開発記",
         "url": "https://speakerdeck.com/yamanoku/building-mcp-servers-at-lightning-speed-with-deno-and-jsr"
+      },
+      {
+        "title": "toranoana.deno #21 アーカイブ(YouTube)",
+        "url": "https://youtu.be/gPDEjcH58k0?t=2178"
       }
     ],
-    "description": "DenoとJSRを組み合わせることでMCPサーバーを短時間で試作できる利点と手順を共有し、「最速」で開発する実践記としてまとめた。"
+    "description": "DenoとJSRを組み合わせることでMCPサーバーを短時間で試作できる利点と手順を共有し、「最速」で開発する実践記としてまとめた。自身が作成した3つのMCPサーバーについても紹介した。"
   },
   {
     "date": "2025-06-06",
@@ -190,7 +194,7 @@
         "url": "https://scrapbox.io/yamanoku/Proposal_for_ECMAScript_enums%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BC%882025-06-06%E6%99%82%E7%82%B9%EF%BC%89"
       }
     ],
-    "description": "本編のEnum発表を受け、TC39のProposal for ECMAScript enums（当時Stage 1）を紹介。TypeScript Enumとの互換を目指す一方、自動初期化や宣言マージなど挙動が異なる点を整理し、「時代遅れ」と言われるEnumを標準化の文脈で捉え直した。"
+    "description": "本編のEnum発表を受け、TC39のProposal for ECMAScript enums（発表当時はStage 1）を紹介。TypeScript Enumとの互換を目指す一方、自動初期化や宣言マージなど挙動が異なる点を整理し、「時代遅れ」と言われるEnumを標準化の文脈で紹介した。"
   },
   {
     "date": "2025-05-23",
@@ -201,7 +205,7 @@
         "url": "https://records.yamanoku.net/tskaigi-2025/"
       }
     ],
-    "description": "TypeScriptのEnumに転生した主人公の物語形式で歴史と苦境を解説。数値Enumの型安全性やTree-shakingの問題、Union型・as constへの移行圧力、strip-typesやerasableSyntaxOnlyの影響を踏まえ、聴者がEnumの是非を見つめ直せる内容にした。"
+    "description": "TypeScriptのEnumに転生した主人公の物語形式で歴史と苦境を解説。数値Enumの型安全性やTree-shakingの問題、Union型・as constへの移行圧力、strip-typesやerasableSyntaxOnlyの影響を踏まえ、聴者がEnumについてを今一度見つめ直す内容を紹介した。"
   },
   {
     "date": "2025-05-17",
@@ -223,7 +227,7 @@
         "url": "https://speakerdeck.com/yamanoku/learning-alien-signals-from-the-evolution-of-reactive-systems"
       }
     ],
-    "description": "ObserverパターンやPub-Sub、Push/Pullといったリアクティビティの変遷を追い、その延長線上でalien-signalsを理解する発表。Vue周辺の後続トークにもつながるよう、シグナル系リアクティブシステムの位置づけと基本概念を整理した。"
+    "description": "近年のWebフロントエンド開発において「リアクティビティ」という概念が広まっており、その内容についてを理解するための基本的な仕組みや概念についてを紹介。ObserverパターンやPub-Sub、Push/Pullといったリアクティビティシステムの変遷を追い、Signalsというインターフェイスの紹介、そのライブラリとしてのalien-signalsについてを触れる。"
   },
   {
     "date": "2025-02-18",
@@ -234,7 +238,7 @@
         "url": "https://qiita.com/okuto_oyama/items/31ea75201d84856df8f8"
       }
     ],
-    "description": "汎用フォーム部品でidを固定すると重複し、ラベルクリックで別フィールドにフォーカスが飛ぶ問題を実演。Vue 3.5のuseIdで一意なIDを発行しアクセシブルな共通コンポーネントを作る解法を解説した。Vue Fes落選プロポーザルの供養も兼ねた実践的なLT。"
+    "description": "汎用フォーム部品でID属性を固定すると重複し、ラベルクリックで別フィールドにフォーカスが飛ぶ問題を実演。Vue 3.5のuseIdで一意なIDを発行しアクセシブルな共通コンポーネントを作る解法を解説した。Vue Fes Japan 2024での落選プロポーザルの供養も兼ねた実践的なLT。"
   },
   {
     "date": "2025-02-08",
@@ -278,7 +282,7 @@
         "url": "https://docs.google.com/presentation/d/e/2PACX-1vT22K28-kR821F3K_4UGLhx1UVD1EmyC5hoqGGUjtMO9Glg_btK048U8Vth1oMnjCTWaBTxXaRlGqL_/pub?start=false&loop=false&delayms=3000"
       }
     ],
-    "description": "「アクセシビリティ、何から始めるか」に迷う人向けに、日本企業のa11y事例を集めたawesome-japanese-a11y-companiesを紹介。WebA11y.jpなど既存まとめを参考に日本企業に絞って2021年から継続収集してきた背景と、事例を知る入り口としての使い方を共有した。"
+    "description": "「所属する企業でアクセシビリティ、何から始めるか」を迷っている人向けに、日本企業のアクセシビリティ事例を集めたawesome-japanese-a11y-companiesを紹介。WebA11y.jpなど既存まとめを参考に日本企業に絞って2021年から継続収集してきた背景と、事例を知る入り口としての使い方を共有した。"
   },
   {
     "date": "2024-04-25",
@@ -289,7 +293,7 @@
         "url": "https://scrapbox.io/yamanoku/%E4%BB%A4%E5%92%8C%E6%9C%80%E6%96%B0%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E4%BA%8B%E6%83%85"
       }
     ],
-    "description": "HexoなどJavaScriptによる静的サイトジェネレート（SSG）を中心にこれまでの歴史と現状を振り返り、どんなジェネレーターがありどう進化してきたかを俯瞰した。"
+    "description": "HexoなどJavaScriptによる静的サイトジェネレート（SSG）を中心にこれまでの歴史と現状を振り返り、どのようなジェネレーターが生まれどう進化してきたかを俯瞰。自身が推すAstroについても最後に紹介した。"
   },
   {
     "date": "2024-02-21",
@@ -300,7 +304,7 @@
         "url": "https://docs.google.com/presentation/d/e/2PACX-1vQ8UFLM2Rxnx-pf8ZI9SgU5ZKY5hPpLQa060LHDQ9fu4ddHVPJO_ECDOomNlSp6a0PyeL6UNc36kt6r/pub?start=false&loop=false&delayms=3000"
       }
     ],
-    "description": "Svelteコンパイラに組み込まれたAccessibility Warnings（当時32ルール）を紹介。Rich Harrisの「良いWeb市民」としての意図やeslint-plugin-jsx-a11y由来のルールを踏まえ、望ましくない書き方がCI上でwarningになる仕組みと各ルールの意義を解説した。"
+    "description": "Svelteコンパイラに組み込まれたAccessibility Warnings（当時32ルール）を紹介。Rich Harrisの「良いWeb市民でありたい」意図やeslint-plugin-jsx-a11y由来のルールを踏まえ、望ましくない書き方がCLIにてwarningとなる仕組みとその各ルールの中で有効に使われているか怪しい部分についてを指摘。"
   },
   {
     "date": "2023-12-01",
@@ -326,7 +330,7 @@
         "url": "https://www.youtube.com/watch?v=NYq68T1ZL3U"
       }
     ],
-    "description": "MPAからAjax/Pjax、SPAのクライアントサイドルーティングまでの遷移史を整理し、フォーカスや履歴復元などa11y課題を指摘。History APIの限界を踏まえ、より柔軟な遷移制御が可能なNavigation APIへの期待と、アクセシブルな画面遷移の展望を述べた。"
+    "description": "MPAからAjax/Pjax、SPAのクライアントサイドルーティングまでの遷移史を整理し、フォーカスや履歴復元などアクセシビリティ課題を指摘。History APIの限界を踏まえ、より柔軟な遷移制御が可能なNavigation APIへの期待と、クライアントサイドでのアクセシブルな画面遷移の展望を述べた。"
   },
   {
     "date": "2023-10-28",
@@ -337,7 +341,7 @@
         "url": "https://records.yamanoku.net/vuefes-japan-2023/ja/"
       }
     ],
-    "description": "Webアクセシビリティの前提を共有したうえで、Nuxtアプリの画面遷移で起きやすい課題に着目。遷移時のフォーカス管理などを軸に、よりアクセシブルなNuxtアプリケーションを実現する考え方を示し、コンポーネント単位を超えて遷移体験全体でa11yを考える視座を提供した。"
+    "description": "Webアクセシビリティの前提を共有したうえで、Nuxtアプリの画面遷移で起きやすい課題に着目。遷移時のフォーカス管理などを軸に、よりアクセシブルなNuxtアプリケーションを実現する考え方を示し、コンポーネント単位を超えて遷移体験全体でアクセシビリティを考える視座を提供した。"
   },
   {
     "date": "2023-06-24",
@@ -392,7 +396,7 @@
         "url": "https://scrapbox.io/yamanoku/Storybook_%E3%81%A7%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E9%96%8B%E7%99%BA%E3%81%AE%E6%B2%BB%E5%AE%89%E3%82%92%E8%89%AF%E3%81%8F%E3%81%97%E3%81%A6%E3%81%84%E3%81%8F%E8%A9%B1"
       }
     ],
-    "description": "事業会社のモノリスなフロントエンドで、テンプレートやバックエンドにUIが埋もれがちな課題を踏まえ、Storybookでコンポーネントを切り出して可視化・検証する取り組みを紹介。開発の見通しと品質、いわゆる治安、を良くする実践として共有した。"
+    "description": "事業会社のモノリスなフロントエンドで、テンプレートやバックエンドにUIが埋もれがちな課題を踏まえ、Storybookでコンポーネントを切り出して可視化・検証する取り組みを紹介。開発の見通しと品質とコードの治安を良くする実践の共有。"
   },
   {
     "date": "2022-05-19",
@@ -418,7 +422,7 @@
         "url": "https://youtu.be/gicxddOl6rM?t=3895"
       }
     ],
-    "description": "書籍『HTML解体新書』の出版記念イベントにおける座談会。HTMLの学び直しや仕様との向き合い方をめぐるトーク。"
+    "description": "書籍『HTML解体新書』の出版記念イベントにおける座談会。HTMLの学び直しや仕様との向き合い方をめぐるトークで、フロントエンドエンジニアの観点からどうマークアップするか、デザイナーと協業していくことについてを語った。"
   },
   {
     "date": "2022-01-19",
@@ -466,7 +470,7 @@
         "url": "https://docs.google.com/presentation/d/e/2PACX-1vRfZCfZpjvKndrrHZYH4QQsMM8JwcRYCbYlgeIaJxEQdvz5BbWFx2pKv2ctZ1KT8CTztpC-hR1n6vIO/pub?start=false&loop=false&delayms=3000&slide=id.gea777a4fa5_0_329"
       }
     ],
-    "description": "HTMLクイズなども交え、ネイティブHTMLだけで複雑なUIを組む限界を示した。一方で無理にHTMLのみへ閉じず、ユースケースに応じてARIAやJavaScriptも使う現実的な判断を提案し、マークアップと向き合うバランス感覚を論じた。"
+    "description": "HTMLクイズなども交え、ネイティブHTMLだけで複雑なUIを組む限界を示した。一方で無理にHTMLのみへ閉じず、ユースケースに応じてWAI-ARIAやJavaScriptも使う現実的な判断を提案し、マークアップと向き合うバランス感覚を論じた。"
   },
   {
     "date": "2021-06-26",
@@ -484,11 +488,15 @@
     "event": "Front-End Study #3",
     "resources": [
       {
+        "title": "これからもつづけるWebアクセシビリティ",
+        "url": "https://docs.google.com/presentation/d/1bWjpa1WwL-gQT7misOvC0TOKersl-m2pyE-LIP-kWbk/edit?usp=sharing"
+      },
+      {
         "title": "Front-End Study #3「『当たり前』をつくりだすWebアクセシビリティ」 アーカイブ(YouTube)",
         "url": "https://www.youtube.com/watch?v=eX8Lf20ETew&t=3902s"
       }
     ],
-    "description": "プロダクト開発の中でWebアクセシビリティを特別扱いせず「当たり前」として組み込む考え方を扱った発表。「特別な対応」ではなく開発の前提へa11yを降ろす意識変革が主題。"
+    "description": "プロダクト開発の中でWebアクセシビリティを特別扱いせず「当たり前」として組み込む考え方を扱った発表。「特別な対応」ではなく開発の前提へアクセシビリティをシフトレフトしていくための内容を共有。これからWebアクセシビリティをやっていくために参考になるもの、必要なツール、念頭に置くべきこと、これからの活動を継続させるヒント（一例）についてを語った。"
   },
   {
     "date": "2020-12-08",
@@ -499,7 +507,7 @@
         "url": "https://docs.google.com/presentation/d/1GTJrGrcHZPvwknYBwtav9GnofAqVjLWpzQPJvtGZQQw/edit#slide=id.gaf58e18b33_0_232"
       }
     ],
-    "description": "Vue 3の公式ドキュメントにAccessibilityセクションが追加されたことを歓迎しつつ、Vueでのアクセシビリティの始め方を紹介。前年のRoppongi.vueでの発表にも触れ、フレームワーク利用の初期段階からa11yを意識する入口を示した。"
+    "description": "Vue 3の公式ドキュメントにAccessibilityセクションが追加されたことを歓迎しつつ、Vue.jsでのアクセシビリティの始め方を紹介。前年のRoppongi.vueでの発表にも触れ、フレームワーク利用の初期段階からアクセシビリティを意識する入口を示した。"
   },
   {
     "date": "2020-09-29",
@@ -565,7 +573,7 @@
         "url": "https://scrapbox.io/yamanoku/stylelint-a11y%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%BF%E3%81%B9%E3%81%A6%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8"
       }
     ],
-    "description": "VueConf USなどで言及されたstylelint-a11yを調べ、生成コンテンツやコントラストなど各ルールの意図と挙動を紹介。CSSリンティングの段階でアクセシビリティ上の問題を検知する手段としての所感をまとめ、導入判断の材料を渡す調査LTだった。"
+    "description": "VueConf USなどで言及されたstylelint-a11yを調べ、生成コンテンツやコントラストなど各ルールの意図と挙動を紹介。CSSリンティングの段階でアクセシビリティ上の問題を検知する手段としての所感をまとめ、導入判断の材料を渡す調査LT。"
   },
   {
     "date": "2019-06-28",
@@ -576,7 +584,7 @@
         "url": "https://scrapbox.io/yamanoku/deno%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%BF%E3%81%B9%E3%81%9F%E3%81%93%E3%81%A8%E3%82%92%E5%85%B1%E6%9C%89%E3%81%99%E3%82%8B"
       }
     ],
-    "description": "当時注目され始めていたDenoについて調べた内容を共有。Rust製であること、Node.js作者Ryan Dahlによるものであることなど概要と特徴を整理し、新しいJavaScriptランタイムへの関心をコミュニティに広げた。"
+    "description": "当時注目され始めていたDenoについて調べた内容を共有。Rust製であること、Node.js作者Ryan Dahlによるものであることなど概要と特徴を整理し、新しいJavaScriptランタイムへの関心をコミュニティに共有した。"
   },
   {
     "date": "2019-05-29",
