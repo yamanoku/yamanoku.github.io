@@ -28,9 +28,10 @@ export function groupRecordsByYear(
 }
 
 export function formatTalkDate(isoDate: string): string {
+  const year = Number(isoDate.slice(0, 4));
   const month = Number(isoDate.slice(5, 7));
   const day = Number(isoDate.slice(8, 10));
-  return `${month}月${day}日`;
+  return `${year}年${month}月${day}日`;
 }
 
 export function isUpcoming(isoDate: string, now: Date): boolean {
