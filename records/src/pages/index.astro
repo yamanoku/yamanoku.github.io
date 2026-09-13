@@ -16,18 +16,27 @@ const now = new Date();
 ---
 
 <Layout>
-  <h1>Records</h1>
-  <p>やまのく（yamanoku）のこれまでの登壇・発表のまとめページ
+  <h1 class="text-y-h2 leading-y-rhythm-4">Records</h1>
+  <p>
+    やまのく（yamanoku）のこれまでの登壇・発表のまとめページ
   </p>
   <YearNav years={years} />
   {
-    recordsByYear.map(([year, yearRecords]) => (
+    recordsByYear.map(([year, yearRecords], index) => (
       <section
-        class="year-block"
+        class="scroll-mt-[calc(var(--y-rhythm-5)+var(--y-rhythm-4))]"
         id={`year-${year}`}
         aria-labelledby={`year-${year}-heading`}
       >
-        <h2 class="year-heading" id={`year-${year}-heading`}>{year}年</h2>
+        <h2
+          class:list={[
+            "mb-y-rhythm-2 font-bold leading-y-rhythm-5 text-y-identity-color dark:text-y-white-base",
+            index === 0 ? "mt-y-rhythm-3" : "mt-y-rhythm-4"
+          ]}
+          id={`year-${year}-heading`}
+        >
+          {year}年
+        </h2>
         {yearRecords.map((record) => (
           <RecordEntry record={record} upcoming={isUpcoming(record.date, now)} />
         ))}
@@ -35,31 +44,3 @@ const now = new Date();
     ))
   }
 </Layout>
-
-<style>
-  h1 {
-    font-size: var(--y-h2-size);
-    line-height: var(--y-rhythm-4);
-  }
-
-  .year-block {
-    scroll-margin-top: calc(var(--y-rhythm-5) + var(--y-rhythm-4));
-  }
-
-  .year-heading {
-    margin-block: var(--y-rhythm-4) var(--y-rhythm-2);
-    font-weight: 700;
-    line-height: var(--y-rhythm-5);
-    color: var(--y-identity-color);
-  }
-
-  .year-block:first-of-type .year-heading {
-    margin-block-start: var(--y-rhythm-3);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .year-heading {
-      color: var(--y-white-base);
-    }
-  }
-</style>

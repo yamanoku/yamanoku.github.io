@@ -9,21 +9,27 @@ interface Props {
 const { record, upcoming } = Astro.props;
 ---
 
-<article class="record">
-  <div class="record-layout">
-    <p class="record-when">
+<article class="border-b-dotted">
+  <div
+    class="grid grid-cols-1 items-start gap-x-y-rhythm-2 gap-y-y-rhythm-1 sm:grid-cols-[6.75em_minmax(0,1fr)] sm:gap-y-0"
+  >
+    <p
+      class="m-0 flex flex-row flex-wrap gap-x-y-rhythm-1 text-y-small leading-y-rhythm-3 sm:flex-col"
+    >
       <time datetime={record.date}>{formatTalkDate(record.date)}</time>
-      {upcoming && <span class="record-upcoming">予定</span>}
+      {upcoming && <span class="text-y-body-text">予定</span>}
     </p>
-    <div class="record-body">
-      <h3 class="record-title">{record.event}</h3>
+    <div>
+      <h3 class="mt-0 text-y-h3 leading-y-rhythm-3 font-bold">
+        {record.event}
+      </h3>
       {record.resources.length === 1 ? (
-        <p class="record-resources">
+        <p>
           <a href={record.resources[0].url}>{record.resources[0].title}</a>
         </p>
       ) : (
         record.resources.length > 1 && (
-          <ul class="record-resources">
+          <ul>
             {record.resources.map((resource) => (
               <li>
                 <a href={resource.url}>{resource.title}</a>
@@ -33,59 +39,9 @@ const { record, upcoming } = Astro.props;
         )
       )}
       {record.description && (
-        <p class="record-description">{record.description}</p>
+        <p class="text-y-small">{record.description}</p>
       )}
-      {record.note && <p class="record-note">{record.note}</p>}
+      {record.note && <p class="text-y-small">{record.note}</p>}
     </div>
   </div>
 </article>
-
-<style>
-  .record {
-    border-block-end-style: dotted;
-  }
-
-  .record-layout {
-    display: grid;
-    grid-template-columns: 6.75em minmax(0, 1fr);
-    column-gap: var(--y-rhythm-2);
-    align-items: start;
-  }
-
-  .record-when {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    font-size: calc(var(--y-typography-base) / var(--y-font-ratio));
-    line-height: var(--y-rhythm-3);
-  }
-
-  .record-upcoming {
-    color: var(--y-body-text-color);
-  }
-
-  .record-title {
-    font-size: var(--y-h3-size);
-    line-height: var(--y-rhythm-3);
-    font-weight: 700;
-    margin-block-start: 0;
-  }
-
-  .record-description,
-  .record-note {
-    font-size: calc(var(--y-typography-base) / var(--y-font-ratio));
-  }
-
-  @media (max-width: 40rem) {
-    .record-layout {
-      grid-template-columns: 1fr;
-      row-gap: var(--y-rhythm-1);
-    }
-
-    .record-when {
-      flex-direction: row;
-      flex-wrap: wrap;
-      column-gap: var(--y-rhythm-1);
-    }
-  }
-</style>

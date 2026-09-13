@@ -6,49 +6,21 @@ interface Props {
 const { years } = Astro.props;
 ---
 
-<nav class="year-nav" aria-label="年ごとの記録">
-  <ol class="year-nav-list">
+<nav
+  class="sticky top-0 z-[1] my-y-rhythm-3 -mx-y-container overflow-x-auto whitespace-nowrap border-y-hr-border-color border-b-2 bg-y-body-background px-y-container py-y-rhythm-2"
+  aria-label="年ごとの記録"
+>
+  <ol
+    class="m-0 flex list-none flex-nowrap gap-x-y-rhythm-2 gap-y-y-rhythm-1 p-0"
+  >
     {
       years.map((year) => (
-        <li>
-          <a href={`#year-${year}`}>{year}年</a>
+        <li class="leading-y-rhythm-3">
+          <a class="text-inherit visited:text-inherit" href={`#year-${year}`}>
+            {year}年
+          </a>
         </li>
       ))
     }
   </ol>
 </nav>
-
-<style>
-  .year-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    margin-block: var(--y-rhythm-3);
-    margin-inline: calc(var(--y-container-padding) * -1);
-    padding-block: var(--y-rhythm-2);
-    padding-inline: var(--y-container-padding);
-    background-color: var(--y-body-background);
-    border-block-end: 2px solid var(--y-hr-border-color);
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .year-nav-list {
-    display: flex;
-    flex-wrap: nowrap;
-    column-gap: var(--y-rhythm-2);
-    row-gap: var(--y-rhythm-1);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .year-nav-list li {
-    line-height: var(--y-rhythm-3);
-  }
-
-  .year-nav a,
-  .year-nav a:visited {
-    color: inherit;
-  }
-</style>
