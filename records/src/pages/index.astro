@@ -16,26 +16,23 @@ const now = new Date();
 ---
 
 <Layout>
-  <h1 class="text-y-h2 leading-y-rhythm-4">Records</h1>
+  <h1>Records</h1>
   <p>
     やまのく（yamanoku）のこれまでの登壇・発表のまとめページ
   </p>
   <YearNav years={years} />
   {
-    recordsByYear.map(([year, yearRecords], index) => (
+    recordsByYear.map(([year, yearRecords]) => (
       <section
-        class="scroll-mt-[calc(var(--y-rhythm-5)+var(--y-rhythm-4))]"
+        class="scroll-mt-[100px] m-0 mbe-[5lh]"
         id={`year-${year}`}
         aria-labelledby={`year-${year}-heading`}
       >
         <h2
-          class:list={[
-            "mb-y-rhythm-2 font-bold leading-y-rhythm-5 text-y-identity-color dark:text-y-white-base",
-            index === 0 ? "mt-y-rhythm-3" : "mt-y-rhythm-4"
-          ]}
+          class="text-y-identity-color dark:text-y-white-base"
           id={`year-${year}-heading`}
         >
-          {year}年
+          <span class="text-y-h2">{year}</span>年
         </h2>
         {yearRecords.map((record) => (
           <RecordEntry record={record} upcoming={isUpcoming(record.date, now)} />

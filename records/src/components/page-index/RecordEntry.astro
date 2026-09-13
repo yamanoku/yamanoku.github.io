@@ -9,18 +9,18 @@ interface Props {
 const { record, upcoming } = Astro.props;
 ---
 
-<article class="border-b-dotted">
+<article style="border-block-end-style: dotted;">
   <div
-    class="grid grid-cols-1 items-start gap-x-y-rhythm-2 gap-y-y-rhythm-1 sm:grid-cols-[6.75em_minmax(0,1fr)] sm:gap-y-0"
+    class="grid grid-cols-1 items-start gap-x-y-rhythm-2 gap-y-y-rhythm-2 sm:grid-cols-[6.75em_minmax(0,1fr)] sm:gap-y-0"
   >
     <p
       class="m-0 flex flex-row flex-wrap gap-x-y-rhythm-1 text-y-small leading-y-rhythm-3 sm:flex-col"
     >
       <time datetime={record.date}>{formatTalkDate(record.date)}</time>
-      {upcoming && <span class="text-y-body-text">予定</span>}
+      {upcoming && <span class="text-y-body-text">発表予定</span>}
     </p>
     <div>
-      <h3 class="mt-0 text-y-h3 leading-y-rhythm-3 font-bold">
+      <h3 class="mt-0 font-normal">
         {record.event}
       </h3>
       {record.resources.length === 1 ? (
