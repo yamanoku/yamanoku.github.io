@@ -1,0 +1,26 @@
+---
+interface Props {
+  years: string[];
+}
+
+const { years } = Astro.props;
+---
+
+<nav
+  class="sticky top-0 z-[1] my-y-rhythm-3 -mx-y-container overflow-x-auto whitespace-nowrap border-y-hr-border-color border-b-2 bg-y-body-background px-y-container py-y-rhythm-2"
+  aria-label="年ごとの記録"
+>
+  <ol
+    class="m-0 flex list-none flex-nowrap gap-x-y-rhythm-2 gap-y-y-rhythm-1 p-0"
+  >
+    {
+      years.map((year) => (
+        <li>
+          <a class="text-inherit visited:text-inherit" href={`#year-${year}`}>
+            {year}年
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+</nav>

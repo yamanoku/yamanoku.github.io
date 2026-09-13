@@ -11,6 +11,7 @@
   --spacing-y-rhythm-3: var(--y-rhythm-3);
   --spacing-y-rhythm-4: var(--y-rhythm-4);
   --spacing-y-rhythm-5: var(--y-rhythm-5);
+  --spacing-y-container: var(--y-container-padding);
   --color-y-white-base: var(--y-white-base);
   --color-y-black-base: var(--y-black-base);
   --color-y-white-low: var(--y-white-low);
@@ -20,4 +21,15 @@
   --color-y-purple-medium: var(--y-purple-medium);
   --color-y-arcticle-border-color: var(--y-arcticle-border-color);
   --color-y-identity-color: var(--y-identity-color);
+  --color-y-body-background: var(--y-body-background);
+  --color-y-body-text: var(--y-body-text-color);
+  --color-y-hr-border-color: var(--y-hr-border-color);
+  --text-y-h2: var(--y-h2-size);
+  --text-y-small: calc(var(--y-typography-base) / var(--y-font-ratio));
+}
+
+@layer components {
+  html[lang="ja"] main {
+    max-inline-size: 100%;
+  }
 }

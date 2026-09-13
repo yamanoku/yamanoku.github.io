@@ -1,0 +1,47 @@
+---
+import { formatTalkDate, type RecordItem } from "../../lib/records";
+
+interface Props {
+  record: RecordItem;
+  upcoming: boolean;
+}
+
+const { record, upcoming } = Astro.props;
+---
+
+<article style="border-block-end-style: dotted;">
+  <div
+    class="grid grid-cols-1 items-start gap-x-y-rhythm-2 gap-y-y-rhythm-2 sm:grid-cols-[8.75em_minmax(0,1fr)] sm:gap-y-0"
+  >
+    <p
+      class="m-0 flex flex-row flex-wrap gap-x-y-rhythm-1 text-y-small sm:flex-col"
+    >
+      <time datetime={record.date}>{formatTalkDate(record.date)}</time>
+      {upcoming && <span>発表予定</span>}
+    </p>
+    <div>
+      <h3 class="mt-0 font-normal">
+        {record.event}
+      </h3>
+      {record.resources.length === 1 ? (
+        <p>
+          <a href={record.resources[0].url}>{record.resources[0].title}</a>
+        </p>
+      ) : (
+        record.resources.length > 1 && (
+          <ul>
+            {record.resources.map((resource) => (
+              <li>
+                <a href={resource.url}>{resource.title}</a>
+              </li>
+            ))}
+          </ul>
+        )
+      )}
+      {record.description && (
+        <p class="text-y-small">{record.description}</p>
+      )}
+      {record.note && <p class="text-y-small">{record.note}</p>}
+    </div>
+  </div>
+</article>
