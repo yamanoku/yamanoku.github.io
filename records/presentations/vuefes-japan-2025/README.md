@@ -1,6 +1,6 @@
 # 生成AI時代のWebアプリケーションアクセシビリティ改善 / Improving Web App Accessibility in the Generative AI Era
 
-2025年10月25日に開催された [Vue Fes Japan 2025](https://vuefes.jp/2025/) にて登壇しました。このサイトは登壇した内容をテキスト化したものです。
+2025年10月25日に開催された [Vue Fes Japan 2025](https://vuefes.jp/2025/) にて登壇しました。
 
 [日本語ページ](https://records.yamanoku.net/vuefes-japan-2025/ja/)
 

@@ -1,6 +1,6 @@
 # 画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法 / How to make Nuxt applications accessible based on page transitions
 
-2023年10月28日に開催された [Vue Fes Japan 2023](https://vuefes.jp/2023/) にて登壇しました。このサイトは登壇した内容をテキスト化したものです。
+2023年10月28日に開催された [Vue Fes Japan 2023](https://vuefes.jp/2023/) にて登壇しました。
 
 [日本語ページ](https://records.yamanoku.net/vuefes-japan-2023/ja/)
 
