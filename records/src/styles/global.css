@@ -21,3 +21,12 @@
   --color-y-arcticle-border-color: var(--y-arcticle-border-color);
   --color-y-identity-color: var(--y-identity-color);
 }
+
+@layer components {
+  html {
+    scroll-padding-top: 10px;
+  }
+  html[lang="ja"] main {
+    max-inline-size: 100%;
+  }
+}

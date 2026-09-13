@@ -24,6 +24,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&display=swap&text=0123456789Records%E5%B9%B4"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
@@ -43,15 +53,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <GlobalHeader />
     <main id="main">
       <slot />
-      <section aria-labelledby="related-pages">
-        <h2 id="related-pages">yamanoku.net関連ページ</h2>
-        <ul>
-          <li><a href="https://yamanoku.net">ポータルサイト</a></li>
-          <li><a href="https://archives.yamanoku.net">アーカイブ</a></li>
-        </ul>
-      </section>
     </main>
     <GlobalFooter />
   </body>
 </html>
-

@@ -1,61 +1,65 @@
 ---
+import RecordEntry from "../components/page-index/RecordEntry.astro";
+import YearNav from "../components/page-index/YearNav.astro";
 import recordsData from "../data/records.json";
 import Layout from "../layouts/Layout.astro";
-
-interface Resource {
-  title: string;
-  url: string;
-}
-
-interface RecordItem {
-  date: string;
-  event: string;
-  resources: Resource[];
-  note?: string;
-}
+import {
+  groupRecordsByYear,
+  isUpcoming,
+  type RecordItem
+} from "../lib/records";
 
 const records = recordsData as RecordItem[];
-const recordsByYear = records.reduce<Map<string, RecordItem[]>>(
-  (groups, record) => {
-    const year = record.date.slice(0, 4);
-    groups.set(year, [...(groups.get(year) ?? []), record]);
-    return groups;
-  },
-  new Map()
-);
+const recordsByYear = groupRecordsByYear(records);
+const years = recordsByYear.map(([year]) => year);
+const now = new Date();
 ---
 
 <Layout>
   <h1>Records</h1>
-  <p>やまのく（yamanoku）のこれまでの登壇・発表のまとめページ</p>
+  <p>やまのく（yamanoku）のこれまでの登壇・発表のまとめページ
+  </p>
+  <YearNav years={years} />
   {
-    [...recordsByYear].map(([year, yearRecords]) => (
-      <>
-        <h2>{year}年</h2>
+    recordsByYear.map(([year, yearRecords]) => (
+      <section
+        class="year-block"
+        id={`year-${year}`}
+        aria-labelledby={`year-${year}-heading`}
+      >
+        <h2 class="year-heading" id={`year-${year}-heading`}>{year}年</h2>
         {yearRecords.map((record) => (
-          <>
-            <h3>
-              {record.date} {record.event}
-            </h3>
-            {record.note && <p>{record.note}</p>}
-            {record.resources.length === 1 ? (
-              <p>
-                <a href={record.resources[0].url}>{record.resources[0].title}</a>
-              </p>
-            ) : (
-              record.resources.length > 1 && (
-                <ul>
-                  {record.resources.map((resource) => (
-                    <li>
-                      <a href={resource.url}>{resource.title}</a>
-                    </li>
-                  ))}
-                </ul>
-              )
-            )}
-          </>
+          <RecordEntry record={record} upcoming={isUpcoming(record.date, now)} />
         ))}
-      </>
+      </section>
     ))
   }
 </Layout>
+
+<style>
+  h1 {
+    font-size: var(--y-h2-size);
+    line-height: var(--y-rhythm-4);
+  }
+
+  .year-block {
+    scroll-margin-top: calc(var(--y-rhythm-5) + var(--y-rhythm-4));
+  }
+
+  .year-heading {
+    margin-block: var(--y-rhythm-4) var(--y-rhythm-2);
+    font-weight: 700;
+    line-height: var(--y-rhythm-5);
+    color: var(--y-identity-color);
+  }
+
+  .year-block:first-of-type .year-heading {
+    margin-block-start: var(--y-rhythm-3);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .year-heading {
+      color: var(--y-white-base);
+    }
+  }
+</style>
