@@ -32,4 +32,14 @@
   html[lang="ja"] main {
     max-inline-size: 100%;
   }
+
+  /* Resource link favicon (Google s2 favicons) */
+  .resource-link-favicon {
+    display: inline-block;
+    inline-size: 1em;
+    block-size: 1em;
+    max-inline-size: none;
+    vertical-align: -0.125em;
+    margin-inline-end: 0.2em;
+  }
 }

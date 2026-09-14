@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  url: string;
+}
+
+const { title, url } = Astro.props;
+
+let faviconSrc: string | undefined;
+try {
+  const { hostname } = new URL(url);
+  faviconSrc = `https://www.google.com/s2/favicons?domain=${hostname}&sz=32`;
+} catch {
+  faviconSrc = undefined;
+}
+---
+
+<a href={url}>
+  {
+    faviconSrc && (
+      <img
+        src={faviconSrc}
+        alt=""
+        class="resource-link-favicon"
+        width="14"
+        height="14"
+        loading="lazy"
+        decoding="async"
+      />
+    )
+  }
+  {title}
+</a>
