@@ -24,4 +24,3 @@ export function toApexDomain(hostname: string): string {
   }
   return parts.slice(-2).join(".");
 }
-
