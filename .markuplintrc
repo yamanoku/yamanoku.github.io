@@ -7,19 +7,17 @@
     {
       "selector": "meta[property]",
       "rules": {
-        "invalid-attr": {
+        "no-unknown-attr": {
           "options": {
-            "attrs": {
-              "property": {
-                "type": "Any"
-              },
-              "content": {
-                "type": "Any"
-              }
-            }
+            "allowAttrs": ["property", "content"]
           }
         },
-        "required-attr": false
+        "no-disallowed-attr": {
+          "options": {
+            "allowAttrs": ["property", "content"]
+          }
+        },
+        "require-attr": false
       }
     }
   ]
