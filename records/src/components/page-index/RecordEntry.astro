@@ -1,5 +1,6 @@
 ---
 import { formatTalkDate, type RecordItem } from "../../lib/records";
+import ResourceLink from "./ResourceLink.astro";
 
 interface Props {
   record: RecordItem;
@@ -25,14 +26,17 @@ const { record, upcoming } = Astro.props;
       </h3>
       {record.resources.length === 1 ? (
         <p>
-          <a href={record.resources[0].url}>{record.resources[0].title}</a>
+          <ResourceLink
+            title={record.resources[0].title}
+            url={record.resources[0].url}
+          />
         </p>
       ) : (
         record.resources.length > 1 && (
           <ul>
             {record.resources.map((resource) => (
               <li>
-                <a href={resource.url}>{resource.title}</a>
+                <ResourceLink title={resource.title} url={resource.url} />
               </li>
             ))}
           </ul>

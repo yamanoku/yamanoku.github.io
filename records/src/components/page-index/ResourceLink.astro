@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  url: string;
+}
+
+const { title, url } = Astro.props;
+
+/** e.g. records.yamanoku.net → yamanoku.net (assumes single-label TLDs). Keeps www.*. */
+function toApexDomain(hostname: string): string {
+  if (hostname.startsWith("www.")) {
+    return hostname;
+  }
+  const parts = hostname.split(".");
+  if (parts.length <= 2) {
+    return hostname;
+  }
+  return parts.slice(-2).join(".");
+}
+
+let faviconSrc: string | undefined;
+try {
+  const { hostname } = new URL(url);
+  const domain = toApexDomain(hostname);
+  faviconSrc = `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
+} catch {
+  faviconSrc = undefined;
+}
+---
+
+<a href={url}>
+  {
+    faviconSrc && (
+      <img
+        src={faviconSrc}
+        alt=""
+        class="me-[0.2em] inline-block size-[1em] max-w-none border-0 align-[-0.125em] [max-inline-size:none]"
+        width="14"
+        height="14"
+      />
+    )
+  }
+  {title}
+</a>
