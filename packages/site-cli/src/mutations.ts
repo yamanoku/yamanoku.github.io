@@ -60,7 +60,7 @@ export function addStage(
     );
   }
   return validateRecords(
-    [...records, record].sort((left, right) =>
+    [...records, normalizeStageRecord(record)].sort((left, right) =>
       right.date.localeCompare(left.date)
     )
   );
@@ -77,7 +77,10 @@ export function updateStage(
   );
   if (index === -1) throw new Error(`登壇が見つかりません: ${date} ${event}`);
   const next = clone(records);
-  next[index] = { ...next[index], ...update };
+  const merged: StageRecord = { ...next[index], ...update };
+  if ("eventUrl" in update && !update.eventUrl) delete merged.eventUrl;
+  if ("note" in update && !update.note) delete merged.note;
+  next[index] = normalizeStageRecord(merged);
   return validateRecords(
     next.sort((left, right) => right.date.localeCompare(left.date))
   );
@@ -300,6 +303,17 @@ export function setSection(
   const next = clone(content);
   next.sections[section] = visible;
   return validateSiteContent(next);
+}
+
+export function normalizeStageRecord(record: StageRecord): StageRecord {
+  return {
+    date: record.date,
+    event: record.event,
+    ...(record.eventUrl ? { eventUrl: record.eventUrl } : {}),
+    resources: record.resources,
+    ...(record.description ? { description: record.description } : {}),
+    ...(record.note ? { note: record.note } : {})
+  };
 }
 
 export function pairResources(

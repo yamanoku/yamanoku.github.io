@@ -45,17 +45,19 @@ pnpm site -- writing add --title "..." --url "https://..." --datetime "..." --wr
 pnpm site -- stage add \
   --date 2026-10-24 \
   --event "Vue Fes Japan 2026" \
+  --event-url "https://vuefes.jp/2026" \
   --resource-title "資料タイトル" \
   --resource-url "https://example.com/slides" \
   --write
 ```
 
-資料が複数ある場合は `--resource-title` と `--resource-url` を同じ件数だけ繰り返します。資料未定の予定は `--note TBD` とし、resourceオプションを省略できます。
+資料が複数ある場合は `--resource-title` と `--resource-url` を同じ件数だけ繰り返します。資料未定の予定は `--note TBD` とし、resourceオプションを省略できます。`--event-url` は公式サイトがあればそれを、なければ connpass などの開催ページを指定します。
 
-更新・削除では開催日を位置引数、イベント名を `--event` で指定します。
+更新・削除では開催日を位置引数、イベント名を `--event` で指定します。`--event-url` に空文字を渡すと削除します。
 
 ```bash
 pnpm site -- stage update 2026-10-24 --event "Vue Fes Japan 2026" \
+  --event-url "https://vuefes.jp/2026" \
   --resource-title "資料タイトル" --resource-url "https://..." --write
 pnpm site -- stage remove 2026-10-24 --event "Vue Fes Japan 2026" --write
 pnpm site -- stage list

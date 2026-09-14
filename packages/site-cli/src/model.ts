@@ -99,7 +99,9 @@ export type StageResource = {
 export type StageRecord = {
   date: string;
   event: string;
+  eventUrl?: string;
   resources: StageResource[];
+  description?: string;
   note?: string;
 };
 
@@ -387,6 +389,10 @@ export function validateRecords(value: unknown): StageRecord[] {
     if (!isDate(item.date))
       issues.push(`records[${index}].date はYYYY-MM-DDにしてください`);
     addStringIssue(issues, item.event, `records[${index}].event`);
+    if (item.eventUrl !== undefined && !isHttpUrl(item.eventUrl))
+      issues.push(`records[${index}].eventUrl はHTTP(S) URLにしてください`);
+    if (item.description !== undefined && typeof item.description !== "string")
+      issues.push(`records[${index}].description は文字列にしてください`);
     if (item.note !== undefined && typeof item.note !== "string")
       issues.push(`records[${index}].note は文字列にしてください`);
     if (!Array.isArray(item.resources)) {
