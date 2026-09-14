@@ -2,12 +2,14 @@
   {
     "date": "2026-10-24",
     "event": "Vue Fes Japan 2026",
+    "eventUrl": "https://vuefes.jp/2026",
     "resources": [],
     "note": "Vue SFCから見直す正しいHTMLの守り方"
   },
   {
     "date": "2026-09-12",
     "event": "大Funabashi.dev supported by KIKKAKE CREATION 2026",
+    "eventUrl": "https://funabashidev.connpass.com/event/398253/",
     "resources": [
       {
         "title": "Webと生きて、 Webに迷って、 またWebを好きになる",
@@ -19,6 +21,7 @@
   {
     "date": "2026-07-25",
     "event": "大吉祥寺.pm 2026",
+    "eventUrl": "https://kichijojipm.connpass.com/event/387499/",
     "resources": [
       {
         "title": "お元気ですか.fm～5年間の配信で振り返る「かわるもの」と「かわらないもの」",
@@ -30,6 +33,7 @@
   {
     "date": "2026-07-17",
     "event": "Svelte Japan Offline Meetup #8",
+    "eventUrl": "https://svelte-jp.connpass.com/event/392428/",
     "resources": [
       {
         "title": "SvelteのHTMLはどう解釈されているのか",
@@ -41,6 +45,7 @@
   {
     "date": "2026-06-16",
     "event": "Vue.js v-tokyo Meetup #25",
+    "eventUrl": "https://vuejs-meetup.connpass.com/event/393624/",
     "resources": [
       {
         "title": "とあるサイトがkingnizeされるまで～Nuxtからvuerend & Vizeへ",
@@ -52,6 +57,7 @@
   {
     "date": "2026-05-22",
     "event": "TSKaigi 2026",
+    "eventUrl": "https://2026.tskaigi.org/",
     "resources": [
       {
         "title": "Navigation APIがlib.dom.d.tsに採用されるまでの道のり",
@@ -63,6 +69,7 @@
   {
     "date": "2026-03-23",
     "event": "Svelte Japan Offline Meetup #7",
+    "eventUrl": "https://svelte-jp.connpass.com/event/387062/",
     "resources": [
       {
         "title": "Navigation APIと見るSvelteKitのWeb標準志向",
@@ -74,6 +81,7 @@
   {
     "date": "2026-03-06",
     "event": "AI時代のフロントエンド実践開発！ - Finatext Tech Night #6",
+    "eventUrl": "https://finatext.connpass.com/event/385050/",
     "resources": [
       {
         "title": "Shifting from MCP to Skills / ベストプラクティスの変遷を辿る",
@@ -85,6 +93,7 @@
   {
     "date": "2026-02-28",
     "event": "React Tokyoフェス2026",
+    "eventUrl": "https://react-tokyo.vercel.app/fes2026",
     "resources": [
       {
         "title": "ReactにおけるWebアクセシビリティ実践",
@@ -96,6 +105,7 @@
   {
     "date": "2026-02-12",
     "event": "フロントエンドでの技術選定 —— 「みんなで」語り尽くそう！",
+    "eventUrl": "https://codmon.connpass.com/event/379236/",
     "resources": [
       {
         "title": "SchooでVue.js/Nuxtを技術選定している理由",
@@ -107,6 +117,7 @@
   {
     "date": "2026-01-10",
     "event": "BuriKaigi 2026",
+    "eventUrl": "https://burikaigi.dev/2026/",
     "resources": [
       {
         "title": "たかがボタン、されどボタン ～button要素から深ぼるボタンUIの定義について～",
@@ -118,6 +129,7 @@
   {
     "date": "2025-12-17",
     "event": "Mita.ts #9",
+    "eventUrl": "https://mitats.connpass.com/event/373208/",
     "resources": [
       {
         "title": "ひとりNavigation API Advent Calendarの紹介",
@@ -129,6 +141,7 @@
   {
     "date": "2025-11-07",
     "event": "東葛.dev in 柏 LT交流会【第9回】",
+    "eventUrl": "https://toukatsu.connpass.com/event/371306/",
     "resources": [
       {
         "title": "登壇に​あたり発表資料を​どのように​作っているか 2025年版",
@@ -140,6 +153,7 @@
   {
     "date": "2025-10-25",
     "event": "Vue Fes Japan 2025",
+    "eventUrl": "https://vuefes.jp/2025",
     "resources": [
       {
         "title": "生成AI時代のWebアプリケーションアクセシビリティ改善",
@@ -151,6 +165,7 @@
   {
     "date": "2025-10-24",
     "event": "Svelte Japan Offline Meetup",
+    "eventUrl": "https://svelte-jp.connpass.com/event/367967/",
     "resources": [
       {
         "title": "Svelte Accessibility on 2025-10-24",
@@ -162,6 +177,7 @@
   {
     "date": "2025-09-08",
     "event": "Web UI 実装勉強会 #1",
+    "eventUrl": "https://ui-devs.connpass.com/event/364448/",
     "resources": [
       {
         "title": "改めてカルーセルを見つめ直してみる Summer 2025",
@@ -173,6 +189,7 @@
   {
     "date": "2025-06-18",
     "event": "toranoana.deno #21",
+    "eventUrl": "https://yumenosora.connpass.com/event/355049/",
     "resources": [
       {
         "title": "DenoとJSRで実現する最速MCPサーバー開発記",
@@ -188,6 +205,7 @@
   {
     "date": "2025-06-06",
     "event": "TSKaigi 2025事後勉強会 —— まだまだ型りたい",
+    "eventUrl": "https://smarthr.connpass.com/event/355359/",
     "resources": [
       {
         "title": "Proposal for ECMAScript enumsについて（2025-06-06時点）",
@@ -199,6 +217,7 @@
   {
     "date": "2025-05-23",
     "event": "TSKaigi 2025",
+    "eventUrl": "https://2025.tskaigi.org/",
     "resources": [
       {
         "title": "転生したら​TypeScriptの​Enumだった​件～型​安全性と​エコシステムの​変化で​挫けそうになっているんだが​～",
@@ -210,6 +229,7 @@
   {
     "date": "2025-05-17",
     "event": "React Tokyo LT大会",
+    "eventUrl": "https://react-tokyo.connpass.com/event/350715/",
     "resources": [
       {
         "title": "React 18からのAPI useIDを使おう！",
@@ -221,6 +241,7 @@
   {
     "date": "2025-03-28",
     "event": "Vue.js v-tokyo Meetup #22",
+    "eventUrl": "https://vuejs-meetup.connpass.com/event/343338/",
     "resources": [
       {
         "title": "リアクティブシステムの変遷から理解するalien-signals",
@@ -232,6 +253,7 @@
   {
     "date": "2025-02-18",
     "event": "UV Study : Vue.js LT会 ~業務で活きる実践的なVue~",
+    "eventUrl": "https://uniquevision.connpass.com/event/343955/",
     "resources": [
       {
         "title": "Vue3.5からのuseIdでアクセシブルな汎用コンポーネントを作ってみよう",
@@ -243,6 +265,7 @@
   {
     "date": "2025-02-08",
     "event": "東葛.dev in 柏 LT交流会【第4回】",
+    "eventUrl": "https://toukatsu.connpass.com/event/342553/",
     "resources": [
       {
         "title": "分散型SNSで生活してみての所感〜周辺動向と鯖引越しを添えて〜",
@@ -254,6 +277,7 @@
   {
     "date": "2024-11-29",
     "event": "アクセシビリティカンファレンス福岡 前夜祭",
+    "eventUrl": "https://lycorptech-jp.connpass.com/event/335556/",
     "resources": [
       {
         "title": "動画にまつわるアクセシビリティ要件を探る",
@@ -265,6 +289,7 @@
   {
     "date": "2024-08-24",
     "event": "フロントエンドカンファレンス北海道 2024",
+    "eventUrl": "https://www.frontend-conf.jp/2024",
     "resources": [
       {
         "title": "ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと",
@@ -276,6 +301,7 @@
   {
     "date": "2024-05-20",
     "event": "アクセシビリティやるぞ！LT祭り #5",
+    "eventUrl": "https://smarthr.connpass.com/event/315155/",
     "resources": [
       {
         "title": "日本企業のアクセシビリティ事例をコツコツと収集している話",
@@ -287,6 +313,7 @@
   {
     "date": "2024-04-25",
     "event": "Meguro.es #27",
+    "eventUrl": "https://meguroes.connpass.com/event/311788/",
     "resources": [
       {
         "title": "令和最新静的サイトジェネレーター事情",
@@ -298,6 +325,7 @@
   {
     "date": "2024-02-21",
     "event": "Svelte Japan Offline Meetup #2",
+    "eventUrl": "https://svelte-jp.connpass.com/event/308267/",
     "resources": [
       {
         "title": "Svelte Accessibility Warning",
@@ -309,6 +337,7 @@
   {
     "date": "2023-12-01",
     "event": "Meguro.css #9",
+    "eventUrl": "https://megurocss.connpass.com/event/300400/",
     "resources": [
       {
         "title": "2020年から2023年までのCSSの変遷を振り返る",
@@ -320,6 +349,7 @@
   {
     "date": "2023-11-19",
     "event": "JSConfJP 2023",
+    "eventUrl": "https://jsconf.jp/2023/",
     "resources": [
       {
         "title": "画面遷移のアクセシビリティ課題を解決しうる Navigation API への期待",
@@ -335,6 +365,7 @@
   {
     "date": "2023-10-28",
     "event": "Vue Fes Japan 2023",
+    "eventUrl": "https://vuefes.jp/2023/",
     "resources": [
       {
         "title": "画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法",
@@ -346,6 +377,7 @@
   {
     "date": "2023-06-24",
     "event": "Saitama.js vol.6",
+    "eventUrl": "https://saitamajs.connpass.com/event/283162/",
     "resources": [
       {
         "title": "WAI-ARIA の IDL 属性について",
@@ -357,6 +389,7 @@
   {
     "date": "2023-05-17",
     "event": "フロントエンドの技術的負債 みんなで学ぶ Lunch LT",
+    "eventUrl": "https://findy.connpass.com/event/281811/",
     "resources": [
       {
         "title": "当事者不在でも変化してきたクラウドワークスのフロントエンド開発について",
@@ -368,6 +401,7 @@
   {
     "date": "2023-03-21",
     "event": "Saitama.js vol.5",
+    "eventUrl": "https://saitamajs.connpass.com/event/272660/",
     "resources": [
       {
         "title": "JavaScript 開発のこれまでとこれから",
@@ -379,6 +413,7 @@
   {
     "date": "2022-10-16",
     "event": "Vue Fes Japan Online 2022",
+    "eventUrl": "https://vuefes.jp/2022",
     "resources": [
       {
         "title": "Vue.js でアクセシブルなコンポーネントをつくるために",
@@ -390,6 +425,7 @@
   {
     "date": "2022-08-30",
     "event": "Saitama.js vol.3",
+    "eventUrl": "https://saitamajs.connpass.com/event/238897/",
     "resources": [
       {
         "title": "Storybook でフロントエンド開発の治安を良くしていく話",
@@ -401,6 +437,7 @@
   {
     "date": "2022-05-19",
     "event": "GAAD Japan 2022",
+    "eventUrl": "https://www.gaad.jp/gaadjapan2022/",
     "resources": [
       {
         "title": "クラウドワークスのこれまでの取り組み、新たなミッションと考えるこれからについて",
@@ -416,6 +453,7 @@
   {
     "date": "2022-04-10",
     "event": "HTML解体新書出版記念イベント 座談会登壇",
+    "eventUrl": "https://connpass.com/event/242592/",
     "resources": [
       {
         "title": "HTML解体新書出版記念イベント アーカイブ(YouTube)",
@@ -427,6 +465,7 @@
   {
     "date": "2022-01-19",
     "event": "PWA Night vol.35",
+    "eventUrl": "https://pwanight.connpass.com/event/234721/",
     "resources": [
       {
         "title": "PWA Night vol.35 yamanoku 登壇資料",
@@ -438,6 +477,7 @@
   {
     "date": "2021-11-27",
     "event": "JSConf JP 2021",
+    "eventUrl": "https://jsconf.jp/2021/",
     "resources": [
       {
         "title": "アクセシブルなフロントエンド開発のこれまでとこれから",
@@ -453,6 +493,7 @@
   {
     "date": "2021-09-17",
     "event": "CrowdworksDevLive -働きやすさを生むCWの文化とは？ 座談会登壇",
+    "eventUrl": "https://crowdworks-dev-live.connpass.com/event/223977/",
     "resources": [
       {
         "title": "CrowdworksDevLive -働きやすさを生むCWの文化とは？アーカイブ(YouTube)",
@@ -464,6 +505,7 @@
   {
     "date": "2021-09-15",
     "event": "フロントエンドLT会 - vol.4 #frontendlt",
+    "eventUrl": "https://rakus.connpass.com/event/220712/",
     "resources": [
       {
         "title": "HTML だけで UI を作る限界、あるいは無理なくユースケースと向き合っていくためには",
@@ -475,6 +517,7 @@
   {
     "date": "2021-06-26",
     "event": "PWA Night Conference 2021 運営スタッフ、LT発表",
+    "eventUrl": "https://pwanight.connpass.com/event/204759/",
     "resources": [
       {
         "title": "PWA版Twitterをスクリーンリーダー検証してみる",
@@ -486,6 +529,7 @@
   {
     "date": "2021-01-12",
     "event": "Front-End Study #3",
+    "eventUrl": "https://forkwell.connpass.com/event/198726/",
     "resources": [
       {
         "title": "これからもつづけるWebアクセシビリティ",
@@ -501,6 +545,7 @@
   {
     "date": "2020-12-08",
     "event": "Vue.js v-tokyo オンライン Meetup#12",
+    "eventUrl": "https://vuejs-meetup.connpass.com/event/195236/",
     "resources": [
       {
         "title": "Web Accessibility Starting with Vue3",
@@ -512,6 +557,7 @@
   {
     "date": "2020-09-29",
     "event": "UI/UXデザイナーLT会 #uiuxdesignerslt",
+    "eventUrl": "https://rakus.connpass.com/event/187048/",
     "resources": [
       {
         "title": "Web UIの実装で考えていることと気をつけたいこと",
@@ -523,6 +569,7 @@
   {
     "date": "2019-12-23",
     "event": "Roppongi.vue #4",
+    "eventUrl": "https://roppongi-vue.connpass.com/event/155383/",
     "resources": [
       {
         "title": "Roppongi.vue #4",
@@ -534,6 +581,7 @@
   {
     "date": "2019-12-20",
     "event": "つくばexpress.js #1",
+    "eventUrl": "https://txjs.connpass.com/event/153123/",
     "resources": [
       {
         "title": "自分の周辺情報をまとめる静的サイトをつくった",
@@ -545,6 +593,7 @@
   {
     "date": "2019-12-11",
     "event": "Scrapbox Drinkup #11",
+    "eventUrl": "https://nota.connpass.com/event/156484/",
     "resources": [
       {
         "title": "ぼくとScrapboxと2019",
@@ -556,6 +605,7 @@
   {
     "date": "2019-10-03",
     "event": "Meguro.css #7",
+    "eventUrl": "https://megurocss.connpass.com/event/145780/",
     "resources": [
       {
         "title": "Design Tokensを考える前に俺たちは変数名について考え直すことがあるのではないか",
@@ -567,6 +617,7 @@
   {
     "date": "2019-08-05",
     "event": "タピオカLT #1",
+    "eventUrl": "https://bengo4.connpass.com/event/136265/",
     "resources": [
       {
         "title": "stylelint-a11yについて調べてわかったこと",
@@ -578,6 +629,7 @@
   {
     "date": "2019-06-28",
     "event": "We Are JavaScripters! @33rd",
+    "eventUrl": "https://wajs.connpass.com/event/133203/",
     "resources": [
       {
         "title": "denoについて調べたことを共有する",
@@ -589,6 +641,7 @@
   {
     "date": "2019-05-29",
     "event": "エンジニアがスキルアップするための文化・組織づくりLT大会！",
+    "eventUrl": "https://giginc.connpass.com/event/129254/",
     "resources": [
       {
         "title": "インプットを限りなくやったら見える世界は変わってくる",
@@ -600,6 +653,7 @@
   {
     "date": "2018-11-22",
     "event": "We Are JavaScripters! @26th",
+    "eventUrl": "https://wajs.connpass.com/event/107088/",
     "resources": [
       {
         "title": "scroll handlerを捨てよ、Intersection Observerへ出よう",
@@ -611,6 +665,7 @@
   {
     "date": "2018-11-09",
     "event": "Meguro.css #4",
+    "eventUrl": "https://megurocss.connpass.com/event/103713/",
     "resources": [
       {
         "title": "outline: none;",
@@ -622,6 +677,7 @@
   {
     "date": "2018-10-15",
     "event": "すくすく！子育てエンジニア Meetup #3",
+    "eventUrl": "https://childcare.connpass.com/event/100974/",
     "resources": [
       {
         "title": "家庭内にScrapboxを導入してみる提案",

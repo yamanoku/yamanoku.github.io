@@ -173,6 +173,13 @@ const resourceArgs = {
   }
 };
 
+const eventUrlArg = {
+  eventUrl: {
+    type: "string" as const,
+    description: "イベント・カンファレンスの公式または開催ページURL"
+  }
+};
+
 const stageAddCommand = define({
   name: "add",
   description: "登壇記録を追加",
@@ -180,6 +187,7 @@ const stageAddCommand = define({
   args: {
     date: { type: "string", required: true, description: "開催日 YYYY-MM-DD" },
     event: { type: "string", required: true, description: "イベント名" },
+    ...eventUrlArg,
     ...resourceArgs,
     note: { type: "string", description: "資料未定などの注記" },
     ...writeArg
@@ -193,6 +201,9 @@ const stageAddCommand = define({
         ctx.values.resourceTitle ?? [],
         ctx.values.resourceUrl ?? []
       ),
+      ...(ctx.values.eventUrl === undefined
+        ? {}
+        : { eventUrl: ctx.values.eventUrl }),
       ...(ctx.values.note === undefined ? {} : { note: ctx.values.note })
     });
     await writeJson(paths.records, next, {
@@ -217,6 +228,7 @@ const stageUpdateCommand = define({
     event: { type: "string", required: true, description: "現在のイベント名" },
     newDate: { type: "string", description: "新しい開催日" },
     newEvent: { type: "string", description: "新しいイベント名" },
+    ...eventUrlArg,
     ...resourceArgs,
     note: { type: "string", description: "新しい注記（空文字で削除）" },
     ...writeArg
@@ -231,6 +243,11 @@ const stageUpdateCommand = define({
       ...(ctx.values.newEvent === undefined
         ? {}
         : { event: ctx.values.newEvent }),
+      ...(ctx.values.eventUrl === undefined
+        ? {}
+        : ctx.values.eventUrl === ""
+          ? { eventUrl: undefined }
+          : { eventUrl: ctx.values.eventUrl }),
       ...(resourceSpecified
         ? {
             resources: pairResources(

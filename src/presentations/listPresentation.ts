@@ -11,9 +11,14 @@ type ExactPresantationLengthArray<T> = {
   length: 5;
 } & T[];
 
+type StageListSource = ReadonlyArray<{
+  date: string;
+  resources: ReadonlyArray<{ title: string; url: string }>;
+}>;
+
 // records.json（records.yamanoku.netの登壇記録）を唯一の情報源として導出する
 export const deriveListStage = (
-  source: typeof records,
+  source: StageListSource,
   now = new Date()
 ): ListType[] =>
   source

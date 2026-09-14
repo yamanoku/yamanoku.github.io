@@ -47,4 +47,13 @@ describe("repository data validation", () => {
     const invalid = [records[1], records[0], ...records.slice(2)];
     assert.throws(() => validateRecords(invalid), /新しい順/);
   });
+
+  it("rejects an invalid eventUrl", () => {
+    const invalid = structuredClone(records);
+    invalid[0] = { ...invalid[0], eventUrl: "not-a-url" };
+    assert.throws(
+      () => validateRecords(invalid),
+      /records\[0\]\.eventUrl はHTTP\(S\) URLにしてください/
+    );
+  });
 });

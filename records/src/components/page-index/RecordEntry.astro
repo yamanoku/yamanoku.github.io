@@ -46,6 +46,11 @@ const { record, upcoming } = Astro.props;
         <p class="text-y-small">{record.description}</p>
       )}
       {record.note && <p>{record.note}</p>}
+      {record.eventUrl && (
+        <p>
+          <ResourceLink title={record.eventUrl} url={record.eventUrl} />
+        </p>
+      )}
     </div>
   </div>
 </article>

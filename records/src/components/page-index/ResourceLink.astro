@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { toApexDomain } from "../../lib/favicon-domain";
 
 interface Props {
   title: string;
@@ -7,18 +8,6 @@ interface Props {
 }
 
 const { title, url } = Astro.props;
-
-/** e.g. records.yamanoku.net → yamanoku.net (assumes single-label TLDs). Keeps www.*. */
-function toApexDomain(hostname: string): string {
-  if (hostname.startsWith("www.")) {
-    return hostname;
-  }
-  const parts = hostname.split(".");
-  if (parts.length <= 2) {
-    return hostname;
-  }
-  return parts.slice(-2).join(".");
-}
 
 let faviconSrc: string | undefined;
 try {

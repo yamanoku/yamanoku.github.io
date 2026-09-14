@@ -6,6 +6,7 @@ export type Resource = {
 export type RecordItem = {
   date: string;
   event: string;
+  eventUrl?: string;
   resources: Resource[];
   note?: string;
   description?: string;

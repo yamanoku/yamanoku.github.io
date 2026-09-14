@@ -18,7 +18,8 @@ import {
   removeTranslation,
   setProfile,
   setTranslation,
-  updateLink
+  updateLink,
+  updateStage
 } from "./mutations.js";
 
 describe("writing mutations", () => {
@@ -70,6 +71,25 @@ describe("stage mutations", () => {
       () => addStage(records as StageRecord[], records[0] as StageRecord),
       /既にあります/
     );
+  });
+
+  it("sets eventUrl without dropping description or resources", () => {
+    const current = records[1] as StageRecord;
+    const next = updateStage(
+      records as StageRecord[],
+      current.date,
+      current.event,
+      {
+        eventUrl: "https://example.com/event"
+      }
+    );
+    const updated = next.find(
+      (item) => item.date === current.date && item.event === current.event
+    );
+
+    assert.equal(updated?.eventUrl, "https://example.com/event");
+    assert.equal(updated?.description, current.description);
+    assert.deepEqual(updated?.resources, current.resources);
   });
 });
 
