@@ -187,7 +187,7 @@ catalogs:
       version: 2.0.0
 
 overrides:
-  yamanoku.github.io>vite: ^8.2.2
+  yamanoku.github.io>vite: ^8.3.0
 
 packageExtensionsChecksum: sha256-/tpsUxzak38xPTtJAqMSdL/7jBwF7hgy7k264Dv0vPY=
 
@@ -208,7 +208,7 @@ importers:
         specifier: catalog:website
         version: 4.3.3
       vite:
-        specifier: ^8.2.2
+        specifier: ^8.3.0
         version: 8.3.0(@types/node@26.4.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.0)
     devDependencies:
       '@biomejs/biome':
