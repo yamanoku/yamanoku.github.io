@@ -26,7 +26,7 @@ const t = useTranslations(Astro);
     class="flex flex-wrap justify-start items-center gap-y-rhythm-2"
     aria-label={t("multilingual")}
   >
-    <a href="/" aria-current={lang === "ja" && "page"}>日本語ページ</a>
-    <a href="/en/" aria-current={lang === "en" && "page"}>English Page</a>
+    <a href="/" aria-current={lang === "ja" ? "page" : undefined}>日本語ページ</a>
+    <a href="/en/" aria-current={lang === "en" ? "page" : undefined}>English Page</a>
   </nav>
 </header>
