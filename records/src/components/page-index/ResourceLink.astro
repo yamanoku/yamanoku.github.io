@@ -6,14 +6,19 @@ interface Props {
 
 const { title, url } = Astro.props;
 
+/** e.g. records.yamanoku.net → yamanoku.net (assumes single-label TLDs). */
+function toApexDomain(hostname: string): string {
+  const parts = hostname.split(".");
+  if (parts.length <= 2) {
+    return hostname;
+  }
+  return parts.slice(-2).join(".");
+}
+
 let faviconSrc: string | undefined;
 try {
   const { hostname } = new URL(url);
-  const domain =
-    hostname === "records.yamanoku.net" ||
-    hostname.endsWith(".records.yamanoku.net")
-      ? "yamanoku.net"
-      : hostname;
+  const domain = toApexDomain(hostname);
   faviconSrc = `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
 } catch {
   faviconSrc = undefined;
