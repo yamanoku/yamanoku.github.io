@@ -43,9 +43,11 @@ const { record, upcoming } = Astro.props;
         )
       )}
       {record.description && (
-        <p class="text-y-small">{record.description}</p>
+        <div class="border-2 border-y-description-border-color p-y-rhythm-3 rounded-sm">
+          <p class="text-y-small m-0">{record.description}</p>
+        </div>
       )}
-      {record.note && <p class="text-y-small">{record.note}</p>}
+      {record.note && <p>{record.note}</p>}
     </div>
   </div>
 </article>

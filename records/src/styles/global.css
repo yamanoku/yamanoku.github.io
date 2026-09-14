@@ -5,6 +5,16 @@
 @import 'yama-normalize/yama-normalize.css' layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 
+:root {
+  --y-description-border-color: var(--y-white-medium);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --y-description-border-color: var(--y-white-low);
+  }
+}
+
 @theme {
   --spacing-y-rhythm-1: var(--y-rhythm-1);
   --spacing-y-rhythm-2: var(--y-rhythm-2);
@@ -26,6 +36,7 @@
   --color-y-hr-border-color: var(--y-hr-border-color);
   --text-y-h2: var(--y-h2-size);
   --text-y-small: calc(var(--y-typography-base) / var(--y-font-ratio));
+  --color-y-description-border-color: var(--y-description-border-color);
 }
 
 @layer components {
@@ -33,3 +44,4 @@
     max-inline-size: 100%;
   }
 }
+
