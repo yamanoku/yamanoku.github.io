@@ -30,7 +30,7 @@ catalogs:
   website:
     "@biomejs/biome": 2.5.13
     "@tailwindcss/vite": 4.3.3
-    astro: 7.3.2
+    astro: 7.3.3
     markuplint: 5.0.0
     modern-normalize: 3.0.1
     tailwindcss: 4.3.3
