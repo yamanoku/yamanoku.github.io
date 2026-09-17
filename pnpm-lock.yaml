@@ -208,8 +208,8 @@ catalogs:
       specifier: 26.5.1
       version: 26.5.1
     gunshi:
-      specifier: 0.37.2
-      version: 0.37.2
+      specifier: 0.37.3
+      version: 0.37.3
     tsx:
       specifier: 4.23.13
       version: 4.23.13
@@ -279,7 +279,7 @@ importers:
     dependencies:
       gunshi:
         specifier: catalog:site-cli
-        version: 0.37.2
+        version: 0.37.3
     devDependencies:
       '@types/node':
         specifier: catalog:site-cli
@@ -4545,8 +4545,8 @@ packages:
     resolution: {integrity: sha512-pCcEwRi+TKpMlxAQObHDQ56KawURgyAf6jtIY046fJ5tIv3zDe/LEIubckAO8fj6JnAxLdmWkUfNyulQ2iKdEw==}
     engines: {node: '>=14.0.0'}
 
-  gunshi@0.37.2:
-    resolution: {integrity: sha512-pHsYEDSOxaNxSGIYiIYF11Lvc6OiEKw+IkfrLXRWj6bKzqI3noLX8QXOLqGTwPsM8amkpNoZG9tlpg8/4QG7MQ==}
+  gunshi@0.37.3:
+    resolution: {integrity: sha512-uwm23bguqDcleEetknuQnF5okLcgmQPM3iv4aWVHTPDbiSs9shh02F079NCY0mWkrIRjHqNhgmzW6k0FCXhy1g==}
     engines: {node: '>= 22'}
 
   gzip-size@6.0.0:
@@ -12543,7 +12543,7 @@ snapshots:
       - encoding
       - supports-color
 
-  gunshi@0.37.2: {}
+  gunshi@0.37.3: {}
 
   gzip-size@6.0.0:
     dependencies:
