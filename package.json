@@ -11,7 +11,7 @@
     "lint": "pnpm run biome && pnpm run markuplint",
     "biome": "biome check --write .",
     "biome:ci": "biome ci .",
-    "markuplint": "markuplint 'dist/*.html' 'dist/en/**/*.html'",
+    "markuplint": "markuplint 'dist/*.html' 'dist/en/**/*.html' 'records/dist/*.html'",
     "yama-normalize": "pnpm -C packages/yama-normalize"
   },
   "dependencies": {
