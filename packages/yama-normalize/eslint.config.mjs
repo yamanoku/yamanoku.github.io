@@ -9,9 +9,9 @@ export default [
       "css/use-baseline": [
         "error",
         {
-          available: "newly",
-        },
-      ],
-    },
-  },
+          available: "newly"
+        }
+      ]
+    }
+  }
 ];

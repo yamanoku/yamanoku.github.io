@@ -1,4 +1,4 @@
-name: Biome
+name: Oxc
 
 on:
   pull_request:
@@ -6,7 +6,13 @@ on:
       - main
     paths:
       - "**.ts"
+      - "**.js"
+      - "**.mjs"
       - "**.astro"
+      - ".oxlintrc.json"
+      - ".oxfmtrc.json"
+      - "package.json"
+      - "pnpm-lock.yaml"
 
 jobs:
   build:
@@ -26,9 +32,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
-    - name: check biome
+    - name: check oxlint and oxfmt
       run: |
         pnpm install
-        pnpm run biome:ci
+        pnpm run ox:ci
       env:
         CI: true

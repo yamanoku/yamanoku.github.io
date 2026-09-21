@@ -1,4 +1,5 @@
 import type { AstroGlobal } from "astro";
+
 import siteContent from "../data/site-content.json";
 import type { DictionaryKeys, LanguageKeys } from "./translation-checkers";
 

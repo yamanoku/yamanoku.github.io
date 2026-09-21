@@ -5,7 +5,7 @@
 ### Technology stack
 - Astro
 - Tailwind CSS
-- Biome
+- Oxlint / Oxfmt
 - Markuplint
 - modern-normalize
 

@@ -1,11 +1,8 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import records from "../../../records/src/data/records.json" with {
-  type: "json"
-};
-import siteContent from "../../../src/data/site-content.json" with {
-  type: "json"
-};
+
+import records from "../../../records/src/data/records.json" with { type: "json" };
+import siteContent from "../../../src/data/site-content.json" with { type: "json" };
 import writings from "../../../src/data/writings.json" with { type: "json" };
 import {
   DataValidationError,

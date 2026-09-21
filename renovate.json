@@ -2,7 +2,6 @@
   "extends": [
     "config:base",
     "group:monorepos",
-    "customManagers:biomeVersions",
     "helpers:pinGitHubActionDigests"
   ],
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
@@ -14,7 +13,5 @@
     "automerge": false
   },
   "schedule": ["after 10pm and before 6am on every weekday"],
-  "assignees": [
-    "yamanoku"
-  ]
+  "assignees": ["yamanoku"]
 }

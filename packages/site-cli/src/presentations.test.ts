@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { it } from "node:test";
+
 import { deriveListStage } from "../../../src/presentations/listPresentation.js";
 
 it("derives five linked past stages and skips future or unlinked records", () => {
