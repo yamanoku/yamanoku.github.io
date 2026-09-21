@@ -45,7 +45,7 @@
       },
       {
         "title": "アーカイブ動画 (YouTube)",
-        "url": "https://www.youtube.com/watch?v=QWISz3ytxxc?t=2416"
+        "url": "https://www.youtube.com/watch?v=QWISz3ytxxc&t=2416"
       }
     ],
     "description": "AIがHTML文書を書く時代に正しくHTMLを書かせたいという動機から、SvelteファイルのマークアップされたHTMLがコンパイラでどう解釈・変換されるかを解説。自身が小さいコンパイラを作ってSvelteがテンプレートを解析し実行時のDOM更新へ落とす仕組みを掘り下げ、フレームワーク固有の「HTML」理解を正しいマークアップへの関心と結びつけて伝えた。"
