@@ -8,9 +8,9 @@
     "preview": "astro preview",
     "site": "pnpm --filter @yamanoku/site-cli cli",
     "site:check": "pnpm site -- check",
-    "lint": "pnpm run oxlint && pnpm run oxfmt && pnpm run markuplint",
+    "lint": "pnpm run oxlint && pnpm run markuplint",
+    "format": "oxfmt .",
     "oxlint": "oxlint --fix .",
-    "oxfmt": "oxfmt .",
     "ox:ci": "oxlint --deny-warnings . && oxfmt --check .",
     "markuplint": "markuplint 'dist/*.html' 'dist/en/**/*.html' 'records/dist/*.html'",
     "yama-normalize": "pnpm -C packages/yama-normalize"
