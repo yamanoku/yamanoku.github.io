@@ -16,7 +16,7 @@
         "url": "https://records.yamanoku.net/dai-funabashidev-2026/"
       }
     ],
-    "description": "楽天ブログやユーザー参加型の投稿サイト、Tumblrといった筆者に影響を与えてくれたサービスから、Webエンジニアへ転身したのちにWeb標準を知ったことなど、自身のこれまでを振り返る。Web標準やアクセシビリティへのこだわりが作る楽しさを狭めた迷いを語り、HTML Energyといった手触り感のあるWebコンテンツ作り、W3C Japanでのイベントの議論を通じ再びWebを好きになる過程と、標準化と経済の関係への気づきを共有した個人史の発表。"
+    "description": "楽天ブログやユーザー参加型の投稿サイト、Tumblrといった筆者に影響を与えてくれたサービスから、Webエンジニアへ転身したのちにWeb標準のすばらしさに知ったこと、そのWeb標準やアクセシビリティへのこだわりが作る楽しさを狭めた迷いを語り、HTML Energyといった手触り感のあるWebコンテンツ作り、W3C Japanでのイベントの議論を通じ再びWebを好きになる過程と、標準化と経済の関係への気づきを共有した個人史の発表。"
   },
   {
     "date": "2026-07-25",
@@ -45,10 +45,10 @@
       },
       {
         "title": "アーカイブ動画 (YouTube)",
-        "url": "https://www.youtube.com/watch?v=QWISz3ytxxc&t=3342s"
+        "url": "https://www.youtube.com/watch?v=QWISz3ytxxc?t=2416"
       }
     ],
-    "description": "AIが文書を書く時代に正しいHTMLを書かせたいという動機から、Svelteファイルのマークアップがコンパイラでどう解釈・変換されるかを解説。自身が小さいコンパイラを作ってSvelteがテンプレートを解析し実行時のDOM更新へ落とす仕組みを掘り下げ、フレームワーク固有の「HTML」理解を正しいマークアップへの関心と結びつけて伝えた。"
+    "description": "AIがHTML文書を書く時代に正しくHTMLを書かせたいという動機から、SvelteファイルのマークアップされたHTMLがコンパイラでどう解釈・変換されるかを解説。自身が小さいコンパイラを作ってSvelteがテンプレートを解析し実行時のDOM更新へ落とす仕組みを掘り下げ、フレームワーク固有の「HTML」理解を正しいマークアップへの関心と結びつけて伝えた。"
   },
   {
     "date": "2026-06-16",
@@ -217,7 +217,7 @@
       },
       {
         "title": "アーカイブ動画 (YouTube)",
-        "url": "https://youtu.be/gPDEjcH58k0?t=2178"
+        "url": "https://www.youtube.com/watch?v=gPDEjcH58k0&t=2178s"
       }
     ],
     "description": "DenoとJSRを組み合わせることでMCPサーバーを短時間で試作できる利点と手順を共有し、「最速」で開発する実践記としてまとめた。自身が作成した3つのMCPサーバーについても紹介した。"
@@ -273,7 +273,7 @@
       },
       {
         "title": "アーカイブ動画 (YouTube)",
-        "url": "https://youtu.be/yM2Us-ZQHSE?t=1337"
+        "url": "https://www.youtube.com/watch?v=yM2Us-ZQHSE&t=1337s"
       }
     ],
     "description": "近年のWebフロントエンド開発で広まった「リアクティビティ」を理解するための基本的な仕組みと概念を紹介した。ObserverパターンやPub-Sub、Push/Pullといった変遷を追い、Signalsというインターフェイスと、そのライブラリであるalien-signalsにも触れた。"
@@ -501,7 +501,7 @@
     "resources": [
       {
         "title": "アーカイブ動画 (YouTube)",
-        "url": "https://youtu.be/gicxddOl6rM?t=3895"
+        "url": "https://www.youtube.com/watch?v=gicxddOl6rM&t=3895s"
       }
     ],
     "description": "書籍『HTML解体新書』の出版記念イベントにおける座談会。HTMLの学び直しや仕様との向き合い方をめぐるトークで、フロントエンドエンジニアの観点から、どうマークアップするか、デザイナーとどう協業していくかを語った。"
@@ -529,7 +529,7 @@
       },
       {
         "title": "アーカイブ動画 (YouTube)",
-        "url": "https://www.youtube.com/watch?v=58TkWIsH20E&source_ve_path=MjM4NTE&feature=emb_title"
+        "url": "https://www.youtube.com/watch?v=58TkWIsH20E"
       }
     ],
     "description": "アクセシビリティとは何かから始め、これまでのフロントエンド開発における取り組みと、これから求められるアプローチを論じた。正しいHTMLを軸にしつつ、組織や技術選定を含めたアクセシブルな開発の「これまでとこれから」を示し、開発文化の継続を呼びかける内容だった。"
@@ -541,7 +541,7 @@
     "resources": [
       {
         "title": "アーカイブ動画 (YouTube)",
-        "url": "https://youtu.be/UUstcqBhIgM?t=1753"
+        "url": "https://www.youtube.com/watch?v=UUstcqBhIgM&t=1753s"
       }
     ],
     "description": "株式会社クラウドワークスの働きやすさや開発文化をテーマにした配信での座談会登壇。"
