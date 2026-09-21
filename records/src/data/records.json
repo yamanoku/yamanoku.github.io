@@ -26,6 +26,10 @@
       {
         "title": "お元気ですか.fm～5年間の配信で振り返る「かわるもの」と「かわらないもの」",
         "url": "https://records.yamanoku.net/dai-kichijojipm-2026/slide/"
+      },
+      {
+        "title": "アーカイブ動画 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=ZI9Wt796KQs"
       }
     ],
     "description": "雑談ポッドキャスト「お元気ですか.fm」の5年を、カンファレンスのテーマ「かわるもの／かわらないもの」で振り返る。Webフロントエンドの変化、Figma一強や生成AIなど開発・デザインの変化、役割や生活、関わる人の変化を定点観測しつつ、近況を聞き合う形式や対話の価値など変わらないものを整理。再生数などの数字も交え、ポッドキャストを続けてきた価値を示した。"
@@ -38,6 +42,10 @@
       {
         "title": "SvelteのHTMLはどう解釈されているのか",
         "url": "https://speakerdeck.com/yamanoku/how-svelte-compile-html"
+      },
+      {
+        "title": "アーカイブ動画 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=QWISz3ytxxc&t=3342s"
       }
     ],
     "description": "AIが文書を書く時代に正しいHTMLを書かせたいという動機から、Svelteファイルのマークアップがコンパイラでどう解釈・変換されるかを解説。自身が小さいコンパイラを作ってSvelteがテンプレートを解析し実行時のDOM更新へ落とす仕組みを掘り下げ、フレームワーク固有の「HTML」理解を正しいマークアップへの関心と結びつけて伝えた。"
@@ -50,6 +58,10 @@
       {
         "title": "とあるサイトがkingnizeされるまで～Nuxtからvuerend & Vizeへ",
         "url": "https://scrapbox.io/yamanoku/%E3%81%A8%E3%81%82%E3%82%8B%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8Ckingnize%E3%81%95%E3%82%8C%E3%82%8B%E3%81%BE%E3%81%A7%EF%BD%9ENuxt%E3%81%8B%E3%82%89vuerend_&_Vize%E3%81%B8"
+      },
+      {
+        "title": "アーカイブ動画 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=RBppa3gqzac&t=3842s"
       }
     ],
     "description": "Vue Fes Japan歴代スピーカーの一覧をNuxtにて公開し、サイトデザインがClaude Designで刷新されたことを紹介。その後ubugeeei氏のPRでvuerend/VizeによるRustツールチェーンへ「kingnize」され、MPA化やVize Lintのフィードバックまで含めた急激なリアーキテクチャ体験を語った。個人サイトがOSS検証場になった事例を語った。"
@@ -62,6 +74,10 @@
       {
         "title": "Navigation APIがlib.dom.d.tsに採用されるまでの道のり",
         "url": "https://records.yamanoku.net/tskaigi-2026/slide"
+      },
+      {
+        "title": "アーカイブ動画 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=DLbqakmkNIQ"
       }
     ],
     "description": "History API・Location APIの後継であるNavigation APIの特徴を整理したうえで、TypeScriptのlib.dom.d.tsへの型定義が取り込まれるまでの道のりを紹介。Web標準の仕様がブラウザ実装を経てDOM型として手元に届くプロセスを追い、型定義への貢献・追跡の視点を示した。"
@@ -158,6 +174,10 @@
       {
         "title": "生成AI時代のWebアプリケーションアクセシビリティ改善",
         "url": "https://records.yamanoku.net/vuefes-japan-2025/slide/1"
+      },
+      {
+        "title": "アーカイブ動画 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=DaXhs1FRodM"
       }
     ],
     "description": "AIエージェントでの開発が主流となってきた現在における特定フレームワークに閉じないWebアプリ全体のアクセシビリティ改善論。アクセシビリティの前提を揃えたうえで、生成AIが実装・検証に与える影響と、人が担保すべき観点や継続的な改善プロセスを実践的に提示。AI活用と人の責任分界を意識したアクセシビリティ改善を提示した。"
@@ -196,7 +216,7 @@
         "url": "https://speakerdeck.com/yamanoku/building-mcp-servers-at-lightning-speed-with-deno-and-jsr"
       },
       {
-        "title": "toranoana.deno #21 アーカイブ(YouTube)",
+        "title": "アーカイブ動画 (YouTube)",
         "url": "https://youtu.be/gPDEjcH58k0?t=2178"
       }
     ],
@@ -222,6 +242,10 @@
       {
         "title": "転生したら​TypeScriptの​Enumだった​件～型​安全性と​エコシステムの​変化で​挫けそうになっているんだが​～",
         "url": "https://records.yamanoku.net/tskaigi-2025/"
+      },
+      {
+        "title": "アーカイブ動画 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=eZV4LXRXP64"
       }
     ],
     "description": "TypeScriptのEnumに転生した主人公の物語形式で歴史と苦境を解説。数値Enumの型安全性やTree-shakingの問題、Union型・as constへの移行圧力、strip-typesやerasableSyntaxOnlyの影響を踏まえ、聴者がEnumを今一度見つめ直せる内容にした。"
@@ -246,6 +270,10 @@
       {
         "title": "リアクティブシステムの変遷から理解するalien-signals",
         "url": "https://speakerdeck.com/yamanoku/learning-alien-signals-from-the-evolution-of-reactive-systems"
+      },
+      {
+        "title": "アーカイブ動画 (YouTube)",
+        "url": "https://youtu.be/yM2Us-ZQHSE?t=1337"
       }
     ],
     "description": "近年のWebフロントエンド開発で広まった「リアクティビティ」を理解するための基本的な仕組みと概念を紹介した。ObserverパターンやPub-Sub、Push/Pullといった変遷を追い、Signalsというインターフェイスと、そのライブラリであるalien-signalsにも触れた。"
@@ -294,6 +322,10 @@
       {
         "title": "ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと",
         "url": "https://records.yamanoku.net/frontendo-2024/ja/"
+      },
+      {
+        "title": "アーカイブ動画 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=XnLPdrKTOug&t=3868s"
       }
     ],
     "description": "ブラウザ戦争から現行主要ブラウザ、IEサポート終了までの歴史を振り返り、互換性の欠如がユーザー体験を損なう理由を論じた。Web標準を守る意義や互換性維持の取り組みを紹介し、互換性を単なるコストではなくユーザーへの責任として捉え直した。"
@@ -330,6 +362,10 @@
       {
         "title": "Svelte Accessibility Warning",
         "url": "https://docs.google.com/presentation/d/e/2PACX-1vQ8UFLM2Rxnx-pf8ZI9SgU5ZKY5hPpLQa060LHDQ9fu4ddHVPJO_ECDOomNlSp6a0PyeL6UNc36kt6r/pub?start=false&loop=false&delayms=3000"
+      },
+      {
+        "title": "アーカイブ動画 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=R1aICNjAi_g&t=2445s"
       }
     ],
     "description": "Svelteコンパイラに組み込まれたAccessibility Warnings（当時32ルール）を紹介。Rich Harrisの「良いWeb市民でありたい」意図やeslint-plugin-jsx-a11y由来のルールを踏まえ、望ましくない書き方がCLI上でwarningになる仕組みを解説し、各ルールのうち実効性が疑わしいものにも触れた。"
@@ -356,7 +392,7 @@
         "url": "https://docs.google.com/presentation/d/1YVdn5yWHv3vI6sY_c-zo8zcDX2z4Ivpkhj7dJOivNMY/edit?usp=sharing"
       },
       {
-        "title": "JSConf JP 2023「画面遷移のアクセシビリティ課題を解決しうる NAVIGATION API への期待 / やまのく」(YouTube)",
+        "title": "アーカイブ動画 (YouTube)",
         "url": "https://www.youtube.com/watch?v=NYq68T1ZL3U"
       }
     ],
@@ -370,6 +406,10 @@
       {
         "title": "画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法",
         "url": "https://records.yamanoku.net/vuefes-japan-2023/ja/"
+      },
+      {
+        "title": "アーカイブ動画 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=FmggsMDMqh0"
       }
     ],
     "description": "Webアクセシビリティの前提を共有したうえで、Nuxtアプリの画面遷移で起きやすい課題に着目。遷移時のフォーカス管理などを軸に、よりアクセシブルなNuxtアプリケーションを実現する考え方を示し、コンポーネント単位を超えて遷移体験全体でアクセシビリティを考える視座を提供した。"
@@ -418,6 +458,10 @@
       {
         "title": "Vue.js でアクセシブルなコンポーネントをつくるために",
         "url": "https://records.yamanoku.net/vuefes-japan-online-2022/ja/"
+      },
+      {
+        "title": "アーカイブ動画 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=dtD4p89ogKM&t=15915s"
       }
     ],
     "description": "Vue.jsでUIコンポーネントを作る際に必要なアクセシビリティの考え方を体系的に解説。適切なHTMLやARIA、キーボード操作・フォーカスなど、フレームワークの都合で損なわれがちな点を押さえ、アクセシブルなコンポーネント実装の要点を示した。"
@@ -444,7 +488,7 @@
         "url": "https://docs.google.com/presentation/d/e/2PACX-1vQct0iDIdaywmCjhbf49BKd5DMXLEtFlZbFs6cLfUmAfp1HVzO2jVIrym5bEmlpaIrnPxbj-pVggmeW/pub"
       },
       {
-        "title": "#6 (LT) 【字幕あり】「クラウドワークスのこれまでの取り組み、新たなミッションと考えるこれからについて」大山 奥人（株式会社クラウドワークス ）(YouTube)",
+        "title": "アーカイブ動画 (YouTube)",
         "url": "https://www.youtube.com/watch?v=FroVoJDVvdc"
       }
     ],
@@ -456,7 +500,7 @@
     "eventUrl": "https://connpass.com/event/242592/",
     "resources": [
       {
-        "title": "HTML解体新書出版記念イベント アーカイブ(YouTube)",
+        "title": "アーカイブ動画 (YouTube)",
         "url": "https://youtu.be/gicxddOl6rM?t=3895"
       }
     ],
@@ -484,7 +528,7 @@
         "url": "https://records.yamanoku.net/jsconfjp-2021/"
       },
       {
-        "title": "アクセシブルなフロントエンド開発のこれまでとこれから アーカイブ(YouTube)",
+        "title": "アーカイブ動画 (YouTube)",
         "url": "https://www.youtube.com/watch?v=58TkWIsH20E&source_ve_path=MjM4NTE&feature=emb_title"
       }
     ],
@@ -496,7 +540,7 @@
     "eventUrl": "https://crowdworks-dev-live.connpass.com/event/223977/",
     "resources": [
       {
-        "title": "CrowdworksDevLive -働きやすさを生むCWの文化とは？アーカイブ(YouTube)",
+        "title": "アーカイブ動画 (YouTube)",
         "url": "https://youtu.be/UUstcqBhIgM?t=1753"
       }
     ],
@@ -536,7 +580,7 @@
         "url": "https://docs.google.com/presentation/d/1bWjpa1WwL-gQT7misOvC0TOKersl-m2pyE-LIP-kWbk/edit?usp=sharing"
       },
       {
-        "title": "Front-End Study #3「『当たり前』をつくりだすWebアクセシビリティ」 アーカイブ(YouTube)",
+        "title": "アーカイブ動画 (YouTube)",
         "url": "https://www.youtube.com/watch?v=eX8Lf20ETew&t=3902s"
       }
     ],
