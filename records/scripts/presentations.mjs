@@ -9,5 +9,5 @@ export const presentations = [
   { name: "vuefes-japan-2023", type: "flat" },
   { name: "vuefes-japan-online-2022", type: "flat" },
   { name: "jsconfjp-2021", type: "flat" },
-  { name: "vue-a11y-2019", type: "flat" },
+  { name: "vue-a11y-2019", type: "flat" }
 ];

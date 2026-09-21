@@ -1,5 +1,4 @@
 onlyBuiltDependencies:
-  - "@biomejs/biome"
   - es5-ext
   - esbuild
   - sharp
@@ -28,11 +27,12 @@ catalogs:
     tsx: 4.23.13
     typescript: 7.0.2
   website:
-    "@biomejs/biome": 2.5.14
     "@tailwindcss/vite": 4.3.3
     astro: 7.3.2
     markuplint: 5.0.0
     modern-normalize: 3.0.1
+    oxfmt: 0.68.0
+    oxlint: 1.83.0
     tailwindcss: 4.3.3
     vite: 8.3.0
   yama-normalize:

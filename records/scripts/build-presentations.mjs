@@ -1,6 +1,7 @@
 import { execSync } from "node:child_process";
 import { cpSync } from "node:fs";
 import { resolve } from "node:path";
+
 import { presentations } from "./presentations.mjs";
 
 const presRoot = resolve("presentations");
@@ -18,11 +19,11 @@ for (const pres of presentations) {
   if (pres.type === "monorepo") {
     execSync(eleventyBin, {
       cwd: resolve(presDir, "11ty"),
-      stdio: "inherit",
+      stdio: "inherit"
     });
     execSync(
       `${slidevBin} build --base /${pres.name}/slide/ --out ../docs/slide/`,
-      { cwd: resolve(presDir, "slidev"), stdio: "inherit" },
+      { cwd: resolve(presDir, "slidev"), stdio: "inherit" }
     );
   } else {
     execSync(eleventyBin, { cwd: presDir, stdio: "inherit" });

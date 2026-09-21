@@ -128,7 +128,7 @@ RSSを取得して最新5件を検証し、`src/data/ogenkidesukaFm.json`へ保�
 
 これらはCLIが管理する正規データです。通常の情報更新では直接編集せず、CLIに必要な操作がなければ先にコマンドを追加してください。
 
-`validate`はJSON形式、URL、日時、並び順、重複、5件制約、翻訳の一致をオフラインで確認します。`check`はさらにBiome、本体ビルド、recordsビルド、Markuplintを順番に実行します。
+`validate`はJSON形式、URL、日時、並び順、重複、5件制約、翻訳の一致をオフラインで確認します。`check`はさらにoxlint/oxfmt、本体ビルド、recordsビルド、Markuplintを順番に実行します。
 
 ## 開発
 

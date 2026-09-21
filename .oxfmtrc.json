@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "useTabs": false,
+  "tabWidth": 2,
+  "printWidth": 80,
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "quoteProps": "as-needed",
+  "trailingComma": "none",
+  "semi": true,
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "sortPackageJson": false,
+  "sortImports": {},
+  "ignorePatterns": [
+    "**/node_modules",
+    "**/dist",
+    "**/docs",
+    "**/.astro",
+    "**/*.{json,jsonc,json5}",
+    "**/*.{css,scss,less}",
+    "**/*.{html,vue,svelte}",
+    "**/*.{yaml,yml}",
+    "**/*.toml",
+    "**/*.{md,mdx}"
+  ]
+}

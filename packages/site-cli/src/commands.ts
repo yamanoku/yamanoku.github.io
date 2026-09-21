@@ -1,5 +1,7 @@
 import { spawn } from "node:child_process";
+
 import { define } from "gunshi";
+
 import {
   LINK_GROUPS,
   type LinkGroupName,
@@ -730,7 +732,7 @@ const checkCommand = define({
   description: "データ検証、lint、本体・recordsビルド、HTML検証を実行",
   run: async () => {
     await validateRepository();
-    await runProcess("pnpm", ["biome:ci"]);
+    await runProcess("pnpm", ["ox:ci"]);
     await runProcess("pnpm", ["build"]);
     await runProcess("pnpm", ["--filter", "records", "build"]);
     await runProcess("pnpm", ["markuplint"]);

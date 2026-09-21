@@ -8,7 +8,7 @@ yamanoku.netのポートフォリオサイトの開発ガイドラインです�
 - **フレームワーク**: Astro（ポートフォリオサイト）
 - **スタイリング**: TailwindCSS v4
 - **パッケージマネージャー**: pnpm（workspaces + catalog）
-- **リンター**: Biome
+- **リンター / フォーマッター**: Oxlint / Oxfmt
 - **HTML検証**: Markuplint
 - **国際化**: カスタムi18nシステム（日本語・英語対応）
 - **プレゼンテーション**: 11ty + Slidev（登壇資料）
@@ -261,7 +261,7 @@ const t = useTranslations(Astro);
 ### コードレビューチェックリスト
 
 #### 一般
-- [ ] Biomeのルールに準拠している
+- [ ] Oxlint / Oxfmtのルールに準拠している
 - [ ] Markuplintでエラーが出ない
 - [ ] 型安全性が保たれている
 - [ ] アクセシビリティに配慮されている

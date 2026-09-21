@@ -1,0 +1,43 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["oxc", "typescript", "unicorn", "react"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "off",
+    "pedantic": "off",
+    "perf": "off",
+    "restriction": "off",
+    "style": "off",
+    "nursery": "off"
+  },
+  "rules": {
+    "no-param-reassign": "error",
+    "typescript/prefer-as-const": "error",
+    "default-param-last": "error",
+    "typescript/prefer-enum-initializers": "error",
+    "react/self-closing-comp": "error",
+    "one-var": ["error", "never"],
+    "unicorn/prefer-number-properties": "error",
+    "typescript/no-inferrable-types": "error",
+    "no-else-return": "error",
+    "typescript/triple-slash-reference": "off"
+  },
+  "ignorePatterns": [
+    "**/node_modules",
+    "**/dist",
+    "**/docs",
+    "**/.astro"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.astro"],
+      "env": {
+        "astro": true
+      },
+      "rules": {
+        "no-unused-vars": "off",
+        "typescript/no-unused-vars": "off"
+      }
+    }
+  ]
+}

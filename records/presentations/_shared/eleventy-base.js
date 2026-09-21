@@ -1,5 +1,6 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+
 import { loadDefaultJapaneseParser } from "budoux";
 import hljs from "highlight.js";
 import markdownit from "markdown-it";

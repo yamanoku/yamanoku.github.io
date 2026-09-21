@@ -1,5 +1,5 @@
-import { defineCollection, z } from "astro:content";
 import { file } from "astro/loaders";
+import { defineCollection, z } from "astro:content";
 
 // お元気ですか.fm の最新エピソード。
 // データは `pnpm site -- podcast sync --write` が src/data/ogenkidesukaFm.json に生成する。

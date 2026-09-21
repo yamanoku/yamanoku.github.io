@@ -1,6 +1,7 @@
 import { spawn } from "node:child_process";
 import { existsSync } from "node:fs";
 import { resolve } from "node:path";
+
 import { presentations } from "./presentations.mjs";
 
 const presRoot = resolve("presentations");
@@ -17,7 +18,7 @@ if (!pres) {
   console.error(
     name
       ? `Unknown presentation: ${name}`
-      : "Usage: pnpm --filter records dev:presentation <name> [--pages|--slide]",
+      : "Usage: pnpm --filter records dev:presentation <name> [--pages|--slide]"
   );
   console.error("Available presentations:");
   for (const p of presentations) {
@@ -34,7 +35,7 @@ function eleventyJob(cwd) {
     args: ["--serve"],
     cwd,
     label: "11ty",
-    url: ELEVENTY_URL,
+    url: ELEVENTY_URL
   };
 }
 
@@ -48,7 +49,7 @@ function slidevJob(cwd) {
     args: [],
     cwd,
     label: "Slidev",
-    url: SLIDEV_URL,
+    url: SLIDEV_URL
   };
 }
 

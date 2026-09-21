@@ -5,7 +5,7 @@
 ### 利用技術
 - Astro
 - Tailwind CSS
-- Biome
+- Oxlint / Oxfmt
 - Markuplint
 - modern-normalize
 
