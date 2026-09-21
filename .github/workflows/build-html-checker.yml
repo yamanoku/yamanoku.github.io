@@ -33,6 +33,7 @@ jobs:
       run: |
         pnpm install
         pnpm run build
+        pnpm --filter records build:astro
     - name: check markuplint
       run: |
         pnpm run markuplint

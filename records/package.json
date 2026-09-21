@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "dev:presentation": "node scripts/dev-presentation.mjs",
     "build": "astro build && node scripts/build-presentations.mjs",
+    "build:astro": "astro build",
     "preview": "astro preview"
   },
   "dependencies": {
