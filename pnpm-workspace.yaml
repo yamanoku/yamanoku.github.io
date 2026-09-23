@@ -24,7 +24,7 @@ catalogs:
   site-cli:
     "@types/node": 26.5.1
     gunshi: 0.37.3
-    tsx: 4.23.13
+    tsx: 4.23.15
     typescript: 7.0.2
   website:
     "@tailwindcss/vite": 4.3.3
