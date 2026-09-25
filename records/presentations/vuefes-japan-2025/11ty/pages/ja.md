@@ -11,6 +11,10 @@ lang: ja
 
 [日本語ページ](https://records.yamanoku.net/vuefes-japan-2025/ja/) / [English page](https://records.yamanoku.net/vuefes-japan-2025/en/)
 
+## スライド
+
+[発表スライド](https://records.yamanoku.net/vuefes-japan-2025/slide/)
+
 ---
 
 Vue Fes Japan Online 2022では[Vue.jsでアクセシブルなコンポーネントをつくるために](https://vuefes.jp/2022/sessions/yamanoku)という発表、Vue Fes Japan 2023では[画面遷移から考えるNuxtアプリケーションをアクセシブルにする方法](https://vuefes.jp/2023/sessions/yamanoku)話をさせていただきました。

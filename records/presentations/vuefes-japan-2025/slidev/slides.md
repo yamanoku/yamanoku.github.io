@@ -18,9 +18,12 @@ htmlAttrs:
 
 <h1 mt="12">生成AI時代の<br>Webアプリケーション<br>アクセシビリティ改善</h1>
 
-<div mt="5">
+<div mt="4" mb="4">
 Vue Fes Japan 2025 | <time datetime="2025-10-25">2025-10-25</time>
 </div>
+
+[ドキュメントページ版（日本語）](https://records.yamanoku.net/vuefes-japan-2025/ja/) | [Document Page Version（English）](https://records.yamanoku.net/vuefes-japan-2025/en/)
+
 
 <div class="absolute bottom-10">
   <span class="text-6 font-700">
