@@ -20,7 +20,11 @@ htmlAttrs:
 Vue Fes Japan 2026 | <time datetime="2026-10-24">2026-10-24</time>
 </div>
 
+<div mt="6">
+
 [ドキュメントページ版（日本語）](https://records.yamanoku.net/vuefes-japan-2026/ja/) | [Document Page Version（English）](https://records.yamanoku.net/vuefes-japan-2026/en/)
+
+</div>
 
 <div class="absolute bottom-10">
   <span class="text-6 font-700">

@@ -1,8 +1,4 @@
 export function render(data) {
-  const ogpImage =
-    data.lang === "ja"
-      ? `<meta name="og:image" content="https://records.yamanoku.net/vuefes-japan-2026/images/ogp-image-ja.png">`
-      : `<meta name="og:image" content="https://records.yamanoku.net/vuefes-japan-2026/images/ogp-image-en.png">`;
   return `
     <!doctype html>
     <html lang="${data.lang}">
@@ -12,7 +8,7 @@ export function render(data) {
         <title>${data.title}</title>
         <meta name="og:title" content="${data.title}">
         <meta name="og:description" content="${data.description}">
-        ${ogpImage}
+        <meta name="og:image" content="https://records.yamanoku.net/vuefes-japan-2026/images/ogp-image-${data.lang}.png">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@yamanoku">
         <meta name="twitter:image:alt" content="${data.title}">
