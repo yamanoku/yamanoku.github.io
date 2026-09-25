@@ -3,8 +3,12 @@
     "date": "2026-10-24",
     "event": "Vue Fes Japan 2026",
     "eventUrl": "https://vuefes.jp/2026",
-    "resources": [],
-    "note": "Vue SFCから見直す正しいHTMLの守り方"
+    "resources": [
+      {
+        "title": "Vue SFCから見直す正しいHTMLの守り方",
+        "url": "https://records.yamanoku.net/vuefes-japan-2026/slide/"
+      }
+    ]
   },
   {
     "date": "2026-09-12",
