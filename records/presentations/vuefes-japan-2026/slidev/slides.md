@@ -32,6 +32,10 @@ Vue Fes Japan 2026 | <time datetime="2026-10-24">2026-10-24</time>
   </span>
 </div>
 
+<!--
+サイボウズトラック 14:20 - 14:50。本日はお集まりいただきありがとうございます。
+-->
+
 ---
 
 ## 発表者：やまのく（yamanoku）
@@ -46,17 +50,14 @@ Vue Fes Japan 2026 | <time datetime="2026-10-24">2026-10-24</time>
 
 ---
 
-## アジェンダ
+## アジェンダ（各約10分）
 
-1. HTMLはフロントエンドでどう扱われているか
-2. 「HTMLの正しさ」とは何か
-3. Vue SFCのコンパイルパイプラインを紐解く
-4. コンパイラだけでは守れない隙間
-5. 静的解析エコシステムでどう守るか
-6. まとめ：Vueで正しいHTMLと向き合うために
+1. **HTMLの歴史と現在の仕様について**（厚めに丁寧に）
+2. **VueでHTMLはどのように使われているのか**
+3. **VueでHTMLの正しさを検証するためのツール紹介**
 
 <!--
-想定聴衆はVue中級者以上、コンパイラやSFCの内部、HTMLのLinterエコシステムに興味がある方です。
+30分を3部で均等に配分します。聴衆にHTML仕様へ馴染みのない方も多い想定なので、第1部はスライド枚数を多めにして丁寧に進めます。第2・3部は要点を絞って同じ10分に収めます。
 -->
 
 ---
@@ -66,87 +67,106 @@ layout: statement
 # Vue開発で<br>HTMLの「正しさ」を<br>どう検証していますか？
 
 <!--
-セッション概要にも書いた問いです。みなさんは説明できますでしょうか。今日はこの問いに、仕組みから答えを出していきます。
+セッション概要にも書いた問いです。みなさんは説明できますでしょうか。今日はこの問いに、3部構成で答えを出していきます。
 -->
 
 ---
 layout: section
 ---
 
-# HTMLはフロントエンドで<br>どう扱われているか
+# 1. HTMLの歴史と<br>現在の仕様について
 
 <!--
-本題の前に、普段HTMLをどこで見かけていて、フレームワークの中でどう扱われているかを整理します。
--->
-
----
-
-## HTMLは生まれて37年
-
-- Webサイト / Webアプリケーション
-- SSRにおけるハイドレーション比較（正確にはDOM）
-- UIライブラリのテンプレート
-
-<!--
-HTMLは誕生から今に至るまで、さまざまな形で活用されています。単なるマークアップ言語を超え、アプリのUI宣言やSSRの差分比較の対象にもなっています。
--->
-
----
-
-## フレームワークごとのHTMLの扱い
-
-| 系統 | 例 | 扱い |
-| --- | --- | --- |
-| HTMLをDSLとして使う | Vue / Svelte / Ripple | template等で宣言的UI |
-| JSXでHTML風に書く | React / SolidJS / Preact | JSの中の式（XHTML寄り？） |
-| HTMLファースト | Alpine.js / htmx | HTMLを起点に振る舞いを足す |
-
-<!--
-文脈整理として他FWにも触れますが、以降のLinter比較はVueに絞ります。VueやSvelteはHTMLをDSLとして扱います。React系はJSXでHTMLのように表現しますが、どちらかというとXHTML寄りです。一方でAlpine.jsやhtmxのように、HTMLファーストで書く世界もあります。
--->
-
----
-
-## HTMLを正面から扱う動き
-
-- OpenUI / Interop — ブラウザ実装と標準のすり合わせ
-- HTML Day など、HTMLそのものを主題にするコミュニティ
-
-<!--
-HTMLは古い技術ではなく、今も標準化とコミュニティの両面で動きがあります。今日の話も、その「HTMLと正しく向き合う」流れの延長線上にあります。
+約10分。仕様に詳しくない方も多い想定なので、ここを厚めに丁寧に進めます。Vueの話に入る前に、「正しさ」の土台を共有します。
 -->
 
 ---
 layout: statement
 ---
 
-# Vueのtemplateは<br>「HTMLっぽいDSL」
+# 普段、HTMLを<br>どこで見かけていますか？
 
 <!--
-VueのSFCで書いているものは、見た目はHTMLです。しかし最終的には仮想DOM生成の関数へと変換されます。このギャップが、今日の本題です。
--->
-
----
-layout: section
----
-
-# 「HTMLの正しさ」とは何か
-
-<!--
-そもそも「正しいHTML」とは何かを揃えておきたいと思います。
+Webサイト、管理画面、コンポーネントライブラリ、SSRの差分比較……。気づかないうちに、フロントエンド開発のあちこちにHTMLがあります。
 -->
 
 ---
 
-## HTMLはよしなに書けてしまう
+## HTMLは生まれて約37年
 
-- Living Standardとして今も更新され続ける
-- HTML構文はエラーがあっても補正され、最後までパースされる
-- 意図と違う書き方でも「動いて」しまう
-- [Non-conforming features](https://html.spec.whatwg.org/#non-conforming-features) という要素群が存在する
+- 1990年代前半に誕生し、**文書**のためのマークアップとして広がった
+- その後、**アプリのUI**やDOMの差分比較の対象にもなった
+- 「古い技術」ではなく、今も更新され続けている基盤
 
 <!--
-HTMLの仕様はLiving Standardです。HTML構文では構文エラーがあってもブラウザが補正して最後までパースするため、正しくなくても「動いて」しまいます。仕様上の非推奨・非適合な機能も残っています。
+HTMLは誕生から今に至るまで、役割を広げてきました。単なる文書用の言語を超え、アプリケーションの土台にもなっています。
+-->
+
+---
+
+## 文書の言語から、アプリの基盤へ
+
+- 初期: 見出し・段落・リンクなど、文書構造を表す
+- 中期: フォームやインタラクションが増え、アプリでも使われる
+- 現在: SPA / SSR / デザインシステムでも、最終出力はHTMLであることが多い
+
+<!--
+Vueでtemplateを書いていても、ブラウザが受け取る最終成果物はHTMLです。だから仕様の理解は、フレームワーク以前の共通基盤になります。
+-->
+
+---
+
+## 仕様はどう進化してきたか
+
+| 時期 | 出来事 |
+| --- | --- |
+| 1997 | HTML 4 |
+| 2000頃 | XHTML 1.0（XML寄りへの分岐） |
+| 2004 | WHATWG 発足（互換性を重視した進化） |
+| 2014 | W3C HTML5 Recommendation |
+| 2019〜 | WHATWG Living Standard を単一の正とする合意 |
+
+<!--
+ざっくり押さえてほしいのは、「完成して終わった仕様」ではないということです。並走と合意を経て、今はLiving Standardとして更新され続けています。
+-->
+
+---
+
+## XHTMLの分岐が残したもの
+
+- XHTMLは「厳格に書いて止める」方向（XML）
+- HTMLは「壊れても補正して表示する」方向（互換性）
+- いま現場で主に使うのは後者のHTML構文
+- その結果、**誤りがあっても画面は動いて見える**
+
+<!--
+厳格さよりも互換性が勝った歴史です。これはブラウザ利用者には良いことですが、開発者にとっては「動いている＝正しい」と錯覚しやすい土壌でもあります。
+-->
+
+---
+
+## いまのHTMLは Living Standard
+
+- 正本は [HTML Standard（WHATWG）](https://html.spec.whatwg.org/)
+- 凍結されたバージョン名より、**継続更新される仕様本文**が基準
+- 2019年以降、W3CもこのLiving Standardを前提に協調
+- OpenUI / Interop / HTML Day など、実装とコミュニティも動き続ける
+
+<!--
+「HTML5を覚えれば終わり」ではなく、仕様本文と実装の変化を見続ける必要があります。学習と検証の前提がここです。
+-->
+
+---
+
+## Living Standardで何が変わるか
+
+- 要素や属性の扱いは、実装状況に合わせて更新されうる
+- 「昔からの慣習」が、今の仕様では非推奨・非適合なことがある
+- [Non-conforming features](https://html.spec.whatwg.org/#non-conforming-features) も明示されている
+- だからこそ、記憶だけに頼らず**機械検証**が効く
+
+<!--
+仕様が生きているからこそ、Linterやチェッカーの価値が上がります。第3部への伏線でもあります。
 -->
 
 ---
@@ -157,6 +177,25 @@ layout: statement
 
 <!--
 ブラウザで表示されることと、仕様に適合していること、アクセシブルなアウトプットになることは別問題です。
+-->
+
+---
+
+## ブラウザは誤りを「直して」くれる
+
+```html
+<p>
+  <div>block</div>
+</p>
+```
+
+↓ パーサが補正し、実際のDOMは意図と違う形になりうる
+
+- HTML構文はエラーでも最後までパースする
+- 画面は出るが、構造・スタイル・アクセシビリティに副作用が出る
+
+<!--
+これがHTMLの優しさであり、罠でもあります。補正後のDOMを前提にCSSやJSを書くと、後から壊れやすくなります。
 -->
 
 ---
@@ -180,7 +219,7 @@ layout: statement
 3. **意味論的ルール** — 要素の意味と使い方、アクセシビリティ
 
 <!--
-誤りはざっくりこの3種に分類できます。以降のVueコンパイラやLinterの話も、この分類で見ると守備範囲がはっきりします。
+誤りはざっくりこの3種に分類できます。以降のVueコンパイラやLinterの話も、この分類で見ると守備範囲がはっきりします。ここが第1部の核心です。
 -->
 
 ---
@@ -202,11 +241,25 @@ layout: statement
 
 - 要素名・属性名が仕様に存在するか
 - **内容モデル（content model）** — どの要素の中に何を置けるか
-- 例: `label` の中に `div` / `p` は置けない、`p` の中に `div` は置けない
 - 違反してもパーサは止まらず、望ましくないDOMになる
 
 <!--
-内容モデルは仕様で定義されています。タグの対応は合っていても、要素の入れ子や属性の組み合わせが誤っていると、静かに壊れたDOMができます。Vueのネスト警告が関わるのも主にここです。
+内容モデルは仕様で定義されています。タグの対応は合っていても、要素の入れ子や属性の組み合わせが誤っていると、静かに壊れたDOMができます。
+-->
+
+---
+
+## 内容モデルの具体例
+
+| 親 | 置けない例 | なぜまずいか |
+| --- | --- | --- |
+| `p` | `div`, `p`, `ul` | 段落の中にブロックを入れられない |
+| `label` | `div`, `p` | ラベルの内容モデル外 |
+| `a` | `a` | リンクの入れ子は不可 |
+| `ul` / `ol` | 直接の `div` | 子は基本的に `li` |
+
+<!--
+Vueのネスト警告やLinterが効いてくるのも、主にこの語彙的ルールです。『見た目は同じでも、DOMの意味が違う』を意識してほしいです。
 -->
 
 ---
@@ -224,26 +277,49 @@ layout: statement
 
 ---
 
-## Vueコンパイラが見る範囲
+## 第1部のまとめ
 
-| ルール | Vueコンパイラ |
-| --- | --- |
-| 字句的 | △〜○（パースできる範囲） |
-| 語彙的（内容モデル） | 一部を開発時警告 |
-| 意味論的 | ✕ |
+- HTMLはLiving Standardとして今も更新されている
+- 「動く」ことと「正しい」ことは一致しない
+- 正しさは **字句 / 語彙 / 意味論** で切り分ける
+- この土台の上で、Vueのtemplateを見直す
 
 <!--
-Vueコンパイラが主に関与するのは字句的ルールと、一部の語彙的ルールです。意味論や細かい要素の使い方までは見てくれません。ここから先はコンパイルパイプラインと、隙間を埋める静的解析の話に入ります。
+ここまでが仕様の土台です。次の10分で、VueがこのHTMLをどう扱い、どこまで保証するのかを見ます。
 -->
 
 ---
 layout: section
 ---
 
-# Vue SFCの<br>コンパイルパイプライン
+# 2. VueでHTMLは<br>どのように使われているのか
 
 <!--
-ここからVueの中身に入ります。templateがどう解釈されているかを仕組みから見ます。
+約10分。第1部の字句/語彙/意味論を前提に、VueのtemplateがどこまでHTMLを保証するかを要点重視で進めます。
+-->
+
+---
+
+## フレームワークごとのHTMLの扱い
+
+| 系統 | 例 | 扱い |
+| --- | --- | --- |
+| HTMLをDSLとして使う | Vue / Svelte / Ripple | template等で宣言的UI |
+| JSXでHTML風に書く | React / SolidJS / Preact | JSの中の式（XHTML寄り？） |
+| HTMLファースト | Alpine.js / htmx | HTMLを起点に振る舞いを足す |
+
+<!--
+文脈整理として他FWにも触れますが、以降はVueに絞ります。VueはHTMLをDSLとして扱い、宣言的にUIを書きます。
+-->
+
+---
+layout: statement
+---
+
+# Vueのtemplateは<br>「HTMLっぽいDSL」
+
+<!--
+VueのSFCで書いているものは、見た目はHTMLです。しかし最終的には仮想DOM生成の関数へと変換されます。このギャップが、今日の本題です。
 -->
 
 ---
@@ -273,7 +349,7 @@ flowchart TD
 ```
 
 <!--
-もう少し具体的に見ると、compiler-sfc の parse のあと、compiler-core の Tokenizer と baseParse で HTMLルール（void要素、名前空間、entities）を踏まえたASTができ、compileTemplate 経由で compiler-dom の transforms が走り、最終的に module mode の render 関数コードになります。
+compiler-sfc の parse のあと、compiler-core の Tokenizer と baseParse で HTMLルールを踏まえたASTができ、compileTemplate 経由で compiler-dom の transforms が走り、最終的に module mode の render 関数コードになります。
 -->
 
 ---
@@ -307,7 +383,7 @@ future functionality.
 
 - `compiler-dom` の `validateHtmlNesting`
 - **開発時の警告**（`onWarn`）。コンパイルエラーではない
-- 字句的ルールと一部の語彙的ルール（内容モデル）は見るが、意味論までは関与しない
+- 字句的ルールと一部の語彙的ルールは見るが、意味論までは関与しない
 
 <!--
 Vue 3.4以降、validateHtmlNesting により不正なネストが開発時に警告されます。メッセージにもある通りハイドレーションエラーの原因になり得ますが、ビルドを止めるコンパイルエラーにはなりません。
@@ -324,6 +400,20 @@ layout: center
 -->
 
 ---
+
+## Vueコンパイラが見る範囲
+
+| ルール | Vueコンパイラ |
+| --- | --- |
+| 字句的 | △〜○（パースできる範囲） |
+| 語彙的（内容モデル） | 一部を開発時警告 |
+| 意味論的 | ✕ |
+
+<!--
+Vueコンパイラが主に関与するのは字句的ルールと、一部の語彙的ルールです。意味論や細かい要素の使い方までは見てくれません。
+-->
+
+---
 layout: statement
 ---
 
@@ -334,50 +424,40 @@ layout: statement
 -->
 
 ---
-layout: section
----
 
-# コンパイラだけでは<br>守れない隙間
-
-<!--
-では実際に、どんな機構で隙間を埋めているのかを見ていきます。
--->
-
----
-
-## 守るための機構たち
+## コンパイラだけでは守れない隙間
 
 | レイヤー | 例 | 限界 |
 | --- | --- | --- |
 | 実行時 | ハイドレーションミスマッチ警告 | 正しさの保証ではない |
-| 開発時Lint | ESLint / Markuplint / Biome / OxC / Vize | 設定とルール次第 |
 | 型 | TypeScript（`HTMLElement` など） | DOM APIの型であり適合性ではない |
+| `<head>` など | template外のマークアップ | Vueコンパイラだけでは見にくい |
 | 成果物 | 出力HTMLの静的解析 | ビルド後にしか見えない |
 
 <!--
-実行時の警告、開発時のLint、型、ビルド成果物への検証。レイヤーごとに役割が違います。
+ハイドレーション警告は差分検知です。型は適合性検証ではありません。SFCのtemplateを見ていれば十分、というわけでもありません。
 -->
 
 ---
 
-## ハイドレーション警告の限界
+## 補足：Vapor Mode / Pug
 
-- SSRとクライアントのDOM不一致を知らせる
-- **HTMLの正しさを保証するものではない**（警告止まり）
-- ブラウザが不正ネストを「直す」と、仮想DOMとの差分になりやすい
+- **Vapor** — `innerHTML` 寄りになり、不正ネストが実DOM修復と衝突しうる（[vuejs/core#15256](https://github.com/vuejs/core/issues/15256)）
+- **Pug**（`<template lang="pug">`）— `eslint-plugin-vue` だけでは効かない場合があり、別プラグインが必要
+- どちらも結論は同じ：**正しさを誰が保証するかは、コンパイル形態やDSLを変えても別途設計が要る**
 
 <!--
-ハイドレーションの警告は有用ですが、あくまで差分検知です。セマンティクスや要素の正しい使い方までは見てくれません。不正なネストは、ブラウザ側の再配置と仮想DOMの期待がずれて、ハイドレーション問題として表面化することがあります。
+補足です。形態が変わっても、保証の責任分界点は別途設計が必要、という点だけ押さえておきます。
 -->
 
 ---
 layout: section
 ---
 
-# 静的解析エコシステムで<br>どう守るか
+# 3. VueでHTMLの正しさを<br>検証するためのツール紹介
 
 <!--
-ここが本セッションの中心です。LinterたちがHTMLの違反をどう機械的に守っているかを紹介します。
+約10分。第1部の分類と第2部の隙間を踏まえ、どのツールがどのルールを埋めるかを要点で紹介します。
 -->
 
 ---
@@ -394,14 +474,13 @@ layout: section
 
 ## Vue周辺で使えるツールたち
 
-- [eslint-plugin-vue](https://eslint.vuejs.org/) — `vue/no-parsing-error` など
-- [Markuplint](https://markuplint.dev/) — HTML適合性に特化
-- [Biome](https://biomejs.dev/) — HTML rules が拡充中
-- [OxLint / OxC](https://oxc.rs/) — Rust製、速度とルール拡充
-- [Vize](https://vizejs.dev/) — Vue向け。HTML rules を a11y と分離
+- [eslint-plugin-vue](https://eslint.vuejs.org/) — 字句的（構文）を中心に
+- [Markuplint](https://markuplint.dev/) — **HTML仕様のマークアップルールを最も厚く継承**
+- [Vize](https://vizejs.dev/) — Vue向け。HTML rules をアクセシビリティと分離
+- [Biome](https://biomejs.dev/) / [OxLint（OxC）](https://oxc.rs/) — HTML対応は拡充途上（補足）
 
 <!--
-本日のLinter比較はVue周辺に絞ります。ESLint（eslint-plugin-vue）、Markuplint、Biome、OxC、Vizeです。アクセシビリティLintとは起点が違います。a11yはコンテンツがアクセシブルかを起点にし、WAI-ARIAの管轄が入ります。今日はHTML適合性の側を見ます。
+本日紹介するツールはVue周辺に絞ります。アクセシビリティLintとは起点が違います。今日はHTML適合性の側を見ます。Markuplintは他と守備範囲が違うので、eslint-plugin-vueやVizeと同じく個別に取り上げます。
 -->
 
 ---
@@ -409,40 +488,55 @@ layout: section
 ## eslint-plugin-vue が見るもの
 
 - `vue/no-parsing-error` — template内の構文エラー（HTML含む）
-- WHATWG HTMLの構文エラーを多く検知
-- **要素の使い方全般やセマンティクスまではカバーしない**
+- WHATWG HTMLの**字句的**な構文エラーを多く検知
+- **語彙的ルール全般や意味論まではカバーしない**
 - Vueのセルフクローズは許容（既定で一部オフ）
 
 <!--
-essentialに入っている vue/no-parsing-error は強力です。ただしパースエラー中心で、HTMLのコンテンツモデル全体や非推奨要素までは見ません。コンパイラのネスト警告とも守備範囲が重なりつつ、役割は異なります。
+essentialに入っている vue/no-parsing-error は強力です。ただしパースエラー＝字句的ルール中心で、内容モデル全体や非推奨要素、意味論までは見ません。
 -->
 
 ---
 
-## Markuplint / Biome / OxC
+## Markuplint — HTML仕様を継承するLint
 
-| ツール | 強み | Vueとの関係 |
-| --- | --- | --- |
-| Markuplint | HTML仕様ベースの適合性 | `.vue` をパーサで扱える |
-| Biome | 高速・統合ツールチェーン | HTML rules が増加中 |
-| OxLint | Rust製で高速 | correctness系ルールが拡充中 |
+- HTML Living Standard ベースの**適合性検証に特化**
+- 紹介するLinterの中で、**マークアップルールの継承が圧倒的に厚い**
+- `@markuplint/vue-parser` / `@markuplint/vue-spec` で `.vue` を扱える
+- 代表ルール:
+  - `permitted-contents` — 内容モデル（語彙的）
+  - `no-obsolete-element` — 廃止要素
+  - `require-accessible-name` — アクセシブルネーム（意味論寄り）
 
 <!--
-MarkuplintはHTML適合性に寄せたLintです。BiomeやOxCはRustツールチェーンの流れの中でHTMLも見始めています。AIエージェント時代には、応答が速いLintも実務上の価値があります。
+BiomeやOxCと同列ではなく、HTML正しさの中核ツールとして見ます。字句・語彙・意味論のうち、特に語彙的ルール（内容モデル）を仕様データから検証できるのが強みです。
+-->
+
+---
+
+## Biome / OxC — 拡充途上の補足枠
+
+| ツール | HTMLまわりの現状 |
+| --- | --- |
+| Biome | HTML rules が増えつつある（重複属性、一部内容モデル、アクセシビリティなど） |
+| OxLint | HTML lint は Out of Scope。Vue template lint も未対応 |
+
+<!--
+速度や統合ツールチェーンとしては有望ですが、HTMLマークアップルールの厚みではMarkuplintに及びません。今日の本線はeslint-plugin-vue / Markuplint / Vizeです。
 -->
 
 ---
 
 ## Vize の HTML Rules
 
-- HTML適合性を Vue固有ルール / a11y から分離
+- HTML適合性を Vue固有ルール / アクセシビリティから分離
 - 例: `html/deprecated-element`, `html/id-duplication`
 - **`html/cross-component-nesting`**
   - 単体テンプレートでは合法でも、コンポーネント合成で不正になるネストを検知
   - `vize lint --cross-file`
 
 <!--
-VizeはVueテンプレート向けに、HTML妥当性とセマンティクスをa11yルールと分けて提供しています。特に cross-component-nesting は、親が p、子コンポーネントのルートが div のような、ファイル単体では見えない問題を跨いで見つけられます。これはコンパイラ単体では守れない典型的な隙間です。
+VizeはVueテンプレート向けに、HTML妥当性をアクセシビリティルールと分けて提供しています。cross-component-nesting は、コンパイラ単体では守れない典型的な隙間です。
 -->
 
 ---
@@ -464,23 +558,23 @@ VizeはVueテンプレート向けに、HTML妥当性とセマンティクスを
 → 合成結果は実質 `<p><div>…</div></p>`（不正）
 
 <!--
-各ファイル単体では合法です。でも合成するとブラウザがDOMを組み替え、ハイドレーションミスマッチや非適合なDOMになります。静的解析がファイル横断で見て初めて防げる領域です。
+各ファイル単体では合法です。でも合成するとブラウザがDOMを組み替え、ハイドレーションミスマッチや非適合なDOMになります。
 -->
 
 ---
 
-## Linterが見るもの / 見ないもの
+## ツールが見るもの / 見ないもの
 
-| 観点 | コンパイラ | ESLint-vue | Markuplint等 | Vize |
-| --- | --- | --- | --- | --- |
-| 字句的 | △〜○ | ○ | ○ | ○ |
-| 語彙的・ネスト（単ファイル） | 警告 | 限定的 | ○寄り | ○ |
-| 語彙的・ネスト（クロスファイル） | ✕ | ✕ | 限定的 | ○ |
-| 非推奨要素・属性 | ✕ | ✕寄り | ○ | ○ |
-| 意味論 / a11y | ✕ | 別プラグイン | 設定次第 | 別ルール群 |
+| 観点 | コンパイラ | ESLint-vue | Markuplint | Biome/OxC | Vize |
+| --- | --- | --- | --- | --- | --- |
+| 字句的 | △〜○ | ○ | ○ | △ | ○ |
+| 語彙的・ネスト（単ファイル） | 警告 | 限定的 | ○ | △ | ○ |
+| 語彙的・ネスト（クロスファイル） | ✕ | ✕ | Pretenders等で一部 | ✕寄り | ○ |
+| 非推奨・廃止要素 | ✕ | ✕寄り | ○ | △ | ○ |
+| 意味論 / アクセシビリティ | ✕ | 別プラグイン | ○寄り | △〜○ | 別ルール群 |
 
 <!--
-大事なのは「どれか一つに全部任せる」のではなく、守備範囲の違いを理解して組み合わせることです。
+大事なのは「どれか一つに全部任せる」のではなく、守備範囲の違いを理解して組み合わせることです。HTML仕様の厚みではMarkuplintが突出しています。
 -->
 
 ---
@@ -492,19 +586,7 @@ VizeはVueテンプレート向けに、HTML妥当性とセマンティクスを
 - **出力後のHTML** — ビルド成果物への静的解析（Vize等）で初めて見える層がある
 
 <!--
-SFCのtemplateを見ていれば十分、というわけではありません。headや型、出力後の検証まで含めて、誰が何を見るかを設計します。
--->
-
----
-
-## 補足：Vapor Mode / Pug
-
-- **Vapor** — `innerHTML` 寄りになり、不正ネストが実DOM修復と衝突しうる（[vuejs/core#15256](https://github.com/vuejs/core/issues/15256)）
-- **Pug**（`<template lang="pug">`）— `eslint-plugin-vue` だけでは効かない場合があり、別プラグインが必要
-- どちらも結論は同じ：**正しさを誰が保証するかは、コンパイル形態やDSLを変えても別途設計が要る**
-
-<!--
-補足です。Vaporではこれまで警告止まりで動いていた不正ネストがより深刻になり得ます。Pugもeslint-plugin-vueだけでは守れないことがあります。形態が変わっても、保証の責任分界点は別途設計が必要、という点だけ押さえておきます。
+SFCのtemplateを見ていれば十分、というわけではありません。誰が何を見るかを設計します。
 -->
 
 ---
@@ -514,7 +596,19 @@ layout: section
 # まとめ
 
 <!--
-最後に、Vueで正しいHTMLと向き合うための実践指針をまとめます。
+3部を振り返り、実践指針に落とします。
+-->
+
+---
+
+## 今日の3部をおさらい（各約10分）
+
+1. **仕様** — Living Standardと、字句 / 語彙 / 意味論（ここを厚めに）
+2. **Vueでの使い方** — templateはHTMLっぽいDSL。コンパイラは最終保証しない
+3. **検証ツール** — eslint-plugin-vue / Markuplint / Vize を軸に隙間を埋める（Biome・OxCは補足）
+
+<!--
+時間は均等でも、仕様の解像度を先に上げておくと、Vueとツールの話が短くても伝わります。
 -->
 
 ---
@@ -524,13 +618,14 @@ layout: section
 1. **コンパイラの守備範囲を理解する**（警告≠保証）
 2. **Linterで「Vueの隙間」を埋める**
    - 構文: eslint-plugin-vue
-   - 適合性: Markuplint / Biome / OxC / Vize
+   - HTML適合性: Markuplint
+   - クロスファイル: Vize
 3. **コンポーネント境界をまたぐ正しさも見る**
 4. Living StandardとしてのHTMLに追随する
 5. 堅牢なマークアップ → アクセシブルなアウトプットへ
 
 <!--
-おすすめは、eslint-plugin-vueで構文を押さえつつ、MarkuplintやVizeで適合性・クロスファイルを補強する組み合わせです。ツールは移り変わりますが、「誰が何を保証するか」を設計する考え方は残ります。
+おすすめは、eslint-plugin-vueで構文を押さえつつ、Markuplintで仕様ベースの適合性を、Vizeでクロスファイルを補強する組み合わせです。Biome / OxCはこれから追う補足枠です。
 -->
 
 ---
@@ -547,10 +642,24 @@ HTMLの仕様は今も更新されています。Vueのコンパイルの仕組�
 
 ## 参考
 
+- [セッションページ](https://vuefes.jp/2026/speaker/yamanoku)
+- [HTML Standard](https://html.spec.whatwg.org/)
 - [Vue: validateHtmlNesting](https://github.com/vuejs/core/blob/main/packages/compiler-dom/src/transforms/validateHtmlNesting.ts)
 - [eslint-plugin-vue: no-parsing-error](https://eslint.vuejs.org/rules/no-parsing-error.html)
+- [Markuplint](https://markuplint.dev/) / [permitted-contents](https://markuplint.dev/docs/rules/permitted-contents)
 - [Vize HTML Rules](https://vizejs.dev/rules/html/index.html)
 - [WHATWG: Non-conforming features](https://html.spec.whatwg.org/#non-conforming-features)
 - [弁護士ドットコム 新卒研修2025 HTML/CSS（太田良典）](https://speakerdeck.com/bengo4com/20250405-bengo4com-htmlcss)
+- [新卒エンジニア向けHTML/CSS研修を開催しました（Creators’ blog）](https://creators.bengo4.com/entry/2025/08/01/080000)
 
 ---
+
+## 発表者：やまのく（yamanoku）
+
+一児の父。会社員。
+
+---
+layout: end
+---
+
+# Thank You For Listening !!
