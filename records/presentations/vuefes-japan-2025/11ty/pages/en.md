@@ -11,6 +11,10 @@ lang: en
 
 [English page](https://records.yamanoku.net/vuefes-japan-2025/en/) / [日本語ページ](https://records.yamanoku.net/vuefes-japan-2025/ja/)
 
+## Slide
+
+[Presentation slides (Japanese Only)](https://records.yamanoku.net/vuefes-japan-2025/slide/)
+
 ---
 
 At Vue Fes Japan Online 2022, I gave a presentation on [To make accessible components in Vue.js](https://vuefes.jp/2022/sessions/yamanoku), and at Vue Fes Japan 2023, I spoke about [How to make Nuxt applications accessible based on page transitions](https://vuefes.jp/2023/sessions/yamanoku).
