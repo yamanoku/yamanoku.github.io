@@ -22,3 +22,7 @@
 .slidev-layout.section h1 {
   font-weight: 700;
 }
+
+.slidev-layout ol {
+  list-style: decimal;
+}

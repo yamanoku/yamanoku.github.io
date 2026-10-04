@@ -63,6 +63,9 @@ export function configureEleventy(eleventyConfig, options = {}) {
         import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs";
         mermaid.initialize({ startOnLoad: true, theme: "neutral" });
       </script>
+      <style>
+        pre.mermaid { text-align: left; }
+      </style>
     `;
   });
 
