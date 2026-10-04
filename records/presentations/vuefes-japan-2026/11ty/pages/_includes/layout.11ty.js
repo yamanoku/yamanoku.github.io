@@ -23,6 +23,7 @@ export function render(data) {
         <footer>
           <p>Copyright ${this.year()}, Okuto Oyama</p>
         </footer>
+        ${this.mermaidScriptTag()}
       </body>
     </html>
   `;

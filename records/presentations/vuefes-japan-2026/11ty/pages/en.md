@@ -54,17 +54,27 @@ A Vue template is an "HTML-like DSL." It looks like HTML, but it is ultimately t
 
 ## What HTML "correctness" means
 
-HTML continues to evolve as a Living Standard. Because its expressive range is wide, incorrect markup can still "work." There are also [non-conforming features](https://html.spec.whatwg.org/#non-conforming-features).
+HTML continues to evolve as a Living Standard. In the HTML syntax, parse errors are often corrected and parsing continues to the end, so incorrect markup can still "work." There are also [non-conforming features](https://html.spec.whatwg.org/#non-conforming-features).
 
 "HTML that works" and "correct HTML" are not the same. Rendering in a browser, conforming to the spec, and producing accessible output are separate concerns.
 
-Correctness has at least these layers:
+There is no single correct markup, but quality differences and clear errors do exist. Conditions for "good HTML" include being semantic, accessible, free of errors, and maintainable. Eliminating errors is the starting point.
 
-1. **Lexical / syntactic** — closing tags, attribute syntax
-2. **Content model** — what may appear inside which element
-3. **Semantics / accessibility** — meaning and intended use of elements
+Errors fall into three kinds of rules:
 
-The Vue compiler mainly covers (1) and part of (2). It does not fully cover (3) or detailed element usage.
+### 1. Lexical rules
+
+closing tags, attribute syntax, and so on. Violations cause parser errors and prevent a correct DOM tree. In the HTML syntax they may be corrected so the page still appears to "work."
+
+### 2. Vocabulary rules
+
+allowed elements and attributes, plus the **content model** for nesting. For example, `div` / `p` must not appear inside `label`, and `div` must not appear inside `p`. The parser often does not stop; it builds an undesirable DOM instead.
+
+### 3. Semantic rules
+
+meaning and intended use of elements, including accessibility. Markup can be grammatically valid yet convey the wrong meaning (using `h1` only for visual size, building a button with `a`, and so on). Tools cannot fully detect this; review and experience are required.
+
+The Vue compiler mainly covers lexical rules and part of the vocabulary rules (dev-time content-model warnings). It does not cover semantics or detailed element usage.
 
 ## The Vue SFC compile pipeline
 
@@ -76,7 +86,15 @@ Compilation roughly has three stages:
 
 <figure>
 
-![Vue SFC compile pipeline from SFC source through compiler-sfc parse, Tokenizer and baseParse, SFCDescriptor, compileTemplate, and compiler-dom compile to render function code](../images/sfc-compile-pipeline.png)
+```mermaid
+flowchart TD
+  A["SFC source (.vue)"] --> B["compiler-sfc parse()<br/>parseMode: 'sfc'"]
+  B --> C["compiler-core Tokenizer + baseParse<br/>(HTML rules: void elements, namespaces, entities)"]
+  C --> D["SFCDescriptor<br/>template.content + template.ast"]
+  D --> E["compiler-sfc<br/>compileTemplate()"]
+  E --> F["compiler-dom compile()<br/>parserOptions + DOM transforms"]
+  F --> G["render function code (module mode)"]
+```
 
 <figcaption>Flow from SFC source through parse / compileTemplate / compiler-dom to render function code</figcaption>
 </figure>
@@ -110,7 +128,7 @@ Since Vue 3.4, `compiler-dom`'s `validateHtmlNesting` warns about invalid nestin
 <figcaption>Example development nesting warning. Helpful DX, but ignoring it still lets the code run</figcaption>
 </figure>
 
-This is a development **warning** via `onWarn`, not a hard compile error. Vue looks at lexical/syntactic concerns, but not full HTML element usage.
+This is a development **warning** via `onWarn`, not a hard compile error. Vue covers lexical rules and part of the vocabulary rules (content model), but not semantics or full HTML element usage.
 
 In short, Vue itself does not finally guarantee HTML semantics. The compiler is excellent, but final HTML correctness is another layer's job.
 
@@ -179,11 +197,11 @@ Each file is valid alone, but composition becomes `<p><div>…</div></p>`. The b
 
 | Concern | Compiler | ESLint-vue | Markuplint etc. | Vize |
 | --- | --- | --- | --- | --- |
-| Lexical / syntax | partial–yes | yes | yes | yes |
-| Nesting (single file) | warning | limited | mostly yes | yes |
-| Nesting (cross-file) | no | no | limited | yes |
+| Lexical | partial–yes | yes | yes | yes |
+| Vocabulary / nesting (single file) | warning | limited | mostly yes | yes |
+| Vocabulary / nesting (cross-file) | no | no | limited | yes |
 | Deprecated elements/attrs | no | mostly no | yes | yes |
-| a11y | no | other plugins | depends | separate rules |
+| Semantics / a11y | no | other plugins | depends | separate rules |
 
 The point is not to trust one tool for everything, but to combine tools with clear responsibility boundaries.
 
@@ -218,3 +236,4 @@ Engage correctly with HTML, and build robust markup with Vue.
 - [eslint-plugin-vue: no-parsing-error](https://eslint.vuejs.org/rules/no-parsing-error.html)
 - [Vize HTML Rules](https://vizejs.dev/rules/html/index.html)
 - [WHATWG: Non-conforming features](https://html.spec.whatwg.org/#non-conforming-features)
+- [弁護士ドットコム 新卒研修2025 HTML/CSS（太田良典）](https://speakerdeck.com/bengo4com/20250405-bengo4com-htmlcss)

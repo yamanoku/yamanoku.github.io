@@ -54,17 +54,27 @@ Vueのtemplateは「HTMLっぽいDSL」です。見た目はHTMLですが、最�
 
 ## HTMLの「正しさ」とは何か
 
-HTMLはLiving Standardとして今も更新され続けています。表現の幅が広いため、意図と違う書き方でも「動いて」しまうことがあります。[Non-conforming features](https://html.spec.whatwg.org/#non-conforming-features) という要素群も存在します。
+HTMLはLiving Standardとして今も更新され続けています。HTML構文はエラーがあっても補正されて最後までパースされるため、意図と違う書き方でも「動いて」しまうことがあります。[Non-conforming features](https://html.spec.whatwg.org/#non-conforming-features) という要素群も存在します。
 
 ここで重要なのは、「動くHTML」と「正しいHTML」は違うということです。ブラウザで表示されることと、仕様に適合していること、アクセシブルなアウトプットになることは別問題です。
 
-正しさには少なくとも次のレイヤーがあります。
+マークアップに唯一の正解はありません。それでも品質の良し悪しと、明確な誤りはあります。「良いHTML」の条件としては、セマンティックであること、アクセシブルであること、誤りがないこと、保守しやすいことなどが挙げられます。まずは誤りをなくすことがスタート地点です。
 
-1. **字句・構文** — タグの閉じ方、属性の書き方
-2. **コンテンツモデル** — どの要素の中に何を置けるか
-3. **セマンティクス / アクセシビリティ** — 要素の意味と使い方
+誤りは次の3つのルールに分類できます。
 
-Vueコンパイラが主に関与するのは1と、一部の2です。3や、より細かい要素の使い方までは見てくれません。
+### 1. 字句的ルール
+
+タグの閉じ方、属性の書き方など。違反するとパーサがエラーを出し、DOMツリーが正しく作れません。HTML構文では補正されて「動いて」見えることがあります。
+
+### 2. 語彙的ルール
+
+使える要素・属性と、**内容モデル（content model）** による入れ子ルール。例として、`label` の中に `div` / `p` は置けず、`p` の中に `div` も置けません。違反してもパーサは止まらず、望ましくないDOMになります。
+
+### 3. 意味論的ルール
+
+要素の意味と使い方、アクセシビリティ。文法として正しくても伝わる意味が違うことがあります（見た目のためだけに `h1` を使う、ボタンを `a` で作る、など）。ツールだけでは完全には検出できず、レビューと経験が必要です。
+
+Vueコンパイラが主に関与するのは字句的ルールと、一部の語彙的ルール（内容モデルの開発時警告）です。意味論や、より細かい要素の使い方までは見てくれません。
 
 ## Vue SFCのコンパイルパイプライン
 
@@ -76,7 +86,15 @@ Vueコンパイラが主に関与するのは1と、一部の2です。3や、�
 
 <figure>
 
-![Vue SFCのコンパイルパイプライン。SFCソースからcompiler-sfc parse、TokenizerとbaseParse、SFCDescriptor、compileTemplate、compiler-dom compileを経てrender関数コードになる流れ](../images/sfc-compile-pipeline.png)
+```mermaid
+flowchart TD
+  A["SFCソース (.vue)"] --> B["compiler-sfc parse()<br/>parseMode: 'sfc'"]
+  B --> C["compiler-core Tokenizer + baseParse<br/>(HTMLルール: void要素, 名前空間, entities)"]
+  C --> D["SFCDescriptor<br/>template.content + template.ast"]
+  D --> E["compiler-sfc<br/>compileTemplate()"]
+  E --> F["compiler-dom compile()<br/>parserOptions + DOM transforms"]
+  F --> G["render関数コード (module mode)"]
+```
 
 <figcaption>SFCソースが parse / compileTemplate / compiler-dom を経て render 関数コードになる流れ</figcaption>
 </figure>
@@ -110,7 +128,7 @@ Vue 3.4以降、`compiler-dom` の `validateHtmlNesting` により、不正な�
 <figcaption>開発時のネスト警告の例。ありがたいDXだが、警告を無視すればそのまま動いてしまう</figcaption>
 </figure>
 
-これは `onWarn` による**開発時の警告**であり、明確なコンパイルエラーではありません。字句・構文は見ますが、具体的なHTML要素の使い方全般までは関与しません。
+これは `onWarn` による**開発時の警告**であり、明確なコンパイルエラーではありません。字句的ルールと一部の語彙的ルール（内容モデル）は見ますが、意味論や具体的なHTML要素の使い方全般までは関与しません。
 
 つまり、Vue自身はHTMLセマンティクスを最終保証しません。コンパイラは優秀ですが、HTMLの正しさの最終保証は別レイヤーの仕事です。
 
@@ -179,11 +197,11 @@ AIエージェント時代には、応答が速いLintも実務上の価値が�
 
 | 観点 | コンパイラ | ESLint-vue | Markuplint等 | Vize |
 | --- | --- | --- | --- | --- |
-| 字句・構文 | △〜○ | ○ | ○ | ○ |
-| ネスト（単ファイル） | 警告 | 限定的 | ○寄り | ○ |
-| ネスト（クロスファイル） | ✕ | ✕ | 限定的 | ○ |
+| 字句的 | △ | ○ | ○ | ○ |
+| 語彙的・ネスト（単ファイル） | 警告 | 限定的 | ○寄り | ○ |
+| 語彙的・ネスト（クロスファイル） | ✕ | ✕ | 限定的 | ○ |
 | 非推奨要素・属性 | ✕ | ✕寄り | ○ | ○ |
-| a11y | ✕ | 別プラグイン | 設定次第 | 別ルール群 |
+| 意味論 / a11y | ✕ | 別プラグイン | 設定次第 | 別ルール群 |
 
 大事なのは「どれか一つに全部任せる」のではなく、守備範囲の違いを理解して組み合わせることです。
 
@@ -218,3 +236,4 @@ HTMLと正しく向き合いながら、Vueで堅牢なマークアップを実�
 - [eslint-plugin-vue: no-parsing-error](https://eslint.vuejs.org/rules/no-parsing-error.html)
 - [Vize HTML Rules](https://vizejs.dev/rules/html/index.html)
 - [WHATWG: Non-conforming features](https://html.spec.whatwg.org/#non-conforming-features)
+- [弁護士ドットコム 新卒研修2025 HTML/CSS（太田良典）](https://speakerdeck.com/bengo4com/20250405-bengo4com-htmlcss)

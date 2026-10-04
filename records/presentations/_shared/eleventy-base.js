@@ -24,6 +24,13 @@ export function configureEleventy(eleventyConfig, options = {}) {
     html: true,
     langPrefix: "hljs language-",
     highlight(str, lang) {
+      if (lang === "mermaid") {
+        const escaped = str
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+        return `<pre class="mermaid">${escaped}</pre>`;
+      }
       if (lang && hljs.getLanguage(lang)) {
         return hljs.highlight(str, { language: lang }).value;
       }
@@ -46,7 +53,16 @@ export function configureEleventy(eleventyConfig, options = {}) {
     return `
       <link rel="stylesheet" href="${root}yama-normalize.css">
       <link rel="stylesheet" href="${root}hljs-a11y-dark.css">
-      <style>code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:1em;}pre code.hljs{padding:var(--y-rhythm-3)}.footnote-item > p{margin:0;}</style>
+      <style>code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:1em;}pre code.hljs{padding:var(--y-rhythm-3)}.footnote-item > p{margin:0;}pre.mermaid{background:transparent;overflow:auto;text-align:center}</style>
+    `;
+  });
+
+  eleventyConfig.addJavaScriptFunction("mermaidScriptTag", () => {
+    return `
+      <script type="module">
+        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.esm.min.mjs";
+        mermaid.initialize({ startOnLoad: true, theme: "neutral" });
+      </script>
     `;
   });
 
