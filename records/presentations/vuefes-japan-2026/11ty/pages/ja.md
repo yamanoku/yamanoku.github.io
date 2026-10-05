@@ -57,7 +57,7 @@ Living Standardでは、要素や属性の扱いが実装状況に合わせて�
 
 たとえば `p` の中に `div` を置くと、パーサが補正し、実際のDOMは意図と違う形になり得ます。HTML構文はエラーでも最後までパースするため、画面は出ても構造・スタイル・アクセシビリティに副作用が出ます。
 
-マークアップに唯一の正解はありません。それでも品質の良し悪しと、明確な誤りはあります。「良いHTML」の条件としては、セマンティックであること、アクセシブルであること、誤りがないこと、保守しやすいことなどが挙げられます。まずは誤りをなくすことがスタート地点です。弁護士ドットコムの[新卒向けHTML/CSS研修](https://speakerdeck.com/bengo4com/20250405-bengo4com-htmlcss)でも強調されていた論点でもあります。
+マークアップに唯一の正解はありません。それでも品質の良し悪しと、明確な誤りはあります。「良いHTML」の条件としては、セマンティックであること、アクセシブルであること、誤りがないこと、保守しやすいことなどが挙げられます。まずは誤りをなくすことがスタート地点です。
 
 誤りは、次の3つのルールに分類できます。
 
@@ -65,20 +65,53 @@ Living Standardでは、要素や属性の扱いが実装状況に合わせて�
 
 タグの閉じ方、属性の書き方などです。違反するとパーサがエラーを出し、DOMツリーが正しく作れません。ただしHTML構文では補正されて「動いて」見えることがあります。
 
+```html
+<!-- NG: 終了タグが対応していない / 属性値の書き方が崩れている -->
+<div>
+  <p>テキスト
+</div>
+<img src="photo.jpg" alt="写真" title=未クオート>
+```
+
+開始タグと終了タグの対応が崩れていたり、属性値のクオートが欠けていたりする例です。XMLなら即座に止まりますが、HTML構文では補正されて気づきにくいことがあります。
+
 ### 語彙的ルール
 
 使える要素・属性と、**内容モデル（content model）** による入れ子ルールです。違反してもパーサは止まらず、望ましくないDOMになります。
 
-| 親 | 置けない例 | なぜまずいか |
-| --- | --- | --- |
-| `p` | `div`, `p`, `ul` | 段落の中にブロックを入れられない |
-| `label` | `div`, `p` | ラベルの内容モデル外 |
-| `a` | `a` | リンクの入れ子は不可 |
-| `ul` / `ol` | 直接の `div` | 子は基本的に `li` |
+```html
+<!-- NG: p の中にブロック要素は置けない -->
+<p>
+  <div>block</div>
+</p>
+
+<!-- NG: リンクの入れ子は不可 -->
+<a href="/a">
+  外側
+  <a href="/b">内側</a>
+</a>
+
+<!-- NG: ul / ol の直接の子は li -->
+<ul>
+  <div>item</div>
+</ul>
+```
+
+タグの対応は合っていても、要素の入れ子が誤っていると静かに壊れたDOMができます。
 
 ### 意味論的ルール
 
-要素の意味と使い方、アクセシビリティです。文法として正しくても伝わる意味が違うことがあります。見た目のためだけに `h1` を使う、ボタンを `a` で作る、意味のある画像に `alt` がない、などです。ツールだけでは完全には検出できず、レビューと経験が必要です。
+要素の意味と使い方、アクセシビリティです。文法として正しくても伝わる意味が違うことがあります。
+
+```html
+<!-- NG: 見た目のためだけに見出しを使う -->
+<h1 class="title-like">ただ大きい文字にしたいだけ</h1>
+
+<!-- NG: ボタンを a で作る -->
+<a href="#" onclick="submitForm()">送信</a>
+```
+
+ツールだけでは完全には検出できず、レビューと経験が必要です。意味論は、HTMLの強みであるアクセシビリティに直結します。
 
 第1部のまとめです。HTMLはLiving Standardとして今も更新されています。「動く」ことと「正しい」ことは一致しません。正しさは字句 / 語彙 / 意味論で切り分け、その土台の上でVueのtemplateを見直していきます。
 
@@ -141,16 +174,14 @@ flowchart TD
 
 では、Vueは何もしないのかというと、そうではありません。Vue 3.4以降、`compiler-dom` の `validateHtmlNesting` により、不正なネストが開発時に警告されます。
 
-> `<h1>` cannot be child of `<p>`, according to HTML specifications. This can cause hydration errors or potentially disrupt future functionality.
-
-（`<p>` の子に `<h1>` は置けません。HTML仕様に従っています。ハイドレーションエラーや将来の機能への影響を引き起こす可能性があります。）
-
 <figure>
 
 ![Vueのテンプレートで p の中に h1 や li を置いたときに、HTML仕様上のネスト違反として警告が出ているエディタ画面](../images/vue-nesting-warning.png)
 
 <figcaption>開発時のネスト警告の例。ありがたいDXだが、警告を無視すればそのまま動いてしまう</figcaption>
 </figure>
+
+> `<h1>` cannot be child of `<p>`, according to HTML specifications. This can cause hydration errors or potentially disrupt future functionality.
 
 これは `onWarn` による**開発時の警告**であり、明確なコンパイルエラーではありません。ありがたいDXですが、警告を無視すればそのまま動いてしまいます。
 
@@ -186,39 +217,38 @@ VueでもJSXでUIを書けます。Virtual DOM / Vapor Mode に対応し、Oxc�
 
 ここまで見てきた通り、Vueのテンプレートは最終的に Hyperscript に変換されるため、不正なネストでも関数としては通ってしまいます。コンパイラや実行時のVue自身はHTMLセマンティクスを制御・検証しません。だからブラウザが意図せぬDOM修正を起こす前に、静的解析が隙間を埋める必要があります。
 
-本日紹介するツールは次のとおりです。
+ここではツールを星取表で並べるのではなく、**登場の歴史をたどりながら、何が足りなくて次が生まれたか**を見ていきます。アクセシビリティLintとは起点が違います。ここではHTML適合性の側です。
 
-- [eslint-plugin-vue](https://eslint.vuejs.org/) — 字句的（構文）を中心に
-- [Markuplint](https://markuplint.dev/) — HTML仕様のマークアップルールを最も厚く継承
-- [Vize](https://vizejs.dev/) — Vue向け。HTML rules をアクセシビリティと分離
-- [Biome](https://biomejs.dev/) / [OxLint（OxC）](https://oxc.rs/) — HTML対応は拡充途上（補足）
+流れは次のとおりです。
 
-アクセシビリティLintとは起点が違います。ここではHTML適合性の側を見ます。Markuplintは Biome / OxC と同列ではなく、eslint-plugin-vue や Vize と同じく個別に取り上げます。
+1. まず [ESLint](https://eslint.org/) / [eslint-plugin-vue](https://eslint.vuejs.org/) が、Vueの日常開発にLintを持ち込んだ
+2. 次に [Markuplint](https://markuplint.dev/) が、HTML仕様そのものを見る層を作った
+3. その後 [Biome](https://biomejs.dev/) / [OxC](https://oxc.rs/) が、速度と統合ツールチェーンの世代を開いた
+4. そして近年 [Vize](https://vizejs.dev/) が、Vueのコンポーネント合成まで見通す検証を押し広げている
 
-まず [eslint-plugin-vue](https://eslint.vuejs.org/) です。`vue/no-parsing-error` は template 内の構文エラー（HTML含む）を報告します。WHATWG HTMLの字句的な構文エラーを多く検知でき、essential系のプリセットにも含まれます。一方で、語彙的ルール全般や意味論まではカバーしません。
+### まず ESLint / eslint-plugin-vue
 
-次に Markuplint です。紹介するLinterの中で、Markuplintは HTML Living Standard ベースの**適合性検証に特化**しており、マークアップルールの継承が圧倒的に厚いです。`@markuplint/vue-parser` / `@markuplint/vue-spec` で `.vue` を扱えます。
+最初に広まった土台は、ESLint と [eslint-plugin-vue](https://eslint.vuejs.org/) です。長所は、template の字句エラーを日常の開発フローに乗せられることです。[`vue/no-parsing-error`](https://eslint.vuejs.org/rules/no-parsing-error.html) は WHATWG HTML の字句的な構文エラーを多く検知でき、essential 系プリセットにも含まれます。エディタ連携とCIで、壊れたタグや属性を早期に止められます。
 
-代表ルールは次のとおりです。
+一方で、ESLint系が得意なのは主に字句・構文寄りの守備です。内容モデルや仕様適合性までを、HTML仕様データとして厚く見る層は、まだ足りていませんでした。
 
-- [`permitted-contents`](https://markuplint.dev/docs/rules/permitted-contents) — 内容モデル（語彙的）
-- [`no-obsolete-element`](https://markuplint.dev/docs/rules/no-obsolete-element) — 廃止要素
-- [`require-accessible-name`](https://markuplint.dev/docs/rules/require-accessible-name) — アクセシブルネーム（意味論寄り）
+### 次に Markuplint が登場
 
-字句・語彙・意味論のうち、特に語彙的ルール（内容モデル）を仕様データから検証できるのが強みです。
+その隙間を埋めるように登場したのが Markuplint です。長所は、HTML Living Standard ベースの**適合性検証**ができることです。[`permitted-contents`](https://markuplint.dev/docs/rules/permitted-contents) で内容モデルを仕様データから検証でき、[`no-obsolete-element`](https://markuplint.dev/docs/rules/no-obsolete-element) で廃止要素を止め、[`require-accessible-name`](https://markuplint.dev/docs/rules/require-accessible-name) でアクセシブルネームも見られます。`@markuplint/vue-parser` / `@markuplint/vue-spec` で `.vue` を扱えます。
 
-Vueコンポーネントを描画結果のネイティブHTML要素に見立てて検証する [Pretenders](https://markuplint.dev/docs/guides/besides-html) もあります。たとえば `List` → `ul`、`Item` → `li` とマップすると、コンポーネント境界をまたぐ語彙的ルールを仕様データ側から補強できます。手動マップのほか、Vue向けの scan も可能です。
+さらに [Pretenders](https://markuplint.dev/docs/guides/besides-html) があります。Vueコンポーネントを描画結果のネイティブHTML要素に見立てて検証できます。たとえば `List` → `ul`、`Item` → `li` とマップすると、コンポーネント境界をまたぐ語彙的ルールを仕様データ側から補強できます。手動マップのほか、Vue向けの scan も可能です。
 
-Biome / OxC は拡充途上の補足枠として押さえます。
+ここまでで、「字句を止める」と「仕様で適合性を見る」という二層が揃いました。
 
-| ツール | HTMLまわりの現状 |
-| --- | --- |
-| Biome | 字句: [`noDuplicateAttributes`](https://biomejs.dev/linter/rules/no-duplicate-attributes/)。語彙寄り: [`noObsoleteTags`](https://biomejs.dev/linter/rules/no-obsolete-tags/)、[`noMisplacedListElements`](https://biomejs.dev/linter/rules/no-misplaced-list-elements/)（nursery）。意味論寄り: [`useSemanticElements`](https://biomejs.dev/linter/rules/use-semantic-elements/) など。`.vue` は experimental |
-| OxLint | [HTML lint は Out of Scope](https://oxc.rs/compatibility)。Vue は script 中心で template lint は未対応 |
+### その後 Biome / OxC が出てくる
 
-速度や統合ツールチェーンとしては有望ですが、HTMLマークアップルールの厚みでは Markuplint に及びません。本線は eslint-plugin-vue / Markuplint / Vize です。
+続いて出てきたのが、Biome や OxC といった高速・統合志向の世代です。役割は「同じ検証をより速く、ツールチェーンに載せる」ことです。Biome では [`noDuplicateAttributes`](https://biomejs.dev/linter/rules/no-duplicate-attributes/) で重複属性を止めたり、[`noObsoleteTags`](https://biomejs.dev/linter/rules/no-obsolete-tags/) や [`noMisplacedListElements`](https://biomejs.dev/linter/rules/no-misplaced-list-elements/) といった HTML 寄りのルール、[`useSemanticElements`](https://biomejs.dev/linter/rules/use-semantic-elements/) のような意味論寄りの支援を、統合ツールチェーンの中で高速に回せます。OxLint は速度が強みで、現状は script 側の解析が中心です（[HTML lint は Out of Scope](https://oxc.rs/compatibility)）。
 
-そして Vize です。[Vize](https://vizejs.dev/rules/html/index.html) は HTML適合性を Vue固有ルール / アクセシビリティから分離して提供しています。特に重要なのが `html/cross-component-nesting` です。
+HTML適合性の本線を置き換える段階ではありませんが、「速さ」と「統合」が次の競争軸になった、という変化は押さえておきたいです。
+
+### そして Vize が生まれている
+
+その流れの先に、近年登場しているのが Vize です。長所は、単ファイルでは合法でもコンポーネント合成で壊れるネストを、ファイル横断で止められることです。[Vize](https://vizejs.dev/rules/html/index.html) は HTML適合性を Vue固有ルール / アクセシビリティから分離して提供しており、特に重要なのが `html/cross-component-nesting` です。
 
 ```html
 <!-- App.vue -->
@@ -232,19 +262,18 @@ Biome / OxC は拡充途上の補足枠として押さえます。
 </template>
 ```
 
-各ファイル単体では合法でも、合成結果は実質 `<p><div>…</div></p>` となり不正です。`vize lint --cross-file` のようにファイル横断で見て初めて防げる領域です。
+各ファイル単体では合法でも、合成結果は実質 `<p><div>…</div></p>` となり不正です。`vize lint --cross-file` のようにファイル横断で見て初めて防げる領域です。ESLintでもMarkuplintでも見えにくかった「合成後」の正しさを押し広げているのが、いまの進化点です。
 
-ツールが見るもの / 見ないものを一覧にすると、次のようになります。
+### 歴史が積み上げた役割分担
 
-| 観点 | コンパイラ | ESLint-vue | Markuplint | Biome/OxC | Vize |
-| --- | --- | --- | --- | --- | --- |
-| 字句的 | △〜○ | ○ | ○ | △ | ○ |
-| 語彙的・ネスト（単ファイル） | 警告 | 限定的 | ○ | △ | ○ |
-| 語彙的・ネスト（クロスファイル） | ✕ | ✕ | Pretenders等で一部 | ✕寄り | ○ |
-| 非推奨・廃止要素 | ✕ | ✕寄り | ○ | △ | ○ |
-| 意味論 / アクセシビリティ | ✕ | 別プラグイン | ○寄り | △〜○ | 別ルール群 |
+こうして見ると、優劣の星取表より、**時代ごとに足りない層を埋めてきた結果としての役割分担**がはっきりします。
 
-大事なのは「どれか一つに全部任せる」のではなく、守備範囲の違いを理解して組み合わせることです。HTML仕様の厚みでは Markuplint が突出しています。`<head>` や TypeScript の型、出力後の静的解析まで含めて、誰が何を見るかを設計します。
+1. **字句を止める** — eslint-plugin-vue（`vue/no-parsing-error`）
+2. **仕様ベースの適合性を見る** — Markuplint（`permitted-contents` など）
+3. **速さと統合を足す** — Biome / OxC（HTMLは拡充途上）
+4. **合成後のネストを見る** — Vize（`html/cross-component-nesting`）
+
+実践の本線は、いまも eslint-plugin-vue / Markuplint / Vize です。Biome / OxC は速度面の補強として追う位置づけです。あわせて、`<head>` や TypeScript の型、出力後の静的解析まで含めて、誰が何を見るかを設計します。SFCのtemplateを見ていれば十分、というわけではありません。
 
 ## おわりに
 
@@ -252,7 +281,7 @@ Biome / OxC は拡充途上の補足枠として押さえます。
 
 1. **仕様** — Living Standardと、字句 / 語彙 / 意味論
 2. **Vueでの使い方** — templateはHTMLっぽいDSL。コンパイラは最終保証しない
-3. **検証ツール** — eslint-plugin-vue / Markuplint / Vize を軸に隙間を埋める（Biome・OxCは補足）
+3. **検証ツール** — ESLint → Markuplint → Biome/OxC → Vize と進化してきた層を組み合わせて隙間を埋める
 
 実践としては、次の一歩をお勧めします。
 
@@ -262,7 +291,7 @@ Biome / OxC は拡充途上の補足枠として押さえます。
 4. Living StandardとしてのHTMLに追随する
 5. 堅牢なマークアップ → アクセシブルなアウトプットへ
 
-おすすめは、eslint-plugin-vueで構文を押さえつつ、Markuplintで仕様ベースの適合性を、Vizeでクロスファイルを補強する組み合わせです。Biome / OxCはこれから追う補足枠です。
+おすすめは、歴史が積み上げた役割分担をそのまま使うことです。eslint-plugin-vueで構文を押さえ、Markuplintで仕様ベースの適合性を、Vizeでクロスファイルを補強する。Biome / OxCは速度と統合の補強として追います。
 
 HTMLの仕様は今も更新されています。Vueのコンパイルの仕組みを理解したうえで、静的解析という防波堤を立て、堅牢なマークアップとアクセシブルなアウトプットを一緒に実現していきましょう。
 
