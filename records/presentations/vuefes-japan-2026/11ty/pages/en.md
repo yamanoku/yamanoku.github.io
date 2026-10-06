@@ -150,16 +150,24 @@ Vue SFC compilation has three stages:
 <figure>
 
 ```mermaid
-flowchart TD
-  A["SFC source (.vue)"] --> B["compiler-sfc parse()<br/>parseMode: 'sfc'"]
-  B --> C["compiler-core Tokenizer + baseParse<br/>(HTML rules: void elements, namespaces, entities)"]
-  C --> D["SFCDescriptor<br/>template.content + template.ast"]
-  D --> E["compiler-sfc<br/>compileTemplate()"]
-  E --> F["compiler-dom compile()<br/>parserOptions + DOM transforms"]
-  F --> G["render function code (module mode)"]
+flowchart LR
+  subgraph Parse
+    A["SFC source (.vue)"] --> B["compiler-sfc<br/>parse()<br/>parseMode: 'sfc'"]
+    B --> C["compiler-core<br/>Tokenizer + baseParse"]
+    C --> D["SFCDescriptor"]
+  end
+  subgraph Transform
+    E["compiler-sfc<br/>compileTemplate()"]
+    E --> F["compiler-dom<br/>compile()"]
+  end
+  subgraph Generate
+    G["render"]
+  end
+  D --> E
+  F --> G
 ```
 
-<figcaption>Flow from SFC source through parse / compileTemplate / compiler-dom to render function code</figcaption>
+<figcaption>Flow from SFC source through Parse → Transform → Generate to render function code</figcaption>
 </figure>
 
 `compiler-sfc` splits a file into an `SFCDescriptor` via `parse()`, then `compileScript` and `compileTemplate` handle `<script>` and `<template>`.
@@ -241,6 +249,46 @@ What ESLint-family tools mainly covered, though, was lexical and syntactic defen
 
 Markuplint appeared to fill that gap. Its strength is **HTML Living Standard conformance** checking. [`permitted-contents`](https://markuplint.dev/docs/rules/permitted-contents) validates content models from specification data, [`no-obsolete-element`](https://markuplint.dev/docs/rules/no-obsolete-element) blocks obsolete elements, and [`require-accessible-name`](https://markuplint.dev/docs/rules/require-accessible-name) can check accessible names. With `@markuplint/vue-parser` and `@markuplint/vue-spec`, it handles `.vue` files.
 
+Beyond conformance, it also has distinctive rules that help in day-to-day work. Here are a few.
+
+[`no-pseudo-list`](https://markuplint.dev/docs/rules/no-pseudo-list) stops pseudo lists made with bullet characters and asks you to use `ul` / `li`. A list that exists only visually is not announced as a list to screen readers.
+
+```html
+<!-- Bad: pseudo list with bullet characters -->
+<div>
+  • Apple<br />
+  • Banana<br />
+  • Citrus
+</div>
+```
+
+[`no-consecutive-br`](https://markuplint.dev/docs/rules/no-consecutive-br) warns on consecutive `<br>` elements. Instead of stacking line breaks for spacing, prefer paragraphs or spacing styles. It also supports auto-fix via `--fix`.
+
+```html
+<!-- Bad: consecutive br used for spacing -->
+<p>
+  A...<br />
+  <br />
+  B...
+</p>
+```
+
+[`no-skipped-heading-level`](https://markuplint.dev/docs/rules/no-skipped-heading-level) warns when heading levels are skipped. Following the HTML Living Standard requirements for headings and outlines, it stops jumps such as an `h3` right after an `h1`. Skipping levels just for visual tuning breaks document structure.
+
+```html
+<!-- Bad: h3 follows h1 -->
+<h1>Heading 1</h1>
+<h3>Heading 3</h3>
+```
+
+[`no-broken-fragment-link`](https://markuplint.dev/docs/rules/no-broken-fragment-link) checks whether fragment links like `#id` point to an ID that actually exists in the same document. Missing targets are not a conformance error in the specification, but a link that does nothing is still harmful in practice. This catches broken in-page links statically.
+
+```html
+<!-- Bad: no id matches #baz -->
+<a href="#baz">Fragment link</a>
+<section id="qux">...</section>
+```
+
 [Pretenders](https://markuplint.dev/docs/guides/besides-html) go further: they let Markuplint treat Vue components as the native HTML elements they render. Mapping `List` → `ul` and `Item` → `li`, for example, reinforces vocabulary rules across component boundaries from specification data. Manual maps and Vue-oriented scanning are both possible.
 
 At this point, two layers were in place: stop lexical errors, and check conformance from the specification.
@@ -309,6 +357,10 @@ HTML is still being updated. As XHTML taught us, it matters not to stop the evol
 - [Vue: validateHtmlNesting](https://github.com/vuejs/core/blob/main/packages/compiler-dom/src/transforms/validateHtmlNesting.ts)
 - [eslint-plugin-vue: no-parsing-error](https://eslint.vuejs.org/rules/no-parsing-error.html)
 - [Markuplint](https://markuplint.dev/)
+  - [no-pseudo-list](https://markuplint.dev/docs/rules/no-pseudo-list)
+  - [no-consecutive-br](https://markuplint.dev/docs/rules/no-consecutive-br)
+  - [no-skipped-heading-level](https://markuplint.dev/docs/rules/no-skipped-heading-level)
+  - [no-broken-fragment-link](https://markuplint.dev/docs/rules/no-broken-fragment-link)
 - [Vize HTML Rules](https://vizejs.dev/rules/html/index.html)
 - [Biome: noDuplicateAttributes](https://biomejs.dev/linter/rules/no-duplicate-attributes/) / [noObsoleteTags](https://biomejs.dev/linter/rules/no-obsolete-tags/) / [noMisplacedListElements](https://biomejs.dev/linter/rules/no-misplaced-list-elements/) / [useSemanticElements](https://biomejs.dev/linter/rules/use-semantic-elements/)
 - [OxC Compatibility](https://oxc.rs/compatibility)

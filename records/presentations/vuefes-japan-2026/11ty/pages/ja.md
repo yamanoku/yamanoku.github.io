@@ -150,16 +150,24 @@ Vue SFCのコンパイルは次の3段階に分けられます。
 <figure>
 
 ```mermaid
-flowchart TD
-  A["SFCソース (.vue)"] --> B["compiler-sfc parse()<br/>parseMode: 'sfc'"]
-  B --> C["compiler-core Tokenizer + baseParse<br/>(HTMLルール: void要素, 名前空間, entities)"]
-  C --> D["SFCDescriptor<br/>template.content + template.ast"]
-  D --> E["compiler-sfc<br/>compileTemplate()"]
-  E --> F["compiler-dom compile()<br/>parserOptions + DOM transforms"]
-  F --> G["render関数コード (module mode)"]
+flowchart LR
+  subgraph Parse
+    A["SFCソース (.vue)"] --> B["compiler-sfc<br/>parse()<br/>parseMode: 'sfc'"]
+    B --> C["compiler-core<br/>Tokenizer + baseParse"]
+    C --> D["SFCDescriptor"]
+  end
+  subgraph Transform
+    E["compiler-sfc<br/>compileTemplate()"]
+    E --> F["compiler-dom<br/>compile()"]
+  end
+  subgraph Generate
+    G["render"]
+  end
+  D --> E
+  F --> G
 ```
 
-<figcaption>SFCソースが parse / compileTemplate / compiler-dom を経て render 関数コードになる流れ</figcaption>
+<figcaption>SFCソースが Parse → Transform → Generate を経て render 関数コードになる流れ</figcaption>
 </figure>
 
 `compiler-sfc` はファイルを `parse()` で `SFCDescriptor` に分解し、`compileScript` と `compileTemplate` がそれぞれ `<script>` / `<template>` を処理します。
@@ -241,6 +249,46 @@ VueでもJSXでUIを書けます。Virtual DOM / Vapor Mode に対応し、Oxc�
 
 その隙間を埋めるように登場したのが Markuplint です。長所は、HTML Living Standard ベースの**適合性検証**ができることです。[`permitted-contents`](https://markuplint.dev/docs/rules/permitted-contents) で内容モデルを仕様データから検証でき、[`no-obsolete-element`](https://markuplint.dev/docs/rules/no-obsolete-element) で廃止要素を止め、[`require-accessible-name`](https://markuplint.dev/docs/rules/require-accessible-name) でアクセシブルネームも見られます。`@markuplint/vue-parser` / `@markuplint/vue-spec` で `.vue` を扱えます。
 
+適合性だけでなく、現場で効く特徴的なルールもあります。いくつか紹介します。
+
+[`no-pseudo-list`](https://markuplint.dev/ja/docs/rules/no-pseudo-list) は、ビュレット文字で箇条書きを擬似している箇所を止め、`ul` / `li` を使うよう求めます。見た目だけのリストは、スクリーンリーダーにリストとして伝わりません。
+
+```html
+<!-- NG: ビュレット文字で擬似リスト -->
+<div>
+  • Apple<br />
+  • Banana<br />
+  • Citrus
+</div>
+```
+
+[`no-consecutive-br`](https://markuplint.dev/ja/docs/rules/no-consecutive-br) は、連続する `<br>` に警告します。改行の重ね打ちで余白を作る代わりに、段落や余白用のスタイルへ寄せましょう。`--fix` による自動修正にも対応しています。
+
+```html
+<!-- NG: 連続 br で余白を作っている -->
+<p>
+  A...<br />
+  <br />
+  B...
+</p>
+```
+
+[`no-skipped-heading-level`](https://markuplint.dev/ja/docs/rules/no-skipped-heading-level) は、見出しレベルを飛ばすと警告します。HTML Living Standard の見出しとアウトラインの要件に沿い、`h1` の次に突然 `h3` が出るような飛びを止めます。見た目調整のための見出し飛ばしは、文書構造を壊します。
+
+```html
+<!-- NG: h1 の次が h3 -->
+<h1>見出し1</h1>
+<h3>見出し3</h3>
+```
+
+[`no-broken-fragment-link`](https://markuplint.dev/ja/docs/rules/no-broken-fragment-link) は、`#id` のようなフラグメントリンクが、同じドキュメント内の実在する ID を指しているかを見ます。仕様上は参照先がなくても適合性違反にはなりませんが、リンクが何もしないまま残るのは実害です。ページ内リンクの壊れを静的に止められます。
+
+```html
+<!-- NG: #baz に対応する id がない -->
+<a href="#baz">Fragment link</a>
+<section id="qux">...</section>
+```
+
 さらに [Pretenders](https://markuplint.dev/docs/guides/besides-html) があります。Vueコンポーネントを描画結果のネイティブHTML要素に見立てて検証できます。たとえば `List` → `ul`、`Item` → `li` とマップすると、コンポーネント境界をまたぐ語彙的ルールを仕様データ側から補強できます。手動マップのほか、Vue向けの scan も可能です。
 
 ここまでで、「字句を止める」と「仕様で適合性を見る」という二層が揃いました。
@@ -309,6 +357,10 @@ HTMLの仕様は今も更新されています。XHTMLが教えてくれたよ�
 - [Vue: validateHtmlNesting](https://github.com/vuejs/core/blob/main/packages/compiler-dom/src/transforms/validateHtmlNesting.ts)
 - [eslint-plugin-vue: no-parsing-error](https://eslint.vuejs.org/rules/no-parsing-error.html)
 - [Markuplint](https://markuplint.dev/)
+  - [no-pseudo-list](https://markuplint.dev/ja/docs/rules/no-pseudo-list)
+  - [no-consecutive-br](https://markuplint.dev/ja/docs/rules/no-consecutive-br)
+  - [no-skipped-heading-level](https://markuplint.dev/ja/docs/rules/no-skipped-heading-level)
+  - [no-broken-fragment-link](https://markuplint.dev/ja/docs/rules/no-broken-fragment-link)
 - [Vize HTML Rules](https://vizejs.dev/rules/html/index.html)
 - [Biome: noDuplicateAttributes](https://biomejs.dev/linter/rules/no-duplicate-attributes/) / [noObsoleteTags](https://biomejs.dev/linter/rules/no-obsolete-tags/) / [noMisplacedListElements](https://biomejs.dev/linter/rules/no-misplaced-list-elements/) / [useSemanticElements](https://biomejs.dev/linter/rules/use-semantic-elements/)
 - [OxC Compatibility](https://oxc.rs/compatibility)

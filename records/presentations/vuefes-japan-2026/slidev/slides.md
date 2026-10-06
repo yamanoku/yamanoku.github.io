@@ -382,16 +382,24 @@ layout: center
 
 ```mermaid
 flowchart TD
-  A["SFCソース (.vue)"] --> B["compiler-sfc parse()<br/>parseMode: 'sfc'"]
-  B --> C["compiler-core Tokenizer + baseParse<br/>(HTMLルール: void要素, 名前空間, entities)"]
-  C --> D["SFCDescriptor<br/>template.content + template.ast"]
-  D --> E["compiler-sfc<br/>compileTemplate()"]
-  E --> F["compiler-dom compile()<br/>parserOptions + DOM transforms"]
-  F --> G["render関数コード (module mode)"]
+  subgraph Parse
+    A["SFCソース (.vue)"] --> B["compiler-sfc parse()<br/>parseMode: 'sfc'"]
+    B --> C["compiler-core Tokenizer + baseParse<br/>(HTMLルール: void要素, 名前空間, entities)"]
+    C --> D["SFCDescriptor<br/>template.content + template.ast"]
+  end
+  subgraph Transform
+    E["compiler-sfc<br/>compileTemplate()"]
+    E --> F["compiler-dom compile()<br/>parserOptions + DOM transforms"]
+  end
+  subgraph Generate
+    G["render関数コード (module mode)"]
+  end
+  D --> E
+  F --> G
 ```
 
 <!--
-compiler-sfc の parse のあと、compiler-core の Tokenizer と baseParse で HTMLルールを踏まえたASTができ、compileTemplate 経由で compiler-dom の transforms が走り、最終的に module mode の render 関数コードになります。
+Parse で compiler-sfc の parse と compiler-core の Tokenizer / baseParse により HTMLルールを踏まえた AST ができ、Transform で compileTemplate 経由の compiler-dom transforms が走り、Generate で module mode の render 関数コードになります。
 -->
 
 ---
