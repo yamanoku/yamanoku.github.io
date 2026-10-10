@@ -34,7 +34,7 @@ catalogs:
     oxfmt: 0.72.0
     oxlint: 1.87.0
     tailwindcss: 4.3.3
-    vite: 8.3.2
+    vite: 8.3.4
   yama-normalize:
     "@eslint/css": 2.0.0
   presentations:
