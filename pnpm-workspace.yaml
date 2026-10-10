@@ -4,7 +4,7 @@ onlyBuiltDependencies:
   - sharp
 
 overrides:
-  yamanoku.github.io>vite: ^8.3.2
+  yamanoku.github.io>vite: ^8.3.4
 
 packageExtensions:
   "@eslint/css":
