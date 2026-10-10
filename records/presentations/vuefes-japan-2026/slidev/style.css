@@ -1,17 +1,5 @@
-.slidev-layout ul ul {
-  margin-bottom: 0;
-}
-
-.slidev-layout h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1lh;
-  opacity: 1 !important;
-  letter-spacing: 0;
-}
-
-.slidev-layout h2 {
-  font-size: 2rem;
-  margin-bottom: 1lh;
+.slidev-layout {
+  font-size: 135%;
 }
 
 .slidev-layout.center h1 {
@@ -21,6 +9,27 @@
 
 .slidev-layout.section h1 {
   font-weight: 700;
+}
+
+.slidev-layout h2 {
+  font-size: 2rem;
+  margin-bottom: 1lh;
+}
+
+.slidev-layout h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1lh;
+  opacity: 1 !important;
+  letter-spacing: 0;
+}
+
+.slidev-layout ul,
+.slidev-layout ol {
+  font-size: 1.5rem;
+}
+
+.slidev-layout ul ul {
+  margin-bottom: 0;
 }
 
 .slidev-layout ol {

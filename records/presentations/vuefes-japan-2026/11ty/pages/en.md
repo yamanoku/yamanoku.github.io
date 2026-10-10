@@ -70,7 +70,7 @@ Under a Living Standard, element and attribute treatment can change with impleme
 
 The key point: "HTML that works" is not the same as "correct HTML."
 
-If you put a `div` inside a `p`, the parser may repair the tree into something different from what you intended. HTML syntax keeps parsing through errors, so the page can still appear while structure, styles, and accessibility take side effects.
+If you put a `div` inside a `p`, the parser may repair the tree into something different from what you intended. HTML syntax keeps parsing through errors, so the page can still appear while structure, styles, and accessibility take side effects. The specification also does not treat "it renders" as "it conforms"; it organizes mistakes as [Syntax errors](https://html.spec.whatwg.org/dev/introduction.html#syntax-errors) and [restrictions on content models and attribute values](https://html.spec.whatwg.org/dev/introduction.html#restrictions-on-content-models-and-on-attribute-values).
 
 There is no single correct markup. Still, there is quality, and there are clear mistakes. Good HTML tends to be semantic, accessible, free of errors, and maintainable. Removing errors is the starting point.
 
@@ -87,9 +87,11 @@ Closing tags, attribute syntax, and similar concerns. Violations make parsers fa
 
 These are cases where start/end tags do not match, or attribute values lack quotes. XHTML / XML would fail immediately; HTML syntax may repair the tree, so the issue is easy to miss. At the same time, XHTML-derived habits — do not omit closing tags, quote attribute values — still help prevent lexical errors in practice.
 
+WHATWG explains why such constructs are non-conforming in [Syntax errors](https://html.spec.whatwg.org/dev/introduction.html#syntax-errors): invalid syntax can produce an unintuitive DOM, clash with streaming user agents, or signal that authors likely misunderstood the specification. Because the specification spells out *why* to stop these cases, checkers can ask the same questions mechanically later.
+
 ### Vocabulary rules
 
-Whether element and attribute names exist, and nesting rules from the **content model**. Violations often do not stop the parser; they produce an undesirable DOM.
+Whether element and attribute names exist, and nesting rules from the **content model**. Violations often do not stop the parser; they produce an undesirable DOM. On the specification side, this is organized as [Restrictions on content models and on attribute values](https://html.spec.whatwg.org/dev/introduction.html#restrictions-on-content-models-and-on-attribute-values).
 
 ```html
 <!-- Bad: block elements cannot go inside p -->
@@ -241,9 +243,11 @@ Here I will follow the history of each tool's arrival and look at the role it wa
 
 ### ESLint / eslint-plugin-vue
 
-The first widely shared foundation was ESLint and [eslint-plugin-vue](https://eslint.vuejs.org/). Its strength is putting template lexical errors into the daily development flow. [`vue/no-parsing-error`](https://eslint.vuejs.org/rules/no-parsing-error.html) catches many WHATWG HTML lexical syntax errors and is included in essential presets. With editor integration and CI, broken tags and attributes can be stopped early.
+The first widely shared foundation was ESLint and [eslint-plugin-vue](https://eslint.vuejs.org/). Its strength is putting template lexical errors into the daily development flow. [`vue/no-parsing-error`](https://eslint.vuejs.org/rules/no-parsing-error.html) catches many WHATWG HTML lexical syntax errors and is included in essential presets. It can stop early — in the editor and in CI — the kinds of cases Part 1 connected to [Syntax errors](https://html.spec.whatwg.org/dev/introduction.html#syntax-errors), such as mismatched tags and broken attribute syntax.
 
-What ESLint-family tools mainly covered, though, was lexical and syntactic defense. A thick layer that reads content models and conformance from HTML specification data was still missing.
+As a light aside, there are also rules that touch HTML "usage." [`vue/html-button-has-type`](https://eslint.vuejs.org/rules/html-button-has-type.html) requires an explicit `type` on `<button>`, [`vue/no-template-target-blank`](https://eslint.vuejs.org/rules/no-template-target-blank.html) requires `rel="noopener noreferrer"` with `target="_blank"`, and [`vue/no-restricted-html-elements`](https://eslint.vuejs.org/rules/no-restricted-html-elements.html) can block specific elements. These are practice- or config-based guardrails, though.
+
+What ESLint-family tools mainly covered was still lexical and syntactic defense. A thick layer that reads content models and conformance from HTML specification data was still missing.
 
 ### Markuplint
 
@@ -351,18 +355,11 @@ HTML is still being updated. As XHTML taught us, it matters not to stop the evol
 ## References
 
 - [HTML Standard](https://html.spec.whatwg.org/)
-  - [HTML Standard: Parsing HTML documents](https://html.spec.whatwg.org/multipage/parsing.html)
-- [WHATWG: Non-conforming features](https://html.spec.whatwg.org/#non-conforming-features)
 - [XHTMLが残したもの](https://speakerdeck.com/yosuke_furukawa/xhtml-ga-nokoshita-mono)
 - [Vue: validateHtmlNesting](https://github.com/vuejs/core/blob/main/packages/compiler-dom/src/transforms/validateHtmlNesting.ts)
-- [eslint-plugin-vue: no-parsing-error](https://eslint.vuejs.org/rules/no-parsing-error.html)
+- [eslint-plugin-vue](https://eslint.vuejs.org/rules/)
 - [Markuplint](https://markuplint.dev/)
-  - [no-pseudo-list](https://markuplint.dev/docs/rules/no-pseudo-list)
-  - [no-consecutive-br](https://markuplint.dev/docs/rules/no-consecutive-br)
-  - [no-skipped-heading-level](https://markuplint.dev/docs/rules/no-skipped-heading-level)
-  - [no-broken-fragment-link](https://markuplint.dev/docs/rules/no-broken-fragment-link)
 - [Vize HTML Rules](https://vizejs.dev/rules/html/index.html)
-- [Biome: noDuplicateAttributes](https://biomejs.dev/linter/rules/no-duplicate-attributes/) / [noObsoleteTags](https://biomejs.dev/linter/rules/no-obsolete-tags/) / [noMisplacedListElements](https://biomejs.dev/linter/rules/no-misplaced-list-elements/) / [useSemanticElements](https://biomejs.dev/linter/rules/use-semantic-elements/)
 - [OxC Compatibility](https://oxc.rs/compatibility)
 - [Vue JSX](https://vuejsx.dev/)
 - [eslint-plugin-validate-jsx-nesting](https://github.com/MananTank/eslint-plugin-validate-jsx-nesting)
