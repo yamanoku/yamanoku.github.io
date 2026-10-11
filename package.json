@@ -8,6 +8,8 @@
     "preview": "astro preview",
     "site": "pnpm --filter @yamanoku/site-cli cli",
     "site:check": "pnpm site -- check",
+    "records": "pnpm --filter records dev:presentation",
+    "records:build": "pnpm --filter records build",
     "lint": "pnpm run oxlint && pnpm run markuplint",
     "format": "oxfmt .",
     "oxlint": "oxlint --fix .",
@@ -33,8 +35,8 @@
     "records/presentations"
   ],
   "engines": {
-    "pnpm": "12.8.1",
+    "pnpm": "12.9.1",
     "npm": "please_use_pnpm_instead"
   },
-  "packageManager": "pnpm@12.8.1"
+  "packageManager": "pnpm@12.9.1"
 }

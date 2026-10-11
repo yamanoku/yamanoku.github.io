@@ -11,14 +11,26 @@ const slidevBin = resolve(presRoot, "node_modules", ".bin", "slidev");
 const ELEVENTY_URL = "http://localhost:8080/";
 const SLIDEV_URL = "http://localhost:3030/";
 
-const [name, flag] = process.argv.slice(2);
+function parseTarget(raw) {
+  if (!raw) return { name: undefined, mode: undefined };
+  if (raw.endsWith(":slide")) {
+    return { name: raw.slice(0, -":slide".length), mode: "slide" };
+  }
+  if (raw.endsWith(":pages")) {
+    return { name: raw.slice(0, -":pages".length), mode: "pages" };
+  }
+  return { name: raw, mode: undefined };
+}
+
+const [raw] = process.argv.slice(2).filter((arg) => arg !== "--");
+const { name, mode } = parseTarget(raw);
 const pres = presentations.find((p) => p.name === name);
 
 if (!pres) {
   console.error(
     name
       ? `Unknown presentation: ${name}`
-      : "Usage: pnpm --filter records dev:presentation <name> [--pages|--slide]"
+      : "Usage: pnpm records <name>[:pages|:slide]"
   );
   console.error("Available presentations:");
   for (const p of presentations) {
@@ -57,10 +69,10 @@ const jobs = [];
 if (pres.type === "flat") {
   jobs.push(eleventyJob(presDir));
 } else if (pres.type === "monorepo") {
-  if (flag !== "--slide") {
+  if (mode !== "slide") {
     jobs.push(eleventyJob(resolve(presDir, "11ty")));
   }
-  if (flag !== "--pages") {
+  if (mode !== "pages") {
     jobs.push(slidevJob(resolve(presDir, "slidev")));
   }
 } else {
