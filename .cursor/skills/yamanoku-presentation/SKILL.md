@@ -66,7 +66,7 @@ Task Progress:
 ### 7. 検証
 
 ```bash
-pnpm --filter records dev:presentation <name>   # 表示確認
+pnpm records <name>                              # 表示確認
 pnpm --filter records build                      # wip を外した後
 pnpm lint
 ```

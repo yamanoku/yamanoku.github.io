@@ -58,11 +58,11 @@ pnpm --filter records preview
 
 ```bash
 # 資料名を指定して起動（引数なし・不明な名前のときは利用可能な一覧を表示）
-pnpm --filter records dev:presentation <name>
+pnpm records <name>
 
 # monorepo 型で片方だけ起動する
-pnpm --filter records dev:presentation <name> --slide  # Slidev のみ
-pnpm --filter records dev:presentation <name> --pages  # 11ty のみ
+pnpm records <name>:slide  # Slidev のみ
+pnpm records <name>:pages  # 11ty のみ
 ```
 
 - 11ty は `docs/` に書き出しながら配信するが、`records/presentations/*/docs/` は gitignore 済みのため git は汚れない
