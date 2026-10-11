@@ -67,7 +67,7 @@ Task Progress:
 
 ```bash
 pnpm records <name>                              # 表示確認
-pnpm --filter records build                      # wip を外した後
+pnpm records:build                               # wip を外した後
 pnpm lint
 ```
 

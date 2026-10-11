@@ -36,7 +36,7 @@ pnpm --filter records dev
 
 # ビルド（出力: records/dist）
 # astro build（記録ページ）→ scripts/build-presentations.mjs（発表資料を records/dist/<name>/ へ出力）の2段で実行される
-pnpm --filter records build
+pnpm records:build
 
 # プレビュー
 pnpm --filter records preview
@@ -50,7 +50,7 @@ pnpm --filter records preview
 - **monorepo 型**: 11ty（原稿）+ Slidev（スライド）（`<name>/11ty/`・`<name>/slidev/`、スライドは `/<name>/slide/` で配信）
 - 共通の 11ty 設定は `records/presentations/_shared/eleventy-base.js`
 - 資料の一覧（name / type / wip）は `records/scripts/presentations.mjs` で一元管理。資料を追加したらここに追記する（`wip: true` はビルド対象外）
-- ビルドは `records/scripts/build-presentations.mjs` が全資料を 11ty / Slidev でビルドし `records/dist/<name>/` にコピーする（`pnpm --filter records build` から自動実行）
+- ビルドは `records/scripts/build-presentations.mjs` が全資料を 11ty / Slidev でビルドし `records/dist/<name>/` にコピーする（`pnpm records:build` から自動実行）
 
 #### デバッグ（開発サーバー）
 
@@ -76,14 +76,14 @@ Cloudflare Pages のダッシュボードで GitHub リポジトリ（`yamanoku/
 | --- | --- |
 | Production branch | `main` |
 | Root directory | （リポジトリルートのまま） |
-| Build command | `pnpm install --frozen-lockfile && pnpm --filter records build` |
+| Build command | `pnpm install --frozen-lockfile && pnpm records:build` |
 | Build output directory | `records/dist` |
 
 - **Node バージョン**: `records/.node-version`（`24.20.0`）で固定。ダッシュボードの環境変数 `NODE_VERSION` でも指定可。
 - **pnpm**: ルート `package.json` の `packageManager` で固定したpnpmを corepack 経由で使用（catalog 解決に必要）。
 - **カスタムドメイン**: `records.yamanoku.net` を Cloudflare Pages のカスタムドメインとして追加（DNS は Cloudflare 側で設定）。
 
-> Git 連携はモノレポルートで `pnpm install` を実行する。`pnpm --filter records build` は記録ページの Astro ビルドに加え、`scripts/build-presentations.mjs` で発表資料（11ty / Slidev）も `records/dist/<name>/` へ出力する。
+> Git 連携はモノレポルートで `pnpm install` を実行する。`pnpm records:build` は記録ページの Astro ビルドに加え、`scripts/build-presentations.mjs` で発表資料（11ty / Slidev）も `records/dist/<name>/` へ出力する。
 
 ### `wrangler.jsonc` は使わない
 
