@@ -8,6 +8,8 @@
     "preview": "astro preview",
     "site": "pnpm --filter @yamanoku/site-cli cli",
     "site:check": "pnpm site -- check",
+    "records": "pnpm --filter records dev:presentation",
+    "records:build": "pnpm --filter records build",
     "lint": "pnpm run oxlint && pnpm run markuplint",
     "format": "oxfmt .",
     "oxlint": "oxlint --fix .",

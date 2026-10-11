@@ -37,7 +37,7 @@ package.jsonでは `catalog:<カタログ名>` で参照する。
 # 開発サーバー起動
 pnpm dev
 
-# ビルド（本体サイトのAstroのみ。発表資料は records 側でビルド: pnpm --filter records build）
+# ビルド（本体サイトのAstroのみ。発表資料は records 側でビルド: pnpm records:build）
 pnpm build
 
 # プレビュー
@@ -51,10 +51,11 @@ pnpm site -- --help
 pnpm site -- validate
 pnpm site -- check
 
-# 発表資料の開発サーバー（flat: 11tyのみ8080 / monorepo: 11ty 8080 + Slidev 3030）
-pnpm --filter records dev:presentation <name>
-pnpm --filter records dev:presentation <name> --slide  # Slidevのみ
-pnpm --filter records dev:presentation <name> --pages  # 11tyのみ
+# records（記録サイト + 発表資料）
+pnpm records:build         # Astro + 発表資料ビルド
+pnpm records <name>        # 発表資料の開発サーバー（flat: 11tyのみ8080 / monorepo: 11ty 8080 + Slidev 3030）
+pnpm records <name>:slide  # Slidevのみ
+pnpm records <name>:pages  # 11tyのみ
 ```
 
 ## コードスタイルガイドライン
@@ -146,15 +147,15 @@ const { title, items = [] } = Astro.props;
 各プレゼンテーションの `.eleventy.js` からインポートして使用する。
 
 #### ビルド
-`records/scripts/build-presentations.mjs` がすべてのプレゼンテーションをビルドし `records/dist/<name>/` に出力する。`pnpm --filter records build` 実行時にAstroビルドの後に自動実行される。
+`records/scripts/build-presentations.mjs` がすべてのプレゼンテーションをビルドし `records/dist/<name>/` に出力する。`pnpm records:build` 実行時にAstroビルドの後に自動実行される。
 
 プレゼンテーションの一覧（name / type / wip）は `records/scripts/presentations.mjs` で一元管理しており、ビルド・開発サーバー両スクリプトが参照する。資料を追加したらこのファイルに追記する（`wip: true` はビルド対象外）。
 
 #### デバッグ（開発サーバー）
-`records/scripts/dev-presentation.mjs` で各資料の開発サーバーを起動できる。flat型は11ty（8080）、monorepo型は11ty（8080）+ Slidev（3030）を同時起動し、Ctrl+Cで両方停止する。`--pages` / `--slide` で片方のみ起動可能。
+`records/scripts/dev-presentation.mjs` で各資料の開発サーバーを起動できる。flat型は11ty（8080）、monorepo型は11ty（8080）+ Slidev（3030）を同時起動し、Ctrl+Cで両方停止する。`:pages` / `:slide` で片方のみ起動可能。
 
 ```bash
-pnpm --filter records dev:presentation <name>
+pnpm records <name>
 ```
 
 #### プレゼンテーション一覧データ
