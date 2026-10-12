@@ -79,6 +79,8 @@ export function updateStage(
   const next = clone(records);
   const merged: StageRecord = { ...next[index], ...update };
   if ("eventUrl" in update && !update.eventUrl) delete merged.eventUrl;
+  if ("description" in update && !update.description)
+    delete merged.description;
   if ("note" in update && !update.note) delete merged.note;
   next[index] = normalizeStageRecord(merged);
   return validateRecords(

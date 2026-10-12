@@ -88,6 +88,31 @@ describe("stage mutations", () => {
     assert.equal(updated?.description, current.description);
     assert.deepEqual(updated?.resources, current.resources);
   });
+
+  it("sets and clears description", () => {
+    const current = records[0] as StageRecord;
+    const withDescription = updateStage(
+      records as StageRecord[],
+      current.date,
+      current.event,
+      { description: "要約テキスト" }
+    );
+    const described = withDescription.find(
+      (item) => item.date === current.date && item.event === current.event
+    );
+    assert.equal(described?.description, "要約テキスト");
+
+    const cleared = updateStage(
+      withDescription,
+      current.date,
+      current.event,
+      { description: undefined }
+    );
+    const afterClear = cleared.find(
+      (item) => item.date === current.date && item.event === current.event
+    );
+    assert.equal(afterClear?.description, undefined);
+  });
 });
 
 describe("site content mutations", () => {
