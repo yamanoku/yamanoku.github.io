@@ -102,12 +102,9 @@ describe("stage mutations", () => {
     );
     assert.equal(described?.description, "要約テキスト");
 
-    const cleared = updateStage(
-      withDescription,
-      current.date,
-      current.event,
-      { description: undefined }
-    );
+    const cleared = updateStage(withDescription, current.date, current.event, {
+      description: undefined
+    });
     const afterClear = cleared.find(
       (item) => item.date === current.date && item.event === current.event
     );
