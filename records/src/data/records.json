@@ -10,8 +10,13 @@
     "date": "2026-10-13",
     "event": "Minato.dev#01 [非公式]Vue Fes Japan直前回！フロントエンド特集",
     "eventUrl": "https://minato-dev.connpass.com/event/402521/",
-    "resources": [],
-    "note": "大型犬好きによるPugの紹介"
+    "resources": [
+      {
+        "title": "大型犬好きによるPugの紹介",
+        "url": "https://speakerdeck.com/yamanoku/hey-its-pug-woof"
+      }
+    ],
+    "description": "犬の名前が付いたOSSやサービスの話題から、フロントエンド開発で見かけるOSSのPug（旧Jade）を紹介するLT。include/extends/mixinによる再利用性や制御構文、閉じタグ不要といった特徴と、Vue.jsで今も使える設定を示しつつ、コンポーネント志向やメタフレームワークの普及で積極採用が減った現状と移行事例を整理し、たまには思い出してほしいと締めた。"
   },
   {
     "date": "2026-09-12",

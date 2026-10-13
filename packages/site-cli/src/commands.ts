@@ -191,6 +191,7 @@ const stageAddCommand = define({
     event: { type: "string", required: true, description: "イベント名" },
     ...eventUrlArg,
     ...resourceArgs,
+    description: { type: "string", description: "登壇内容の要約" },
     note: { type: "string", description: "資料未定などの注記" },
     ...writeArg
   },
@@ -206,6 +207,9 @@ const stageAddCommand = define({
       ...(ctx.values.eventUrl === undefined
         ? {}
         : { eventUrl: ctx.values.eventUrl }),
+      ...(ctx.values.description === undefined
+        ? {}
+        : { description: ctx.values.description }),
       ...(ctx.values.note === undefined ? {} : { note: ctx.values.note })
     });
     await writeJson(paths.records, next, {
@@ -232,6 +236,10 @@ const stageUpdateCommand = define({
     newEvent: { type: "string", description: "新しいイベント名" },
     ...eventUrlArg,
     ...resourceArgs,
+    description: {
+      type: "string",
+      description: "登壇内容の要約（空文字で削除）"
+    },
     note: { type: "string", description: "新しい注記（空文字で削除）" },
     ...writeArg
   },
@@ -258,6 +266,11 @@ const stageUpdateCommand = define({
             )
           }
         : {}),
+      ...(ctx.values.description === undefined
+        ? {}
+        : ctx.values.description === ""
+          ? { description: undefined }
+          : { description: ctx.values.description }),
       ...(ctx.values.note === undefined
         ? {}
         : ctx.values.note === ""
