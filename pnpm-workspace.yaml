@@ -29,7 +29,7 @@ catalogs:
   website:
     "@tailwindcss/vite": 4.3.3
     astro: 7.3.8
-    markuplint: 5.1.1
+    markuplint: 5.2.0
     modern-normalize: 3.0.1
     oxfmt: 0.72.0
     oxlint: 1.87.0
