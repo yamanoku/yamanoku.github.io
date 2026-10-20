@@ -243,8 +243,8 @@ catalogs:
       version: 8.3.4
   yama-normalize:
     '@eslint/css':
-      specifier: 2.0.0
-      version: 2.0.0
+      specifier: 2.0.1
+      version: 2.0.1
 
 overrides:
   yamanoku.github.io>vite: ^8.3.4
@@ -301,7 +301,7 @@ importers:
     devDependencies:
       '@eslint/css':
         specifier: catalog:yama-normalize
-        version: 2.0.0(@types/css-tree@2.3.10)
+        version: 2.0.1(@types/css-tree@2.3.10)
 
   records:
     dependencies:
@@ -1366,22 +1366,18 @@ packages:
     resolution: {integrity: sha512-MwcE1P+AZ4C6DWlpin/OmOA54mmIZ/+xZuJiQd4SyB29oAJjN30UW9wkKNptW2ctp4cEsvhlLY/CsQ1uoHDloQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/css-tree@4.1.0':
-    resolution: {integrity: sha512-cg0ohyrAG3swyGqt8t1K/OK97DqBw/ftDvlvyY1fmEst5B40UOmsimwLENq74z2dyw5CDM+3zJIW+CV2nFNDdA==}
+  '@eslint/css-tree@4.1.2':
+    resolution: {integrity: sha512-rVcxLmwSkEL3aWS3vAgsTRrQHoYE1b0XcgDtKHDJ92XOkyUpcbS/g0tUJKhvCtlEhYzgKBWsgDd+Z/aPhd166w==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@eslint/css@2.0.0':
-    resolution: {integrity: sha512-lODVRbtxOXgcSOWNvv3gE4A8oRTSUHefA0tX9zrWUD57F+5RTLGDX9I8bnHQROO8nWb0hrmke0uO23pTlNfZ0A==}
+  '@eslint/css@2.0.1':
+    resolution: {integrity: sha512-1qIQFzuFeTaHF3ewzsj/HUDC9RTDwfBHGWdFvpmOG0R/Tb3Mt+17yltbE10/LK+oglS1fP9+tiG5UzMvWgQY9g==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     peerDependencies:
       '@types/css-tree': 2.3.10
 
   '@eslint/object-schema@3.0.5':
     resolution: {integrity: sha512-vqTaUEgxzm+YDSdElad6PiRoX4t8VGDjCtt05zn4nU810UIx/uNEV7/lZJ6KwFThKZOzOxzXy48da+No7HZaMw==}
-    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
-
-  '@eslint/plugin-kit@0.7.2':
-    resolution: {integrity: sha512-+CNAzxglkrpNf/kKywqQfk74QjtceuOE7Qm+AF8miRvPF/wmmK5+OJOgVh3AVTT3RP2mH3+FOaxlE5v72owk0A==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
   '@eslint/plugin-kit@0.7.3':
@@ -5808,8 +5804,8 @@ packages:
   mdn-data@2.27.1:
     resolution: {integrity: sha512-9Yubnt3e8A0OKwxYSXyhLymGW4sCufcLG6VdiDdUGVkPhpqLxlvP5vl1983gQjJl3tqbrM731mjaZaP68AgosQ==}
 
-  mdn-data@2.34.0:
-    resolution: {integrity: sha512-OgIlLv0NxJKVW4GTSAoEgpRGd4F2XCqGinK0MsMlBCCS/Zcm2/LsbercNWNA7PeMMcjl75NnI97eqyo7zkdxWA==}
+  mdn-data@2.37.2:
+    resolution: {integrity: sha512-rz9YOBGItdSbe7HcSArUbhiAv4SB/4DKRYg96CSFS2CcIYMbUvBtZlzA1NCbk2AdgbmYwMqwNblLpR441lLeiQ==}
 
   mdurl@2.0.0:
     resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
@@ -8895,31 +8891,25 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/css-tree@4.1.0':
+  '@eslint/css-tree@4.1.2':
     dependencies:
-      mdn-data: 2.34.0
-      source-map-js: 1.2.1
+      mdn-data: 2.37.2
+      source-map-js: 1.2.2
 
-  '@eslint/css@2.0.0(@types/css-tree@2.3.10)':
+  '@eslint/css@2.0.1(@types/css-tree@2.3.10)':
     dependencies:
       '@eslint/core': 1.2.1
-      '@eslint/css-tree': 4.1.0
-      '@eslint/plugin-kit': 0.7.2
+      '@eslint/css-tree': 4.1.2
+      '@eslint/plugin-kit': 0.7.3
       '@types/css-tree': 2.3.10
 
   '@eslint/object-schema@3.0.5':
     optional: true
 
-  '@eslint/plugin-kit@0.7.2':
-    dependencies:
-      '@eslint/core': 1.2.1
-      levn: 0.4.1
-
   '@eslint/plugin-kit@0.7.3':
     dependencies:
       '@eslint/core': 1.2.1
       levn: 0.4.1
-    optional: true
 
   '@fix-webm-duration/fix@1.0.1':
     dependencies:
@@ -14111,7 +14101,7 @@ snapshots:
 
   mdn-data@2.27.1: {}
 
-  mdn-data@2.34.0: {}
+  mdn-data@2.37.2: {}
 
   mdurl@2.0.0: {}
 
