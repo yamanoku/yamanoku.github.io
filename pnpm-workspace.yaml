@@ -38,7 +38,7 @@ catalogs:
   yama-normalize:
     "@eslint/css": 2.0.0
   presentations:
-    "@11ty/eleventy": 3.1.6
+    "@11ty/eleventy": 3.1.7
     "@iconify-json/twemoji": 1.2.5
     "@iconify-json/vscode-icons": 1.2.89
     "@slidev/cli": 53.0.0
