@@ -189,8 +189,8 @@ catalogs:
       specifier: 53.0.0
       version: 53.0.0
     budoux:
-      specifier: 0.9.3
-      version: 0.9.3
+      specifier: 0.10.0
+      version: 0.10.0
     highlight.js:
       specifier: 11.12.0
       version: 11.12.0
@@ -352,7 +352,7 @@ importers:
         version: 53.0.0(@modelcontextprotocol/sdk@1.29.0(supports-color@7.2.0)(zod@4.5.4))(@nuxt/kit@3.21.7(magicast@0.5.5))(@vue/compiler-sfc@3.5.42)(cac@7.0.0)(esbuild@0.28.1)(rolldown@1.2.11)(rollup@4.59.0)(srvx@0.12.5)(supports-color@7.2.0)(svelte@5.57.2(@typescript-eslint/types@8.70.0))(typescript@6.0.3)(vite@8.3.4(@types/node@26.6.5)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       budoux:
         specifier: catalog:presentations
-        version: 0.9.3
+        version: 0.10.0
       highlight.js:
         specifier: catalog:presentations
         version: 11.12.0
@@ -3746,8 +3746,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
-  budoux@0.9.3:
-    resolution: {integrity: sha512-Kj3eztSzqVzkmh51Hf8Z+vFw5lkEjGJlxtv7J6nMCjVHbInTom2t8XhYNcz479753NR94Ibv3t81roKgkyfTcA==}
+  budoux@0.10.0:
+    resolution: {integrity: sha512-jh9qIGuVLdeuc7z0jRyeSe7zEa7XthNu3QPTnzLpeMXbz4v7Lwx0j0rMK90jHSM/a8kVrTjXoLRHBhyVTfxk6w==}
     hasBin: true
 
   buffer-from@1.1.2:
@@ -11784,7 +11784,7 @@ snapshots:
       node-releases: 2.0.47
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
-  budoux@0.9.3:
+  budoux@0.10.0:
     dependencies:
       commander: 15.0.0
       linkedom: 0.18.12
