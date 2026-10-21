@@ -113,6 +113,22 @@ Whether element and attribute names exist, and nesting rules from the **content 
 
 Even when tags match, wrong nesting can silently produce a broken DOM.
 
+### Content models
+
+The content model is the core of vocabulary rules: what may appear inside which element. The specification groups elements into zero or more categories under [Kinds of content](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content):
+
+- Metadata content
+- Flow content
+- Sectioning content
+- Heading content
+- Phrasing content
+- Embedded content
+- Interactive content
+
+Their relationship is as follows. Sectioning, heading, phrasing, embedded, and interactive content are all types of flow content. Metadata is sometimes flow content. Metadata and interactive content are sometimes phrasing content. Embedded content is also a type of phrasing content, and sometimes is interactive content.
+
+The specification shows this containment as a Venn diagram ([content-venn.svg](https://html.spec.whatwg.org/images/content-venn.svg)). For example, the content model of `p` is phrasing content, so flow-only elements such as `div` must not appear inside it. Rules like “children of `ul` are basically `li`” also come from these categories combined with each element’s content model. Mechanical checks of vocabulary rules are possible because the specification defines these categories.
+
 ### Semantic rules
 
 Meaning and usage of elements, and accessibility. Markup can be grammatically valid yet communicate the wrong meaning.
@@ -355,6 +371,7 @@ HTML is still being updated. As XHTML taught us, it matters not to stop the evol
 ## References
 
 - [HTML Standard](https://html.spec.whatwg.org/)
+- [HTML Standard — Kinds of content](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)
 - [XHTMLが残したもの](https://speakerdeck.com/yosuke_furukawa/xhtml-ga-nokoshita-mono)
 - [Vue: validateHtmlNesting](https://github.com/vuejs/core/blob/main/packages/compiler-dom/src/transforms/validateHtmlNesting.ts)
 - [eslint-plugin-vue](https://eslint.vuejs.org/rules/)
