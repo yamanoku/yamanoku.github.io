@@ -276,13 +276,15 @@ Lexical rules are covered in the sense that parsing catches broken writing—asi
 
 ### Why do we need static analysis?
 
-Before the tool tour, why static analysis at all?
+Before introducing the static analysis tools, I also want to touch on why we need static analysis at all.
 
-In last year's talk, I introduced that zero-shot prompts can already produce reasonably accessible code. So is vibe coding enough?
+In last year's talk, I introduced that zero-shot prompts can already produce reasonably accessible code. With today's models, couldn't vibe coding keep HTML correctness on its own?
 
-My answer to that doubt is: static analysis is needed so we can give AI agents deterministic judgments.
+My answer to that doubt is: static analysis is still needed. We should give AI agents deterministic judgments to work from.
 
-Most people today develop with AI agents. Judgment by AI alone is non-deterministic. Even capable models depend on the model, so certainty and reproducibility stay thin. Proving with static analysis that HTML is structurally correct and consistent with intent—and then deciding from that information—is how “correctness” gains certainty and reproducibility.
+Most people today develop with AI agents. Judgment by AI alone is non-deterministic. Even capable models depend on the model, so certainty and reproducibility stay thin.
+
+Static analysis is also needed to prove deterministically that HTML is structurally correct and consistent with intent, so AI agents can decide faster from that deterministic information. On that basis, we should mass-produce correct code without hesitation. That is how “correctness” gains certainty and reproducibility.
 
 ---
 
