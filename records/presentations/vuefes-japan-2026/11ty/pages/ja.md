@@ -21,7 +21,7 @@ lang: ja
 
 一児の父で今月10月いっぱいまで会社員としてやっております。今年のVue Fes Japan 2026 ではコアスタッフとしても関わっております。
 
-今年はHTMLにまつわるイベントとしてHTML Night in Tokyo や HTML Day 2026 in 東葛の主催もしておりました。
+今年はHTMLにまつわるイベントとして[HTML Night in Tokyo](https://connpass.com/event/399762/)や[HTML Day 2026 in 東葛](https://htmlday2026.toukatsu.dev/)の主催もしておりました。
 
 昨年のVue Fes Japan 2025では生成AIとアクセシビリティ改善について発表させてもらい、今年も登壇となります。
 
@@ -35,7 +35,7 @@ HTMLは1991年に世の中に登場し、今年で35年になります。文書�
 
 VueのSFCにはtemplateブロックにてHTMLを記述できる構文が備わっていますが、これは周知の事実だと思います。このときの見た目はHTMLですが、最終的にはJavaScriptへと変換されていきます。
 
-```vue
+```html
 <script setup>
   import { ref } from "vue";
   const count = ref(2026);
@@ -92,12 +92,7 @@ VueのSFCにおけるtemplate内では、HTMLのパースが誤っていると�
 
 このHTMLはブラウザ上ではこのように表示されます。
 
-<figure>
-
 ![正しい入れ子のemとstrongが、意図どおりのDOMツリーとして表示されているブラウザの検証画面](../images/example-html-parse-ok.png)
-
-<figcaption>意図どおりの入れ子は、DOMにもそのまま現れる</figcaption>
-</figure>
 
 そして最後にブラウザで描画されるHTMLは以下のような形で表示されます。
 
@@ -119,12 +114,7 @@ VueのSFCにおけるtemplate内では、HTMLのパースが誤っていると�
 </p>
 ```
 
-<figure>
-
 ![閉じタグの対応を誤ったHTMLが、ブラウザ側で補正され、意図と異なるDOMツリーになっている検証画面](../images/example-html-parse-error.png)
-
-<figcaption>誤りがあっても画面は出る。ただしHTMLは意図とずれる</figcaption>
-</figure>
 
 先ほどのと比較すると「フロントエンドカンファレンス」まで太字になっているように見えます。これが実際にはどのようにブラウザ上のHTMLとして表現しているかを見てみます。「日本最大級の」までは意図としてはあってそうですが、その後のフロントエンドカンファレンスまで最大級に強調されていることになっています。
 
@@ -225,7 +215,7 @@ HTMLの仕様をまとめるWHATWGでは、こうした構文をなぜ非適合�
 
 改めて、VueでもHTMLはDSLとして活用されています。見た目はHTMLですが、最終的にはJavaScriptへと変換されます。
 
-```vue
+```html
 <script setup>
   import { ref } from "vue";
   const count = ref(2026);
@@ -422,9 +412,9 @@ Markuplintによって「コンテンツモデルをチェックする」と「�
 
 その流れの先に、新しく登場しているツールがあります。それが [Vize](https://vizejs.dev/) です。これはubugeeeiさん作・RustによるVueのオールツールチェインです。Vizeに含まれるLinterではHTML適合性を Vue固有ルール / アクセシビリティから分離して扱えます。
 
-- Vue: https://vizejs.dev/rules/vue/index.html
-- HTML: https://vizejs.dev/rules/html/index.html
-- a11y: https://vizejs.dev/rules/accessibility/index.html
+- Vue: [https://vizejs.dev/rules/vue/index.html](https://vizejs.dev/rules/vue/index.html)
+- HTML: [https://vizejs.dev/rules/html/index.html](https://vizejs.dev/rules/html/index.html)
+- a11y: [https://vizejs.dev/rules/accessibility/index.html](https://vizejs.dev/rules/accessibility/index.html)
 
 Markuplintにあったコンテンツモデルの検査も `vue/permitted-contents` のルールにて検査できます。
 
@@ -432,7 +422,7 @@ Markuplintにあったコンテンツモデルの検査も `vue/permitted-conten
 
 たとえば `App.vue` で `p` の中に `InfoCard` を置き、`InfoCard` のルートが `div` だと、各ファイル単体では合法でも、合成結果は実質 `p` の中に `div` となり不正です。
 
-```vue
+```html
 <!-- App.vue -->
 <template>
   <p>Summary <InfoCard /></p>

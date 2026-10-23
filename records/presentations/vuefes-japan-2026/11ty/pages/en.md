@@ -21,7 +21,7 @@ Hello, everyone. I'm yamanoku.
 
 I'm a parent of one child, and I worked as a company employee through this October. I'm also involved as core staff for Vue Fes Japan 2026.
 
-This year I also organized HTML-related events: HTML Night in Tokyo and HTML Day 2026 in Tokatsu.
+This year I also organized HTML-related events: [HTML Night in Tokyo](https://connpass.com/event/399762/) and [HTML Day 2026 in Tokatsu](https://htmlday2026.toukatsu.dev/).
 
 At Vue Fes Japan 2025, I spoke about generative AI and accessibility improvements, and I'm speaking again this year.
 
@@ -35,7 +35,7 @@ HTML appeared in 1991 and turns 35 this year. It spread as markup for documents;
 
 It is common knowledge that Vue SFCs let you write HTML in a `template` block. It looks like HTML at that point, but it is ultimately transformed into JavaScript.
 
-```vue
+```html
 <script setup>
   import { ref } from "vue";
   const count = ref(2026);
@@ -92,12 +92,7 @@ Written as intended, it looks like this:
 
 In the browser, that HTML displays like this:
 
-<figure>
-
 ![Browser DevTools showing a correctly nested em and strong tree matching the author's intent](../images/example-html-parse-ok.png)
-
-<figcaption>Intended nesting appears as-is in the DOM</figcaption>
-</figure>
 
 And the HTML the browser ends up with looks like this:
 
@@ -119,12 +114,7 @@ What happens if the closing tags for `em` and `strong` are mismatched? Let's ren
 </p>
 ```
 
-<figure>
-
 ![Browser DevTools showing mismatched closing tags repaired by the browser into a DOM that differs from the author's intent](../images/example-html-parse-error.png)
-
-<figcaption>The page may still render, but the HTML can diverge from intent</figcaption>
-</figure>
 
 Compared with the earlier example, “frontend conference” also looks bold. Looking at how the browser actually expresses that as HTML, “Japan's largest” is roughly as intended, but then “frontend conference” is treated as part of the strongest emphasis as well.
 
@@ -225,7 +215,7 @@ Next, we'll look at how the Vue compiler interprets the inside of a Vue SFC `tem
 
 Again, Vue uses HTML as a DSL. It looks like HTML, but it is ultimately transformed into JavaScript.
 
-```vue
+```html
 <script setup>
   import { ref } from "vue";
   const count = ref(2026);
@@ -422,9 +412,9 @@ With Markuplint, we can check content models and check semantics.
 
 Further along that line is a newer tool: [Vize](https://vizejs.dev/). It is a Rust-based Vue all-toolchain by ubugeeei. Its linter separates HTML conformance from Vue-specific rules and accessibility.
 
-- Vue: https://vizejs.dev/rules/vue/index.html
-- HTML: https://vizejs.dev/rules/html/index.html
-- a11y: https://vizejs.dev/rules/accessibility/index.html
+- Vue: [https://vizejs.dev/rules/vue/index.html](https://vizejs.dev/rules/vue/index.html)
+- HTML: [https://vizejs.dev/rules/html/index.html](https://vizejs.dev/rules/html/index.html)
+- a11y: [https://vizejs.dev/rules/accessibility/index.html](https://vizejs.dev/rules/accessibility/index.html)
 
 Content-model checks like Markuplint's are also available via the `vue/permitted-contents` rule.
 
@@ -432,7 +422,7 @@ Especially strong in Vize's linter is `html/cross-component-nesting`. Markup tha
 
 For example, if `App.vue` places `InfoCard` inside a `p`, and `InfoCard`'s root is a `div`, each file alone is legal, but the composed result is effectively a `div` inside a `p`—invalid.
 
-```vue
+```html
 <!-- App.vue -->
 <template>
   <p>Summary <InfoCard /></p>

@@ -37,7 +37,7 @@ Vue Fes Japan 2026 | <time datetime="2026-10-24">2026-10-24</time>
 
 ## 発表者：やまのく
 
-<img src="./images/yamanoku.png" alt="yamanoku" width="200" class="blcok mb-8">
+<img src="./images/yamanoku.png" alt="yamanoku" width="200" height="200" class="block mb-8">
 
 - 一児の父、会社員（～2026/10）
 - Vue Fes Japan 2026 コアスタッフ
@@ -54,10 +54,12 @@ Vue Fes Japan 2026 | <time datetime="2026-10-24">2026-10-24</time>
 -->
 
 ---
-layout: center
+layout: section
 ---
 
-![](./images/vuefes-japan-speakers.png)
+## Vue Fes Japan Speakers
+
+<img src="./images/vuefes-japan-speakers.png" alt="Vue Fes Japan Speakers のサイト画面" width="720" height="450">
 
 <!--
 個人で作っているものについて１つ宣伝させてください。
@@ -68,21 +70,21 @@ Vue Fes Japan Speakersという2018年から今年までの歴代の登壇者ま
 -->
 
 ---
-layout: center
+layout: section
 ---
 
-![](./images/vuefes-japan-speakers-yamanoku.png)
+<img src="./images/vuefes-japan-speakers-yamanoku.png" alt="Vue Fes Japan Speakers のやまのく登壇者ページ" width="720" height="295">
 
 <!--
-自分のページを確認してみると、この四年間の間にパネルディスカッションも含めて六回も登壇させてもらっていました。
+自分について確認してみると、この四年間の間にパネルディスカッションも含めて六回も登壇させてもらっていました。
 
-年内でカンファレンス登壇については一旦止めようかなと思っているので、今年のVue Fesが最後の発表になるつもりです。
+年内をもってしばらくカンファレンス登壇については一旦止めようかなと思っているので、Vue Fesの発表は今年で最後になる予定です。
 
-これまで登壇の機会をいただき改めて感謝しております。
+これまで登壇の機会をいただき、改めて感謝申し上げます。
 -->
 
 ---
-layout: center
+layout: section
 ---
 
 <h1 class="html">HTML</h1>
@@ -147,7 +149,7 @@ VueのSFCにはtemplateブロックにてHTMLを記述できる構文が備わ�
 -->
 
 ---
-layout: center
+layout: section
 ---
 
 # Vueで「HTMLの正しさ」は<br>どう検証できる？
@@ -207,7 +209,7 @@ layout: section
 -->
 
 ---
-layout: center
+layout: section
 ---
 
 <div class="markup-sample"><mark>「日本最大級のフロントエンドカンファレンス Vue Fes Japan」</mark><br>をマークアップ</div>
@@ -233,7 +235,7 @@ layout: center
 -->
 
 ---
-layout: center
+layout: section
 ---
 
 ```html
@@ -244,7 +246,7 @@ layout: center
 
 <v-click>
 
-![](./images/example-html-parse-ok.png)
+<img src="./images/example-html-parse-ok.png" alt="正しい入れ子のemとstrongが、意図どおりのDOMツリーとして表示されているブラウザの検証画面" width="902" height="100">
 
 </v-click>
 
@@ -271,7 +273,7 @@ layout: center
 -->
 
 ---
-layout: center
+layout: section
 ---
 
 ```html
@@ -282,7 +284,7 @@ layout: center
 
 <v-click>
 
-![](./images/example-html-parse-error.png)
+<img src="./images/example-html-parse-error.png" alt="閉じタグの対応を誤ったHTMLが、ブラウザ側で補正され、意図と異なるDOMツリーになっている検証画面" width="902" height="106">
 
 </v-click>
 
@@ -585,7 +587,7 @@ Vue SFCのコンパイルは次の3段階に分けられます。
 -->
 
 ---
-layout: center
+layout: section
 ---
 
 # Q. `<div />` はパース可能か
@@ -650,7 +652,7 @@ SvelteにおいてはRich Harris氏が自己完結タグの挙動を捉え違い
 
 ## コンテンツモデルは警告してくれる
 
-<img src="./images/vue-nesting-warning.png" alt="Vueのテンプレートで p の中に h1 や li を置いたときに、HTML仕様上のネスト違反として警告が出ているエディタ画面" width="720">
+<img src="./images/vue-nesting-warning.png" alt="Vueのテンプレートで p の中に h1 や li を置いたときに、HTML仕様上のネスト違反として警告が出ているエディタ画面" width="594" height="220">
 
 - `compiler-dom` の `validateHtmlNesting` (Vue 3.4)
 - **開発時の警告**で、厳密にはコンパイルエラーではない

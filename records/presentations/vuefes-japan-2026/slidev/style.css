@@ -16,7 +16,7 @@ html.dark:root {
   line-height: 1.2;
 }
 
-.slidev-layout.center h1.html {
+.slidev-layout.section h1.html {
   font-size: 8rem;
   color: #3c790a;
   font-family: Helvetica Neue;
