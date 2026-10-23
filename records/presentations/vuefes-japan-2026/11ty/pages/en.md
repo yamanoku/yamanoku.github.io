@@ -19,11 +19,17 @@ lang: en
 
 Hello, everyone. I'm yamanoku.
 
-I'm a parent of one child, and I worked as a company employee through this October. I'm also involved as core staff for Vue Fes Japan 2026. I organize HTML Night in Tokyo and HTML Day 2026 in Tokatsu as well.
+I'm a parent of one child, and I worked as a company employee through this October. I'm also involved as core staff for Vue Fes Japan 2026.
 
-At Vue Fes Japan 2025, I gave a talk on [Improving Web Application Accessibility in the Generative AI Era](https://records.yamanoku.net/vuefes-japan-2025/en/). I also run [Vue Fes Japan Speakers](https://vuefes-japan-speakers.yamanoku.net/), a personal site that lists past speakers. Looking myself up there, I've spoken six times over four years, including panel discussions. I'm grateful for another chance to speak.
+This year I also organized HTML-related events: HTML Night in Tokyo and HTML Day 2026 in Tokatsu.
 
-This time, as the title says, the theme is HTML.
+At Vue Fes Japan 2025, I spoke about generative AI and accessibility improvements, and I'm speaking again this year.
+
+I also personally run [Vue Fes Japan Speakers](https://vuefes-japan-speakers.yamanoku.net/), a site that lists speakers from 2018 through this year. It is built with Vue.js and hosted on Cloudflare.
+
+Looking myself up there, I've spoken six times over these four years, including panel discussions. I'm thinking of pausing conference talks for a while within this year, so this Vue Fes is intended to be my last talk for now. Thank you again for the opportunity.
+
+As the title says, this talk focuses on HTML. Since the days of the HTML5 Conference, I feel we have heard fewer conference talks centered on HTML itself. But as Ikeda-san's talk also showed, HTML keeps being updated. I wanted to reintroduce HTML itself, tied to Vue SFCs, and that is why I proposed this theme.
 
 HTML appeared in 1991 and turns 35 this year. It spread as markup for documents, then evolved into decorative pages and Web app UI. Because it can express more than Markdown, it is also used in AI output. The specification continues to be updated as the [HTML Living Standard](https://html.spec.whatwg.org/).
 
@@ -34,11 +40,11 @@ HTML appeared in 1991 and turns 35 this year. It spread as markup for documents,
 <figcaption>Source: <a href="https://www.dropbox.com/scl/fi/4al6p7za54z9k3zidqps7/HTML.paper?rlkey=mo5qbfgq60pct57l743jqtksa&dl=0">HTMLという地層の堆積</a> / yuhei</figcaption>
 </figure>
 
-Early on it described document structure—headings, paragraphs, links. Midway came forms and interaction. Today, even with SPA / SSR / design systems, the final output is often HTML. Even when you write Vue templates, what the browser receives is HTML. Understanding the specification is shared ground that comes before any framework.
+Early on, HTML described document structure—headings, paragraphs, links. Elements for decoration were added, then forms and interactive controls. As separation of concerns with CSS and JavaScript progressed, the UI libraries we use in frontend work still implement UI with that HTML. Angular and Svelte let you build components with HTML elements; React and Solid use HTML-like expressions inside JSX.
 
-And in Vue, HTML is also used as a DSL.
+It is common knowledge that Vue SFCs let you write HTML in a `template` block. It looks like HTML at that point, but it is ultimately transformed into JavaScript.
 
-```html
+```vue
 <script setup>
   import { ref } from "vue";
   const count = ref(2026);
@@ -53,27 +59,35 @@ And in Vue, HTML is also used as a DSL.
 </template>
 ```
 
-Let me ask a direct question. When you develop with Vue, can you explain how you protect and verify HTML “correctness”?
+HTML “correctness” is part of today's main topic. When you develop with Vue.js, can you explain how you verify that correctness? Today's talk aims to help you answer that question.
 
-Through today's talk, you can learn how to write HTML correctly and keep it that way. I'll focus on three themes:
+Here is the conclusion of the talk up front:
 
-1. What HTML correctness means
-2. How Vue uses HTML
-3. Protecting HTML correctness with static analysis
+- HTML parse errors → **detected**
+- HTML element combinations → **warned in development**
+- Concrete HTML element usage → **not involved**
+
+Inside a Vue SFC `template`, mistaken HTML parsing is reported as an error. When element nesting differs from what is allowed, you get a development-time warning, but it is not a hard compile error. And for concrete element usage, the compiler is not involved at all.
+
+Today I will cover the Vue compiler's limits, and how we support those limits with other mechanisms.
+
+I'll focus on three themes:
+
+1. What “correct HTML” is
+2. How the compiler interprets it, and how far it looks
+3. How to protect it with static analysis
 
 ---
 
 ## What is “correct HTML”?
 
-Before the main topic, I want to align on what “correct HTML” means.
+First, I want to align with you on what “correct HTML” means—the phrase in today's title.
 
-Suppose we mark up a short blurb like this:
+As an example, take the site blurb “Japan's largest frontend conference, Vue Fes Japan.”
 
-> “Japan's largest frontend conference, Vue Fes Japan”
+If you only need to show the text, you would start with a paragraph. Next, “Japan's largest frontend conference” is important, so you emphasize it. Then make “Japan's largest” the strongest emphasis. With those requirements in place, think about how you would mark it up.
 
-The requirements are: put it in a paragraph; emphasize “Japan's largest frontend conference”; and make “Japan's largest” the strongest emphasis.
-
-Written as intended, it might look like this:
+Written as intended, it looks like this:
 
 ```html
 <p>
@@ -81,7 +95,7 @@ Written as intended, it might look like this:
 </p>
 ```
 
-The DOM the browser builds keeps that intended nesting.
+In the browser, that HTML displays like this:
 
 <figure>
 
@@ -90,15 +104,25 @@ The DOM the browser builds keeps that intended nesting.
 <figcaption>Intended nesting appears as-is in the DOM</figcaption>
 </figure>
 
-What happens if the closing tags are mismatched?
+And the HTML the browser ends up with looks like this:
+
+```html
+<p>
+  <em>
+    <strong>日本最大級の</strong>
+    フロントエンドカンファレンス
+  </em>
+  Vue Fes Japan
+</p>
+```
+
+What happens if the closing tags for `em` and `strong` are mismatched? Let's render that markup in the browser.
 
 ```html
 <p>
   <em><strong>日本最大級の</em>フロントエンドカンファレンス</strong> Vue Fes Japan
 </p>
 ```
-
-The browser does not stop on an error; it reparses with its own recovery. The resulting HTML can differ from what you first expected.
 
 <figure>
 
@@ -107,18 +131,37 @@ The browser does not stop on an error; it reparses with its own recovery. The re
 <figcaption>The page may still render, but the HTML can diverge from intent</figcaption>
 </figure>
 
-Even with syntax errors, HTML is parsed through browser self-interpretation. The specification does not treat “it displays” as “it conforms”; it catalogs the mistakes. Problems can still show up in structure, styling, SSR, and accessibility.
+Compared with the earlier example, “frontend conference” also looks bold. Looking at how the browser actually expresses that as HTML, “Japan's largest” is roughly as intended, but then “frontend conference” is treated as part of the strongest emphasis as well.
 
-There is no single “correct” markup for every case. Instead, HTML has rules you must follow. Getting it to parse correctly is one of them. In this talk, “HTML correctness” means thoroughly following those rules.
+```html
+<p>
+  <em>
+    <strong>日本最大級の</strong>
+  </em>
+  <strong>フロントエンドカンファレンス</strong>
+  Vue Fes Japan
+</p>
+```
+
+The browser does not treat this as an error, and the resulting HTML can differ from what you first expected.
+
+Even with syntax errors, HTML is parsed through browser self-interpretation. The specification does not treat “it displays” as “it conforms”; it merely catalogs the mistakes. Incorrect HTML can still cause problems in document structure, styling, SSR, and accessibility.
+
+There is no single correct markup for every case. Instead, HTML has rules you must follow. Getting it to parse correctly is one of them. In this talk, “HTML correctness” means thoroughly following those rules.
 
 Correct HTML brings benefits such as:
 
-- More robust, maintainable code
-- Content that both people and user agents can handle
-- Accessibility you can protect
-- Hydration mismatches you can catch earlier
+First, semantic code carries intent, and becomes more robust and maintainable than writing everything with meaningless `div` and `span`.
 
-Concrete mistakes fall into three kinds of rules:
+Second, when it is expressed in a Web browser, both people and user agents can interpret and handle it correctly.
+
+Third, HTML's own accessibility requirements become usable, so you can protect a baseline of accessibility in the browser.
+
+Finally, it helps prevent SSR hydration mismatches in advance and keep the application working normally.
+
+Next, I'll introduce the rules that protect that correctness.
+
+There are three kinds of rules for keeping HTML correct:
 
 1. **Lexical rules**
 2. **Vocabulary rules**
@@ -128,7 +171,7 @@ Let's look at them in order.
 
 ### Lexical rules
 
-Matching start and end tags, and how attributes are written. Violations make the parser error and prevent a correct DOM tree. In HTML syntax, though, recovery can make things still “work” on screen.
+Lexical rules concern matching start and end tags, and how attributes are written. Violations can make the parser error and prevent a correct DOM tree.
 
 ```html
 <!-- NG: mismatched end tags / broken attribute value quoting -->
@@ -137,11 +180,11 @@ Matching start and end tags, and how attributes are written. Violations make the
 </div>
 ```
 
-WHATWG explains why such syntax is non-conforming in [Syntax errors](https://html.spec.whatwg.org/dev/introduction.html#syntax-errors): bad syntax yields counter-intuitive DOMs, works poorly with streaming, and confuses authors about the specification. Because the spec names reasons to stop these cases, the checkers we cover later can ask the same questions mechanically.
+WHATWG explains why such syntax is non-conforming in [Syntax errors](https://html.spec.whatwg.org/dev/introduction.html#syntax-errors): bad syntax yields counter-intuitive DOMs, works poorly with streaming, and confuses authors about the specification. Because the specification names reasons to stop these cases, compilers and linters covered later can check them mechanically.
 
 ### Vocabulary rules
 
-Which elements and attributes you may use, and nesting rules from the **content model**. Violations do not stop the parser; they produce undesirable DOMs. The specification organizes this under [Restrictions on content models and on attribute values](https://html.spec.whatwg.org/dev/introduction.html#restrictions-on-content-models-and-on-attribute-values). Even when tags match, wrong nesting can silently produce a broken DOM.
+Next are vocabulary rules: which elements and attributes you may use, and nesting rules from the content model. These are trickier than lexical rules—the parser may not complain, but the DOM is still undesirable. Even when tag pairing is fine, wrong nesting between elements can produce a broken DOM. For example, placing a `div` inside a `p`.
 
 ```html
 <!-- NG: block elements must not appear inside p -->
@@ -150,21 +193,13 @@ Which elements and attributes you may use, and nesting rules from the **content 
 </p>
 ```
 
+The specification organizes this under [Restrictions on content models and on attribute values](https://html.spec.whatwg.org/dev/introduction.html#restrictions-on-content-models-and-on-attribute-values).
+
 ### Content models
 
-The content model is the core of vocabulary rules: what may appear inside which element. The specification groups elements into zero or more categories under [Kinds of content](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content):
+The content model is the core of vocabulary rules: what may appear inside which element. The specification groups elements into zero or more categories under [Kinds of content](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content). For example, `p`'s content model is Phrasing content, so a flow-only element like `div` is not allowed. Vocabulary rules are defined by which categories each element belongs to, so you can check from there.
 
-- Metadata content
-- Flow content
-- Sectioning content
-- Heading content
-- Phrasing content
-- Embedded content
-- Interactive content
-
-Sectioning, heading, phrasing, embedded, and interactive content are all types of flow content. Metadata is sometimes flow content. Interactive is sometimes phrasing. Embedded is a type of phrasing and is sometimes interactive.
-
-For example, `p`'s content model is phrasing content, so a flow-only element like `div` is not allowed. Nesting rules such as “children of `ul` are basically `li`” also come from combining these categories with each element's content model.
+Here are example content-model violations:
 
 | Parent | Child elements | Why it's NG |
 | --- | --- | --- |
@@ -173,11 +208,9 @@ For example, `p`'s content model is phrasing content, so a flow-only element lik
 | `a` | `a` | Nested links are not allowed |
 | `ul` / `ol` | `div` | Children should basically be `li` |
 
-Vue nesting warnings and linters mainly fire on these vocabulary rules. I want you to keep in mind that “looks the same” can still mean “different DOM meaning.” We can verify vocabulary rules mechanically because the specification defines these categories.
-
 ### Semantic rules
 
-This is the part often called “semantics.” Using an element for a purpose other than what it is for is a violation. Markup can be grammatically fine and still communicate the wrong meaning. That matters for accessibility.
+Finally, semantic rules—the part often called “semantics.” Using an element for a purpose other than what it is for is a violation. Markup can be grammatically fine and still communicate the wrong meaning. For example, using `h1` only for appearance, or building a button with `a`.
 
 ```html
 <!-- NG: using a heading only for appearance -->
@@ -187,44 +220,55 @@ This is the part often called “semantics.” Using an element for a purpose ot
 <a href="#" onclick="submitForm()">Submit</a>
 ```
 
-Tools cannot catch everything; review and experience still matter. Semantics connect directly to accessibility, one of HTML's strengths.
-
-That wraps part one. Even as use cases spread from documents to sites to apps, the final deliverable is still HTML—and “it works” is not the same as “it is correct.” Split correctness into lexical / vocabulary / semantic rules, then revisit HTML correctness in Vue on that foundation.
+Tools cannot catch everything; human review is also needed. Semantics connect directly to accessibility, one of HTML's strengths.
 
 ---
 
-## How Vue uses HTML
+## How the compiler interprets it, and how far it looks
 
-From here, we'll see how Vue handles this HTML and how far it guarantees it. Up front: Vue parses HTML, but it does not guarantee the same final DOM as the browser.
+Next, we'll look at how the Vue compiler interprets the inside of a Vue SFC `template`, starting from the mechanisms.
 
 Again, Vue uses HTML as a DSL. It looks like HTML, but it is transformed into functions that produce a virtual DOM.
 
+```vue
+<script setup>
+  import { ref } from "vue";
+  const count = ref(2026);
+  const addYear = () => {
+    count.value++;
+  };
+</script>
+
+<template>
+  <h1>Vue Fes Japan {{count}} へようこそ！</h1>
+  <button type="button" class="btn" @click="addYear">+1</button>
+</template>
+```
+
 Vue SFC compilation has three stages:
 
-1. **Parse** — build an AST with HTML-flavored lexical rules (void elements, namespaces, entity references, and so on)
+1. **Parse** — build an AST from the SFC contents
 2. **Transform** — apply Vue directives and optimizations to the AST
 3. **Generate** — finally emit JavaScript
 
-At Parse time, broken HTML writing can be detected and reported as errors. That is the lexical-rule coverage. The output, though, is not an HTML string for the browser; it is JavaScript that builds a virtual DOM. The template looks like HTML, but the product is “a program that assembles the DOM.”
+At Parse time, broken HTML writing can be detected and reported as errors. That is the lexical-rule coverage.
 
 ### Can `<div />` be parsed?
 
-Quiz time. Can `<div />` be parsed?
+Quiz time. Can a self-closing `div` be parsed?
 
-The answer: yes. In Vue it is interpreted as `<div></div>`.
+The answer: yes. In Vue, a self-closing tag is interpreted as a `div` with matching start and end tags. Custom Elements and Vue components can also use self-closing tags, and detection uses whether `isSelfClosing` is present on the AST.
 
 - `<div v-text="Vue Fes Japan" />` renders as `<div>Vue Fes Japan</div>`
 - `<div />Vue Fes Japan` becomes `<div></div>Vue Fes Japan`
-- Custom Elements and Vue components can also use self-closing tags
-- Detection uses whether `isSelfClosing` is present on the AST
 
-But as HTML, `<div />` is not valid. That is one example of the gap between Vue's parsing and HTML conformance.
+But as HTML, a self-closing `div` is not valid. That gap between Vue's parser and the HTML specification is important to understand.
 
-A short digression on self-closing tags: Prettier always emits closing tags. Biome lets you change the behavior (`--html-formatter-self-close-void-elements=<always|never>`). In Svelte, Rich Harris revisited the topic and a migration tool was created (`npx svelte-migrate self-closing-tags`). Conventions differ by framework—worth remembering.
+A short digression on self-closing tags outside Vue: Prettier always emits closing tags. There has been talk of revisiting that, but note that it cannot be changed. Biome's formatter lets you change the behavior; the default is not to use self-closing tags (`--html-formatter-self-close-void-elements=<always|never>`). In Svelte, Rich Harris revisited a misunderstanding around self-closing tags and a migration tool was created (`npx svelte-migrate self-closing-tags`). Conventions differ by library and framework—worth remembering.
 
 ### Content models get warnings
 
-So does Vue do nothing? Not quite. From Vue 3.4 onward, `compiler-dom`'s `validateHtmlNesting` warns about invalid nesting in development.
+So does Vue do nothing beyond lexical rules? Not quite. From Vue 3.4 onward, `compiler-dom`'s `validateHtmlNesting` warns about invalid nesting in development.
 
 <figure>
 
@@ -233,33 +277,37 @@ So does Vue do nothing? Not quite. From Vue 3.4 onward, `compiler-dom`'s `valida
 <figcaption>Example of a development-time nesting warning. Welcome DX—but ignore it and things still run</figcaption>
 </figure>
 
-It is welcome DX aimed partly at preventing SSR hydration mismatches, but it is still only a **development-time warning**, not a hard compile error. Ignore the warning and it still runs.
+It is welcome DX aimed partly at preventing SSR hydration mismatches, but note this carefully: it is only a development-time warning, not a hard compile error. Ignore the warning and it still runs.
 
 So Vue's compiler coverage looks like this:
 
 | Rule | Vue compiler coverage |
 | --- | --- |
 | Lexical | 〇 |
-| Vocabulary | △ (development-time warnings only) |
+| Vocabulary (element usage) | △ (development-time warnings only) |
 | Semantic | ✕ |
 
-Vocabulary and semantic rules need static analysis.
+Lexical rules are covered in the sense that parsing catches broken writing. Vocabulary rules are only development-time warnings, so “fully covered” is a stretch. Semantic rules are not covered at all, so I mark them as ✕. Vocabulary and semantic rules need another mechanism—the static analysis we cover next.
 
 ---
 
-## Protecting HTML correctness with static analysis
+## How to protect it with static analysis
 
-Why do we need static analysis? One reason is to give AI agents deterministic judgments.
+This is the final part. I'll introduce how static analysis ecosystems—ESLint, Biome, Oxc, Markuplint, Vize, and others—can protect HTML correctness that the compiler alone cannot keep.
 
-Judgment by AI alone is non-deterministic. Even capable models depend on the model, so certainty is thin. Having them analyze structural correctness, type safety, and internal consistency—and ideally doing that analysis quickly—matches how many teams feel today.
+### Why do we need static analysis?
 
-From here, we'll look at what each lint tool is for and which areas it protects.
+Why static analysis in the first place? My own conclusion is: to give AI agents deterministic judgments.
+
+Most people today develop with AI agents. Judgment by AI alone is non-deterministic. Even capable models depend on the model, so certainty is thin. What we want is to prove structurally correct HTML, type safety, and internal consistency deterministically with static analysis.
 
 ### ESLint
 
-The foundation that spread first is ESLint plus [eslint-plugin-vue](https://eslint.vuejs.org/).
+First up is ESLint. For Vue, [eslint-plugin-vue](https://eslint.vuejs.org/) is the well-known plugin.
 
-[`vue/no-parsing-error`](https://eslint.vuejs.org/rules/no-parsing-error.html) can report syntax errors inside `<template>`. It catches many **lexical** WHATWG HTML syntax errors and is included in essential-style presets. Checks specific to self-closing tags alone are disabled by default. I have not found rules that fully cover vocabulary rules; on the semantic side, something like [`vue/html-button-has-type`](https://eslint.vuejs.org/rules/html-button-has-type.html) applies.
+[`vue/no-parsing-error`](https://eslint.vuejs.org/rules/no-parsing-error.html) can report syntax errors inside `<template>`. It catches many lexical WHATWG HTML syntax errors and is included in essential-style presets. Checks specific to self-closing tags alone are disabled by default. This is a lexical rule, and catching it from code alone—without going through the runtime—is an advantage.
+
+I have not found rules in this plugin that cover vocabulary rules. On the semantic side, something like [`vue/html-button-has-type`](https://eslint.vuejs.org/rules/html-button-has-type.html), which forces a `type` on `button`, is about the only candidate.
 
 [eslint-plugin-vuejs-accessibility](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/) protects semantics through an accessibility lens. For example, [`form-control-has-label`](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/rules/form-control-has-label.html) lets you name label and control components.
 
@@ -277,27 +325,25 @@ The foundation that spread first is ESLint plus [eslint-plugin-vue](https://esli
 }
 ```
 
-There is also [html-eslint](https://html-eslint.org/) for HTML linting with ESLint. It supports React / Svelte / Angular, but Vue is not supported yet.
-
 ### Biome
 
-[Biome](https://biomejs.dev/) is an all-in tool that combines linter and formatter. It supports many languages and libraries, including Vue.
+Next is Biome. [Biome](https://biomejs.dev/) is an all-in tool that combines linter and formatter. It supports many languages and libraries, including Vue.
 
-[`noDuplicateAttributes`](https://biomejs.dev/linter/rules/no-duplicate-attributes/) stops duplicate attributes. HTML-oriented rules such as [`noObsoleteTags`](https://biomejs.dev/linter/rules/no-obsolete-tags/) and [`noMisplacedListElements`](https://biomejs.dev/linter/rules/no-misplaced-list-elements/) are growing. Semantic-leaning help such as [`useSemanticElements`](https://biomejs.dev/linter/rules/use-semantic-elements/) is available too.
+It can do partial vocabulary checks such as whether `li` is used under an appropriate parent ([`noMisplacedListElements`](https://biomejs.dev/linter/rules/no-misplaced-list-elements/)), check duplicate attributes ([`noDuplicateAttributes`](https://biomejs.dev/linter/rules/no-duplicate-attributes/)), flag obsolete HTML elements ([`noObsoleteTags`](https://biomejs.dev/linter/rules/no-obsolete-tags/)), and do semantic-leaning checks ([`useSemanticElements`](https://biomejs.dev/linter/rules/use-semantic-elements/)).
 
-Biome is also advancing [HTML super languages support](https://biomejs.dev/introduction/language-support/#html-super-languages-support). From v2.3.0, Vue / Svelte / Astro work out of the box for formatting and linting HTML / CSS / JavaScript inside those files. Full support is still experimental, so you likely need to enable it explicitly.
+Biome is also advancing HTML super-language support. From v2.3.0, Vue / Svelte / Astro work out of the box for formatting and linting HTML / CSS / JavaScript inside those files. Full support is still experimental, so you need to enable it explicitly, but it has reached a usable level.
 
 ### Oxc
 
-[OxLint](https://oxc.rs/) is a linter; for Vue it mainly checks Vue-specific rules. There is currently no mechanism to check inside `<template>`. If [RFC: Embedded Framework Support for Oxlint (Language Plugins)](https://github.com/oxc-project/oxc/discussions/21936) moves forward, support may become clearer. Following it as a speed-oriented complement is enough for now.
+I'll also mention Oxc as an all-toolchain option. [OxLint](https://oxc.rs/) is the linter: Vue-specific rules are strong, but there is currently no deep mechanism for HTML inside `<template>`. If [RFC: Embedded Framework Support for Oxlint (Language Plugins)](https://github.com/oxc-project/oxc/discussions/21936) moves forward, support may become clearer—something to watch.
 
 ### Markuplint
 
-ESLint and Biome / Oxc mainly cover lexical and syntax-oriented defense. The layer that checks content models and conformance against HTML specification data in depth was thin. [Markuplint](https://markuplint.dev/) fills that gap.
+ESLint and Biome / Oxc are mainly strong on lexical and syntax-oriented checks, or parts of vocabulary. The layer that looks deeply at content models and conformance was thin. [Markuplint](https://markuplint.dev/) fills that gap.
 
-Markuplint's strength is **conformance checking** based on the Living Standard. `@markuplint/vue-parser` / `@markuplint/vue-spec` handle `.vue` files.
+Markuplint's strength is broad Living Standard–based validation. For Vue, `@markuplint/vue-parser` and `@markuplint/vue-spec` are available.
 
-[`parse-error`](https://markuplint.dev/docs/configuration/parser-options) can detect non-fatal parse errors during tokenization and tree construction in the HTML Living Standard.
+[`parse-error`](https://markuplint.dev/docs/configuration/parser-options) can detect non-fatal parse errors during tokenization and tree construction in the HTML Living Standard. You can set duplicate attributes to error, nested comments to warning, and so on.
 
 ```json
 {
@@ -310,7 +356,7 @@ Markuplint's strength is **conformance checking** based on the Living Standard. 
 }
 ```
 
-[`permitted-contents`](https://markuplint.dev/docs/rules/permitted-contents) validates content models from specification data.
+[`permitted-contents`](https://markuplint.dev/docs/rules/permitted-contents) validates content models from specification data. A `div` directly under `ul` is invalid; `li` is fine. Here we finally get full vocabulary-rule checking.
 
 ```html
 <!-- incorrect -->
@@ -325,7 +371,7 @@ Markuplint's strength is **conformance checking** based on the Living Standard. 
 </ul>
 ```
 
-Beyond conformance, there are semantic-leaning rules that help in practice.
+As the name suggests, Markuplint lints markup—so it also includes many semantic-leaning rules.
 
 [`no-pseudo-list`](https://markuplint.dev/docs/rules/no-pseudo-list) stops bullet characters used as fake lists and asks for `ul` / `li`.
 
@@ -343,36 +389,9 @@ Beyond conformance, there are semantic-leaning rules that help in practice.
 </ul>
 ```
 
-[`no-consecutive-br`](https://markuplint.dev/docs/rules/no-consecutive-br) warns on consecutive `<br>`. Prefer paragraphs or spacing styles instead of stacking line breaks for whitespace.
+There are also [`no-consecutive-br`](https://markuplint.dev/docs/rules/no-consecutive-br) (consecutive `br`) and [`no-skipped-heading-level`](https://markuplint.dev/docs/rules/no-skipped-heading-level) (skipped heading levels), among others.
 
-```html
-<!-- incorrect -->
-<p>
-  A...<br />
-  <br />
-  B...
-</p>
-
-<!-- correct -->
-<p>A...</p>
-<p>B...</p>
-```
-
-[`no-skipped-heading-level`](https://markuplint.dev/docs/rules/no-skipped-heading-level) warns when heading levels are skipped.
-
-```html
-<!-- incorrect -->
-<h1>Heading 1</h1>
-<h3>Heading 3</h3>
-<h2>Heading 2</h2>
-
-<!-- correct -->
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-```
-
-There is also [Pretenders](https://markuplint.dev/docs/guides/besides-html): an option to treat components as the **HTML elements** they render. For example, map `FileList` → `ul` and `FileListItem` → `li` to evaluate content models. From v5, experimental auto-scan is also available.
+An excellent Markuplint feature is [Pretenders](https://markuplint.dev/docs/guides/besides-html): an option to treat components as the HTML elements they render. For example, map `FileList` → `ul` and `FileListItem` → `li` to evaluate content models. That enables HTML checks on Vue components too. From v5, experimental auto-scan is also available.
 
 ```json
 {
@@ -386,11 +405,11 @@ There is also [Pretenders](https://markuplint.dev/docs/guides/besides-html): an 
 }
 ```
 
-At this point we have two layers: stop lexical issues, and check conformance against the specification.
+With Markuplint, we can check content models and check semantics.
 
 ### Vize
 
-Further along that line is [Vize](https://vizejs.dev/), a Rust-based Vue toolchain by ubugeeei. It separates HTML conformance from Vue-specific rules and accessibility.
+Further along that line is a newer tool: [Vize](https://vizejs.dev/). It is a Rust-based Vue all-toolchain by ubugeeei, and it separates HTML conformance from Vue-specific rules and accessibility.
 
 - Vue: https://vizejs.dev/rules/vue/index.html
 - HTML: https://vizejs.dev/rules/html/index.html
@@ -398,7 +417,9 @@ Further along that line is [Vize](https://vizejs.dev/), a Rust-based Vue toolcha
 
 Especially important is `html/cross-component-nesting`. Nesting that is legal in a single file but breaks after component composition can be stopped across files. `vize lint --cross-file` enables cross-file checks.
 
-```html
+For example, if `App.vue` places `InfoCard` inside a `p`, and `InfoCard`'s root is a `div`, each file alone is legal, but the composed result is effectively a `div` inside a `p`—invalid.
+
+```vue
 <!-- App.vue -->
 <template>
   <p>Summary <InfoCard /></p>
@@ -410,7 +431,7 @@ Especially important is `html/cross-component-nesting`. Nesting that is legal in
 </template>
 ```
 
-Each file alone is fine, but the composed result is effectively `<p><div>…</div></p>` and invalid. Pushing “correctness after composition”—hard to see with ESLint or Markuplint—is the current advance.
+I think Vize's strength is that this “after composition” check can run automatically.
 
 There is also `templateSyntax`. The compiler side can warn when self-closing tags appear, and you can switch modes to error or ignore.
 
@@ -426,33 +447,32 @@ export default {
 };
 ```
 
+Vize is a multi-purpose toolchain beyond linting. ubugeeei also speaks at 15:05 on the Wellness × hacomono track—please go listen if you're interested.
+
 ---
 
 ## Closing
 
-To sum up: to face correct HTML in Vue, please take these three points home.
+To sum up:
 
-1. Understand the rules that keep HTML correct
-2. Understand the Vue compiler's coverage
-3. Guarantee HTML correctness with static analysis
+1. Grasp the rules that keep HTML correct
+2. Understand how the Vue compiler interprets templates, and how far it looks
+3. Design static analysis for correctness the compiler alone cannot keep
 
-In practice: hold syntax with eslint-plugin-vue, check specification-based conformance with Markuplint, and reinforce cross-file cases with Vize. Also watch Biome / Oxc progress and design who checks what. Looking only at SFC templates is not enough.
+Combine the static analysis tools that fit each person's environment.
 
-The HTML specification is still being updated. Keep the premise that the final deliverable is HTML even as use cases expand. Understand Vue's compilation, raise static analysis as a seawall, and let's build robust markup and accessible output together.
+Use this talk as a reference, and let's realize robust markup and accessible HTML output with Vue.js.
 
 That concludes the talk. Thank you for listening.
 
 ## References
 
 - [HTML Standard](https://html.spec.whatwg.org/)
-- [HTML Standard — Kinds of content](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)
 - [WHATWG: Non-conforming features](https://html.spec.whatwg.org/#non-conforming-features)
-- [HTMLという地層の堆積](https://www.dropbox.com/scl/fi/4al6p7za54z9k3zidqps7/HTML.paper?rlkey=mo5qbfgq60pct57l743jqtksa&dl=0) / yuhei
 - [Vue: validateHtmlNesting](https://github.com/vuejs/core/blob/main/packages/compiler-dom/src/transforms/validateHtmlNesting.ts)
 - [eslint-plugin-vue](https://eslint.vuejs.org/rules/)
 - [eslint-plugin-vuejs-accessibility](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/)
+- [Biome](https://biomejs.dev/)
+- [Oxlint | The JavaScript Oxidation Compiler](https://oxc.rs/docs/guide/usage/linter.html)
 - [Markuplint](https://markuplint.dev/)
-- [Vize HTML Rules](https://vizejs.dev/rules/html/index.html)
-- [Oxlint & Oxfmt Compatibility | The JavaScript Oxidation Compiler](https://oxc.rs/compatibility)
-- [RFC: Embedded Framework Support for Oxlint](https://github.com/oxc-project/oxc/discussions/21936)
-- [弁護士ドットコム 新卒研修2025 HTML/CSS（太田良典）](https://speakerdeck.com/bengo4com/20250405-bengo4com-htmlcss)
+- [Vize](https://vizejs.dev/index.html)
