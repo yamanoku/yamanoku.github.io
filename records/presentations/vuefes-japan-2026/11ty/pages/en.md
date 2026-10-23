@@ -25,7 +25,7 @@ This year I also organized HTML-related events: [HTML Night in Tokyo](https://co
 
 At Vue Fes Japan 2025, I spoke about generative AI and accessibility improvements, and I'm speaking again this year.
 
-One personal project I'd like to mention: I run [Vue Fes Japan Speakers](https://vuefes-japan-speakers.yamanoku.net/), a site that lists speakers from 2018 through this year. It is built with Vue.js and hosted on Cloudflare.
+One personal project I'd like to mention: I run [Vue Fes Japan Speakers](https://vuefes-japan-speakers.yamanoku.net/), a site that lists speakers from 2018 through this year. It is built with Vue and hosted on Cloudflare.
 
 Looking myself up there, I've spoken six times over these four years, including panel discussions. I'm thinking of pausing conference talks for a while within this year, so this Vue Fes is intended to be my last talk for now. Thank you again for the speaking opportunities so far.
 
@@ -58,7 +58,7 @@ It is common knowledge that Vue SFCs let you write HTML in a `<template>` block.
 </style>
 ```
 
-HTML “correctness” is part of today's main topic. When you develop with Vue.js, can you explain how you verify that correctness? Today's talk aims to help everyone who hears this become able to answer that question.
+HTML “correctness” is part of today's main topic. When you develop with Vue, can you explain how you verify that correctness? Today's talk aims to help everyone who hears this become able to answer that question.
 
 Here is the conclusion of the talk up front:
 
@@ -277,7 +277,7 @@ Lexical rules are covered in the sense that parsing catches broken writing—asi
 
 Before introducing the static analysis tools, I also want to touch on why we need static analysis at all.
 
-In last year's talk, I introduced that zero-shot prompts can already produce reasonably accessible code. With today's models, couldn't vibe coding keep HTML correctness on its own?
+In last year's talk, I introduced that even zero-shot AI agents can already produce reasonably accessible code. Models have gotten smarter since then, so couldn't vibe coding keep HTML correctness on its own?
 
 My answer to that doubt is: static analysis is still needed. We should give AI agents deterministic judgments to work from.
 
@@ -299,7 +299,7 @@ First up is ESLint. For Vue, [eslint-plugin-vue](https://eslint.vuejs.org/) is t
 
 I have not found rules in this plugin that cover vocabulary rules. On the semantic side, something like [`vue/html-button-has-type`](https://eslint.vuejs.org/rules/html-button-has-type.html), which forces a `type` on `<button>`, is about the only candidate.
 
-[eslint-plugin-vuejs-accessibility](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/) protects semantics through an accessibility lens. For example, [`form-control-has-label`](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/rules/form-control-has-label.html) lets you name label and control components.
+[eslint-plugin-vuejs-accessibility](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/) protects semantics through an accessibility lens. Beyond enforcing accessible HTML writing, it can also check cases where you use Vue components instead of raw HTML. For example, [`form-control-has-label`](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/rules/form-control-has-label.html) lets you name label and control components, so you can check which maps to what.
 
 ```json
 {
@@ -484,7 +484,7 @@ Finally, a summary of this talk:
 
 Combine the static analysis tools that fit each person's environment.
 
-Use this talk as a reference, and let's realize robust markup and accessible HTML output with Vue.js.
+Use this talk as a reference, and let's realize robust markup and accessible HTML output with Vue.
 
 That concludes the talk. Thank you for listening.
 
