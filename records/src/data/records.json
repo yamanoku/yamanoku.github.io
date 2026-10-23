@@ -8,7 +8,8 @@
         "title": "Vue SFCから見直す正しいHTMLの守り方",
         "url": "https://records.yamanoku.net/vuefes-japan-2026/slide/"
       }
-    ]
+    ],
+    "description": "正しいHTMLを字句・語彙・意味論のルールとして定義し、Vue SFCのtemplateをコンパイラがどこまで見るかを整理した。パースエラーは検出され、要素の組み合わせはVue 3.4以降の開発時警告にとどまり、具体的な使い方には関与しない。その限界をeslint-plugin-vueやMarkuplint、Vizeなどの静的解析で補い、コンテンツモデルやファイル横断のネストまで守る方法を示した。"
   },
   {
     "date": "2026-10-13",
