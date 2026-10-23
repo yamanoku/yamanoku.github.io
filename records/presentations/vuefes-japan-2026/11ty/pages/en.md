@@ -19,7 +19,9 @@ lang: en
 
 Hello, everyone. I'm yamanoku.
 
-I'm a parent of one child, and I worked as a company employee through this October. I'm also involved as core staff for Vue Fes Japan 2026.
+I'm a parent of one child, and I worked as a company employee through this October. I usually hang out on a Discord server called chibivue land.
+
+I'm also involved as core staff for Vue Fes Japan 2026.
 
 This year I also organized HTML-related events: [HTML Night in Tokyo](https://connpass.com/event/399762/) and [HTML Day 2026 in Tokatsu](https://htmlday2026.toukatsu.dev/).
 
@@ -27,7 +29,7 @@ At Vue Fes Japan 2025, I spoke about generative AI and accessibility improvement
 
 One personal project I'd like to mention: I run [Vue Fes Japan Speakers](https://vuefes-japan-speakers.yamanoku.net/), a site that lists speakers from 2018 through this year. It is built with Vue and hosted on Cloudflare.
 
-Looking myself up there, I've spoken six times over these four years, including panel discussions. I'm thinking of pausing conference talks for a while within this year, so this Vue Fes is intended to be my last talk for now. Thank you again for the speaking opportunities so far.
+Looking myself up there, I've spoken six times over these four years, including panel discussions. I'm thinking of pausing conference talks for a while from the end of this year, so this Vue Fes talk is planned to be my last for now. Thank you again for the speaking opportunities so far.
 
 As the title says, this talk focuses on HTML. Since the days of the HTML5 Conference, I feel we have heard fewer conference talks centered on HTML itself. But as Ikeda-san's talk also showed, HTML keeps being updated. I wanted to reintroduce HTML itself, tied to Vue SFCs, and that is why I proposed this theme.
 
@@ -101,6 +103,7 @@ In the browser, that HTML displays like this:
 And the HTML the browser ends up with looks like this:
 
 ```html
+<!-- HTML in the browser -->
 <p>
   <em>
     <strong>日本最大級の</strong>
@@ -123,6 +126,7 @@ What happens if the closing tags for `<em>` and `<strong>` are mismatched? Let's
 Compared with the earlier example, “frontend conference” also looks bold. Looking at how the browser actually expresses that as HTML, “Japan's largest” is roughly as intended, but then “frontend conference” is treated as part of the strongest emphasis as well.
 
 ```html
+<!-- HTML in the browser -->
 <p>
   <em>
     <strong>日本最大級の</strong>

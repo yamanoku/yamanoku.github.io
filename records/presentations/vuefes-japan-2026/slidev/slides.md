@@ -40,13 +40,16 @@ Vue Fes Japan 2026 | <time datetime="2026-10-24">2026-10-24</time>
 <img src="./images/yamanoku.png" alt="yamanoku" width="200" height="200" class="block mb-8">
 
 - 一児の父、会社員（～2026/10）
+- chibivue land
 - Vue Fes Japan 2026 コアスタッフ
-- HTML Night in Tokyo、HTML Day 2026 in 東葛 主催
+- [HTML Night in Tokyo](https://connpass.com/event/399762/)、[HTML Day 2026 in 東葛](https://htmlday2026.toukatsu.dev/) 主催
 
 <!--
 みなさま、こんにちは。やまのくと申します。
 
-一児の父で今月10月いっぱいまで会社員としてやっております。今年のVue Fes Japan 2026 ではコアスタッフとしても関わっております。
+一児の父で今月10月いっぱいまで会社員としてやっております。chibivue landというDiscordサーバーに普段は生息しております。
+
+今年のVue Fes Japan 2026ではコアスタッフとしても関わっております。
 
 今年はHTMLにまつわるイベントとしてHTML Night in Tokyo や HTML Day 2026 in 東葛の主催もしておりました。
 
@@ -57,7 +60,7 @@ Vue Fes Japan 2026 | <time datetime="2026-10-24">2026-10-24</time>
 layout: section
 ---
 
-## Vue Fes Japan Speakers
+## [Vue Fes Japan Speakers](https://vuefes-japan-speakers.yamanoku.net/)
 
 <img src="./images/vuefes-japan-speakers.png" alt="Vue Fes Japan Speakers のサイト画面" width="720" height="450">
 
@@ -253,6 +256,7 @@ layout: section
 <v-click>
 
 ```html
+<!-- ブラウザでのHTML -->
 <p>
   <em>
     <strong>日本最大級の</strong>
@@ -291,6 +295,7 @@ layout: section
 <v-click>
 
 ```html
+<!-- ブラウザでのHTML -->
 <p>
   <em>
     <strong>日本最大級の</strong>
@@ -749,7 +754,7 @@ layout: section
 
 ---
 
-## ESLint - eslint-plugin-vue
+## <img src="/images/eslint-logo.svg" alt="" class="tool-logo" /> ESLint - eslint-plugin-vue
 
 - [`vue/no-parsing-error`](https://eslint.vuejs.org/rules/no-parsing-error.html) で`<template>` 内の構文エラーを報告できる
   - WHATWG HTMLの字句的な構文エラーを多く検知できる
@@ -775,10 +780,9 @@ HTML仕様における字句的な構文エラーを多く検知でき、essenti
 
 ---
 
-## ESLint - 意味論の補助と限界
+## <img src="/images/eslint-logo.svg" alt="" class="tool-logo" /> ESLint - 意味論の補助と限界
 
 - [eslint-plugin-vuejs-accessibility](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/) で a11y から意味論を守れる
-  - 例: [`form-control-has-label`](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/rules/form-control-has-label.html)
 
 ```json
 {
@@ -794,6 +798,12 @@ HTML仕様における字句的な構文エラーを多く検知でき、essenti
 }
 ```
 
+<small>
+
+https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/rules/form-control-has-label.html
+
+</small>
+
 <!--
 アクセシビリティという形から意味論を守れるのは eslint-plugin-vuejs-accessibility が挙げられます。
 
@@ -804,7 +814,7 @@ HTML仕様における字句的な構文エラーを多く検知でき、essenti
 
 ---
 
-## Biome
+## <img src="/images/biome-logo.svg" alt="" class="tool-logo" /> Biome
 
 - リンター・フォーマッターがまとまったツールチェイン
 - [`noMisplacedListElements`](https://biomejs.dev/linter/rules/no-misplaced-list-elements/) は語彙的チェック
@@ -828,7 +838,7 @@ v2.3.0以降、Vue / Svelte / Astro を標準で扱え、ファイル内の HTML
 
 ---
 
-## Oxc
+## <img src="/images/oxc-logo.svg" alt="" class="tool-logo" /> Oxc
 
 - **OxLint**: Linterツール。Vueは固有のルールチェックが主
 - 現時点では`<template>`の内部をチェックする機構はない
@@ -847,7 +857,7 @@ Embedded Framework Support の RFC が進むと、対応の見通しが見えて
 
 ---
 
-## Markuplint
+## <img src="/images/markuplint-logo.svg" alt="" class="tool-logo" /> Markuplint
 
 - HTML Living Standard ベースの適合性検証ができる
 - 「要素の使い方」の部分を見てくれる
@@ -864,7 +874,7 @@ Vueにおいては vue-parser と vue-spec が用意されています。
 
 ---
 
-## Markuplint - `permitted-contents`
+## <img src="/images/markuplint-logo.svg" alt="" class="tool-logo" /> Markuplint - `permitted-contents`
 
 コンテンツモデルを仕様データから検証できる
 
@@ -889,7 +899,7 @@ permitted-contents では、コンテンツモデルを仕様データから検�
 
 ---
 
-## Markuplint - 意味論のチェック
+## <img src="/images/markuplint-logo.svg" alt="" class="tool-logo" /> Markuplint - 意味論のチェック
 
 ```html
 <!-- incorrect -->
@@ -920,7 +930,7 @@ no-pseudo-list は、ビュレット文字で箇条書きを擬似している�
 
 ---
 
-## Markuplint - 意味論のチェック
+## <img src="/images/markuplint-logo.svg" alt="" class="tool-logo" /> Markuplint - 意味論のチェック
 
 ```html
 <!-- incorrect -->
@@ -949,7 +959,7 @@ https://markuplint.dev/docs/rules/no-consecutive-br
 
 ---
 
-## Markuplint - 意味論のチェック
+## <img src="/images/markuplint-logo.svg" alt="" class="tool-logo" /> Markuplint - 意味論のチェック
 
 ```html
 <!-- incorrect -->
@@ -977,7 +987,7 @@ no-skipped-heading-level（見出しレベルの飛ばし厳禁）というル�
 
 ---
 
-## Markuplint - Pretenders
+## <img src="/images/markuplint-logo.svg" alt="" class="tool-logo" /> Markuplint - Pretenders
 
 コンポーネントを描画結果のHTML要素に見立てるオプション
 
@@ -1010,7 +1020,7 @@ Markuplintによって「コンテンツモデルをチェックする」と「�
 
 ---
 
-## Markuplint - Pretenders
+## <img src="/images/markuplint-logo.svg" alt="" class="tool-logo" /> Markuplint - Pretenders
 
 
 Markuplint v5からexperimentalで自動スキャンも設定可能
@@ -1035,7 +1045,7 @@ Markuplintによって「コンテンツモデルをチェックする」と「�
 
 ---
 
-## Vize
+## <span class="tool-logo-vize" aria-hidden="true"></span> Vize
 
 - ubugeeeiさん作・RustによるVueのツールチェインです
 - LinterはHTML適合性を Vue固有ルール / アクセシビリティから分離して扱える
@@ -1056,7 +1066,7 @@ Markuplintにあったコンテンツモデルの検査も`vue/permitted-content
 
 ---
 
-## Vize - クロスコンポーネントネスト検査
+## <span class="tool-logo-vize" aria-hidden="true"></span> Vize - クロスコンポーネントネスト検査
 
 - `html/cross-component-nesting`で、合成後に初めて不正になるネストの検知が可能
   - `vize lint --cross-file`でファイル横断チェックができる
@@ -1085,7 +1095,7 @@ Vizeはこの「合成後」の確認を標準でできることが優れてい�
 
 ---
 
-## Vize - templateSyntax
+## <span class="tool-logo-vize" aria-hidden="true"></span> Vize - templateSyntax
 
 - コンパイラ側で自己完結タグがある場合に警告するようにしている
   - モードの切り替えでエラーとしたり無視することもできる
