@@ -317,14 +317,11 @@ layout: section
 
 ## ブラウザは誤りを「直す」
 
-- HTML構文はエラーとなってもブラウザ側は自己解釈してパースする
-- 仕様は「表示できる＝適合」とはせず、誤りを整理している
+- HTML構文はエラーとなってもブラウザ側は自己解釈して表示する
 - 文書構造・スタイルの適応・SSR時・アクセシビリティで問題が起こる可能性
 
 <!--
-HTML構文はエラーとなってもブラウザ側は自己解釈してパースします。
-
-仕様は「表示できること」がすなわち「適合」とはなっておらず、ただただ誤りを整理しているだけです。
+HTML構文は間違っていても、それ自体を止めるすべはなく、ブラウザ側は自己解釈して表示するようになっています。
 
 こうした正しくないHTMLというのは文書構造・スタイルの適応・SSR時・アクセシビリティで問題が起こる可能性があります。
 -->
@@ -604,9 +601,9 @@ div 要素の自己完結タグはパース可能でしょうか？
 
 - Vueでは`<div></div>`として解釈される
 - ASTに含まれる`isSelfClosing`の有無で判定している
+  - Custom Elements、Vueコンポーネントも自己完結タグが可能
 - `<div v-text="Vue Fes Japan" />` = `<div>Vue Fes Japan</div>`
 - `<div />Vue Fes Japan` は `<div></div>Vue Fes Japan` となる
-- Custom Elements、Vueコンポーネントも自己完結タグが可能
 
 <v-click>
   <div mt="12">
@@ -617,7 +614,7 @@ div 要素の自己完結タグはパース可能でしょうか？
 <!--
 答えは、パース可能です。Vueでは自己完結タグが付いているものをdiv要素の開始と終了タグのものとして解釈されます。
 
-Custom Elements や Vueコンポーネントも自己完結タグが可能であり、これは解釈されるASTに含まれる isSelfClosing の有無で判定しています。
+Custom Elements や Vueコンポーネントも自己完結タグが可能であり、これは解釈されるASTに含まれる isSelfClosing の有無で判定して、開始タグと終了タグで表現するようにしています。
 
 v-text を付けた自己完結タグは、中身が入った div としてレンダリングされます。
 
@@ -630,7 +627,7 @@ v-text を付けた自己完結タグは、中身が入った div としてレ�
 
 ## 自己完結タグにまつわる余談
 
-- Prettierのフォーマットでは必ず閉じタグが付くようになっている
+- Prettierのフォーマットでは自己完結タグが付くようになっている
 - Biomeはオプションで変えられるようにしている
   - `--html-formatter-self-close-void-elements=<always|never>`
 - SvelteはRich Harris氏が見直してマイグレーションツールが作成される
@@ -639,7 +636,7 @@ v-text を付けた自己完結タグは、中身が入った div としてレ�
 <!--
 Vue以外での自己完結タグに関する余談についても紹介します。
 
-Prettierのフォーマットでは必ず閉じタグが付くようになっています。近年見直しがされそうな雰囲気もありますが、ここは変更できないことは注意です。
+Prettierのフォーマットでは自己完結タグが付くようになっています。近年見直しがされそうな雰囲気もありますが、ここは変更できないことは注意です。
 
 一方でBiomeのフォーマットではオプションで変えられるようになっています。デフォルトでは自己完結タグを付けないように変更されています。
 
@@ -806,7 +803,7 @@ HTML仕様における字句的な構文エラーを多く検知でき、essenti
 
 ## Biome
 
-- リンター・フォーマッターがまとまったオールインツール
+- リンター・フォーマッターがまとまったツールチェイン
 - [`noMisplacedListElements`](https://biomejs.dev/linter/rules/no-misplaced-list-elements/) は語彙的チェック
 - 部分的な意味論的なチェックもできる
   - [`noDuplicateAttributes`](https://biomejs.dev/linter/rules/no-duplicate-attributes/)
@@ -817,7 +814,7 @@ HTML仕様における字句的な構文エラーを多く検知でき、essenti
 <!--
 次に Biome です。
 
-リンター・フォーマッターがまとまったオールインツールです。さまざまな言語やライブラリに対応しており、Vueでも使用可能です。
+リンター・フォーマッターがまとまったツールチェインです。さまざまな言語やライブラリに対応しており、Vueでも使用可能です。
 
 li要素を適切な親要素に使用しているかといった部分的な語彙的ルールのチェックができたり、重複した属性をチェックしたり、非推奨のHTML要素を使っていないか、意味論寄りのチェックもできます。
 
@@ -836,7 +833,7 @@ v2.3.0以降、Vue / Svelte / Astro を標準で扱え、ファイル内の HTML
   - このRFCが進めば対応されそう？
 
 <!--
-オールツールチェインものとしてOxcも紹介しておきます。
+同じツールチェインとしてOxcも紹介しておきます。
 
 OxcにおけるLinterはOxLintです。Vue固有のルールは強い一方、いまは template 内部のHTMLを深く見る機構はありません。
 
@@ -979,19 +976,20 @@ no-skipped-heading-level（見出しレベルの飛ばし厳禁）というル�
 
 ## Markuplint - Pretenders
 
-- コンポーネントを描画結果の**HTML要素に見立てるオプション**
-  - `FileList` → `ul`、`FileListItem` → `li` のようにコンテンツモデルを評価できる
-- v5からexperimentalで自動スキャンも設定可能
+コンポーネントを描画結果のHTML要素に見立てるオプション
 
 ```json
 {
-  "pretenders": {
-    "scan": [
-      {
-        "files": "./src/components/**/*.vue"
-      }
-    ]
-  }
+  "pretenders": [
+    {
+      "selector": "FileList",
+      "as": "ul"
+    },
+    {
+      "selector": "FileListItem",
+      "as": "li"
+    }
+  ]
 }
 ```
 
@@ -1009,9 +1007,34 @@ Markuplintによって「コンテンツモデルをチェックする」と「�
 
 ---
 
+## Markuplint - Pretenders
+
+
+Markuplint v5からexperimentalで自動スキャンも設定可能
+
+```json
+{
+  "pretenders": {
+    "scan": [
+      {
+        "files": "./src/components/**/*.vue"
+      }
+    ]
+  }
+}
+```
+
+<!--
+Markuplintのv5からは experimental で自動的にコンポーネントスキャンができるため、手動でのリストアップをせずとも検知できるようになります。
+
+Markuplintによって「コンテンツモデルをチェックする」と「意味論としてチェックする」ことができるようになりました。
+-->
+
+---
+
 ## Vize
 
-- ubugeeeiさん作・RustによるVueのオールツールチェイン
+- ubugeeeiさん作・RustによるVueのツールチェインです
 - LinterはHTML適合性を Vue固有ルール / アクセシビリティから分離して扱える
   - Vue: https://vizejs.dev/rules/vue/index.html
   - HTML: https://vizejs.dev/rules/html/index.html
@@ -1021,7 +1044,7 @@ Markuplintによって「コンテンツモデルをチェックする」と「�
 <!--
 その流れの先に、新しく登場しているツールがあります。それが Vize です。
 
-これはubugeeeiさん作・RustによるVueのオールツールチェインです。
+これはubugeeeiさん作・RustによるVueのツールチェインです。
 
 Vizeに含まれるLinterではHTML適合性を Vue固有ルール / アクセシビリティから分離して扱えます。
 
@@ -1089,7 +1112,7 @@ templateSyntax というオプションを扱うことで自己完結タグが�
 
 ## まとめ：Vueで正しいHTMLと向き合うために
 
-1. 「正しさ」の物差し（字句／語彙／意味論）を把握する
+1. HTMLの「正しさ」（字句・語彙・意味論ルール）を把握する
 1. コンパイラの解釈と守備範囲を理解する
 1. 静的解析で、コンパイラが見ない部分を補佐する
 
