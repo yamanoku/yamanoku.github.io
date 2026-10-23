@@ -31,7 +31,11 @@ lang: ja
 
 今回の発表ではタイトルにもあるように「HTML」を取り扱ったテーマで発表させていただきます。以前HTML5 カンファレンスというフロントエンドカンファレンスがあったのですが、それ以来であまりHTMLにまつわる発表をカンファレンスでは聴かなくなったと思っています。ですが池田さんの発表にもあったようにHTMLについては常にアップデートされてきており、今改めてHTMLそのものについてをVueのSFCと絡めて紹介できればと思い、このようなテーマにて応募させてもらいました。
 
-HTMLは1991年に世の中に登場し、今年で35年になります。文書のためのマークアップとして広がり、そこから装飾するための要素が追加されていったり、フォームやインタラクティブな操作ができる要素が増えていきました。CSSとJavaScriptからの関心の分離も進んできていた中で、普段のフロントエンド開発で使われるUIライブラリの中ではそのHTMLを使って実装されています。Angular、SvelteらはHTMLの要素を使用しコンポーネント開発ができ、ReactやSolidではJSXでの式の中でHTMLのような表現を使っています。現在はマークダウンよりも表現力高く扱えるため、AIの出力結果としても使われています。そんなHTMLの仕様は [HTML Living Standard](https://html.spec.whatwg.org/) として、常に更新され続けています。
+HTMLは1991年に世の中に登場し、今年で35年になります。文書のためのマークアップとして広がり、そこから装飾するための要素が追加されていったり、フォームやインタラクティブな操作ができる要素が増えていきました。
+
+CSSとJavaScriptからの関心の分離も進んできていた中で、普段のフロントエンド開発で使われるUIライブラリの中ではそのHTMLを使って実装されています。Angular、SvelteらはHTMLの要素を使用しコンポーネント開発ができ、ReactやSolidではJSXでの式の中でHTMLのような表現を使っています。現在はマークダウンよりも表現力高く扱えるため、
+
+AIの出力結果としても使われています。そんなHTMLの仕様は [HTML Living Standard](https://html.spec.whatwg.org/) として、常に更新され続けています。
 
 VueのSFCにはtemplateブロックにてHTMLを記述できる構文が備わっていますが、これは周知の事実だと思います。このときの見た目はHTMLですが、最終的にはJavaScriptへと変換されていきます。
 
@@ -74,7 +78,7 @@ VueのSFCにおけるtemplate内では、HTMLのパースが誤っていると�
 
 ---
 
-## 「正しいHTML」とは何か？
+## 「正しいHTML」とは何か
 
 まずは、今回の発表タイトルにもある「正しいHTML」とは何か、についてを皆さんと揃えていきたいと思います。
 
@@ -130,13 +134,13 @@ VueのSFCにおけるtemplate内では、HTMLのパースが誤っていると�
 
 このように結果的に表示されるHTMLは最初に期待したものとは違う形になります。
 
-HTML構文はエラーとなってもブラウザ側は自己解釈してパースします。仕様は「表示できること」がすなわち「適合」とはなっておらず、ただただ誤りを整理しているだけです。こうした正しくないHTMLというのは文書構造・スタイルの適応・SSR時・アクセシビリティで問題が起こる可能性があります。
+HTML構文は間違っていても、それ自体を止めるすべはなく、ブラウザ側は自己解釈して表示するようになっています。こうした正しくないHTMLというのは文書構造・スタイルの適応・SSR時・アクセシビリティで問題が起こる可能性があります。
 
 マークアップ自体には唯一の正解というものはありません。代わりにHTMLでは守らなければならない「ルール」は存在します。先ほど紹介したHTMLを正しくパースさせるのも、その1つです。そうしたルールを徹底できていることを、本発表では「HTMLの正しさ」を守れている、と定義したいと思います。
 
 正しいHTMLであることには、次のようなメリットがあります。
 
-まず一つにセマンティクスなコードを実現することで意図があるコードとなり、divやspanといった意味をもたないもので書くことよりも堅牢で保守的なコードに繋がります。
+まず一つにセマンティクスなコードを実現することで意図があるコードとなり、`<div>` や `<span>` といった意味をもたないもので書くことよりも堅牢で保守的なコードに繋がります。
 
 二つめにWebブラウザ上で表現されることで人やユーザーエージェントの双方が正しく解釈して扱えるものにもなります。
 
@@ -169,10 +173,10 @@ HTMLの仕様をまとめるWHATWGでは、こうした構文をなぜ非適合�
 
 ### 語彙的ルール
 
-次に語彙的ルールです。使える要素・属性と、コンテンツモデルによる入れ子ルールです。こちらは字句的ルールよりも厄介なところで、パーサ上は問題とならないことがあるのですが、DOMとしては望ましくないものとなります。つまりタグの位置や使い方の対応は合っていても、要素間で入れられるものの内容が誤っていると壊れたDOMができます。たとえば `p` の中に `div` を置く、といった例です。
+次に語彙的ルールです。使える要素・属性と、コンテンツモデルによる入れ子ルールです。こちらは字句的ルールよりも厄介なところで、パーサ上は問題とならないことがあるのですが、DOMとしては望ましくないものとなります。つまりタグの位置や使い方の対応は合っていても、要素間で入れられるものの内容が誤っていると壊れたDOMができます。たとえば `<p>` の中に `<div>` を置く、といった例です。
 
 ```html
-<!-- NG: p の中にブロック要素は置けない -->
+<!-- NG: <p> の中にブロック要素は置けない -->
 <p>
   <div>block</div>
 </p>
@@ -182,26 +186,26 @@ HTMLの仕様をまとめるWHATWGでは、こうした構文をなぜ非適合�
 
 ### コンテンツモデル
 
-コンテンツモデルは「どの要素の中に何を置けるか」を決める語彙的ルールの中核となります。たとえば `p` のコンテンツモデルは Phrasing content なので、`div` のような Flow 専用の要素は入れられないというルールがあります。語彙的ルールについてはMDNなどからそれぞれの要素がどのカテゴリに属しているか定義しているのでそこから確認できます。
+コンテンツモデルは「どの要素の中に何を置けるか」を決める語彙的ルールの中核となります。たとえば `<p>` のコンテンツモデルは Phrasing content なので、`<div>` のような Flow 専用の要素は入れられないというルールがあります。語彙的ルールについてはMDNなどからそれぞれの要素がどのカテゴリに属しているか定義しているのでそこから確認できます。
 
 コンテンツモデルの違反の一例を表にまとめました。
 
 | 親 | 子要素 | なぜNGなのか |
 | --- | --- | --- |
-| `p` | `div`, `p`, `ul` | 段落の中にブロックを入れられない |
-| `label` | `div`, `p` | ラベルのコンテンツモデル外 |
-| `a` | `a` | リンクの入れ子は不可 |
-| `ul` / `ol` | `div` | 基本的に `li` |
+| `<p>` | `<div>`, `<p>`, `<ul>` | 段落の中にブロックを入れられない |
+| `<label>` | `<div>`, `<p>` | ラベルのコンテンツモデル外 |
+| `<a>` | `<a>` | リンクの入れ子は不可 |
+| `<ul>` / `<ol>` | `<div>` | 基本的に `<li>` |
 
 ### 意味論的ルール
 
-最後に意味論的ルールです。いわゆるセマンティクスと呼ばれている部分です。本来要素がもつ用途とは異なる使い方をしている場合は違反になります。HTMLの文法として正しい使い方をしていても、伝えたい意味が異なることがあります。たとえば、見た目のためだけに `h1` を使う、ボタンを `a` で作る、といった例です。
+最後に意味論的ルールです。いわゆるセマンティクスと呼ばれている部分です。本来要素がもつ用途とは異なる使い方をしている場合は違反になります。HTMLの文法として正しい使い方をしていても、伝えたい意味が異なることがあります。たとえば、見た目のためだけに `<h1>` を使う、ボタンを `<a>` で作る、といった例です。
 
 ```html
 <!-- NG: 見た目のためだけに見出しを使う -->
 <h1 class="title-like">ただ大きい文字にしたいだけ</h1>
 
-<!-- NG: ボタンを a で作る -->
+<!-- NG: ボタンを <a> で作る -->
 <a href="#" onclick="submitForm()">送信</a>
 ```
 
@@ -240,27 +244,22 @@ Vue SFCのコンパイルは次の3段階に分けられます。
 
 ### `<div />` はパース可能か
 
-ここでパースにまつわるクイズです。`div` 要素の自己完結タグはパース可能でしょうか？
+ここでパースにまつわるクイズです。`<div>` 要素の自己完結タグはパース可能でしょうか？
 
-答えは、パース可能です。Vueでは自己完結タグが付いているものを `div` 要素の開始と終了タグのものとして解釈されます。Custom Elements や Vueコンポーネントも自己完結タグが可能であり、これは解釈されるASTに含まれる `isSelfClosing` の有無で判定しています。
+答えは、パース可能です。Vueでは自己完結タグが付いているものを `<div>` 要素の開始と終了タグのものとして解釈されます。Custom Elements や Vueコンポーネントも自己完結タグが可能であり、これは解釈されるASTに含まれる `isSelfClosing` の有無で判定して、開始タグと終了タグで表現するようにしています。
 
 - `<div v-text="Vue Fes Japan" />` は `<div>Vue Fes Japan</div>` とレンダリングされる
 - `<div />Vue Fes Japan` は `<div></div>Vue Fes Japan` となる
 
-ただしHTMLの仕様として、`div` の自己完結タグは有効ではありません。ここはVueのパーサーとHTMLの仕様とのズレとして理解しておくことが必要です。
+ただしHTMLの仕様として、`<div>` の自己完結タグは有効ではありません。ここはVueのパーサーとHTMLの仕様とのズレとして理解しておくことが必要です。
 
-Vue以外での自己完結タグに関する余談についても紹介します。Prettierのフォーマットでは必ず閉じタグが付くようになっています。近年見直しがされそうな雰囲気もありますが、ここは変更できないことは注意です。一方でBiomeのフォーマットではオプションで変えられるようになっています。デフォルトでは自己完結タグを付けないように変更されています（`--html-formatter-self-close-void-elements=<always|never>`）。Svelteにおいては Rich Harris 氏が自己完結タグの挙動を捉え違いていたことを反省し、修復するためのマイグレーションツール（`npx svelte-migrate self-closing-tags`）が作られました。ライブラリやフレームワークごとに慣習が分かれている、という部分についても覚えておくとよいと思います。
+Vue以外での自己完結タグに関する余談についても紹介します。Prettierのフォーマットでは自己完結タグが付くようになっています。近年見直しがされそうな雰囲気もありますが、ここは変更できないことは注意です。一方でBiomeのフォーマットではオプションで変えられるようになっています。デフォルトでは自己完結タグを付けないように変更されています（`--html-formatter-self-close-void-elements=<always|never>`）。Svelteにおいては Rich Harris 氏が自己完結タグの挙動を捉え違いていたことを反省し、修復するためのマイグレーションツール（`npx svelte-migrate self-closing-tags`）が作られました。ライブラリやフレームワークごとに慣習が分かれている、という部分についても覚えておくとよいと思います。
 
 ### コンテンツモデルは警告してくれる
 
 では、Vueは字句的ルール以外何もしないのかというと、そうではありません。Vue 3.4以降、`compiler-dom` の `validateHtmlNesting` により、不正なネストが開発時に警告されます。
 
-<figure>
-
 ![Vueのテンプレートで p の中に h1 や li を置いたときに、HTML仕様上のネスト違反として警告が出ているエディタ画面](../images/vue-nesting-warning.png)
-
-<figcaption>開発時のネスト警告の例。ありがたいDXだが、警告を無視すればそのまま動いてしまう</figcaption>
-</figure>
 
 SSRにおけるハイドレーションミスマッチを防ぐ意図のあるありがたいDXです。ですが、これはあくまでも開発時の警告であり、明確なコンパイルエラーではありません。警告を無視すればそのまま動いてしまいます。
 
@@ -296,7 +295,9 @@ HTMLの構造的に正しいか、意図と矛盾していないかを静的解�
 
 最初に見ていくのはESLintです。VueのESLintといえば [eslint-plugin-vue](https://eslint.vuejs.org/) が有名です。
 
-このプラグインでは [`vue/no-parsing-error`](https://eslint.vuejs.org/rules/no-parsing-error.html) で `<template>` 内の構文エラーを報告できます。HTML仕様における字句的な構文エラーを多く検知でき、essential 系プリセットにも含まれているルールです。自己完結タグに関するチェックのみは、デフォルトで無効になっています。これは字句的なルールですが、ランタイムを通さずにコードだけ見て気付くことができることで優位性があります。
+このプラグインでは [`vue/no-parsing-error`](https://eslint.vuejs.org/rules/no-parsing-error.html) で `<template>` 内の構文エラーを報告できます。HTML仕様における字句的な構文エラーを多く検知でき、essential 系プリセットにも含まれているルールです。
+
+自己完結タグに関するチェックのみは、デフォルトで無効になっています。これは字句的なルールですが、ランタイムを通さずにコードだけ見て気付くことができることで優位性があります。
 
 しかしこのプラグインにおいて語彙的ルールを守れるものは確認できませんでした。代わりに意味論的に扱えるものとしてbutton要素のtype属性値を強制する [`vue/html-button-has-type`](https://eslint.vuejs.org/rules/html-button-has-type.html) などが唯一あげられそうです。
 
@@ -318,15 +319,15 @@ HTMLの構造的に正しいか、意図と矛盾していないかを静的解�
 
 ### Biome
 
-次に Biome です。リンター・フォーマッターがまとまったオールインツールです。さまざまな言語やライブラリに対応しており、Vueでも使用可能です。
+次に Biome です。リンター・フォーマッターがまとまったツールチェインです。さまざまな言語やライブラリに対応しており、Vueでも使用可能です。
 
-`li` 要素を適切な親要素に使用しているかといった部分的な語彙的ルールのチェックができたり（[`noMisplacedListElements`](https://biomejs.dev/linter/rules/no-misplaced-list-elements/)）、重複した属性をチェックしたり（[`noDuplicateAttributes`](https://biomejs.dev/linter/rules/no-duplicate-attributes/)）、非推奨のHTML要素を使っていないか（[`noObsoleteTags`](https://biomejs.dev/linter/rules/no-obsolete-tags/)）、意味論寄りのチェック（[`useSemanticElements`](https://biomejs.dev/linter/rules/use-semantic-elements/)）もできます。
+`<li>` 要素を適切な親要素に使用しているかといった部分的な語彙的ルールのチェックができたり（[`noMisplacedListElements`](https://biomejs.dev/linter/rules/no-misplaced-list-elements/)）、重複した属性をチェックしたり（[`noDuplicateAttributes`](https://biomejs.dev/linter/rules/no-duplicate-attributes/)）、非推奨のHTML要素を使っていないか（[`noObsoleteTags`](https://biomejs.dev/linter/rules/no-obsolete-tags/)）、意味論寄りのチェック（[`useSemanticElements`](https://biomejs.dev/linter/rules/use-semantic-elements/)）もできます。
 
 さらに Biome では、HTML拡張言語のサポートが進んでいます。v2.3.0以降、Vue / Svelte / Astro を標準で扱え、ファイル内の HTML / CSS / JavaScript をフォーマット・リントできます。まだ実験的なので、明示的に有効化する必要がありますが、一定使えるレベルに達していると思います。
 
 ### Oxc
 
-オールツールチェインものとしてOxcも紹介しておきます。[OxLint](https://oxc.rs/) は Linterツールで、Vue固有のルールは強い一方、いまは `<template>` 内部のHTMLを深く見る機構はありません。[RFC: Embedded Framework Support for Oxlint (Language Plugins)](https://github.com/oxc-project/oxc/discussions/21936) が進むと、対応の見通しが見えてきそうなので今後に期待と言ったところです。
+同じツールチェインとしてOxcも紹介しておきます。[OxLint](https://oxc.rs/) は Linterツールで、Vue固有のルールは強い一方、いまは `<template>` 内部のHTMLを深く見る機構はありません。[RFC: Embedded Framework Support for Oxlint (Language Plugins)](https://github.com/oxc-project/oxc/discussions/21936) が進むと、対応の見通しが見えてきそうなので今後に期待と言ったところです。
 
 というわけでESLint や Biome / Oxc が得意なのは主に字句・構文寄り、あるいは語彙の一部です。コンテンツモデルや適合性までを厚く見る層が足りていませんでした。
 
@@ -334,7 +335,7 @@ HTMLの構造的に正しいか、意図と矛盾していないかを静的解�
 
 この足りていない部分を埋めるLinterとして挙げるのが [Markuplint](https://markuplint.dev/) です。Markuplintの長所は、Living Standardベースの幅広い検証ができることです。Vueにおいては `@markuplint/vue-parser` と `@markuplint/vue-spec` が用意されています。
 
-[`permitted-contents`](https://markuplint.dev/docs/rules/permitted-contents) では、コンテンツモデルを仕様データから検証できます。`ul` の直下に `div` を置くと不正、`li` なら正しい、といった判定です。ここでようやく語彙的ルールの本格的なチェックが可能となりました。
+[`permitted-contents`](https://markuplint.dev/docs/rules/permitted-contents) では、コンテンツモデルを仕様データから検証できます。`<ul>` の直下に `<div>` を置くと不正、`<li>` なら正しい、といった判定です。ここでようやく語彙的ルールの本格的なチェックが可能となりました。
 
 ```html
 <!-- incorrect -->
@@ -351,7 +352,7 @@ HTMLの構造的に正しいか、意図と矛盾していないかを静的解�
 
 Markuplintはその名の通りマークアップに対するLintができるものになります。意味論寄りのルールも多く含まれています。
 
-[`no-pseudo-list`](https://markuplint.dev/ja/docs/rules/no-pseudo-list) は、ビュレット文字で箇条書きを擬似している箇所を止め、`ul` / `li` を使うよう求めます。
+[`no-pseudo-list`](https://markuplint.dev/ja/docs/rules/no-pseudo-list) は、ビュレット文字で箇条書きを擬似している箇所を止め、`<ul>` / `<li>` を使うよう求めます。
 
 ```html
 <!-- incorrect -->
@@ -367,7 +368,7 @@ Markuplintはその名の通りマークアップに対するLintができるも
 </ul>
 ```
 
-ほかにも [`no-consecutive-br`](https://markuplint.dev/ja/docs/rules/no-consecutive-br)（連続 br）というルールや、[`no-skipped-heading-level`](https://markuplint.dev/ja/docs/rules/no-skipped-heading-level)（見出しレベルの飛ばし厳禁）というルールがあります。
+ほかにも [`no-consecutive-br`](https://markuplint.dev/ja/docs/rules/no-consecutive-br)（連続 `<br>`）というルールや、[`no-skipped-heading-level`](https://markuplint.dev/ja/docs/rules/no-skipped-heading-level)（見出しレベルの飛ばし厳禁）というルールがあります。
 
 ```html
 <!-- incorrect: no-consecutive-br -->
@@ -394,7 +395,24 @@ Markuplintはその名の通りマークアップに対するLintができるも
 <h3>Heading 3</h3>
 ```
 
-Markuplintの優れた機能として [Pretenders](https://markuplint.dev/docs/guides/besides-html) というものがあります。これはVueコンポーネントを実際の描画結果のHTML要素に見立てるオプションです。たとえば `FileList` というVueコンポーネントを `ul`、`FileListItem` というVueコンポーネントを `li` のようにコンテンツモデルを評価できるようになります。Markuplintのv5からは experimental で自動的にコンポーネントスキャンができるため、手動でのリストアップをせずとも検知できるようになります。
+Markuplintの優れた機能として [Pretenders](https://markuplint.dev/ja/docs/guides/beyond-html#pretenders) というものがあります。これはVueコンポーネントを実際の描画結果のHTML要素に見立てるオプションです。たとえば `FileList` というVueコンポーネントを `<ul>`、`FileListItem` というVueコンポーネントを `<li>` のようにコンテンツモデルを評価できるようになります。
+
+```json
+{
+  "pretenders": [
+    {
+      "selector": "FileList",
+      "as": "ul"
+    },
+    {
+      "selector": "FileListItem",
+      "as": "li"
+    }
+  ]
+}
+```
+
+Markuplintのv5からはexperimentalで自動的にコンポーネントスキャンができるため、手動でのリストアップをせずとも検知できるようになります。
 
 ```json
 {
@@ -412,7 +430,9 @@ Markuplintによって「コンテンツモデルをチェックする」と「�
 
 ### Vize
 
-その流れの先に、新しく登場しているツールがあります。それが [Vize](https://vizejs.dev/) です。これはubugeeeiさん作・RustによるVueのオールツールチェインです。Vizeに含まれるLinterではHTML適合性を Vue固有ルール / アクセシビリティから分離して扱えます。
+その流れの先に、新しく登場しているツールがあります。それが [Vize](https://vizejs.dev/) です。
+
+これはubugeeeiさん作・RustによるVueのツールチェインです。Vizeに含まれるLinterではHTML適合性を Vue固有ルール / アクセシビリティから分離して扱えます。
 
 - Vue: [https://vizejs.dev/rules/vue/index.html](https://vizejs.dev/rules/vue/index.html)
 - HTML: [https://vizejs.dev/rules/html/index.html](https://vizejs.dev/rules/html/index.html)
@@ -422,7 +442,7 @@ Markuplintにあったコンテンツモデルの検査も `vue/permitted-conten
 
 特にVizeのLinterで優れているものが `html/cross-component-nesting` です。単ファイルでは問題ないマークアップでも、コンポーネントと組み合わせることで間違ってしまう関係性を、ファイル横断で止められます。`vize lint --cross-file` でファイル横断チェックができます。
 
-たとえば `App.vue` で `p` の中に `InfoCard` を置き、`InfoCard` のルートが `div` だと、各ファイル単体では合法でも、合成結果は実質 `p` の中に `div` となり不正です。
+たとえば `App.vue` で `<p>` の中に `InfoCard` を置き、`InfoCard` のルートが `<div>` だと、各ファイル単体では合法でも、合成結果は実質 `<p>` の中に `<div>` となり不正です。
 
 ```html
 <!-- App.vue -->
@@ -460,7 +480,7 @@ export default {
 
 最後にこの発表のまとめです。
 
-1. HTMLの正しさを保つためのルールを把握すること
+1. HTMLの「正しさ」（字句・語彙・意味論ルール）を把握すること
 2. Vueコンパイラがどう解釈し、どこまで見るかを理解すること
 3. 静的解析で、コンパイラが見ない部分を補佐すること
 

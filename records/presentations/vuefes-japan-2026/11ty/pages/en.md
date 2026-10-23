@@ -31,9 +31,13 @@ Looking myself up there, I've spoken six times over these four years, including 
 
 As the title says, this talk focuses on HTML. Since the days of the HTML5 Conference, I feel we have heard fewer conference talks centered on HTML itself. But as Ikeda-san's talk also showed, HTML keeps being updated. I wanted to reintroduce HTML itself, tied to Vue SFCs, and that is why I proposed this theme.
 
-HTML appeared in 1991 and turns 35 this year. It spread as markup for documents; then decorative elements were added, and forms and interactive controls grew. As separation of concerns with CSS and JavaScript progressed, the UI libraries we use in frontend work still implement UI with that HTML. Angular and Svelte let you build components with HTML elements; React and Solid use HTML-like expressions inside JSX. Today it can express more than Markdown, so it is also used as AI output. And the HTML specification continues to be updated as the [HTML Living Standard](https://html.spec.whatwg.org/).
+HTML appeared in 1991 and turns 35 this year. It spread as markup for documents; then decorative elements were added, and forms and interactive controls grew.
 
-It is common knowledge that Vue SFCs let you write HTML in a `template` block. It looks like HTML at that point, but it is ultimately transformed into JavaScript.
+As separation of concerns with CSS and JavaScript progressed, the UI libraries we use in frontend work still implement UI with that HTML. Angular and Svelte let you build components with HTML elements; React and Solid use HTML-like expressions inside JSX.
+
+Today it can express more than Markdown, so it is also used as AI output. And the HTML specification continues to be updated as the [HTML Living Standard](https://html.spec.whatwg.org/).
+
+It is common knowledge that Vue SFCs let you write HTML in a `<template>` block. It looks like HTML at that point, but it is ultimately transformed into JavaScript.
 
 ```html
 <script setup>
@@ -62,7 +66,7 @@ Here is the conclusion of the talk up front:
 - HTML element combinations → **warned in development**
 - Concrete HTML element usage → **not involved**
 
-Inside a Vue SFC `template`, mistaken HTML parsing is reported as an error. When element nesting differs from what is allowed, you get a development-time warning, but it is not a hard compile error. And for concrete element usage, the compiler is not involved at all.
+Inside a Vue SFC `<template>`, mistaken HTML parsing is reported as an error. When element nesting differs from what is allowed, you get a development-time warning, but it is not a hard compile error. And for concrete element usage, the compiler is not involved at all.
 
 Today I will cover the Vue compiler's limits, and how we support those limits.
 
@@ -74,7 +78,7 @@ Here is today's agenda:
 
 ---
 
-## What is “correct HTML”?
+## What is “correct HTML”
 
 First, I want to align with you on what “correct HTML” means—the phrase in today's title.
 
@@ -106,7 +110,7 @@ And the HTML the browser ends up with looks like this:
 </p>
 ```
 
-What happens if the closing tags for `em` and `strong` are mismatched? Let's render that markup in the browser.
+What happens if the closing tags for `<em>` and `<strong>` are mismatched? Let's render that markup in the browser.
 
 ```html
 <p>
@@ -130,13 +134,13 @@ Compared with the earlier example, “frontend conference” also looks bold. Lo
 
 So the resulting HTML ends up different from what you first expected.
 
-Even with syntax errors, HTML is parsed through browser self-interpretation. The specification does not treat “it displays” as “it conforms”; it merely catalogs the mistakes. Incorrect HTML can still cause problems in document structure, style application, SSR, and accessibility.
+Even when HTML syntax is wrong, there is no way to stop it as such—browsers self-interpret and display it anyway. Incorrect HTML can still cause problems in document structure, style application, SSR, and accessibility.
 
 There is no single correct markup for every case. Instead, HTML has rules you must follow. Getting HTML to parse correctly—as in the example above—is one of them. In this talk, keeping “HTML correctness” means thoroughly following those rules.
 
 Correct HTML brings benefits such as:
 
-First, semantic code carries intent, and becomes more robust and maintainable than writing everything with meaningless `div` and `span`.
+First, semantic code carries intent, and becomes more robust and maintainable than writing everything with meaningless `<div>` and `<span>`.
 
 Second, when it is expressed in a Web browser, both people and user agents can interpret and handle it correctly.
 
@@ -169,10 +173,10 @@ WHATWG explains why such syntax is non-conforming in the [Syntax errors](https:/
 
 ### Vocabulary rules
 
-Next are vocabulary rules: which elements and attributes you may use, and nesting rules from the content model. These are trickier than lexical rules—the parser may not complain, but the DOM is still undesirable. Even when tag pairing is fine, wrong nesting between elements can produce a broken DOM. For example, placing a `div` inside a `p`.
+Next are vocabulary rules: which elements and attributes you may use, and nesting rules from the content model. These are trickier than lexical rules—the parser may not complain, but the DOM is still undesirable. Even when tag pairing is fine, wrong nesting between elements can produce a broken DOM. For example, placing a `<div>` inside a `<p>`.
 
 ```html
-<!-- NG: block elements must not appear inside p -->
+<!-- NG: block elements must not appear inside <p> -->
 <p>
   <div>block</div>
 </p>
@@ -182,26 +186,26 @@ The specification organizes this under [Restrictions on content models and on at
 
 ### Content models
 
-The content model is the core of vocabulary rules: what may appear inside which element. For example, `p`'s content model is Phrasing content, so a flow-only element like `div` is not allowed. Vocabulary rules are defined by which categories each element belongs to—you can check that on MDN and similar references.
+The content model is the core of vocabulary rules: what may appear inside which element. For example, `<p>`'s content model is Phrasing content, so a flow-only element like `<div>` is not allowed. Vocabulary rules are defined by which categories each element belongs to—you can check that on MDN and similar references.
 
 Here are example content-model violations:
 
 | Parent | Child elements | Why it's NG |
 | --- | --- | --- |
-| `p` | `div`, `p`, `ul` | Blocks cannot go inside a paragraph |
-| `label` | `div`, `p` | Outside the label content model |
-| `a` | `a` | Nested links are not allowed |
-| `ul` / `ol` | `div` | Children should basically be `li` |
+| `<p>` | `<div>`, `<p>`, `<ul>` | Blocks cannot go inside a paragraph |
+| `<label>` | `<div>`, `<p>` | Outside the label content model |
+| `<a>` | `<a>` | Nested links are not allowed |
+| `<ul>` / `<ol>` | `<div>` | Children should basically be `<li>` |
 
 ### Semantic rules
 
-Finally, semantic rules—the part often called “semantics.” Using an element for a purpose other than what it is for is a violation. Markup can be grammatically fine and still communicate the wrong meaning. For example, using `h1` only for appearance, or building a button with `a`.
+Finally, semantic rules—the part often called “semantics.” Using an element for a purpose other than what it is for is a violation. Markup can be grammatically fine and still communicate the wrong meaning. For example, using `<h1>` only for appearance, or building a button with `<a>`.
 
 ```html
 <!-- NG: using a heading only for appearance -->
 <h1 class="title-like">I just want bigger text</h1>
 
-<!-- NG: building a button with an a -->
+<!-- NG: building a button with an <a> -->
 <a href="#" onclick="submitForm()">Submit</a>
 ```
 
@@ -211,7 +215,7 @@ Tools cannot catch everything here; human review is also needed. Handling semant
 
 ## How the compiler interprets it, and how far it looks
 
-Next, we'll look at how the Vue compiler interprets the inside of a Vue SFC `template`, starting from the mechanisms.
+Next, we'll look at how the Vue compiler interprets the inside of a Vue SFC `<template>`, starting from the mechanisms.
 
 Again, Vue uses HTML as a DSL. It looks like HTML, but it is ultimately transformed into JavaScript.
 
@@ -240,27 +244,22 @@ At Parse time, broken HTML writing can be detected and reported as errors. That 
 
 ### Can `<div />` be parsed?
 
-Quiz time. Can a self-closing `div` be parsed?
+Quiz time. Can a self-closing `<div>` be parsed?
 
-The answer: yes. In Vue, a self-closing tag is interpreted as a `div` with matching start and end tags. Custom Elements and Vue components can also use self-closing tags, and detection uses whether `isSelfClosing` is present on the AST.
+The answer: yes. In Vue, a self-closing tag is interpreted as a `<div>` with matching start and end tags. Custom Elements and Vue components can also use self-closing tags; detection uses whether `isSelfClosing` is present on the AST, and they are expressed as start and end tags.
 
 - `<div v-text="Vue Fes Japan" />` renders as `<div>Vue Fes Japan</div>`
 - `<div />Vue Fes Japan` becomes `<div></div>Vue Fes Japan`
 
-But as HTML, a self-closing `div` is not valid. That gap between Vue's parser and the HTML specification is important to understand.
+But as HTML, a self-closing `<div>` is not valid. That gap between Vue's parser and the HTML specification is important to understand.
 
-A short digression on self-closing tags outside Vue: Prettier always emits closing tags. There has been talk of revisiting that, but note that it cannot be changed. Biome's formatter lets you change the behavior; the default is not to use self-closing tags (`--html-formatter-self-close-void-elements=<always|never>`). In Svelte, Rich Harris revisited a misunderstanding around self-closing tags and a migration tool was created (`npx svelte-migrate self-closing-tags`). Conventions differ by library and framework—worth remembering.
+A short digression on self-closing tags outside Vue: Prettier formats with self-closing tags. There has been talk of revisiting that, but note that it cannot be changed. Biome's formatter lets you change the behavior; the default is not to use self-closing tags (`--html-formatter-self-close-void-elements=<always|never>`). In Svelte, Rich Harris revisited a misunderstanding around self-closing tags and a migration tool was created (`npx svelte-migrate self-closing-tags`). Conventions differ by library and framework—worth remembering.
 
 ### Content models get warnings
 
 So does Vue do nothing beyond lexical rules? Not quite. From Vue 3.4 onward, `compiler-dom`'s `validateHtmlNesting` warns about invalid nesting in development.
 
-<figure>
-
 ![Editor screen showing Vue template warnings when h1 or li is placed inside p, flagged as nesting that violates the HTML specification](../images/vue-nesting-warning.png)
-
-<figcaption>Example of a development-time nesting warning. Welcome DX—but ignore it and things still run</figcaption>
-</figure>
 
 It is welcome DX aimed partly at preventing SSR hydration mismatches. But it is only a development-time warning, not a hard compile error. Ignore the warning and it still runs.
 
@@ -298,7 +297,7 @@ First up is ESLint. For Vue, [eslint-plugin-vue](https://eslint.vuejs.org/) is t
 
 [`vue/no-parsing-error`](https://eslint.vuejs.org/rules/no-parsing-error.html) can report syntax errors inside `<template>`. It catches many lexical WHATWG HTML syntax errors and is included in essential-style presets. Checks specific to self-closing tags alone are disabled by default. This is a lexical rule, and catching it from code alone—without going through the runtime—is an advantage.
 
-I have not found rules in this plugin that cover vocabulary rules. On the semantic side, something like [`vue/html-button-has-type`](https://eslint.vuejs.org/rules/html-button-has-type.html), which forces a `type` on `button`, is about the only candidate.
+I have not found rules in this plugin that cover vocabulary rules. On the semantic side, something like [`vue/html-button-has-type`](https://eslint.vuejs.org/rules/html-button-has-type.html), which forces a `type` on `<button>`, is about the only candidate.
 
 [eslint-plugin-vuejs-accessibility](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/) protects semantics through an accessibility lens. For example, [`form-control-has-label`](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/rules/form-control-has-label.html) lets you name label and control components.
 
@@ -318,15 +317,15 @@ I have not found rules in this plugin that cover vocabulary rules. On the semant
 
 ### Biome
 
-Next is Biome: an all-in tool that combines linter and formatter. It supports many languages and libraries, including Vue.
+Next is Biome: a toolchain that combines linter and formatter. It supports many languages and libraries, including Vue.
 
-It can do partial vocabulary checks such as whether `li` is used under an appropriate parent ([`noMisplacedListElements`](https://biomejs.dev/linter/rules/no-misplaced-list-elements/)), check duplicate attributes ([`noDuplicateAttributes`](https://biomejs.dev/linter/rules/no-duplicate-attributes/)), flag obsolete HTML elements ([`noObsoleteTags`](https://biomejs.dev/linter/rules/no-obsolete-tags/)), and do semantic-leaning checks ([`useSemanticElements`](https://biomejs.dev/linter/rules/use-semantic-elements/)).
+It can do partial vocabulary checks such as whether `<li>` is used under an appropriate parent ([`noMisplacedListElements`](https://biomejs.dev/linter/rules/no-misplaced-list-elements/)), check duplicate attributes ([`noDuplicateAttributes`](https://biomejs.dev/linter/rules/no-duplicate-attributes/)), flag obsolete HTML elements ([`noObsoleteTags`](https://biomejs.dev/linter/rules/no-obsolete-tags/)), and do semantic-leaning checks ([`useSemanticElements`](https://biomejs.dev/linter/rules/use-semantic-elements/)).
 
 Biome is also advancing HTML super-language support. From v2.3.0, Vue / Svelte / Astro work out of the box for formatting and linting HTML / CSS / JavaScript inside those files. It is still experimental, so you need to enable it explicitly, but it has reached a usable level.
 
 ### Oxc
 
-I'll also mention Oxc as an all-toolchain option. [OxLint](https://oxc.rs/) is the linter: Vue-specific rules are strong, but there is currently no deep mechanism for HTML inside `<template>`. If [RFC: Embedded Framework Support for Oxlint (Language Plugins)](https://github.com/oxc-project/oxc/discussions/21936) moves forward, support may become clearer—something to watch.
+I'll also mention Oxc as another toolchain option. [OxLint](https://oxc.rs/) is the linter: Vue-specific rules are strong, but there is currently no deep mechanism for HTML inside `<template>`. If [RFC: Embedded Framework Support for Oxlint (Language Plugins)](https://github.com/oxc-project/oxc/discussions/21936) moves forward, support may become clearer—something to watch.
 
 So ESLint and Biome / Oxc are mainly strong on lexical and syntax-oriented checks, or parts of vocabulary. The layer that looks deeply at content models and conformance was thin.
 
@@ -334,7 +333,7 @@ So ESLint and Biome / Oxc are mainly strong on lexical and syntax-oriented check
 
 The linter I point to for filling that gap is [Markuplint](https://markuplint.dev/). Markuplint's strength is broad Living Standard–based validation. For Vue, `@markuplint/vue-parser` and `@markuplint/vue-spec` are available.
 
-[`permitted-contents`](https://markuplint.dev/docs/rules/permitted-contents) validates content models from specification data. A `div` directly under `ul` is invalid; `li` is fine. Here we finally get full vocabulary-rule checking.
+[`permitted-contents`](https://markuplint.dev/docs/rules/permitted-contents) validates content models from specification data. A `<div>` directly under `<ul>` is invalid; `<li>` is fine. Here we finally get full vocabulary-rule checking.
 
 ```html
 <!-- incorrect -->
@@ -351,7 +350,7 @@ The linter I point to for filling that gap is [Markuplint](https://markuplint.de
 
 As the name suggests, Markuplint lints markup—so it also includes many semantic-leaning rules.
 
-[`no-pseudo-list`](https://markuplint.dev/docs/rules/no-pseudo-list) stops bullet characters used as fake lists and asks for `ul` / `li`.
+[`no-pseudo-list`](https://markuplint.dev/docs/rules/no-pseudo-list) stops bullet characters used as fake lists and asks for `<ul>` / `<li>`.
 
 ```html
 <!-- incorrect -->
@@ -367,7 +366,7 @@ As the name suggests, Markuplint lints markup—so it also includes many semanti
 </ul>
 ```
 
-There are also [`no-consecutive-br`](https://markuplint.dev/docs/rules/no-consecutive-br) (consecutive `br`) and [`no-skipped-heading-level`](https://markuplint.dev/docs/rules/no-skipped-heading-level) (no skipped heading levels).
+There are also [`no-consecutive-br`](https://markuplint.dev/docs/rules/no-consecutive-br) (consecutive `<br>`) and [`no-skipped-heading-level`](https://markuplint.dev/docs/rules/no-skipped-heading-level) (no skipped heading levels).
 
 ```html
 <!-- incorrect: no-consecutive-br -->
@@ -394,7 +393,24 @@ There are also [`no-consecutive-br`](https://markuplint.dev/docs/rules/no-consec
 <h3>Heading 3</h3>
 ```
 
-An excellent Markuplint feature is [Pretenders](https://markuplint.dev/docs/guides/besides-html): an option to treat Vue components as the HTML elements they render. For example, map a `FileList` Vue component → `ul` and a `FileListItem` Vue component → `li` to evaluate content models. From Markuplint v5, experimental automatic component scanning is available, so you can detect issues without listing components by hand.
+An excellent Markuplint feature is [Pretenders](https://markuplint.dev/docs/guides/beyond-html#pretenders): an option to treat Vue components as the HTML elements they render. For example, map a `FileList` Vue component → `<ul>` and a `FileListItem` Vue component → `<li>` to evaluate content models. 
+
+```json
+{
+  "pretenders": [
+    {
+      "selector": "FileList",
+      "as": "ul"
+    },
+    {
+      "selector": "FileListItem",
+      "as": "li"
+    }
+  ]
+}
+```
+
+From Markuplint v5, experimental automatic component scanning is available, so you can detect issues without listing components by hand.
 
 ```json
 {
@@ -412,7 +428,9 @@ With Markuplint, we can check content models and check semantics.
 
 ### Vize
 
-Further along that line is a newer tool: [Vize](https://vizejs.dev/). It is a Rust-based Vue all-toolchain by ubugeeei. Its linter separates HTML conformance from Vue-specific rules and accessibility.
+Further along that line is a newer tool: [Vize](https://vizejs.dev/).
+
+It is a Rust-based Vue toolchain by ubugeeei. Its linter separates HTML conformance from Vue-specific rules and accessibility.
 
 - Vue: [https://vizejs.dev/rules/vue/index.html](https://vizejs.dev/rules/vue/index.html)
 - HTML: [https://vizejs.dev/rules/html/index.html](https://vizejs.dev/rules/html/index.html)
@@ -422,7 +440,7 @@ Content-model checks like Markuplint's are also available via the `vue/permitted
 
 Especially strong in Vize's linter is `html/cross-component-nesting`. Markup that is fine in a single file can still go wrong when combined with components, and that can be stopped across files. `vize lint --cross-file` enables cross-file checks.
 
-For example, if `App.vue` places `InfoCard` inside a `p`, and `InfoCard`'s root is a `div`, each file alone is legal, but the composed result is effectively a `div` inside a `p`—invalid.
+For example, if `App.vue` places `InfoCard` inside a `<p>`, and `InfoCard`'s root is a `<div>`, each file alone is legal, but the composed result is effectively a `<div>` inside a `<p>`—invalid.
 
 ```html
 <!-- App.vue -->
@@ -460,7 +478,7 @@ Vize is a multi-purpose toolchain beyond linting. ubugeeei also speaks at 15:05 
 
 Finally, a summary of this talk:
 
-1. Grasp the rules that keep HTML correct
+1. Grasp HTML “correctness” (lexical, vocabulary, and semantic rules)
 2. Understand how the Vue compiler interprets templates, and how far it looks
 3. Use static analysis to cover what the compiler does not see
 
