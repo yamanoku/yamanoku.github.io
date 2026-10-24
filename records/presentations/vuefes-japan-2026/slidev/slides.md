@@ -780,7 +780,7 @@ HTML仕様における字句的な構文エラーを多く検知でき、essenti
 
 ---
 
-## <img src="/images/eslint-logo.svg" alt="" class="tool-logo" /> ESLint - 意味論の補助と限界
+## <img src="/images/eslint-logo.svg" alt="" class="tool-logo" /> ESLint - 意味論のサポート
 
 - [eslint-plugin-vuejs-accessibility](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/) で a11y から意味論を守れる
 
