@@ -38,5 +38,41 @@
     "pnpm": "12.15.0",
     "npm": "please_use_pnpm_instead"
   },
-  "packageManager": "pnpm@12.15.0"
+  "packageManager": "pnpm@12.15.0",
+  "catalogs": {
+    "site-cli": {
+      "@types/node": "26.6.5",
+      "gunshi": "0.37.3",
+      "tsx": "4.23.15",
+      "typescript": "7.0.2"
+    },
+    "website": {
+      "@tailwindcss/vite": "4.3.3",
+      "astro": "7.3.8",
+      "markuplint": "5.3.0",
+      "modern-normalize": "3.0.1",
+      "oxfmt": "0.75.0",
+      "oxlint": "1.89.0",
+      "tailwindcss": "4.3.3",
+      "vite": "8.3.5"
+    },
+    "yama-normalize": {
+      "@eslint/css": "2.0.1"
+    },
+    "presentations": {
+      "@11ty/eleventy": "3.1.7",
+      "@iconify-json/twemoji": "1.2.5",
+      "@iconify-json/vscode-icons": "1.2.94",
+      "@slidev/cli": "53.0.0",
+      "@slidev/client": "53.0.0",
+      "@slidev/theme-apple-basic": "0.25.1",
+      "@slidev/theme-default": "0.25.0",
+      "@slidev/types": "53.0.0",
+      "budoux": "0.10.1",
+      "highlight.js": "11.12.0",
+      "markdown-it": "14.3.3",
+      "markdown-it-footnote": "4.0.0",
+      "vue": "3.5.44"
+    }
+  }
 }
