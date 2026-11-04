@@ -165,8 +165,8 @@ settings:
 catalogs:
   presentations:
     '@11ty/eleventy':
-      specifier: 3.1.7
-      version: 3.1.7
+      specifier: 3.1.8
+      version: 3.1.8
     '@iconify-json/twemoji':
       specifier: 1.2.5
       version: 1.2.5
@@ -328,7 +328,7 @@ importers:
     dependencies:
       '@11ty/eleventy':
         specifier: catalog:presentations
-        version: 3.1.7(supports-color@7.2.0)
+        version: 3.1.8(chokidar@3.6.0)(supports-color@7.2.0)
       '@iconify-json/twemoji':
         specifier: catalog:presentations
         version: 1.2.5
@@ -391,8 +391,8 @@ packages:
     resolution: {integrity: sha512-6QE+duqSQ0GY9rENXYb4iPR4AYGdrFpqnmi59tFp9VrleOl0QSh8VlBr2yd6dlhkdtj7904poZW5PvGr9cMiJQ==}
     engines: {node: '>=18'}
 
-  '@11ty/eleventy@3.1.7':
-    resolution: {integrity: sha512-ioyq2V884tmKDxVH80OPq5cCn4IJqfV4p2BzznxNDn7o7LbA/g5RDl7zYLk5B/TUgoFyLO+dFbIawBWpAHxlyA==}
+  '@11ty/eleventy@3.1.8':
+    resolution: {integrity: sha512-nzwVWco4TBETroX7yARBtHlX8P1TWfqHZtQKc5LQ4vyBSbE8dw8lA5gsMWs9VpWqWoLdfnHCLl/r8hT8qOFvwg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -404,21 +404,12 @@ packages:
     resolution: {integrity: sha512-Mqt6im1xpb1Ykn3nbcCovWXK3ggywRJa+IXIdoz4wIIK+cvozADH63lexcuPpGS/gJ6/m2JxyyXDyupkMr5DHw==}
     engines: {node: '>=14'}
 
-  '@11ty/nunjucks@3.3.0':
-    resolution: {integrity: sha512-kmMWFLcTMVeniw5G/pYV/uvPL/rN3Nm4WjRtkL9gZoXYh4cbME09ubVTHVJFr/G/h6wR89qJ8jULVqYJ4HI3yg==}
-    hasBin: true
-    peerDependencies:
-      '@11ty/chokidar-with-glob-support': ^1.1.0
-    peerDependenciesMeta:
-      '@11ty/chokidar-with-glob-support':
-        optional: true
-
   '@11ty/posthtml-urls@1.0.3':
     resolution: {integrity: sha512-1YvhnkaNlFnnJic1rBMWmTC2adbuy+JQiBfl1Hecr1Wjjik1pQZmGyk/eC9zKX/FQv52s2Nht1Gi/UwhYqrBeg==}
     engines: {node: '>= 6'}
 
-  '@11ty/recursive-copy@4.0.4':
-    resolution: {integrity: sha512-oI7m8pa7/IAU/3lqRU9vjBbs20iKFo7x+1K9kT3aVira6scc1X9MjBdgLCHzLJeJ7iB6wydioA+kr9/qPnvmlQ==}
+  '@11ty/recursive-copy@4.0.6':
+    resolution: {integrity: sha512-+mdqG79jXufZnY0nD/ZWOsT7i8lxqXRtaO0TotpV4fD3qrHlPonEz2izTsbENAlzpsq5+QpwuHnH4RZoalx44g==}
     engines: {node: '>=18'}
 
   '@antfu/install-pkg@1.1.0':
@@ -3695,8 +3686,8 @@ packages:
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
 
-  brace-expansion@1.1.15:
-    resolution: {integrity: sha512-EwOCDEex4quD37XhqM3omwtMoJjr//isUZz1JopUNWms+4Z2ViyM/k1YIRePpoVNnQhENnxtFjLaxNHrT7xIUg==}
+  brace-expansion@1.1.21:
+    resolution: {integrity: sha512-9zeA+KLZNNzglF2TPKRQEDyx6Yby7daAkuy8MiPzpXPsYDWi/DRM8jmwUDxokQjYqBpv5DgPiwD4h4ZZSy1Ujw==}
 
   brace-expansion@2.1.2:
     resolution: {integrity: sha512-w5JZcKgdhDOgOwm8H+KgbosopHMuGcl6qbulwjtz3SM7I7P3yW1eAjzMPLrIE+NQ9vjgANKHWeMHnrT0OXW1oA==}
@@ -5870,9 +5861,6 @@ packages:
     resolution: {integrity: sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A==}
     engines: {node: 18 || 20 || >=22}
 
-  minimatch@3.1.5:
-    resolution: {integrity: sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==}
-
   minimatch@5.1.9:
     resolution: {integrity: sha512-7o1wEA2RyMP7Iu7GNba9vc0RWWGACJOCZBJX2GJWip0ikV+wcOsgVuY9uE8CPiyQhkGFSlhuSkZPavN7u1c2Fw==}
     engines: {node: '>=10'}
@@ -5970,6 +5958,16 @@ packages:
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
+
+  nunjucks@3.2.4:
+    resolution: {integrity: sha512-26XRV6BhkgK0VOxfbU5cQI+ICFUtMLixv1noZn1tGU38kQH5A5nmmbk/O45xdyBhD1esk47nKrY0mvQpZIhRjQ==}
+    engines: {node: '>= 6.9.0'}
+    hasBin: true
+    peerDependencies:
+      chokidar: ^3.3.0
+    peerDependenciesMeta:
+      chokidar:
+        optional: true
 
   nypm@0.6.9:
     resolution: {integrity: sha512-zxlE2yvSWZWmHcNdT3+5zV2lrCogeE9YOklHrR3dFjqutq5wO7GFDYLFDRXLsYnJzwvy/im9fYoxePvS0VTW0w==}
@@ -7678,7 +7676,7 @@ snapshots:
 
   '@11ty/eleventy-utils@2.0.7': {}
 
-  '@11ty/eleventy@3.1.7(supports-color@7.2.0)':
+  '@11ty/eleventy@3.1.8(chokidar@3.6.0)(supports-color@7.2.0)':
     dependencies:
       '@11ty/chokidar-with-glob-support': 1.1.0
       '@11ty/dependency-tree': 4.0.2
@@ -7688,7 +7686,7 @@ snapshots:
       '@11ty/eleventy-utils': 2.0.7
       '@11ty/lodash-custom': 4.17.21
       '@11ty/posthtml-urls': 1.0.3
-      '@11ty/recursive-copy': 4.0.4
+      '@11ty/recursive-copy': 4.0.6
       '@sindresorhus/slugify': 2.2.1
       bcp-47-normalize: 2.3.0
       debug: 4.4.3(supports-color@7.2.0)
@@ -7705,7 +7703,7 @@ snapshots:
       minimist: 1.2.8
       moo: 0.5.2
       node-retrieve-globals: 6.0.1
-      nunjucks: '@11ty/nunjucks@3.3.0(@11ty/chokidar-with-glob-support@1.1.0)'
+      nunjucks: 3.2.4(chokidar@3.6.0)
       picomatch: 4.0.7
       please-upgrade-node: 3.2.0
       posthtml: 0.16.7
@@ -7715,6 +7713,7 @@ snapshots:
       tinyglobby: 0.2.17
     transitivePeerDependencies:
       - bufferutil
+      - chokidar
       - supports-color
       - utf-8-validate
 
@@ -7727,14 +7726,6 @@ snapshots:
 
   '@11ty/lodash-custom@4.17.21': {}
 
-  '@11ty/nunjucks@3.3.0(@11ty/chokidar-with-glob-support@1.1.0)':
-    dependencies:
-      a-sync-waterfall: 1.0.1
-      asap: 2.0.6
-      commander: 5.1.0
-    optionalDependencies:
-      '@11ty/chokidar-with-glob-support': 1.1.0
-
   '@11ty/posthtml-urls@1.0.3':
     dependencies:
       evaluate-value: 2.0.0
@@ -7742,11 +7733,11 @@ snapshots:
       list-to-array: 1.1.0
       parse-srcset: 1.0.2
 
-  '@11ty/recursive-copy@4.0.4':
+  '@11ty/recursive-copy@4.0.6':
     dependencies:
+      brace-expansion: 1.1.21
       errno: 1.0.0
       junk: 3.1.0
-      minimatch: 3.1.5
       slash: 3.0.0
 
   '@antfu/install-pkg@1.1.0':
@@ -11804,7 +11795,7 @@ snapshots:
 
   boolbase@1.0.0: {}
 
-  brace-expansion@1.1.15:
+  brace-expansion@1.1.21:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
@@ -14519,10 +14510,6 @@ snapshots:
     dependencies:
       brace-expansion: 5.0.12
 
-  minimatch@3.1.5:
-    dependencies:
-      brace-expansion: 1.1.15
-
   minimatch@5.1.9:
     dependencies:
       brace-expansion: 2.1.2
@@ -14599,6 +14586,14 @@ snapshots:
   nth-check@2.1.1:
     dependencies:
       boolbase: 1.0.0
+
+  nunjucks@3.2.4(chokidar@3.6.0):
+    dependencies:
+      a-sync-waterfall: 1.0.1
+      asap: 2.0.6
+      commander: 5.1.0
+    optionalDependencies:
+      chokidar: 3.6.0
 
   nypm@0.6.9:
     dependencies:
