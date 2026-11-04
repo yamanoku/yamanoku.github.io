@@ -6,7 +6,7 @@ workflows:
     '.github/workflows/build-html-checker.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
-        - 'pnpm/action-setup@v6.1.0'
+        - 'pnpm/action-setup@v6.1.1'
     '.github/workflows/claude.yml':
         - 'actions/checkout@v7.0.1'
         - 'anthropics/claude-code-action@28f83620103c48a57093dcc2837eec89e036bb9f'
@@ -15,22 +15,22 @@ workflows:
     '.github/workflows/markuplint.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
-        - 'pnpm/action-setup@v6.1.0'
+        - 'pnpm/action-setup@v6.1.1'
     '.github/workflows/oxc.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
-        - 'pnpm/action-setup@v6.1.0'
+        - 'pnpm/action-setup@v6.1.1'
     '.github/workflows/publish-package-yama-normalize.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
-        - 'pnpm/action-setup@v6.1.0'
+        - 'pnpm/action-setup@v6.1.1'
     '.github/workflows/update-ogenkidesuka-fm.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
     '.github/workflows/yama-normalize-lint.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'
-        - 'pnpm/action-setup@v6.1.0'
+        - 'pnpm/action-setup@v6.1.1'
 dependencies:
     'actions/checkout@v7.0.1':
         ref: 'v7.0.1'
@@ -59,8 +59,8 @@ dependencies:
         commit: 'sha1-735343b667d3e6f658f44d0eca948eb6282f2b76'
         owner_id: 108928776
         repo_id: 512644635
-    'pnpm/action-setup@v6.1.0':
-        ref: 'v6.1.0'
-        commit: 'sha1-ea17c68df8912ef543352723c149a84f56e3d413'
+    'pnpm/action-setup@v6.1.1':
+        ref: 'v6.1.1'
+        commit: 'sha1-73e46992e05b19abd31f2f3c20e0e7370d762115'
         owner_id: 21320719
         repo_id: 262289747
