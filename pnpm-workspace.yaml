@@ -28,7 +28,7 @@ catalogs:
     typescript: 7.0.2
   website:
     "@tailwindcss/vite": 4.3.4
-    astro: 7.4.5
+    astro: 7.4.7
     markuplint: 5.4.0
     modern-normalize: 3.0.1
     oxfmt: 0.76.0
