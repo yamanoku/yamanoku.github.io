@@ -27,13 +27,13 @@ catalogs:
     tsx: 4.23.15
     typescript: 7.0.2
   website:
-    "@tailwindcss/vite": 4.3.4
+    "@tailwindcss/vite": 4.3.5
     astro: 7.4.7
     markuplint: 5.4.0
     modern-normalize: 3.0.1
     oxfmt: 0.76.0
     oxlint: 1.91.0
-    tailwindcss: 4.3.4
+    tailwindcss: 4.3.5
     vite: 8.3.6
   yama-normalize:
     "@eslint/css": 2.0.1
