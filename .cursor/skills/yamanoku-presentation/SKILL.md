@@ -61,7 +61,7 @@ Task Progress:
 
 ### 6. 雛形と登録
 
-[scaffold.md](scaffold.md) の手順でディレクトリを作り、`records/scripts/presentations.mjs` の先頭に追記する（準備中は `wip: true`）。登壇実績をサイトに載せるのは別作業で、`.cursor/commands/add-presentations.md`（`pnpm site -- stage add`）を使う。
+[scaffold.md](scaffold.md) の手順でディレクトリを作り、`records/scripts/presentations.mjs` の先頭に追記する（準備中は `wip: true`）。登壇実績をサイトに載せるのは別作業で、`.cursor/commands/add-presentations.md`（`pnpm site -- stages add`）を使う。
 
 ### 7. 検証
 

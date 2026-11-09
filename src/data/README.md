@@ -18,13 +18,13 @@ yamanoku.net 本体の表示内容を持つ正規データです。Astro コン�
 - `links`: SNS（表示 / `rel=me`）、オープンソース活動、寄付・支援
 - `sections`: 各セクションの表示 / 非表示
 
-`pnpm site -- profile|link|journal|i18n|section` で更新します。
+`pnpm site -- profile|links|journal|i18n|sections` で更新します。
 
 ### `writings.json`
 
 ポートフォリオの執筆一覧です。件数は必ず 5 件で、新しい順です。`src/presentations/listPresentation.ts` がこの配列をそのまま表示します。
 
-`pnpm site -- writing` で更新します。追加時は先頭へ入れて末尾を落とします。
+`pnpm site -- writings` で更新します。追加時は先頭へ入れて末尾を落とします。
 
 ### `ogenkidesukaFm.json`
 

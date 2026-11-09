@@ -1,7 +1,7 @@
 $ARGUMENTS に含まれる登壇情報（URLやイベント名、日付など）を受け取ったら、`src/presentations/listPresentation.ts` を直接編集せず、サイト更新CLIで登壇記録を追加・編集してください。
 
 ```bash
-pnpm site -- stage add \
+pnpm site -- stages add \
   --date YYYY-MM-DD \
   --event "イベント名" \
   --resource-title "資料タイトル" \

@@ -1,3 +1,4 @@
+import { SiteCliError } from "./errors.js";
 import type { PodcastData } from "./model.js";
 import { validatePodcast } from "./model.js";
 
@@ -48,11 +49,23 @@ export async function fetchPodcast(
   feedUrl = DEFAULT_RSS_URL,
   fetcher: typeof fetch = fetch
 ): Promise<PodcastData> {
-  const response = await fetcher(feedUrl);
+  let response: Response;
+  try {
+    response = await fetcher(feedUrl);
+  } catch {
+    throw new SiteCliError({
+      message: "RSSに接続できません。",
+      exitCode: 1,
+      reason: "network_error"
+    });
+  }
   if (!response.ok) {
-    throw new Error(
-      `RSSの取得に失敗しました: ${response.status} ${response.statusText}`
-    );
+    const host = new URL(feedUrl).host;
+    throw new SiteCliError({
+      message: `RSSを取得できません。${host} が ${response.status} を返しました。`,
+      exitCode: 1,
+      reason: "network_error"
+    });
   }
   return parsePodcastFeed(await response.text(), feedUrl);
 }

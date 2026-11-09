@@ -2,6 +2,7 @@ import { spawn } from "node:child_process";
 
 import { define } from "gunshi";
 
+import { SiteCliError } from "./errors.js";
 import {
   LINK_GROUPS,
   type LinkGroupName,
@@ -33,6 +34,12 @@ import {
 } from "./mutations.js";
 import { fetchPodcast } from "./podcast.js";
 import {
+  flagValue,
+  presentDocument,
+  presentLine,
+  presentMutation
+} from "./presentation.js";
+import {
   collectReferencedTranslationKeys,
   getDataPaths,
   getRepositoryRoot,
@@ -42,16 +49,69 @@ import {
   writeJson
 } from "./repository.js";
 
-const writeArg = {
-  write: {
-    type: "boolean" as const,
-    default: false,
-    description: "変更をファイルへ保存する（省略時はプレビューのみ）"
-  }
+type ArgSchema = {
+  type?: string;
+  required?: boolean;
+  description?: string;
+  short?: string;
+  default?: unknown;
+  multiple?: boolean;
+  negatable?: boolean;
 };
 
-const printJson = (value: unknown): void => {
-  console.log(JSON.stringify(value, null, 2));
+export type CommandNode = {
+  name?: string;
+  description?: string;
+  args?: Record<string, ArgSchema>;
+  examples?: string | ((...args: never[]) => unknown);
+  internal?: boolean;
+  toKebab?: boolean;
+  subCommands?: Record<string, CommandNode>;
+};
+
+const DEPRECATED: Record<string, string> = {
+  "journal add-year": "journal years add",
+  "journal remove-year": "journal years remove",
+  "profile show": "profile inspect",
+  "sections show": "sections enable",
+  "sections hide": "sections disable",
+  "section show": "sections enable",
+  "section hide": "sections disable"
+};
+
+export const deprecationFor = (
+  commandPath: readonly string[]
+): string | undefined => {
+  const key = commandPath.join(" ");
+  const replacement = DEPRECATED[key];
+  if (!replacement) return undefined;
+  return `${key} は非推奨です。site ${replacement} を使ってください。`;
+};
+
+const asNode = (command: object): CommandNode => command as CommandNode;
+
+const asAlias = <T extends object>(command: T): T & { internal: true } => ({
+  ...command,
+  internal: true as const
+});
+
+const groupHelp = async (ctx: { commandPath: string[] }): Promise<void> => {
+  const { showHelp } = await import("./cli.js");
+  await showHelp(ctx.commandPath);
+};
+
+const consentToWrite = (values: object): boolean => {
+  const write = flagValue(values, "write") === true;
+  const dryRun = flagValue(values, "dry-run") === true;
+  if (write && dryRun) {
+    throw new SiteCliError({
+      message: "--write と --dry-run は同時に使えません。",
+      exitCode: 2,
+      reason: "invalid_arguments",
+      next: ["site --help"]
+    });
+  }
+  return write;
 };
 
 const readSiteContent = async () => {
@@ -78,124 +138,190 @@ const readRecords = async () => {
   };
 };
 
+const usage = (message: string): SiteCliError =>
+  new SiteCliError({
+    message,
+    exitCode: 2,
+    reason: "invalid_arguments"
+  });
+
 const writingListCommand = define({
   name: "list",
-  description: "現在表示する執筆5件をJSONで表示",
-  run: async () => printJson((await readWritings()).writings)
+  description: "表示中の執筆5件を出す",
+  examples: `表示中の執筆を見る
+  site writings list`,
+  run: async () => {
+    const writings = (await readWritings()).writings;
+    presentDocument(writings, { writings });
+  }
 });
 
 const writingAddCommand = define({
   name: "add",
-  description: "執筆を追加し、最新5件へローテーション",
+  description: "執筆を追加し、最新5件にする",
+  examples: `追加前に差分を見る
+  site writings add --title "記事タイトル" --url "https://example.com/article" --datetime "2026-08-29T12:00:00+09:00"
+
+確認した内容を保存する
+  site writings add --title "記事タイトル" --url "https://example.com/article" --datetime "2026-08-29T12:00:00+09:00" --write`,
   args: {
     title: { type: "string", required: true, description: "記事タイトル" },
     url: { type: "string", required: true, description: "記事URL" },
-    datetime: { type: "string", required: true, description: "公開ISO日時" },
-    ...writeArg
+    datetime: { type: "string", required: true, description: "公開ISO日時" }
   },
   run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
     const { paths, writings } = await readWritings();
     const next = addWriting(writings, {
       title: ctx.values.title,
       url: ctx.values.url,
       datetime: ctx.values.datetime
     });
-    await writeJson(paths.writings, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(paths.writings, next, { write });
+    presentMutation({
+      resource: "執筆",
+      id: ctx.values.url,
+      outcome: "added",
+      next: [
+        "writings",
+        "add",
+        "--title",
+        ctx.values.title,
+        "--url",
+        ctx.values.url,
+        "--datetime",
+        ctx.values.datetime,
+        "--write"
+      ],
+      result
     });
-    printJson(next);
   }
 });
 
 const writingRemoveCommand = define({
   name: "remove",
-  description: "指定URLの執筆を置換（5件制約を維持するため置換先は必須）",
+  description: "指定URLの執筆を別の1件と入れ替える",
   toKebab: true,
+  examples: `末尾を入れ替える前に差分を見る
+  site writings remove "https://example.com/old" --replacement-title "新しい記事" --replacement-url "https://example.com/new" --replacement-datetime "2026-08-29T12:00:00+09:00"`,
   args: {
-    url: { type: "positional", required: true, description: "削除する記事URL" },
+    url: { type: "positional", required: true, description: "外す記事のURL" },
     replacementTitle: {
       type: "string",
       required: true,
-      description: "置換する記事タイトル"
+      description: "代わりに入れる記事タイトル"
     },
     replacementUrl: {
       type: "string",
       required: true,
-      description: "置換する記事URL"
+      description: "代わりに入れる記事URL"
     },
     replacementDatetime: {
       type: "string",
       required: true,
-      description: "置換する記事の公開ISO日時"
-    },
-    ...writeArg
+      description: "代わりに入れる記事の公開ISO日時"
+    }
   },
   run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
     const { paths, writings } = await readWritings();
     const next = replaceWriting(writings, ctx.values.url, {
       title: ctx.values.replacementTitle,
       url: ctx.values.replacementUrl,
       datetime: ctx.values.replacementDatetime
     });
-    await writeJson(paths.writings, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(paths.writings, next, { write });
+    presentMutation({
+      resource: "執筆",
+      id: ctx.values.replacementUrl,
+      outcome: "replaced",
+      next: [
+        "writings",
+        "remove",
+        ctx.values.url,
+        "--replacement-title",
+        ctx.values.replacementTitle,
+        "--replacement-url",
+        ctx.values.replacementUrl,
+        "--replacement-datetime",
+        ctx.values.replacementDatetime,
+        "--write"
+      ],
+      result
     });
-    printJson(next);
   }
 });
 
 const writingCommand = define({
-  name: "writing",
-  description: "執筆一覧を更新",
+  name: "writings",
+  description: "表示する執筆5件を更新する",
+  run: groupHelp,
   subCommands: {
     add: writingAddCommand,
     remove: writingRemoveCommand,
-    list: writingListCommand
+    list: writingListCommand,
+    ls: asAlias(writingListCommand),
+    rm: asAlias(writingRemoveCommand)
   }
 });
 
 const stageListCommand = define({
   name: "list",
-  description: "登壇記録をJSONで表示",
-  run: async () => printJson((await readRecords()).records)
+  description: "登壇記録を出す",
+  examples: `登壇記録を見る
+  site stages list`,
+  run: async () => {
+    const stages = (await readRecords()).records;
+    presentDocument(stages, { stages });
+  }
 });
 
 const resourceArgs = {
   resourceTitle: {
     type: "string" as const,
     multiple: true as const,
-    description: "資料タイトル（複数指定可）"
+    description: "資料タイトル。複数あるときは同じ順で繰り返す"
   },
   resourceUrl: {
     type: "string" as const,
     multiple: true as const,
-    description: "資料URL（複数指定可）"
+    description: "資料URL。タイトルと同じ件数、同じ順で繰り返す"
   }
 };
 
 const eventUrlArg = {
   eventUrl: {
     type: "string" as const,
-    description: "イベント・カンファレンスの公式または開催ページURL"
+    description: "イベントの公式ページ、または開催ページのURL"
   }
 };
 
+const stageSelector = (date: string, event: string): string =>
+  `${date} ${event}`;
+
 const stageAddCommand = define({
   name: "add",
-  description: "登壇記録を追加",
+  description: "登壇記録を追加する",
   toKebab: true,
+  examples: `資料のある登壇を追加する
+  site stages add --date 2026-10-24 --event "Vue Fes Japan 2026" --event-url "https://vuefes.jp/2026" --resource-title "資料タイトル" --resource-url "https://example.com/slides"
+
+資料未定の予定を追加する
+  site stages add --date 2026-10-24 --event "Vue Fes Japan 2026" --note TBD`,
   args: {
-    date: { type: "string", required: true, description: "開催日 YYYY-MM-DD" },
-    event: { type: "string", required: true, description: "イベント名" },
+    date: { type: "string", required: true, description: "開催日。YYYY-MM-DD" },
+    event: {
+      type: "string",
+      required: true,
+      description: "イベント名。完全一致"
+    },
     ...eventUrlArg,
     ...resourceArgs,
     description: { type: "string", description: "登壇内容の要約" },
-    note: { type: "string", description: "資料未定などの注記" },
-    ...writeArg
+    note: { type: "string", description: "資料未定などの注記" }
   },
   run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
     const { paths, records } = await readRecords();
     const next = addStage(records, {
       date: ctx.values.date,
@@ -212,38 +338,65 @@ const stageAddCommand = define({
         : { description: ctx.values.description }),
       ...(ctx.values.note === undefined ? {} : { note: ctx.values.note })
     });
-    await writeJson(paths.records, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(paths.records, next, { write });
+    const nextArgs = [
+      "stages",
+      "add",
+      "--date",
+      ctx.values.date,
+      "--event",
+      ctx.values.event
+    ];
+    if (ctx.values.eventUrl) nextArgs.push("--event-url", ctx.values.eventUrl);
+    for (const title of ctx.values.resourceTitle ?? []) {
+      nextArgs.push("--resource-title", title);
+    }
+    for (const url of ctx.values.resourceUrl ?? []) {
+      nextArgs.push("--resource-url", url);
+    }
+    if (ctx.values.description)
+      nextArgs.push("--description", ctx.values.description);
+    if (ctx.values.note) nextArgs.push("--note", ctx.values.note);
+    nextArgs.push("--write");
+    presentMutation({
+      resource: "登壇",
+      id: stageSelector(ctx.values.date, ctx.values.event),
+      outcome: "added",
+      next: nextArgs,
+      result
     });
-    printJson(
-      next.find(
-        (item) =>
-          item.date === ctx.values.date && item.event === ctx.values.event
-      )
-    );
   }
 });
 
 const stageUpdateCommand = define({
   name: "update",
-  description: "日付とイベント名で登壇記録を更新",
+  description: "開催日とイベント名が一致する登壇を更新する",
   toKebab: true,
+  examples: `開催ページを追加する
+  site stages update 2026-10-24 --event "Vue Fes Japan 2026" --event-url "https://vuefes.jp/2026"`,
   args: {
-    date: { type: "positional", required: true, description: "現在の開催日" },
-    event: { type: "string", required: true, description: "現在のイベント名" },
+    date: {
+      type: "positional",
+      required: true,
+      description: "現在の開催日。YYYY-MM-DD、完全一致"
+    },
+    event: {
+      type: "string",
+      required: true,
+      description: "現在のイベント名。完全一致、大文字小文字を区別"
+    },
     newDate: { type: "string", description: "新しい開催日" },
     newEvent: { type: "string", description: "新しいイベント名" },
     ...eventUrlArg,
     ...resourceArgs,
     description: {
       type: "string",
-      description: "登壇内容の要約（空文字で削除）"
+      description: "登壇内容の要約。空文字で消す"
     },
-    note: { type: "string", description: "新しい注記（空文字で削除）" },
-    ...writeArg
+    note: { type: "string", description: "注記。空文字で消す" }
   },
   run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
     const { paths, records } = await readRecords();
     const resourceSpecified =
       ctx.values.resourceTitle !== undefined ||
@@ -277,72 +430,130 @@ const stageUpdateCommand = define({
           ? { note: undefined }
           : { note: ctx.values.note })
     });
-    await writeJson(paths.records, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(paths.records, next, { write });
+    const date = ctx.values.newDate ?? ctx.values.date;
+    const event = ctx.values.newEvent ?? ctx.values.event;
+    const nextArgs = [
+      "stages",
+      "update",
+      ctx.values.date,
+      "--event",
+      ctx.values.event
+    ];
+    if (ctx.values.newDate) nextArgs.push("--new-date", ctx.values.newDate);
+    if (ctx.values.newEvent) nextArgs.push("--new-event", ctx.values.newEvent);
+    if (ctx.values.eventUrl !== undefined) {
+      nextArgs.push("--event-url", ctx.values.eventUrl);
+    }
+    for (const title of ctx.values.resourceTitle ?? []) {
+      nextArgs.push("--resource-title", title);
+    }
+    for (const url of ctx.values.resourceUrl ?? []) {
+      nextArgs.push("--resource-url", url);
+    }
+    if (ctx.values.description !== undefined) {
+      nextArgs.push("--description", ctx.values.description);
+    }
+    if (ctx.values.note !== undefined) nextArgs.push("--note", ctx.values.note);
+    nextArgs.push("--write");
+    presentMutation({
+      resource: "登壇",
+      id: stageSelector(date, event),
+      outcome: "updated",
+      next: nextArgs,
+      result
     });
   }
 });
 
 const stageRemoveCommand = define({
   name: "remove",
-  description: "日付とイベント名で登壇記録を削除",
+  description: "開催日とイベント名が一致する登壇を記録から外す",
+  examples: `登壇を外す前に差分を見る
+  site stages remove 2026-10-24 --event "Vue Fes Japan 2026"`,
   args: {
-    date: { type: "positional", required: true, description: "開催日" },
-    event: { type: "string", required: true, description: "イベント名" },
-    ...writeArg
+    date: {
+      type: "positional",
+      required: true,
+      description: "開催日。YYYY-MM-DD、完全一致"
+    },
+    event: {
+      type: "string",
+      required: true,
+      description: "イベント名。完全一致、大文字小文字を区別"
+    }
   },
   run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
     const { paths, records } = await readRecords();
     const next = removeStage(records, ctx.values.date, ctx.values.event);
-    await writeJson(paths.records, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(paths.records, next, { write });
+    presentMutation({
+      resource: "登壇",
+      id: stageSelector(ctx.values.date, ctx.values.event),
+      outcome: "removed",
+      next: [
+        "stages",
+        "remove",
+        ctx.values.date,
+        "--event",
+        ctx.values.event,
+        "--write"
+      ],
+      result
     });
   }
 });
 
 const stageCommand = define({
-  name: "stage",
-  description: "登壇記録を更新",
+  name: "stages",
+  description: "登壇記録を更新する",
+  run: groupHelp,
   subCommands: {
     add: stageAddCommand,
     update: stageUpdateCommand,
     remove: stageRemoveCommand,
-    list: stageListCommand
+    list: stageListCommand,
+    ls: asAlias(stageListCommand),
+    rm: asAlias(stageRemoveCommand)
   }
 });
 
-const profileShowCommand = define({
-  name: "show",
-  description: "プロフィールをJSONで表示",
-  run: async () => printJson((await readSiteContent()).content.profile)
+const profileInspectCommand = define({
+  name: "inspect",
+  description: "プロフィールを出す",
+  examples: `プロフィールを見る
+  site profile inspect`,
+  run: async () => {
+    const profile = (await readSiteContent()).content.profile;
+    presentDocument(profile, { profile });
+  }
 });
 
 const profileSetCommand = define({
   name: "set",
-  description: "プロフィール項目の日英値を同時更新",
+  description: "プロフィール項目の日英を同時に更新する",
+  examples: `所在地を更新する
+  site profile set location --ja "千葉県流山市" --en "Nagareyama, Chiba" --write`,
   args: {
     field: {
       type: "positional",
       required: true,
       description: PROFILE_FIELDS.join(", ")
     },
-    ja: { type: "string", required: true, description: "日本語値" },
-    en: { type: "string", required: true, description: "英語値" },
+    ja: { type: "string", required: true, description: "日本語の値" },
+    en: { type: "string", required: true, description: "英語の値" },
     ruby: {
       type: "string",
       multiple: true,
-      description: "本名の本文=よみ（複数指定可）"
-    },
-    ...writeArg
+      description: "本名の本文=よみ。複数指定できる"
+    }
   },
   run: async (ctx) => {
     if (!PROFILE_FIELDS.includes(ctx.values.field as ProfileField)) {
-      throw new Error(
-        `field は ${PROFILE_FIELDS.join(", ")} から選んでください`
-      );
+      throw usage(`field は ${PROFILE_FIELDS.join(", ")} から選んでください。`);
     }
+    const write = consentToWrite(ctx.values);
     const { paths, content } = await readSiteContent();
     const next = setProfile(
       content,
@@ -351,22 +562,42 @@ const profileSetCommand = define({
       ctx.values.en,
       ctx.values.ruby ? parseRubyParts(ctx.values.ruby) : undefined
     );
-    await writeJson(paths.siteContent, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(paths.siteContent, next, { write });
+    const nextArgs = [
+      "profile",
+      "set",
+      ctx.values.field,
+      "--ja",
+      ctx.values.ja,
+      "--en",
+      ctx.values.en
+    ];
+    for (const ruby of ctx.values.ruby ?? []) nextArgs.push("--ruby", ruby);
+    nextArgs.push("--write");
+    presentMutation({
+      resource: "プロフィール",
+      id: ctx.values.field,
+      outcome: "updated",
+      next: nextArgs,
+      result
     });
   }
 });
 
 const profileCommand = define({
   name: "profile",
-  description: "基本プロフィールを更新",
-  subCommands: { set: profileSetCommand, show: profileShowCommand }
+  description: "基本プロフィールを更新する",
+  run: groupHelp,
+  subCommands: {
+    set: profileSetCommand,
+    inspect: profileInspectCommand,
+    show: asAlias(profileInspectCommand)
+  }
 });
 
 const linkListCommand = define({
   name: "list",
-  description: "リンク一覧を表示",
+  description: "リンクを出す",
   args: {
     group: {
       type: "positional",
@@ -374,17 +605,23 @@ const linkListCommand = define({
       description: LINK_GROUPS.join(", ")
     }
   },
+  examples: `SNSリンクを見る
+  site links list social`,
   run: async (ctx) => {
     const { links } = (await readSiteContent()).content;
-    if (!ctx.values.group) return printJson(links);
+    if (!ctx.values.group) {
+      presentDocument(links, { links });
+      return;
+    }
     const group = parseLinkGroup(ctx.values.group);
-    printJson(resolveLinksForDisplay(links, group));
+    const selected = resolveLinksForDisplay(links, group);
+    presentDocument(selected, { links: selected, group });
   }
 });
 
 const parseLinkGroup = (value: string): LinkGroupName => {
   if (!LINK_GROUPS.includes(value as LinkGroupName)) {
-    throw new Error(`group は ${LINK_GROUPS.join(", ")} から選んでください`);
+    throw usage(`group は ${LINK_GROUPS.join(", ")} から選んでください。`);
   }
   return value as LinkGroupName;
 };
@@ -408,28 +645,34 @@ const visibilityArgs = {
   relMe: {
     type: "boolean" as const,
     negatable: true,
-    description: "rel=meリンクとして出力する"
+    description: "rel=me リンクとして出力する"
   }
 };
 
 const linkAddCommand = define({
   name: "add",
-  description: "リンクを追加",
+  description: "リンクを追加する",
   toKebab: true,
+  examples: `SNSリンクを追加する
+  site links add social --id example --title-ja "Example" --title-en "Example" --url "https://example.com/@yamanoku" --write`,
   args: {
     group: {
       type: "positional",
       required: true,
       description: LINK_GROUPS.join(", ")
     },
-    id: { type: "string", required: true, description: "安定した識別子" },
+    id: {
+      type: "string",
+      required: true,
+      description: "安定した識別子。完全一致"
+    },
     titleJa: { type: "string", required: true, description: "日本語タイトル" },
     titleEn: { type: "string", required: true, description: "英語タイトル" },
     url: { type: "string", required: true, description: "URL" },
-    ...visibilityArgs,
-    ...writeArg
+    ...visibilityArgs
   },
   run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
     const { paths, content } = await readSiteContent();
     const next = addLink(content, parseLinkGroup(ctx.values.group), {
       id: ctx.values.id,
@@ -438,38 +681,68 @@ const linkAddCommand = define({
       ...(ctx.explicit.visible ? { visible: ctx.values.visible } : {}),
       ...(ctx.explicit.relMe ? { relMe: ctx.values.relMe } : {})
     });
-    await writeJson(paths.siteContent, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(paths.siteContent, next, { write });
+    const nextArgs = [
+      "links",
+      "add",
+      ctx.values.group,
+      "--id",
+      ctx.values.id,
+      "--title-ja",
+      ctx.values.titleJa,
+      "--title-en",
+      ctx.values.titleEn,
+      "--url",
+      ctx.values.url
+    ];
+    if (ctx.explicit.visible) {
+      nextArgs.push(ctx.values.visible ? "--visible" : "--no-visible");
+    }
+    if (ctx.explicit.relMe) {
+      nextArgs.push(ctx.values.relMe ? "--rel-me" : "--no-rel-me");
+    }
+    nextArgs.push("--write");
+    presentMutation({
+      resource: "リンク",
+      id: ctx.values.id,
+      outcome: "added",
+      next: nextArgs,
+      result
     });
   }
 });
 
 const linkUpdateCommand = define({
   name: "update",
-  description: "idでリンクを更新",
+  description: "idが一致するリンクを更新する",
   toKebab: true,
+  examples: `URLを更新する
+  site links update social example --url "https://example.com/new" --write`,
   args: {
     group: {
       type: "positional",
       required: true,
       description: LINK_GROUPS.join(", ")
     },
-    id: { type: "positional", required: true, description: "現在の識別子" },
+    id: {
+      type: "positional",
+      required: true,
+      description: "現在の識別子。完全一致"
+    },
     newId: { type: "string", description: "新しい識別子" },
     titleJa: { type: "string", description: "新しい日本語タイトル" },
     titleEn: { type: "string", description: "新しい英語タイトル" },
     url: { type: "string", description: "新しいURL" },
-    ...visibilityArgs,
-    ...writeArg
+    ...visibilityArgs
   },
   run: async (ctx) => {
     if (
       (ctx.values.titleJa === undefined) !==
       (ctx.values.titleEn === undefined)
     ) {
-      throw new Error("--title-ja と --title-en は同時に指定してください");
+      throw usage("--title-ja と --title-en は同時に指定してください。");
     }
+    const write = consentToWrite(ctx.values);
     const { paths, content } = await readSiteContent();
     const next = updateLink(
       content,
@@ -490,88 +763,156 @@ const linkUpdateCommand = define({
         ...(ctx.explicit.relMe ? { relMe: ctx.values.relMe } : {})
       }
     );
-    await writeJson(paths.siteContent, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(paths.siteContent, next, { write });
+    const nextArgs = ["links", "update", ctx.values.group, ctx.values.id];
+    if (ctx.values.newId) nextArgs.push("--new-id", ctx.values.newId);
+    if (ctx.values.titleJa !== undefined && ctx.values.titleEn !== undefined) {
+      nextArgs.push(
+        "--title-ja",
+        ctx.values.titleJa,
+        "--title-en",
+        ctx.values.titleEn
+      );
+    }
+    if (ctx.values.url !== undefined) nextArgs.push("--url", ctx.values.url);
+    if (ctx.explicit.visible) {
+      nextArgs.push(ctx.values.visible ? "--visible" : "--no-visible");
+    }
+    if (ctx.explicit.relMe) {
+      nextArgs.push(ctx.values.relMe ? "--rel-me" : "--no-rel-me");
+    }
+    nextArgs.push("--write");
+    presentMutation({
+      resource: "リンク",
+      id: ctx.values.newId ?? ctx.values.id,
+      outcome: "updated",
+      next: nextArgs,
+      result
     });
   }
 });
 
 const linkRemoveCommand = define({
   name: "remove",
-  description: "idでリンクを削除",
+  description: "idが一致するリンクを外す",
+  examples: `リンクを外す
+  site links remove social example --write`,
   args: {
     group: {
       type: "positional",
       required: true,
       description: LINK_GROUPS.join(", ")
     },
-    id: { type: "positional", required: true, description: "識別子" },
-    ...writeArg
+    id: { type: "positional", required: true, description: "識別子。完全一致" }
   },
   run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
     const { paths, content } = await readSiteContent();
     const next = removeLink(
       content,
       parseLinkGroup(ctx.values.group),
       ctx.values.id
     );
-    await writeJson(paths.siteContent, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(paths.siteContent, next, { write });
+    presentMutation({
+      resource: "リンク",
+      id: ctx.values.id,
+      outcome: "removed",
+      next: ["links", "remove", ctx.values.group, ctx.values.id, "--write"],
+      result
     });
   }
 });
 
 const linkCommand = define({
-  name: "link",
-  description: "SNS、rel=me、OSS、支援リンクを更新",
+  name: "links",
+  description: "SNS、rel=me、OSS、支援リンクを更新する",
+  run: groupHelp,
   subCommands: {
     add: linkAddCommand,
     update: linkUpdateCommand,
     remove: linkRemoveCommand,
-    list: linkListCommand
+    list: linkListCommand,
+    ls: asAlias(linkListCommand),
+    rm: asAlias(linkRemoveCommand)
+  }
+});
+
+const runJournalYear =
+  (action: "add" | "remove") => async (ctx: { values: { year?: number } }) => {
+    if (ctx.values.year === undefined) throw usage("--year が必要です。");
+    const year = ctx.values.year;
+    const write = consentToWrite(ctx.values);
+    const { paths, content } = await readSiteContent();
+    const next =
+      action === "add"
+        ? addJournalYear(content, year)
+        : removeJournalYear(content, year);
+    const result = await writeJson(paths.siteContent, next, { write });
+    presentMutation({
+      resource: "日報の年",
+      id: String(year),
+      outcome: action === "add" ? "added" : "removed",
+      next: ["journal", "years", action, "--year", String(year), "--write"],
+      result
+    });
+  };
+
+const journalYearArgs = {
+  year: { type: "number" as const, required: true, description: "西暦年" }
+};
+
+const journalYearsAddCommand = define({
+  name: "add",
+  description: "日報の年を追加する",
+  examples: `年を追加する
+  site journal years add --year 2027 --write`,
+  args: journalYearArgs,
+  run: runJournalYear("add")
+});
+
+const journalYearsRemoveCommand = define({
+  name: "remove",
+  description: "日報の年を外す",
+  examples: `年を外す
+  site journal years remove --year 2021 --write`,
+  args: journalYearArgs,
+  run: runJournalYear("remove")
+});
+
+const journalYearsCommand = define({
+  name: "years",
+  description: "日報の年を更新する",
+  run: groupHelp,
+  subCommands: {
+    add: journalYearsAddCommand,
+    remove: journalYearsRemoveCommand,
+    rm: asAlias(journalYearsRemoveCommand)
   }
 });
 
 const journalAddYearCommand = define({
   name: "add-year",
-  description: "日報年を追加",
-  args: {
-    year: { type: "number", required: true, description: "西暦年" },
-    ...writeArg
-  },
-  run: async (ctx) => {
-    const { paths, content } = await readSiteContent();
-    const next = addJournalYear(content, ctx.values.year);
-    await writeJson(paths.siteContent, next, {
-      write: ctx.values.write,
-      log: ctx.log
-    });
-  }
+  internal: true,
+  description: "非推奨。journal years add を使う",
+  args: journalYearArgs,
+  run: runJournalYear("add")
 });
 
 const journalRemoveYearCommand = define({
   name: "remove-year",
-  description: "日報年を削除",
-  args: {
-    year: { type: "number", required: true, description: "西暦年" },
-    ...writeArg
-  },
-  run: async (ctx) => {
-    const { paths, content } = await readSiteContent();
-    const next = removeJournalYear(content, ctx.values.year);
-    await writeJson(paths.siteContent, next, {
-      write: ctx.values.write,
-      log: ctx.log
-    });
-  }
+  internal: true,
+  description: "非推奨。journal years remove を使う",
+  args: journalYearArgs,
+  run: runJournalYear("remove")
 });
 
 const journalCommand = define({
   name: "journal",
-  description: "日報リンクの年を更新",
+  description: "日報リンクの年を更新する",
+  run: groupHelp,
   subCommands: {
+    years: journalYearsCommand,
     "add-year": journalAddYearCommand,
     "remove-year": journalRemoveYearCommand
   }
@@ -579,176 +920,337 @@ const journalCommand = define({
 
 const i18nListCommand = define({
   name: "list",
-  description: "日英翻訳を表示",
-  run: async () => printJson((await readSiteContent()).content.translations)
+  description: "日英の翻訳を出す",
+  examples: `翻訳を見る
+  site i18n list`,
+  run: async () => {
+    const translations = (await readSiteContent()).content.translations;
+    presentDocument(translations, { translations });
+  }
 });
 
 const i18nSetCommand = define({
   name: "set",
-  description: "日英翻訳を同時に追加・更新",
+  description: "日英の翻訳を同時に追加、または更新する",
+  examples: `翻訳を追加する
+  site i18n set example.key --ja "日本語" --en "English" --write`,
   args: {
-    key: { type: "positional", required: true, description: "翻訳キー" },
+    key: {
+      type: "positional",
+      required: true,
+      description: "翻訳キー。完全一致"
+    },
     ja: { type: "string", required: true, description: "日本語訳" },
-    en: { type: "string", required: true, description: "英語訳" },
-    ...writeArg
+    en: { type: "string", required: true, description: "英語訳" }
   },
   run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
     const { paths, content } = await readSiteContent();
+    const existed = ctx.values.key in content.translations.ja;
     const next = setTranslation(
       content,
       ctx.values.key,
       ctx.values.ja,
       ctx.values.en
     );
-    await writeJson(paths.siteContent, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(paths.siteContent, next, { write });
+    presentMutation({
+      resource: "翻訳",
+      id: ctx.values.key,
+      outcome: existed ? "updated" : "added",
+      next: [
+        "i18n",
+        "set",
+        ctx.values.key,
+        "--ja",
+        ctx.values.ja,
+        "--en",
+        ctx.values.en,
+        "--write"
+      ],
+      result
     });
   }
 });
 
 const i18nRemoveCommand = define({
   name: "remove",
-  description: "未使用の日英翻訳を同時に削除",
+  description: "ソースから参照されていない日英の翻訳を外す",
+  examples: `未使用の翻訳を外す
+  site i18n remove example.key --write`,
   args: {
-    key: { type: "positional", required: true, description: "翻訳キー" },
-    ...writeArg
+    key: {
+      type: "positional",
+      required: true,
+      description: "翻訳キー。完全一致"
+    }
   },
   run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
     const { paths, content } = await readSiteContent();
     const next = removeTranslation(
       content,
       ctx.values.key,
       await collectReferencedTranslationKeys()
     );
-    await writeJson(paths.siteContent, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(paths.siteContent, next, { write });
+    presentMutation({
+      resource: "翻訳",
+      id: ctx.values.key,
+      outcome: "removed",
+      next: ["i18n", "remove", ctx.values.key, "--write"],
+      result
     });
   }
 });
 
 const i18nCommand = define({
   name: "i18n",
-  description: "日英翻訳を更新",
+  description: "日英の翻訳を更新する",
+  run: groupHelp,
   subCommands: {
     set: i18nSetCommand,
     remove: i18nRemoveCommand,
-    list: i18nListCommand
+    list: i18nListCommand,
+    ls: asAlias(i18nListCommand),
+    rm: asAlias(i18nRemoveCommand)
   }
 });
 
 const sectionListCommand = define({
   name: "list",
-  description: "セクション表示状態を表示",
-  run: async () => printJson((await readSiteContent()).content.sections)
+  description: "セクションの表示状態を出す",
+  examples: `表示状態を見る
+  site sections list`,
+  run: async () => {
+    const sections = (await readSiteContent()).content.sections;
+    presentDocument(sections, { sections });
+  }
 });
 
-const createSectionMutationCommand = (visible: boolean) =>
+const createSectionCommand = (visible: boolean) =>
   define({
-    name: visible ? "show" : "hide",
-    description: `セクションを${visible ? "表示" : "非表示"}にする`,
+    name: visible ? "enable" : "disable",
+    description: visible ? "セクションを表示する" : "セクションを非表示にする",
+    examples: visible
+      ? `OSSセクションを表示する
+  site sections enable openSource --write`
+      : `Podcastセクションを非表示にする
+  site sections disable podcast --write`,
     args: {
       section: {
         type: "positional",
         required: true,
         description: SECTION_NAMES.join(", ")
-      },
-      ...writeArg
+      }
     },
     run: async (ctx) => {
       if (!SECTION_NAMES.includes(ctx.values.section as SectionName)) {
-        throw new Error(
-          `section は ${SECTION_NAMES.join(", ")} から選んでください`
+        throw usage(
+          `section は ${SECTION_NAMES.join(", ")} から選んでください。`
         );
       }
+      const write = consentToWrite(ctx.values);
       const { paths, content } = await readSiteContent();
       const next = setSection(
         content,
         ctx.values.section as SectionName,
         visible
       );
-      await writeJson(paths.siteContent, next, {
-        write: ctx.values.write,
-        log: ctx.log
+      const result = await writeJson(paths.siteContent, next, { write });
+      const verb = visible ? "enable" : "disable";
+      presentMutation({
+        resource: "セクション",
+        id: ctx.values.section,
+        outcome: visible ? "enabled" : "disabled",
+        next: ["sections", verb, ctx.values.section, "--write"],
+        result
       });
     }
   });
 
+const sectionEnableCommand = createSectionCommand(true);
+const sectionDisableCommand = createSectionCommand(false);
+
 const sectionCommand = define({
-  name: "section",
-  description: "トップページのセクション表示を更新",
+  name: "sections",
+  description: "トップページのセクション表示を更新する",
+  run: groupHelp,
   subCommands: {
-    show: createSectionMutationCommand(true),
-    hide: createSectionMutationCommand(false),
-    list: sectionListCommand
+    enable: sectionEnableCommand,
+    disable: sectionDisableCommand,
+    show: asAlias(sectionEnableCommand),
+    hide: asAlias(sectionDisableCommand),
+    list: sectionListCommand,
+    ls: asAlias(sectionListCommand)
   }
 });
 
 const podcastSyncCommand = define({
   name: "sync",
-  description: "RSSから最新Podcastエピソードを同期",
+  description: "RSSから最新のPodcastエピソードを同期する",
   toKebab: true,
+  examples: `取得結果を見てから保存する
+  site podcast sync
+
+取得した内容を保存する
+  site podcast sync --write`,
   args: {
-    feedUrl: { type: "string", description: "上書きするRSS URL" },
-    ...writeArg
+    feedUrl: { type: "string", description: "この実行だけで使うRSSのURL" }
   },
   run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
     const { podcast } = await readRepositoryData();
     const next = await fetchPodcast(ctx.values.feedUrl ?? podcast.feedUrl);
-    await writeJson(getDataPaths().podcast, next, {
-      write: ctx.values.write,
-      log: ctx.log
+    const result = await writeJson(getDataPaths().podcast, next, { write });
+    const nextArgs = ["podcast", "sync"];
+    if (ctx.values.feedUrl) nextArgs.push("--feed-url", ctx.values.feedUrl);
+    nextArgs.push("--write");
+    presentMutation({
+      resource: "Podcast",
+      id: next.feedUrl,
+      outcome: "updated",
+      next: nextArgs,
+      extra: { episodes: next.episodes.length },
+      result
     });
-    printJson(next);
   }
 });
 
 const podcastCommand = define({
   name: "podcast",
-  description: "お元気ですか.fmを更新",
+  description: "お元気ですか.fmを更新する",
+  run: groupHelp,
   subCommands: { sync: podcastSyncCommand }
 });
 
 const validateCommand = define({
   name: "validate",
-  description: "全更新データの形式と整合性を検証",
+  description: "更新データの形式と整合性を検証する",
+  examples: `データを検証する
+  site validate`,
   run: async () => {
     const data = await validateRepository();
-    console.log(
-      `検証成功: 執筆${data.writings.length}件、登壇${data.records.length}件、Podcast ${data.podcast.episodes.length}件`
+    presentLine(
+      `検証成功: 執筆${data.writings.length}件、登壇${data.records.length}件、Podcast ${data.podcast.episodes.length}件`,
+      {
+        outcome: "validated",
+        writings: data.writings.length,
+        stages: data.records.length,
+        episodes: data.podcast.episodes.length
+      }
     );
   }
 });
 
 const runProcess = (command: string, args: string[]): Promise<void> =>
-  new Promise((resolve, reject) => {
+  new Promise((resolvePromise, reject) => {
     const child = spawn(command, args, {
       cwd: getRepositoryRoot(),
       stdio: "inherit",
       shell: process.platform === "win32"
     });
-    child.once("error", reject);
+    child.once("error", () => {
+      reject(
+        new SiteCliError({
+          message: `${command} を起動できません。`,
+          exitCode: 1,
+          reason: "spawn_failed"
+        })
+      );
+    });
     child.once("exit", (code, signal) => {
-      if (code === 0) resolve();
-      else
+      if (code === 0) {
+        resolvePromise();
+        return;
+      }
+      if (signal) {
+        const signalNumber =
+          signal === "SIGINT"
+            ? 2
+            : signal === "SIGTERM"
+              ? 15
+              : signal === "SIGHUP"
+                ? 1
+                : 1;
         reject(
-          new Error(
-            `${command} ${args.join(" ")} が失敗しました (${signal ?? code})`
-          )
+          new SiteCliError({
+            message: "",
+            exitCode: 128 + signalNumber,
+            reason: "canceled",
+            silent: true
+          })
         );
+        return;
+      }
+      reject(
+        new SiteCliError({
+          message: "",
+          exitCode: code ?? 1,
+          reason: "build_failed",
+          silent: true
+        })
+      );
     });
   });
 
 const checkCommand = define({
   name: "check",
-  description: "データ検証、lint、本体・recordsビルド、HTML検証を実行",
-  run: async () => {
+  description: "データ検証、lint、本体とrecordsのビルド、HTML検証を実行する",
+  examples: `公開前の確認を実行する
+  site check`,
+  run: async (ctx) => {
+    if (flagValue(ctx.values, "json") === true) {
+      throw usage(
+        "check は子プロセスの出力をそのまま渡すため、--json は使えません。"
+      );
+    }
     await validateRepository();
     await runProcess("pnpm", ["ox:ci"]);
     await runProcess("pnpm", ["build"]);
     await runProcess("pnpm", ["--filter", "records", "build"]);
     await runProcess("pnpm", ["markuplint"]);
+    console.error("✓ 確認しました");
+  }
+});
+
+const helpSearchCommand = define({
+  name: "search",
+  description: "コマンドをオフラインで探す",
+  examples: `登壇のコマンドを探す
+  site help search 登壇`,
+  args: {
+    query: {
+      type: "positional",
+      required: true,
+      description: "コマンド名、説明、例から探す語"
+    }
+  },
+  run: async (ctx) => {
+    const commands = searchCommands(ctx.values.query);
+    if (flagValue(ctx.values, "json") === true) {
+      presentDocument(commands, { commands });
+      return;
+    }
+    if (commands.length === 0) {
+      presentLine(`No commands match "${ctx.values.query}".`, { commands });
+      return;
+    }
+    presentLine(
+      commands
+        .map((command) => `${command.path}  ${command.summary}`)
+        .join("\n"),
+      { commands }
+    );
+  }
+});
+
+const helpCommand = define({
+  name: "help",
+  description: "コマンドを探す",
+  run: groupHelp,
+  subCommands: {
+    search: helpSearchCommand
   }
 });
 
@@ -756,16 +1258,90 @@ export const rootCommand = define({
   name: "site",
   description: "yamanoku.netの更新を安全に行うCLI",
   internal: true,
+  examples: `執筆を追加する前に差分を見る
+  site writings add --title "記事タイトル" --url "https://example.com/article" --datetime "2026-08-29T12:00:00+09:00"
+
+コマンドを探す
+  site help search 登壇`,
+  run: groupHelp,
   subCommands: {
-    writing: writingCommand,
-    stage: stageCommand,
+    writings: writingCommand,
+    writing: asAlias(writingCommand),
+    stages: stageCommand,
+    stage: asAlias(stageCommand),
     profile: profileCommand,
-    link: linkCommand,
+    links: linkCommand,
+    link: asAlias(linkCommand),
     journal: journalCommand,
     i18n: i18nCommand,
-    section: sectionCommand,
+    sections: sectionCommand,
+    section: asAlias(sectionCommand),
     podcast: podcastCommand,
     validate: validateCommand,
-    check: checkCommand
+    check: checkCommand,
+    help: helpCommand
   }
 });
+
+export type CatalogEntry = {
+  path: string;
+  summary: string;
+  examples: string;
+};
+
+const walkCommands = (
+  command: CommandNode,
+  path: string[],
+  into: CatalogEntry[]
+) => {
+  if (command.internal && path.length > 0) return;
+  if (path.length > 0) {
+    into.push({
+      path: path.join(" "),
+      summary: command.description ?? "",
+      examples: typeof command.examples === "string" ? command.examples : ""
+    });
+  }
+  for (const [name, child] of Object.entries(command.subCommands ?? {})) {
+    walkCommands(child, [...path, name], into);
+  }
+};
+
+export const listCommands = (): CatalogEntry[] => {
+  const entries: CatalogEntry[] = [];
+  walkCommands(asNode(rootCommand), [], entries);
+  return entries;
+};
+
+export const searchCommands = (
+  query: string
+): Array<{ path: string; summary: string }> => {
+  const needle = query.toLowerCase();
+  return listCommands()
+    .filter(
+      (entry) =>
+        entry.path.toLowerCase().includes(needle) ||
+        entry.summary.toLowerCase().includes(needle) ||
+        entry.examples.toLowerCase().includes(needle)
+    )
+    .slice(0, 10)
+    .map(({ path, summary }) => ({ path, summary }));
+};
+
+export const commandAt = (
+  path: readonly string[]
+):
+  | { kind: "ok"; command: CommandNode; path: string[] }
+  | { kind: "unknown"; segment: string; parent: string[] } => {
+  let current = asNode(rootCommand);
+  const resolved: string[] = [];
+  for (const segment of path) {
+    const child = current.subCommands?.[segment];
+    if (!child) {
+      return { kind: "unknown", segment, parent: resolved };
+    }
+    current = child;
+    resolved.push(segment);
+  }
+  return { kind: "ok", command: current, path: resolved };
+};

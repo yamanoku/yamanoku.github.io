@@ -1,6 +1,16 @@
-import { readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
-import { dirname, relative, resolve } from "node:path";
+import { randomBytes } from "node:crypto";
+import {
+  lstat,
+  readdir,
+  readFile,
+  realpath,
+  rename,
+  rm,
+  writeFile
+} from "node:fs/promises";
+import { dirname, isAbsolute, relative, resolve } from "node:path";
 
+import { SiteCliError } from "./errors.js";
 import {
   DataValidationError,
   type PodcastData,
@@ -22,7 +32,13 @@ export type RepositoryData = {
 
 export type WriteOptions = {
   write: boolean;
-  log?: (message: string) => void;
+};
+
+export type WriteResult = {
+  changed: boolean;
+  written: boolean;
+  displayPath: string;
+  diff?: string;
 };
 
 type DiffOp = { kind: "eq" | "del" | "add"; value: string };
@@ -156,40 +172,71 @@ export async function readRepositoryData(
   };
 }
 
+const staysInsideRoot = (root: string, target: string): boolean => {
+  const rel = relative(root, target);
+  return rel === "" || (!rel.startsWith("..") && !isAbsolute(rel));
+};
+
+const ensureWritableTarget = async (path: string): Promise<void> => {
+  const root = await realpath(getRepositoryRoot());
+  const parent = await realpath(dirname(path));
+  const displayPath = relative(getRepositoryRoot(), path);
+  if (!staysInsideRoot(root, parent)) {
+    throw new SiteCliError({
+      message: `${displayPath} はリポジトリの外です。`,
+      exitCode: 2,
+      reason: "invalid_arguments"
+    });
+  }
+  try {
+    const stat = await lstat(path);
+    if (!stat.isSymbolicLink()) return;
+    const target = await realpath(path);
+    if (!staysInsideRoot(root, target)) {
+      throw new SiteCliError({
+        message: `${displayPath} はリポジトリの外を指しています。`,
+        exitCode: 2,
+        reason: "invalid_arguments"
+      });
+    }
+  } catch (error) {
+    if (error instanceof SiteCliError) throw error;
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      return;
+    }
+    throw error;
+  }
+};
+
 export async function writeJson(
   path: string,
   value: unknown,
   options: WriteOptions
-): Promise<boolean> {
+): Promise<WriteResult> {
   const next = `${JSON.stringify(value, null, 2)}\n`;
   const current = await readFile(path, "utf8").catch(() => "");
   const displayPath = relative(getRepositoryRoot(), path);
-  const log = options.log ?? console.log;
 
   if (current === next) {
-    log(`変更なし: ${displayPath}`);
-    return false;
+    return { changed: false, written: false, displayPath };
   }
+  const diff = formatJsonDiff(current, next, displayPath);
   if (!options.write) {
-    log(
-      `プレビュー: ${displayPath} を更新します（保存には --write が必要です）`
-    );
-    log(formatJsonDiff(current, next, displayPath));
-    return true;
+    return { changed: true, written: false, displayPath, diff };
   }
 
+  await ensureWritableTarget(path);
   const temporaryPath = resolve(
     dirname(path),
-    `.${path.split("/").at(-1)}.${process.pid}.${Date.now()}.tmp`
+    `.${path.split("/").at(-1)}.${process.pid}.${randomBytes(6).toString("hex")}.tmp`
   );
   try {
-    await writeFile(temporaryPath, next, "utf8");
+    await writeFile(temporaryPath, next, { encoding: "utf8", flag: "wx" });
     await rename(temporaryPath, path);
   } finally {
     await rm(temporaryPath, { force: true }).catch(() => undefined);
   }
-  log(`更新しました: ${displayPath}`);
-  return true;
+  return { changed: true, written: true, displayPath, diff };
 }
 
 export async function collectReferencedTranslationKeys(
