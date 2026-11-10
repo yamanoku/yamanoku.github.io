@@ -84,9 +84,7 @@ const sitePlugin = plugin({
       ctx.addGlobalOption(option.name, {
         type: option.type,
         description: option.description,
-        ...(option.name === "color"
-          ? { negatable: true, default: true }
-          : {})
+        ...(option.name === "color" ? { negatable: true, default: true } : {})
       });
     }
   }
