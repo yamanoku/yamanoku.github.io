@@ -159,13 +159,13 @@ pnpm records <name>
 ```
 
 #### プレゼンテーション一覧データ
-登壇は `records/src/data/records.json`、執筆は `src/data/writings.json` を正規データとし、`src/presentations/listPresentation.ts` がポートフォリオサイト用の最新5件を導出する。情報更新時はこれらを直接編集せず、`pnpm site -- stage ...` または `pnpm site -- writing ...` を使用する。執筆の5件制約は変更しない。
+登壇は `records/src/data/records.json`、執筆は `src/data/writings.json` を正規データとし、`src/presentations/listPresentation.ts` がポートフォリオサイト用の最新5件を導出する。情報更新時はこれらを直接編集せず、`pnpm site -- stages ...` または `pnpm site -- writings ...` を使用する。執筆の5件制約は変更しない。
 
 ### サイト情報更新CLI
 
 プロフィール、翻訳、リンク、日報年次、セクション表示、登壇、執筆、Podcastは `packages/site-cli` のGunshi CLIで管理する。
 
-- 変更コマンドはデフォルトでプレビューのみ。内容を確認後に `--write` を付ける
+- 変更コマンドはデフォルトでプレビューのみ。内容を確認後に `--write` を付ける。機械可読な結果は `--json`。差分と次のコマンドは stderr、終了コード 2 は使い方の誤り
 - `src/data/site-content.json`、`src/data/writings.json`、`records/src/data/records.json` を通常の情報更新で直接編集しない
 - 必要な操作がCLIにない場合は、データを直接書き換えずCLIへ安全なコマンドと検証を追加する
 - 更新後は `pnpm site -- validate`、最終確認は `pnpm site -- check` を実行する

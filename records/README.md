@@ -14,14 +14,14 @@
 登壇・発表記録はルートのサイト更新CLIで管理する。`src/data/records.json` は直接編集しない。
 
 ```bash
-pnpm site -- stage add \
+pnpm site -- stages add \
   --date YYYY-MM-DD \
   --event "イベント名" \
   --resource-title "資料タイトル" \
   --resource-url "URL"
 
 # プレビュー確認後に保存
-pnpm site -- stage add ... --write
+pnpm site -- stages add ... --write
 ```
 
 資料が複数ある場合はtitleとURLを同じ件数だけ繰り返す。予定・資料未定はresourceを省略して `--note TBD` を指定できる。詳細は `packages/site-cli/README.md` を参照。

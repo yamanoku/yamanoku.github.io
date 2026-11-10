@@ -53,25 +53,18 @@ it("omits unchanged trailing lines after an early change", () => {
   assert.ok(lines.length < 20);
 });
 
-it("prints the JSON diff during dry-run and does not write", async () => {
+it("returns the JSON diff during dry-run and does not write", async () => {
   const path = resolve(root, "src/data/example.json");
   await mkdir(resolve(root, "src/data"), { recursive: true });
   await writeFile(path, `${JSON.stringify({ title: "old" }, null, 2)}\n`);
-  const messages: string[] = [];
 
-  await writeJson(
-    path,
-    { title: "new" },
-    {
-      write: false,
-      log: (message) => messages.push(message)
-    }
-  );
+  const result = await writeJson(path, { title: "new" }, { write: false });
 
   assert.equal(
     await readFile(path, "utf8"),
     `${JSON.stringify({ title: "old" }, null, 2)}\n`
   );
-  assert.match(messages[0] ?? "", /プレビュー: src\/data\/example.json/);
-  assert.match(messages[1] ?? "", /\+ {2}"title": "new"/);
+  assert.equal(result.written, false);
+  assert.equal(result.changed, true);
+  assert.match(result.diff ?? "", /\+ {2}"title": "new"/);
 });
