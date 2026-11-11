@@ -31,7 +31,7 @@ catalogs:
     astro: 7.4.7
     markuplint: 5.4.0
     modern-normalize: 3.0.1
-    oxfmt: 0.76.0
+    oxfmt: 0.78.0
     oxlint: 1.91.0
     tailwindcss: 4.3.5
     vite: 8.3.7
