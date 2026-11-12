@@ -1,0 +1,31 @@
+---
+import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
+import { listWorks } from "../../../works/listWorks";
+import GlobalListComponent from "../../global/GlobalListComponent.astro";
+
+const lang = getLanguageFromURL(Astro.url.pathname) === "en" ? "en" : "ja";
+const t = useTranslations(Astro);
+const worksUrl =
+  lang === "en"
+    ? "https://works.yamanoku.net/en/"
+    : "https://works.yamanoku.net/";
+---
+
+<section id="works" aria-labelledby="works-heading">
+  <h2 id="works-heading">{t("heading.works")}</h2>
+  <p>{t("works.lead")}</p>
+  <GlobalListComponent list={listWorks} />
+  {
+    lang === "en" ? (
+      <p>
+        Please see <a href={worksUrl}>Works</a> for the full list.
+      </p>
+    ) : (
+      <p>
+        すべての製作実績については
+        <a href={worksUrl}>Works</a>
+        を参照してください。
+      </p>
+    )
+  }
+</section>

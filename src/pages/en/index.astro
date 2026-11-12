@@ -6,6 +6,7 @@ import OgenkidesukaFmSection from "../../components/page-index/sections/Ogenkide
 import OpenSourceActivitySection from "../../components/page-index/sections/OpenSourceActivitySection.astro";
 import PresentationsSection from "../../components/page-index/sections/PresentationsSection.astro";
 import SocialNetworkServicesSection from "../../components/page-index/sections/SocialNetworkServicesSection.astro";
+import WorksSection from "../../components/page-index/sections/WorksSection.astro";
 import siteContent from "../../data/site-content.json";
 import { useTranslations } from "../../i18n/util";
 import BaseLayout from "../../layouts/BaseLayout.astro";
@@ -20,6 +21,7 @@ const sections = siteContent.sections;
   <main id="main">
     <h1>yamanoku.net</h1>
     {sections.basic && <BasicInfoSection />}
+    {sections.works && <WorksSection />}
     {sections.openSource && <OpenSourceActivitySection />}
     {sections.presentations && <PresentationsSection />}
     {sections.podcast && <OgenkidesukaFmSection />}

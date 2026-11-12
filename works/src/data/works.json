@@ -1,0 +1,219 @@
+[
+  {
+    "id": "vue-portfolio-template",
+    "name": "Vue.js Portfolio Template",
+    "github": "https://github.com/yamanoku/vue_portfolio_template",
+    "site": "https://vue-portfolio.yamanoku.net/",
+    "description": {
+      "ja": "Vue.jsでポートフォリオサイトを作るためのテンプレート。",
+      "en": "A template for building a portfolio site with Vue.js."
+    },
+    "createdAt": "2016-12-08",
+    "technologies": [
+      "Vue.js",
+      "Vue Router",
+      "Vite",
+      "TypeScript"
+    ],
+    "articles": []
+  },
+  {
+    "id": "birthday-countdown",
+    "name": "yamanoku birthday countdown",
+    "github": "https://github.com/yamanoku/birthday-countdown",
+    "description": {
+      "ja": "次のyamanokuの誕生日までをカウントダウンするアプリ。",
+      "en": "A countdown appto the next yamanoku's birthday."
+    },
+    "createdAt": "2017-10-13",
+    "technologies": [
+      "Hono",
+      "HonoX",
+      "Vite",
+      "Tailwind CSS",
+      "Cloudflare Workers"
+    ],
+    "articles": []
+  },
+  {
+    "id": "oclock",
+    "name": "O'clock app",
+    "github": "https://github.com/yamanoku/oclock",
+    "description": {
+      "ja": "秒まで表示するSvelteのシンプルなデジタル時計。",
+      "en": "A simple digital clock that counts in seconds with Svelte."
+    },
+    "createdAt": "2021-04-11",
+    "technologies": [
+      "Svelte",
+      "TypeScript",
+      "Vite",
+      "Cloudflare Workers"
+    ],
+    "articles": [
+      {
+        "title": "Svelteでデジタル時計コンポーネントを作る",
+        "url": "https://zenn.dev/yamanoku/scraps/bb713d47a45a55"
+      }
+    ]
+  },
+  {
+    "id": "archives",
+    "name": "archives.yamanoku.net",
+    "github": "https://github.com/yamanoku/archives",
+    "description": {
+      "ja": "過去に書いた文章を公開しているアーカイブサイト。",
+      "en": "An archive site for articles I have written."
+    },
+    "createdAt": "2021-04-11",
+    "technologies": [
+      "Vite",
+      "TypeScript",
+      "ox-content"
+    ],
+    "articles": []
+  },
+  {
+    "id": "vue-visually-hidden",
+    "name": "Vue Visually Hidden",
+    "github": "https://github.com/yamanoku/vue-visually-hidden",
+    "description": {
+      "ja": "見た目だけ隠して、支援技術に内容を伝えるためのVueコンポーネント",
+      "en": "A Vue component that hides content visually and keeps it available to assistive technology."
+    },
+    "createdAt": "2021-07-31",
+    "technologies": [
+      "Vue.js",
+      "TypeScript",
+      "Vite",
+      "axe-core"
+    ],
+    "articles": []
+  },
+  {
+    "id": "awesome-japanese-a11y-companies",
+    "name": "Awesome japanese a11y companies",
+    "github": "https://github.com/yamanoku/awesome-japanese-a11y-companies",
+    "description": {
+      "ja": "アクセシビリティに取り組む日本企業のawesome list。",
+      "en": "An awesome list of Japanese companies that work on accessibility."
+    },
+    "createdAt": "2021-09-02",
+    "technologies": [],
+    "articles": [
+      {
+        "title": "日本企業のアクセシビリティ事例をコツコツと収集している話",
+        "url": "https://docs.google.com/presentation/d/e/2PACX-1vT22K28-kR821F3K_4UGLhx1UVD1EmyC5hoqGGUjtMO9Glg_btK048U8Vth1oMnjCTWaBTxXaRlGqL_/pub?start=false&loop=false&delayms=3000"
+      }
+    ]
+  },
+  {
+    "id": "vuefes-japan-speakers",
+    "name": "Vue Fes Japan Speakers",
+    "github": "https://github.com/yamanoku/vuefes-japan-speakers",
+    "description": {
+      "ja": "歴代のVue Fes Japanのスピーカー一覧サイトです。",
+      "en": "A site that lists speakers from past Vue Fes Japan events."
+    },
+    "createdAt": "2024-08-31",
+    "technologies": [
+      "Vue.js",
+      "vuerend",
+      "Vize",
+      "Vite"
+    ],
+    "articles": [
+      {
+        "title": "Vue Fes Japanの歴代スピーカー一覧を見られるページを作った",
+        "url": "https://archives.yamanoku.net/create-page-vuefes-japan-speakers/"
+      },
+      {
+        "title": "とあるサイトがkingnizeされるまでのNuxtからvuerend & Vizeへ",
+        "url": "https://scrapbox.io/yamanoku/%E3%81%A8%E3%81%82%E3%82%8B%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8Ckingnize%E3%81%95%E3%82%8C%E3%82%8B%E3%81%BE%E3%81%A7%EF%BD%9ENuxt%E3%81%8B%E3%82%89vuerend_&_Vize%E3%81%B8"
+      }
+    ]
+  },
+  {
+    "id": "baseline-mcp-server",
+    "name": "Baseline MCP Server",
+    "github": "https://github.com/yamanoku/baseline-mcp-server",
+    "description": {
+      "ja": "Web APIのBaseline状況を返すMCPサーバーです。",
+      "en": "An MCP server that reports the Baseline status of a Web API."
+    },
+    "createdAt": "2025-04-12",
+    "technologies": [
+      "Deno",
+      "Model Context Protocol"
+    ],
+    "articles": [
+      {
+        "title": "Baseline MCP Serverを公開しました！",
+        "url": "https://zenn.dev/yamanoku/articles/baseline-mcp-server"
+      }
+    ]
+  },
+  {
+    "id": "connpass-user-mcp-server",
+    "name": "Connpass User MCP Server",
+    "github": "https://github.com/yamanoku/connpass-user-mcp-server",
+    "description": {
+      "ja": "connpassのユーザーAPIを提供するMCPサーバーです。",
+      "en": "An MCP server for the connpass users API."
+    },
+    "createdAt": "2025-04-20",
+    "technologies": [
+      "TypeScript",
+      "Deno",
+      "Model Context Protocol"
+    ],
+    "articles": []
+  },
+  {
+    "id": "aria-validate-mcp-server",
+    "name": "aria-validate-mcp-server",
+    "github": "https://github.com/yamanoku/aria-validate-mcp-server",
+    "description": {
+      "ja": "ARIAの使い方を検証するMCPサーバーです。",
+      "en": "An MCP server that validates ARIA usage."
+    },
+    "createdAt": "2025-10-15",
+    "technologies": [
+      "TypeScript",
+      "Model Context Protocol",
+      "aria-query"
+    ],
+    "articles": []
+  },
+  {
+    "id": "react-tokyo-fes-2026",
+    "name": "Accessible React UI",
+    "github": "https://github.com/yamanoku/react-tokyo-fes-2026",
+    "description": {
+      "ja": "ReactでアクセシブルなUIを作るためのコンポーネント集サイトです。",
+      "en": "A component gallery for building accessible UI with React."
+    },
+    "createdAt": "2026-01-21",
+    "technologies": [
+      "Astro",
+      "React",
+      "Tailwind CSS",
+      "Cloudflare"
+    ],
+    "articles": []
+  },
+  {
+    "id": "svelte-mini-compiler",
+    "name": "svelte-mini-compiler",
+    "github": "https://github.com/yamanoku/svelte-mini-compiler",
+    "description": {
+      "ja": "Svelteコンパイラの処理の流れをなぞる小さな実装です。",
+      "en": "A small compiler that follows the parse, analyze, and transform steps of Svelte."
+    },
+    "createdAt": "2026-07-10",
+    "technologies": [
+      "TypeScript"
+    ],
+    "articles": []
+  }
+]

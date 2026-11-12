@@ -1,0 +1,59 @@
+---
+import { copy, type WorksLang } from "../../lib/copy";
+import { orderWorks, siteLabel, type WorkItem } from "../../lib/works";
+
+interface Props {
+  lang: WorksLang;
+  works: WorkItem[];
+}
+
+const { lang, works } = Astro.props;
+const text = copy[lang];
+const entries = orderWorks(works, lang);
+---
+
+<p>{text.lead}</p>
+{
+  entries.map(({ work, label }) => (
+    <article
+      id={work.id}
+      class="my-0 grid gap-x-y-rhythm-4 py-y-rhythm-3 sm:grid-cols-[9rem_minmax(0,1fr)] sm:items-baseline"
+    >
+      <time
+        datetime={work.createdAt}
+        class="tabular-nums"
+      >
+        {label}
+      </time>
+      <div class="min-w-0">
+        <h2 class="mt-y-rhythm-1 sm:my-0">{work.name}</h2>
+        <p class="mt-y-rhythm-1 mb-0">{work.description[lang]}</p>
+        {work.technologies.length > 0 && (
+          <ul class="my-y-rhythm-2 flex list-none flex-wrap gap-x-y-rhythm-3 gap-y-y-rhythm-1 p-0">
+            {work.technologies.map((technology) => (
+              <li>{technology}</li>
+            ))}
+          </ul>
+        )}
+        {(work.site || work.github) && (
+          <p class="my-y-rhythm-1 flex flex-wrap gap-x-y-rhythm-3">
+            {work.site && <a href={work.site}>{siteLabel(work.site)}</a>}
+            {work.github && <a href={work.github}>{text.github}</a>}
+          </p>
+        )}
+        {work.articles.length > 0 && (
+          <>
+            <h3 class="mt-y-rhythm-3 mb-0">{text.articles}</h3>
+            <ul class="mt-y-rhythm-1">
+              {work.articles.map((article) => (
+                <li>
+                  <a href={article.url}>{article.title}</a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </div>
+    </article>
+  ))
+}

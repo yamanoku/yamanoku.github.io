@@ -19,6 +19,7 @@ packages:
   - packages/*
   - records
   - records/presentations
+  - works
 
 catalogs:
   site-cli:

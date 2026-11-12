@@ -19,7 +19,9 @@ import {
   validatePodcast,
   validateRecords,
   validateSiteContent,
+  validateWorks,
   validateWritings,
+  type Work,
   type Writing
 } from "./model.js";
 
@@ -27,6 +29,7 @@ export type RepositoryData = {
   siteContent: SiteContent;
   writings: Writing[];
   records: StageRecord[];
+  works: Work[];
   podcast: PodcastData;
 };
 
@@ -54,6 +57,7 @@ export const getDataPaths = (root = getRepositoryRoot()) => ({
   siteContent: resolve(root, "src/data/site-content.json"),
   writings: resolve(root, "src/data/writings.json"),
   records: resolve(root, "records/src/data/records.json"),
+  works: resolve(root, "works/src/data/works.json"),
   podcast: resolve(root, "src/data/ogenkidesukaFm.json")
 });
 
@@ -158,16 +162,18 @@ export async function readRepositoryData(
   root = getRepositoryRoot()
 ): Promise<RepositoryData> {
   const paths = getDataPaths(root);
-  const [siteContent, writings, records, podcast] = await Promise.all([
+  const [siteContent, writings, records, works, podcast] = await Promise.all([
     readJson(paths.siteContent),
     readJson(paths.writings),
     readJson(paths.records),
+    readJson(paths.works),
     readJson(paths.podcast)
   ]);
   return {
     siteContent: validateSiteContent(siteContent),
     writings: validateWritings(writings),
     records: validateRecords(records),
+    works: validateWorks(works),
     podcast: validatePodcast(podcast)
   };
 }

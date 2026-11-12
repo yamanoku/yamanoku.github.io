@@ -383,7 +383,8 @@ const GROUP_ALIAS: Record<string, string> = {
   writing: "writings",
   stage: "stages",
   link: "links",
-  section: "sections"
+  section: "sections",
+  work: "works"
 };
 
 const VERB_ALIAS: Record<string, string> = {
