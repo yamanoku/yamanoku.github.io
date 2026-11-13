@@ -148,11 +148,13 @@ h1 {
   margin-block: var(--y-typography-margin);
   font-size: var(--y-h1-size);
   line-height: var(--y-rhythm-5);
+  text-wrap: balance;
 }
 h2 {
   margin-block: var(--y-typography-margin);
   font-size: var(--y-h2-size);
   line-height: var(--y-rhythm-5);
+  text-wrap: balance;
 }
 h3 {
   margin-block: var(--y-typography-margin);
@@ -255,9 +257,8 @@ hr {
   margin-block: var(--y-block-margin);
   display: block;
   width: 100%;
-  height: 1px;
   border: 0;
-  background-color: var(--y-hr-border-color);
+  border-block-start: 1px solid var(--y-hr-border-color);
 }
 table {
   display: block;

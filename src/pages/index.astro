@@ -18,7 +18,7 @@ const sections = siteContent.sections;
 
 <BaseLayout title={t("page.home")}>
   <main id="main">
-    <h1>yamanoku.net</h1>
+    <h1 id="content" tabindex="-1">yamanoku.net</h1>
     {sections.basic && <BasicInfoSection />}
     {sections.openSource && <OpenSourceActivitySection />}
     {sections.presentations && <PresentationsSection />}

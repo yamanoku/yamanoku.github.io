@@ -7,11 +7,19 @@ const lang = getLanguageFromURL(Astro.url.pathname);
 const t = useTranslations(Astro);
 ---
 
-<section id="presentations" aria-labelledby="presentations_heading">
+<section id="presentations">
   <h2 id="presentations_heading">{t("heading.presentations.title")}</h2>
   {lang === "en" && <em>Sorry, Japanese text only</em>}
   <h3 id="presentations-stage">{t("heading.presentations.stage")}</h3>
-  <GlobalListComponent list={listStage} />
+  {
+    lang === "en" ? (
+      <div lang="ja">
+        <GlobalListComponent list={listStage} />
+      </div>
+    ) : (
+      <GlobalListComponent list={listStage} />
+    )
+  }
   {
     lang === "en" ? (
       <p>
@@ -27,7 +35,15 @@ const t = useTranslations(Astro);
     )
   }
   <h3 id="presentations-write">{t("heading.presentations.write")}</h3>
-  <GlobalListComponent list={listWrite} />
+  {
+    lang === "en" ? (
+      <div lang="ja">
+        <GlobalListComponent list={listWrite} />
+      </div>
+    ) : (
+      <GlobalListComponent list={listWrite} />
+    )
+  }
   {
     lang === "en" ? (
       <p>

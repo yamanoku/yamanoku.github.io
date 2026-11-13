@@ -2,11 +2,23 @@
 import BaseHead from "../components/BaseHead.astro";
 import GlobalFooter from "../components/global/GlobalFooter.astro";
 import GlobalHeader from "../components/global/GlobalHeader.astro";
+import type { LanguageKeys } from "../i18n/translation-checkers";
+import {
+  getLanguageFromURL,
+  useTranslations,
+  useTranslationsForLang
+} from "../i18n/util";
 
-import { getLanguageFromURL } from "../i18n/util";
+interface Props {
+  title: string;
+  lang?: string;
+}
 
-const lang = getLanguageFromURL(Astro.url.pathname);
-const pageTitle: string = Astro.props.title;
+const { title: pageTitle, lang: langProp } = Astro.props;
+const lang = langProp ?? getLanguageFromURL(Astro.url.pathname);
+const t = langProp
+  ? useTranslationsForLang(lang as LanguageKeys)
+  : useTranslations(Astro);
 ---
 
 <!doctype html>
@@ -15,6 +27,11 @@ const pageTitle: string = Astro.props.title;
     <BaseHead title={`${pageTitle} | yamanoku.net`} />
   </head>
   <body>
+    <a
+      href="#content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:start-0 focus:z-10 focus:bg-y-body-background focus:text-y-body-text focus:p-y-rhythm-2"
+      >{t("skip.to-content")}</a
+    >
     <GlobalHeader />
     <slot />
     <GlobalFooter />

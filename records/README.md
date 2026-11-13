@@ -35,7 +35,7 @@ pnpm site -- stages add ... --write
 pnpm --filter records dev
 
 # ビルド（出力: records/dist）
-# astro build（記録ページ）→ scripts/build-presentations.mjs（発表資料を records/dist/<name>/ へ出力）の2段で実行される
+# 記録リンクの favicon をビルド時に同一オリジンへ取得 → astro build（記録ページ）→ scripts/build-presentations.mjs（発表資料を records/dist/<name>/ へ出力）
 pnpm records:build
 
 # プレビュー

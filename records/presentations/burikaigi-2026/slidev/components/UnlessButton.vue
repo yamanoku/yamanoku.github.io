@@ -561,4 +561,54 @@ const explosionStyle = (i) => ({
   50% { transform: translate(5px, -5px) rotate(5deg); }
   75% { transform: translate(-5px, -5px) rotate(-5deg); }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .particle,
+  .particle::before,
+  .particle::after,
+  .ring,
+  .ring::before,
+  .ring::after,
+  .rainbow-border,
+  .rainbow-border::before,
+  .rainbow-border::after,
+  .glow-effect,
+  .glow-effect::before,
+  .glow-effect::after,
+  .button-body,
+  .button-body::before,
+  .button-body::after,
+  .sparkle,
+  .sparkle::before,
+  .sparkle::after,
+  .text-main,
+  .text-main::before,
+  .text-main::after,
+  .text-sub,
+  .text-sub::before,
+  .text-sub::after,
+  .text-urgent,
+  .text-urgent::before,
+  .text-urgent::after,
+  .arrow,
+  .arrow::before,
+  .arrow::after,
+  .corner,
+  .corner::before,
+  .corner::after,
+  .bubble,
+  .bubble::before,
+  .bubble::after,
+  .explosion-particle,
+  .explosion-particle::before,
+  .explosion-particle::after,
+  .divine-message,
+  .divine-message::before,
+  .divine-message::after,
+  .message-text,
+  .message-text::before,
+  .message-text::after {
+    animation: none;
+  }
+}
 </style>

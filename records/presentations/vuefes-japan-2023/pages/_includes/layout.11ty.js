@@ -1,8 +1,8 @@
 export function render(data) {
   const ogpImage =
     data.lang === "ja"
-      ? `<meta name="og:image" content="https://records.yamanoku.net/vuefes-japan-2023/images/ogp-image-ja.png">`
-      : `<meta name="og:image" content="https://records.yamanoku.net/vuefes-japan-2023/images/ogp-image-en.png">`;
+      ? `<meta property="og:image" content="https://records.yamanoku.net/vuefes-japan-2023/images/ogp-image-ja.png">`
+      : `<meta property="og:image" content="https://records.yamanoku.net/vuefes-japan-2023/images/ogp-image-en.png">`;
   return `
     <!doctype html>
     <html lang="${data.lang}">
@@ -10,8 +10,8 @@ export function render(data) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${data.title}</title>
-        <meta name="og:title" content="${data.title}">
-        <meta name="og:description" content="${data.description}">
+        <meta property="og:title" content="${data.title}">
+        <meta property="og:description" content="${data.description}">
         ${ogpImage}
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@yamanoku">
