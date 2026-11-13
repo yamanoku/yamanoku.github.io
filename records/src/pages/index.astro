@@ -22,9 +22,12 @@ const now = new Date();
   </p>
   <YearNav years={years} />
   {
-    recordsByYear.map(([year, yearRecords]) => (
+    recordsByYear.map(([year, yearRecords], index) => (
       <section
-        class="scroll-mt-[100px] m-0 mbe-[5lh]"
+        class:list={[
+          "scroll-mt-[100px] m-0 mbe-[5lh]",
+          { "year-section-deferred": index > 0 }
+        ]}
         id={`year-${year}`}
       >
         <h2

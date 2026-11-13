@@ -148,11 +148,13 @@ h1 {
   margin-block: var(--y-typography-margin);
   font-size: var(--y-h1-size);
   line-height: var(--y-rhythm-5);
+  text-wrap: balance;
 }
 h2 {
   margin-block: var(--y-typography-margin);
   font-size: var(--y-h2-size);
   line-height: var(--y-rhythm-5);
+  text-wrap: balance;
 }
 h3 {
   margin-block: var(--y-typography-margin);
