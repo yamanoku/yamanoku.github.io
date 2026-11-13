@@ -6,12 +6,19 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 
 :root {
-  --y-description-border-color: var(--y-white-medium);
-}
+  --y-description-border-light: var(--y-white-medium);
+  --y-description-border-dark: var(--y-white-low);
+  --y-description-border-color: var(--y-description-border-light);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --y-description-border-color: var(--y-white-low);
+  @media (prefers-color-scheme: dark) {
+    --y-description-border-color: var(--y-description-border-dark);
+  }
+
+  @supports (color: light-dark(white, black)) {
+    --y-description-border-color: light-dark(
+      var(--y-description-border-light),
+      var(--y-description-border-dark)
+    );
   }
 }
 
@@ -42,6 +49,11 @@
 @layer components {
   html[lang="ja"] main {
     max-inline-size: 100%;
+  }
+
+  .year-section-deferred {
+    content-visibility: auto;
+    contain-intrinsic-block-size: auto 40rem;
   }
 }
 

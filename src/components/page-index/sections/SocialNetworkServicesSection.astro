@@ -10,10 +10,7 @@ const socialLinks = siteContent.links.social
   .map((link) => ({ title: link.title[lang], url: link.url }));
 ---
 
-<section
-  id="social-network-services"
-  aria-labelledby="social-network-services_heading"
->
+<section id="social-network-services">
   <h2 id="social-network-services_heading">{t("heading.sns")}</h2>
   <GlobalListComponent list={socialLinks} />
 </section>

@@ -78,7 +78,8 @@
       "daily-journal.description-after": "を活用し、日々の出来事や気になるニュースを日報という形でまとめています。毎日更新ではなく、気が向いたら更新しています。",
       "daily-journal.japanese-only": "",
       "multilingual": "多言語ページ",
-      "works.github": "GitHub"
+      "works.github": "GitHub",
+      "skip.to-content": "本文へスキップ"
     },
     "en": {
       "meta.description": "Okuto Oyama Portfolio Site",
@@ -117,7 +118,8 @@
       "daily-journal.description-after": " to compile daily events and interesting news in the form of a journal. Rather than updating daily, I post whenever inspiration strikes.",
       "daily-journal.japanese-only": "Sorry, Japanese text only",
       "multilingual": "Multilingual Page",
-      "works.github": "GitHub"
+      "works.github": "GitHub",
+      "skip.to-content": "Skip to content"
     }
   },
   "journal": {

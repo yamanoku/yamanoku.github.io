@@ -5,6 +5,8 @@ dist/
 *.log
 .astro/
 records/presentations/*/docs/
+records/public/favicons/
+.playwright-mcp/
 
 # ignore top-level vscode settings
 /.vscode/settings.json

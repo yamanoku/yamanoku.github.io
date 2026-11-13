@@ -175,8 +175,9 @@ div + div {
   border-radius: 6px;
 }
 
-.search-input:focus {
-  outline: none;
+.search-input:focus-visible {
+  outline: 3px solid #4a90d9;
+  outline-offset: 2px;
   border-color: #4a90d9;
 }
 
