@@ -255,9 +255,8 @@ hr {
   margin-block: var(--y-block-margin);
   display: block;
   width: 100%;
-  height: 1px;
   border: 0;
-  background-color: var(--y-hr-border-color);
+  border-block-start: 1px solid var(--y-hr-border-color);
 }
 table {
   display: block;

@@ -51,6 +51,7 @@ export function configureEleventy(eleventyConfig, options = {}) {
   eleventyConfig.addJavaScriptFunction("baseStyleTags", function () {
     const root = this.rootPath();
     return `
+      <meta name="color-scheme" content="light dark" />
       <link rel="stylesheet" href="${root}yama-normalize.css">
       <link rel="stylesheet" href="${root}hljs-a11y-dark.css">
       <style>code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:1em;}pre code.hljs{padding:var(--y-rhythm-3)}.footnote-item > p{margin:0;}pre.mermaid{background:transparent;overflow:auto;text-align:left}</style>
