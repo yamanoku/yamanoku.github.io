@@ -17,8 +17,6 @@ export type WorkItem = {
   site?: string;
 };
 
-export const monthKey = (iso: string) => iso.slice(0, 7);
-
 export const monthLabel = (iso: string, lang: "ja" | "en") => {
   const [year, month] = iso.split("-").map(Number);
   return new Intl.DateTimeFormat(lang === "ja" ? "ja-JP" : "en", {
@@ -39,11 +37,7 @@ export const siteLabel = (url: string) => {
 export const orderWorks = (works: WorkItem[], lang: "ja" | "en") =>
   [...works]
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
-    .map((work, index, ordered) => {
-      const month = monthKey(work.createdAt);
-      const previous = index > 0 ? monthKey(ordered[index - 1].createdAt) : "";
-      return {
-        work,
-        label: monthLabel(work.createdAt, lang)
-      };
-    });
+    .map((work) => ({
+      work,
+      label: monthLabel(work.createdAt, lang)
+    }));
