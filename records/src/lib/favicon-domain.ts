@@ -1,10 +1,14 @@
-import { readFileSync } from "node:fs";
 import { domainToASCII, domainToUnicode } from "node:url";
+
+import suffixList from "./public-suffix-rules.json" with { type: "json" };
 
 const SAFE_DOMAIN =
   /^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)+$/;
 
-const RULES = loadRules();
+// Multi-label, wildcard, and exception rules from the Public Suffix List,
+// including private suffixes. Single-label rules are omitted and use "*".
+// Source: https://publicsuffix.org/list/public_suffix_list.dat (MPL-2.0).
+const RULES = loadRules(suffixList.rules);
 
 // eTLD+1. Rules are the multi-label, wildcard, and exception entries from
 // the Public Suffix List, including private suffixes such as vercel.app.
@@ -44,13 +48,9 @@ export function faviconPublicPath(hostname: string): string | null {
   return `/favicons/${domain}.png`;
 }
 
-function loadRules(): Set<string> {
-  const text = readFileSync(
-    new URL("./public-suffix-rules.txt", import.meta.url),
-    "utf8"
-  );
+function loadRules(lines: readonly string[]): Set<string> {
   const rules = new Set<string>();
-  for (const line of text.split("\n")) {
+  for (const line of lines) {
     if (line.length === 0 || line.startsWith("#")) continue;
     const exception = line.startsWith("!");
     const wildcard = line.startsWith("*.");
