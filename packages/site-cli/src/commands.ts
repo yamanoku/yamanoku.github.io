@@ -12,25 +12,30 @@ import {
   type SectionName,
   validateRecords,
   validateSiteContent,
+  validateWorks,
   validateWritings
 } from "./model.js";
 import {
   addJournalYear,
   addLink,
   addStage,
+  addWork,
   addWriting,
+  pairArticles,
   pairResources,
   parseRubyParts,
   removeJournalYear,
   removeLink,
   removeStage,
   removeTranslation,
+  removeWork,
   replaceWriting,
   setProfile,
   setSection,
   setTranslation,
   updateLink,
-  updateStage
+  updateStage,
+  updateWork
 } from "./mutations.js";
 import { fetchPodcast } from "./podcast.js";
 import {
@@ -135,6 +140,14 @@ const readRecords = async () => {
   return {
     paths,
     records: validateRecords(await readJson(paths.records))
+  };
+};
+
+const readWorks = async () => {
+  const paths = getDataPaths();
+  return {
+    paths,
+    works: validateWorks(await readJson(paths.works))
   };
 };
 
@@ -838,6 +851,321 @@ const linkCommand = define({
   }
 });
 
+const workDetailArgs = {
+  technology: {
+    type: "string" as const,
+    multiple: true as const,
+    description: "使用技術。複数あるときは繰り返す。指定すると一覧を置き換える"
+  },
+  articleTitle: {
+    type: "string" as const,
+    multiple: true as const,
+    description: "関連記事のタイトル。URLと同じ件数、同じ順で繰り返す"
+  },
+  articleUrl: {
+    type: "string" as const,
+    multiple: true as const,
+    description: "関連記事のURL。タイトルと同じ件数、同じ順で繰り返す"
+  }
+};
+
+const appendWorkDetails = (
+  args: string[],
+  technologies: string[] | undefined,
+  articleTitles: string[] | undefined,
+  articleUrls: string[] | undefined
+) => {
+  for (const technology of technologies ?? []) {
+    args.push("--technology", technology);
+  }
+  for (const title of articleTitles ?? []) {
+    args.push("--article-title", title);
+  }
+  for (const url of articleUrls ?? []) {
+    args.push("--article-url", url);
+  }
+};
+
+const workListCommand = define({
+  name: "list",
+  description: "製作実績を作った順に出す",
+  examples: `製作実績を見る
+  site works list`,
+  run: async () => {
+    const works = (await readWorks()).works;
+    presentDocument(works, { works });
+  }
+});
+
+const workAddCommand = define({
+  name: "add",
+  description: "製作実績を追加する",
+  toKebab: true,
+  examples: `製作実績を追加する
+  site works add --id example --name "example" --github "https://github.com/yamanoku/example" --site "https://example.com" --description-ja "概要" --description-en "Summary" --created 2026-01-01 --technology TypeScript --article-title "記事" --article-url "https://example.com/article" --write`,
+  args: {
+    id: {
+      type: "string",
+      required: true,
+      description: "安定した識別子。完全一致"
+    },
+    name: { type: "string", required: true, description: "プロジェクト名" },
+    github: {
+      type: "string",
+      description: "GitHubリポジトリのURL。省略できる"
+    },
+    site: {
+      type: "string",
+      description: "プロジェクトサイトのURL。省略できる"
+    },
+    descriptionJa: {
+      type: "string",
+      required: true,
+      description: "日本語の概要"
+    },
+    descriptionEn: {
+      type: "string",
+      required: true,
+      description: "英語の概要"
+    },
+    created: {
+      type: "string",
+      required: true,
+      description: "作った日。YYYY-MM-DD。並び順に使う"
+    },
+    ...workDetailArgs
+  },
+  run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
+    const { paths, works } = await readWorks();
+    const next = addWork(works, {
+      id: ctx.values.id,
+      name: ctx.values.name,
+      description: {
+        ja: ctx.values.descriptionJa,
+        en: ctx.values.descriptionEn
+      },
+      createdAt: ctx.values.created,
+      ...(ctx.values.github ? { github: ctx.values.github } : {}),
+      ...(ctx.values.site ? { site: ctx.values.site } : {}),
+      technologies: ctx.values.technology ?? [],
+      articles: pairArticles(
+        ctx.values.articleTitle ?? [],
+        ctx.values.articleUrl ?? []
+      )
+    });
+    const result = await writeJson(paths.works, next, { write });
+    const nextArgs = [
+      "works",
+      "add",
+      "--id",
+      ctx.values.id,
+      "--name",
+      ctx.values.name,
+      "--description-ja",
+      ctx.values.descriptionJa,
+      "--description-en",
+      ctx.values.descriptionEn,
+      "--created",
+      ctx.values.created
+    ];
+    if (ctx.values.github) nextArgs.push("--github", ctx.values.github);
+    if (ctx.values.site) nextArgs.push("--site", ctx.values.site);
+    appendWorkDetails(
+      nextArgs,
+      ctx.values.technology,
+      ctx.values.articleTitle,
+      ctx.values.articleUrl
+    );
+    nextArgs.push("--write");
+    presentMutation({
+      resource: "製作実績",
+      id: ctx.values.id,
+      outcome: "added",
+      next: nextArgs,
+      result
+    });
+  }
+});
+
+const workUpdateCommand = define({
+  name: "update",
+  description: "idが一致する製作実績を更新する",
+  toKebab: true,
+  examples: `使用技術と関連記事を置き換える
+  site works update example --technology Vue.js --technology TypeScript --article-title "記事" --article-url "https://example.com/article" --write`,
+  args: {
+    id: {
+      type: "positional",
+      required: true,
+      description: "現在の識別子。完全一致"
+    },
+    newId: { type: "string", description: "新しい識別子" },
+    name: { type: "string", description: "新しいプロジェクト名" },
+    github: {
+      type: "string",
+      description: "GitHubリポジトリのURL。空文字で消す"
+    },
+    site: {
+      type: "string",
+      description: "プロジェクトサイトのURL。空文字で消す"
+    },
+    descriptionJa: { type: "string", description: "新しい日本語の概要" },
+    descriptionEn: { type: "string", description: "新しい英語の概要" },
+    created: { type: "string", description: "新しい作成日。YYYY-MM-DD" },
+    ...workDetailArgs,
+    clearTechnologies: {
+      type: "boolean",
+      description: "使用技術を空にする"
+    },
+    clearArticles: {
+      type: "boolean",
+      description: "関連記事を空にする"
+    }
+  },
+  run: async (ctx) => {
+    if (
+      (ctx.values.descriptionJa === undefined) !==
+      (ctx.values.descriptionEn === undefined)
+    ) {
+      throw usage(
+        "--description-ja と --description-en は同時に指定してください。"
+      );
+    }
+    const technologiesSpecified = ctx.values.technology !== undefined;
+    const articlesSpecified =
+      ctx.values.articleTitle !== undefined ||
+      ctx.values.articleUrl !== undefined;
+    if (ctx.values.clearTechnologies === true && technologiesSpecified) {
+      throw usage("--clear-technologies と --technology は同時に使えません。");
+    }
+    if (ctx.values.clearArticles === true && articlesSpecified) {
+      throw usage(
+        "--clear-articles と --article-title、--article-url は同時に使えません。"
+      );
+    }
+    const write = consentToWrite(ctx.values);
+    const { paths, works } = await readWorks();
+    const next = updateWork(works, ctx.values.id, {
+      ...(ctx.values.newId === undefined ? {} : { id: ctx.values.newId }),
+      ...(ctx.values.name === undefined ? {} : { name: ctx.values.name }),
+      ...(ctx.values.github === undefined
+        ? {}
+        : { github: ctx.values.github === "" ? null : ctx.values.github }),
+      ...(ctx.values.site === undefined
+        ? {}
+        : { site: ctx.values.site === "" ? null : ctx.values.site }),
+      ...(ctx.values.descriptionJa === undefined
+        ? {}
+        : {
+            description: {
+              ja: ctx.values.descriptionJa,
+              en: ctx.values.descriptionEn as string
+            }
+          }),
+      ...(ctx.values.created === undefined
+        ? {}
+        : { createdAt: ctx.values.created }),
+      ...(ctx.values.clearTechnologies === true
+        ? { technologies: [] }
+        : technologiesSpecified
+          ? { technologies: ctx.values.technology }
+          : {}),
+      ...(ctx.values.clearArticles === true
+        ? { articles: [] }
+        : articlesSpecified
+          ? {
+              articles: pairArticles(
+                ctx.values.articleTitle ?? [],
+                ctx.values.articleUrl ?? []
+              )
+            }
+          : {})
+    });
+    const result = await writeJson(paths.works, next, { write });
+    const nextArgs = ["works", "update", ctx.values.id];
+    if (ctx.values.newId) nextArgs.push("--new-id", ctx.values.newId);
+    if (ctx.values.name !== undefined) nextArgs.push("--name", ctx.values.name);
+    if (ctx.values.github !== undefined)
+      nextArgs.push("--github", ctx.values.github);
+    if (ctx.values.site !== undefined) nextArgs.push("--site", ctx.values.site);
+    if (
+      ctx.values.descriptionJa !== undefined &&
+      ctx.values.descriptionEn !== undefined
+    ) {
+      nextArgs.push(
+        "--description-ja",
+        ctx.values.descriptionJa,
+        "--description-en",
+        ctx.values.descriptionEn
+      );
+    }
+    if (ctx.values.created !== undefined) {
+      nextArgs.push("--created", ctx.values.created);
+    }
+    if (ctx.values.clearTechnologies === true) {
+      nextArgs.push("--clear-technologies");
+    } else {
+      appendWorkDetails(nextArgs, ctx.values.technology, undefined, undefined);
+    }
+    if (ctx.values.clearArticles === true) {
+      nextArgs.push("--clear-articles");
+    } else {
+      appendWorkDetails(
+        nextArgs,
+        undefined,
+        ctx.values.articleTitle,
+        ctx.values.articleUrl
+      );
+    }
+    nextArgs.push("--write");
+    presentMutation({
+      resource: "製作実績",
+      id: ctx.values.newId ?? ctx.values.id,
+      outcome: "updated",
+      next: nextArgs,
+      result
+    });
+  }
+});
+
+const workRemoveCommand = define({
+  name: "remove",
+  description: "idが一致する製作実績を外す",
+  examples: `製作実績を外す
+  site works remove example --write`,
+  args: {
+    id: { type: "positional", required: true, description: "識別子。完全一致" }
+  },
+  run: async (ctx) => {
+    const write = consentToWrite(ctx.values);
+    const { paths, works } = await readWorks();
+    const next = removeWork(works, ctx.values.id);
+    const result = await writeJson(paths.works, next, { write });
+    presentMutation({
+      resource: "製作実績",
+      id: ctx.values.id,
+      outcome: "removed",
+      next: ["works", "remove", ctx.values.id, "--write"],
+      result
+    });
+  }
+});
+
+const workCommand = define({
+  name: "works",
+  description: "製作実績を更新する",
+  run: groupHelp,
+  subCommands: {
+    add: workAddCommand,
+    update: workUpdateCommand,
+    remove: workRemoveCommand,
+    list: workListCommand,
+    ls: asAlias(workListCommand),
+    rm: asAlias(workRemoveCommand)
+  }
+});
+
 const runJournalYear =
   (action: "add" | "remove") => async (ctx: { values: { year?: number } }) => {
     if (ctx.values.year === undefined) throw usage("--year が必要です。");
@@ -1132,11 +1460,12 @@ const validateCommand = define({
   run: async () => {
     const data = await validateRepository();
     presentLine(
-      `検証成功: 執筆${data.writings.length}件、登壇${data.records.length}件、Podcast ${data.podcast.episodes.length}件`,
+      `検証成功: 執筆${data.writings.length}件、登壇${data.records.length}件、製作実績${data.works.length}件、Podcast ${data.podcast.episodes.length}件`,
       {
         outcome: "validated",
         writings: data.writings.length,
         stages: data.records.length,
+        works: data.works.length,
         episodes: data.podcast.episodes.length
       }
     );
@@ -1196,7 +1525,8 @@ const runProcess = (command: string, args: string[]): Promise<void> =>
 
 const checkCommand = define({
   name: "check",
-  description: "データ検証、lint、本体とrecordsのビルド、HTML検証を実行する",
+  description:
+    "データ検証、lint、本体とrecordsとworksのビルド、HTML検証を実行する",
   examples: `公開前の確認を実行する
   site check`,
   run: async (ctx) => {
@@ -1209,6 +1539,7 @@ const checkCommand = define({
     await runProcess("pnpm", ["ox:ci"]);
     await runProcess("pnpm", ["build"]);
     await runProcess("pnpm", ["--filter", "records", "build"]);
+    await runProcess("pnpm", ["--filter", "works", "build"]);
     await runProcess("pnpm", ["markuplint"]);
     console.error("✓ 確認しました");
   }
@@ -1272,6 +1603,8 @@ export const rootCommand = define({
     profile: profileCommand,
     links: linkCommand,
     link: asAlias(linkCommand),
+    works: workCommand,
+    work: asAlias(workCommand),
     journal: journalCommand,
     i18n: i18nCommand,
     sections: sectionCommand,

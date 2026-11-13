@@ -38,7 +38,7 @@ pnpm site -- writings add \
 
 未知のコマンドと未知のオプションは終了コード 2 です。近い候補が1つあるときだけ提案します。データの不整合や対象が見つからない場合は終了コード 1 です。
 
-単数のグループ名（`writing`、`stage`、`link`、`section`）と、`ls`（`list`）、`rm`（`remove`）はエイリアスです。ヘルプと例は正規の名前だけを教えます。
+単数のグループ名（`writing`、`stage`、`link`、`work`、`section`）と、`ls`（`list`）、`rm`（`remove`）はエイリアスです。ヘルプと例は正規の名前だけを教えます。
 
 共通オプションはどの階層でも使えます。
 
@@ -125,6 +125,29 @@ pnpm site -- links list social
 
 `rel-me` へ追加すると、デフォルトでは一覧に出さず、`rel=me` には出します。`rel-me` の更新と削除は `relMe: true` のリンクだけが対象です。
 
+### 製作実績
+
+識別子は `--id` で、完全一致です。保存は作った日の古い順です。`add` と、作成日を変える `update` は、その順へ並べ直します。同じ日の項目は、既存の並びを保ったまま新しいものを後ろに置きます。`--github` と `--site` はどちらも省略できます。`update` で空文字を渡すとその項目を消します。使用技術は `--technology`、関連記事は `--article-title` と `--article-url` を同じ件数・同じ順で繰り返します。`update` でこれらを指定すると、その一覧を置き換えます。空にするときは `--clear-technologies` または `--clear-articles` です。
+
+```bash
+pnpm site -- works list
+pnpm site -- works add \
+  --id example --name "example" \
+  --github "https://github.com/yamanoku/example" \
+  --site "https://example.com" \
+  --description-ja "概要" --description-en "Summary" \
+  --created 2026-01-01 \
+  --technology TypeScript --technology Vite \
+  --article-title "記事" --article-url "https://example.com/article" \
+  --write
+pnpm site -- works update example \
+  --description-ja "新しい概要" --description-en "New summary" --write
+pnpm site -- works update example --clear-articles --write
+pnpm site -- works remove example --write
+```
+
+`--description-ja` と `--description-en` は同時に指定します。`--github` は github.com のURLだけを受け付けます。保存先は `works/src/data/works.json` です。ポートフォリオには新しい3件だけを出し、全文は [works.yamanoku.net](https://works.yamanoku.net) で表示します。セクションの表示は `sections enable works` です。
+
 ### 日報、翻訳、セクション
 
 ```bash
@@ -158,11 +181,12 @@ RSSを取得して最新5件を検証し、`src/data/ogenkidesukaFm.json` へ保
 - `src/data/site-content.json`: プロフィール、翻訳、日報、リンク、セクション表示
 - `src/data/writings.json`: 表示する執筆5件
 - `records/src/data/records.json`: 全登壇記録
+- `works/src/data/works.json`: 全製作実績
 - `src/data/ogenkidesukaFm.json`: Podcast同期結果
 
 これらはCLIが管理する正規データです。通常の情報更新では直接編集せず、CLIに必要な操作がなければ先にコマンドを追加してください。
 
-`validate` は JSON形式、URL、日時、並び順、重複、5件制約、翻訳の一致をオフラインで確認します。`check` はさらに oxlint/oxfmt、本体ビルド、recordsビルド、Markuplint を順に実行します。`check` は子プロセスの出力をそのまま渡すため、`--json` は使えません。子プロセスの終了コードを、このCLIの終了コードにします。
+`validate` は JSON形式、URL、日時、並び順、重複、5件制約、翻訳の一致をオフラインで確認します。`check` はさらに oxlint/oxfmt、本体ビルド、recordsビルド、worksビルド、Markuplint を順に実行します。`check` は子プロセスの出力をそのまま渡すため、`--json` は使えません。子プロセスの終了コードを、このCLIの終了コードにします。
 
 保存は対象ディレクトリの一時ファイルへ書き、rename で置き換えます。途中で止まっても、途中まで書いたファイルは残りません。
 

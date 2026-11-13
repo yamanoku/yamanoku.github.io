@@ -10,6 +10,7 @@ export const PROFILE_FIELDS = [
 
 export const SECTION_NAMES = [
   "basic",
+  "works",
   "openSource",
   "presentations",
   "podcast",
@@ -67,6 +68,22 @@ export type ContentLink = {
   id: string;
   title: LocalizedText;
   url: string;
+};
+
+export type WorkArticle = {
+  title: string;
+  url: string;
+};
+
+export type Work = {
+  id: string;
+  name: string;
+  description: LocalizedText;
+  createdAt: string;
+  technologies: string[];
+  articles: WorkArticle[];
+  github?: string;
+  site?: string;
 };
 
 export type SiteContent = {
@@ -139,6 +156,12 @@ const isHttpUrl = (value: unknown): value is string => {
   }
 };
 
+const isGitHubUrl = (value: unknown): value is string => {
+  if (!isHttpUrl(value)) return false;
+  const hostname = new URL(value).hostname;
+  return hostname === "github.com" || hostname === "www.github.com";
+};
+
 const isIsoDatetime = (value: unknown): value is string =>
   typeof value === "string" &&
   /^\d{4}-\d{2}-\d{2}T/.test(value) &&
@@ -178,6 +201,97 @@ const validateLocalizedText = (
     addStringIssue(issues, value.en, `${path}.en`)
   );
 };
+
+const validateWork = (
+  value: unknown,
+  index: number,
+  issues: string[]
+): value is Work => {
+  const path = `works[${index}]`;
+  if (!isObject(value)) {
+    issues.push(`${path} はオブジェクトにしてください`);
+    return false;
+  }
+  addStringIssue(issues, value.id, `${path}.id`);
+  addStringIssue(issues, value.name, `${path}.name`);
+  if (value.github !== undefined && !isGitHubUrl(value.github))
+    issues.push(`${path}.github はgithub.comのHTTP(S) URLにしてください`);
+  if (value.site !== undefined && !isHttpUrl(value.site))
+    issues.push(`${path}.site はHTTP(S) URLにしてください`);
+  validateLocalizedText(value.description, `${path}.description`, issues);
+  if (!isDate(value.createdAt))
+    issues.push(`${path}.createdAt はYYYY-MM-DDにしてください`);
+  if (!Array.isArray(value.technologies)) {
+    issues.push(`${path}.technologies は配列にしてください`);
+  } else {
+    value.technologies.forEach((technology, technologyIndex) => {
+      addStringIssue(
+        issues,
+        technology,
+        `${path}.technologies[${technologyIndex}]`
+      );
+    });
+    const names = value.technologies.filter(
+      (technology): technology is string => typeof technology === "string"
+    );
+    if (new Set(names).size !== names.length)
+      issues.push(`${path}.technologies が重複しています`);
+  }
+  if (!Array.isArray(value.articles)) {
+    issues.push(`${path}.articles は配列にしてください`);
+  } else {
+    value.articles.forEach((article, articleIndex) => {
+      const articlePath = `${path}.articles[${articleIndex}]`;
+      if (!isObject(article)) {
+        issues.push(`${articlePath} はオブジェクトにしてください`);
+        return;
+      }
+      addStringIssue(issues, article.title, `${articlePath}.title`);
+      if (!isHttpUrl(article.url))
+        issues.push(`${articlePath}.url はHTTP(S) URLにしてください`);
+    });
+    const urls = value.articles
+      .filter(isObject)
+      .map((article) => article.url)
+      .filter((url): url is string => typeof url === "string");
+    if (new Set(urls).size !== urls.length)
+      issues.push(`${path}.articles のURLが重複しています`);
+  }
+  return true;
+};
+
+export function validateWorks(value: unknown): Work[] {
+  const issues: string[] = [];
+  if (!Array.isArray(value)) {
+    throw new DataValidationError(["works は配列にしてください"]);
+  }
+  value.forEach((work, index) => {
+    validateWork(work, index, issues);
+  });
+  const ids = value
+    .filter(isObject)
+    .map((work) => work.id)
+    .filter((id): id is string => typeof id === "string");
+  if (new Set(ids).size !== ids.length) {
+    issues.push("works のidが重複しています");
+  }
+  for (let index = 1; index < value.length; index++) {
+    const previous = isObject(value[index - 1])
+      ? value[index - 1].createdAt
+      : undefined;
+    const current = isObject(value[index]) ? value[index].createdAt : undefined;
+    if (
+      typeof previous === "string" &&
+      typeof current === "string" &&
+      previous > current
+    ) {
+      issues.push("works は作った順にしてください");
+      break;
+    }
+  }
+  if (issues.length > 0) throw new DataValidationError(issues);
+  return value as Work[];
+}
 
 const validateLink = (
   value: unknown,
@@ -323,6 +437,10 @@ export function validateSiteContent(value: unknown): SiteContent {
       if (new Set(ids).size !== ids.length)
         issues.push(`links.${group} のidが重複しています`);
     }
+  }
+
+  if ("works" in value) {
+    issues.push("works は works/src/data/works.json に置いてください");
   }
 
   if (!isObject(value.sections)) {
