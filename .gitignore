@@ -5,6 +5,7 @@ dist/
 *.log
 .astro/
 records/presentations/*/docs/
+records/public/favicons/
 
 # ignore top-level vscode settings
 /.vscode/settings.json

@@ -238,6 +238,9 @@ catalogs:
     tailwindcss:
       specifier: 4.3.5
       version: 4.3.5
+    tldts:
+      specifier: 7.5.1
+      version: 7.5.1
     vite:
       specifier: 8.3.7
       version: 8.3.7
@@ -317,6 +320,9 @@ importers:
       tailwindcss:
         specifier: catalog:website
         version: 4.3.5
+      tldts:
+        specifier: catalog:website
+        version: 7.5.1
       vite:
         specifier: catalog:website
         version: 8.3.7(@types/node@26.6.6)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)
@@ -5949,9 +5955,6 @@ packages:
   parse-srcset@1.0.2:
     resolution: {integrity: sha512-/2qh0lav6CmI15FzA3i/2Bzk2zCgQhGMkvhOhKNcBVQ1ldgpbfiNTVslmooUmWJcADi1f1kIeynbDRVzNlfR6Q==}
 
-  parse5@8.0.1:
-    resolution: {integrity: sha512-z1e/HMG90obSGeidlli3hj7cbocou0/wa5HacvI3ASx34PecNjNQeaHNo5WIZpWofN9kgkqV1q5YvXe3F0FoPw==}
-
   parse5@8.1.1:
     resolution: {integrity: sha512-EcR/6WDcU7b2N3vQSxKALCk9lXGtUMQxXio008OEMBE0kavu/7JLfBEeFPzi43nMqVDSbEn3QCK+BMCc9zO//w==}
 
@@ -6600,6 +6603,13 @@ packages:
 
   tinyps@0.5.1:
     resolution: {integrity: sha512-B6Ykif5HflC3AdDkS4Zst/2muYVfeXoVMy+KorqH80s/1x4vunIORpNySH681X7fjj+dFM9MDKD6/Hsccjb87Q==}
+
+  tldts-core@7.5.1:
+    resolution: {integrity: sha512-GGSowIH9Pp52ym/x0OxBBNqS2DuqlLL91YNnlnj+k+ZWjJQ+ilNxpwP7/RT+iX1gzuafhj1l7j46CNVqm+xAeQ==}
+
+  tldts@7.5.1:
+    resolution: {integrity: sha512-UW1Z5afSpu5qA0qhDnaynyiwPa+/VC7J/mofz72R032It5DUTUWk8I502cAitA6qMQV1x7IwNHg7pCBNVORVww==}
+    hasBin: true
 
   to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
@@ -8860,7 +8870,7 @@ snapshots:
     dependencies:
       '@markuplint/ml-ast': 5.3.0
       '@markuplint/parser-utils': 5.4.0(supports-color@7.2.0)
-      parse5: 8.0.1
+      parse5: 8.1.1
       type-fest: 5.10.0
     transitivePeerDependencies:
       - supports-color
@@ -9109,7 +9119,7 @@ snapshots:
       '@markuplint/shared': 5.4.0
       '@types/css-tree': 3.2.0
       '@types/debug': 4.1.13
-      bcp-47: 2.1.1
+      bcp-47: 2.1.2
       css-tree: 3.2.1
       debug: 4.4.3(supports-color@7.2.0)
       language-subtag-registry: 0.4.2
@@ -11388,7 +11398,7 @@ snapshots:
 
   core-js-compat@3.49.0:
     dependencies:
-      browserslist: 4.29.4
+      browserslist: 4.29.5
     optional: true
 
   core-util-is@1.0.3: {}
@@ -14000,11 +14010,6 @@ snapshots:
 
   parse-srcset@1.0.2: {}
 
-  parse5@8.0.1:
-    dependencies:
-      entities: 8.1.0
-    optional: true
-
   parse5@8.1.1:
     dependencies:
       entities: 9.0.0
@@ -14883,6 +14888,12 @@ snapshots:
   tinypool@2.2.0: {}
 
   tinyps@0.5.1: {}
+
+  tldts-core@7.5.1: {}
+
+  tldts@7.5.1:
+    dependencies:
+      tldts-core: 7.5.1
 
   to-regex-range@5.0.1:
     dependencies:

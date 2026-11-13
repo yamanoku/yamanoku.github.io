@@ -1,26 +1,20 @@
-const KEEP_HOSTNAME_PATTERNS = ["www.*", "*.vercel.app"] as const;
+import { getDomain } from "tldts";
 
-function matchesKeepPattern(hostname: string, pattern: string): boolean {
-  if (pattern.startsWith("*.")) {
-    return hostname.endsWith(pattern.slice(1));
-  }
-  if (pattern.endsWith("*")) {
-    return hostname.startsWith(pattern.slice(0, -1));
-  }
-  return hostname === pattern;
+const SAFE_DOMAIN =
+  /^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)+$/;
+
+// eTLD+1, including private suffixes such as vercel.app and github.io.
+export function registrableDomain(hostname: string): string | null {
+  const normalized = hostname.trim().toLowerCase().replace(/\.$/, "");
+  if (normalized.length === 0 || normalized.includes("..")) return null;
+
+  const domain = getDomain(normalized, { allowPrivateDomains: true });
+  if (domain == null || !SAFE_DOMAIN.test(domain)) return null;
+  return domain;
 }
 
-export function toApexDomain(hostname: string): string {
-  if (
-    KEEP_HOSTNAME_PATTERNS.some((pattern) =>
-      matchesKeepPattern(hostname, pattern)
-    )
-  ) {
-    return hostname;
-  }
-  const parts = hostname.split(".");
-  if (parts.length <= 2) {
-    return hostname;
-  }
-  return parts.slice(-2).join(".");
+export function faviconPublicPath(hostname: string): string | null {
+  const domain = registrableDomain(hostname);
+  if (domain == null) return null;
+  return `/favicons/${domain}.png`;
 }

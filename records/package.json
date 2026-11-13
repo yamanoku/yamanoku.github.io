@@ -14,6 +14,7 @@
     "astro": "catalog:website",
     "modern-normalize": "catalog:website",
     "tailwindcss": "catalog:website",
+    "tldts": "catalog:website",
     "vite": "catalog:website",
     "yama-normalize": "workspace:*"
   }
