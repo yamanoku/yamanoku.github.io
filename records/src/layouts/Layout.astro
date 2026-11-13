@@ -40,6 +40,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonicalURL} />
   </head>
   <body>
+    <a
+      href="#content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:start-0 focus:z-10 focus:bg-y-body-background focus:text-y-body-text focus:p-y-rhythm-2"
+      >本文へスキップ</a
+    >
     <GlobalHeader />
     <main id="main">
       <slot />

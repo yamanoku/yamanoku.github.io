@@ -16,7 +16,7 @@ const now = new Date();
 ---
 
 <Layout>
-  <h1>records.yamanoku.net</h1>
+  <h1 id="content" tabindex="-1">records.yamanoku.net</h1>
   <p>
     やまのく（yamanoku）のこれまでの登壇・発表のまとめページ
   </p>
@@ -26,7 +26,6 @@ const now = new Date();
       <section
         class="scroll-mt-[100px] m-0 mbe-[5lh]"
         id={`year-${year}`}
-        aria-labelledby={`year-${year}-heading`}
       >
         <h2
           class="text-y-identity-color dark:text-y-white-base"
