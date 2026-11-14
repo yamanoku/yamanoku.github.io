@@ -3,8 +3,8 @@
     "id": "vue-portfolio-template",
     "name": "Vue.js Portfolio Template",
     "description": {
-      "ja": "Vue.jsでポートフォリオサイトを構築するためのテンプレートです。2016年の公開以来、Webpack時代からVite・TypeScript・Vue 3へと段階的に移行し、約10年・約2,900コミット規模で依存更新と構成刷新を続けています。Vue Routerによるルーティング構成を備え、デモサイトも公開中です。長期運用を前提とした個人プロダクトの設計・保守を実践してきた点が特徴で、フロントエンドの技術変遷に追従しながらテンプレートとして公開し続けることで、持続的なエンジニアリング姿勢を示しています。",
-      "en": "A Vue.js template for building portfolio sites. Since its 2016 release, it has moved from the Webpack era to Vite, TypeScript, and Vue 3, with continuous dependency updates and structural refreshes over roughly a decade and about 2,900 commits. It uses Vue Router and a public demo site. It demonstrates long-term design and maintenance of a personal product that keeps pace with frontend technology changes."
+      "ja": "Vue.jsでポートフォリオサイトを構築するためのテンプレートです。公開当初のWebpack構成から、Vite・TypeScript・Vue 3へ移行したシングルページ構成を採っています。Vue Routerによるルーティングと、公開デモ（vue-portfolio.yamanoku.net）を備え、プロフィールや制作物を整理して見せる画面設計の出発点として使えます。初期のVueエコシステムから現行のVue 3スタックへの置き換え経験を、再利用可能なテンプレートとして示している点が特徴で、個人サイトの土台として参照できます。",
+      "en": "A Vue.js template for building portfolio sites. It moved from an early Webpack setup to a Vite, TypeScript, and Vue 3 single-page structure. With Vue Router and a public demo at vue-portfolio.yamanoku.net, it serves as a starting point for presenting profile and work pages. Its distinctive value is showing the shift from early Vue tooling to a current Vue 3 stack as a reusable personal-site foundation."
     },
     "createdAt": "2016-12-08",
     "genres": [
@@ -30,8 +30,8 @@
     "id": "birthday-countdown",
     "name": "yamanoku birthday countdown",
     "description": {
-      "ja": "次の誕生日までの残り時間を表示するカウントダウンアプリです。2017年にPure JavaScriptで公開し、ES2015、TypeScript、Vite、HonoX、Cloudflare Workersへとメジャーバージョンを重ねて移行してきました（最新はv10系）。v9ではDate計算をTemporal APIへ置き換え、v10ではOG画像配信や誕生日当日のタイムライン連携を追加しています。約10年・約2,300コミットにわたりモダン化とエッジ配信での改善を続けている、長期運用プロダクトの実践例です。",
-      "en": "A countdown app to the next birthday. First released in 2017 as Pure JavaScript, it has migrated through ES2015, TypeScript, Vite, HonoX, and Cloudflare Workers across major versions (now v10). v9 replaced Date calculations with the Temporal API, and v10 added OG image delivery and a timeline link on the birthday. About a decade and roughly 2,300 commits of modernization for edge delivery."
+      "ja": "次の誕生日までの残り時間を表示するカウントダウンアプリです。Pure JavaScriptから始まり、ES2015、TypeScript、Vite、HonoX、Cloudflare Workersへとアーキテクチャを段階的に置き換えてきました（最新はv10系）。v9ではDate計算をTemporal APIへ切り替え、v10ではシェア用OG画像の配信や誕生日当日のタイムライン連携を追加しています。エッジ上で動く小さなプロダクトに、現行のWeb標準とCloudflare Workers上の配信基盤を組み込んだ実装の実例です。",
+      "en": "A countdown app to the next birthday. It started as Pure JavaScript and was re-architected through ES2015, TypeScript, Vite, HonoX, and Cloudflare Workers (now v10). v9 switched Date calculations to the Temporal API, and v10 added share OG image delivery and a timeline link on the birthday. A concrete example of embedding current Web standards and Cloudflare Workers delivery in a small edge-deployed product."
     },
     "createdAt": "2017-10-13",
     "genres": [
@@ -56,8 +56,8 @@
     "id": "oclock",
     "name": "O'clock app",
     "description": {
-      "ja": "秒まで表示するSvelte製のシンプルなデジタル時計（oclock.yamanoku.net）です。prefers-color-schemeに応じたライト／ダーク表示に加え、秒のみを表示するバージョンも公開しています。Svelte公式テンプレートを起点にTypeScript化やCloudflare Workersへのデプロイ構成を追加し、約1,000コミット超で依存更新を継続しています。小さなUIでもOSの表示設定への追従とフレームワーク学習・運用を両立した実践で、簡潔な実装と継続保守の姿勢を示します。関連してZennスクラップでコンポーネント実装の記録も残しています。",
-      "en": "A simple Svelte digital clock (oclock.yamanoku.net) that shows seconds. It supports light/dark via prefers-color-scheme and also offers a seconds-only version. Starting from the official Svelte template, it added TypeScript and a Cloudflare Workers deploy setup while keeping dependencies updated across more than about 1,000 commits. Even a small UI demonstrates following OS display settings and sustained framework maintenance, with implementation notes also recorded in a Zenn scrap."
+      "ja": "秒まで表示するSvelte製のシンプルなデジタル時計（oclock.yamanoku.net）です。prefers-color-schemeに応じたライト／ダーク表示に加え、秒のみを表示するバージョンも公開しています。Svelte公式テンプレートを起点にTypeScript化とCloudflare Workersへのデプロイ構成を取り入れました。小さなUIでもOSの表示設定に合わせ、実装過程はZennスクラップにも残しています。フレームワーク選定とアクセシブルな表示切り替えを、動作する時計として示せる点が特徴です。",
+      "en": "A simple Svelte digital clock (oclock.yamanoku.net) that shows seconds. It supports light/dark via prefers-color-scheme and also offers a seconds-only version. Starting from the official Svelte template, it adopted TypeScript and a Cloudflare Workers deploy setup. Even a small UI follows OS display settings, with implementation notes in a Zenn scrap. It shows framework choice and accessible display switching as a working clock."
     },
     "createdAt": "2021-04-11",
     "genres": [
@@ -86,8 +86,8 @@
     "id": "archives",
     "name": "archives.yamanoku.net",
     "description": {
-      "ja": "過去に書いた記事やログを収集・公開するアーカイブサイト（archives.yamanoku.net）です。Nuxt Contentから始まり、Astroを経て2026年にox-contentとViteによる静的サイトへ移行しました。MarkdownからのSSG、脚注、RSS／sitemap、BM25クライアント検索、OG画像生成ツールなどを備え、約180件規模のコンテンツを配信しています。執筆資産の長期保管と、サイトジェネレータの刷新を自ら繰り返してきた点が特異性で、コンテンツ基盤の設計・移行経験を示せます。",
-      "en": "An archive site (archives.yamanoku.net) collecting past articles and logs. It began with Nuxt Content, moved through Astro, and in 2026 migrated to a static site with ox-content and Vite. It offers Markdown SSG, footnotes, RSS/sitemap, BM25 client search, and OG image tooling for roughly 180 pieces of content. Its distinctive point is repeatedly refreshing the site generator while preserving writing assets long-term."
+      "ja": "過去に書いた記事やログを収集・公開するアーカイブサイト（archives.yamanoku.net）です。Nuxt ContentからAstroを経て、2026年にox-contentとViteによる静的サイトへ移行しました。MarkdownからのSSG、脚注、RSS／sitemap、BM25クライアント検索、OG画像生成ツールなどを備え、約180件規模のコンテンツを配信しています。執筆物を検索可能なアーカイブとして再構成し、サイトジェネレータ刷新まで自ら行った点が特異性で、コンテンツ基盤の設計力を示せます。",
+      "en": "An archive site (archives.yamanoku.net) collecting past articles and logs. It moved from Nuxt Content through Astro to a 2026 static site with ox-content and Vite. It offers Markdown SSG, footnotes, RSS/sitemap, BM25 client search, and OG image tooling for roughly 180 pieces of content. Its distinctive point is reshaping writing into a searchable archive and carrying out the site-generator migration firsthand, showing content-platform design skill."
     },
     "createdAt": "2021-04-11",
     "genres": [
@@ -111,8 +111,8 @@
     "id": "vue-visually-hidden",
     "name": "Vue Visually Hidden",
     "description": {
-      "ja": "見た目だけ隠し、支援技術には内容を伝えるVue 3向けコンポーネントです。アイコンのみのボタンなど、スクリーンリーダー向けテキストが必要な場面向けに設計し、npmパッケージ（vue-visually-hidden）として公開しています。フォーカス可能なモードにも対応し、Vue 3専用化やVite／axe-coreを用いた検証環境の整備を続けてきました。Bootstrapのsr-onlyに相当する定番パターンを再利用可能なOSSにした点が強みで、アクセシビリティ実装の基礎をライブラリとして示せます。",
-      "en": "A Vue 3 component that hides content visually while keeping it available to assistive technology. Designed for cases such as icon-only buttons that need screen-reader text, and published as the npm package vue-visually-hidden. It supports a focusable mode and has been maintained with a Vue 3-only build and Vite/axe-core verification. It packages the classic sr-only pattern as reusable OSS for accessibility foundations."
+      "ja": "見た目だけ隠し、支援技術には内容を伝えるVue 3向けコンポーネントです。アイコンのみのボタンなど、スクリーンリーダー向けテキストが必要な場面向けに設計し、npmパッケージ（vue-visually-hidden）として公開しています。フォーカス可能なモードにも対応し、Vue 3専用ビルドとVite／axe-coreによる検証環境を整えています。Bootstrapのsr-onlyに相当する定番パターンを再利用可能なOSSにした点が強みで、アクセシビリティ実装の基礎をVueライブラリとして示せます。",
+      "en": "A Vue 3 component that hides content visually while keeping it available to assistive technology. Designed for cases such as icon-only buttons that need screen-reader text, and published as the npm package vue-visually-hidden. It supports a focusable mode, with a Vue 3-only build and Vite/axe-core verification. It packages the classic sr-only pattern as reusable OSS for accessibility foundations."
     },
     "createdAt": "2021-07-31",
     "genres": [
@@ -131,8 +131,8 @@
     "id": "awesome-japanese-a11y-companies",
     "name": "Awesome japanese a11y companies",
     "description": {
-      "ja": "アクセシビリティに取り組む日本企業の事例を五十音・アルファベット順にまとめたawesome listです。約140社超の情報を継続収集し、コミュニティからのIssueやPull Requestも受け入れています（GitHubスター約70超）。後年には企業・事例検索のMCPサーバーや、TypeSafe AIによる事例ジャンル分けツールも追加しました。日本国内のa11y実践を横断的に可視化する、希少性の高いナレッジベースであり、調査・整理・OSS運営の継続力を示せます。登壇資料でも収集の経緯を共有しています。",
-      "en": "An awesome list of Japanese companies working on accessibility, organized by Japanese syllabary and alphabet. It continuously collects information on over 140 companies, accepts community Issues and Pull Requests, and has over about 70 GitHub stars. Later additions include an MCP server for searching companies/cases and a TypeSafe AI genre classification tool. A rare knowledge base mapping domestic a11y practice, with collection background also shared in talk materials."
+      "ja": "アクセシビリティに取り組む日本企業の事例を五十音・アルファベット順にまとめたawesome listです。約140社超の情報を収集・整理し、コミュニティからのIssueやPull Requestも受け入れています（GitHubスター約70超）。企業・事例を検索できるMCPサーバーや、TypeSafe AIによる事例ジャンル分けツールも同リポジトリに追加しました。日本国内のa11y実践を横断的に可視化する希少なナレッジベースであり、調査・分類から検索・分類ツール化まで一気通貫で行った点が特徴です。",
+      "en": "An awesome list of Japanese companies working on accessibility, organized by Japanese syllabary and alphabet. It collects and organizes information on over 140 companies, accepts community Issues and Pull Requests, and has over about 70 GitHub stars. The repository also includes an MCP server for searching companies/cases and a TypeSafe AI genre classification tool. A rare knowledge base that maps domestic a11y practice end-to-end from research and taxonomy through search and classification tooling."
     },
     "createdAt": "2021-09-02",
     "genres": [
@@ -156,8 +156,8 @@
     "id": "yamanoku-advent-calendar-2023",
     "name": "yamanoku Advent Calendar 2023",
     "description": {
-      "ja": "2023年12月に一人で25日分を書き切ったアドベントカレンダーです。日常や育児、OSSへのアクセシビリティ貢献、buttonのtype属性、Route Announcer、サステナブルなWeb、お元気ですか.fm振り返り、フロントエンド年間レビューなど、技術とキャリアの両面を扱いました。Adventarで企画し、専用サイト（2023.yamanoku.net）に開会から閉会まで全日分を公開しています。継続的な発信力と、フロントエンド／アクセシビリティへの問題意識を具体的な文章で示せる実績です。",
-      "en": "A solo Advent calendar completed over 25 days in December 2023. Topics spanned daily life and parenting, accessibility contributions to OSS, the button type attribute, Route Announcer, sustainable Web, an Ogenki Desu ka FM retrospective, and a frontend year in review. Organized on Adventar and published end-to-end on 2023.yamanoku.net. It evidences sustained writing and concrete thinking on frontend and accessibility."
+      "ja": "2023年12月に一人で25日分を書き切ったアドベントカレンダーです。日常や育児、OSSへのアクセシビリティ貢献、buttonのtype属性、Route Announcer、サステナブルなWeb、お元気ですか.fm振り返り、フロントエンド年間レビューなど、技術とキャリアの両面を扱いました。Adventarで企画し、専用サイト（2023.yamanoku.net）に開会から閉会まで全日分を公開しています。フロントエンド／アクセシビリティへの問題意識を、短期間の連載として具体的な文章で示せる実績です。",
+      "en": "A solo Advent calendar completed over 25 days in December 2023. Topics spanned daily life and parenting, accessibility contributions to OSS, the button type attribute, Route Announcer, sustainable Web, an Ogenki Desu ka FM retrospective, and a frontend year in review. Organized on Adventar and published end-to-end on 2023.yamanoku.net. It shows concrete writing on frontend and accessibility concerns as a short-run series."
     },
     "createdAt": "2023-12-01",
     "genres": [
