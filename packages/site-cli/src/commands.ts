@@ -10,10 +10,10 @@ import {
   type ProfileField,
   SECTION_NAMES,
   type SectionName,
-  WORK_GENRES,
-  isWorkGenre,
-  normalizeWorkGenres,
-  type WorkGenre,
+  WORK_CATEGORIES,
+  isWorkCategory,
+  normalizeWorkCategories,
+  type WorkCategory,
   validateRecords,
   validateSiteContent,
   validatePortfolio,
@@ -855,32 +855,27 @@ const linkCommand = define({
   }
 });
 
-const parseWorkGenres = (values: string[] | undefined): WorkGenre[] => {
+const parseWorkCategories = (values: string[] | undefined): WorkCategory[] => {
   if (values === undefined || values.length === 0) {
     throw usage(
-      `--genre を1つ以上指定してください。${WORK_GENRES.join(", ")} から選びます。`
+      `--category を1つ以上指定してください。${WORK_CATEGORIES.join(", ")} から選びます。`
     );
   }
-  const unknown = values.filter((value) => !isWorkGenre(value));
+  const unknown = values.filter((value) => !isWorkCategory(value));
   if (unknown.length > 0) {
     throw usage(
-      `genre は ${WORK_GENRES.join(", ")} から選んでください: ${unknown.join(", ")}`
+      `category は ${WORK_CATEGORIES.join(", ")} から選んでください: ${unknown.join(", ")}`
     );
   }
-  return normalizeWorkGenres(values);
+  return normalizeWorkCategories(values.filter(isWorkCategory));
 };
 
 const workDetailArgs = {
-  genre: {
+  category: {
     type: "string" as const,
     multiple: true as const,
     description:
-      "ジャンル。website, event, poc, source-code, advent-calendar, book。複数あるときは繰り返す。指定すると一覧を置き換える"
-  },
-  technology: {
-    type: "string" as const,
-    multiple: true as const,
-    description: "使用技術。複数あるときは繰り返す。指定すると一覧を置き換える"
+      "カテゴリ。website, event, source-code, advent-calendar, book, curation。複数あるときは繰り返す。指定すると一覧を置き換える"
   },
   articleTitle: {
     type: "string" as const,
@@ -896,16 +891,12 @@ const workDetailArgs = {
 
 const appendWorkDetails = (
   args: string[],
-  genres: string[] | undefined,
-  technologies: string[] | undefined,
+  categories: string[] | undefined,
   articleTitles: string[] | undefined,
   articleUrls: string[] | undefined
 ) => {
-  for (const genre of genres ?? []) {
-    args.push("--genre", genre);
-  }
-  for (const technology of technologies ?? []) {
-    args.push("--technology", technology);
+  for (const category of categories ?? []) {
+    args.push("--category", category);
   }
   for (const title of articleTitles ?? []) {
     args.push("--article-title", title);
@@ -931,7 +922,7 @@ const workAddCommand = define({
   description: "製作実績を追加する",
   toKebab: true,
   examples: `製作実績を追加する
-  site portfolio add --id example --name "example" --github "https://github.com/yamanoku/example" --site "https://example.com" --description-ja "概要" --description-en "Summary" --created 2026-01-01 --genre website --genre source-code --technology TypeScript --article-title "記事" --article-url "https://example.com/article" --write`,
+  site portfolio add --id example --name "example" --github "https://github.com/yamanoku/example" --site "https://example.com" --description-ja "概要" --description-en "Summary" --created 2026-01-01 --category website --category source-code --article-title "記事" --article-url "https://example.com/article" --write`,
   args: {
     id: {
       type: "string",
@@ -977,8 +968,7 @@ const workAddCommand = define({
       createdAt: ctx.values.created,
       ...(ctx.values.github ? { github: ctx.values.github } : {}),
       ...(ctx.values.site ? { site: ctx.values.site } : {}),
-      genres: parseWorkGenres(ctx.values.genre),
-      technologies: ctx.values.technology ?? [],
+      categories: parseWorkCategories(ctx.values.category),
       articles: pairArticles(
         ctx.values.articleTitle ?? [],
         ctx.values.articleUrl ?? []
@@ -1003,8 +993,7 @@ const workAddCommand = define({
     if (ctx.values.site) nextArgs.push("--site", ctx.values.site);
     appendWorkDetails(
       nextArgs,
-      ctx.values.genre,
-      ctx.values.technology,
+      ctx.values.category,
       ctx.values.articleTitle,
       ctx.values.articleUrl
     );
@@ -1023,8 +1012,8 @@ const workUpdateCommand = define({
   name: "update",
   description: "idが一致する製作実績を更新する",
   toKebab: true,
-  examples: `使用技術と関連記事を置き換える
-  site portfolio update example --genre website --genre source-code --technology Vue.js --technology TypeScript --article-title "記事" --article-url "https://example.com/article" --write`,
+  examples: `カテゴリと関連記事を置き換える
+  site portfolio update example --category website --category source-code --article-title "記事" --article-url "https://example.com/article" --write`,
   args: {
     id: {
       type: "positional",
@@ -1045,10 +1034,6 @@ const workUpdateCommand = define({
     descriptionEn: { type: "string", description: "新しい英語の概要" },
     created: { type: "string", description: "新しい作成日。YYYY-MM-DD" },
     ...workDetailArgs,
-    clearTechnologies: {
-      type: "boolean",
-      description: "使用技術を空にする"
-    },
     clearArticles: {
       type: "boolean",
       description: "関連記事を空にする"
@@ -1063,14 +1048,10 @@ const workUpdateCommand = define({
         "--description-ja と --description-en は同時に指定してください。"
       );
     }
-    const genresSpecified = ctx.values.genre !== undefined;
-    const technologiesSpecified = ctx.values.technology !== undefined;
+    const categoriesSpecified = ctx.values.category !== undefined;
     const articlesSpecified =
       ctx.values.articleTitle !== undefined ||
       ctx.values.articleUrl !== undefined;
-    if (ctx.values.clearTechnologies === true && technologiesSpecified) {
-      throw usage("--clear-technologies と --technology は同時に使えません。");
-    }
     if (ctx.values.clearArticles === true && articlesSpecified) {
       throw usage(
         "--clear-articles と --article-title、--article-url は同時に使えません。"
@@ -1098,12 +1079,9 @@ const workUpdateCommand = define({
       ...(ctx.values.created === undefined
         ? {}
         : { createdAt: ctx.values.created }),
-      ...(genresSpecified ? { genres: parseWorkGenres(ctx.values.genre) } : {}),
-      ...(ctx.values.clearTechnologies === true
-        ? { technologies: [] }
-        : technologiesSpecified
-          ? { technologies: ctx.values.technology }
-          : {}),
+      ...(categoriesSpecified
+        ? { categories: parseWorkCategories(ctx.values.category) }
+        : {}),
       ...(ctx.values.clearArticles === true
         ? { articles: [] }
         : articlesSpecified
@@ -1136,30 +1114,12 @@ const workUpdateCommand = define({
     if (ctx.values.created !== undefined) {
       nextArgs.push("--created", ctx.values.created);
     }
-    appendWorkDetails(
-      nextArgs,
-      ctx.values.genre,
-      undefined,
-      undefined,
-      undefined
-    );
-    if (ctx.values.clearTechnologies === true) {
-      nextArgs.push("--clear-technologies");
-    } else {
-      appendWorkDetails(
-        nextArgs,
-        undefined,
-        ctx.values.technology,
-        undefined,
-        undefined
-      );
-    }
+    appendWorkDetails(nextArgs, ctx.values.category, undefined, undefined);
     if (ctx.values.clearArticles === true) {
       nextArgs.push("--clear-articles");
     } else {
       appendWorkDetails(
         nextArgs,
-        undefined,
         undefined,
         ctx.values.articleTitle,
         ctx.values.articleUrl

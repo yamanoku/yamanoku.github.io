@@ -3,45 +3,45 @@
     "id": "yamanoku-net",
     "name": "yamanoku.net",
     "description": {
-      "ja": "大山奥人のポータルサイト（yamanoku.net）です。プロフィール、登壇・執筆、製作実績などへの導線を日本語と英語で提供し、セマンティックなマークアップとWAI-ARIAで情報設計しています。AstroとTailwind CSSを中心に構築し、独自のsite-cliでコンテンツを更新、records／portfolioを含むpnpmモノレポとして構成しています。JIS X 8341-3:2016の適合レベルAA準拠を方針に掲げ試験結果を公開している点が特徴で、アクセシビリティとインクルーシブデザインを実装と方針の両面から示せる実績です。",
-      "en": "Okuto Oyama’s portal site (yamanoku.net). It provides Japanese and English entry points to profile, talks, writing, and works, with semantic markup and WAI-ARIA for information architecture. Built mainly with Astro and Tailwind CSS, content is updated via a custom site-cli, and the repo is a pnpm monorepo that includes records and portfolio. Its distinctive point is a published JIS X 8341-3:2016 Level AA conformance policy and test results, showing accessibility and inclusive design in both implementation and policy."
+      "ja": "大山奥人のポータルサイトです。プロフィール、登壇、執筆、製作実績への導線を、日本語と英語で示します。セマンティックなマークアップとWAI-ARIAで情報を構成し、AstroとTailwind CSSで組んでいます。内容はsite-cliで更新し、recordsとportfolioを含むpnpmモノレポです。JIS X 8341-3:2016の適合レベルAAを方針とし、試験結果を公開しています。",
+      "en": "Okuto Oyama’s portal site. Japanese and English links lead to the profile, talks, writing, and works. Semantic markup and WAI-ARIA structure the information. It is built with Astro and Tailwind CSS, updated with site-cli, and kept in a pnpm monorepo that includes records and portfolio. The site states a JIS X 8341-3:2016 Level AA conformance policy and publishes the test results."
     },
     "createdAt": "2013-01-12",
-    "genres": [
+    "categories": [
       "website",
       "source-code"
     ],
-    "technologies": [
-      "Astro",
-      "Tailwind CSS",
-      "TypeScript",
-      "Oxlint",
-      "Oxfmt",
-      "Markuplint"
-    ],
     "articles": [],
     "github": "https://github.com/yamanoku/yamanoku.github.io",
-    "site": "https://yamanoku.net"
+    "site": "https://yamanoku.net",
+    "thumbnail": {
+      "url": "https://yamanoku.net/ogp/ogp@2x.png",
+      "width": 1200,
+      "height": 630
+    }
   },
   {
     "id": "vue-portfolio-template",
     "name": "Vue.js Portfolio Template",
     "description": {
-      "ja": "Vue.jsでポートフォリオサイトを構築するためのテンプレートです。公開当初のWebpack構成から、Vite・TypeScript・Vue 3へ移行したシングルページ構成を採っています。Vue Routerによるルーティングと、公開デモ（vue-portfolio.yamanoku.net）を備え、プロフィールや制作物を整理して見せる画面設計の出発点として使えます。初期のVueエコシステムから現行のVue 3スタックへの置き換え経験を、再利用可能なテンプレートとして示している点が特徴で、個人サイトの土台として参照できます。",
-      "en": "A Vue.js template for building portfolio sites. It moved from an early Webpack setup to a Vite, TypeScript, and Vue 3 single-page structure. With Vue Router and a public demo at vue-portfolio.yamanoku.net, it serves as a starting point for presenting profile and work pages. Its distinctive value is showing the shift from early Vue tooling to a current Vue 3 stack as a reusable personal-site foundation."
+      "ja": "Vue.jsでポートフォリオサイトを作るテンプレートです。公開当初のWebpack構成から、Vite、TypeScript、Vue 3のシングルページ構成へ移行しました。Vue Routerと公開デモサイトがあり、プロフィールと制作物を並べる画面の出発点になります。",
+      "en": "A Vue.js template for building a portfolio site. It moved from the original Webpack setup to a Vite, TypeScript, and Vue 3 single-page app. Vue Router and a public demo site are the starting point for pages that present a profile and works."
     },
     "createdAt": "2016-12-08",
-    "genres": [
+    "categories": [
       "website",
       "source-code"
     ],
-    "technologies": [
-      "Vue.js",
-      "Vue Router",
-      "Vite",
-      "TypeScript"
+    "articles": [
+      {
+        "title": "よく分かってなくてもVue.jsで動くモノが作れた話",
+        "url": "https://archives.yamanoku.net/beginner-make-vuejs-spa/"
+      },
+      {
+        "title": "よく​分かってないで​vue-cliで​作った​Vue.js製SPAを​アップデートした​話",
+        "url": "https://archives.yamanoku.net/update-beginner-make-vuejs-spa/"
+      }
     ],
-    "articles": [],
     "github": "https://github.com/yamanoku/vue_portfolio_template",
     "site": "https://vue-portfolio.yamanoku.net/",
     "thumbnail": {
@@ -54,44 +54,32 @@
     "id": "birthday-countdown",
     "name": "yamanoku birthday countdown",
     "description": {
-      "ja": "次の誕生日までの残り時間を表示するカウントダウンアプリです。Pure JavaScriptから始まり、ES2015、TypeScript、Vite、HonoX、Cloudflare Workersへとアーキテクチャを段階的に置き換えてきました（最新はv10系）。v9ではDate計算をTemporal APIへ切り替え、v10ではシェア用OG画像の配信や誕生日当日のタイムライン連携を追加しています。エッジ上で動く小さなプロダクトに、現行のWeb標準とCloudflare Workers上の配信基盤を組み込んだ実装の実例です。",
-      "en": "A countdown app to the next birthday. It started as Pure JavaScript and was re-architected through ES2015, TypeScript, Vite, HonoX, and Cloudflare Workers (now v10). v9 switched Date calculations to the Temporal API, and v10 added share OG image delivery and a timeline link on the birthday. A concrete example of embedding current Web standards and Cloudflare Workers delivery in a small edge-deployed product."
+      "ja": "次の誕生日までの残り時間を表示するアプリです。Pure JavaScriptから、ES2015、TypeScript、Vite、HonoX、Cloudflare Workersへ順に置き換え、バージョン管理しています。v9で日付計算をTemporal APIに切り替え、v10で共有用のOG画像と、誕生日当日のタイムライン連携を追加しました。",
+      "en": "An app that shows the time remaining until the next birthday. It was rewritten from plain JavaScript through ES2015, TypeScript, Vite, and HonoX to Cloudflare Workers. The version is managed. v9 switched date calculation to the Temporal API. v10 added a share OG image and a timeline link on the birthday."
     },
     "createdAt": "2017-10-13",
-    "genres": [
+    "categories": [
       "source-code"
-    ],
-    "technologies": [
-      "Hono",
-      "HonoX",
-      "Vite",
-      "Tailwind CSS",
-      "Cloudflare Workers"
     ],
     "articles": [],
     "github": "https://github.com/yamanoku/birthday-countdown",
+    "site": "https://birthday.yamanoku.net/",
     "thumbnail": {
-      "url": "/thumbnails/birthday-countdown.gif",
-      "width": 742,
-      "height": 542
+      "url": "/thumbnails/birthday-countdown.png",
+      "width": 1000,
+      "height": 525
     }
   },
   {
     "id": "oclock",
     "name": "O'clock app",
     "description": {
-      "ja": "秒まで表示するSvelte製のシンプルなデジタル時計（oclock.yamanoku.net）です。prefers-color-schemeに応じたライト／ダーク表示に加え、秒のみを表示するバージョンも公開しています。Svelte公式テンプレートを起点にTypeScript化とCloudflare Workersへのデプロイ構成を取り入れました。小さなUIでもOSの表示設定に合わせ、実装過程はZennスクラップにも残しています。フレームワーク選定とアクセシブルな表示切り替えを、動作する時計として示せる点が特徴です。",
-      "en": "A simple Svelte digital clock (oclock.yamanoku.net) that shows seconds. It supports light/dark via prefers-color-scheme and also offers a seconds-only version. Starting from the official Svelte template, it adopted TypeScript and a Cloudflare Workers deploy setup. Even a small UI follows OS display settings, with implementation notes in a Zenn scrap. It shows framework choice and accessible display switching as a working clock."
+      "ja": "秒まで表示するSvelteのデジタル時計です。prefers-color-schemeに合わせてライトとダークを切り替え、秒だけを表示する版もあります。Svelteの公式テンプレートをTypeScript化し、Cloudflare Workersへ配置しています。実装の過程はZennスクラップに残しています。",
+      "en": "A Svelte digital clock that shows seconds. It switches between light and dark with prefers-color-scheme, and also has a seconds-only version. It started from the official Svelte template, uses TypeScript, and deploys to Cloudflare Workers. The implementation notes are in a Zenn scrap."
     },
     "createdAt": "2021-04-11",
-    "genres": [
+    "categories": [
       "source-code"
-    ],
-    "technologies": [
-      "Svelte",
-      "TypeScript",
-      "Vite",
-      "Cloudflare Workers"
     ],
     "articles": [
       {
@@ -100,6 +88,7 @@
       }
     ],
     "github": "https://github.com/yamanoku/oclock",
+    "site": "https://oclock.yamanoku.net/",
     "thumbnail": {
       "url": "/thumbnails/oclock-app.png",
       "width": 2880,
@@ -110,21 +99,17 @@
     "id": "archives",
     "name": "archives.yamanoku.net",
     "description": {
-      "ja": "過去に書いた記事やログを収集・公開するアーカイブサイト（archives.yamanoku.net）です。Nuxt ContentからAstroを経て、2026年にox-contentとViteによる静的サイトへ移行しました。MarkdownからのSSG、脚注、RSS／sitemap、BM25クライアント検索、OG画像生成ツールなどを備え、約180件規模のコンテンツを配信しています。執筆物を検索可能なアーカイブとして再構成し、サイトジェネレータ刷新まで自ら行った点が特異性で、コンテンツ基盤の設計力を示せます。",
-      "en": "An archive site (archives.yamanoku.net) collecting past articles and logs. It moved from Nuxt Content through Astro to a 2026 static site with ox-content and Vite. It offers Markdown SSG, footnotes, RSS/sitemap, BM25 client search, and OG image tooling for roughly 180 pieces of content. Its distinctive point is reshaping writing into a searchable archive and carrying out the site-generator migration firsthand, showing content-platform design skill."
+      "ja": "過去の記事とログを集めて公開するサイトです。Nuxt ContentからAstroを経て、2026年にox-contentとViteの静的サイトへ移行しました。Markdownからの静的サイト生成、脚注、RSS、sitemap、BM25（Best Matching 25）によるクライアント検索、OG画像の生成があり、約180件を配信します。",
+      "en": "A site that collects and publishes past articles and logs. It moved from Nuxt Content through Astro to a static site built with ox-content and Vite in 2026. It generates pages from Markdown, and includes footnotes, RSS, a sitemap, BM25 (Best Matching 25) client-side search, and OG image generation. It serves about 180 items."
     },
     "createdAt": "2021-04-11",
-    "genres": [
+    "categories": [
       "website",
       "source-code"
     ],
-    "technologies": [
-      "Vite",
-      "TypeScript",
-      "ox-content"
-    ],
     "articles": [],
     "github": "https://github.com/yamanoku/archives",
+    "site": "https://archives.yamanoku.net/",
     "thumbnail": {
       "url": "/thumbnails/archives.png",
       "width": 1200,
@@ -135,34 +120,32 @@
     "id": "vue-visually-hidden",
     "name": "Vue Visually Hidden",
     "description": {
-      "ja": "見た目だけ隠し、支援技術には内容を伝えるVue 3向けコンポーネントです。アイコンのみのボタンなど、スクリーンリーダー向けテキストが必要な場面向けに設計し、npmパッケージ（vue-visually-hidden）として公開しています。フォーカス可能なモードにも対応し、Vue 3専用ビルドとVite／axe-coreによる検証環境を整えています。Bootstrapのsr-onlyに相当する定番パターンを再利用可能なOSSにした点が強みで、アクセシビリティ実装の基礎をVueライブラリとして示せます。",
-      "en": "A Vue 3 component that hides content visually while keeping it available to assistive technology. Designed for cases such as icon-only buttons that need screen-reader text, and published as the npm package vue-visually-hidden. It supports a focusable mode, with a Vue 3-only build and Vite/axe-core verification. It packages the classic sr-only pattern as reusable OSS for accessibility foundations."
+      "ja": "画面上では隠し、支援技術には内容を伝えるVue 3コンポーネントです。アイコンだけのボタンなど、スクリーンリーダー用の文字が必要なときに使います。Bootstrapのsr-onlyと同じ役割で、npmパッケージ vue-visually-hidden として公開しています。フォーカスできるモードがあり、Vue 3専用のビルドと、Viteおよびaxe-coreによる検証環境を用意しています。",
+      "en": "A Vue 3 component that hides content on screen and still exposes it to assistive technology. Use it when screen-reader text is needed, such as on an icon-only button. It has the same role as Bootstrap’s sr-only and is published as the npm package vue-visually-hidden. It includes a focusable mode, a Vue 3-only build, and a Vite and axe-core check setup."
     },
     "createdAt": "2021-07-31",
-    "genres": [
+    "categories": [
       "source-code"
     ],
-    "technologies": [
-      "Vue.js",
-      "TypeScript",
-      "Vite",
-      "axe-core"
+    "articles": [
+      {
+        "title": "Visually Hidden スタイル比較",
+        "url": "https://zenn.dev/yamanoku/scraps/a6c328ccc3238c"
+      }
     ],
-    "articles": [],
     "github": "https://github.com/yamanoku/vue-visually-hidden"
   },
   {
     "id": "awesome-japanese-a11y-companies",
     "name": "Awesome japanese a11y companies",
     "description": {
-      "ja": "アクセシビリティに取り組む日本企業の事例を五十音・アルファベット順にまとめたawesome listです。約140社超の情報を収集・整理し、コミュニティからのIssueやPull Requestも受け入れています（GitHubスター約70超）。企業・事例を検索できるMCPサーバーや、TypeSafe AIによる事例ジャンル分けツールも同リポジトリに追加しました。日本国内のa11y実践を横断的に可視化する希少なナレッジベースであり、調査・分類から検索・分類ツール化まで一気通貫で行った点が特徴です。",
-      "en": "An awesome list of Japanese companies working on accessibility, organized by Japanese syllabary and alphabet. It collects and organizes information on over 140 companies, accepts community Issues and Pull Requests, and has over about 70 GitHub stars. The repository also includes an MCP server for searching companies/cases and a TypeSafe AI genre classification tool. A rare knowledge base that maps domestic a11y practice end-to-end from research and taxonomy through search and classification tooling."
+      "ja": "アクセシビリティに取り組む日本企業の事例を、五十音とアルファベット順に並べたawesome listです。約140社超を集め、コミュニティのIssueとPull Requestを受け付け、GitHubスターは約70超です。同じリポジトリに、企業と事例を検索するMCPサーバーと、TypeSafe AIで事例のジャンルを分けるツールがあります。",
+      "en": "An awesome list of Japanese companies working on accessibility, ordered by Japanese syllabary and the alphabet. It collects over about 140 companies, accepts community Issues and Pull Requests, and has over about 70 GitHub stars. The same repository includes an MCP server that searches companies and cases, and a TypeSafe AI tool that classifies case genres."
     },
     "createdAt": "2021-09-02",
-    "genres": [
-      "source-code"
+    "categories": [
+      "curation"
     ],
-    "technologies": [],
     "articles": [
       {
         "title": "日本企業のアクセシビリティ事例をコツコツと収集している話",
@@ -180,14 +163,13 @@
     "id": "yamanoku-advent-calendar-2023",
     "name": "yamanoku Advent Calendar 2023",
     "description": {
-      "ja": "2023年12月に一人で25日分を書き切ったアドベントカレンダーです。日常や育児、OSSへのアクセシビリティ貢献、buttonのtype属性、Route Announcer、サステナブルなWeb、お元気ですか.fm振り返り、フロントエンド年間レビューなど、技術とキャリアの両面を扱いました。Adventarで企画し、専用サイト（2023.yamanoku.net）に開会から閉会まで全日分を公開しています。フロントエンド／アクセシビリティへの問題意識を、短期間の連載として具体的な文章で示せる実績です。",
-      "en": "A solo Advent calendar completed over 25 days in December 2023. Topics spanned daily life and parenting, accessibility contributions to OSS, the button type attribute, Route Announcer, sustainable Web, an Ogenki Desu ka FM retrospective, and a frontend year in review. Organized on Adventar and published end-to-end on 2023.yamanoku.net. It shows concrete writing on frontend and accessibility concerns as a short-run series."
+      "ja": "2023年12月に、一人で25日分を書いたアドベントカレンダーです。日常、育児、OSSへのアクセシビリティ貢献、buttonのtype属性、Route Announcer、持続可能なWeb、お元気ですか.fmの振り返り、フロントエンドの年間レビューを扱いました。Adventarで企画し、2023.yamanoku.netに開会から閉会までの全日分を公開しています。",
+      "en": "A solo Advent calendar of 25 posts written in December 2023. Topics include daily life, parenting, accessibility contributions to OSS, the button type attribute, Route Announcer, a sustainable Web, a look back at Ogenki Desu ka FM, and a frontend year in review. It was planned on Adventar and published in full, from opening to closing, on 2023.yamanoku.net."
     },
     "createdAt": "2023-12-01",
-    "genres": [
+    "categories": [
       "advent-calendar"
     ],
-    "technologies": [],
     "articles": [],
     "site": "https://adventar.org/calendars/8589"
   },
@@ -195,19 +177,14 @@
     "id": "vuefes-japan-speakers",
     "name": "Vue Fes Japan Speakers",
     "description": {
-      "ja": "歴代Vue Fes Japanのセッション／パネル登壇者を一覧できる非公式サイトです。各年の公式サイトからデータを収集してAPI化し、一覧・年別・スピーカー別ページを提供しています。当初はNuxt＋NuxtHubで構築し、その後デザイン刷新やキーワード検索・ライト／ダークモード等を拡充。さらにvuerend／VizeによるゼロJS志向のリアーキテクチャへ移行しました。コミュニティ向けデータ整備と先端Vueツールチェーン検証を両立した点が特徴で、構築からkingnizeまでの経緯は記事・LT資料でも公開しています。",
-      "en": "An unofficial site listing session and panel speakers from past Vue Fes Japan events. Data collected from each year's official site is exposed as an API, with index, year, and speaker pages. Built first with Nuxt and NuxtHub, then redesigned with keyword search and dark mode, and later re-architected toward zero-JS with vuerend and Vize. It combines community data curation with cutting-edge Vue toolchain exploration, with the journey documented in articles and LT materials."
+      "ja": "歴代のVue Fes Japanで、セッションとパネルに登壇した人の非公式な一覧サイトです。各年の公式サイトから集めたデータをAPIにし、一覧、年別、スピーカー別のページを出しています。最初はNuxtとNuxtHubで作り、その後にデザインを改め、キーワード検索とライト／ダークモードなどを追加しました。いまは、JavaScriptを配信しない構成を目指し、vuerendとVizeへ移行しています。この経緯は記事とLT資料で公開しています。",
+      "en": "An unofficial site listing people who gave sessions or joined panels at past Vue Fes Japan events. Data collected from each year’s official site is exposed as an API, with index, year, and speaker pages. It was first built with Nuxt and NuxtHub, then redesigned, and keyword search and light/dark mode were among the additions. It is now moving to vuerend and Vize, toward a build that ships no JavaScript. Articles and LT materials publish that history."
     },
     "createdAt": "2024-08-31",
-    "genres": [
+    "categories": [
       "website",
-      "source-code"
-    ],
-    "technologies": [
-      "Vue.js",
-      "vuerend",
-      "Vize",
-      "Vite"
+      "source-code",
+      "curation"
     ],
     "articles": [
       {
@@ -230,21 +207,21 @@
     "id": "baseline-mcp-server",
     "name": "Baseline MCP Server",
     "description": {
-      "ja": "Web Platform Dashboard API経由で、Web機能のBaselineステータスを返すMCPサーバーです。widely／newly／limited等の区分やブラウザ実装状況を、Claude DesktopなどのMCPクライアントから照会できます。Denoの権限モデルでapi.webstatus.devのみ許可し、JSR（@yamanoku/baseline-mcp-server）公開やシングルバイナリ配布にも対応しました。LLMの知識カットオフを補い、最新の相互運用性情報を安全に扱うためのOSSで、GitHubスターも一定数獲得しています。",
-      "en": "An MCP server that reports Web feature Baseline status via the Web Platform Dashboard API. MCP clients such as Claude Desktop can query widely/newly/limited status and browser implementation details. It runs under Deno’s permission model allowing only api.webstatus.dev, is published on JSR as @yamanoku/baseline-mcp-server, and offers single-binary distribution. It helps agents use up-to-date interoperability data safely despite LLM knowledge cutoffs."
+      "ja": "Web Platform Dashboard APIから、Web機能のBaselineステータスを返すMCPサーバーです。widely、newly、limitedなどの区分と、ブラウザの実装状況を、Claude DesktopなどのMCPクライアントから照会できます。Denoの権限モデルでapi.webstatus.devだけを許可し、JSRの@yamanoku/baseline-mcp-serverとシングルバイナリで配布します。モデルの学習時点より後の相互運用の情報を、このAPIから返せます。",
+      "en": "An MCP server that returns Web feature Baseline status from the Web Platform Dashboard API. MCP clients such as Claude Desktop can query categories such as widely, newly, and limited, plus browser implementation status. Deno’s permission model allows only api.webstatus.dev. It is distributed on JSR as @yamanoku/baseline-mcp-server and as a single binary. The API can return interoperability data from after a model’s training cutoff."
     },
     "createdAt": "2025-04-12",
-    "genres": [
+    "categories": [
       "source-code"
-    ],
-    "technologies": [
-      "Deno",
-      "Model Context Protocol"
     ],
     "articles": [
       {
         "title": "Baseline MCP Serverを公開しました！",
         "url": "https://zenn.dev/yamanoku/articles/baseline-mcp-server"
+      },
+      {
+        "title": "DenoとJSRで実現する最速MCPサーバー開発記",
+        "url": "https://speakerdeck.com/yamanoku/building-mcp-servers-at-lightning-speed-with-deno-and-jsr?slide=22"
       }
     ],
     "github": "https://github.com/yamanoku/baseline-mcp-server",
@@ -258,19 +235,19 @@
     "id": "connpass-user-mcp-server",
     "name": "Connpass User MCP Server",
     "description": {
-      "ja": "connpassのユーザーAPI v2を介し、ユーザー情報や参加イベントなどを取得するMCPサーバーです。Deno／Node.js／Dockerでの起動に対応し、APIキーは環境変数で扱う構成にしています。イベントコミュニティのデータをAIエージェントから参照できるようにし、MCPと外部Web API連携の実装経験を示します。Denoのネットワーク権限制限など実行時セキュリティにも配慮しており、コミュニティ情報を開発フローへ安全に取り込む設計です。Baseline MCPに続くMCP系OSSの一つです。",
-      "en": "An MCP server that fetches connpass user and event participation data via the users API v2. It supports Deno, Node.js, and Docker, with the API key provided through environment variables. It lets AI agents query event-community data and demonstrates MCP integration with external Web APIs, including Deno network permission limits. One of the MCP OSS projects following Baseline MCP Server."
+      "ja": "connpassのユーザーAPI v2から、ユーザー情報と参加イベントを取得するMCPサーバーです。Deno、Node.js、Dockerで起動でき、APIキーは環境変数で渡します。Denoではネットワーク権限を制限しています。Baseline MCP Serverに続く、MCPの公開ソフトウェアです。",
+      "en": "An MCP server that loads user profiles and attended events from the connpass users API v2. It runs on Deno, Node.js, and Docker, and reads the API key from an environment variable. On Deno, network permission is limited. It is a published MCP program that follows Baseline MCP Server."
     },
     "createdAt": "2025-04-20",
-    "genres": [
+    "categories": [
       "source-code"
     ],
-    "technologies": [
-      "TypeScript",
-      "Deno",
-      "Model Context Protocol"
+    "articles": [
+      {
+        "title": "DenoとJSRで実現する最速MCPサーバー開発記",
+        "url": "https://speakerdeck.com/yamanoku/building-mcp-servers-at-lightning-speed-with-deno-and-jsr?slide=23"
+      }
     ],
-    "articles": [],
     "github": "https://github.com/yamanoku/connpass-user-mcp-server",
     "thumbnail": {
       "url": "/thumbnails/connpass-user-mcp-server.png",
@@ -282,19 +259,19 @@
     "id": "aria-validate-mcp-server",
     "name": "ARIA Validate MCP Server",
     "description": {
-      "ja": "aria-queryを用い、WAI-ARIAのroleや属性の妥当性を検証するMCPサーバーです。「あるroleで使える属性か」「有効な値は何か」「ランドマーク一覧」などを対話的に照会できます。Denoでの実行とテスト／lint体制を備え、アクセシビリティの仕様知識をAI開発フローに組み込めます。a11y検証をエージェント経由で支援する点が特異性で、仕様に基づくフロントエンド品質向上に直結するOSSです。アクセシビリティ領域の知見とMCP実装を組み合わせ、開発中の疑問をその場で確認できる点が特徴です。",
-      "en": "An MCP server that validates WAI-ARIA roles and attributes using aria-query. Clients can ask whether an attribute is allowed on a role, what values are valid, or list landmarks. It runs on Deno with tests and linting, bringing accessibility specification knowledge into AI development workflows. Its distinctive value is combining a11y expertise with MCP so agents can assist specification-based frontend quality checks."
+      "ja": "aria-queryを使い、WAI-ARIAのroleと属性が妥当かを調べるMCPサーバーです。指定したroleで使える属性か、有効な値は何か、ランドマークの一覧は何かを照会できます。Denoで実行し、テストとlintを備えています。",
+      "en": "An MCP server that uses aria-query to check whether WAI-ARIA roles and attributes are valid. A client can ask which attributes a given role allows, which values are valid, and which landmarks exist. It runs on Deno and includes tests and lint."
     },
     "createdAt": "2025-10-15",
-    "genres": [
+    "categories": [
       "source-code"
     ],
-    "technologies": [
-      "TypeScript",
-      "Model Context Protocol",
-      "aria-query"
+    "articles": [
+      {
+        "title": "生成AI時代のWebアプリケーションアクセシビリティ改善",
+        "url": "https://records.yamanoku.net/vuefes-japan-2025/slide/#/31"
+      }
     ],
-    "articles": [],
     "github": "https://github.com/yamanoku/aria-validate-mcp-server",
     "thumbnail": {
       "url": "/thumbnails/aria-validate-mcp-server.png",
@@ -306,14 +283,13 @@
     "id": "navigation-api-advent-calendar",
     "name": "ひとりNavigation API Advent Calendar",
     "description": {
-      "ja": "2025年12月、Navigation APIのみをテーマに一人で25日分をCosenseへ記録したアドベントカレンダーです。History APIの課題から公式仕様・情報源の整理、クライアントサイドルーティングの試作まで、毎日の学習ログとして深掘りしました。Qiitaの「ひとりNavigation API」カレンダーとしても公開し、理解の整理を優先するルールで書き切っています。新仕様を短期間で体系的に調べ上げる学習習慣と、Web標準への関心を示せる実績で、後日の清書・Web公開も視野に置いています。",
-      "en": "A solo Advent calendar in December 2025 focused only on the Navigation API, with 25 daily notes on Cosense. It covers History API issues, official specs and sources, and experiments in client-side routing. Also listed on Qiita’s Navigation API Advent Calendar, written under rules that prioritize personal understanding, with later polished Web publication in mind. It shows systematically studying a new Web standard in a short period."
+      "ja": "2025年12月に、Navigation APIだけをテーマにして、一人で25日分をCosenseへ書いたアドベントカレンダーです。History APIの課題、公式仕様と情報源、クライアントサイドルーティングの試作を、毎日の学習ログに残しました。Qiitaの「ひとりNavigation API」カレンダーにも公開し、理解の整理を優先するルールで書いています。清書してWebで公開することは、視野に入れています。",
+      "en": "A solo Advent calendar of 25 Cosense posts in December 2025, only about the Navigation API. The daily learning log covers History API problems, official specifications and sources, and client-side routing experiments. It is also published on Qiita’s solo Navigation API calendar, under a rule that puts organizing one’s understanding first. A later edited publication on the Web is still in view."
     },
     "createdAt": "2025-12-01",
-    "genres": [
+    "categories": [
       "advent-calendar"
     ],
-    "technologies": [],
     "articles": [],
     "site": "https://scrapbox.io/yamanoku/%E3%81%B2%E3%81%A8%E3%82%8ANavigation_API_Advent_Calendar",
     "thumbnail": {
@@ -326,23 +302,17 @@
     "id": "react-tokyo-fes-2026",
     "name": "Accessible React UI",
     "description": {
-      "ja": "ReactでアクセシブルなUIを作るためのコンポーネント集サイトです。Button、Modal、Tabs、Menu、Carousel、TreeView、Sortable Listなど、ARIA APGを踏まえた7種のデモをAstro＋React＋Tailwind CSSで公開しています。React Tokyo Fes 2026のポスターセッション向けに作成し、Biomeのa11yルール適用やuseIdの利用など実装面も整備しました。複雑UIのキーボード操作・支援技術対応を具体コードで示す点が強みです。",
-      "en": "A component gallery for building accessible React UI. It publishes seven demos—Button, Modal, Tabs, Menu, Carousel, TreeView, and Sortable List—based on ARIA APG, built with Astro, React, and Tailwind CSS. Created for a React Tokyo Fes 2026 poster session, with Biome a11y rules and useId usage. It shows keyboard and assistive-tech support for complex UI in concrete code."
+      "ja": "ReactでアクセシブルなUIを作るコンポーネント集のサイトです。Button、Modal、Tabs、Menu、Carousel、TreeView、Sortable Listの7種を公開しています。ARIA Authoring Practices Guideに沿い、Astro、React、Tailwind CSSで作ったデモです。キーボード操作と支援技術への対応を含みます。React Tokyo Fes 2026のポスターセッション向けに作り、Biomeのアクセシビリティ向けルールとuseIdを使っています。",
+      "en": "A site of components for accessible UI in React. It publishes seven demos: Button, Modal, Tabs, Menu, Carousel, TreeView, and Sortable List. The demos follow the ARIA Authoring Practices Guide and are built with Astro, React, and Tailwind CSS. They include keyboard operation and support for assistive technology. It was made for a React Tokyo Fes 2026 poster session, and uses Biome’s accessibility rules and useId."
     },
     "createdAt": "2026-01-21",
-    "genres": [
+    "categories": [
       "website",
       "source-code"
     ],
-    "technologies": [
-      "Astro",
-      "React",
-      "Tailwind CSS",
-      "Cloudflare"
-    ],
     "articles": [],
     "github": "https://github.com/yamanoku/react-tokyo-fes-2026",
-    "site": "https://accessible-react-ui.yamanoku.net/",
+    "site": "https://react-tokyo-fes-2026.yamanoku.net/",
     "thumbnail": {
       "url": "/thumbnails/accessible-react-ui.png",
       "width": 1906,
@@ -353,15 +323,19 @@
     "id": "ogenkidesuka-fm-5th-anniversary",
     "name": "お元気ですか.fm 5周年記念誌「5年間、だいたいお元気でした」",
     "description": {
-      "ja": "技書博13で頒布した、Podcast「お元気ですか.fm」の5周年記念誌『5年間、だいたいお元気でした』です。2021年から2026年までのフロントエンドとデザインの現場で何が起き、どう変わったかを、yamanokuとtakanoripの視点で定点観測するエッセイ集です。キャリアの岐路や生成AIへの向き合い方にも触れ、ポッドキャストを聴くような感覚で読める構成を狙っています。UI・プロダクトデザインやキャリアを雑談してきた対談活動を同人誌としてアウトプットした点が特徴で、現場の技術変遷を等身大で言語化する力を示せます。",
-      "en": "The fifth-anniversary booklet for the podcast Ogenki Desu ka FM, titled roughly “Mostly Fine for Five Years,” distributed at Gishohaku 13. Essays by yamanoku and takanorip observe what changed in frontend and design practice from 2021 to 2026, including career turning points and generative AI, aiming for a podcast-like reading experience. Turning sustained conversation into a book demonstrates the ability to articulate technology shifts."
+      "ja": "技書博13で頒布した、Podcast「お元気ですか.fm」の5周年記念誌です。2021年から2026年までのフロントエンドとデザインの現場で起きた変化を、yamanokuとtakanoripのエッセイで定点観測しています。キャリアの岐路と、生成AIへの向き合い方も書いています。ポッドキャストを聴くような読み方を狙った構成です。",
+      "en": "The fifth-anniversary booklet of the podcast Ogenki Desu ka FM, distributed at Gishohaku 13. Essays by yamanoku and takanorip record what changed in frontend and design practice from 2021 to 2026. They also cover career turning points and how the authors face generative AI. The structure aims at reading that feels like listening to the podcast."
     },
     "createdAt": "2026-05-10",
-    "genres": [
+    "categories": [
       "book"
     ],
-    "technologies": [],
-    "articles": [],
+    "articles": [
+      {
+        "title": "vol.42 技書博13にサークル参加してきました！",
+        "url": "https://www.youtube.com/watch?v=fIYunIPswjE"
+      }
+    ],
     "site": "https://gishohaku.dev/gishohaku13/circles/T5xU9jvYoVnKxaURcPS7",
     "thumbnail": {
       "url": "/thumbnails/ogenkidesuka-fm-book.png",
@@ -373,33 +347,38 @@
     "id": "svelte-mini-compiler",
     "name": "svelte-mini-compiler",
     "description": {
-      "ja": "Svelte本体のcompile()（parse→analyze→transform）を参考にした学習用の擬似コンパイラです。HTML描画に絞り、手書きの再帰下降パーサとステートマシンで本家の構造を小さく再現しています。.svelteのビルドからブラウザ描画、コンポーネントimportによる合成、style要素対応まで拡張し、DESIGN.mdで本家との対応も整理しました。プロダクション用途ではないと明記したうえで、コンパイラ内部への理解と実装力を示すPoCとしてGitHub上で公開しています。",
-      "en": "A learning-oriented mini compiler modeled on Svelte’s compile() pipeline (parse → analyze → transform). Focused on HTML rendering, it recreates the upstream structure with a handwritten recursive-descent parser and state machine. Extended to build .svelte files for the browser, compose components via imports, and compile style elements, with DESIGN.md mapping to upstream. Explicitly not for production, published as a PoC of compiler internals understanding."
+      "ja": "Svelte本体のcompile()（parse、analyze、transform）を参考にした、学習用のコンパイラです。HTMLの描画に限定し、手書きの再帰下降パーサとステートマシンで、本家の構造を再現しています。.svelteのビルド、ブラウザでの描画、importによるコンポーネントの合成、style要素に対応し、DESIGN.mdで本家との対応を整理しています。プロダクション用途ではないPoCとして公開しています。",
+      "en": "A learning compiler modeled on Svelte’s compile() pipeline: parse, analyze, then transform. It is limited to HTML rendering and recreates the upstream structure with a handwritten recursive-descent parser and a state machine. It builds .svelte files, renders them in the browser, composes components through imports, and handles style elements. DESIGN.md maps those pieces to upstream. It is published as a proof of concept and is not for production."
     },
     "createdAt": "2026-07-10",
-    "genres": [
-      "poc",
+    "categories": [
       "source-code"
     ],
-    "technologies": [
-      "TypeScript"
+    "articles": [
+      {
+        "title": "SvelteのHTMLはどう解釈されているのか",
+        "url": "https://speakerdeck.com/yamanoku/how-svelte-compile-html"
+      }
     ],
-    "articles": [],
     "github": "https://github.com/yamanoku/svelte-mini-compiler"
   },
   {
     "id": "html-night-tokyo",
-    "name": "HTML Night in Tokyo",
+    "name": "HTML Night in Tokyo ~HTML DAY 2026 PRE EVENT~",
     "description": {
-      "ja": "あの頃のウェブを知る人からHTMLにあまり触れてこなかった人まで、「HTML」について今一度考えるイベントを東京で主催しました。案内スライドやステッカー準備、司会・会場運営まで担い、参加者は30人を超えました。電動車椅子利用者の参加にも対応し、詩人による生朗読など多様なプログラムを実施しています。HTMLの基礎を軸にコミュニティを立ち上げた実績で、技術イベントの企画・運営力とインクルーシブな場づくりへの意識を示せます。connpassで告知し、開催後はnoteではなくHTMLでレポートを公開する方針も掲げました。",
-      "en": "An event hosted in Tokyo to rethink HTML, welcoming both people familiar with the older Web and those less experienced with HTML. Responsibilities included briefing slides, stickers, emceeing, and venue operations, with more than 30 participants. The event accommodated a power wheelchair user and featured diverse programs such as live poetry reading, with a post-event plan to write the report in HTML. It shows event planning skills and inclusive community building."
+      "ja": "HTMLについて改めて考えるイベントを、東京で主催しました。あの頃のウェブを知る人と、HTMLにほとんど触れてこなかった人の両方を対象にしています。ゲスト打診、当日会場の準備、案内スライド、ステッカー作成、司会、会場運営を担当しました。当日の参加者は30人を超えました。",
+      "en": "An event hosted in Tokyo to think about HTML again. It was for both people who knew the earlier Web and people who had hardly worked with HTML. The host invited guests, prepared the venue, prepared briefing slides, created stickers, emceed, and ran the venue. The number of attendees exceeded 30."
     },
     "createdAt": "2026-08-07",
-    "genres": [
+    "categories": [
       "event"
     ],
-    "technologies": [],
-    "articles": [],
+    "articles": [
+      {
+        "title": "HTML Night in Tokyo | 覚え書き | @kazuhito",
+        "url": "https://kidachi.kazuhi.to/blog/archives/043519.html"
+      }
+    ],
     "site": "https://connpass.com/event/399762/",
     "thumbnail": {
       "url": "/thumbnails/html-night-in-tokyo.png",
@@ -411,16 +390,20 @@
     "id": "html-day-2026-tokatsu",
     "name": "HTML Day 2026 in 東葛",
     "description": {
-      "ja": "2026年8月8日、流山おおたかの森ホールで開催したHTML Day 2026の東葛会場を主催しました。世界各地でHTMLを書いて学ぶ国際的な催しのローカル開催として、東葛.devのドメイン提供を受けサイト（htmlday2026.toukatsu.dev）を公開しています。ハンドメイドなWebやAIデトックスとしての位置づけも言語化し、地域コミュニティと連携したイベント設計・情報発信を行いました。直前のHTML Nightと連続するコミュニティ活動の一環であり、HTMLを祝う場づくりの実績です。",
-      "en": "Hosted the Tokatsu venue of HTML Day 2026 on 8 August 2026 at Otakanomori Hall, Nagareyama. As a local gathering of the worldwide day to write and learn HTML, the site was published at htmlday2026.toukatsu.dev on a domain provided by Toukatsu.dev. The framing also articulated handmade Web and AI detox themes, with event design and communication in partnership with a regional community. Part of consecutive community work alongside HTML Night, celebrating HTML in practice."
+      "ja": "2026年8月8日、流山おおたかの森ホールで、HTML Day 2026の東葛会場を主催しました。世界各地でHTMLを書いて学ぶ催しの、地域での開催です。サイトは東葛.devから提供されたドメインで公開しています。ハンドメイドなWebであることと、AIデトックスとしての位置づけも文章にしています。直前のHTML Nightに続くコミュニティ活動の一つです。",
+      "en": "Hosted the Tokatsu venue of HTML Day 2026 on 8 August 2026 at Otakanomori Hall in Nagareyama. It is a local gathering of the worldwide event for writing and learning HTML. The site is published on a domain provided by 東葛.dev. The text also states its place as a handmade Web and as an AI detox. It continues the community activity of the preceding HTML Night."
     },
     "createdAt": "2026-08-08",
-    "genres": [
+    "categories": [
       "website",
       "event"
     ],
-    "technologies": [],
-    "articles": [],
+    "articles": [
+      {
+        "title": "HTML Day 2026 in 東葛 (Cosense)",
+        "url": "https://scrapbox.io/toukatsu-dev/HTML_Day_2026_in_%E6%9D%B1%E8%91%9B"
+      }
+    ],
     "site": "https://htmlday2026.toukatsu.dev/"
   }
 ]

@@ -2,7 +2,7 @@
 import { copy, type PortfolioLang } from "../../lib/copy";
 import {
   orderPortfolio,
-  WORK_GENRES,
+  WORK_CATEGORIES,
   type WorkItem
 } from "../../lib/portfolio";
 import HtmlNightVisual from "./HtmlNightVisual.astro";
@@ -33,18 +33,18 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
 );
 ---
 
-<div class="genre-catalog">
-  <fieldset class="genre-filter">
-    <legend>{text.genres}</legend>
-    {WORK_GENRES.map((genre) => (
+<div class="category-catalog">
+  <fieldset class="category-filter">
+    <legend>{text.categories}</legend>
+    {WORK_CATEGORIES.map((category) => (
       <label>
         <input
-          id={`genre-${genre}`}
+          id={`category-${category}`}
           type="checkbox"
-          name="genre"
-          value={genre}
+          name="category"
+          value={category}
         />
-        <span>{text.genre[genre]}</span>
+        <span>{text.category[category]}</span>
       </label>
     ))}
   </fieldset>
@@ -56,7 +56,7 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
             <article
               id={work.id}
               class="work"
-              data-genres={work.genres.join(" ")}
+              data-categories={work.categories.join(" ")}
             >
               <div class="work-body">
                 <h2>
@@ -81,6 +81,11 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
                   </a>
                 )}
               </h2>
+              <ul class="work-categories" aria-label={text.categories}>
+                {work.categories.map((category) => (
+                  <li>{text.category[category]}</li>
+                ))}
+              </ul>
               {work.thumbnail && (
                 <img
                   src={work.thumbnail.url}
@@ -89,27 +94,15 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
                   height={work.thumbnail.height}
                 />
               )}
-              <ul class="work-genres" aria-label={text.genres}>
-                {work.genres.map((genre) => (
-                  <li>{text.genre[genre]}</li>
-                ))}
-              </ul>
-              <p>{work.description[lang]}</p>
-              {work.technologies.length > 0 && (
-                <ul class="work-tech">
-                  {work.technologies.map((technology) => (
-                    <li>{technology}</li>
-                  ))}
-                </ul>
-              )}
               {work.site && (
                 <p class="work-links">
                   {work.site && <a href={work.site}>{work.site}</a>}
                 </p>
               )}
+              <p>{work.description[lang]}</p>
               {work.articles.length > 0 && (
-                <>
-                  <h3>{text.articles}</h3>
+                <aside>
+                  <h3>{text.portfolio_related}</h3>
                   <ul class="work-articles">
                     {work.articles.map((article) => (
                       <li>
@@ -117,9 +110,8 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
                       </li>
                     ))}
                   </ul>
-                </>
+                </aside>
               )}
-              <time datetime={work.createdAt}>{work.createdAt}</time>
             </div>
           </article>
           ))}

@@ -81,32 +81,32 @@ export type WorkThumbnail = {
   height: number;
 };
 
-export const WORK_GENRES = [
+export const WORK_CATEGORIES = [
   "website",
   "event",
-  "poc",
   "source-code",
   "advent-calendar",
-  "book"
+  "book",
+  "curation"
 ] as const;
 
-export type WorkGenre = (typeof WORK_GENRES)[number];
+export type WorkCategory = (typeof WORK_CATEGORIES)[number];
 
-export const isWorkGenre = (value: unknown): value is WorkGenre =>
+export const isWorkCategory = (value: unknown): value is WorkCategory =>
   typeof value === "string" &&
-  (WORK_GENRES as readonly string[]).includes(value);
+  (WORK_CATEGORIES as readonly string[]).includes(value);
 
-export const normalizeWorkGenres = (
-  genres: readonly WorkGenre[]
-): WorkGenre[] => WORK_GENRES.filter((genre) => genres.includes(genre));
+export const normalizeWorkCategories = (
+  categories: readonly WorkCategory[]
+): WorkCategory[] =>
+  WORK_CATEGORIES.filter((category) => categories.includes(category));
 
 export type Work = {
   id: string;
   name: string;
   description: LocalizedText;
   createdAt: string;
-  genres: WorkGenre[];
-  technologies: string[];
+  categories: WorkCategory[];
   articles: WorkArticle[];
   github?: string;
   site?: string;
@@ -248,36 +248,23 @@ const validateWork = (
   validateLocalizedText(value.description, `${path}.description`, issues);
   if (!isDate(value.createdAt))
     issues.push(`${path}.createdAt はYYYY-MM-DDにしてください`);
-  if (!Array.isArray(value.genres) || value.genres.length === 0) {
-    issues.push(`${path}.genres は1つ以上指定してください`);
+  if (!Array.isArray(value.categories) || value.categories.length === 0) {
+    issues.push(`${path}.categories は1つ以上指定してください`);
   } else {
-    value.genres.forEach((genre, genreIndex) => {
-      if (!isWorkGenre(genre)) {
+    value.categories.forEach((category, categoryIndex) => {
+      if (!isWorkCategory(category)) {
         issues.push(
-          `${path}.genres[${genreIndex}] は ${WORK_GENRES.join(", ")} のいずれかにしてください`
+          `${path}.categories[${categoryIndex}] は ${WORK_CATEGORIES.join(", ")} のいずれかにしてください`
         );
       }
     });
-    const names = value.genres.filter(isWorkGenre);
+    const names = value.categories.filter(isWorkCategory);
     if (new Set(names).size !== names.length) {
-      issues.push(`${path}.genres が重複しています`);
+      issues.push(`${path}.categories が重複しています`);
     }
   }
-  if (!Array.isArray(value.technologies)) {
-    issues.push(`${path}.technologies は配列にしてください`);
-  } else {
-    value.technologies.forEach((technology, technologyIndex) => {
-      addStringIssue(
-        issues,
-        technology,
-        `${path}.technologies[${technologyIndex}]`
-      );
-    });
-    const names = value.technologies.filter(
-      (technology): technology is string => typeof technology === "string"
-    );
-    if (new Set(names).size !== names.length)
-      issues.push(`${path}.technologies が重複しています`);
+  if ("technologies" in value) {
+    issues.push(`${path}.technologies は使えません`);
   }
   if (!Array.isArray(value.articles)) {
     issues.push(`${path}.articles は配列にしてください`);
@@ -305,13 +292,14 @@ const validateWork = (
       issues.push(`${thumbnailPath} はオブジェクトにしてください`);
     } else {
       const thumbnail = value.thumbnail;
-      if (
-        typeof thumbnail.url !== "string" ||
-        !thumbnail.url.startsWith("/thumbnails/") ||
-        thumbnail.url.includes("..")
-      ) {
+      const thumbnailUrl = thumbnail.url;
+      const isLocalThumbnail =
+        typeof thumbnailUrl === "string" &&
+        thumbnailUrl.startsWith("/thumbnails/") &&
+        !thumbnailUrl.includes("..");
+      if (!isLocalThumbnail && !isHttpUrl(thumbnailUrl)) {
         issues.push(
-          `${thumbnailPath}.url は /thumbnails/ 以下のパスにしてください`
+          `${thumbnailPath}.url は /thumbnails/ 以下のパスか、HTTP(S) URLにしてください`
         );
       }
       if (!isPositiveInteger(thumbnail.width))

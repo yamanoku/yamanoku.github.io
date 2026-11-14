@@ -41,6 +41,7 @@ body.portfolio-site {
   --space-content-gap: 0.75rem;
   --space-heading-gap: 2.75rem;
   --space-section: 4.5rem;
+  --space-article: 4rem;
   --space-hero-top: 6rem;
   --space-hero-gap: 4rem;
   font-family: "Gen Interface JP", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
@@ -151,7 +152,7 @@ body.portfolio-site .site-nav a[aria-current="page"] {
   text-decoration-color: currentColor;
 }
 
-body.portfolio-site .genre-filter {
+body.portfolio-site .category-filter {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -161,11 +162,11 @@ body.portfolio-site .genre-filter {
   font-size: var(--fs-small);
 }
 
-body.portfolio-site .genre-filter legend {
+body.portfolio-site .category-filter legend {
   padding: 0;
 }
 
-body.portfolio-site .genre-filter label {
+body.portfolio-site .category-filter label {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -173,30 +174,30 @@ body.portfolio-site .genre-filter label {
   font-size: var(--fs-small);
 }
 
-body.portfolio-site .genre-filter input {
+body.portfolio-site .category-filter input {
   accent-color: var(--y-identity-color);
 }
 
-body.portfolio-site .genre-catalog:has(input[name="genre"]:checked) .catalog-year,
-body.portfolio-site .genre-catalog:has(input[name="genre"]:checked) .work {
+body.portfolio-site .category-catalog:has(input[name="category"]:checked) .catalog-year,
+body.portfolio-site .category-catalog:has(input[name="category"]:checked) .work {
   display: none;
 }
 
-body.portfolio-site .genre-catalog:has(#genre-website:checked) .catalog-year:has(.work[data-genres~="website"]),
-body.portfolio-site .genre-catalog:has(#genre-event:checked) .catalog-year:has(.work[data-genres~="event"]),
-body.portfolio-site .genre-catalog:has(#genre-poc:checked) .catalog-year:has(.work[data-genres~="poc"]),
-body.portfolio-site .genre-catalog:has(#genre-source-code:checked) .catalog-year:has(.work[data-genres~="source-code"]),
-body.portfolio-site .genre-catalog:has(#genre-advent-calendar:checked) .catalog-year:has(.work[data-genres~="advent-calendar"]),
-body.portfolio-site .genre-catalog:has(#genre-book:checked) .catalog-year:has(.work[data-genres~="book"]) {
+body.portfolio-site .category-catalog:has(#category-website:checked) .catalog-year:has(.work[data-categories~="website"]),
+body.portfolio-site .category-catalog:has(#category-event:checked) .catalog-year:has(.work[data-categories~="event"]),
+body.portfolio-site .category-catalog:has(#category-source-code:checked) .catalog-year:has(.work[data-categories~="source-code"]),
+body.portfolio-site .category-catalog:has(#category-advent-calendar:checked) .catalog-year:has(.work[data-categories~="advent-calendar"]),
+body.portfolio-site .category-catalog:has(#category-book:checked) .catalog-year:has(.work[data-categories~="book"]),
+body.portfolio-site .category-catalog:has(#category-curation:checked) .catalog-year:has(.work[data-categories~="curation"]) {
   display: block;
 }
 
-body.portfolio-site .genre-catalog:has(#genre-website:checked) .work[data-genres~="website"],
-body.portfolio-site .genre-catalog:has(#genre-event:checked) .work[data-genres~="event"],
-body.portfolio-site .genre-catalog:has(#genre-poc:checked) .work[data-genres~="poc"],
-body.portfolio-site .genre-catalog:has(#genre-source-code:checked) .work[data-genres~="source-code"],
-body.portfolio-site .genre-catalog:has(#genre-advent-calendar:checked) .work[data-genres~="advent-calendar"],
-body.portfolio-site .genre-catalog:has(#genre-book:checked) .work[data-genres~="book"] {
+body.portfolio-site .category-catalog:has(#category-website:checked) .work[data-categories~="website"],
+body.portfolio-site .category-catalog:has(#category-event:checked) .work[data-categories~="event"],
+body.portfolio-site .category-catalog:has(#category-source-code:checked) .work[data-categories~="source-code"],
+body.portfolio-site .category-catalog:has(#category-advent-calendar:checked) .work[data-categories~="advent-calendar"],
+body.portfolio-site .category-catalog:has(#category-book:checked) .work[data-categories~="book"],
+body.portfolio-site .category-catalog:has(#category-curation:checked) .work[data-categories~="curation"] {
   display: flex;
 }
 
@@ -214,16 +215,10 @@ body.portfolio-site .work {
   display: flex;
   gap: 1em;
   align-items: baseline;
-  margin-block-start: var(--space-paragraph);
+  margin-block-start: var(--space-section);
+  padding-block-end: var(--space-article);
+  border-block-end-style: dotted;
   scroll-margin-block-start: 1rem;
-  border-block-end: 0;
-}
-
-body.portfolio-site .work time {
-  display: block;
-  font-variant-numeric: tabular-nums;
-  font-size: var(--fs-small);
-  margin-block-start: var(--space-paragraph);
 }
 
 body.portfolio-site .work h2 {
@@ -233,7 +228,7 @@ body.portfolio-site .work h2 {
   gap: 0.35em 0.45em;
   font-size: var(--fs-heading-3);
   font-weight: 600;
-  margin-block: var(--space-paragraph);
+  margin-block-end: var(--space-paragraph);
 }
 
 body.portfolio-site .work-github {
@@ -251,14 +246,8 @@ body.portfolio-site .work-github svg {
   block-size: 0.85em;
 }
 
-body.portfolio-site .work h3 {
-  margin-block-start: var(--space-paragraph);
-  font-size: var(--fs-small);
-}
-
 body.portfolio-site .work-body > p:not(.work-links) {
   margin-block-start: var(--space-content-gap);
-  text-align: justify;
 }
 
 body.portfolio-site .work-visual {
@@ -313,7 +302,7 @@ body.portfolio-site .work-visual-hours {
   }
 }
 
-body.portfolio-site .work-genres,
+body.portfolio-site .work-categories,
 body.portfolio-site .work-tech,
 body.portfolio-site .work-articles {
   margin-block-start: var(--space-content-gap);
@@ -321,7 +310,7 @@ body.portfolio-site .work-articles {
   list-style: none;
 }
 
-body.portfolio-site .work-genres,
+body.portfolio-site .work-categories,
 body.portfolio-site .work-tech {
   display: flex;
   flex-wrap: wrap;
@@ -329,7 +318,7 @@ body.portfolio-site .work-tech {
   font-size: var(--fs-small);
 }
 
-body.portfolio-site .work-genres li {
+body.portfolio-site .work-categories li {
   font-size: var(--fs-x-small);
   border: 1px solid;
   margin-block-end: var(--space-content-gap);
@@ -342,6 +331,16 @@ body.portfolio-site .work-links {
   flex-wrap: wrap;
   gap: 0.35rem 1rem;
   margin-block-start: var(--space-content-gap);
+}
+
+body.portfolio-site aside {
+  padding: 1.75rem 1.25rem;
+  margin-block-start: var(--space-paragraph);
+  background-color: rgb(124 192 255 / 0.2);
+}
+
+body.portfolio-site aside h3 {
+  margin-block-start: 0;
 }
 
 body.portfolio-site .work-articles li + li {

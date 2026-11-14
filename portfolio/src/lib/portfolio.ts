@@ -3,16 +3,16 @@ export type WorkArticle = {
   url: string;
 };
 
-export const WORK_GENRES = [
+export const WORK_CATEGORIES = [
   "website",
   "event",
-  "poc",
   "source-code",
   "advent-calendar",
-  "book"
+  "book",
+  "curation"
 ] as const;
 
-export type WorkGenre = (typeof WORK_GENRES)[number];
+export type WorkCategory = (typeof WORK_CATEGORIES)[number];
 
 export type WorkItem = {
   id: string;
@@ -22,8 +22,7 @@ export type WorkItem = {
     en: string;
   };
   createdAt: string;
-  genres: WorkGenre[];
-  technologies: string[];
+  categories: WorkCategory[];
   articles: WorkArticle[];
   github?: string;
   site?: string;

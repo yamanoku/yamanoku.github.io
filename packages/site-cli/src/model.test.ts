@@ -57,21 +57,23 @@ describe("repository data validation", () => {
     );
   });
 
-  it("rejects an unknown work genre", () => {
+  it("rejects an unknown work category", () => {
     const invalid = structuredClone(portfolio);
-    invalid[0].genres = ["website", "demo"];
+    invalid[0].categories = ["website", "demo"];
     assert.throws(
       () => validatePortfolio(invalid),
-      /genres\[1\] は website, event, poc, source-code, advent-calendar, book のいずれかにしてください/
+      /categories\[1\] は website, event, source-code, advent-calendar, book, curation のいずれかにしてください/
     );
   });
 
-  it("rejects duplicate technologies on a work", () => {
-    const invalid = structuredClone(portfolio);
-    invalid[0].technologies = ["Vue.js", "Vue.js"];
+  it("rejects technologies on a work", () => {
+    const invalid = structuredClone(portfolio) as Array<
+      (typeof portfolio)[number] & { technologies?: string[] }
+    >;
+    invalid[0].technologies = ["Vue.js"];
     assert.throws(
       () => validatePortfolio(invalid),
-      /technologies が重複しています/
+      /technologies は使えません/
     );
   });
 

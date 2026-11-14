@@ -19,7 +19,7 @@ pnpm site -- portfolio add \
   --description-ja "概要" \
   --description-en "Summary" \
   --created 2026-01-01 \
-  --genre website --genre source-code
+  --category website --category source-code
 
 # プレビュー確認後に保存
 pnpm site -- portfolio add ... --write
