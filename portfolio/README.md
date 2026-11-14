@@ -18,7 +18,8 @@ pnpm site -- portfolio add \
   --github "https://github.com/yamanoku/example" \
   --description-ja "概要" \
   --description-en "Summary" \
-  --created 2026-01-01
+  --created 2026-01-01 \
+  --genre website --genre source-code
 
 # プレビュー確認後に保存
 pnpm site -- portfolio add ... --write

@@ -10,6 +10,7 @@
   "dependencies": {
     "@tailwindcss/vite": "catalog:website",
     "astro": "catalog:website",
+    "gen-interface-jp": "catalog:website",
     "modern-normalize": "catalog:website",
     "tailwindcss": "catalog:website",
     "vite": "catalog:website",

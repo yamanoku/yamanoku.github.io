@@ -57,6 +57,15 @@ describe("repository data validation", () => {
     );
   });
 
+  it("rejects an unknown work genre", () => {
+    const invalid = structuredClone(portfolio);
+    invalid[0].genres = ["website", "demo"];
+    assert.throws(
+      () => validatePortfolio(invalid),
+      /genres\[1\] は website, event, poc, source-code, advent-calendar, book のいずれかにしてください/
+    );
+  });
+
   it("rejects duplicate technologies on a work", () => {
     const invalid = structuredClone(portfolio);
     invalid[0].technologies = ["Vue.js", "Vue.js"];

@@ -127,7 +127,7 @@ pnpm site -- links list social
 
 ### 製作実績
 
-識別子は `--id` で、完全一致です。保存は作った日の古い順です。`add` と、作成日を変える `update` は、その順へ並べ直します。同じ日の項目は、既存の並びを保ったまま新しいものを後ろに置きます。`--github` と `--site` はどちらも省略できます。`update` で空文字を渡すとその項目を消します。使用技術は `--technology`、関連記事は `--article-title` と `--article-url` を同じ件数・同じ順で繰り返します。`update` でこれらを指定すると、その一覧を置き換えます。空にするときは `--clear-technologies` または `--clear-articles` です。
+識別子は `--id` で、完全一致です。保存は作った日の古い順です。`add` と、作成日を変える `update` は、その順へ並べ直します。同じ日の項目は、既存の並びを保ったまま新しいものを後ろに置きます。`--github` と `--site` はどちらも省略できます。`update` で空文字を渡すとその項目を消します。ジャンルは `--genre` で、`website`、`event`、`poc`、`source-code`、`advent-calendar`、`book` から1つ以上を繰り返します。複数当たる場合は重ねます。保存時はこの並び順に揃えます。`update` で指定すると、その一覧を置き換えます。使用技術は `--technology`、関連記事は `--article-title` と `--article-url` を同じ件数・同じ順で繰り返します。`update` でこれらを指定すると、その一覧を置き換えます。空にするときは `--clear-technologies` または `--clear-articles` です。
 
 ```bash
 pnpm site -- portfolio list
@@ -137,6 +137,7 @@ pnpm site -- portfolio add \
   --site "https://example.com" \
   --description-ja "概要" --description-en "Summary" \
   --created 2026-01-01 \
+  --genre website --genre source-code \
   --technology TypeScript --technology Vite \
   --article-title "記事" --article-url "https://example.com/article" \
   --write

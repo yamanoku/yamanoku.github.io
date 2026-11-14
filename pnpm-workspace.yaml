@@ -30,6 +30,7 @@ catalogs:
   website:
     "@tailwindcss/vite": 4.3.5
     astro: 7.4.7
+    gen-interface-jp: 0.8.0
     markuplint: 5.5.0
     modern-normalize: 3.0.1
     oxfmt: 0.78.0

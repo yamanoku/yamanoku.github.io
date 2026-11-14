@@ -9,13 +9,22 @@
       "en": "A template for building a portfolio site with Vue.js."
     },
     "createdAt": "2016-12-08",
+    "genres": [
+      "website",
+      "source-code"
+    ],
     "technologies": [
       "Vue.js",
       "Vue Router",
       "Vite",
       "TypeScript"
     ],
-    "articles": []
+    "articles": [],
+    "thumbnail": {
+      "url": "/thumbnails/vue-portfolio-template.png",
+      "width": 2560,
+      "height": 1600
+    }
   },
   {
     "id": "birthday-countdown",
@@ -26,6 +35,9 @@
       "en": "A countdown appto the next yamanoku's birthday."
     },
     "createdAt": "2017-10-13",
+    "genres": [
+      "source-code"
+    ],
     "technologies": [
       "Hono",
       "HonoX",
@@ -33,7 +45,12 @@
       "Tailwind CSS",
       "Cloudflare Workers"
     ],
-    "articles": []
+    "articles": [],
+    "thumbnail": {
+      "url": "/thumbnails/birthday-countdown.gif",
+      "width": 742,
+      "height": 542
+    }
   },
   {
     "id": "oclock",
@@ -44,6 +61,9 @@
       "en": "A simple digital clock that counts in seconds with Svelte."
     },
     "createdAt": "2021-04-11",
+    "genres": [
+      "source-code"
+    ],
     "technologies": [
       "Svelte",
       "TypeScript",
@@ -55,7 +75,12 @@
         "title": "Svelteでデジタル時計コンポーネントを作る",
         "url": "https://zenn.dev/yamanoku/scraps/bb713d47a45a55"
       }
-    ]
+    ],
+    "thumbnail": {
+      "url": "/thumbnails/oclock-app.png",
+      "width": 2880,
+      "height": 1800
+    }
   },
   {
     "id": "archives",
@@ -66,12 +91,21 @@
       "en": "An archive site for articles I have written."
     },
     "createdAt": "2021-04-11",
+    "genres": [
+      "website",
+      "source-code"
+    ],
     "technologies": [
       "Vite",
       "TypeScript",
       "ox-content"
     ],
-    "articles": []
+    "articles": [],
+    "thumbnail": {
+      "url": "/thumbnails/archives.png",
+      "width": 1200,
+      "height": 630
+    }
   },
   {
     "id": "vue-visually-hidden",
@@ -82,6 +116,9 @@
       "en": "A Vue component that hides content visually and keeps it available to assistive technology."
     },
     "createdAt": "2021-07-31",
+    "genres": [
+      "source-code"
+    ],
     "technologies": [
       "Vue.js",
       "TypeScript",
@@ -99,13 +136,21 @@
       "en": "An awesome list of Japanese companies that work on accessibility."
     },
     "createdAt": "2021-09-02",
+    "genres": [
+      "source-code"
+    ],
     "technologies": [],
     "articles": [
       {
         "title": "日本企業のアクセシビリティ事例をコツコツと収集している話",
         "url": "https://docs.google.com/presentation/d/e/2PACX-1vT22K28-kR821F3K_4UGLhx1UVD1EmyC5hoqGGUjtMO9Glg_btK048U8Vth1oMnjCTWaBTxXaRlGqL_/pub?start=false&loop=false&delayms=3000"
       }
-    ]
+    ],
+    "thumbnail": {
+      "url": "/thumbnails/awesome-japanese-a11y-companies.png",
+      "width": 240,
+      "height": 240
+    }
   },
   {
     "id": "yamanoku-advent-calendar-2023",
@@ -115,6 +160,9 @@
       "en": "A solo Advent calendar written in December 2023, with 25 posts on daily life, work, and technology."
     },
     "createdAt": "2023-12-01",
+    "genres": [
+      "advent-calendar"
+    ],
     "technologies": [],
     "articles": [],
     "site": "https://adventar.org/calendars/8589"
@@ -128,6 +176,10 @@
       "en": "A site that lists speakers from past Vue Fes Japan events."
     },
     "createdAt": "2024-08-31",
+    "genres": [
+      "website",
+      "source-code"
+    ],
     "technologies": [
       "Vue.js",
       "vuerend",
@@ -143,7 +195,12 @@
         "title": "とあるサイトがkingnizeされるまでのNuxtからvuerend & Vizeへ",
         "url": "https://scrapbox.io/yamanoku/%E3%81%A8%E3%81%82%E3%82%8B%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8Ckingnize%E3%81%95%E3%82%8C%E3%82%8B%E3%81%BE%E3%81%A7%EF%BD%9ENuxt%E3%81%8B%E3%82%89vuerend_&_Vize%E3%81%B8"
       }
-    ]
+    ],
+    "thumbnail": {
+      "url": "/thumbnails/vuefes-japan-speakers.png",
+      "width": 1200,
+      "height": 630
+    }
   },
   {
     "id": "baseline-mcp-server",
@@ -154,6 +211,9 @@
       "en": "An MCP server that reports the Baseline status of a Web API."
     },
     "createdAt": "2025-04-12",
+    "genres": [
+      "source-code"
+    ],
     "technologies": [
       "Deno",
       "Model Context Protocol"
@@ -163,7 +223,12 @@
         "title": "Baseline MCP Serverを公開しました！",
         "url": "https://zenn.dev/yamanoku/articles/baseline-mcp-server"
       }
-    ]
+    ],
+    "thumbnail": {
+      "url": "/thumbnails/baseline-mcp-server.png",
+      "width": 280,
+      "height": 280
+    }
   },
   {
     "id": "connpass-user-mcp-server",
@@ -174,28 +239,44 @@
       "en": "An MCP server for the connpass users API."
     },
     "createdAt": "2025-04-20",
+    "genres": [
+      "source-code"
+    ],
     "technologies": [
       "TypeScript",
       "Deno",
       "Model Context Protocol"
     ],
-    "articles": []
+    "articles": [],
+    "thumbnail": {
+      "url": "/thumbnails/connpass-user-mcp-server.png",
+      "width": 280,
+      "height": 280
+    }
   },
   {
     "id": "aria-validate-mcp-server",
-    "name": "aria-validate-mcp-server",
+    "name": "ARIA Validate MCP Server",
     "github": "https://github.com/yamanoku/aria-validate-mcp-server",
     "description": {
       "ja": "WAI-ARIAの使い方を検証するMCPサーバーだ。",
       "en": "An MCP server that validates WAI-ARIA usage."
     },
     "createdAt": "2025-10-15",
+    "genres": [
+      "source-code"
+    ],
     "technologies": [
       "TypeScript",
       "Model Context Protocol",
       "aria-query"
     ],
-    "articles": []
+    "articles": [],
+    "thumbnail": {
+      "url": "/thumbnails/aria-validate-mcp-server.png",
+      "width": 280,
+      "height": 280
+    }
   },
   {
     "id": "navigation-api-advent-calendar",
@@ -205,9 +286,17 @@
       "en": "A solo Advent calendar from December 2025 on the Navigation API. Daily notes on the specification and implementations, kept on Cosense."
     },
     "createdAt": "2025-12-01",
+    "genres": [
+      "advent-calendar"
+    ],
     "technologies": [],
     "articles": [],
-    "site": "https://scrapbox.io/yamanoku/%E3%81%B2%E3%81%A8%E3%82%8ANavigation_API_Advent_Calendar"
+    "site": "https://scrapbox.io/yamanoku/%E3%81%B2%E3%81%A8%E3%82%8ANavigation_API_Advent_Calendar",
+    "thumbnail": {
+      "url": "/thumbnails/navigation-api-advent-calendar.png",
+      "width": 1024,
+      "height": 559
+    }
   },
   {
     "id": "react-tokyo-fes-2026",
@@ -218,13 +307,23 @@
       "en": "A component gallery for building accessible UI with React. Created for the poster session at React Tokyo Fes 2026."
     },
     "createdAt": "2026-01-21",
+    "genres": [
+      "website",
+      "source-code"
+    ],
     "technologies": [
       "Astro",
       "React",
       "Tailwind CSS",
       "Cloudflare"
     ],
-    "articles": []
+    "articles": [],
+    "site": "https://accessible-react-ui.yamanoku.net/",
+    "thumbnail": {
+      "url": "/thumbnails/accessible-react-ui.png",
+      "width": 1906,
+      "height": 1196
+    }
   },
   {
     "id": "ogenkidesuka-fm-5th-anniversary",
@@ -234,9 +333,17 @@
       "en": "The fifth-anniversary booklet for the podcast Ogenki Desu ka FM, distributed at Gishohaku 13. Essays on frontend and design from 2021 to 2026."
     },
     "createdAt": "2026-05-10",
+    "genres": [
+      "book"
+    ],
     "technologies": [],
     "articles": [],
-    "site": "https://gishohaku.dev/gishohaku13/circles/T5xU9jvYoVnKxaURcPS7"
+    "site": "https://gishohaku.dev/gishohaku13/circles/T5xU9jvYoVnKxaURcPS7",
+    "thumbnail": {
+      "url": "/thumbnails/ogenkidesuka-fm-book.png",
+      "width": 420,
+      "height": 595
+    }
   },
   {
     "id": "svelte-mini-compiler",
@@ -247,6 +354,10 @@
       "en": "A small compiler that follows the parse, analyze, and transform steps of Svelte."
     },
     "createdAt": "2026-07-10",
+    "genres": [
+      "poc",
+      "source-code"
+    ],
     "technologies": [
       "TypeScript"
     ],
@@ -260,9 +371,17 @@
       "en": "An event to think about HTML again."
     },
     "createdAt": "2026-08-07",
+    "genres": [
+      "event"
+    ],
     "technologies": [],
     "articles": [],
-    "site": "https://connpass.com/event/399762/"
+    "site": "https://connpass.com/event/399762/",
+    "thumbnail": {
+      "url": "/thumbnails/html-night-in-tokyo.png",
+      "width": 660,
+      "height": 372
+    }
   },
   {
     "id": "html-day-2026-tokatsu",
@@ -272,6 +391,10 @@
       "en": "HTML Day 2026 in Tokatsu, a gathering to write and learn HTML."
     },
     "createdAt": "2026-08-08",
+    "genres": [
+      "website",
+      "event"
+    ],
     "technologies": [],
     "articles": [],
     "site": "https://htmlday2026.toukatsu.dev/"

@@ -43,10 +43,6 @@ body.portfolio-site {
   --space-section: 4.5rem;
   --space-hero-top: 6rem;
   --space-hero-gap: 4rem;
-  margin: 0;
-  box-sizing: border-box;
-  max-inline-size: var(--container-max);
-  padding-inline: var(--gutter);
   font-family: "Gen Interface JP", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
   font-weight: 400;
   font-feature-settings: "chws";
@@ -61,8 +57,7 @@ body.portfolio-site {
 }
 
 body.portfolio-site :where(header, main, footer) {
-  max-inline-size: none;
-  padding-inline: 0;
+  padding-inline: var(--gutter);
 }
 
 body.portfolio-site :where(h1, h2, h3, h4, p, ul) {
@@ -122,15 +117,11 @@ body.portfolio-site h1 {
 }
 
 body.portfolio-site .tagline {
-  margin-block-start: var(--space-hero-gap);
-  font-size: var(--fs-heading-3);
-  line-height: var(--lh-heading);
+  margin-block-start: var(--space-paragraph);
 }
 
 body.portfolio-site .site-nav {
   margin-block-start: var(--space-paragraph);
-  font-size: var(--fs-small);
-  line-height: var(--lh-nav);
 }
 
 body.portfolio-site .site-nav ul {
@@ -156,11 +147,57 @@ body.portfolio-site .site-nav a:focus-visible {
   text-decoration-color: currentColor;
 }
 
-body.portfolio-site .site-nav a[aria-current="page"]::before {
-  content: "●" / "";
-  margin-inline-end: 0.6em;
-  font-size: 0.5em;
-  vertical-align: 0.25em;
+body.portfolio-site .site-nav a[aria-current="page"] {
+  text-decoration-color: currentColor;
+}
+
+body.portfolio-site .genre-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1.25rem;
+  margin: var(--space-paragraph) 0 0;
+  padding: 0 0.75rem;
+  font-size: var(--fs-small);
+}
+
+body.portfolio-site .genre-filter legend {
+  padding: 0;
+}
+
+body.portfolio-site .genre-filter label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-block-size: 2.75rem;
+  font-size: var(--fs-small);
+}
+
+body.portfolio-site .genre-filter input {
+  accent-color: var(--y-identity-color);
+}
+
+body.portfolio-site .genre-catalog:has(input[name="genre"]:checked) .catalog-year,
+body.portfolio-site .genre-catalog:has(input[name="genre"]:checked) .work {
+  display: none;
+}
+
+body.portfolio-site .genre-catalog:has(#genre-website:checked) .catalog-year:has(.work[data-genres~="website"]),
+body.portfolio-site .genre-catalog:has(#genre-event:checked) .catalog-year:has(.work[data-genres~="event"]),
+body.portfolio-site .genre-catalog:has(#genre-poc:checked) .catalog-year:has(.work[data-genres~="poc"]),
+body.portfolio-site .genre-catalog:has(#genre-source-code:checked) .catalog-year:has(.work[data-genres~="source-code"]),
+body.portfolio-site .genre-catalog:has(#genre-advent-calendar:checked) .catalog-year:has(.work[data-genres~="advent-calendar"]),
+body.portfolio-site .genre-catalog:has(#genre-book:checked) .catalog-year:has(.work[data-genres~="book"]) {
+  display: block;
+}
+
+body.portfolio-site .genre-catalog:has(#genre-website:checked) .work[data-genres~="website"],
+body.portfolio-site .genre-catalog:has(#genre-event:checked) .work[data-genres~="event"],
+body.portfolio-site .genre-catalog:has(#genre-poc:checked) .work[data-genres~="poc"],
+body.portfolio-site .genre-catalog:has(#genre-source-code:checked) .work[data-genres~="source-code"],
+body.portfolio-site .genre-catalog:has(#genre-advent-calendar:checked) .work[data-genres~="advent-calendar"],
+body.portfolio-site .genre-catalog:has(#genre-book:checked) .work[data-genres~="book"] {
+  display: flex;
 }
 
 body.portfolio-site .catalog-year {
@@ -196,6 +233,7 @@ body.portfolio-site .work h2 {
   gap: 0.35em 0.45em;
   font-size: var(--fs-heading-3);
   font-weight: 600;
+  margin-block: var(--space-paragraph);
 }
 
 body.portfolio-site .work-github {
@@ -223,6 +261,59 @@ body.portfolio-site .work-body > p:not(.work-links) {
   text-align: justify;
 }
 
+body.portfolio-site .work-visual {
+  margin-block: var(--space-content-gap) 0;
+}
+
+body.portfolio-site .work-visual-plate {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--y-rhythm-1);
+  padding: clamp(1.25rem, 4vw, var(--y-rhythm-4));
+  border: 1px solid var(--y-image-border-color);
+}
+
+body.portfolio-site .work-visual-mark {
+  inline-size: 3rem;
+  block-size: auto;
+  color: var(--y-identity-color);
+}
+
+body.portfolio-site .work-visual-name {
+  margin-block-start: var(--y-rhythm-2);
+  font-size: clamp(1.75rem, 5vw, var(--fs-heading-1));
+  font-weight: 600;
+  line-height: var(--lh-heading);
+  text-wrap: balance;
+  word-break: auto-phrase;
+}
+
+body.portfolio-site .work-visual-sub {
+  font-size: var(--fs-heading-3);
+  line-height: var(--lh-heading);
+}
+
+body.portfolio-site .work-visual-when {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  margin-block-start: var(--y-rhythm-3);
+  font-size: var(--fs-small);
+  font-variant-numeric: tabular-nums;
+}
+
+body.portfolio-site .work-visual-hours {
+  white-space: nowrap;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.portfolio-site .work-visual-mark {
+    color: var(--y-white-base);
+  }
+}
+
+body.portfolio-site .work-genres,
 body.portfolio-site .work-tech,
 body.portfolio-site .work-articles {
   margin-block-start: var(--space-content-gap);
@@ -230,11 +321,20 @@ body.portfolio-site .work-articles {
   list-style: none;
 }
 
+body.portfolio-site .work-genres,
 body.portfolio-site .work-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 0.9rem;
   font-size: var(--fs-small);
+}
+
+body.portfolio-site .work-genres li {
+  font-size: var(--fs-x-small);
+  border: 1px solid;
+  margin-block-end: var(--space-content-gap);
+  padding: .05em .5em;
+  display: inline-block;
 }
 
 body.portfolio-site .work-links {
@@ -290,5 +390,13 @@ body.portfolio-site .portfolio-foot a:focus-visible {
   body.portfolio-site ::selection {
     background: Highlight;
     color: HighlightText;
+  }
+
+  body.portfolio-site .work-visual-plate {
+    border-color: CanvasText;
+  }
+
+  body.portfolio-site .work-visual-mark {
+    color: CanvasText;
   }
 }

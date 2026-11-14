@@ -3,6 +3,7 @@ import GlobalFooter from "../components/global/GlobalFooter.astro";
 import GlobalHeader from "../components/global/GlobalHeader.astro";
 import { copy, type PortfolioLang } from "../lib/copy";
 
+import "gen-interface-jp/400.css";
 import "../styles/global.css";
 
 interface Props {
@@ -21,10 +22,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/gen-interface-jp@0.8.0/cdn/400.css"
-    />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{text.title}</title>
     <meta name="title" content={text.title} />

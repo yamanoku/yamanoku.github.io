@@ -79,7 +79,14 @@
       "daily-journal.japanese-only": "",
       "multilingual": "多言語ページ",
       "portfolio.github": "GitHub",
-      "skip.to-content": "本文へスキップ"
+      "skip.to-content": "本文へスキップ",
+      "portfolio.genres": "ジャンル",
+      "portfolio.genre.website": "ウェブサイト",
+      "portfolio.genre.poc": "PoC",
+      "portfolio.genre.sourceCode": "ソースコード",
+      "portfolio.genre.adventCalendar": "アドベントカレンダー",
+      "portfolio.genre.book": "本",
+      "portfolio.genre.event": "イベント"
     },
     "en": {
       "meta.description": "Okuto Oyama Portfolio Site",
@@ -119,7 +126,14 @@
       "daily-journal.japanese-only": "Sorry, Japanese text only",
       "multilingual": "Multilingual Page",
       "portfolio.github": "GitHub",
-      "skip.to-content": "Skip to content"
+      "skip.to-content": "Skip to content",
+      "portfolio.genres": "Genre",
+      "portfolio.genre.website": "Website",
+      "portfolio.genre.poc": "PoC",
+      "portfolio.genre.sourceCode": "Source code",
+      "portfolio.genre.adventCalendar": "Advent calendar",
+      "portfolio.genre.book": "Book",
+      "portfolio.genre.event": "Event"
     }
   },
   "journal": {

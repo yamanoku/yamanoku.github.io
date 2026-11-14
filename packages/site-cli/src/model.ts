@@ -75,15 +75,42 @@ export type WorkArticle = {
   url: string;
 };
 
+export type WorkThumbnail = {
+  url: string;
+  width: number;
+  height: number;
+};
+
+export const WORK_GENRES = [
+  "website",
+  "event",
+  "poc",
+  "source-code",
+  "advent-calendar",
+  "book"
+] as const;
+
+export type WorkGenre = (typeof WORK_GENRES)[number];
+
+export const isWorkGenre = (value: unknown): value is WorkGenre =>
+  typeof value === "string" &&
+  (WORK_GENRES as readonly string[]).includes(value);
+
+export const normalizeWorkGenres = (
+  genres: readonly WorkGenre[]
+): WorkGenre[] => WORK_GENRES.filter((genre) => genres.includes(genre));
+
 export type Work = {
   id: string;
   name: string;
   description: LocalizedText;
   createdAt: string;
+  genres: WorkGenre[];
   technologies: string[];
   articles: WorkArticle[];
   github?: string;
   site?: string;
+  thumbnail?: WorkThumbnail;
 };
 
 export type SiteContent = {
@@ -221,6 +248,21 @@ const validateWork = (
   validateLocalizedText(value.description, `${path}.description`, issues);
   if (!isDate(value.createdAt))
     issues.push(`${path}.createdAt はYYYY-MM-DDにしてください`);
+  if (!Array.isArray(value.genres) || value.genres.length === 0) {
+    issues.push(`${path}.genres は1つ以上指定してください`);
+  } else {
+    value.genres.forEach((genre, genreIndex) => {
+      if (!isWorkGenre(genre)) {
+        issues.push(
+          `${path}.genres[${genreIndex}] は ${WORK_GENRES.join(", ")} のいずれかにしてください`
+        );
+      }
+    });
+    const names = value.genres.filter(isWorkGenre);
+    if (new Set(names).size !== names.length) {
+      issues.push(`${path}.genres が重複しています`);
+    }
+  }
   if (!Array.isArray(value.technologies)) {
     issues.push(`${path}.technologies は配列にしてください`);
   } else {
@@ -257,8 +299,32 @@ const validateWork = (
     if (new Set(urls).size !== urls.length)
       issues.push(`${path}.articles のURLが重複しています`);
   }
+  if (value.thumbnail !== undefined) {
+    const thumbnailPath = `${path}.thumbnail`;
+    if (!isObject(value.thumbnail)) {
+      issues.push(`${thumbnailPath} はオブジェクトにしてください`);
+    } else {
+      const thumbnail = value.thumbnail;
+      if (
+        typeof thumbnail.url !== "string" ||
+        !thumbnail.url.startsWith("/thumbnails/") ||
+        thumbnail.url.includes("..")
+      ) {
+        issues.push(
+          `${thumbnailPath}.url は /thumbnails/ 以下のパスにしてください`
+        );
+      }
+      if (!isPositiveInteger(thumbnail.width))
+        issues.push(`${thumbnailPath}.width は正の整数にしてください`);
+      if (!isPositiveInteger(thumbnail.height))
+        issues.push(`${thumbnailPath}.height は正の整数にしてください`);
+    }
+  }
   return true;
 };
+
+const isPositiveInteger = (value: unknown): value is number =>
+  typeof value === "number" && Number.isInteger(value) && value > 0;
 
 export function validatePortfolio(value: unknown): Work[] {
   const issues: string[] = [];

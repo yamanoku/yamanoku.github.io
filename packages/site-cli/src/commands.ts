@@ -10,6 +10,10 @@ import {
   type ProfileField,
   SECTION_NAMES,
   type SectionName,
+  WORK_GENRES,
+  isWorkGenre,
+  normalizeWorkGenres,
+  type WorkGenre,
   validateRecords,
   validateSiteContent,
   validatePortfolio,
@@ -851,7 +855,28 @@ const linkCommand = define({
   }
 });
 
+const parseWorkGenres = (values: string[] | undefined): WorkGenre[] => {
+  if (values === undefined || values.length === 0) {
+    throw usage(
+      `--genre を1つ以上指定してください。${WORK_GENRES.join(", ")} から選びます。`
+    );
+  }
+  const unknown = values.filter((value) => !isWorkGenre(value));
+  if (unknown.length > 0) {
+    throw usage(
+      `genre は ${WORK_GENRES.join(", ")} から選んでください: ${unknown.join(", ")}`
+    );
+  }
+  return normalizeWorkGenres(values);
+};
+
 const workDetailArgs = {
+  genre: {
+    type: "string" as const,
+    multiple: true as const,
+    description:
+      "ジャンル。website, event, poc, source-code, advent-calendar, book。複数あるときは繰り返す。指定すると一覧を置き換える"
+  },
   technology: {
     type: "string" as const,
     multiple: true as const,
@@ -871,10 +896,14 @@ const workDetailArgs = {
 
 const appendWorkDetails = (
   args: string[],
+  genres: string[] | undefined,
   technologies: string[] | undefined,
   articleTitles: string[] | undefined,
   articleUrls: string[] | undefined
 ) => {
+  for (const genre of genres ?? []) {
+    args.push("--genre", genre);
+  }
   for (const technology of technologies ?? []) {
     args.push("--technology", technology);
   }
@@ -902,7 +931,7 @@ const workAddCommand = define({
   description: "製作実績を追加する",
   toKebab: true,
   examples: `製作実績を追加する
-  site portfolio add --id example --name "example" --github "https://github.com/yamanoku/example" --site "https://example.com" --description-ja "概要" --description-en "Summary" --created 2026-01-01 --technology TypeScript --article-title "記事" --article-url "https://example.com/article" --write`,
+  site portfolio add --id example --name "example" --github "https://github.com/yamanoku/example" --site "https://example.com" --description-ja "概要" --description-en "Summary" --created 2026-01-01 --genre website --genre source-code --technology TypeScript --article-title "記事" --article-url "https://example.com/article" --write`,
   args: {
     id: {
       type: "string",
@@ -948,6 +977,7 @@ const workAddCommand = define({
       createdAt: ctx.values.created,
       ...(ctx.values.github ? { github: ctx.values.github } : {}),
       ...(ctx.values.site ? { site: ctx.values.site } : {}),
+      genres: parseWorkGenres(ctx.values.genre),
       technologies: ctx.values.technology ?? [],
       articles: pairArticles(
         ctx.values.articleTitle ?? [],
@@ -973,6 +1003,7 @@ const workAddCommand = define({
     if (ctx.values.site) nextArgs.push("--site", ctx.values.site);
     appendWorkDetails(
       nextArgs,
+      ctx.values.genre,
       ctx.values.technology,
       ctx.values.articleTitle,
       ctx.values.articleUrl
@@ -993,7 +1024,7 @@ const workUpdateCommand = define({
   description: "idが一致する製作実績を更新する",
   toKebab: true,
   examples: `使用技術と関連記事を置き換える
-  site portfolio update example --technology Vue.js --technology TypeScript --article-title "記事" --article-url "https://example.com/article" --write`,
+  site portfolio update example --genre website --genre source-code --technology Vue.js --technology TypeScript --article-title "記事" --article-url "https://example.com/article" --write`,
   args: {
     id: {
       type: "positional",
@@ -1032,6 +1063,7 @@ const workUpdateCommand = define({
         "--description-ja と --description-en は同時に指定してください。"
       );
     }
+    const genresSpecified = ctx.values.genre !== undefined;
     const technologiesSpecified = ctx.values.technology !== undefined;
     const articlesSpecified =
       ctx.values.articleTitle !== undefined ||
@@ -1066,6 +1098,7 @@ const workUpdateCommand = define({
       ...(ctx.values.created === undefined
         ? {}
         : { createdAt: ctx.values.created }),
+      ...(genresSpecified ? { genres: parseWorkGenres(ctx.values.genre) } : {}),
       ...(ctx.values.clearTechnologies === true
         ? { technologies: [] }
         : technologiesSpecified
@@ -1103,16 +1136,30 @@ const workUpdateCommand = define({
     if (ctx.values.created !== undefined) {
       nextArgs.push("--created", ctx.values.created);
     }
+    appendWorkDetails(
+      nextArgs,
+      ctx.values.genre,
+      undefined,
+      undefined,
+      undefined
+    );
     if (ctx.values.clearTechnologies === true) {
       nextArgs.push("--clear-technologies");
     } else {
-      appendWorkDetails(nextArgs, ctx.values.technology, undefined, undefined);
+      appendWorkDetails(
+        nextArgs,
+        undefined,
+        ctx.values.technology,
+        undefined,
+        undefined
+      );
     }
     if (ctx.values.clearArticles === true) {
       nextArgs.push("--clear-articles");
     } else {
       appendWorkDetails(
         nextArgs,
+        undefined,
         undefined,
         ctx.values.articleTitle,
         ctx.values.articleUrl

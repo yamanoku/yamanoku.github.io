@@ -3,6 +3,17 @@ export type WorkArticle = {
   url: string;
 };
 
+export const WORK_GENRES = [
+  "website",
+  "event",
+  "poc",
+  "source-code",
+  "advent-calendar",
+  "book"
+] as const;
+
+export type WorkGenre = (typeof WORK_GENRES)[number];
+
 export type WorkItem = {
   id: string;
   name: string;
@@ -11,10 +22,16 @@ export type WorkItem = {
     en: string;
   };
   createdAt: string;
+  genres: WorkGenre[];
   technologies: string[];
   articles: WorkArticle[];
   github?: string;
   site?: string;
+  thumbnail?: {
+    url: string;
+    width: number;
+    height: number;
+  };
 };
 
 export const dayLabel = (iso: string, lang: "ja" | "en") => {

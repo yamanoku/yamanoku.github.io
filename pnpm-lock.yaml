@@ -223,6 +223,9 @@ catalogs:
     astro:
       specifier: 7.4.7
       version: 7.4.7
+    gen-interface-jp:
+      specifier: 0.8.0
+      version: 0.8.0
     markuplint:
       specifier: 5.5.0
       version: 5.5.0
@@ -311,6 +314,9 @@ importers:
       astro:
         specifier: catalog:website
         version: 7.4.7(@types/node@26.6.6)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)
+      gen-interface-jp:
+        specifier: catalog:website
+        version: 0.8.0
       modern-normalize:
         specifier: catalog:website
         version: 3.0.1
@@ -4640,6 +4646,9 @@ packages:
 
   fzf@0.5.2:
     resolution: {integrity: sha512-Tt4kuxLXFKHy8KT40zwsUPUkg1CrsgY25FxA2U/j/0WgEDCk3ddc/zLTCCcbSHX9FcKtLuVaDGtGE/STWC+j3Q==}
+
+  gen-interface-jp@0.8.0:
+    resolution: {integrity: sha512-7rIytSAfuugVjYithrQseT0zqeUIkJd0LY3Ugdfbk/FxzMSeagcskeZlof5uWJ5liW3Zhn7pdLHq2OIvAftx+A==}
 
   generator-function@2.0.1:
     resolution: {integrity: sha512-SFdFmIJi+ybC0vjlHN0ZGVGHc3lgE0DxPAT0djjVg+kjOnSqclqmj0KQ7ykTOLP6YxoqOvuAODGdcHJn+43q3g==}
@@ -12252,6 +12261,8 @@ snapshots:
   fuse.js@7.5.0: {}
 
   fzf@0.5.2: {}
+
+  gen-interface-jp@0.8.0: {}
 
   generator-function@2.0.1:
     optional: true

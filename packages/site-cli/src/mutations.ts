@@ -11,6 +11,7 @@ import {
   validateSiteContent,
   validatePortfolio,
   validateWritings,
+  normalizeWorkGenres,
   type Work,
   type WorkArticle,
   type Writing
@@ -333,10 +334,12 @@ const normalizeWork = (work: Work): Work => ({
   name: work.name,
   description: work.description,
   createdAt: work.createdAt,
+  genres: normalizeWorkGenres(work.genres),
   technologies: work.technologies,
   articles: work.articles,
   ...(work.github ? { github: work.github } : {}),
-  ...(work.site ? { site: work.site } : {})
+  ...(work.site ? { site: work.site } : {}),
+  ...(work.thumbnail ? { thumbnail: work.thumbnail } : {})
 });
 
 export type WorkUpdate = Partial<Omit<Work, "github" | "site">> & {
@@ -358,10 +361,12 @@ export function updateWork(
     name: update.name ?? current.name,
     description: update.description ?? current.description,
     createdAt: update.createdAt ?? current.createdAt,
+    genres: update.genres ?? current.genres,
     technologies: update.technologies ?? current.technologies,
     articles: update.articles ?? current.articles,
     github: optionalWorkUrl(update.github, current.github),
-    site: optionalWorkUrl(update.site, current.site)
+    site: optionalWorkUrl(update.site, current.site),
+    thumbnail: update.thumbnail ?? current.thumbnail
   });
   if (
     updated.id !== current.id &&

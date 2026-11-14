@@ -188,10 +188,12 @@ describe("site content mutations", () => {
       site: "https://example.com",
       description: { ja: "概要", en: "Summary" },
       createdAt: "2010-01-01",
+      genres: ["source-code", "website"],
       technologies: ["TypeScript"],
       articles: [{ title: "記事", url: "https://example.com/article" }]
     });
     assert.equal(next[0]?.id, "example");
+    assert.deepEqual(next[0]?.genres, ["website", "source-code"]);
     assert.deepEqual(next[0]?.technologies, ["TypeScript"]);
     assert.equal(next[0]?.github, "https://github.com/yamanoku/example");
     const cleared = updateWork(next, "example", { github: null, site: "" });
@@ -205,6 +207,10 @@ describe("site content mutations", () => {
     const oldest = current[0];
     const next = updateWork(current, oldest.id, { createdAt: "2099-01-01" });
     assert.equal(next.at(-1)?.id, oldest.id);
+    assert.equal(next.at(-1)?.thumbnail?.url, oldest.thumbnail?.url);
+    assert.equal(next.at(-1)?.thumbnail?.width, oldest.thumbnail?.width);
+    assert.equal(next.at(-1)?.thumbnail?.height, oldest.thumbnail?.height);
+    assert.deepEqual(next.at(-1)?.genres, oldest.genres);
     assert.deepEqual(next.at(-1)?.technologies, oldest.technologies);
     const replaced = updateWork(current, oldest.id, {
       technologies: ["Vue.js", "Vite"]

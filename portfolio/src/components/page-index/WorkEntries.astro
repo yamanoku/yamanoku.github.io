@@ -1,6 +1,11 @@
 ---
 import { copy, type PortfolioLang } from "../../lib/copy";
-import { orderPortfolio, siteLabel, type WorkItem } from "../../lib/portfolio";
+import {
+  orderPortfolio,
+  WORK_GENRES,
+  type WorkItem
+} from "../../lib/portfolio";
+import HtmlNightVisual from "./HtmlNightVisual.astro";
 
 interface Props {
   lang: PortfolioLang;
@@ -28,14 +33,33 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
 );
 ---
 
-{
-  groups.map((group) => (
-    <section class="catalog-year">
-      <div class="catalog-portfolio">
-        {group.items.map(({ work }) => (
-          <article id={work.id} class="work">
-            <div class="work-body">
-              <h2>
+<div class="genre-catalog">
+  <fieldset class="genre-filter">
+    <legend>{text.genres}</legend>
+    {WORK_GENRES.map((genre) => (
+      <label>
+        <input
+          id={`genre-${genre}`}
+          type="checkbox"
+          name="genre"
+          value={genre}
+        />
+        <span>{text.genre[genre]}</span>
+      </label>
+    ))}
+  </fieldset>
+  {
+    groups.map((group) => (
+      <section class="catalog-year">
+        <div class="catalog-portfolio">
+          {group.items.map(({ work }) => (
+            <article
+              id={work.id}
+              class="work"
+              data-genres={work.genres.join(" ")}
+            >
+              <div class="work-body">
+                <h2>
                 {work.name}
                 {work.github && (
                   <a
@@ -57,6 +81,19 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
                   </a>
                 )}
               </h2>
+              {work.thumbnail && (
+                <img
+                  src={work.thumbnail.url}
+                  alt=""
+                  width={work.thumbnail.width}
+                  height={work.thumbnail.height}
+                />
+              )}
+              <ul class="work-genres" aria-label={text.genres}>
+                {work.genres.map((genre) => (
+                  <li>{text.genre[genre]}</li>
+                ))}
+              </ul>
               <p>{work.description[lang]}</p>
               {work.technologies.length > 0 && (
                 <ul class="work-tech">
@@ -85,8 +122,9 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
               <time datetime={work.createdAt}>{work.createdAt}</time>
             </div>
           </article>
-        ))}
-      </div>
-    </section>
-  ))
-}
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</div>
