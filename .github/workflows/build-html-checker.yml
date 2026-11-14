@@ -34,7 +34,7 @@ jobs:
         pnpm install
         pnpm run build
         pnpm --filter records build:astro
-        pnpm --filter works build
+        pnpm --filter portfolio build
     - name: check markuplint
       run: |
         pnpm run markuplint

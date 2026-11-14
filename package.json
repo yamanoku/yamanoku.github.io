@@ -10,12 +10,12 @@
     "site:check": "pnpm site -- check",
     "records": "pnpm --filter records dev:presentation",
     "records:build": "pnpm --filter records build",
-    "works:build": "pnpm --filter works build",
+    "portfolio:build": "pnpm --filter portfolio build",
     "lint": "pnpm run oxlint && pnpm run markuplint",
     "format": "oxfmt .",
     "oxlint": "oxlint --fix .",
     "ox:ci": "oxlint --deny-warnings . && oxfmt --check .",
-    "markuplint": "markuplint 'dist/*.html' 'dist/en/**/*.html' 'records/dist/*.html' 'works/dist/*.html' 'works/dist/en/**/*.html'",
+    "markuplint": "markuplint 'dist/*.html' 'dist/en/**/*.html' 'records/dist/*.html' 'portfolio/dist/*.html' 'portfolio/dist/en/**/*.html'",
     "yama-normalize": "pnpm -C packages/yama-normalize"
   },
   "dependencies": {
@@ -34,7 +34,7 @@
     "packages/*",
     "records",
     "records/presentations",
-    "works"
+    "portfolio"
   ],
   "engines": {
     "pnpm": "12.18.0",

@@ -10,7 +10,7 @@ export const PROFILE_FIELDS = [
 
 export const SECTION_NAMES = [
   "basic",
-  "works",
+  "portfolio",
   "openSource",
   "presentations",
   "podcast",
@@ -207,7 +207,7 @@ const validateWork = (
   index: number,
   issues: string[]
 ): value is Work => {
-  const path = `works[${index}]`;
+  const path = `portfolio[${index}]`;
   if (!isObject(value)) {
     issues.push(`${path} はオブジェクトにしてください`);
     return false;
@@ -260,10 +260,10 @@ const validateWork = (
   return true;
 };
 
-export function validateWorks(value: unknown): Work[] {
+export function validatePortfolio(value: unknown): Work[] {
   const issues: string[] = [];
   if (!Array.isArray(value)) {
-    throw new DataValidationError(["works は配列にしてください"]);
+    throw new DataValidationError(["portfolio は配列にしてください"]);
   }
   value.forEach((work, index) => {
     validateWork(work, index, issues);
@@ -273,7 +273,7 @@ export function validateWorks(value: unknown): Work[] {
     .map((work) => work.id)
     .filter((id): id is string => typeof id === "string");
   if (new Set(ids).size !== ids.length) {
-    issues.push("works のidが重複しています");
+    issues.push("portfolio のidが重複しています");
   }
   for (let index = 1; index < value.length; index++) {
     const previous = isObject(value[index - 1])
@@ -285,7 +285,7 @@ export function validateWorks(value: unknown): Work[] {
       typeof current === "string" &&
       previous > current
     ) {
-      issues.push("works は作った順にしてください");
+      issues.push("portfolio は作った順にしてください");
       break;
     }
   }
@@ -439,8 +439,10 @@ export function validateSiteContent(value: unknown): SiteContent {
     }
   }
 
-  if ("works" in value) {
-    issues.push("works は works/src/data/works.json に置いてください");
+  if ("portfolio" in value) {
+    issues.push(
+      "portfolio は portfolio/src/data/portfolio.json に置いてください"
+    );
   }
 
   if (!isObject(value.sections)) {

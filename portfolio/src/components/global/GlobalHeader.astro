@@ -1,0 +1,51 @@
+---
+import { copy, type PortfolioLang } from "../../lib/copy";
+
+interface Props {
+  lang: PortfolioLang;
+}
+
+const { lang } = Astro.props;
+const text = copy[lang];
+---
+
+<header>
+  <div class="inline-flex items-center gap-y-rhythm-1 my-y-rhythm-2 mx-0">
+    <svg
+      width="48"
+      height="48"
+      viewBox="0 0 246 242"
+      role="img"
+      aria-label="yamanoku"
+    >
+      <path
+        class="translate-x-[-64px] translate-y-[-67px] fill-y-identity-color dark:fill-y-white-base"
+        fill-rule="evenodd"
+        d="M64,67v54l82,82-46,46v60h56L310,155V96H230l-21,20L160,67H64ZM176,203l-45,46h25L293,113H230l-39,39-31-31H94Z"
+      ></path>
+    </svg>
+    <span>Portfolio</span>
+  </div>
+  <h1>portfolio.yamanoku.net</h1>
+  <p class="tagline">{text.lead}</p>
+  <nav class="site-nav" aria-label={text.multilingual}>
+    <ul>
+      <li>
+        <a
+          href="/"
+          hreflang="ja"
+          lang="ja"
+          aria-current={lang === "ja" ? "page" : undefined}>日本語ページ</a
+        >
+      </li>
+      <li>
+        <a
+          href="/en/"
+          hreflang="en"
+          lang="en"
+          aria-current={lang === "en" ? "page" : undefined}>English Page</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

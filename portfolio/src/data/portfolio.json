@@ -78,7 +78,7 @@
     "name": "Vue Visually Hidden",
     "github": "https://github.com/yamanoku/vue-visually-hidden",
     "description": {
-      "ja": "見た目だけ隠して、支援技術に内容を伝えるためのVueコンポーネント",
+      "ja": "見た目だけ隠して、支援技術に内容を伝えるためのVueコンポーネント。",
       "en": "A Vue component that hides content visually and keeps it available to assistive technology."
     },
     "createdAt": "2021-07-31",
@@ -108,11 +108,23 @@
     ]
   },
   {
+    "id": "yamanoku-advent-calendar-2023",
+    "name": "yamanoku Advent Calendar 2023",
+    "description": {
+      "ja": "2023年12月にひとりで書いたアドベントカレンダーです。日常や仕事、技術について25日分を書いています。",
+      "en": "A solo Advent calendar written in December 2023, with 25 posts on daily life, work, and technology."
+    },
+    "createdAt": "2023-12-01",
+    "technologies": [],
+    "articles": [],
+    "site": "https://adventar.org/calendars/8589"
+  },
+  {
     "id": "vuefes-japan-speakers",
     "name": "Vue Fes Japan Speakers",
     "github": "https://github.com/yamanoku/vuefes-japan-speakers",
     "description": {
-      "ja": "歴代のVue Fes Japanのスピーカー一覧サイトです。",
+      "ja": "歴代のVue Fes Japanのスピーカーを一覧できるサイト。",
       "en": "A site that lists speakers from past Vue Fes Japan events."
     },
     "createdAt": "2024-08-31",
@@ -138,7 +150,7 @@
     "name": "Baseline MCP Server",
     "github": "https://github.com/yamanoku/baseline-mcp-server",
     "description": {
-      "ja": "Web APIのBaseline状況を返すMCPサーバーです。",
+      "ja": "Web APIのBaseline状況を返すMCPサーバー。",
       "en": "An MCP server that reports the Baseline status of a Web API."
     },
     "createdAt": "2025-04-12",
@@ -158,7 +170,7 @@
     "name": "Connpass User MCP Server",
     "github": "https://github.com/yamanoku/connpass-user-mcp-server",
     "description": {
-      "ja": "connpassのユーザーAPIを提供するMCPサーバーです。",
+      "ja": "connpassのユーザーAPIを提供するMCPサーバー。",
       "en": "An MCP server for the connpass users API."
     },
     "createdAt": "2025-04-20",
@@ -174,8 +186,8 @@
     "name": "aria-validate-mcp-server",
     "github": "https://github.com/yamanoku/aria-validate-mcp-server",
     "description": {
-      "ja": "ARIAの使い方を検証するMCPサーバーです。",
-      "en": "An MCP server that validates ARIA usage."
+      "ja": "WAI-ARIAの使い方を検証するMCPサーバーだ。",
+      "en": "An MCP server that validates WAI-ARIA usage."
     },
     "createdAt": "2025-10-15",
     "technologies": [
@@ -186,12 +198,24 @@
     "articles": []
   },
   {
+    "id": "navigation-api-advent-calendar",
+    "name": "ひとりNavigation API Advent Calendar",
+    "description": {
+      "ja": "2025年12月、Navigation APIだけをテーマにひとりで書いたアドベントカレンダーです。仕様や実装を毎日調べてCosenseに残しています。",
+      "en": "A solo Advent calendar from December 2025 on the Navigation API. Daily notes on the specification and implementations, kept on Cosense."
+    },
+    "createdAt": "2025-12-01",
+    "technologies": [],
+    "articles": [],
+    "site": "https://scrapbox.io/yamanoku/%E3%81%B2%E3%81%A8%E3%82%8ANavigation_API_Advent_Calendar"
+  },
+  {
     "id": "react-tokyo-fes-2026",
     "name": "Accessible React UI",
     "github": "https://github.com/yamanoku/react-tokyo-fes-2026",
     "description": {
-      "ja": "ReactでアクセシブルなUIを作るためのコンポーネント集サイトです。",
-      "en": "A component gallery for building accessible UI with React."
+      "ja": "ReactでアクセシブルなUIを作るためのコンポーネント集サイト。React Tokyo Fes 2026でポスターセッションした際に作成しました。",
+      "en": "A component gallery for building accessible UI with React. Created for the poster session at React Tokyo Fes 2026."
     },
     "createdAt": "2026-01-21",
     "technologies": [
@@ -203,11 +227,23 @@
     "articles": []
   },
   {
+    "id": "ogenkidesuka-fm-5th-anniversary",
+    "name": "お元気ですか.fm 5周年記念誌「5年間、だいたいお元気でした」",
+    "description": {
+      "ja": "技書博13で頒布した、お元気ですか.fmの5周年記念誌です。2021年から2026年のフロントエンドとデザインを振り返るエッセイです。",
+      "en": "The fifth-anniversary booklet for the podcast Ogenki Desu ka FM, distributed at Gishohaku 13. Essays on frontend and design from 2021 to 2026."
+    },
+    "createdAt": "2026-05-10",
+    "technologies": [],
+    "articles": [],
+    "site": "https://gishohaku.dev/gishohaku13/circles/T5xU9jvYoVnKxaURcPS7"
+  },
+  {
     "id": "svelte-mini-compiler",
     "name": "svelte-mini-compiler",
     "github": "https://github.com/yamanoku/svelte-mini-compiler",
     "description": {
-      "ja": "Svelteコンパイラの処理の流れをなぞる小さな実装です。",
+      "ja": "Svelteコンパイラの処理の流れをなぞる小さな実装。",
       "en": "A small compiler that follows the parse, analyze, and transform steps of Svelte."
     },
     "createdAt": "2026-07-10",
@@ -215,5 +251,29 @@
       "TypeScript"
     ],
     "articles": []
+  },
+  {
+    "id": "html-night-tokyo",
+    "name": "HTML Night in Tokyo",
+    "description": {
+      "ja": "あの頃のウェブを知る人、HTMLについてあまり知らない人、様々な人たちが「HTML」について今一度考えてみるイベントを主催。",
+      "en": "An event to think about HTML again."
+    },
+    "createdAt": "2026-08-07",
+    "technologies": [],
+    "articles": [],
+    "site": "https://connpass.com/event/399762/"
+  },
+  {
+    "id": "html-day-2026-tokatsu",
+    "name": "HTML Day 2026 in 東葛",
+    "description": {
+      "ja": "東葛で主催した HTML Day 2026 です。HTMLを書いて学ぶ集まりです。",
+      "en": "HTML Day 2026 in Tokatsu, a gathering to write and learn HTML."
+    },
+    "createdAt": "2026-08-08",
+    "technologies": [],
+    "articles": [],
+    "site": "https://htmlday2026.toukatsu.dev/"
   }
 ]

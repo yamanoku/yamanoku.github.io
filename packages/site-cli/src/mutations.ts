@@ -9,7 +9,7 @@ import {
   type StageResource,
   validateRecords,
   validateSiteContent,
-  validateWorks,
+  validatePortfolio,
   validateWritings,
   type Work,
   type WorkArticle,
@@ -299,8 +299,8 @@ export function removeTranslation(
   return validateSiteContent(next);
 }
 
-const sortWorks = (works: Work[]): void => {
-  works.sort((left, right) =>
+const sortPortfolio = (portfolio: Work[]): void => {
+  portfolio.sort((left, right) =>
     left.createdAt < right.createdAt
       ? -1
       : left.createdAt > right.createdAt
@@ -309,14 +309,14 @@ const sortWorks = (works: Work[]): void => {
   );
 };
 
-export function addWork(works: Work[], work: Work): Work[] {
-  const next = clone(works);
+export function addWork(portfolio: Work[], work: Work): Work[] {
+  const next = clone(portfolio);
   if (next.some((item) => item.id === work.id)) {
     throw new Error(`同じidの製作実績が既にあります: ${work.id}`);
   }
   next.push(normalizeWork(work));
-  sortWorks(next);
-  return validateWorks(next);
+  sortPortfolio(next);
+  return validatePortfolio(next);
 }
 
 const optionalWorkUrl = (
@@ -345,11 +345,11 @@ export type WorkUpdate = Partial<Omit<Work, "github" | "site">> & {
 };
 
 export function updateWork(
-  works: Work[],
+  portfolio: Work[],
   id: string,
   update: WorkUpdate
 ): Work[] {
-  const next = clone(works);
+  const next = clone(portfolio);
   const index = next.findIndex((item) => item.id === id);
   if (index === -1) throw new Error(`製作実績が見つかりません: ${id}`);
   const current = next[index];
@@ -370,16 +370,16 @@ export function updateWork(
     throw new Error(`同じidの製作実績が既にあります: ${updated.id}`);
   }
   next[index] = updated;
-  sortWorks(next);
-  return validateWorks(next);
+  sortPortfolio(next);
+  return validatePortfolio(next);
 }
 
-export function removeWork(works: Work[], id: string): Work[] {
-  const next = clone(works);
+export function removeWork(portfolio: Work[], id: string): Work[] {
+  const next = clone(portfolio);
   const index = next.findIndex((item) => item.id === id);
   if (index === -1) throw new Error(`製作実績が見つかりません: ${id}`);
   next.splice(index, 1);
-  return validateWorks(next);
+  return validatePortfolio(next);
 }
 
 export function setSection(

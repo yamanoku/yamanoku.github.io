@@ -17,13 +17,13 @@ export type WorkItem = {
   site?: string;
 };
 
-export const monthLabel = (iso: string, lang: "ja" | "en") => {
-  const [year, month] = iso.split("-").map(Number);
+export const dayLabel = (iso: string, lang: "ja" | "en") => {
+  const [year, month, day] = iso.split("-").map(Number);
   return new Intl.DateTimeFormat(lang === "ja" ? "ja-JP" : "en", {
-    year: "numeric",
-    month: "short",
+    month: "long",
+    day: "numeric",
     timeZone: "UTC"
-  }).format(new Date(Date.UTC(year, month - 1, 1)));
+  }).format(new Date(Date.UTC(year, month - 1, day)));
 };
 
 export const siteLabel = (url: string) => {
@@ -34,10 +34,10 @@ export const siteLabel = (url: string) => {
   }
 };
 
-export const orderWorks = (works: WorkItem[], lang: "ja" | "en") =>
-  [...works]
+export const orderPortfolio = (portfolio: WorkItem[], lang: "ja" | "en") =>
+  [...portfolio]
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
     .map((work) => ({
       work,
-      label: monthLabel(work.createdAt, lang)
+      label: dayLabel(work.createdAt, lang)
     }));

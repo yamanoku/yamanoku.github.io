@@ -1,0 +1,31 @@
+---
+import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
+import { listPortfolio } from "../../../portfolio/listPortfolio";
+import GlobalListComponent from "../../global/GlobalListComponent.astro";
+
+const lang = getLanguageFromURL(Astro.url.pathname) === "en" ? "en" : "ja";
+const t = useTranslations(Astro);
+const portfolioUrl =
+  lang === "en"
+    ? "https://portfolio.yamanoku.net/en/"
+    : "https://portfolio.yamanoku.net/";
+---
+
+<section id="portfolio" aria-labelledby="portfolio-heading">
+  <h2 id="portfolio-heading">{t("heading.portfolio")}</h2>
+  <p>{t("portfolio.lead")}</p>
+  <GlobalListComponent list={listPortfolio} />
+  {
+    lang === "en" ? (
+      <p>
+        Please see <a href={portfolioUrl}>Portfolio</a> for the full list.
+      </p>
+    ) : (
+      <p>
+        すべての製作実績については
+        <a href={portfolioUrl}>Portfolio</a>
+        を参照してください。
+      </p>
+    )
+  }
+</section>

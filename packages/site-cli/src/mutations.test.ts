@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
+import portfolio from "../../../portfolio/src/data/portfolio.json" with { type: "json" };
 import records from "../../../records/src/data/records.json" with { type: "json" };
 import siteContent from "../../../src/data/site-content.json" with { type: "json" };
 import writings from "../../../src/data/writings.json" with { type: "json" };
-import works from "../../../works/src/data/works.json" with { type: "json" };
 import type { SiteContent, StageRecord, Work, Writing } from "./model.js";
 import {
   addJournalYear,
@@ -180,7 +180,7 @@ describe("site content mutations", () => {
   });
 
   it("inserts a work in creation order and rejects a duplicate id", () => {
-    const current = works as Work[];
+    const current = portfolio as Work[];
     const next = addWork(current, {
       id: "example",
       name: "example",
@@ -201,7 +201,7 @@ describe("site content mutations", () => {
   });
 
   it("re-sorts a work when its creation date changes", () => {
-    const current = works as Work[];
+    const current = portfolio as Work[];
     const oldest = current[0];
     const next = updateWork(current, oldest.id, { createdAt: "2099-01-01" });
     assert.equal(next.at(-1)?.id, oldest.id);

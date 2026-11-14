@@ -4,7 +4,7 @@ yamanoku.net 本体の表示内容を持つ正規データです。Astro コン�
 
 通常の情報更新ではファイルを直接編集せず、CLI に必要な操作がなければ先にコマンドと検証を追加してください。変更系コマンドはデフォルトでプレビューのみで、保存には `--write` が必要です。詳細は [`packages/site-cli/README.md`](../../packages/site-cli/README.md) を参照してください。
 
-登壇の全記録は本ディレクトリではなく [`records/src/data/records.json`](../../records/src/data/records.json) が正です。ポートフォリオの登壇5件はそこから導出します。製作実績の全記録は [`works/src/data/works.json`](../../works/src/data/works.json) が正です。ポートフォリオの製作実績3件はそこから導出します。
+登壇の全記録は本ディレクトリではなく [`records/src/data/records.json`](../../records/src/data/records.json) が正です。ポートフォリオの登壇5件はそこから導出します。製作実績の全記録は [`portfolio/src/data/portfolio.json`](../../portfolio/src/data/portfolio.json) が正です。ポートフォリオの製作実績3件はそこから導出します。
 
 ## ファイル
 
@@ -16,9 +16,9 @@ yamanoku.net 本体の表示内容を持つ正規データです。Astro コン�
 - `translations`: 日英辞書。キーは両言語で完全一致させる
 - `journal`: 日報のベース URL と年一覧
 - `links`: SNS（表示 / `rel=me`）、オープンソース活動、寄付・支援
-- `sections`: 各セクションの表示 / 非表示。`works` はポートフォリオに最新3件を出すかどうか
+- `sections`: 各セクションの表示 / 非表示。`portfolio` はポートフォリオに最新3件を出すかどうか
 
-`pnpm site -- profile|links|journal|i18n|sections` で更新します。製作実績の本文は `pnpm site -- works` で [`works/src/data/works.json`](../../works/src/data/works.json) を更新します。
+`pnpm site -- profile|links|journal|i18n|sections` で更新します。製作実績の本文は `pnpm site -- portfolio` で [`portfolio/src/data/portfolio.json`](../../portfolio/src/data/portfolio.json) を更新します。
 
 ### `writings.json`
 

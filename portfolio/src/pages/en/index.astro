@@ -1,0 +1,12 @@
+---
+import WorkEntries from "../../components/page-index/WorkEntries.astro";
+import portfolioData from "../../data/portfolio.json";
+import Layout from "../../layouts/Layout.astro";
+import type { WorkItem } from "../../lib/portfolio";
+
+const portfolio = portfolioData as WorkItem[];
+---
+
+<Layout lang="en">
+  <WorkEntries lang="en" portfolio={portfolio} />
+</Layout>

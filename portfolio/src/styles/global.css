@@ -1,0 +1,294 @@
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "modern-normalize" layer(base);
+@import "yama-normalize/yama-normalize.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  --spacing-y-rhythm-1: var(--y-rhythm-1);
+  --spacing-y-rhythm-2: var(--y-rhythm-2);
+  --spacing-y-rhythm-3: var(--y-rhythm-3);
+  --spacing-y-rhythm-4: var(--y-rhythm-4);
+  --spacing-y-rhythm-5: var(--y-rhythm-5);
+  --spacing-y-container: var(--y-container-padding);
+  --color-y-white-base: var(--y-white-base);
+  --color-y-black-base: var(--y-black-base);
+  --color-y-white-low: var(--y-white-low);
+  --color-y-white-medium: var(--y-white-medium);
+  --color-y-blue-low: var(--y-blue-low);
+  --color-y-blue-medium: var(--y-blue-medium);
+  --color-y-purple-medium: var(--y-purple-medium);
+  --color-y-arcticle-border-color: var(--y-arcticle-border-color);
+  --color-y-identity-color: var(--y-identity-color);
+  --color-y-body-background: var(--y-body-background);
+}
+
+body.portfolio-site {
+  --container-max: 52rem;
+  --gutter: clamp(1rem, 6.9vw, 4.5rem);
+  --fs-heading-1: calc(1rem * 8 / 3);
+  --fs-heading-2: calc(1rem * 2);
+  --fs-heading-3: calc(1rem * 8 / 6);
+  --fs-small: calc(1rem * 8 / 10);
+  --fs-x-small: calc(1rem * 8 / 12);
+  --fs-xx-small: calc(1rem * 8 / 14);
+  --lh-heading: 1.2;
+  --lh-body: 1.5;
+  --lh-nav: 1.9;
+  --space-list: 0.75rem;
+  --space-paragraph: 1.75rem;
+  --space-content-gap: 0.75rem;
+  --space-heading-gap: 2.75rem;
+  --space-section: 4.5rem;
+  --space-hero-top: 6rem;
+  --space-hero-gap: 4rem;
+  margin: 0;
+  box-sizing: border-box;
+  max-inline-size: var(--container-max);
+  padding-inline: var(--gutter);
+  font-family: "Gen Interface JP", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-feature-settings: "chws";
+  -webkit-font-smoothing: antialiased;
+}
+
+@supports (text-spacing-trim: trim-start) {
+  body.portfolio-site {
+    text-spacing-trim: trim-start;
+    font-feature-settings: normal;
+  }
+}
+
+body.portfolio-site :where(header, main, footer) {
+  max-inline-size: none;
+  padding-inline: 0;
+}
+
+body.portfolio-site :where(h1, h2, h3, h4, p, ul) {
+  margin: 0;
+}
+
+body.portfolio-site :where(h1, h2, h3, h4) {
+  font-weight: 400;
+  line-height: var(--lh-heading);
+  text-wrap: pretty;
+  word-break: auto-phrase;
+}
+
+body.portfolio-site :where(p, ul) {
+  line-height: var(--lh-body);
+  line-break: strict;
+}
+
+body.portfolio-site a:any-link {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.15em;
+  text-shadow: none;
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body.portfolio-site a:any-link {
+    transition: text-decoration-color 0.25s;
+  }
+
+  body.portfolio-site a:hover,
+  body.portfolio-site a:focus-visible {
+    transition-duration: 30ms;
+  }
+}
+
+body.portfolio-site a:hover,
+body.portfolio-site a:focus-visible {
+  text-decoration-color: transparent;
+}
+
+body.portfolio-site :where(a, [tabindex]):focus-visible {
+  outline: 2px solid CanvasText;
+  outline-offset: 2px;
+}
+
+body.portfolio-site header {
+  display: flex;
+  flex-direction: column;
+  padding-block-start: var(--space-hero-top);
+}
+
+body.portfolio-site h1 {
+  font-size: var(--fs-heading-1);
+  font-weight: 600;
+}
+
+body.portfolio-site .tagline {
+  margin-block-start: var(--space-hero-gap);
+  font-size: var(--fs-heading-3);
+  line-height: var(--lh-heading);
+}
+
+body.portfolio-site .site-nav {
+  margin-block-start: var(--space-paragraph);
+  font-size: var(--fs-small);
+  line-height: var(--lh-nav);
+}
+
+body.portfolio-site .site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.portfolio-site .site-nav li {
+  display: inline;
+}
+
+body.portfolio-site .site-nav li + li::before {
+  content: "｜";
+}
+
+body.portfolio-site .site-nav a {
+  text-decoration-color: transparent;
+}
+
+body.portfolio-site .site-nav a:hover,
+body.portfolio-site .site-nav a:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+body.portfolio-site .site-nav a[aria-current="page"]::before {
+  content: "●" / "";
+  margin-inline-end: 0.6em;
+  font-size: 0.5em;
+  vertical-align: 0.25em;
+}
+
+body.portfolio-site .catalog-year {
+  margin-block-start: var(--space-section);
+  scroll-margin-block-start: 1rem;
+}
+
+body.portfolio-site .portfolio-related h2 {
+  margin-block-end: var(--space-heading-gap);
+  font-size: var(--fs-heading-2);
+}
+
+body.portfolio-site .work {
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+  margin-block-start: var(--space-paragraph);
+  scroll-margin-block-start: 1rem;
+  border-block-end: 0;
+}
+
+body.portfolio-site .work time {
+  display: block;
+  font-variant-numeric: tabular-nums;
+  font-size: var(--fs-small);
+  margin-block-start: var(--space-paragraph);
+}
+
+body.portfolio-site .work h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35em 0.45em;
+  font-size: var(--fs-heading-3);
+  font-weight: 600;
+}
+
+body.portfolio-site .work-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 1.5rem;
+  min-block-size: 1.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+body.portfolio-site .work-github svg {
+  inline-size: 0.85em;
+  block-size: 0.85em;
+}
+
+body.portfolio-site .work h3 {
+  margin-block-start: var(--space-paragraph);
+  font-size: var(--fs-small);
+}
+
+body.portfolio-site .work-body > p:not(.work-links) {
+  margin-block-start: var(--space-content-gap);
+  text-align: justify;
+}
+
+body.portfolio-site .work-tech,
+body.portfolio-site .work-articles {
+  margin-block-start: var(--space-content-gap);
+  padding: 0;
+  list-style: none;
+}
+
+body.portfolio-site .work-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  font-size: var(--fs-small);
+}
+
+body.portfolio-site .work-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin-block-start: var(--space-content-gap);
+}
+
+body.portfolio-site .work-articles li + li {
+  margin-block-start: var(--space-list);
+}
+
+body.portfolio-site .portfolio-related {
+  margin-block-start: var(--space-section);
+  padding-block-start: 4.5rem;
+}
+
+body.portfolio-site .portfolio-foot {
+  margin-block-start: calc(var(--space-section) + 4.5rem);
+  padding-block-end: 1rem;
+  font-size: var(--fs-small);
+}
+
+body.portfolio-site .portfolio-foot p + p {
+  margin-block-start: 0.25em;
+  font-size: var(--fs-small);
+}
+
+body.portfolio-site .portfolio-foot a {
+  text-decoration-color: transparent;
+}
+
+body.portfolio-site .portfolio-foot a:hover,
+body.portfolio-site .portfolio-foot a:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+@media (forced-colors: active) {
+  html {
+    background: Canvas;
+  }
+
+  body.portfolio-site {
+    --text: CanvasText;
+    --background: Canvas;
+    --rule: CanvasText;
+    --muted: CanvasText;
+    background: Canvas;
+    color: CanvasText;
+  }
+
+  body.portfolio-site ::selection {
+    background: Highlight;
+    color: HighlightText;
+  }
+}

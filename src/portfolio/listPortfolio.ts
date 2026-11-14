@@ -1,4 +1,4 @@
-import works from "../../works/src/data/works.json";
+import portfolio from "../../portfolio/src/data/portfolio.json";
 import type { ListType } from "../presentations/listPresentation";
 
 type WorkListSource = ReadonlyArray<{
@@ -8,13 +8,13 @@ type WorkListSource = ReadonlyArray<{
   site?: string;
 }>;
 
-// ポートフォリオに出す件数。全文は works.yamanoku.net。件数は変えない。
-export const LATEST_WORKS_LENGTH = 3;
+// ポートフォリオに出す件数。全文は portfolio.yamanoku.net。件数は変えない。
+export const LATEST_PORTFOLIO_LENGTH = 3;
 
-export const deriveListWorks = (source: WorkListSource): ListType[] =>
+export const deriveListPortfolio = (source: WorkListSource): ListType[] =>
   [...source]
     .sort((left, right) => right.createdAt.localeCompare(left.createdAt))
-    .slice(0, LATEST_WORKS_LENGTH)
+    .slice(0, LATEST_PORTFOLIO_LENGTH)
     .map((work) => {
       const url = work.site ?? work.github;
       return {
@@ -24,4 +24,4 @@ export const deriveListWorks = (source: WorkListSource): ListType[] =>
       };
     });
 
-export const listWorks = deriveListWorks(works);
+export const listPortfolio = deriveListPortfolio(portfolio);

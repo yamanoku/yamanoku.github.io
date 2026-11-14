@@ -30,7 +30,7 @@ jobs:
         pnpm install
         pnpm run build
         pnpm --filter records build:astro
-        pnpm --filter works build
+        pnpm --filter portfolio build
         pnpm run markuplint
       env:
         CI: true

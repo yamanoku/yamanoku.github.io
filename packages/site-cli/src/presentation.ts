@@ -384,7 +384,7 @@ const GROUP_ALIAS: Record<string, string> = {
   stage: "stages",
   link: "links",
   section: "sections",
-  work: "works"
+  work: "portfolio"
 };
 
 const VERB_ALIAS: Record<string, string> = {
