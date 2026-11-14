@@ -1,5 +1,29 @@
 [
   {
+    "id": "yamanoku-net",
+    "name": "yamanoku.net",
+    "description": {
+      "ja": "大山奥人のポータルサイト（yamanoku.net）です。プロフィール、登壇・執筆、製作実績などへの導線を日本語と英語で提供し、セマンティックなマークアップとWAI-ARIAで情報設計しています。AstroとTailwind CSSを中心に構築し、独自のsite-cliでコンテンツを更新、records／portfolioを含むpnpmモノレポとして構成しています。JIS X 8341-3:2016の適合レベルAA準拠を方針に掲げ試験結果を公開している点が特徴で、アクセシビリティとインクルーシブデザインを実装と方針の両面から示せる実績です。",
+      "en": "Okuto Oyama’s portal site (yamanoku.net). It provides Japanese and English entry points to profile, talks, writing, and works, with semantic markup and WAI-ARIA for information architecture. Built mainly with Astro and Tailwind CSS, content is updated via a custom site-cli, and the repo is a pnpm monorepo that includes records and portfolio. Its distinctive point is a published JIS X 8341-3:2016 Level AA conformance policy and test results, showing accessibility and inclusive design in both implementation and policy."
+    },
+    "createdAt": "2013-01-12",
+    "genres": [
+      "website",
+      "source-code"
+    ],
+    "technologies": [
+      "Astro",
+      "Tailwind CSS",
+      "TypeScript",
+      "Oxlint",
+      "Oxfmt",
+      "Markuplint"
+    ],
+    "articles": [],
+    "github": "https://github.com/yamanoku/yamanoku.github.io",
+    "site": "https://yamanoku.net"
+  },
+  {
     "id": "vue-portfolio-template",
     "name": "Vue.js Portfolio Template",
     "description": {
