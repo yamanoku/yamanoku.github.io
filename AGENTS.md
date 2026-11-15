@@ -60,7 +60,10 @@ pnpm records <name>:pages  # 11tyのみ
 
 # portfolio（製作実績サイト）
 pnpm portfolio:build           # Astroビルド（出力: portfolio/dist）
+pnpm portfolio:deploy          # ビルドして Worker portfolio へデプロイ
 ```
+
+`portfolio/**` を変更した PR が `main` にマージされたあと、`.github/workflows/deploy-portfolio.yml` が `pnpm portfolio:deploy` を実行する。未マージの PR ではデプロイしない。secret は `CLOUDFLARE_API_TOKEN`。`cf deploy` は `portfolio/cloudflare` で実行し、リポジトリルートや Astro パッケージ直下では実行しない。
 
 ## コードスタイルガイドライン
 
@@ -77,14 +80,13 @@ src/
 ├── i18n/               # 国際化関連
 ├── data/                # CLIが管理するサイト情報の正規データ
 ├── presentations/       # プレゼンテーション一覧データ（listPresentation.ts）
-├── portfolio/               # ポートフォリオ用の製作実績3件（listPortfolio.ts）
 └── styles/             # グローバルスタイル
 
 packages/
 ├── site-cli/            # yamanoku.net更新用Gunshi CLI
 └── yama-normalize/      # 独自Normalize CSS
 
-portfolio/                   # portfolio.yamanoku.net（Astro / 別Cloudflare Pages）
+portfolio/                   # portfolio.yamanoku.net（Astro / Cloudflare Workers）
 ├── src/data/portfolio.json  # 製作実績の正規データ
 └── src/pages/           # 全文（/ と /en/）
 
@@ -170,7 +172,7 @@ pnpm records <name>
 #### プレゼンテーション一覧データ
 登壇は `records/src/data/records.json`、執筆は `src/data/writings.json` を正規データとし、`src/presentations/listPresentation.ts` がポートフォリオサイト用の最新5件を導出する。情報更新時はこれらを直接編集せず、`pnpm site -- stages ...` または `pnpm site -- writings ...` を使用する。執筆の5件制約は変更しない。
 
-製作実績は `portfolio/src/data/portfolio.json` を正規データとし、`src/portfolio/listPortfolio.ts` がポートフォリオ用の最新3件を導出する。全文は portfolio.yamanoku.net。更新は `pnpm site -- portfolio ...` を使い、JSONを直接編集しない。3件制約は変更しない。
+製作実績は `portfolio/src/data/portfolio.json` を正規データとする。全文は portfolio.yamanoku.net に出し、ポータル（yamanoku.net）には見出し・導入文・そのサイトへの導線だけを出す。最新件数の一覧はポータルに戻さない。更新は `pnpm site -- portfolio ...` を使い、JSONを直接編集しない。
 
 ### サイト情報更新CLI
 

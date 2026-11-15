@@ -6,7 +6,7 @@ const translations = siteContent.translations;
 
 export const copy = {
   ja: {
-    title: "Portfolio | yamanoku.net",
+    title: "ポートフォリオ",
     description: translations.ja["portfolio.lead"],
     lead: translations.ja["portfolio.lead"],
     portfolio_related: translations.ja["portfolio.related"],
@@ -29,7 +29,7 @@ export const copy = {
     portalUrl: "https://yamanoku.net"
   },
   en: {
-    title: "Portfolio | yamanoku.net",
+    title: "Portfolio",
     description: translations.en["portfolio.lead"],
     lead: translations.en["portfolio.lead"],
     portfolio_related: translations.en["portfolio.related"],

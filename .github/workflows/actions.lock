@@ -12,6 +12,10 @@ workflows:
         - 'anthropics/claude-code-action@28f83620103c48a57093dcc2837eec89e036bb9f'
     '.github/workflows/close_stale.yml':
         - 'actions/stale@v11.0.0'
+    '.github/workflows/deploy-portfolio.yml':
+        - 'actions/checkout@v7.0.1'
+        - 'actions/setup-node@v7.1.0'
+        - 'pnpm/action-setup@v6.1.1'
     '.github/workflows/markuplint.yml':
         - 'actions/checkout@v7.0.1'
         - 'actions/setup-node@v7.1.0'

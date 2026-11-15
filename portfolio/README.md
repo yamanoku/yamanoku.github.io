@@ -25,7 +25,7 @@ pnpm site -- portfolio add \
 pnpm site -- portfolio add ... --write
 ```
 
-詳細は `packages/site-cli/README.md` を参照。ポートフォリオ（yamanoku.net）は新しい3件と、このサイトへの導線だけを出す。3件の導出は `src/portfolio/listPortfolio.ts`。
+詳細は `packages/site-cli/README.md` を参照。ポータル（yamanoku.net）は見出しと、このサイトへの導線だけを出す。
 
 ## 開発
 
@@ -42,30 +42,26 @@ pnpm portfolio:build
 pnpm --filter portfolio preview
 ```
 
-## デプロイ（Cloudflare Pages / Git 連携）
+## デプロイ（Cloudflare Workers）
 
-Cloudflare Pages のダッシュボードで GitHub リポジトリ（`yamanoku/yamanoku.github.io`）と連携し、以下のビルド設定でデプロイする。
+`pnpm portfolio:build` が書いた `portfolio/dist` を、Workers Static Assets として Worker `portfolio` に載せる。公開ホストは `https://portfolio.yamanoku.net`（カスタムドメイン）。records.yamanoku.net と同じく静的な成果物を配るが、こちらは Pages ではなく Workers である。
 
-| 項目 | 値 |
-| --- | --- |
-| Production branch | `main` |
-| Root directory | （リポジトリルートのまま） |
-| Build command | `pnpm install --frozen-lockfile && pnpm portfolio:build` |
-| Build output directory | `portfolio/dist` |
+設定は `portfolio/cloudflare/` にある。Astro 7 のパッケージ直下で `cf deploy` すると、`cf` はフレームワークビルドとして扱い、静的な `dist` をアップロードしない。デプロイ用のディレクトリには `astro.config.mjs` を置かない。
 
-- **Node バージョン**: `portfolio/.node-version` で固定。ダッシュボードの環境変数 `NODE_VERSION` でも指定可。
-- **pnpm**: ルート `package.json` の `packageManager` で固定したpnpmを corepack 経由で使用（catalog 解決に必要）。
-- **カスタムドメイン**: `portfolio.yamanoku.net` を Cloudflare Pages のカスタムドメインとして追加（DNS は Cloudflare 側で設定）。
+```bash
+# Astro ビルドのあと、dist を Worker にデプロイする
+pnpm portfolio:deploy
+```
 
-### `wrangler.jsonc` は使わない
+手元では `cf auth login` 済みであること。アカウントは `cloudflare.config.ts` の `accountId`。カスタムドメイン `portfolio.yamanoku.net` はデプロイ時にゾーン `yamanoku.net` へ結ばれる。
 
-このリポジトリには Cloudflare Pages プロジェクトが **3つ**（`yamanoku-net` / `records-yamanoku` / `portfolio-yamanoku`）あり、どれも Root directory がリポジトリルートのため、ルート直下に `wrangler.jsonc` を置くと **すべてのプロジェクトが同じ設定を読み込んでしまう**。出力先はダッシュボードの **Build output directory（`portfolio/dist`）** で設定する。
+`portfolio/**` を変更した pull request が `main` にマージされると、`.github/workflows/deploy-portfolio.yml` が同じ `pnpm portfolio:deploy` を実行する。未マージの pull request ではデプロイしない。`main` へ `portfolio/**` を直接 push したときも、公開中のサイトをその commit に合わせるためデプロイする。
 
-### portfolio 変更時のみデプロイする（Build watch paths）
+GitHub の repository secret は `CLOUDFLARE_API_TOKEN`。トークンには Worker `portfolio` のデプロイと、ゾーン `yamanoku.net` の DNS 編集（カスタムドメインを維持するため）が必要。workflow は `CLOUDFLARE_ACCOUNT_ID` に `cloudflare.config.ts` と同じ account id を渡す。
 
-| プロジェクト | 設定 | 値 |
-| --- | --- | --- |
-| `portfolio-yamanoku` | Include paths | `portfolio/**`, `packages/yama-normalize/*`, `pnpm-lock.yaml`, `pnpm-workspace.yaml` |
-| `yamanoku-net` | Exclude paths | `records/**`, `portfolio/**` |
+- **Worker 名**: `portfolio`
+- **アップロード対象**: `portfolio/dist`（`wrangler.config.ts` の `assetsDirectory`）
+- **互換性日付**: `2026-11-15`
+- **レスポンスヘッダー**: `portfolio/public/_headers`（ビルドで `dist` にコピーされる。records と同じ）
 
-`portfolio/` 配下のみの変更は `portfolio-yamanoku` だけをビルドする。共有依存（`packages/yama-normalize`・ルートの lockfile / workspace）の変更は、records を含む各プロジェクトもビルドする。
+リポジトリルートに `wrangler.jsonc` や `cloudflare.config.ts` を置かない。`yamanoku-net` と `records-yamanoku` は Pages で Root directory がリポジトリルートのため、ルートの設定を両方とも読んでしまう。

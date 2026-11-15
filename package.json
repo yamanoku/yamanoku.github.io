@@ -11,6 +11,7 @@
     "records": "pnpm --filter records dev:presentation",
     "records:build": "pnpm --filter records build",
     "portfolio:build": "pnpm --filter portfolio build",
+    "portfolio:deploy": "pnpm portfolio:build && pnpm --filter portfolio-cloudflare deploy",
     "lint": "pnpm run oxlint && pnpm run markuplint",
     "format": "oxfmt .",
     "oxlint": "oxlint --fix .",
@@ -34,7 +35,8 @@
     "packages/*",
     "records",
     "records/presentations",
-    "portfolio"
+    "portfolio",
+    "portfolio/cloudflare"
   ],
   "engines": {
     "pnpm": "12.18.0",

@@ -5,7 +5,6 @@ import {
   WORK_CATEGORIES,
   type WorkItem
 } from "../../lib/portfolio";
-import HtmlNightVisual from "./HtmlNightVisual.astro";
 
 interface Props {
   lang: PortfolioLang;
@@ -87,17 +86,19 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
                 ))}
               </ul>
               {work.thumbnail && (
-                <img
-                  src={work.thumbnail.url}
-                  alt=""
-                  width={work.thumbnail.width}
-                  height={work.thumbnail.height}
-                />
-              )}
-              {work.site && (
-                <p class="work-links">
-                  {work.site && <a href={work.site}>{work.site}</a>}
-                </p>
+                <figure>
+                  <img
+                    src={work.thumbnail.url}
+                    alt=""
+                    width={work.thumbnail.width}
+                    height={work.thumbnail.height}
+                  />
+                  {work.site && (
+                    <figcaption>
+                      <a href={work.site}>{work.site}</a>
+                    </figcaption>
+                  )}
+                </figure>
               )}
               <p>{work.description[lang]}</p>
               {work.articles.length > 0 && (

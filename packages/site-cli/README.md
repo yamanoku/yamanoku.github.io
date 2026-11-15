@@ -146,7 +146,7 @@ pnpm site -- portfolio update example --clear-articles --write
 pnpm site -- portfolio remove example --write
 ```
 
-`--description-ja` と `--description-en` は同時に指定します。`--github` は github.com のURLだけを受け付けます。保存先は `portfolio/src/data/portfolio.json` です。ポートフォリオには新しい3件だけを出し、全文は [portfolio.yamanoku.net](https://portfolio.yamanoku.net) で表示します。セクションの表示は `sections enable portfolio` です。
+`--description-ja` と `--description-en` は同時に指定します。`--github` は github.com のURLだけを受け付けます。保存先は `portfolio/src/data/portfolio.json` です。全文は [portfolio.yamanoku.net](https://portfolio.yamanoku.net) で表示します。ポータルには見出しと、このサイトへの導線だけを出します。セクションの表示は `sections enable portfolio` です。
 
 ### 日報、翻訳、セクション
 

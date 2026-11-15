@@ -157,6 +157,7 @@ body.portfolio-site .category-filter {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.25rem 1.25rem;
+  max-width: fit-content;
   margin: var(--space-paragraph) 0 0;
   padding: 0 0.75rem;
   font-size: var(--fs-small);
@@ -247,7 +248,7 @@ body.portfolio-site .work-github svg {
 }
 
 body.portfolio-site .work-body > p:not(.work-links) {
-  margin-block-start: var(--space-content-gap);
+  margin-block-start: var(--space-paragraph);
 }
 
 body.portfolio-site .work-visual {
@@ -310,18 +311,17 @@ body.portfolio-site .work-articles {
   list-style: none;
 }
 
-body.portfolio-site .work-categories,
-body.portfolio-site .work-tech {
+body.portfolio-site .work-categories {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 0.9rem;
   font-size: var(--fs-small);
+  margin-block-end: var(--space-paragraph);
 }
 
 body.portfolio-site .work-categories li {
   font-size: var(--fs-x-small);
   border: 1px solid;
-  margin-block-end: var(--space-content-gap);
   padding: .05em .5em;
   display: inline-block;
 }
@@ -330,6 +330,7 @@ body.portfolio-site .work-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 1rem;
+  font-size: var(--fs-small);
   margin-block-start: var(--space-content-gap);
 }
 

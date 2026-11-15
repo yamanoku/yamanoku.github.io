@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-cloudflare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cf dev",
+    "deploy": "cf deploy"
+  },
+  "devDependencies": {
+    "cf": "catalog:website",
+    "wrangler": "catalog:website"
+  }
+}
