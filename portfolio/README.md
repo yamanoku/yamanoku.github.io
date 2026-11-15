@@ -1,6 +1,6 @@
 # portfolio
 
-[portfolio.yamanoku.net](https://portfolio.yamanoku.net) — やまのく（yamanoku）の製作実績。
+[portfolio.yamanoku.net](https://portfolio.yamanoku.net) — やまのく（yamanoku）のポートフォリオ。
 
 ## 構成
 
@@ -9,7 +9,7 @@
 - **コンテンツ**: `src/data/portfolio.json` の構造化データを Astro が描画する
 - **言語**: `/` が日本語、`/en/` が英語
 
-製作実績はルートのサイト更新CLIで管理する。`src/data/portfolio.json` は直接編集しない。
+ポートフォリオはルートのサイト更新CLIで管理する。`src/data/portfolio.json` は直接編集しない。
 
 ```bash
 pnpm site -- portfolio add \

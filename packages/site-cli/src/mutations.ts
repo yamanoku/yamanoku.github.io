@@ -313,7 +313,7 @@ const sortPortfolio = (portfolio: Work[]): void => {
 export function addWork(portfolio: Work[], work: Work): Work[] {
   const next = clone(portfolio);
   if (next.some((item) => item.id === work.id)) {
-    throw new Error(`同じidの製作実績が既にあります: ${work.id}`);
+    throw new Error(`同じidのポートフォリオが既にあります: ${work.id}`);
   }
   next.push(normalizeWork(work));
   sortPortfolio(next);
@@ -353,7 +353,7 @@ export function updateWork(
 ): Work[] {
   const next = clone(portfolio);
   const index = next.findIndex((item) => item.id === id);
-  if (index === -1) throw new Error(`製作実績が見つかりません: ${id}`);
+  if (index === -1) throw new Error(`ポートフォリオが見つかりません: ${id}`);
   const current = next[index];
   const updated = normalizeWork({
     id: update.id ?? current.id,
@@ -370,7 +370,7 @@ export function updateWork(
     updated.id !== current.id &&
     next.some((item) => item.id === updated.id)
   ) {
-    throw new Error(`同じidの製作実績が既にあります: ${updated.id}`);
+    throw new Error(`同じidのポートフォリオが既にあります: ${updated.id}`);
   }
   next[index] = updated;
   sortPortfolio(next);
@@ -380,7 +380,7 @@ export function updateWork(
 export function removeWork(portfolio: Work[], id: string): Work[] {
   const next = clone(portfolio);
   const index = next.findIndex((item) => item.id === id);
-  if (index === -1) throw new Error(`製作実績が見つかりません: ${id}`);
+  if (index === -1) throw new Error(`ポートフォリオが見つかりません: ${id}`);
   next.splice(index, 1);
   return validatePortfolio(next);
 }

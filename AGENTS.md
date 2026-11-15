@@ -58,7 +58,7 @@ pnpm records <name>        # 発表資料の開発サーバー（flat: 11tyの�
 pnpm records <name>:slide  # Slidevのみ
 pnpm records <name>:pages  # 11tyのみ
 
-# portfolio（製作実績サイト）
+# portfolio（ポートフォリオサイト）
 pnpm portfolio:build           # Astroビルド（出力: portfolio/dist）
 pnpm portfolio:deploy          # ビルドして Worker portfolio へデプロイ
 ```
@@ -87,7 +87,7 @@ packages/
 └── yama-normalize/      # 独自Normalize CSS
 
 portfolio/                   # portfolio.yamanoku.net（Astro / Cloudflare Workers）
-├── src/data/portfolio.json  # 製作実績の正規データ
+├── src/data/portfolio.json  # ポートフォリオの正規データ
 └── src/pages/           # 全文（/ と /en/）
 
 records/                 # records.yamanoku.net（Astro / 別Cloudflare Pages）
@@ -172,11 +172,11 @@ pnpm records <name>
 #### プレゼンテーション一覧データ
 登壇は `records/src/data/records.json`、執筆は `src/data/writings.json` を正規データとし、`src/presentations/listPresentation.ts` がポートフォリオサイト用の最新5件を導出する。情報更新時はこれらを直接編集せず、`pnpm site -- stages ...` または `pnpm site -- writings ...` を使用する。執筆の5件制約は変更しない。
 
-製作実績は `portfolio/src/data/portfolio.json` を正規データとする。全文は portfolio.yamanoku.net に出し、ポータル（yamanoku.net）には見出し・導入文・そのサイトへの導線だけを出す。最新件数の一覧はポータルに戻さない。更新は `pnpm site -- portfolio ...` を使い、JSONを直接編集しない。
+ポートフォリオは `portfolio/src/data/portfolio.json` を正規データとする。全文は portfolio.yamanoku.net に出し、ポータル（yamanoku.net）には見出し・導入文・そのサイトへの導線だけを出す。最新件数の一覧はポータルに戻さない。更新は `pnpm site -- portfolio ...` を使い、JSONを直接編集しない。
 
 ### サイト情報更新CLI
 
-プロフィール、翻訳、リンク、製作実績、日報年次、セクション表示、登壇、執筆、Podcastは `packages/site-cli` のGunshi CLIで管理する。
+プロフィール、翻訳、リンク、ポートフォリオ、日報年次、セクション表示、登壇、執筆、Podcastは `packages/site-cli` のGunshi CLIで管理する。
 
 - 変更コマンドはデフォルトでプレビューのみ。内容を確認後に `--write` を付ける。機械可読な結果は `--json`。差分と次のコマンドは stderr、終了コード 2 は使い方の誤り
 - `src/data/site-content.json`、`src/data/writings.json`、`records/src/data/records.json`、`portfolio/src/data/portfolio.json` を通常の情報更新で直接編集しない

@@ -908,8 +908,8 @@ const appendWorkDetails = (
 
 const workListCommand = define({
   name: "list",
-  description: "製作実績を作った順に出す",
-  examples: `製作実績を見る
+  description: "ポートフォリオを作った順に出す",
+  examples: `ポートフォリオを見る
   site portfolio list`,
   run: async () => {
     const portfolio = (await readPortfolio()).portfolio;
@@ -919,9 +919,9 @@ const workListCommand = define({
 
 const workAddCommand = define({
   name: "add",
-  description: "製作実績を追加する",
+  description: "ポートフォリオを追加する",
   toKebab: true,
-  examples: `製作実績を追加する
+  examples: `ポートフォリオを追加する
   site portfolio add --id example --name "example" --github "https://github.com/yamanoku/example" --site "https://example.com" --description-ja "概要" --description-en "Summary" --created 2026-01-01 --category website --category source-code --article-title "記事" --article-url "https://example.com/article" --write`,
   args: {
     id: {
@@ -999,7 +999,7 @@ const workAddCommand = define({
     );
     nextArgs.push("--write");
     presentMutation({
-      resource: "製作実績",
+      resource: "ポートフォリオ",
       id: ctx.values.id,
       outcome: "added",
       next: nextArgs,
@@ -1010,7 +1010,7 @@ const workAddCommand = define({
 
 const workUpdateCommand = define({
   name: "update",
-  description: "idが一致する製作実績を更新する",
+  description: "idが一致するポートフォリオを更新する",
   toKebab: true,
   examples: `カテゴリと関連記事を置き換える
   site portfolio update example --category website --category source-code --article-title "記事" --article-url "https://example.com/article" --write`,
@@ -1127,7 +1127,7 @@ const workUpdateCommand = define({
     }
     nextArgs.push("--write");
     presentMutation({
-      resource: "製作実績",
+      resource: "ポートフォリオ",
       id: ctx.values.newId ?? ctx.values.id,
       outcome: "updated",
       next: nextArgs,
@@ -1138,8 +1138,8 @@ const workUpdateCommand = define({
 
 const workRemoveCommand = define({
   name: "remove",
-  description: "idが一致する製作実績を外す",
-  examples: `製作実績を外す
+  description: "idが一致するポートフォリオを外す",
+  examples: `ポートフォリオを外す
   site portfolio remove example --write`,
   args: {
     id: { type: "positional", required: true, description: "識別子。完全一致" }
@@ -1150,7 +1150,7 @@ const workRemoveCommand = define({
     const next = removeWork(portfolio, ctx.values.id);
     const result = await writeJson(paths.portfolio, next, { write });
     presentMutation({
-      resource: "製作実績",
+      resource: "ポートフォリオ",
       id: ctx.values.id,
       outcome: "removed",
       next: ["portfolio", "remove", ctx.values.id, "--write"],
@@ -1161,7 +1161,7 @@ const workRemoveCommand = define({
 
 const portfolioCommand = define({
   name: "portfolio",
-  description: "製作実績を更新する",
+  description: "ポートフォリオを更新する",
   run: groupHelp,
   subCommands: {
     add: workAddCommand,
@@ -1467,7 +1467,7 @@ const validateCommand = define({
   run: async () => {
     const data = await validateRepository();
     presentLine(
-      `検証成功: 執筆${data.writings.length}件、登壇${data.records.length}件、製作実績${data.portfolio.length}件、Podcast ${data.podcast.episodes.length}件`,
+      `検証成功: 執筆${data.writings.length}件、登壇${data.records.length}件、ポートフォリオ${data.portfolio.length}件、Podcast ${data.podcast.episodes.length}件`,
       {
         outcome: "validated",
         writings: data.writings.length,

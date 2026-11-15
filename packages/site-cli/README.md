@@ -125,7 +125,7 @@ pnpm site -- links list social
 
 `rel-me` へ追加すると、デフォルトでは一覧に出さず、`rel=me` には出します。`rel-me` の更新と削除は `relMe: true` のリンクだけが対象です。
 
-### 製作実績
+### ポートフォリオ
 
 識別子は `--id` で、完全一致です。保存は作った日の古い順です。`add` と、作成日を変える `update` は、その順へ並べ直します。同じ日の項目は、既存の並びを保ったまま新しいものを後ろに置きます。`--github` と `--site` はどちらも省略できます。`update` で空文字を渡すとその項目を消します。カテゴリは `--category` で、`website`、`event`、`source-code`、`advent-calendar`、`book`、`curation` から1つ以上を繰り返します。複数当たる場合は重ねます。保存時はこの並び順に揃えます。`update` で指定すると、その一覧を置き換えます。関連記事は `--article-title` と `--article-url` を同じ件数・同じ順で繰り返します。`update` で指定すると、その一覧を置き換えます。空にするときは `--clear-articles` です。
 
@@ -181,7 +181,7 @@ RSSを取得して最新5件を検証し、`src/data/ogenkidesukaFm.json` へ保
 - `src/data/site-content.json`: プロフィール、翻訳、日報、リンク、セクション表示
 - `src/data/writings.json`: 表示する執筆5件
 - `records/src/data/records.json`: 全登壇記録
-- `portfolio/src/data/portfolio.json`: 全製作実績
+- `portfolio/src/data/portfolio.json`: 全ポートフォリオ
 - `src/data/ogenkidesukaFm.json`: Podcast同期結果
 
 これらはCLIが管理する正規データです。通常の情報更新では直接編集せず、CLIに必要な操作がなければ先にコマンドを追加してください。
