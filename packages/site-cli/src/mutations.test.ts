@@ -1,22 +1,26 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
+import portfolio from "../../../portfolio/src/data/portfolio.json" with { type: "json" };
 import records from "../../../records/src/data/records.json" with { type: "json" };
 import siteContent from "../../../src/data/site-content.json" with { type: "json" };
 import writings from "../../../src/data/writings.json" with { type: "json" };
-import type { SiteContent, StageRecord, Writing } from "./model.js";
+import type { SiteContent, StageRecord, Work, Writing } from "./model.js";
 import {
   addJournalYear,
   addLink,
   addStage,
+  addWork,
   addWriting,
   parseRubyParts,
   removeLink,
   removeTranslation,
+  removeWork,
   setProfile,
   setTranslation,
   updateLink,
-  updateStage
+  updateStage,
+  updateWork
 } from "./mutations.js";
 
 describe("writing mutations", () => {
@@ -172,6 +176,44 @@ describe("site content mutations", () => {
     assert.equal(
       removed.links.social.some((link) => link.id === "x"),
       true
+    );
+  });
+
+  it("inserts a work in creation order and rejects a duplicate id", () => {
+    const current = portfolio as Work[];
+    const next = addWork(current, {
+      id: "example",
+      name: "example",
+      github: "https://github.com/yamanoku/example",
+      site: "https://example.com",
+      description: { ja: "概要", en: "Summary" },
+      createdAt: "2010-01-01",
+      categories: ["source-code", "website"],
+      articles: [{ title: "記事", url: "https://example.com/article" }]
+    });
+    assert.equal(next[0]?.id, "example");
+    assert.deepEqual(next[0]?.categories, ["website", "source-code"]);
+    assert.equal(next[0]?.github, "https://github.com/yamanoku/example");
+    const cleared = updateWork(next, "example", { github: null, site: "" });
+    assert.equal(cleared[0]?.github, undefined);
+    assert.equal(cleared[0]?.site, undefined);
+    assert.throws(() => addWork(next, next[0]), /同じid/);
+  });
+
+  it("re-sorts a work when its creation date changes", () => {
+    const current = portfolio as Work[];
+    const oldest = current[0];
+    const next = updateWork(current, oldest.id, { createdAt: "2099-01-01" });
+    assert.equal(next.at(-1)?.id, oldest.id);
+    assert.equal(next.at(-1)?.thumbnail?.url, oldest.thumbnail?.url);
+    assert.equal(next.at(-1)?.thumbnail?.width, oldest.thumbnail?.width);
+    assert.equal(next.at(-1)?.thumbnail?.height, oldest.thumbnail?.height);
+    assert.deepEqual(next.at(-1)?.categories, oldest.categories);
+    assert.deepEqual(next.at(-1)?.articles, oldest.articles);
+    const removed = removeWork(next, oldest.id);
+    assert.equal(
+      removed.some((work) => work.id === oldest.id),
+      false
     );
   });
 

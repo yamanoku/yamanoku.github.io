@@ -9,7 +9,11 @@ import {
   type StageResource,
   validateRecords,
   validateSiteContent,
+  validatePortfolio,
   validateWritings,
+  normalizeWorkCategories,
+  type Work,
+  type WorkArticle,
   type Writing
 } from "./model.js";
 
@@ -296,6 +300,91 @@ export function removeTranslation(
   return validateSiteContent(next);
 }
 
+const sortPortfolio = (portfolio: Work[]): void => {
+  portfolio.sort((left, right) =>
+    left.createdAt < right.createdAt
+      ? -1
+      : left.createdAt > right.createdAt
+        ? 1
+        : 0
+  );
+};
+
+export function addWork(portfolio: Work[], work: Work): Work[] {
+  const next = clone(portfolio);
+  if (next.some((item) => item.id === work.id)) {
+    throw new Error(`同じidのポートフォリオが既にあります: ${work.id}`);
+  }
+  next.push(normalizeWork(work));
+  sortPortfolio(next);
+  return validatePortfolio(next);
+}
+
+const optionalWorkUrl = (
+  value: string | null | undefined,
+  current: string | undefined
+): string | undefined => {
+  if (value === undefined) return current;
+  if (value === null || value === "") return undefined;
+  return value;
+};
+
+const normalizeWork = (work: Work): Work => ({
+  id: work.id,
+  name: work.name,
+  description: work.description,
+  createdAt: work.createdAt,
+  categories: normalizeWorkCategories(work.categories),
+  articles: work.articles,
+  ...(work.github ? { github: work.github } : {}),
+  ...(work.site ? { site: work.site } : {}),
+  ...(work.thumbnail ? { thumbnail: work.thumbnail } : {})
+});
+
+export type WorkUpdate = Partial<Omit<Work, "github" | "site">> & {
+  github?: string | null;
+  site?: string | null;
+};
+
+export function updateWork(
+  portfolio: Work[],
+  id: string,
+  update: WorkUpdate
+): Work[] {
+  const next = clone(portfolio);
+  const index = next.findIndex((item) => item.id === id);
+  if (index === -1) throw new Error(`ポートフォリオが見つかりません: ${id}`);
+  const current = next[index];
+  const updated = normalizeWork({
+    id: update.id ?? current.id,
+    name: update.name ?? current.name,
+    description: update.description ?? current.description,
+    createdAt: update.createdAt ?? current.createdAt,
+    categories: update.categories ?? current.categories,
+    articles: update.articles ?? current.articles,
+    github: optionalWorkUrl(update.github, current.github),
+    site: optionalWorkUrl(update.site, current.site),
+    thumbnail: update.thumbnail ?? current.thumbnail
+  });
+  if (
+    updated.id !== current.id &&
+    next.some((item) => item.id === updated.id)
+  ) {
+    throw new Error(`同じidのポートフォリオが既にあります: ${updated.id}`);
+  }
+  next[index] = updated;
+  sortPortfolio(next);
+  return validatePortfolio(next);
+}
+
+export function removeWork(portfolio: Work[], id: string): Work[] {
+  const next = clone(portfolio);
+  const index = next.findIndex((item) => item.id === id);
+  if (index === -1) throw new Error(`ポートフォリオが見つかりません: ${id}`);
+  next.splice(index, 1);
+  return validatePortfolio(next);
+}
+
 export function setSection(
   content: SiteContent,
   section: SectionName,
@@ -315,6 +404,15 @@ export function normalizeStageRecord(record: StageRecord): StageRecord {
     ...(record.description ? { description: record.description } : {}),
     ...(record.note ? { note: record.note } : {})
   };
+}
+
+export function pairArticles(titles: string[], urls: string[]): WorkArticle[] {
+  if (titles.length !== urls.length) {
+    throw new Error(
+      "--article-title と --article-url は同じ件数を指定してください"
+    );
+  }
+  return titles.map((title, index) => ({ title, url: urls[index] }));
 }
 
 export function pairResources(

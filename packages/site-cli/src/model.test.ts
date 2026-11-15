@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
+import portfolio from "../../../portfolio/src/data/portfolio.json" with { type: "json" };
 import records from "../../../records/src/data/records.json" with { type: "json" };
 import siteContent from "../../../src/data/site-content.json" with { type: "json" };
 import writings from "../../../src/data/writings.json" with { type: "json" };
@@ -8,6 +9,7 @@ import {
   DataValidationError,
   validateRecords,
   validateSiteContent,
+  validatePortfolio,
   validateWritings
 } from "./model.js";
 
@@ -16,6 +18,7 @@ describe("repository data validation", () => {
     assert.doesNotThrow(() => validateSiteContent(siteContent));
     assert.doesNotThrow(() => validateWritings(writings));
     assert.doesNotThrow(() => validateRecords(records));
+    assert.doesNotThrow(() => validatePortfolio(portfolio));
   });
 
   it("requires exactly five writings", () => {
@@ -43,6 +46,55 @@ describe("repository data validation", () => {
   it("rejects records that are not newest-first", () => {
     const invalid = [records[1], records[0], ...records.slice(2)];
     assert.throws(() => validateRecords(invalid), /新しい順/);
+  });
+
+  it("rejects a work github URL outside github.com", () => {
+    const invalid = structuredClone(portfolio);
+    invalid[0].github = "https://example.com/repo";
+    assert.throws(
+      () => validatePortfolio(invalid),
+      /github はgithub.comのHTTP\(S\) URLにしてください/
+    );
+  });
+
+  it("rejects an unknown work category", () => {
+    const invalid = structuredClone(portfolio);
+    invalid[0].categories = ["website", "demo"];
+    assert.throws(
+      () => validatePortfolio(invalid),
+      /categories\[1\] は website, event, source-code, advent-calendar, book, curation のいずれかにしてください/
+    );
+  });
+
+  it("rejects technologies on a work", () => {
+    const invalid = structuredClone(portfolio) as Array<
+      (typeof portfolio)[number] & { technologies?: string[] }
+    >;
+    invalid[0].technologies = ["Vue.js"];
+    assert.throws(
+      () => validatePortfolio(invalid),
+      /technologies は使えません/
+    );
+  });
+
+  it("rejects a portfolio that is not in creation order", () => {
+    const invalid = structuredClone(portfolio);
+    const first = invalid[0];
+    invalid[0] = invalid[1];
+    invalid[1] = first;
+    assert.throws(
+      () => validatePortfolio(invalid),
+      /portfolio は作った順にしてください/
+    );
+  });
+
+  it("rejects portfolio left inside site content", () => {
+    const invalid = structuredClone(siteContent) as Record<string, unknown>;
+    invalid.portfolio = portfolio;
+    assert.throws(
+      () => validateSiteContent(invalid),
+      /portfolio は portfolio\/src\/data\/portfolio.json に置いてください/
+    );
   });
 
   it("rejects an invalid eventUrl", () => {

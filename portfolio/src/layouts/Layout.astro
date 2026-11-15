@@ -1,0 +1,58 @@
+---
+import GlobalFooter from "../components/global/GlobalFooter.astro";
+import GlobalHeader from "../components/global/GlobalHeader.astro";
+import { copy, type PortfolioLang } from "../lib/copy";
+
+import "gen-interface-jp/400.css";
+import "../styles/global.css";
+
+interface Props {
+  lang: PortfolioLang;
+}
+
+const { lang } = Astro.props;
+const text = copy[lang];
+const ogImage = "https://portfolio.yamanoku.net/ogp/ogp@2x.png";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{text.title} | yamanoku.net</title>
+    <meta name="title" content={text.title} />
+    <meta name="description" content={text.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={text.title} />
+    <meta property="og:description" content={text.description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={text.title} />
+    <meta property="twitter:description" content={text.description} />
+    <meta property="twitter:image" content={ogImage} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang="ja" href="https://portfolio.yamanoku.net/" />
+    <link rel="alternate" hreflang="en" href="https://portfolio.yamanoku.net/en/" />
+  </head>
+  <body class="portfolio-site">
+    <GlobalHeader lang={lang} />
+    <main id="main">
+      <slot />
+      <section class="portfolio-related" aria-labelledby="related-pages">
+        <h2 id="related-pages">{text.related}</h2>
+        <ul>
+          <li><a href={text.portalUrl}>{text.portal}</a></li>
+          <li><a href="https://records.yamanoku.net">{text.records}</a></li>
+          <li><a href="https://archives.yamanoku.net">{text.archives}</a></li>
+        </ul>
+      </section>
+    </main>
+    <GlobalFooter />
+  </body>
+</html>

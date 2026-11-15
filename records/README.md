@@ -87,7 +87,7 @@ Cloudflare Pages のダッシュボードで GitHub リポジトリ（`yamanoku/
 
 ### `wrangler.jsonc` は使わない
 
-このリポジトリには Cloudflare Pages プロジェクトが **2つ**（`yamanoku-net` / `records-yamanoku`）あり、どちらも Root directory がリポジトリルートのため、ルート直下に `wrangler.jsonc` を置くと **両方のプロジェクトが同じ設定を読み込んでしまう**。`name` や `pages_build_output_dir` がもう一方のプロジェクトと一致せずビルドが失敗するため、`wrangler.jsonc` は配置しない。出力先はダッシュボードの **Build output directory（`records/dist`）** で設定する。
+Cloudflare Pages プロジェクト `yamanoku-net` と `records-yamanoku` は Root directory がリポジトリルートである。ルート直下に `wrangler.jsonc` を置くと **両方のプロジェクトが同じ設定を読み込んでしまう**。`name` や `pages_build_output_dir` が一致せずビルドが失敗するため、ルートには `wrangler.jsonc` を置かない。出力先はダッシュボードの **Build output directory（`records/dist`）** で設定する。portfolio は Pages ではなく、`portfolio/cloudflare/` の Workers 設定で `portfolio/dist` を配信する。
 
 ### records 変更時のみデプロイする（Build watch paths）
 
@@ -96,7 +96,7 @@ Cloudflare Pages のダッシュボードで GitHub リポジトリ（`yamanoku/
 | プロジェクト | 設定 | 値 |
 | --- | --- | --- |
 | `records-yamanoku` | Include paths | `records/**`, `packages/yama-normalize/*`, `pnpm-lock.yaml`, `pnpm-workspace.yaml` |
-| `yamanoku-net` | Exclude paths | `records/**` |
+| `yamanoku-net` | Exclude paths | `records/**`, `portfolio/**` |
 
 > 発表資料は `records/presentations/` 配下にあるため、ワイルドカードは `records/**`（再帰）にすること。`records/*` だと `records/presentations/` 配下の変更を拾えない。
 
@@ -104,4 +104,5 @@ Cloudflare Pages のダッシュボードで GitHub リポジトリ（`yamanoku/
 
 - `records/`（発表資料 `records/presentations/` を含む）配下のみの変更 → `records-yamanoku` のみビルド
 - 本体サイト（`src/` など）のみの変更 → `yamanoku-net` のみビルド
-- 共有依存（`packages/yama-normalize`・ルートの lockfile / workspace）の変更 → 両方ビルド
+- 共有依存（`packages/yama-normalize`・ルートの lockfile / workspace）の変更 → Pages の両プロジェクトがビルドする
+- `portfolio/` の配信は Workers。`portfolio/**` の変更が `main` に入ると `.github/workflows/deploy-portfolio.yml` が `pnpm portfolio:deploy` を実行する。Pages の watch path ではビルドしない

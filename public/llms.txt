@@ -53,6 +53,12 @@
 
 - [yamanoku/Records](https://github.com/yamanoku/records)
 
+## Works
+
+> Open source projects published by yamanoku
+
+- [works.yamanoku.net](https://works.yamanoku.net/)
+
 ## Presentations - Writing
 
 > yamanoku / Oyama Okuto's past writing contents

@@ -10,6 +10,7 @@ export const PROFILE_FIELDS = [
 
 export const SECTION_NAMES = [
   "basic",
+  "portfolio",
   "openSource",
   "presentations",
   "podcast",
@@ -67,6 +68,49 @@ export type ContentLink = {
   id: string;
   title: LocalizedText;
   url: string;
+};
+
+export type WorkArticle = {
+  title: string;
+  url: string;
+};
+
+export type WorkThumbnail = {
+  url: string;
+  width: number;
+  height: number;
+};
+
+export const WORK_CATEGORIES = [
+  "website",
+  "event",
+  "source-code",
+  "advent-calendar",
+  "book",
+  "curation"
+] as const;
+
+export type WorkCategory = (typeof WORK_CATEGORIES)[number];
+
+export const isWorkCategory = (value: unknown): value is WorkCategory =>
+  typeof value === "string" &&
+  (WORK_CATEGORIES as readonly string[]).includes(value);
+
+export const normalizeWorkCategories = (
+  categories: readonly WorkCategory[]
+): WorkCategory[] =>
+  WORK_CATEGORIES.filter((category) => categories.includes(category));
+
+export type Work = {
+  id: string;
+  name: string;
+  description: LocalizedText;
+  createdAt: string;
+  categories: WorkCategory[];
+  articles: WorkArticle[];
+  github?: string;
+  site?: string;
+  thumbnail?: WorkThumbnail;
 };
 
 export type SiteContent = {
@@ -139,6 +183,12 @@ const isHttpUrl = (value: unknown): value is string => {
   }
 };
 
+const isGitHubUrl = (value: unknown): value is string => {
+  if (!isHttpUrl(value)) return false;
+  const hostname = new URL(value).hostname;
+  return hostname === "github.com" || hostname === "www.github.com";
+};
+
 const isIsoDatetime = (value: unknown): value is string =>
   typeof value === "string" &&
   /^\d{4}-\d{2}-\d{2}T/.test(value) &&
@@ -178,6 +228,124 @@ const validateLocalizedText = (
     addStringIssue(issues, value.en, `${path}.en`)
   );
 };
+
+const validateWork = (
+  value: unknown,
+  index: number,
+  issues: string[]
+): value is Work => {
+  const path = `portfolio[${index}]`;
+  if (!isObject(value)) {
+    issues.push(`${path} はオブジェクトにしてください`);
+    return false;
+  }
+  addStringIssue(issues, value.id, `${path}.id`);
+  addStringIssue(issues, value.name, `${path}.name`);
+  if (value.github !== undefined && !isGitHubUrl(value.github))
+    issues.push(`${path}.github はgithub.comのHTTP(S) URLにしてください`);
+  if (value.site !== undefined && !isHttpUrl(value.site))
+    issues.push(`${path}.site はHTTP(S) URLにしてください`);
+  validateLocalizedText(value.description, `${path}.description`, issues);
+  if (!isDate(value.createdAt))
+    issues.push(`${path}.createdAt はYYYY-MM-DDにしてください`);
+  if (!Array.isArray(value.categories) || value.categories.length === 0) {
+    issues.push(`${path}.categories は1つ以上指定してください`);
+  } else {
+    value.categories.forEach((category, categoryIndex) => {
+      if (!isWorkCategory(category)) {
+        issues.push(
+          `${path}.categories[${categoryIndex}] は ${WORK_CATEGORIES.join(", ")} のいずれかにしてください`
+        );
+      }
+    });
+    const names = value.categories.filter(isWorkCategory);
+    if (new Set(names).size !== names.length) {
+      issues.push(`${path}.categories が重複しています`);
+    }
+  }
+  if ("technologies" in value) {
+    issues.push(`${path}.technologies は使えません`);
+  }
+  if (!Array.isArray(value.articles)) {
+    issues.push(`${path}.articles は配列にしてください`);
+  } else {
+    value.articles.forEach((article, articleIndex) => {
+      const articlePath = `${path}.articles[${articleIndex}]`;
+      if (!isObject(article)) {
+        issues.push(`${articlePath} はオブジェクトにしてください`);
+        return;
+      }
+      addStringIssue(issues, article.title, `${articlePath}.title`);
+      if (!isHttpUrl(article.url))
+        issues.push(`${articlePath}.url はHTTP(S) URLにしてください`);
+    });
+    const urls = value.articles
+      .filter(isObject)
+      .map((article) => article.url)
+      .filter((url): url is string => typeof url === "string");
+    if (new Set(urls).size !== urls.length)
+      issues.push(`${path}.articles のURLが重複しています`);
+  }
+  if (value.thumbnail !== undefined) {
+    const thumbnailPath = `${path}.thumbnail`;
+    if (!isObject(value.thumbnail)) {
+      issues.push(`${thumbnailPath} はオブジェクトにしてください`);
+    } else {
+      const thumbnail = value.thumbnail;
+      const thumbnailUrl = thumbnail.url;
+      const isLocalThumbnail =
+        typeof thumbnailUrl === "string" &&
+        thumbnailUrl.startsWith("/thumbnails/") &&
+        !thumbnailUrl.includes("..");
+      if (!isLocalThumbnail && !isHttpUrl(thumbnailUrl)) {
+        issues.push(
+          `${thumbnailPath}.url は /thumbnails/ 以下のパスか、HTTP(S) URLにしてください`
+        );
+      }
+      if (!isPositiveInteger(thumbnail.width))
+        issues.push(`${thumbnailPath}.width は正の整数にしてください`);
+      if (!isPositiveInteger(thumbnail.height))
+        issues.push(`${thumbnailPath}.height は正の整数にしてください`);
+    }
+  }
+  return true;
+};
+
+const isPositiveInteger = (value: unknown): value is number =>
+  typeof value === "number" && Number.isInteger(value) && value > 0;
+
+export function validatePortfolio(value: unknown): Work[] {
+  const issues: string[] = [];
+  if (!Array.isArray(value)) {
+    throw new DataValidationError(["portfolio は配列にしてください"]);
+  }
+  value.forEach((work, index) => {
+    validateWork(work, index, issues);
+  });
+  const ids = value
+    .filter(isObject)
+    .map((work) => work.id)
+    .filter((id): id is string => typeof id === "string");
+  if (new Set(ids).size !== ids.length) {
+    issues.push("portfolio のidが重複しています");
+  }
+  for (let index = 1; index < value.length; index++) {
+    const previous = isObject(value[index - 1])
+      ? value[index - 1].createdAt
+      : undefined;
+    const current = isObject(value[index]) ? value[index].createdAt : undefined;
+    if (
+      typeof previous === "string" &&
+      typeof current === "string" &&
+      previous > current
+    ) {
+      issues.push("portfolio は作った順にしてください");
+      break;
+    }
+  }
+  if (issues.length > 0) throw new DataValidationError(issues);
+  return value as Work[];
+}
 
 const validateLink = (
   value: unknown,
@@ -323,6 +491,12 @@ export function validateSiteContent(value: unknown): SiteContent {
       if (new Set(ids).size !== ids.length)
         issues.push(`links.${group} のidが重複しています`);
     }
+  }
+
+  if ("portfolio" in value) {
+    issues.push(
+      "portfolio は portfolio/src/data/portfolio.json に置いてください"
+    );
   }
 
   if (!isObject(value.sections)) {

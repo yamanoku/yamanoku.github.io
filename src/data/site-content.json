@@ -46,6 +46,9 @@
       "page.home": "ホーム",
       "header.text-beside-logo": "ポータルサイト",
       "heading.basic": "基本情報",
+      "heading.portfolio": "ポートフォリオ",
+      "portfolio.lead": "やまのく（yamanoku）の個人制作物・プロジェクトに関するページです。",
+      "portfolio.related": "関連ページ",
       "heading.jobs": "職業",
       "heading.career": "職歴",
       "heading.related-list": "関連リンク一覧",
@@ -74,13 +77,24 @@
       "daily-journal.description-after": "を活用し、日々の出来事や気になるニュースを日報という形でまとめています。毎日更新ではなく、気が向いたら更新しています。",
       "daily-journal.japanese-only": "",
       "multilingual": "多言語ページ",
-      "skip.to-content": "本文へスキップ"
+      "portfolio.github": "GitHub",
+      "skip.to-content": "本文へスキップ",
+      "portfolio.categories": "カテゴリ",
+      "portfolio.categories.website": "ウェブサイト",
+      "portfolio.categories.sourceCode": "ソースコード",
+      "portfolio.categories.adventCalendar": "アドベントカレンダー",
+      "portfolio.categories.book": "本",
+      "portfolio.categories.event": "イベント",
+      "portfolio.categories.curation": "まとめ"
     },
     "en": {
       "meta.description": "Okuto Oyama Portfolio Site",
       "page.home": "Home",
       "header.text-beside-logo": "Portal Site",
       "heading.basic": "Basic Info",
+      "heading.portfolio": "Portfolio",
+      "portfolio.lead": "yamanoku's personal works and projects.",
+      "portfolio.related": "Related pages",
       "heading.jobs": "Career Info",
       "heading.career": "Jobs Info",
       "heading.related-list": "Related Links List",
@@ -109,7 +123,15 @@
       "daily-journal.description-after": " to compile daily events and interesting news in the form of a journal. Rather than updating daily, I post whenever inspiration strikes.",
       "daily-journal.japanese-only": "Sorry, Japanese text only",
       "multilingual": "Multilingual Page",
-      "skip.to-content": "Skip to content"
+      "portfolio.github": "GitHub",
+      "skip.to-content": "Skip to content",
+      "portfolio.categories.website": "Website",
+      "portfolio.categories.sourceCode": "Source code",
+      "portfolio.categories.adventCalendar": "Advent calendar",
+      "portfolio.categories.book": "Book",
+      "portfolio.categories.event": "Event",
+      "portfolio.categories.curation": "Curation",
+      "portfolio.categories": "Categories"
     }
   },
   "journal": {
@@ -256,6 +278,7 @@
   },
   "sections": {
     "basic": true,
+    "portfolio": true,
     "openSource": false,
     "presentations": true,
     "podcast": true,

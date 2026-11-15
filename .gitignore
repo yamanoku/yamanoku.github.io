@@ -4,6 +4,10 @@ dist/
 .vercel
 *.log
 .astro/
+.wrangler/
+.cloudflare/
+.dev.vars
+.dev.vars.*
 records/presentations/*/docs/
 records/public/favicons/
 .playwright-mcp/

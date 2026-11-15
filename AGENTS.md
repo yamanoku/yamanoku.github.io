@@ -22,6 +22,7 @@ packages:
   - packages           # site-cli、yama-normalize等の内部パッケージ
   - records            # records.yamanoku.net（Astro）。発表資料も配下に同梱
   - records/presentations # 登壇資料（11ty + Slidev）
+  - portfolio              # portfolio.yamanoku.net（Astro）
 
 catalogs:
   website: ...         # ポートフォリオサイト用
@@ -56,7 +57,13 @@ pnpm records:build         # Astro + 発表資料ビルド
 pnpm records <name>        # 発表資料の開発サーバー（flat: 11tyのみ8080 / monorepo: 11ty 8080 + Slidev 3030）
 pnpm records <name>:slide  # Slidevのみ
 pnpm records <name>:pages  # 11tyのみ
+
+# portfolio（ポートフォリオサイト）
+pnpm portfolio:build           # Astroビルド（出力: portfolio/dist）
+pnpm portfolio:deploy          # ビルドして Worker portfolio へデプロイ
 ```
+
+`portfolio/**` を変更した PR が `main` にマージされたあと、`.github/workflows/deploy-portfolio.yml` が `pnpm portfolio:deploy` を実行する。未マージの PR ではデプロイしない。secret は `PORTFOLIO_CLOUDFLARE_API_TOKEN`。`cf deploy` は `portfolio/cloudflare` で実行し、リポジトリルートや Astro パッケージ直下では実行しない。
 
 ## コードスタイルガイドライン
 
@@ -78,6 +85,10 @@ src/
 packages/
 ├── site-cli/            # yamanoku.net更新用Gunshi CLI
 └── yama-normalize/      # 独自Normalize CSS
+
+portfolio/                   # portfolio.yamanoku.net（Astro / Cloudflare Workers）
+├── src/data/portfolio.json  # ポートフォリオの正規データ
+└── src/pages/           # 全文（/ と /en/）
 
 records/                 # records.yamanoku.net（Astro / 別Cloudflare Pages）
 ├── src/                 # 記録ページ（src/data/records.json）
@@ -161,12 +172,14 @@ pnpm records <name>
 #### プレゼンテーション一覧データ
 登壇は `records/src/data/records.json`、執筆は `src/data/writings.json` を正規データとし、`src/presentations/listPresentation.ts` がポートフォリオサイト用の最新5件を導出する。情報更新時はこれらを直接編集せず、`pnpm site -- stages ...` または `pnpm site -- writings ...` を使用する。執筆の5件制約は変更しない。
 
+ポートフォリオは `portfolio/src/data/portfolio.json` を正規データとする。全文は portfolio.yamanoku.net に出し、ポータル（yamanoku.net）には見出し・導入文・そのサイトへの導線だけを出す。最新件数の一覧はポータルに戻さない。更新は `pnpm site -- portfolio ...` を使い、JSONを直接編集しない。
+
 ### サイト情報更新CLI
 
-プロフィール、翻訳、リンク、日報年次、セクション表示、登壇、執筆、Podcastは `packages/site-cli` のGunshi CLIで管理する。
+プロフィール、翻訳、リンク、ポートフォリオ、日報年次、セクション表示、登壇、執筆、Podcastは `packages/site-cli` のGunshi CLIで管理する。
 
 - 変更コマンドはデフォルトでプレビューのみ。内容を確認後に `--write` を付ける。機械可読な結果は `--json`。差分と次のコマンドは stderr、終了コード 2 は使い方の誤り
-- `src/data/site-content.json`、`src/data/writings.json`、`records/src/data/records.json` を通常の情報更新で直接編集しない
+- `src/data/site-content.json`、`src/data/writings.json`、`records/src/data/records.json`、`portfolio/src/data/portfolio.json` を通常の情報更新で直接編集しない
 - 必要な操作がCLIにない場合は、データを直接書き換えずCLIへ安全なコマンドと検証を追加する
 - 更新後は `pnpm site -- validate`、最終確認は `pnpm site -- check` を実行する
 - CLIはGit操作を行わない。差分確認、commit、pushは別途行う
