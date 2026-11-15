@@ -367,7 +367,12 @@
       "website",
       "source-code"
     ],
-    "articles": [],
+    "articles": [
+      {
+        "title": "What's new in Astro - March 2026",
+        "url": "https://astro.build/blog/whats-new-march-2026/#showcase"
+      }
+    ],
     "github": "https://github.com/yamanoku/react-tokyo-fes-2026",
     "site": "https://react-tokyo-fes-2026.yamanoku.net/",
     "thumbnail": {
