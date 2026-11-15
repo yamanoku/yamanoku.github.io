@@ -4,7 +4,7 @@ onlyBuiltDependencies:
   - sharp
 
 overrides:
-  yamanoku.github.io>vite: ^8.3.7
+  yamanoku.github.io>vite: ^8.3.8
 
 packageExtensions:
   "@eslint/css":
@@ -39,14 +39,14 @@ catalogs:
     oxfmt: 0.78.0
     oxlint: 1.93.0
     tailwindcss: 4.3.5
-    vite: 8.3.7
+    vite: 8.3.8
     wrangler: 4.162.0
   yama-normalize:
     "@eslint/css": 2.0.1
   presentations:
     "@11ty/eleventy": 3.1.8
     "@iconify-json/twemoji": 1.2.5
-    "@iconify-json/vscode-icons": 1.2.97
+    "@iconify-json/vscode-icons": 1.2.98
     "@slidev/cli": 53.1.0
     "@slidev/client": 53.1.0
     "@slidev/theme-apple-basic": 0.25.1
