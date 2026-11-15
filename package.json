@@ -11,7 +11,7 @@
     "records": "pnpm --filter records dev:presentation",
     "records:build": "pnpm --filter records build",
     "portfolio:build": "pnpm --filter portfolio build",
-    "portfolio:deploy": "pnpm portfolio:build && pnpm --filter portfolio-cloudflare deploy",
+    "portfolio:deploy": "pnpm portfolio:build && pnpm --filter portfolio-cloudflare run deploy",
     "lint": "pnpm run oxlint && pnpm run markuplint",
     "format": "oxfmt .",
     "oxlint": "oxlint --fix .",
