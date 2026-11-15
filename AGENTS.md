@@ -63,7 +63,7 @@ pnpm portfolio:build           # Astroビルド（出力: portfolio/dist）
 pnpm portfolio:deploy          # ビルドして Worker portfolio へデプロイ
 ```
 
-`portfolio/**` を変更した PR が `main` にマージされたあと、`.github/workflows/deploy-portfolio.yml` が `pnpm portfolio:deploy` を実行する。未マージの PR ではデプロイしない。secret は `CLOUDFLARE_API_TOKEN`。`cf deploy` は `portfolio/cloudflare` で実行し、リポジトリルートや Astro パッケージ直下では実行しない。
+`portfolio/**` を変更した PR が `main` にマージされたあと、`.github/workflows/deploy-portfolio.yml` が `pnpm portfolio:deploy` を実行する。未マージの PR ではデプロイしない。secret は `PORTFOLIO_CLOUDFLARE_API_TOKEN`。`cf deploy` は `portfolio/cloudflare` で実行し、リポジトリルートや Astro パッケージ直下では実行しない。
 
 ## コードスタイルガイドライン
 

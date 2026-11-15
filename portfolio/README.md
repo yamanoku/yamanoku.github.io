@@ -57,7 +57,7 @@ pnpm portfolio:deploy
 
 `portfolio/**` を変更した pull request が `main` にマージされると、`.github/workflows/deploy-portfolio.yml` が同じ `pnpm portfolio:deploy` を実行する。未マージの pull request ではデプロイしない。`main` へ `portfolio/**` を直接 push したときも、公開中のサイトをその commit に合わせるためデプロイする。
 
-GitHub の repository secret は `CLOUDFLARE_API_TOKEN`。トークンには Worker `portfolio` のデプロイと、ゾーン `yamanoku.net` の DNS 編集（カスタムドメインを維持するため）が必要。workflow は `CLOUDFLARE_ACCOUNT_ID` に `cloudflare.config.ts` と同じ account id を渡す。
+GitHub の repository secret は `PORTFOLIO_CLOUDFLARE_API_TOKEN`。他の Cloudflare プロジェクトと区別するための名前で、workflow はこれを `CLOUDFLARE_API_TOKEN` として `cf` に渡す。トークンには Worker `portfolio` のデプロイと、ゾーン `yamanoku.net` の DNS 編集（カスタムドメインを維持するため）が必要。workflow は `CLOUDFLARE_ACCOUNT_ID` に `cloudflare.config.ts` と同じ account id を渡す。
 
 - **Worker 名**: `portfolio`
 - **アップロード対象**: `portfolio/dist`（`wrangler.config.ts` の `assetsDirectory`）
