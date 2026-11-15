@@ -47,12 +47,43 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <section class="portfolio-related" aria-labelledby="related-pages">
         <h2 id="related-pages">{text.related}</h2>
         <ul>
-          <li><a href={text.portalUrl}>{text.portal}</a></li>
-          <li><a href="https://records.yamanoku.net">{text.records}</a></li>
-          <li><a href="https://archives.yamanoku.net">{text.archives}</a></li>
+          <li>
+            <a href={text.portalUrl}>{text.portal}</a>{lang === "ja" ? "：" : ": "}{text.portalDescription}
+          </li>
+          <li>
+            <a href="https://records.yamanoku.net">{text.records}</a>{lang === "ja" ? "：" : ": "}{text.recordsDescription}
+          </li>
+          <li>
+            <a href="https://archives.yamanoku.net">{text.archives}</a>{lang === "ja" ? "：" : ": "}{text.archivesDescription}
+          </li>
         </ul>
       </section>
     </main>
     <GlobalFooter />
   </body>
 </html>
+
+<style>
+  main {
+    padding-inline: var(--gutter);
+  }
+
+  .portfolio-related {
+    margin-block-start: var(--space-section);
+    padding-block-start: 4.5rem;
+
+    h2 {
+      margin-block-end: var(--space-heading-gap);
+      font-size: var(--fs-heading-2);
+    }
+
+    li {
+      line-height: var(--lh-body);
+
+      & + li {
+        margin-block-start: 0.35em;
+      }
+    }
+  }
+</style>
+

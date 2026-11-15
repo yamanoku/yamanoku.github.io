@@ -100,6 +100,11 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
                   )}
                 </figure>
               )}
+              {(!work.thumbnail && work.site) && (
+                <p class="work-links">
+                  <a href={work.site}>{work.site}</a>
+                </p>
+              )}
               <p>{work.description[lang]}</p>
               {work.articles.length > 0 && (
                 <aside>
@@ -121,3 +126,184 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
     ))
   }
 </div>
+
+<style>
+  .category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 1.25rem;
+    max-width: fit-content;
+    margin: var(--space-paragraph) 0 0;
+    padding: 0 0.75rem;
+    font-size: var(--fs-small);
+
+    legend {
+      padding: 0;
+    }
+
+    label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      min-block-size: 2.75rem;
+    }
+
+    input {
+      accent-color: var(--y-identity-color);
+    }
+  }
+
+  .category-catalog {
+    &:has(input[name="category"]:checked) {
+      :is(.catalog-year, .work) {
+        display: none;
+      }
+    }
+
+    &:has(#category-website:checked) {
+      .catalog-year:has(.work[data-categories~="website"]) {
+        display: block;
+      }
+
+      .work[data-categories~="website"] {
+        display: flex;
+      }
+    }
+
+    &:has(#category-event:checked) {
+      .catalog-year:has(.work[data-categories~="event"]) {
+        display: block;
+      }
+
+      .work[data-categories~="event"] {
+        display: flex;
+      }
+    }
+
+    &:has(#category-source-code:checked) {
+      .catalog-year:has(.work[data-categories~="source-code"]) {
+        display: block;
+      }
+
+      .work[data-categories~="source-code"] {
+        display: flex;
+      }
+    }
+
+    &:has(#category-advent-calendar:checked) {
+      .catalog-year:has(.work[data-categories~="advent-calendar"]) {
+        display: block;
+      }
+
+      .work[data-categories~="advent-calendar"] {
+        display: flex;
+      }
+    }
+
+    &:has(#category-book:checked) {
+      .catalog-year:has(.work[data-categories~="book"]) {
+        display: block;
+      }
+
+      .work[data-categories~="book"] {
+        display: flex;
+      }
+    }
+
+    &:has(#category-curation:checked) {
+      .catalog-year:has(.work[data-categories~="curation"]) {
+        display: block;
+      }
+
+      .work[data-categories~="curation"] {
+        display: flex;
+      }
+    }
+
+    .catalog-year {
+      margin-block-start: var(--space-section);
+      scroll-margin-block-start: 1rem;
+    }
+
+    .work {
+      display: flex;
+      gap: 1em;
+      align-items: baseline;
+      margin-block-start: var(--space-section);
+      padding-block-end: var(--space-article);
+      border-block-end-style: dotted;
+      scroll-margin-block-start: 1rem;
+
+      h2 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.35em 0.45em;
+        margin-block-end: var(--space-paragraph);
+        font-size: var(--fs-heading-3);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .work-github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-inline-size: 1.5rem;
+    min-block-size: 1.5rem;
+    color: inherit;
+    text-decoration: none;
+
+    svg {
+      inline-size: 0.85em;
+      block-size: 0.85em;
+    }
+  }
+
+  .work-body {
+    > p:not(.work-links) {
+      margin-block-start: var(--space-paragraph);
+    }
+
+    :is(.work-categories, .work-articles) {
+      margin-block-start: var(--space-content-gap);
+      padding: 0;
+      list-style: none;
+    }
+
+    .work-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.9rem;
+      margin-block-end: var(--space-paragraph);
+
+      li {
+        display: inline-block;
+        padding: 0.05em 0.5em;
+        border: 1px solid;
+        font-size: var(--fs-x-small);
+      }
+    }
+
+    .work-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1rem;
+      margin-block-start: var(--space-content-gap);
+      font-size: var(--fs-small);
+    }
+
+    aside {
+      margin-block-start: var(--space-paragraph);
+      padding: 1.75rem 1.25rem;
+      background-color: rgb(124 192 255 / 0.2);
+    }
+
+    .work-articles li + li {
+      margin-block-start: var(--space-list);
+    }
+  }
+</style>
+
