@@ -31,7 +31,7 @@ catalogs:
   site-cli: ...        # サイト更新CLI用
 ```
 
-package.jsonでは `catalog:<カタログ名>` で参照する。
+各パッケージの `package.json` では `catalog:<カタログ名>` で参照する。pnpm 12 はルート `package.json` の `workspaces` と `catalogs` を読まないので、そこには置かない。依存のインストールと動作確認は `pnpm` だけを使う。ユーザーが明示しない限り `bun` を実行しない。検証、再現、原因調査でも `bun install` を試さない。`bun install` は `pnpm-workspace.yaml` の packages、catalogs、overrides、packageExtensions、onlyBuiltDependencies をルート `package.json` にコピーする。
 
 ### 開発コマンド
 ```bash
