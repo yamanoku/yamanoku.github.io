@@ -11,3 +11,26 @@ const today = new Date();
     >
   </p>
 </footer>
+
+<style>
+  .portfolio-foot {
+    margin-block-start: calc(var(--space-section) + 4.5rem);
+    padding-inline: var(--gutter);
+    padding-block-end: 1rem;
+    font-size: var(--fs-small);
+
+    p + p {
+      margin-block-start: 0.25em;
+    }
+
+    a:any-link {
+      text-decoration-color: currentColor;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration-color: transparent;
+      }
+    }
+  }
+</style>
+

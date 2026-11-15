@@ -49,3 +49,49 @@ const text = copy[lang];
     </ul>
   </nav>
 </header>
+
+<style>
+  header {
+    display: flex;
+    flex-direction: column;
+    padding-inline: var(--gutter);
+    padding-block-start: var(--space-hero-top);
+
+    h1 {
+      font-size: var(--fs-heading-1);
+      font-weight: 600;
+    }
+  }
+
+  .tagline {
+    margin-block-start: var(--space-paragraph);
+  }
+
+  .site-nav {
+    margin-block-start: var(--space-paragraph);
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      display: inline;
+
+      & + li::before {
+        content: "｜";
+      }
+    }
+
+    a:any-link {
+      text-decoration-color: transparent;
+
+      &:hover,
+      &:focus-visible,
+      &[aria-current="page"] {
+        text-decoration-color: currentColor;
+      }
+    }
+  }
+</style>
+

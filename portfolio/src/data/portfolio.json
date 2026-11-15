@@ -127,8 +127,8 @@
     "id": "archives",
     "name": "archives.yamanoku.net",
     "description": {
-      "ja": "yamanokuこと大山奥人のこれまでの執筆記事や技術ログを集約・配信するアーカイブサイトです。Nuxt ContentやAstroを経て、より高いビルドパフォーマンスとシンプルさを追求し、2026年にox-contentとViteを用いた静的サイト構成へと刷新しました。Markdownからの高度な静的サイト生成に加え、BM25アルゴリズムを用いた高速なクライアントサイド検索、OGP画像生成ツール、RSS・サイトマップ・llms.txtの自動出力など考慮したアーキテクチャを実現しています。",
-      "en": "An archive site hosting approximately 180 articles and technical logs of yamanoku (Okuto Oyama). Evolving through Nuxt Content and Astro, it was re-architected into a high-build performance and simple static site built with ox-content and Vite in 2026. Beyond automated Markdown-to-static generation, it features a lightning-fast client-side search powered by the BM25 algorithm, OG image generation tool, automated RSS/sitemap/llms.txt feeds, showcasing advanced frontend architecture and attention to detail."
+      "ja": "これまでの執筆記事や技術ログを集約・配信するアーカイブサイトです。Nuxt ContentやAstroを経て、より高いビルドパフォーマンスとシンプルさを追求し、2026年にox-contentとViteを用いた静的サイト構成へと刷新しました。Markdownからの高度な静的サイト生成に加え、BM25アルゴリズムを用いた高速なクライアントサイド検索、OGP画像生成ツール、RSS・サイトマップ・llms.txtの自動出力など考慮したアーキテクチャを実現しています。",
+      "en": "An archive site hosting approximately 180 articles and technical logs. Evolving through Nuxt Content and Astro, it was re-architected into a high-build performance and simple static site built with ox-content and Vite in 2026. Beyond automated Markdown-to-static generation, it features a lightning-fast client-side search powered by the BM25 algorithm, OG image generation tool, automated RSS/sitemap/llms.txt feeds, showcasing advanced frontend architecture and attention to detail."
     },
     "createdAt": "2021-04-11",
     "categories": [
@@ -173,7 +173,7 @@
     "id": "awesome-japanese-a11y-companies",
     "name": "Awesome japanese a11y companies",
     "description": {
-      "ja": "日本国内においてWebアクセシビリティに積極的に取り組む企業の事例を体系的に集約した、GitHubスターが70超えのAwesomeリポジトリです。140社以上の情報をコミュニティからの貢献（Issues/PR）を交えて継続的にメンテナンスしています。さらに、事例検索を効率化するMCPサーバーや、TypeSafe AIを活用したジャンル自動分類ツールを独自に統合するなど、AI技術とオープンソースコミュニティ運営を掛け合わせた発展的な試みを行っています。",
+      "ja": "日本国内においてWebアクセシビリティに積極的に取り組む企業の事例を体系的に集約した、GitHubスターが70超えのAwesomeリポジトリです。140社以上の情報をコミュニティからの貢献（Issues、PR）を交えて継続的にメンテナンスしています。さらに、事例検索を効率化するMCPサーバーや、TypeSafe AIを活用したジャンル自動分類ツールを独自に統合するなど、AI技術とオープンソースコミュニティ運営を掛け合わせた発展的な試みを行っています。",
       "en": "An awesome repository (earning 70+ GitHub stars) systematically cataloging Japanese companies dedicated to web accessibility. It aggregates over 140 companies through continuous community-driven contributions via Issues and Pull Requests. The repository goes beyond a standard curation list by integrating a custom MCP server for advanced search and a TypeSafe AI-powered tool for automated genre classification, demonstrating a synergy between AI technologies and community stewardship."
     },
     "createdAt": "2021-09-02",
@@ -201,7 +201,7 @@
     "id": "yamanoku-advent-calendar-2023",
     "name": "yamanoku Advent Calendar 2023",
     "description": {
-      "ja": "2023年12月の1ヶ月間、全25日分の記事を一人で執筆・完走した個人アドベントカレンダー企画です。フロントエンドの技術的知見（OSSへのアクセシビリティ貢献、button要素の仕様、Route Announcer等）から持続可能なWeb、日常や育児、ポッドキャストの振り返りまで幅広く執筆しました。",
+      "ja": "2023年12月の1ヶ月間、全25日分の記事を一人で執筆・完走した、はじめての個人アドベントカレンダー企画です。フロントエンドの技術的知見（OSSへのアクセシビリティ貢献、button要素の仕様、Route Announcer等）から持続可能なWebの取り組み、自身の日常や育児、ポッドキャストの振り返りまで幅広く執筆しました。",
       "en": "A solo Advent calendar project where all 25 daily articles throughout December 2023 were authored single-handedly. Spanning diverse topics including frontend engineering insights (accessibility contributions to OSS, button type attributes, Route Announcer), a sustainable web, daily life, parenting, and podcast reflections."
     },
     "createdAt": "2023-12-01",
@@ -225,8 +225,8 @@
     "id": "vuefes-japan-speakers",
     "name": "Vue Fes Japan Speakers",
     "description": {
-      "ja": "「Vue Fes Japan」の歴代登壇者・セッション情報を集約した非公式アーカイブサイトです。公式データを活用したAPI構築から始まり、検索機能やダークモードの拡充、さらにはJavaScriptの配信量を極限まで削るため「vuerend」や「Vize」へのアーキテクチャ移行を果たすなど、実務さながらの継続的なリビルドと技術検証を行っています。技術選定の変遷や設計思想は、公開している記事やLT資料にまとめています。",
-      "en": "An unofficial archive site aggregating speakers and sessions from past Vue Fes Japan events. Starting from an API backend built with Nuxt/NuxtHub, the project underwent continuous architectural evolution—adding search and dark mode, and eventually migrating to vuerend and Vize to achieve a zero-JS-shipped design. This project reflects pragmatic architecture refinement and technical agility, with the full journey documented through articles and presentations."
+      "ja": "「Vue Fes Japan」の歴代登壇者・セッション情報を集約した非公式アーカイブサイトです。公式データを活用したAPI構築から始まり、検索機能やダークモードの拡充、更にはスタート時点でNuxtだった状態からJavaScriptの配信量を極限まで削るため「vuerend」や「Vize」へのアーキテクチャ移行がなされました。ページ構成や技術選定の変遷は、公開している記事やLT資料にまとめています。",
+      "en": "An unofficial archive site that brings together historical speaker and session information from Vue Fes Japan. The project began with building an API powered by official data, followed by enhancements such as search functionality and dark mode. More recently, to minimize the amount of JavaScript delivered to users, the architecture was migrated from its original Nuxt-based setup to vuerend and Vize. The evolution of the site's structure and technology choices is documented in publicly available articles and LT presentation materials."
     },
     "createdAt": "2024-08-31",
     "categories": [
@@ -256,8 +256,8 @@
     "id": "baseline-mcp-server",
     "name": "Baseline MCP Server",
     "description": {
-      "ja": "Web Platform Dashboard APIと連携し、Web機能のBaselineステータス（widely、newly、limited等）やブラウザ実装状況をClaude Desktop等のMCPクライアントから照会できるMCPサーバーです。Denoの厳格な権限モデルを活用したセキュアな設計を行い、JSRでのパッケージ公開およびシングルバイナリでの配布を実現しています。AIモデルの学習データカットオフ以降の最新ブラウザ相互運用情報をリアルタイムに取得できる、生成AI時代を見据えた実用的な開発ツールです。",
-      "en": "An MCP server integrating with the Web Platform Dashboard API to query Web feature Baseline statuses (widely, newly, limited) and browser implementation details directly from MCP clients like Claude Desktop. Engineered with secure permission controls using Deno, and distributed via JSR and single binaries. It bridges the gap by providing real-time interoperability data post-dating AI model training cutoffs, demonstrating cutting-edge development for the generative AI era."
+      "ja": "Web Platform Dashboard APIと連携し、Web機能のBaselineステータス（widely、newly、limited）やブラウザ実装状況をClaude Desktop等のMCPクライアントから照会できるMCPサーバーです。Denoの厳格な権限モデルを活用したセキュアな設計を行い、JSRでのパッケージ公開およびシングルバイナリでの配布を実現しています。AIモデルの学習データカットオフ以降の最新ブラウザ相互運用情報をリアルタイムに取得できるように考えられた開発ツールです。",
+      "en": "An MCP server that integrates with the Web Platform Dashboard API, allowing MCP clients such as Claude Desktop to query Baseline status (widely, newly, and limited) and browser implementation support for web platform features. It features a secure architecture that leverages Deno's strict permission model, and is distributed both as a JSR package and a standalone binary. This developer tool is designed to provide real-time access to the latest browser interoperability information, including updates that postdate AI models' training data cutoffs."
     },
     "createdAt": "2025-04-12",
     "categories": [
@@ -274,6 +274,7 @@
       }
     ],
     "github": "https://github.com/yamanoku/baseline-mcp-server",
+    "site": "https://jsr.io/@yamanoku/baseline-mcp-server",
     "thumbnail": {
       "url": "/thumbnails/baseline-mcp-server.png",
       "width": 280,
@@ -298,6 +299,7 @@
       }
     ],
     "github": "https://github.com/yamanoku/connpass-user-mcp-server",
+    "site": "https://www.npmjs.com/package/@yamanoku/connpass-user-mcp-server",
     "thumbnail": {
       "url": "/thumbnails/connpass-user-mcp-server.png",
       "width": 280,
@@ -322,6 +324,7 @@
       }
     ],
     "github": "https://github.com/yamanoku/aria-validate-mcp-server",
+    "site": "https://www.npmjs.com/package/@yamanoku/aria-validate-mcp-server",
     "thumbnail": {
       "url": "/thumbnails/aria-validate-mcp-server.png",
       "width": 280,
@@ -356,8 +359,8 @@
     "id": "react-tokyo-fes-2026",
     "name": "Accessible React UI",
     "description": {
-      "ja": "React Tokyo Fes 2026のポスターセッションに向けて開発された、アクセシブルなReactコンポーネント集のデモサイトです。Button、Modal、Tabs、Menu、Carousel、TreeView、Sortable Listの7種類を網羅し、WAI-ARIA Authoring Practices Guide（APG）に準拠した堅牢なキーボード操作と支援技術対応を実現しています。Biomeのアクセシビリティ関連ルールやuseIdフックを導入するなど、実践的な高品質コンポーネント設計を提示しています。",
-      "en": "A demo site featuring accessible React UI components, developed for a poster session at React Tokyo Fes 2026. It showcases seven robust components (Button, Modal, Tabs, Menu, Carousel, TreeView, and Sortable List) adhering strictly to WAI-ARIA Authoring Practices Guide (APG) standards for keyboard navigation and assistive technology support. Biome's accessibility rules and useId hooks demonstrate production-ready, inclusive component architecture."
+      "ja": "React Tokyo Fes 2026のポスターセッションに向けて開発された、アクセシブルなReactコンポーネント集のデモサイトです。Button、Modal、Tabs、Menu、Carousel、TreeView、Sortable Listの7種類を網羅し、WAI-ARIA Authoring Practices Guide（APG）に準拠した堅牢なキーボード操作と支援技術対応を実現しています。a11y-specialist-skillsを活用し、Biomeのアクセシビリティ関連ルールやuseIdフックを導入するなど、実践的な高品質コンポーネント設計を提示しています。",
+      "en": "A demo site featuring accessible React UI components, developed for a poster session at React Tokyo Fes 2026. It showcases seven robust components (Button, Modal, Tabs, Menu, Carousel, TreeView, and Sortable List) adhering strictly to WAI-ARIA Authoring Practices Guide (APG) standards for keyboard navigation and assistive technology support. a11y-specialist-skills and Biome's accessibility rules and useId hooks demonstrate production-ready, inclusive component architecture."
     },
     "createdAt": "2026-01-21",
     "categories": [
@@ -377,8 +380,8 @@
     "id": "ogenkidesuka-fm-5th-anniversary",
     "name": "お元気ですか.fm 5周年記念誌「5年間、だいたいお元気でした」",
     "description": {
-      "ja": "ポッドキャスト番組「お元気ですか.fm」の5周年を記念し、技書博13にて頒布された技術同人誌です。2021年から2026年までのフロントエンド開発およびデザイン業界の変遷を、エッセイ形式で多角的に定点観測しています。個人のキャリアの岐路や生成AIとの向き合い方など、エンジニアリングを取り巻くマクロな視点とライブ感を融合させたユニークな執筆物です。",
-      "en": "A commemorative technical booklet published at Gishohaku 13 to mark the 5th anniversary of the podcast 'Ogenki Desu ka FM'. Through insightful essays, it records the structural shifts in frontend development and design practices from 2021 to 2026. It candidly explores career crossroads and engagement with generative AI, blending macro-level industry perspectives with the engaging tone of the podcast."
+      "ja": "ポッドキャスト番組「お元気ですか.fm」の5周年を記念し、技書博13にて頒布された技術同人誌です。2021年から2026年までのフロントエンド開発およびデザイン業界の変遷を、エッセイ形式で多角的に定点観測しています。個人のキャリアの岐路や生成AIとの向き合い方など、エンジニアリングを取り巻くマクロな視点とライブ感を融合させた内容になっています。",
+      "en": "A commemorative technical booklet published at Gishohaku 13 to mark the 5th anniversary of the podcast 'Ogenki-desuka.fm'. Through insightful essays, it records the structural shifts in frontend development and design practices from 2021 to 2026. It candidly explores career crossroads and engagement with generative AI, blending macro-level industry perspectives with the engaging content of the podcast."
     },
     "createdAt": "2026-05-10",
     "categories": [
@@ -448,8 +451,8 @@
     "id": "html-day-2026-tokatsu",
     "name": "HTML Day 2026 in 東葛",
     "description": {
-      "ja": "世界規模のHTML学習イベントの地域サテライトとして、流山おおたかの森ホールにて「HTML Day 2026 in 東葛」を主催しました。「ハンドメイドなWebへの回帰」や「AIデトックス」をコンセプトに掲げ、地域コミュニティ（東葛.dev）と連携して開催しました。直前に開催した「HTML Night in Tokyo」から連続する形で、コミュニティに貢献し、Webの原点に焦点を当てるイベントオーガナイズ力を示しています。",
-      "en": "Hosted the Tokatsu regional venue of the global HTML Day 2026 initiative at Otakanomori Hall in Nagareyama. Framed around the concepts of 'returning to a handmade web' and 'AI detox,' it was organized in collaboration with the local community platform Toukatsu.dev. Continuing the momentum from the preceding HTML Night in Tokyo, this event highlights strong community leadership and an advocacy for the fundamentals of web craftsmanship."
+      "ja": "世界規模のHTMLイベントの地域サテライトとして、スターツおおたかの森ホールにて「HTML Day 2026 in 東葛」を主催しました。地域コミュニティ（東葛.dev）と連携して開催しました。直前に開催した「HTML Night in Tokyo」から連続する形で、コミュニティに貢献し、Webの原点に焦点を当てるイベントのオーガナイズ力を示しています。",
+      "en": "Hosted the Tokatsu regional venue of the global HTML Day 2026 initiative at Starts Otakanomori Hall in Nagareyama. Organized in collaboration with the local community platform Toukatsu.dev. Continuing the momentum from the preceding HTML Night in Tokyo, this event highlights strong community leadership and an advocacy for the fundamentals of web craftsmanship."
     },
     "createdAt": "2026-08-08",
     "categories": [
@@ -462,6 +465,7 @@
         "url": "https://scrapbox.io/toukatsu-dev/HTML_Day_2026_in_%E6%9D%B1%E8%91%9B"
       }
     ],
+    "github": "https://github.com/yamanoku/htmlday2026",
     "site": "https://htmlday2026.toukatsu.dev/"
   }
 ]

@@ -24,8 +24,11 @@ export const copy = {
     multilingual: "多言語ページ",
     related: "yamanoku.net関連ページ",
     portal: "ポータルサイト",
+    portalDescription: "基本情報と各ページへの導線をまとめたページ",
     records: "Records",
+    recordsDescription: "これまでの登壇と発表資料をまとめたページ",
     archives: "アーカイブ",
+    archivesDescription: "これまで書いてきた記事やログをまとめたページ",
     portalUrl: "https://yamanoku.net"
   },
   en: {
@@ -46,9 +49,14 @@ export const copy = {
     skip: translations.en["skip.to-content"],
     multilingual: "Languages",
     related: "Related pages on yamanoku.net",
-    portal: "Portal",
+    portal: "Portal Site",
+    portalDescription:
+      "A page gathering basic information and links to each page.",
     records: "Records",
+    recordsDescription:
+      "A page gathering talks and presentation materials to date.",
     archives: "Archives",
+    archivesDescription: "A page gathering articles and logs written to date.",
     portalUrl: "https://yamanoku.net/en/"
   }
 } as const;
