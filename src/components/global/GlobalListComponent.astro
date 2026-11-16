@@ -2,8 +2,6 @@
 import GlobalLinkComponent from "./GlobalLinkComponent.astro";
 import type { ListItem } from "./GlobalTypes";
 
-const { class: className } = Astro.props;
-
 interface Props {
   list: ListItem[];
 }
@@ -15,9 +13,9 @@ const dateStirngReplace = (date: string) => {
 };
 ---
 
-<ul class={className}>
+<ul>
   {
-    list.map(listItem => (
+    list.map((listItem) => (
       <li>
         {listItem.datetime && (
           <span class="tabular-nums">

@@ -27,11 +27,7 @@ const t = langProp
     <BaseHead title={`${pageTitle} | yamanoku.net`} />
   </head>
   <body>
-    <a
-      href="#content"
-      class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:start-0 focus:z-10 focus:bg-y-body-background focus:text-y-body-text focus:p-y-rhythm-2"
-      >{t("skip.to-content")}</a
-    >
+    <a href="#content" class="skip-link">{t("skip.to-content")}</a>
     <GlobalHeader />
     <slot />
     <GlobalFooter />

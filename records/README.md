@@ -7,7 +7,7 @@
 ## 構成
 
 - **フレームワーク**: Astro（静的出力）
-- **スタイル**: `yama-normalize`（`packages/yama-normalize`）+ `modern-normalize` + TailwindCSS v4
+- **スタイル**: `yama-normalize`（`packages/yama-normalize`）+ `modern-normalize`
 - **コンテンツ**: `src/data/records.json` の構造化データを Astro が描画する
 - **発表資料（11ty / Slidev）**: `records/presentations/` 配下に同梱。records ビルドの一部として `records/dist/<name>/` に出力され、`https://records.yamanoku.net/<name>/`（例: `/tskaigi-2026/`）で配信される
 

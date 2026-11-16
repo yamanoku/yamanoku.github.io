@@ -1,14 +1,11 @@
-@layer theme, base, components, utilities;
-
-@import 'tailwindcss/theme.css' layer(theme);
-@import 'modern-normalize' layer(base);
-@import 'yama-normalize/yama-normalize.css' layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
+@import "modern-normalize" layer(base);
+@import "yama-normalize/yama-normalize.css" layer(base);
 
 :root {
   --y-description-border-light: var(--y-white-medium);
   --y-description-border-dark: var(--y-white-low);
   --y-description-border-color: var(--y-description-border-light);
+  --y-text-small: calc(var(--y-typography-base) / var(--y-font-ratio));
 
   @media (prefers-color-scheme: dark) {
     --y-description-border-color: var(--y-description-border-dark);
@@ -22,38 +19,39 @@
   }
 }
 
-@theme {
-  --spacing-y-rhythm-1: var(--y-rhythm-1);
-  --spacing-y-rhythm-2: var(--y-rhythm-2);
-  --spacing-y-rhythm-3: var(--y-rhythm-3);
-  --spacing-y-rhythm-4: var(--y-rhythm-4);
-  --spacing-y-rhythm-5: var(--y-rhythm-5);
-  --spacing-y-container: var(--y-container-padding);
-  --color-y-white-base: var(--y-white-base);
-  --color-y-black-base: var(--y-black-base);
-  --color-y-white-low: var(--y-white-low);
-  --color-y-white-medium: var(--y-white-medium);
-  --color-y-blue-low: var(--y-blue-low);
-  --color-y-blue-medium: var(--y-blue-medium);
-  --color-y-purple-medium: var(--y-purple-medium);
-  --color-y-arcticle-border-color: var(--y-arcticle-border-color);
-  --color-y-identity-color: var(--y-identity-color);
-  --color-y-body-background: var(--y-body-background);
-  --color-y-body-text: var(--y-body-text-color);
-  --color-y-hr-border-color: var(--y-hr-border-color);
-  --text-y-h2: var(--y-h2-size);
-  --text-y-small: calc(var(--y-typography-base) / var(--y-font-ratio));
-  --color-y-description-border-color: var(--y-description-border-color);
+html[lang="ja"] main {
+  max-inline-size: 100%;
 }
 
-@layer components {
-  html[lang="ja"] main {
-    max-inline-size: 100%;
-  }
-
-  .year-section-deferred {
-    content-visibility: auto;
-    contain-intrinsic-block-size: auto 40rem;
-  }
+.skip-link {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
+.skip-link:focus {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: 10;
+  inline-size: auto;
+  block-size: auto;
+  padding: var(--y-rhythm-2);
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background-color: var(--y-body-background);
+  color: var(--y-body-text-color);
+}
+
+.year-section-deferred {
+  content-visibility: auto;
+  contain-intrinsic-block-size: auto 40rem;
+}

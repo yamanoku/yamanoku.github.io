@@ -6,7 +6,7 @@ yamanoku.netのポートフォリオサイトの開発ガイドラインです�
 
 ### 技術スタック
 - **フレームワーク**: Astro（ポートフォリオサイト）
-- **スタイリング**: TailwindCSS v4
+- **スタイリング**: yama-normalize + modern-normalize（コンポーネントスコープのCSS）
 - **パッケージマネージャー**: pnpm（workspaces + catalog）
 - **リンター / フォーマッター**: Oxlint / Oxfmt
 - **HTML検証**: Markuplint
@@ -217,25 +217,16 @@ export type LanguageKeys = keyof typeof languages;
 
 ### CSS・スタイリング
 
-#### TailwindCSS v4の使用
-- ユーティリティクラスを基本とする
-- デザイントークンは `yama-normalize` のCSS変数を `@theme` でTailwindに橋渡しする
-- レスポンシブデザインは`sm:`, `md:`, `lg:`を使用
+#### 方針
+- `yama-normalize` のCSS変数（`--y-*`）をデザイントークンとして直接使う
+- レイアウト・見た目はセマンティックなクラスとコンポーネントスコープの `<style>` で書く
+- レスポンシブはメディアクエリで表現する
 
 #### グローバルスタイル
 ```css
 /* src/styles/global.css */
-@layer theme, base, components, utilities;
-
-@import 'tailwindcss/theme.css' layer(theme);
-@import 'modern-normalize' layer(base);
-@import '../../packages/yama-normalize/yama-normalize.css' layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
-
-@theme {
-  --spacing-y-rhythm-1: var(--y-rhythm-1);
-  --color-y-black-base: var(--y-black-base);
-}
+@import "modern-normalize" layer(base);
+@import "yama-normalize/yama-normalize.css" layer(base);
 ```
 
 ### 国際化（i18n）
@@ -292,7 +283,8 @@ const t = useTranslations(Astro);
 - [ ] 言語固有のフォーマット（日付など）に対応
 
 #### スタイル
-- [ ] TailwindCSS のユーティリティクラスを優先使用
+- [ ] セマンティックなクラスとスコープ付きCSSを使う（ユーティリティライブラリに依存しない）
+- [ ] `yama-normalize` のCSS変数を使う
 - [ ] レスポンシブデザインに対応
 - [ ] ダークモード対応（必要に応じて）
 
@@ -334,7 +326,12 @@ const t = useTranslations(Astro);
    <div style="color: red;">
 
    <!-- ✅ 推奨 -->
-   <div class="text-red-500">
+   <div class="highlight">
+   <style>
+     .highlight {
+       color: var(--y-identity-color);
+     }
+   </style>
    ```
 
 3. **型定義の省略**

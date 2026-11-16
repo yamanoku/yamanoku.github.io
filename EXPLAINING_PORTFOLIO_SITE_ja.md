@@ -4,7 +4,7 @@
 
 ### 利用技術
 - Astro
-- Tailwind CSS
+- yama-normalize / modern-normalize
 - Oxlint / Oxfmt
 - Markuplint
 - modern-normalize

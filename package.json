@@ -20,11 +20,10 @@
     "yama-normalize": "pnpm -C packages/yama-normalize"
   },
   "dependencies": {
-    "@tailwindcss/vite": "catalog:website",
     "astro": "catalog:website",
     "modern-normalize": "catalog:website",
-    "tailwindcss": "catalog:website",
-    "vite": "catalog:website"
+    "vite": "catalog:website",
+    "yama-normalize": "workspace:*"
   },
   "devDependencies": {
     "markuplint": "catalog:website",
