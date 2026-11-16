@@ -12,7 +12,7 @@ yamanoku.net の連絡先フォームを受け、Cloudflare の無料枠で `091
 ## 初回の準備
 
 1. Email Routing の宛先 `0910yama@gmail.com` を確認済みにする。
-2. `yamanoku.net` で、確認済み宛先へ送れる状態にする。送信時に `E_SENDER_NOT_VERIFIED` になる場合は、ダッシュボードの Email Sending で `yamanoku.net` を onboard する。確認済み宛先への送信自体は無料のまま。
+2. `yamanoku.net` の Email Routing を有効にする。ダッシュボードの Email Sending は任意の宛先へ送る有料機能で、「Workers Paid プランでのみ利用可能」と出る。その画面ではアップグレードしない。確認済み宛先への送信は Email Routing だけで無料のまま。
 3. Turnstile ウィジェットを作る。ホスト名は `yamanoku.net` と `www.yamanoku.net`。本番のウィジェットに `localhost` は入れない。モードは managed。
 4. 秘密鍵を Worker に置く。値はチャットやリポジトリに書かない。
 
