@@ -314,9 +314,6 @@ importers:
 
   portfolio:
     dependencies:
-      '@tailwindcss/vite':
-        specifier: catalog:website
-        version: 4.3.5(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       astro:
         specifier: catalog:website
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)
@@ -326,9 +323,6 @@ importers:
       modern-normalize:
         specifier: catalog:website
         version: 3.0.1
-      tailwindcss:
-        specifier: catalog:website
-        version: 4.3.5
       vite:
         specifier: catalog:website
         version: 8.3.8(@types/node@26.6.6)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)
