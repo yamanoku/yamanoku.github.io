@@ -1,23 +1,34 @@
-@layer theme, base, components, utilities;
+@import "modern-normalize" layer(base);
+@import "yama-normalize/yama-normalize.css" layer(base);
 
-@import 'tailwindcss/theme.css' layer(theme);
-@import 'modern-normalize' layer(base);
-@import '../../packages/yama-normalize/yama-normalize.css' layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
+.skip-link {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 
-@theme {
-  --spacing-y-rhythm-1: var(--y-rhythm-1);
-  --spacing-y-rhythm-2: var(--y-rhythm-2);
-  --spacing-y-rhythm-3: var(--y-rhythm-3);
-  --spacing-y-rhythm-4: var(--y-rhythm-4);
-  --spacing-y-rhythm-5: var(--y-rhythm-5);
-  --color-y-white-base: var(--y-white-base);
-  --color-y-black-base: var(--y-black-base);
-  --color-y-white-low: var(--y-white-low);
-  --color-y-white-medium: var(--y-white-medium);
-  --color-y-blue-low: var(--y-blue-low);
-  --color-y-blue-medium: var(--y-blue-medium);
-  --color-y-purple-medium: var(--y-purple-medium);
-  --color-y-arcticle-border-color: var(--y-arcticle-border-color);
-  --color-y-identity-color: var(--y-identity-color);
+.skip-link:focus {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: 10;
+  inline-size: auto;
+  block-size: auto;
+  padding: var(--y-rhythm-2);
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background-color: var(--y-body-background);
+  color: var(--y-body-text-color);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
 }

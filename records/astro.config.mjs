@@ -1,4 +1,3 @@
-import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
 import { fetchFavicons } from "./scripts/fetch-favicons.mjs";
@@ -15,8 +14,5 @@ export default defineConfig({
         }
       }
     }
-  ],
-  vite: {
-    plugins: [tailwindcss()]
-  }
+  ]
 });

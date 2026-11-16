@@ -2,7 +2,7 @@
 ---
 
 <header>
-  <div class="inline-flex items-center gap-y-rhythm-1 my-y-rhythm-2 mx-0">
+  <div class="site-brand">
     <svg
       width="48"
       height="48"
@@ -11,7 +11,7 @@
       aria-label="yamanoku"
     >
       <path
-        class="translate-x-[-64px] translate-y-[-67px] fill-y-identity-color dark:fill-y-white-base"
+        class="logo-mark"
         fill-rule="evenodd"
         d="M64,67v54l82,82-46,46v60h56L310,155V96H230l-21,20L160,67H64ZM176,203l-45,46h25L293,113H230l-39,39-31-31H94Z"
       ></path>
@@ -19,3 +19,22 @@
     <span>Records</span>
   </div>
 </header>
+
+<style>
+  .site-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--y-rhythm-1);
+    margin-block: var(--y-rhythm-2);
+    margin-inline: 0;
+  }
+
+  .logo-mark {
+    translate: -64px -67px;
+    fill: var(--y-identity-color);
+
+    @media (prefers-color-scheme: dark) {
+      fill: var(--y-white-base);
+    }
+  }
+</style>

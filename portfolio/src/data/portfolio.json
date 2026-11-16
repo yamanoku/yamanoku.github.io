@@ -3,8 +3,8 @@
     "id": "yamanoku-net",
     "name": "yamanoku.net",
     "description": {
-      "ja": "自身のキャリアや登壇、執筆、ポートフォリオを発信するポータルサイトです。AstroとTailwind CSSを用いたモダンなフロントエンド構築に加え、セマンティックなマークアップとWAI-ARIAの徹底により高いアクセシビリティを実現しています。JIS X 8341-3:2016 適合レベルAAの達成を方針に掲げ、検証結果を公開するなど、アクセシビリティに対する実務レベルでのこだわりを体現しています。pnpmモノレポ構成による保守性の向上や、site-cliによる独自の更新フローなど、AIエージェントの作業しやすさも含めるようにしています。",
-      "en": "A portal site showcasing personal career, talks, writings, and portfolio. Built with Astro and Tailwind CSS, it achieves high accessibility through rigorous semantic markup and WAI-ARIA implementation. Committed to JIS X 8341-3:2016 Level AA conformance with publicly available test results, it demonstrates practical dedication to inclusive web design. The project also aims to make it easy for AI agents to work by including the maintainability of the pnpm monorepo architecture and the custom update workflow using site-cli."
+      "ja": "自身のキャリアや登壇、執筆、ポートフォリオを発信するポータルサイトです。Astroとyama-normalizeを用いたモダンなフロントエンド構築に加え、セマンティックなマークアップとWAI-ARIAの徹底により高いアクセシビリティを実現しています。JIS X 8341-3:2016 適合レベルAAの達成を方針に掲げ、検証結果を公開するなど、アクセシビリティに対する実務レベルでのこだわりを体現しています。pnpmモノレポ構成による保守性の向上や、site-cliによる独自の更新フローなど、AIエージェントの作業しやすさも含めるようにしています。",
+      "en": "A portal site showcasing personal career, talks, writings, and portfolio. Built with Astro and yama-normalize, it achieves high accessibility through rigorous semantic markup and WAI-ARIA implementation. Committed to JIS X 8341-3:2016 Level AA conformance with publicly available test results, it demonstrates practical dedication to inclusive web design. The project also aims to make it easy for AI agents to work by including the maintainability of the pnpm monorepo architecture and the custom update workflow using site-cli."
     },
     "createdAt": "2013-01-12",
     "categories": [

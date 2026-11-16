@@ -10,18 +10,14 @@ interface Props {
 const { record, upcoming } = Astro.props;
 ---
 
-<article class="[border-block-end-style:dotted]">
-  <div
-    class="grid grid-cols-1 items-start gap-x-y-rhythm-2 gap-y-y-rhythm-2 sm:grid-cols-[8.75em_minmax(0,1fr)] sm:gap-y-0"
-  >
-    <p
-      class="m-0 flex flex-row flex-wrap gap-x-y-rhythm-1 text-y-small sm:flex-col"
-    >
+<article class="record">
+  <div class="record-layout">
+    <p class="record-when">
       <time datetime={record.date}>{formatTalkDate(record.date)}</time>
       {upcoming && <span>発表予定</span>}
     </p>
     <div>
-      <h3 class="mt-0 font-normal">
+      <h3 class="record-title">
         {record.event}
       </h3>
       {record.resources.length === 1 ? (
@@ -43,7 +39,7 @@ const { record, upcoming } = Astro.props;
         )
       )}
       {record.description && (
-        <p class="text-y-small">{record.description}</p>
+        <p class="record-description">{record.description}</p>
       )}
       {record.note && <p>{record.note}</p>}
       {record.eventUrl && (
@@ -54,3 +50,44 @@ const { record, upcoming } = Astro.props;
     </div>
   </div>
 </article>
+
+<style>
+  .record {
+    border-block-end-style: dotted;
+  }
+
+  .record-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    column-gap: var(--y-rhythm-2);
+    row-gap: var(--y-rhythm-2);
+
+    @media (min-width: 40rem) {
+      grid-template-columns: 8.75em minmax(0, 1fr);
+      row-gap: 0;
+    }
+  }
+
+  .record-when {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: var(--y-rhythm-1);
+    margin: 0;
+    font-size: var(--y-text-small);
+
+    @media (min-width: 40rem) {
+      flex-direction: column;
+    }
+  }
+
+  .record-title {
+    margin-block-start: 0;
+    font-weight: 400;
+  }
+
+  .record-description {
+    font-size: var(--y-text-small);
+  }
+</style>

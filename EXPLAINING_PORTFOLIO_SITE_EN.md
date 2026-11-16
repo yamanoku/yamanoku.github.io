@@ -4,7 +4,7 @@
 
 ### Technology stack
 - Astro
-- Tailwind CSS
+- yama-normalize / modern-normalize
 - Oxlint / Oxfmt
 - Markuplint
 - modern-normalize

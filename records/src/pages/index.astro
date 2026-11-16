@@ -24,17 +24,11 @@ const now = new Date();
   {
     recordsByYear.map(([year, yearRecords], index) => (
       <section
-        class:list={[
-          "scroll-mt-[100px] m-0 mbe-[5lh]",
-          { "year-section-deferred": index > 0 }
-        ]}
+        class:list={[{ "year-section-deferred": index > 0 }]}
         id={`year-${year}`}
       >
-        <h2
-          class="text-y-identity-color dark:text-y-white-base"
-          id={`year-${year}-heading`}
-        >
-          <span class="text-y-h2">{year}</span>年
+        <h2 class="year-heading" id={`year-${year}-heading`}>
+          <span class="year-heading-number">{year}</span>年
         </h2>
         {yearRecords.map((record) => (
           <RecordEntry record={record} upcoming={isUpcoming(record.date, now)} />
@@ -43,3 +37,23 @@ const now = new Date();
     ))
   }
 </Layout>
+
+<style>
+  section {
+    margin: 0;
+    margin-block-end: 5lh;
+    scroll-margin-top: 100px;
+  }
+
+  .year-heading {
+    color: var(--y-identity-color);
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--y-white-base);
+    }
+  }
+
+  .year-heading-number {
+    font-size: var(--y-h2-size);
+  }
+</style>

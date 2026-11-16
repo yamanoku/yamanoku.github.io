@@ -19,15 +19,27 @@ const donateLinks = siteContent.links.donate.map((link) => ({
   <h2 id="open-source-activity_heading">{t("heading.open-source-activity")}</h2>
   <p>{t("open-source-activity.descripion")}</p>
   <GlobalListComponent list={openSourceLinks} />
-  <article
-    id="donate"
-    aria-labelledby="donate_heading"
-    class="border border-solid border-y-arcticle-border-color pt-y-rhythm-3 pl-y-rhythm-3 pr-y-rhythm-3 before:hidden"
-  >
+  <article id="donate" class="donate" aria-labelledby="donate_heading">
     <div>
       <em id="donate_heading">{t("heading.donate")}</em>
     </div>
     <p>{t("donate.description")}</p>
-    <GlobalListComponent class="mb-0" list={donateLinks} />
+    <GlobalListComponent list={donateLinks} />
   </article>
 </section>
+
+<style>
+  .donate {
+    border: 1px solid var(--y-arcticle-border-color);
+    padding-block-start: var(--y-rhythm-3);
+    padding-inline: var(--y-rhythm-3);
+  }
+
+  .donate::before {
+    display: none;
+  }
+
+  .donate :global(ul) {
+    margin-block-end: 0;
+  }
+</style>
