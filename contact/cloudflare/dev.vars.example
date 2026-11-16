@@ -1,0 +1,5 @@
+# Copy to .dev.vars. The value below is Cloudflare's published Turnstile test secret.
+# It accepts only the dummy token. `cf dev` on localhost does not send mail.
+# Production uses `npx wrangler secret put TURNSTILE_SECRET --name yamanoku-contact`.
+TURNSTILE_SECRET=1x0000000000000000000000000000000AA
+CONTACT_RUNTIME=local

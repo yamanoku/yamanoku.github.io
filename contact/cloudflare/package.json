@@ -1,0 +1,16 @@
+{
+  "name": "yamanoku-contact",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cf dev",
+    "deploy": "cf deploy",
+    "test": "tsx --test src/**/*.test.ts"
+  },
+  "devDependencies": {
+    "cf": "catalog:website",
+    "tsx": "catalog:site-cli",
+    "typescript": "catalog:site-cli",
+    "wrangler": "catalog:website"
+  }
+}

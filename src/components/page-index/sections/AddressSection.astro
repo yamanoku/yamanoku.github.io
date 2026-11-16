@@ -1,12 +1,14 @@
 ---
 import { useTranslations } from "../../../i18n/util";
+import ContactForm from "./ContactForm.astro";
 
 const t = useTranslations(Astro);
 ---
 
-<section id="contact">
+<section id="contact" aria-labelledby="contact-heading">
   <h2 id="contact-heading">{t("heading.contact")}</h2>
   <address>
     <a href="mailto:0910yama@gmail.com">0910yama@gmail.com</a>
   </address>
+  <ContactForm />
 </section>
