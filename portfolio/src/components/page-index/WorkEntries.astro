@@ -231,7 +231,7 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
       gap: 1em;
       align-items: baseline;
       margin-block-start: var(--space-section);
-      padding-block-end: var(--space-article);
+      padding-block-end: var(--space-section);
       border-block-end-style: dotted;
       scroll-margin-block-start: 1rem;
 
@@ -239,6 +239,7 @@ const groups = entries.reduce<Array<{ year: string; items: Entry[] }>>(
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        word-wrap: anywhere;
         gap: 0.35em 0.45em;
         margin-block-end: var(--space-paragraph);
         font-size: var(--fs-heading-3);

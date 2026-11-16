@@ -1,21 +1,10 @@
-@layer theme, base, components, utilities;
-
-@import "tailwindcss/theme.css" layer(theme);
 @import "modern-normalize" layer(base);
 @import "yama-normalize/yama-normalize.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
-
-@theme {
-  --spacing-y-rhythm-1: var(--y-rhythm-1);
-  --spacing-y-rhythm-2: var(--y-rhythm-2);
-  --color-y-white-base: var(--y-white-base);
-  --color-y-identity-color: var(--y-identity-color);
-}
 
 body.portfolio-site {
   --gutter: clamp(1rem, 6.9vw, 4.5rem);
-  --fs-heading-1: calc(1rem * 8 / 3);
-  --fs-heading-2: calc(1rem * 2);
+  --fs-heading-1: calc(1rem * 8 / 4);
+  --fs-heading-2: calc(1rem * 8 / 5);
   --fs-heading-3: calc(1rem * 8 / 6);
   --fs-small: calc(1rem * 8 / 10);
   --fs-x-small: calc(1rem * 8 / 12);
@@ -26,7 +15,6 @@ body.portfolio-site {
   --space-content-gap: 0.75rem;
   --space-heading-gap: 2.75rem;
   --space-section: 4.5rem;
-  --space-article: 4rem;
   --space-hero-top: 6rem;
   font-family: "Gen Interface JP", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
   font-weight: 400;

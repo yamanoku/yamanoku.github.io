@@ -5,7 +5,7 @@
 ## 構成
 
 - **フレームワーク**: Astro（静的出力）
-- **スタイル**: `yama-normalize`（`packages/yama-normalize`）+ `modern-normalize` + TailwindCSS v4
+- **スタイル**: `yama-normalize`（`packages/yama-normalize`）+ `modern-normalize`
 - **コンテンツ**: `src/data/portfolio.json` の構造化データを Astro が描画する
 - **言語**: `/` が日本語、`/en/` が英語
 
