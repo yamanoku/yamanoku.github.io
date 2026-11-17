@@ -80,6 +80,45 @@ describe("handleContact", () => {
       name: "大山 奥人"
     });
     assert.match(mail.text, /ポートフォリオの件/);
+    assert.equal(mail.subject, "[yamanoku.net] 大山 奥人");
+  });
+
+  it("uses an optional subject as the mail subject", async () => {
+    const worker = env();
+    const response = await handleContact(
+      post({ ...validBody, subject: "  登壇の相談 " }),
+      worker,
+      {
+        verify: async () => ({
+          success: true,
+          action: "contact",
+          hostname: "yamanoku.net"
+        })
+      }
+    );
+    assert.equal(response.status, 200);
+    const mail = worker.sent[0];
+    assert.equal(mail?.subject, "[yamanoku.net] 登壇の相談");
+    assert.match(mail?.text ?? "", /^登壇の相談\n/);
+    assert.match(mail?.html ?? "", /<strong>登壇の相談<\/strong>/);
+  });
+
+  it("rejects a subject that contains a line break", async () => {
+    let called = false;
+    const worker = env();
+    const response = await handleContact(
+      post({ ...validBody, subject: "一行目\n二行目" }),
+      worker,
+      {
+        verify: async () => {
+          called = true;
+          return { success: true, action: "contact", hostname: "yamanoku.net" };
+        }
+      }
+    );
+    assert.equal(response.status, 400);
+    assert.equal(called, false);
+    assert.equal(worker.sent.length, 0);
   });
 
   it("escapes html in the message", async () => {

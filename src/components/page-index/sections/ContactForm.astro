@@ -15,7 +15,6 @@ const endpoint =
 
 {
   siteKey ? (
-    <>
     <form
       id="contact-form"
       class="contact-form"
@@ -63,8 +62,17 @@ const endpoint =
         <p id="contact-email-error" class="field-error">{t("contact.email-error")}</p>
       </div>
       <div class="field">
+        <label for="contact-subject">{t("contact.subject")}</label>
+        <input
+          id="contact-subject"
+          name="subject"
+          type="text"
+          enterkeyhint="next"
+          maxlength="100"
+        />
+      </div>
+      <div class="field">
         <label for="contact-message">{t("contact.message")}</label>
-        <p id="contact-message-hint">{t("contact.message-hint")}</p>
         <textarea
           id="contact-message"
           name="message"
@@ -76,6 +84,7 @@ const endpoint =
           data-error="contact-message-error"
         />
         <p id="contact-message-error" class="field-error">{t("contact.message-error")}</p>
+        <p id="contact-message-hint" class="field-hint">{t("contact.message-hint")}</p>
       </div>
       <div class="contact-honey" aria-hidden="true">
         <label for="contact-company">Company</label>
@@ -102,7 +111,6 @@ const endpoint =
 
       setupContactForm();
     </script>
-    </>
   ) : (
     <p>{t("contact.unavailable")}</p>
   )
@@ -111,26 +119,52 @@ const endpoint =
 <style>
   .contact-form {
     display: grid;
-    gap: var(--y-rhythm-2);
-    max-inline-size: 40rem;
-  }
+    gap: var(--y-rhythm-3);
+    .field {
+      display: grid;
+      gap: var(--y-rhythm-1);
+      font-size: 90%;
+    }
 
-  .field {
-    display: grid;
-    gap: var(--y-rhythm-1);
-  }
+    input[type="text"], input[type="email"] {
+      max-inline-size: 30rem;
+    }
 
-  .field-error {
-    display: none;
-    margin: 0;
-  }
+    textarea {
+      max-inline-size: 30rem;
+    }
 
-  .contact-form :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
+    button[type="submit"] {
+      text-align: left;
+      max-inline-size: fit-content;
+      padding-inline: var(--y-rhythm-2);
+      padding-block: var(--y-rhythm-1);
+    }
+
+    .field-error {
+      display: none;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .field-hint {
+      margin-block: 0;
+    }
+  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
     outline: 2px solid currentColor;
     outline-offset: 2px;
   }
 
-  .contact-form :is(input, textarea):is(:user-invalid, .user-invalid-fallback) + .field-error {
+  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) + .field-error {
+    display: block;
+  }
+
+  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) + .field-error {
     display: block;
   }
 
@@ -143,19 +177,8 @@ const endpoint =
     outline-offset: 2px;
   }
 
-  .contact-honey {
-    position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
-    border: 0;
-  }
-
-  .contact-visually-hidden {
+  .contact-honey,
+  .contact-visually-hidden  {
     position: absolute;
     inline-size: 1px;
     block-size: 1px;

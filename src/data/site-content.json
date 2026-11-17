@@ -57,7 +57,7 @@
       "heading.presentations.write": "執筆",
       "heading.sns": "ソーシャルサービス",
       "heading.donate": "寄付・支援",
-      "heading.contact": "連絡先",
+      "heading.contact": "連絡フォーム",
       "heading.open-source-activity": "オープンソース活動",
       "heading.daily-journal": "日報",
       "heading.ogenkidesuka-fm": "お元気ですか.fm",
@@ -86,10 +86,10 @@
       "portfolio.categories.book": "本",
       "portfolio.categories.event": "イベント",
       "portfolio.categories.curation": "まとめ",
-      "contact.lead": "用件はこのフォームからメールで届きます。返信には、入力したメールアドレスを使います。",
+      "contact.lead": "お仕事の依頼や相談、登壇のご依頼などは以下のフォームからお送りください。",
       "contact.name": "名前（必須）",
       "contact.email": "メールアドレス（必須）",
-      "contact.message": "用件（必須）",
+      "contact.message": "問い合わせ内容（必須）",
       "contact.message-hint": "4,000文字まで入力できます。",
       "contact.submit": "送信する",
       "contact.submitting": "送信しています",
@@ -101,7 +101,8 @@
       "contact.unavailable": "お問合せフォームは準備中です。上のメールアドレスへ連絡してください。",
       "contact.name-error": "エラー: 名前を入力してください。",
       "contact.email-error": "エラー: メールアドレスは you@example.com の形式で入力してください。",
-      "contact.message-error": "エラー: 用件を入力してください。"
+      "contact.message-error": "エラー: 用件を入力してください。",
+      "contact.subject": "件名（任意）"
     },
     "en": {
       "meta.description": "Okuto Oyama Portfolio Site",
@@ -119,7 +120,7 @@
       "heading.presentations.write": "Writing",
       "heading.sns": "Social Service",
       "heading.donate": "Donate & Sponsor",
-      "heading.contact": "Contact",
+      "heading.contact": "Contact Form",
       "heading.open-source-activity": "Open Source Activity",
       "heading.daily-journal": "Daily journal",
       "heading.ogenkidesuka-fm": "Ogenki-desuka.fm",
@@ -148,7 +149,7 @@
       "portfolio.categories.event": "Event",
       "portfolio.categories.curation": "Curation",
       "portfolio.categories": "Categories",
-      "contact.lead": "Messages from this form arrive by email. Replies use the email address you enter.",
+      "contact.lead": "Use this form for work requests, consultations, and similar inquiries.",
       "contact.name": "Name (required)",
       "contact.email": "Email (required)",
       "contact.message": "Message (required)",
@@ -163,7 +164,8 @@
       "contact.unavailable": "The contact form is not ready yet. Use the email address above.",
       "contact.name-error": "Error: Enter your name.",
       "contact.email-error": "Error: Enter an email address in the format you@example.com.",
-      "contact.message-error": "Error: Enter a message."
+      "contact.message-error": "Error: Enter a message.",
+      "contact.subject": "Subject (optional)"
     }
   },
   "journal": {

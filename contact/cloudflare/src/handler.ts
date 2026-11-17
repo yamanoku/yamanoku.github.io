@@ -64,6 +64,7 @@ export async function handleContact(
   const message: ContactMessage = {
     name: readField(submission.name),
     email: readField(submission.email),
+    subject: readField(submission.subject),
     message: readField(submission.message)
   };
   if (invalidFields(message).length > 0) {
@@ -107,7 +108,7 @@ export async function handleContact(
       to: env.CONTACT_TO,
       from: { email: env.CONTACT_FROM, name: "yamanoku.net" },
       replyTo: { email: message.email, name: message.name },
-      subject: contactSubject(message.name),
+      subject: contactSubject(message),
       text: contactText(message),
       html: contactHtml(message)
     });
@@ -146,6 +147,7 @@ async function readSubmission(
       return {
         name: form.get("name"),
         email: form.get("email"),
+        subject: form.get("subject"),
         message: form.get("message"),
         company: form.get("company"),
         turnstileToken: form.get("cf-turnstile-response")

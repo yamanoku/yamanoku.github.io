@@ -203,6 +203,7 @@ async function sendContact(
       body: JSON.stringify({
         name: fieldValue(form, "name"),
         email: fieldValue(form, "email"),
+        subject: fieldValue(form, "subject"),
         message: fieldValue(form, "message"),
         company: fieldValue(form, "company"),
         turnstileToken: token
