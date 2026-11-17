@@ -58,7 +58,7 @@ const { record, upcoming } = Astro.props;
 
   .record-layout {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     align-items: start;
     column-gap: var(--y-rhythm-2);
     row-gap: var(--y-rhythm-2);
