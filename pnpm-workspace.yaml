@@ -22,6 +22,7 @@ packages:
   - records/presentations
   - portfolio
   - portfolio/cloudflare
+  - contact/cloudflare
 
 catalogs:
   site-cli:

@@ -1,0 +1,198 @@
+---
+import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
+
+const t = useTranslations(Astro);
+const lang = getLanguageFromURL(Astro.url.pathname) === "en" ? "en" : "ja";
+const siteKey = import.meta.env.DEV
+  ? "1x00000000000000000000AA"
+  : import.meta.env.PUBLIC_TURNSTILE_SITEKEY;
+const endpoint =
+  import.meta.env.PUBLIC_CONTACT_ENDPOINT ??
+  (import.meta.env.DEV
+    ? "http://127.0.0.1:8787/"
+    : "https://contact.yamanoku.net/");
+---
+
+{
+  siteKey ? (
+    <form
+      id="contact-form"
+      class="contact-form"
+      method="post"
+      action={endpoint}
+      data-sitekey={siteKey}
+      data-lang={lang}
+      data-submit-label={t("contact.submit")}
+      data-submitting={t("contact.submitting")}
+      data-success={t("contact.success")}
+      data-error-invalid={t("contact.error.invalid")}
+      data-error-turnstile={t("contact.error.turnstile")}
+      data-error-rate={t("contact.error.rate")}
+      data-error-unavailable={t("contact.error.unavailable")}
+    >
+      <p>{t("contact.lead")}</p>
+      <div class="field">
+        <label for="contact-name">{t("contact.name")}</label>
+        <input
+          id="contact-name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          enterkeyhint="next"
+          required
+          maxlength="80"
+          aria-invalid="false"
+          data-error="contact-name-error"
+        />
+        <p id="contact-name-error" class="field-error">{t("contact.name-error")}</p>
+      </div>
+      <div class="field">
+        <label for="contact-email">{t("contact.email")}</label>
+        <input
+          id="contact-email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          enterkeyhint="next"
+          required
+          maxlength="254"
+          aria-invalid="false"
+          data-error="contact-email-error"
+        />
+        <p id="contact-email-error" class="field-error">{t("contact.email-error")}</p>
+      </div>
+      <div class="field">
+        <label for="contact-subject">{t("contact.subject")}</label>
+        <input
+          id="contact-subject"
+          name="subject"
+          type="text"
+          enterkeyhint="next"
+          maxlength="100"
+        />
+      </div>
+      <div class="field">
+        <label for="contact-message">{t("contact.message")}</label>
+        <textarea
+          id="contact-message"
+          name="message"
+          required
+          maxlength="4000"
+          rows="6"
+          aria-invalid="false"
+          aria-describedby="contact-message-hint"
+          data-error="contact-message-error"
+        />
+        <p id="contact-message-error" class="field-error">{t("contact.message-error")}</p>
+        <p id="contact-message-hint" class="field-hint">{t("contact.message-hint")}</p>
+      </div>
+      <div class="contact-honey" aria-hidden="true">
+        <label for="contact-company">Company</label>
+        <input
+          id="contact-company"
+          name="company"
+          type="text"
+          tabindex="-1"
+          autocomplete="off"
+        />
+      </div>
+      <div id="contact-turnstile"></div>
+      <div id="contact-announcer" class="contact-visually-hidden" aria-live="polite"></div>
+      <p id="contact-status" class="contact-status" tabindex="-1"></p>
+      <button type="submit">{t("contact.submit")}</button>
+    </form>
+    <script
+      is:inline
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+      defer
+    ></script>
+    <script>
+      import { setupContactForm } from "../../../scripts/contact-form";
+
+      setupContactForm();
+    </script>
+  ) : (
+    <p>{t("contact.unavailable")}</p>
+  )
+}
+
+<style>
+  .contact-form {
+    display: grid;
+    gap: var(--y-rhythm-3);
+    .field {
+      display: grid;
+      gap: var(--y-rhythm-1);
+      font-size: 90%;
+    }
+
+    input[type="text"], input[type="email"] {
+      max-inline-size: 30rem;
+    }
+
+    textarea {
+      max-inline-size: 30rem;
+    }
+
+    button[type="submit"] {
+      text-align: left;
+      max-inline-size: fit-content;
+      padding-inline: var(--y-rhythm-2);
+      padding-block: var(--y-rhythm-1);
+    }
+
+    .field-error {
+      display: none;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .field-hint {
+      margin-block: 0;
+    }
+  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) + .field-error {
+    display: block;
+  }
+
+  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) + .field-error {
+    display: block;
+  }
+
+  .contact-status:empty {
+    display: none;
+  }
+
+  .contact-status:focus {
+    outline: 2px solid var(--y-outline-color);
+    outline-offset: 2px;
+  }
+
+  .contact-honey,
+  .contact-visually-hidden  {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (forced-colors: active) {
+    .contact-form :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
+      outline-color: CanvasText;
+    }
+  }
+</style>

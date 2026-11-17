@@ -12,6 +12,8 @@
     "records:build": "pnpm --filter records build",
     "portfolio:build": "pnpm --filter portfolio build",
     "portfolio:deploy": "pnpm portfolio:build && pnpm --filter portfolio-cloudflare run deploy",
+    "contact:dev": "pnpm --filter yamanoku-contact run dev",
+    "contact:test": "pnpm --filter yamanoku-contact test",
     "lint": "pnpm run oxlint && pnpm run markuplint",
     "format": "oxfmt .",
     "oxlint": "oxlint --fix .",
