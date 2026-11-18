@@ -1,5 +1,5 @@
 ---
-import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
+import { getLanguageFromURL, useTranslations } from "../src/i18n/util";
 
 const t = useTranslations(Astro);
 const lang = getLanguageFromURL(Astro.url.pathname) === "en" ? "en" : "ja";
@@ -107,7 +107,7 @@ const endpoint =
       defer
     ></script>
     <script>
-      import { setupContactForm } from "../../../scripts/contact-form";
+      import { setupContactForm } from "./contact-form";
 
       setupContactForm();
     </script>

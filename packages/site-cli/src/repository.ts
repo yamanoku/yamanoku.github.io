@@ -8,7 +8,7 @@ import {
   rm,
   writeFile
 } from "node:fs/promises";
-import { dirname, isAbsolute, relative, resolve } from "node:path";
+import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 
 import { SiteCliError } from "./errors.js";
 import {
@@ -249,34 +249,49 @@ export async function writeJson(
 export async function collectReferencedTranslationKeys(
   root = getRepositoryRoot()
 ): Promise<Set<string>> {
-  const srcDir = resolve(root, "src");
+  const referencedKeys = new Set<string>();
+  for (const relativeDir of ["src", "contact"]) {
+    await collectTranslationKeys(resolve(root, relativeDir), referencedKeys);
+  }
+  return referencedKeys;
+}
+
+async function collectTranslationKeys(
+  dir: string,
+  referencedKeys: Set<string>
+): Promise<void> {
+  let sourceEntries;
   try {
-    const sourceEntries = await readdir(srcDir, {
+    sourceEntries = await readdir(dir, {
       recursive: true,
       withFileTypes: true
     });
-    const sourceFiles = sourceEntries.filter(
-      (entry) => entry.isFile() && /\.(astro|ts)$/.test(entry.name)
-    );
-    const referencedKeys = new Set<string>();
-    await Promise.all(
-      sourceFiles.map(async (entry) => {
-        const source = await readFile(
-          resolve(entry.parentPath, entry.name),
-          "utf8"
-        );
-        for (const match of source.matchAll(/\bt\(\s*["']([^"']+)["']\s*\)/g)) {
-          referencedKeys.add(match[1]);
-        }
-      })
-    );
-    return referencedKeys;
   } catch (error) {
     if (error instanceof Error && "code" in error && error.code === "ENOENT") {
-      return new Set();
+      return;
     }
     throw error;
   }
+  const sourceFiles = sourceEntries.filter((entry) => {
+    if (!entry.isFile() || !/\.(astro|ts)$/.test(entry.name)) return false;
+    const parent = entry.parentPath;
+    return (
+      !parent.includes(`${sep}node_modules${sep}`) &&
+      !parent.includes(`${sep}cloudflare${sep}`) &&
+      !parent.endsWith(`${sep}cloudflare`)
+    );
+  });
+  await Promise.all(
+    sourceFiles.map(async (entry) => {
+      const source = await readFile(
+        resolve(entry.parentPath, entry.name),
+        "utf8"
+      );
+      for (const match of source.matchAll(/\bt\(\s*["']([^"']+)["']\s*\)/g)) {
+        referencedKeys.add(match[1]);
+      }
+    })
+  );
 }
 
 export async function validateRepository(
