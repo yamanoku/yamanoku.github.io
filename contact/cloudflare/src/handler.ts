@@ -1,6 +1,7 @@
 import type { ContactEnv } from "./env";
 import { contactHtml, contactSubject, contactText, escapeHtml } from "./mail";
 import {
+  PRODUCTION_HOSTS,
   TURNSTILE_TEST_SECRET,
   turnstileAccepted,
   verifyTurnstile,
@@ -10,10 +11,9 @@ import { invalidFields, readField, type ContactMessage } from "./validate";
 
 const MAX_BODY_BYTES = 16_000;
 
-const ALLOWED_ORIGINS = new Set([
-  "https://yamanoku.net",
-  "https://www.yamanoku.net"
-]);
+const ALLOWED_ORIGINS = new Set(
+  [...PRODUCTION_HOSTS].map((host) => `https://${host}`)
+);
 
 export interface ContactDeps {
   verify: (options: {

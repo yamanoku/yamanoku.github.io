@@ -1,4 +1,5 @@
 ---
+import ContactForm from "../../../src/components/page-index/sections/ContactForm.astro";
 import GlobalFooter from "../components/global/GlobalFooter.astro";
 import GlobalHeader from "../components/global/GlobalHeader.astro";
 import { copy, type PortfolioLang } from "../lib/copy";
@@ -44,6 +45,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <GlobalHeader lang={lang} />
     <main id="main">
       <slot />
+      <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">{text.contact}</h2>
+        <ContactForm />
+      </section>
       <section class="portfolio-related" aria-labelledby="related-pages">
         <h2 id="related-pages">{text.related}</h2>
         <ul>
@@ -66,6 +71,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <style>
   main {
     padding-inline: var(--gutter);
+  }
+
+  .contact-section {
+    margin-block-start: var(--space-section);
+
+    h2 {
+      margin-block-end: var(--space-heading-gap);
+      font-size: var(--fs-heading-2);
+    }
   }
 
   .portfolio-related {

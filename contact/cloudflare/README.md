@@ -13,14 +13,14 @@ yamanoku.net の連絡先フォームを受け、Cloudflare の無料枠で `091
 
 1. Email Routing の宛先 `0910yama@gmail.com` を確認済みにする。
 2. `yamanoku.net` の Email Routing を有効にする。ダッシュボードの Email Sending は任意の宛先へ送る有料機能で、「Workers Paid プランでのみ利用可能」と出る。その画面ではアップグレードしない。確認済み宛先への送信は Email Routing だけで無料のまま。
-3. Turnstile ウィジェットを作る。ホスト名は `yamanoku.net` と `www.yamanoku.net`。本番のウィジェットに `localhost` は入れない。モードは managed。
+3. Turnstile ウィジェットを作る。ホスト名は `yamanoku.net`、`www.yamanoku.net`、`records.yamanoku.net`、`portfolio.yamanoku.net`。本番のウィジェットに `localhost` は入れない。モードは managed。
 4. 秘密鍵を Worker に置く。値はチャットやリポジトリに書かない。
 
 ```bash
 npx wrangler secret put TURNSTILE_SECRET --name yamanoku-contact
 ```
 
-5. サイトキーを Pages プロジェクト `yamanoku-net` の環境変数 `PUBLIC_TURNSTILE_SITEKEY` に置き、ポータルをビルドし直す。未設定の本番ビルドではフォームを出さず、メールアドレスだけを残す。
+5. サイトキーを各サイトのビルド環境変数 `PUBLIC_TURNSTILE_SITEKEY` に置く。ポータルは Pages プロジェクト `yamanoku-net`、記録サイトは Pages プロジェクト `records-yamanoku`、ポートフォリオは GitHub Actions の secret `PUBLIC_TURNSTILE_SITEKEY`（`deploy-portfolio.yml` がビルド時に渡す）。未設定の本番ビルドではフォームを出さない。
 6. デプロイする。カスタムドメイン `contact.yamanoku.net` はデプロイ時にゾーン `yamanoku.net` へ結ばれる。
 
 ```bash
