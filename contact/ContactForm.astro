@@ -1,5 +1,5 @@
 ---
-import { getLanguageFromURL, useTranslations } from "../../../i18n/util";
+import { getLanguageFromURL, useTranslations } from "../src/i18n/util";
 
 const t = useTranslations(Astro);
 const lang = getLanguageFromURL(Astro.url.pathname) === "en" ? "en" : "ja";
@@ -107,7 +107,7 @@ const endpoint =
       defer
     ></script>
     <script>
-      import { setupContactForm } from "../../../scripts/contact-form";
+      import { setupContactForm } from "./contact-form";
 
       setupContactForm();
     </script>
@@ -150,49 +150,42 @@ const endpoint =
     .field-hint {
       margin-block: 0;
     }
-  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
-  }
 
-  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) + .field-error {
-    display: block;
-  }
+    :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
 
-  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
-  }
+    :is(input, textarea):is(:user-invalid, .user-invalid-fallback) + .field-error {
+      display: block;
+    }
 
-  :is(input, textarea):is(:user-invalid, .user-invalid-fallback) + .field-error {
-    display: block;
-  }
+    .contact-status:empty {
+      display: none;
+    }
 
-  .contact-status:empty {
-    display: none;
-  }
+    .contact-status:focus {
+      outline: 2px solid var(--y-outline-color);
+      outline-offset: 2px;
+    }
 
-  .contact-status:focus {
-    outline: 2px solid var(--y-outline-color);
-    outline-offset: 2px;
-  }
+    .contact-honey,
+    .contact-visually-hidden {
+      position: absolute;
+      inline-size: 1px;
+      block-size: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
 
-  .contact-honey,
-  .contact-visually-hidden  {
-    position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
-    border: 0;
-  }
-
-  @media (forced-colors: active) {
-    .contact-form :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
-      outline-color: CanvasText;
+    @media (forced-colors: active) {
+      :is(input, textarea):is(:user-invalid, .user-invalid-fallback) {
+        outline-color: CanvasText;
+      }
     }
   }
 </style>

@@ -1,6 +1,11 @@
 export const TURNSTILE_TEST_SECRET = "1x0000000000000000000000000000000AA";
 
-export const PRODUCTION_HOSTS = new Set(["yamanoku.net", "www.yamanoku.net"]);
+export const PRODUCTION_HOSTS = new Set([
+  "yamanoku.net",
+  "www.yamanoku.net",
+  "records.yamanoku.net",
+  "portfolio.yamanoku.net"
+]);
 
 export interface TurnstileResult {
   success?: boolean;

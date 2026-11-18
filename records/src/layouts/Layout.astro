@@ -1,8 +1,12 @@
 ---
+import ContactForm from "../../../contact/ContactForm.astro";
+import siteContent from "../../../src/data/site-content.json";
 import GlobalFooter from "../components/global/GlobalFooter.astro";
 import GlobalHeader from "../components/global/GlobalHeader.astro";
 
 import "../styles/global.css";
+
+const contactHeading = siteContent.translations.ja["heading.contact"];
 
 interface Props {
   title?: string;
@@ -45,6 +49,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <GlobalHeader />
     <main id="main">
       <slot />
+      <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">{contactHeading}</h2>
+        <ContactForm />
+      </section>
       <section aria-labelledby="related-pages">
         <h2 id="related-pages">yamanoku.net関連ページ</h2>
         <ul>
@@ -57,3 +65,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <GlobalFooter />
   </body>
 </html>
+
+<style>
+  .contact-section {
+    margin-block: var(--y-rhythm-3);
+  }
+</style>

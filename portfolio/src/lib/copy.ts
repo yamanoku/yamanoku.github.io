@@ -29,7 +29,8 @@ export const copy = {
     recordsDescription: "これまでの登壇と発表資料をまとめたページ",
     archives: "アーカイブ",
     archivesDescription: "これまで書いてきた記事やログをまとめたページ",
-    portalUrl: "https://yamanoku.net"
+    portalUrl: "https://yamanoku.net",
+    contact: translations.ja["heading.contact"]
   },
   en: {
     title: "Portfolio",
@@ -57,6 +58,7 @@ export const copy = {
       "A page gathering talks and presentation materials to date.",
     archives: "Archives",
     archivesDescription: "A page gathering articles and logs written to date.",
-    portalUrl: "https://yamanoku.net/en/"
+    portalUrl: "https://yamanoku.net/en/",
+    contact: translations.en["heading.contact"]
   }
 } as const;

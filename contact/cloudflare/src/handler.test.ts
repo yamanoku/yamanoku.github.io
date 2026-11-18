@@ -256,20 +256,23 @@ describe("handleContact", () => {
     });
   });
 
-  it("allows the portal origin and rejects another site", async () => {
+  it("allows the site origins and rejects another site", async () => {
     const worker = env();
-    const ok = await handleContact(
-      new Request("https://contact.yamanoku.net/", {
-        method: "OPTIONS",
-        headers: { origin: "https://yamanoku.net" }
-      }),
-      worker
-    );
-    assert.equal(ok.status, 204);
-    assert.equal(
-      ok.headers.get("access-control-allow-origin"),
-      "https://yamanoku.net"
-    );
+    for (const origin of [
+      "https://yamanoku.net",
+      "https://records.yamanoku.net",
+      "https://portfolio.yamanoku.net"
+    ]) {
+      const ok = await handleContact(
+        new Request("https://contact.yamanoku.net/", {
+          method: "OPTIONS",
+          headers: { origin }
+        }),
+        worker
+      );
+      assert.equal(ok.status, 204);
+      assert.equal(ok.headers.get("access-control-allow-origin"), origin);
+    }
     const blocked = await handleContact(
       post(validBody, { origin: "https://example.com" }),
       worker,
@@ -282,5 +285,37 @@ describe("handleContact", () => {
       }
     );
     assert.equal(blocked.headers.get("access-control-allow-origin"), null);
+  });
+
+  it("accepts a message from records or portfolio", async () => {
+    for (const host of ["records.yamanoku.net", "portfolio.yamanoku.net"]) {
+      const worker = env();
+      const response = await handleContact(
+        post(validBody, { origin: `https://${host}` }),
+        worker,
+        {
+          verify: async () => ({
+            success: true,
+            action: "contact",
+            hostname: host
+          })
+        }
+      );
+      assert.equal(response.status, 200);
+      assert.equal(worker.sent.length, 1);
+    }
+  });
+
+  it("rejects a turnstile hostname outside the sites", async () => {
+    const worker = env();
+    const response = await handleContact(post(validBody), worker, {
+      verify: async () => ({
+        success: true,
+        action: "contact",
+        hostname: "example.com"
+      })
+    });
+    assert.equal(response.status, 403);
+    assert.equal(worker.sent.length, 0);
   });
 });
