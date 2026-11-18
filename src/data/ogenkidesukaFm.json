@@ -3,6 +3,12 @@
   "homeUrl": "https://podcasters.spotify.com/pod/show/ogenkidesuka-fm",
   "episodes": [
     {
+      "id": "65ec3ef0-3d2f-4c33-bbba-bad6d61f14c4",
+      "title": "vol.48 デザインハーネスから考える「良きデザイン」とは何か",
+      "url": "https://podcasters.spotify.com/pod/show/ogenkidesuka-fm/episodes/vol-48-e3sj7il",
+      "datetime": "2026-11-18T03:07:11.000Z"
+    },
+    {
       "id": "83fdfeb3-b06a-49fa-b32c-2e89ca3d8443",
       "title": "vol.47 2026年9～10月の近況報告",
       "url": "https://podcasters.spotify.com/pod/show/ogenkidesuka-fm/episodes/vol-47-2026910-e3qrplo",
@@ -25,12 +31,6 @@
       "title": "vol.44 これからのカンファレンスについて考える",
       "url": "https://podcasters.spotify.com/pod/show/ogenkidesuka-fm/episodes/vol-44-e3l94li",
       "datetime": "2026-06-26T05:00:00.000Z"
-    },
-    {
-      "id": "b07758e5-50e7-4aec-98b8-719be13804f0",
-      "title": "vol.43 アクセシビリティをより広げていくためにどうする？",
-      "url": "https://podcasters.spotify.com/pod/show/ogenkidesuka-fm/episodes/vol-43-e3jl773",
-      "datetime": "2026-05-21T10:00:00.000Z"
     }
   ]
 }
