@@ -16,7 +16,9 @@ const now = new Date();
 ---
 
 <Layout>
-  <h1 id="content" tabindex="-1">records.yamanoku.net</h1>
+  <h1 id="content" tabindex="-1">
+    <span class="subdomain">records.</span><span class="domain">yamanoku.net</span>
+  </h1>
   <p>
     やまのく（yamanoku）のこれまでの登壇・発表のまとめページ
   </p>
@@ -39,6 +41,15 @@ const now = new Date();
 </Layout>
 
 <style>
+  h1 {
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    span {
+      word-wrap: anywhere;
+    }
+  }
+  
   section {
     margin: 0;
     margin-block-end: 5lh;
