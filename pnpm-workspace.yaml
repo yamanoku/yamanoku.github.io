@@ -32,7 +32,7 @@ catalogs:
     typescript: 7.0.2
   website:
     astro: 7.4.13
-    cf: 1.0.0-rc.1
+    cf: 1.0.0-rc.2
     gen-interface-jp: 0.8.0
     markuplint: 5.6.1
     modern-normalize: 3.0.1
