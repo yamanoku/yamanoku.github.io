@@ -230,8 +230,8 @@ catalogs:
       specifier: 7.4.13
       version: 7.4.13
     cf:
-      specifier: 1.0.0-rc.1
-      version: 1.0.0-rc.1
+      specifier: 1.0.0-rc.2
+      version: 1.0.0-rc.2
     gen-interface-jp:
       specifier: 0.8.0
       version: 0.8.0
@@ -294,7 +294,7 @@ importers:
     devDependencies:
       cf:
         specifier: catalog:website
-        version: 1.0.0-rc.1(@types/node@26.6.6)
+        version: 1.0.0-rc.2(@types/node@26.6.6)
       tsx:
         specifier: catalog:site-cli
         version: 4.23.15
@@ -349,7 +349,7 @@ importers:
     devDependencies:
       cf:
         specifier: catalog:website
-        version: 1.0.0-rc.1(@types/node@26.6.6)
+        version: 1.0.0-rc.2(@types/node@26.6.6)
       wrangler:
         specifier: catalog:website
         version: 4.162.0(@types/node@26.6.6)
@@ -3926,8 +3926,8 @@ packages:
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
 
-  cf@1.0.0-rc.1:
-    resolution: {integrity: sha512-mQ9X/FVE1QP2ebXVF/9tlbqoO0TB3tKxUJocaWsic6IuNvThmJc/Ou/4ABJNB/Sj8HxEzvrjT1PRqjySVO5YoA==}
+  cf@1.0.0-rc.2:
+    resolution: {integrity: sha512-dOqCCL2eYPXU9+Q/i6urS9NxWqd3fstzbbGKtLCR07mJV2sQoEOZclm/85uoLF+k3ZaxIvPxrr6O4r2LqwF3uA==}
     engines: {node: ^22.23.0 || ^24.22.0 || ^26.12.0}
     hasBin: true
 
@@ -11584,7 +11584,7 @@ snapshots:
 
   ccount@2.0.1: {}
 
-  cf@1.0.0-rc.1(@types/node@26.6.6):
+  cf@1.0.0-rc.2(@types/node@26.6.6):
     dependencies:
       '@cloudflare/build-output-utils': 1.0.0-rc.1
       '@cloudflare/config': 1.0.0-rc.1
