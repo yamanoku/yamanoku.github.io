@@ -33,8 +33,8 @@
     "oxlint": "catalog:website"
   },
   "engines": {
-    "pnpm": "12.21.0",
+    "pnpm": "12.23.0",
     "npm": "please_use_pnpm_instead"
   },
-  "packageManager": "pnpm@12.21.0"
+  "packageManager": "pnpm@12.23.0"
 }
