@@ -636,6 +636,29 @@
     "description": "Web UIを実装する際に考えていること、デザイナー・実装者が落とし穴になりやすい注意点を共有。見た目の再現にとどまらず、操作性やアクセシビリティを含めた実装上の観点をUI/UXデザイナー向けの場で整理して伝えた。"
   },
   {
+    "date": "2020-05-20",
+    "event": "PWA Night vol.16 ～オンラインLT大会！～",
+    "eventUrl": "https://pwanight.connpass.com/event/173576/",
+    "resources": [
+      {
+        "title": "PWA is Progressive Web Accessibility",
+        "url": "https://docs.google.com/presentation/d/1VIBjWSrWcZ0ekKNIQ9Vl0pMdfGym1lrXi3Krq_o1EEo/edit?usp=sharing"
+      }
+    ],
+    "description": "PWAをProgressive Web Appだけでなく、漸進的なWebアクセシビリティとも読み替え、アクセシビリティは障害のある人だけのものではないと整理した。web.devの良いPWAのチェックリストにあるアクセシブル要件に加え、Service Workerによる応答の速さ、レスポンシブ、HTTPSが支援技術や多様な利用状況に寄与すると紹介した。知覚可能・操作可能・理解可能・堅牢の4原則や企業のガイドラインを入口に、1か0かでなく小さく始めることを勧めた。"
+  },
+  {
+    "date": "2020-02-01",
+    "event": "PWA Night CONFERENCE 2020",
+    "resources": [
+      {
+        "title": "PWA RTA in Japan",
+        "url": "https://docs.google.com/presentation/d/1rLn_lNGD-_5Tk0-Bx-5fGPwGMjnUemtYeXjnKRaoB68/edit?usp=sharing"
+      }
+    ],
+    "description": "RTA（Real Time Attack）の動画実況形式を真似し、2020年1月時点でPWAのインストールボタンが出るまでの実装工程の少なさで、React、Vue、AngularでのPWA構築ツールを比べたLT。実行時間やフレームワークの優劣は判定せず、CLI上で完結するVue.jsが御三家では最も手数が少なかった。preact-cliは生成コマンドだけでセットアップが終わり、この比較では最速だと紹介し、Universal PWA Builderにも触れた。"
+  },
+  {
     "date": "2019-12-23",
     "event": "Roppongi.vue #4",
     "eventUrl": "https://roppongi-vue.connpass.com/event/155383/",
